@@ -6,4 +6,7 @@ user-guide-description: This is a description for the user guide that will be di
 
 # LLM Optimizer {#using}
 
-+ [Overview](overview.md)
++ [Home](/help/home.md)
++ [LLM Overview](/help/overview/overview.md)
++ [Dashboards Overview](/help/dashboards/dashboards-overview.md)
++ [Tutorials Overview](/help/tutorials/tutorials-overview.md)
