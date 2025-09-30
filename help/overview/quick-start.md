@@ -54,7 +54,7 @@ See the available dashboards in the section below.
 
 This section walks you through the major capabilities provided by LLM Optimizer. You'll learn how to navigate the UI, interpret dashboards, and take action on opportunities.
 
-When you log in, you’ll see the main navigation with access to:
+When you log in, you'll see the main navigation with access to:
 
 TBD - add links for each dashboard below
 
