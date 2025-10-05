@@ -5,6 +5,8 @@ description: This is the article overview.
 
 # Adobe LLM Optimizer Tutorial
 
+<!-- I won't be using this page per se, but keeping here for notes -->
+
 This is just a draft. Let's see how we can integrate this with the docs.
 
 ## What is Adobe LLM Optimizer?
