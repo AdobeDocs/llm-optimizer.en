@@ -11,6 +11,8 @@ If traditional SEO helped you win page-one rankings, GEO helps you win AI citati
 
 This guide describes ...
 
+<!-- Don't forget to add to TOC -->
+
 ## How GEO is changing your world
 
 May remove this - Traditional SEO focuses on rankings in Google SERPs and GEO shifts focus to visibility within AI-generated answers and citation frequency.
