@@ -3,81 +3,120 @@ title: Brand Presence
 description: This is the article overview.
 ---
 
-# Overview
+# Brand Presence {#brand-presence}
 
-The Brand Presence dashboard shows where, how often, and in what contexts your brand is mentioned in AI-generated responses. Use this view to measure visibility, track citations, compare competitors, and explore sentiment trends.
-
-**Add image here**
-
-## Filters
-
-At the top of the page, apply filters to refine your view:
-
-**Date Range** → select the time window (e.g., last 4 weeks).
-**Category** → filter results by predefined or custom categories.
-**Platform** → choose which AI engine to analyze (e.g., ChatGPT).
-**Region** → filter by geography if available.
-
-## Key Metrics
-
-The dashboard highlights three core metrics:
-
-Visibility Score → weighted score of your brand's visibility
-Mentions → total number of brand mentions across sampled prompts.
-Citations → number of times your site was referenced as a source.
-
-Trend indicators show how these values are changing over time compared to the previous period.
-
-## Competitor Comparison
-
-Select competitors to compare their mentions and citations against your brand.
-
-* Add up to 5 competitors.
-* Charts display weekly mentions and weekly citations side by side.
-* Use this view to benchmark your performance relative to the competition.
+The Brand Presence dashboard provides an overview of how your brand is perceived at the level of AI-generated responses. It shows where, how often, and in what contexts your brand is mentioned. You can use the dashboard to measure visibility, track citations, compare competitors, and explore sentiment trends. The dashboard is divided into several sections, each providing different insights. There are also customizable filters to help you refine the displayed data.
 
 **Add image here**
 
-## Sentiment Trend Analysis
+This page details the following:
 
-Track how your brand is perceived in the AI answers. Sentiment is categorized as: positive, neutral, negative. The trend chart shows shifts in brand perception week over week.
+* [Filters](#filters)
+* [Key Metrics](##key-metrics)
+* [Competitor Comparison](##competitor-comparison)
+* [Sentiment Trend](#sentiment-trend)
+* [Data Insights](#data-insights)
+
+## Filters {#filters}
+
+At the top of the page, you can apply filters to refine your view. The filters you choose will impact **all** the sections present on the dashboard. You can customize the following:
+
+* **Date Range** - Select the time frame for the displayed data. For example, the last 4 weeks.
+* **Category** - Filter the displayed results by predefined categories. You can also add custom categories to this field (**SR**-how?).
+* **Platform** - Choose which AI engine to analyze.
+* **Region** - Filter the results by geography. Not all regions will be available at launch.
+
+After you select the desired filter, click **Apply Filters** to apply the selection to the dashboard.
+
+## Key Metrics {#key-metrics}
+
+The dashboard highlights three very important metrics at the top of the page: visibility score, mentions and citations. The lower the count for these metrics the worse you brand is perceived, and you should act to improve your brand presence. like **ADD examples here**. Presented below is a short description of each metric and what it represents:
+
+### Visibility Score {#visibility-score}
+
+The visibility score is composed of factors like: mentions, citations, sentiment, and rank. Each factor has a certain "weight" attached to it that adds towards the final score. For example, mentions "weight more" because visibility only matters if your brand is cited.
+
+### Mentions {#mentions}
+
+This metric represents the total number of times your brand or your categories were mentioned across the sampled AI prompts. For example, you have the "Coffe B" brand,with the "Machines" and "Accessories" categories and this metric counts the total number of times these appear in the sampled AI answers.
+
+### Citations {#citations}
+
+This metric represents the number of times your site was referenced as a source.
+
+Trend indicators for each key metric show how these values are changing over time compared to the previous period.
+
+## Competitor Comparison {#competitor-comparison}
+
+In the competitor comparison section you can select up to five competitors and compare their mentions and citations against your brand. This way, you can view and benchmark your performance relative to the competition.
+
+The competitors are selected from the drop-down list and the charts are updated when you click **Apply Filters**. The charts display weekly mentions and weekly citations side by side. You can also hover the mouse along the chart to see the data evolution across the weekly time frame.
 
 **Add image here**
 
-## Data Insights Table
+## Sentiment Trend Analysis {#sentiment-trend}
+
+In the sentiment trend analysis section you can track how your brand is perceived in the sampled AI answers. The sentiment trend metric can be either positive, neutral or negative. For example, it can be positive if answers highlight product quality, or negative if they mention poor service. The trend chart shows the shifts in brand perception week over week. The section is populated only after your brand is mentioned.
 
 **Add image here**
 
-Explore detailed results by topics and prompts. Each row includes:
+## Share of voice {#share-voice}
 
-Topic (e.g., Coffee Roasting Basics, Advanced Roasting & Tasting)
-Popularity (High, Medium, Low)
-Visibility Score for that topic
-Mentions count
-Sentiment (positive, neutral, negative)
-Position (relative prominence in AI responses)
-All Citations (all URLs cited in AI responses)
-Owned Citations (brand's owned URLs cited in AI responses)
+TBD - description similar to data insights below
 
-This table helps you identify where your brand is strong and where optimization is needed.
+## Data Insights {#data-insights}
 
-### Using the Data Insights Table
+**Add image here**
+
+By using the data insights table you can explore topics and user questions to assess and optimize content impact. The results are detailed by topics and prompts. This way you can identify where your brand is strong and where optimization is needed.
+
+The data insights table has a search field for quick access to topics and you can use the **Export** option to share insights with your team or to include the table in executive reporting.
+
+Click the topics below for details about each table category:
+
+>[!BEGINTABS]
+
+>[!TAB Topic]
+
+The topic category represents SEO keywords and user questions related to your brand. You can click to expand each topic and see individual prompts analyzed for brand presence. Each topic and button has a **Details** button when you hover your mouse over it. Clicking the button will display a separate window with further details.
+
+>[!TAB Popularity]
+
+The popularity category represents the search volume for this topic relative to all other topics in the analysis. The value can be either High, Medium or Low.
+
+>[!TAB Visibility Score]
+
+The visibility Score for that topic. It reflects weighted factors like mentions, citations, sentiment, and rank.
+
+>[!TAB Mentions]
+
+The number of times your brand was mentioned in AI responses for this topic or this topic/prompt combination.
+
+>[!TAB Sentiment]
+
+The brand perception in AI responses as it relates to each topic. The sentiment metric can be either positive, neutral or negative.
+
+>[!TAB Position]
+
+How early your brand appears in the AI answer, calculated as an average across all weeks.
+
+>[!TAB All Citations]
+
+The number of unique sources cited in AI responses for this topic or this topic/prompt combination (includes owned citations).
+
+>[!TAB Owned Citations]
+
+The number of times your brand was cited in AI responses for this keyword or this keyword/question combination.
+
+>[!ENDTABS]
+
+### Using the Data Insights Table {#using-data-insights}
 
 The Data Insights Table helps you move from metrics to actions by breaking down performance at the topic and prompt level.
 
 Key ways to use the table:
 
-Prioritize high-popularity topics with low visibility → focus optimization where audience demand is strong but your brand presence is weak.
-Track sentiment shifts → spot topics where mentions are trending negative or neutral, and coordinate with PR/Comms to respond.
-Compare citations vs owned citations → identify prompts where your brand is mentioned but competitors’ content is cited, signaling a content gap.
-Evaluate position range → monitor whether your brand appears early in AI responses (positions 1–3) or later (6–10).
-
-Use the Export option to share insights with your team or to include in executive reporting.
-
-
-
-
-
-
-
-
+* Prioritize high-popularity topics with low visibility - focus optimization where audience demand is strong but your brand presence is weak.
+* Track sentiment shifts - spot topics where mentions are trending negative or neutral, and coordinate your response.
+* Compare citations versus owned citations - identify prompts where your brand is mentioned but competitor's content is cited, signaling a content gap.
+* Evaluate position range - monitor whether your brand appears early in AI responses (positions 1–3) or further down (6–10).

@@ -14,7 +14,7 @@ Optimization opportunities are automatically detected insights that show where y
 At the top of the dashboard, you can refine your view by:
 
 | Opportunity | Type | Auto-Identify | Auto-Suggest |
----------|----------|----------|----------|
+|---------|----------|----------|----------|
 |Summarize Long Paragraphs | Content (Onsite) | Detects paragraphs exceeding recommended length thresholds. Shows affected URLs and oversized text snippets. | Create abstracts or split long text into shorter, scannable sections. |
 | Recommend Structured Content (FAQs)| Content (Onsite) | Detects high-popularity prompts without matching FAQ entries. Shows related prompts, categories, and affected URLs. | Add FAQ schema blocks with concise answers to match common queries. |
 | Detect Missing Hreflang | Content (Onsite)| Flags pages missing hreflang attributes. Provides affected URLs and expected coverage by language/region.| Implement hreflang tags to indicate correct localized versions. |
