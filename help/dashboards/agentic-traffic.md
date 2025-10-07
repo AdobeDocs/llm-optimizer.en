@@ -3,13 +3,22 @@ title: Agentic Traffic
 description: This is the article overview.
 ---
 
-# Overview
+# Agentic Traffic {#agentic-traffic}
 
-The Agentic Traffic dashboard shows how AI agents (crawlers and chatbots) interact with your site. Use this view to track total requests, performance, and the distribution of traffic across markets, categories, pages, and agents. Data is sourced from CDN logs.
+The Agentic Traffic dashboard shows you how AI agents (crawlers and chatbots) interact with your site. By using this view you can track the total number of requests and general performance-related metrics. You can also view the distribution of traffic across markets, categories, pages, and agents. The data used by this dashboard is sourced from the CDN logs so you must configure **CDN log forwarding** in order to display metrics. There are also customizable filters to help you refine the displayed data.
 
-## Setup
+This page details the following:
 
-On first login, the Agentic Traffic dashboard may appear blank. To view agentic interactions, you must configure **CDN log forwarding**.
+[Filters](#filters)
+[CDN Setup](#cdn-setup)
+[Traffic Distribution](#traffic-distribution)
+[Agentic Traffic Trends](#agentic-trends)
+[Top and Bottom Movers](#top-bottom-movers)
+[User Agent and URL Performance Analysis](#user-url-performance)
+
+## CDN Setup {#cdn-setup}
+
+On first login, the Agentic Traffic dashboard may appear blank. To view agentic interactions, you must configure **CDN log forwarding**. **TBD point to CDN setup in quickstart/onboarding?**
 
 **Add image here**
 
@@ -23,29 +32,70 @@ An example of a populated dashboard is shown below:
 
 **Add image here**
 
-## Filters
+## Filters {#filters}
 
-At the top of the page, refine your view with:
+At the top of the page, you can apply filters to refine your view. The filters you choose will impact **all** the sections present on the dashboard. You can customize the following:
 
-Date Range → select the reporting window.
-Category → filter by category 
-Platform → focus on a specific AI engine (e.g., ChatGPT, Perplexity).
-Agent Type → view crawlers, chatbots, or all agents.
-Success Rate → filter by interaction quality.
+* **Date Range** - Select the time frame for the displayed data. For example, the last 4 weeks. You also have the option to customize the time period by selecting the **Custom Weeks** option.
+* **Category** - Filter the displayed results by predefined categories. You can also add custom categories to this field (**SR**-how?).
+* **Platform** - Choose which AI engine to analyze.
+* **Agent Type** - Filter by the type of AI agent that interacted with your site. You can filter between crawlers, chatbots or all agents.
+* **Success Rate** - Filter by the interaction quality (high, medium or low). This metric represents the percentage of successful HTTP requests, including both direct successful responses and redirects.
+* **Content Type** - Filter by content type, either HTML or txt.
 
-The Traffic Distribution view shows how agent traffic is spread across markets, categories, and page types, helping you see which geographies, product areas, or content formats are most frequently accessed by AI agents. 
+After you select the desired filter, click **Apply Filters** to apply the selection to the dashboard.
 
-**Add image here**
+## Traffic Distribution {#traffic-distribution}
 
-The Traffic Trends chart tracks weekly totals of successful, failed, and overall hits, allowing you to monitor changes in agent activity and performance over time.
+The Traffic Distribution view shows how agent traffic is spread across markets, categories, and page types. As such, this view helps you determine which geographies, product areas, or content formats are most frequently accessed by AI agents when interacting with your site.
 
-**Add image here**
+At the top of the page, there are three key metrics that you need to be aware of:
 
-The User Agent Analysis table provides a breakdown of traffic by page type and agent type (e.g., crawlers vs chatbots), making it easy to understand which AI agents are crawling which parts of your site.
+* **Agentic interactions** - This metric represents the total number of requests made by AI agents to your website. This includes all traffic from search engines, chatbots, and other non-human traffic.
+* **Success rate** - This metric represents the percentage of successful HTTP requests, including both direct successful responses and redirects.
+* **Average TTFB** - Time To First Byte (TTFB) measures the time it takes for the first byte of data to be received from the server. Lower values indicate faster server response times.
 
-**Add image here**
+Trend indicators for each key metric show how these values are changing over time compared to the previous period.
 
-The URL Performance Analysis table gives a detailed view of individual URLs, including hits, unique agents, top agent, success rates, and categories, so you can identify high-value pages, detect crawl gaps, and optimize content for AI engines.
+## Agentic Traffic Trends {#agentic-trends}
 
-**Add image here**
+Use the Agentic Traffic Trends chart to track the weekly totals of successful, failed, and overall hits. As such, you can monitor changes in agent activity and performance over time. You can also hover the mouse along the chart to see the data evolution across the weekly time frame.
 
+## Top and Bottom Movers {#top-bottom-movers}
+
+These two metrics sort the URLs as follows:
+
+* **Top Movers** - The URLs with the biggest increase in agentic traffic from oldest to newest week.
+* **Bottom Movers** - URLs with the biggest decrease in agentic traffic from oldest to newest week.
+
+## User Agent and URL Performance Analysis {#user-url-performance}
+
+The User Agent and URL Performance Analysis views provide further data breakdowns on how crawlers and chatbots interact with your site. Click on the tabs below for detailed descriptions.
+
+>[!BEGINTABS]
+
+>[!TAB User Agent Analysis]
+
+The User Agent Analysis table provides a breakdown of traffic by page type and agent type (for example, crawlers versus chatbots). This way, it is easy to understand which AI agents are crawling which parts of your site. It contains the following categories:
+
+* **Page Type** - The page type.
+* **Agent Type** - The AI agent crawling the page, either a crawler or a chatbot.
+* **Hits** - The total number of requests made by AI agents for that specific page type.
+
+You can also use the **Export** option to download the table .csv and share the agent analysis with your team or include it in executive reporting.
+
+>[!TAB URL Performance Analysis]
+
+The URL Performance Analysis table shows a detailed view of individual URLs. This includes hits, unique agents, top agent, success rates, and categories. This way, you can identify high-value pages, detect crawl gaps, and optimize content for AI engines. The URLs are ranked by traffic volume. The table contains the following categories:
+
+* **URL** - The examined URL.
+* **Total Hits** - Total number of requests made by AI agents to the URL.
+* **Unique Agents** - The number of different AI agents that accessed the URL.
+* **Top Agent** - The AI agent that generated the most traffic to the URL.
+* **Top Agent Type** - The type of the AI agent that generated the most traffic to this URL.
+* **Success Rate** - The percentage of successful HTTP requests, including both direct successful responses and redirects.
+* **Category** - The category that most closely matches the content of your page.
+
+The URL performance table has a search field for quick access to URLs. Also, you can use the **Export** option to download the table .csv and share the insights with your team or include the table in executive reporting.
+
+>[!ENDTABS]
