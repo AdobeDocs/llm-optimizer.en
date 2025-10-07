@@ -3,17 +3,23 @@ title: Optimization opportunities
 description: This is the article overview.
 ---
 
-# Overview
+# Optimization opportunities
 
-Optimization opportunities are automatically detected insights that show where your site and external presence can be improved to increase brand visibility in AI search. These include on-page fixes (like adding structured content, canonicals, or summaries), technical adjustments (like unblocking AI crawlers or resolving errors)and influencing content on third-party authoritative sites so your brand is accurately represented and more likely to be cited in generative responses.
+Optimization opportunities are automatically detected insights that show where your site and external presence can be improved to increase brand visibility in AI search. These optimizations include on-page fixes (adding structured content, canonicals, or summaries), technical adjustments (unblocking AI crawlers or resolving errors) and influencing content on third-party authoritative sites. Addressing these optimization opportunities helps your brand be accurately represented and more likely to be cited in generative responses.
 
 **Add image here**
 
-## List of supported opportunities
+## Opportunities Dashboard
 
-At the top of the dashboard, you can refine your view by:
+The optimization opportunities presented on the dashboard are prioritized based on player gaps, trending topics, and performance data and presented as a list. You can search for a specific opportunity by using the search field. Also, opportunities are grouped by tags, and you can click directly on a tag to show all the  opportunities grouped under that tag.
 
-| Opportunity | Type | Auto-Identify | Auto-Suggest |
+Clicking **Details** will open a separate window where more information and additional guidance is provided.
+
+## Supported opportunities
+
+Presented below is a table of currently supported opportunities:
+
+| Opportunity | Type | Identified Issues | Fix Suggestions |
 |---------|----------|----------|----------|
 |Summarize Long Paragraphs | Content (Onsite) | Detects paragraphs exceeding recommended length thresholds. Shows affected URLs and oversized text snippets. | Create abstracts or split long text into shorter, scannable sections. |
 | Recommend Structured Content (FAQs)| Content (Onsite) | Detects high-popularity prompts without matching FAQ entries. Shows related prompts, categories, and affected URLs. | Add FAQ schema blocks with concise answers to match common queries. |
