@@ -30,7 +30,7 @@ After you select the desired filter, click **Apply Filters** to apply the select
 
 ## Key Metrics {#key-metrics}
 
-The dashboard highlights three very important metrics at the top of the page: visibility score, mentions and citations. The lower the count for these metrics the worse you brand is perceived, and you should act to improve your brand presence. like **ADD examples here**. Presented below is a short description of each metric and what it represents:
+The dashboard highlights three very important metrics at the top of the page: visibility score, mentions and citations. The lower the count for these metrics the worse you brand is perceived, and you should act to improve your brand presence. like **SR - ADD optimization link here here**. Presented below is a short description of each metric and what it represents:
 
 ### Visibility Score {#visibility-score}
 
