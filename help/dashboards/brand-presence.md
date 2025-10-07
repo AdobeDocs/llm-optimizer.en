@@ -21,7 +21,7 @@ This page details the following:
 
 At the top of the page, you can apply filters to refine your view. The filters you choose will impact **all** the sections present on the dashboard. You can customize the following:
 
-* **Date Range** - Select the time frame for the displayed data. For example, the last 4 weeks.
+* **Date Range** - Select the time frame for the displayed data. For example, the last 4 weeks. You also have the option to customize the time period by selecting the **Custom Weeks** option.
 * **Category** - Filter the displayed results by predefined categories. You can also add custom categories to this field (**SR**-how?).
 * **Platform** - Choose which AI engine to analyze.
 * **Region** - Filter the results by geography. Not all regions will be available at launch.
@@ -70,7 +70,7 @@ TBD - description similar to data insights below
 
 By using the data insights table you can explore topics and user questions to assess and optimize content impact. The results are detailed by topics and prompts. This way you can identify where your brand is strong and where optimization is needed.
 
-The data insights table has a search field for quick access to topics and you can use the **Export** option to share insights with your team or to include the table in executive reporting.
+The data insights table has a search field for quick access to topics. Also, you can use the **Export** option to download the table .csv and share the insights with your team or include the table in executive reporting.
 
 Click the topics below for details about each table category:
 
