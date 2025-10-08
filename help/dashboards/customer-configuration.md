@@ -10,7 +10,7 @@ Customer Configuration is where you define how your brand will be monitored and 
 In order to configure how LLM Optimizer monitors and analyzes your brand presence across different markets and competitive landscapes, you have access to the following tabs:
 
 [Categories](#categories)
-[Competitor Tracking](competitor-tracking)
+[Competitor Tracking](#competitor-tracking)
 [Brand Aliases](#brand-aliases)
 [Data Insights](#data-insights)
 [Agentic CDN](#agentic-cdn)
@@ -28,7 +28,7 @@ Adding new categories will not automatically generate topics and prompts - these
 
 To delete a category, click the delete icon from the category list. Be careful, because **deleting a category will also delete the associated items** like competitors you might have set up or brand aliases that are linked to that specific category.
 
-## Competitor Tracking {competitor-tracking}
+## Competitor Tracking {#competitor-tracking}
 
 By using competitor tracking, you can track how your competitors are mentioned in relation to your brand across different categories and regions. Monitor their presence and performance in your market segments. To customize competitor tracking:
 
