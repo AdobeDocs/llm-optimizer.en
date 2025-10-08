@@ -12,7 +12,7 @@ The Brand Presence dashboard provides an overview of how your brand is perceived
 This page details the following:
 
 * [Filters](#filters)
-* [Key Metrics](##key-metrics)
+* [Overview Metrics](##key-metrics)
 * [Competitor Comparison](##competitor-comparison)
 * [Sentiment Trend](#sentiment-trend)
 * [Data Insights](#data-insights)
@@ -28,7 +28,7 @@ At the top of the page, you can apply filters to refine your view. The filters y
 
 After you select the desired filter, click **Apply Filters** to apply the selection to the dashboard.
 
-## Key Metrics {#key-metrics}
+## Overview Metrics {#overview-metrics}
 
 The dashboard highlights three very important metrics at the top of the page: visibility score, mentions and citations. The lower the count for these metrics the worse you brand is perceived, and you should act to improve your brand presence. like **SR - ADD optimization link here here**. Presented below is a short description of each metric and what it represents:
 
