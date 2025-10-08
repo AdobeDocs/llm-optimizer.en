@@ -32,9 +32,9 @@ Your focus is on rankings, top 10 positions, search engine results page (SERP) r
 
 In Adobe's LLM Optimizer, top KPIs are available directly in the tool.
 
-* AI Visibility Tracking: You need to see when and how your pages are appearing in AI-generated answers. This includes **citations** and **mentions** and sentiment. See [Brand Presence dashboard](/help/dashboards/brand-presence.md)
+<!-- * AI Visibility Tracking: You need to see when and how your pages are appearing in AI-generated answers. This includes **citations** and **mentions** and sentiment. See [Brand Presence dashboard](/help/dashboards/brand-presence.md)
 
-* Agentic Traffic Measurement: You need to understand traffic coming from AI-driven referrals or summaries. See [Agentic Traffic dashboard](/help/dashboards/agentic-traffic.md)
+* Agentic Traffic Measurement: You need to understand traffic coming from AI-driven referrals or summaries. See [Agentic Traffic dashboard](/help/dashboards/agentic-traffic.md)-->
 
 <!-- Not sure llm optimizer has all these - remove those not relevant-->
 
