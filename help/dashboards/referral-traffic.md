@@ -37,7 +37,7 @@ At the top of the page, you can apply filters to refine your view. The filters y
 
 **Date Range** - Select the time frame for the displayed data. For example, the last 4 weeks. You also have the option to customize the time period by selecting the **Custom Weeks** option.
 **Platform** - Choose a specific traffic source such as Google, OpenAI, or social media.
-**Channel** - Filter channels such as earned or paid. If you prefer a mix between the two select the the **All Channels** option.
+**Channel** - Filter between channels such as earned or paid. If you prefer a mix between the two select the the **All Channels** option.
 **Channel Source** - Filter by the channel's source. options include: display, search, referral, video and social. You can also use the **All Platforms** to display all channel sources.
 **Device Type** - Analyze traffic by the visitor's device type either desktop, mobile or all devices.
 **Region** - View referral patterns across different geographies.
