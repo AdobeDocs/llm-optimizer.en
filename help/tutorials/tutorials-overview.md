@@ -1,32 +1,73 @@
 ---
-title: Tutorials Overview
-description: This is the article overview.
+title: Overview
+description: Learn about how Adobe LLM Optimizer boosts brand visibility in AI-driven search. Track mentions, citations, and insights. Start optimizing today for better engagement and influence.
 ---
 
-# Adobe LLM Optimizer Tutorial
+# LLM Optimizer Overview
 
-<!-- I won't be using this page per se, but keeping here for notes -->
+Welcome to the LLM Optimizer. Here you can find information on how to use LLM Optimizer to track your AI visibility and get your brand mentioned and cited by AI.
 
-This is just a draft. Let's see how we can integrate this with the docs.
+<!-- Not sure where to put this page -->
+
+This page details the following:
+
+* [What is Adobe LLM Optimizer](#what-is-adobe-llm-optimizer)
+* [What are LLM Optimizer Capabilities](#what-are-llm-optimizer-capabilities)
+* [Why LLM optimization matters for your brand](#why-llm-optimization-matters-for-your-brand)
+* [Who should use Adobe LLM Optimizer](#who-should-use-adobe-llm-optimizer)
+* [What can I do with Adobe LLM Optimizer](#what-can-i-do-with-adobe-llm-optimizer)
 
 ## What is Adobe LLM Optimizer?
 
-Adobe LLM Optimizer is a generative AI-first application designed for Generative Engine Optimization (GEO); GEO is also called Answer Engine Optimization (AEO) or AI Optimization (AIO). It helps brands improve visibility, accuracy, and influence in AI-driven search environments like ChatGPT, Google AI, and Perplexity.
+Adobe LLM Optimizer is a generative AI-first application for Generative Engine Optimization (also called Answer Engine Optimization), designed to help brands enhance their visibility, accuracy, and influence in AI-driven search environments. It provides insights into brand presence in AI-generated answers, offers prescriptive content recommendations, and automates optimization fixes.
 
-## Why LLM Optimization matters for your brand
+## What are LLM Optimizer Capabilities?
+
+Adobe LLM Optimizer offers a suite of tools designed for generative engine optimization:
+
+* Measure Brand Visibility: Track when, where, and how often your brand appears in AI-powered search results, with a clear visibility score for benchmarking.
+* Benchmark Competitors: Compare your brand's share of voice and presence against competitors in generative engines.
+* Discover Actionable Opportunities: Identify content and technical improvements (like FAQs, abstracts, schema, crawlability) to boost mentions and citations.
+* Track Traffic Impact: Monitor both agentic (AI assistant) and referral traffic to your owned properties, linking visibility to engagement.
+* Enable Team Collaboration: Share dashboards, assign owners, and align goals across marketing, SEO, and communications teams.
+
+
+<!-- I'm adding headings because LLMs like them and that way we'll rank better. Generally question format/question words in the the title is preferred. We can discuss. Or we can mirror what we did for Sites Optimizer and have this info on another page-->
+
+## Why LLM optimization matters for your brand
 
 * AI-generated answers are reshaping consumer discovery.
 * LLM Optimizer ensures your brand is visible, accurate, and influential in these environments.
 * It connects AI visibility to real business outcomes like engagement and revenue.
 * In a world of zero-click journeys, this tool is essential for staying competitive.
 
-## Who should use LLM Optimizer?
+## Who should use Adobe LLM Optimizer?
 
-* Marketing managers
-* SEO analysts
-* PR and Communications professionals
+Generative Engine Optimization is cross-functional by nature. LLM Optimizer is designed with this lens for the different personas listed below:
 
-## Key Benefits and Business Value
+* **Marketing Managers** measure brand visibility and campaign effectiveness in AI search.
+* **SEO Analysts** track brand mentions, citations, and other insights to inform content strategy.
+* **PR & Communications Managers** track brand perception in LLMs by 3rd-party platforms and address misinformation, manage sentiments, and protect brand trust.
+
+## What can I do with Adobe LLM Optimizer?
+
+With Adobe LLM Optimizer, you can:
+
+**Measure Brand Visibility** - track when, where, and how often your brand is mentioned in AI-powered search results. Move beyond guesswork with a clear visibility score you can benchmark over time.
+**Benchmark Competitors** - See how your brand stacks up against competitors in generative engines. Identify share of voice gaps and uncover competitive advantages.
+**Discover Actionable Opportunities** - Pinpoint content opportunities (e.g., FAQs, abstracts, schema) and technical opportunities (crawlability, indexing issues) that directly increase mentions and citations.
+**Track Traffic Impact from AI** - Monitor agentic traffic (from AI assistants) and referral traffic (user clicks from citations) to your owned properties. Tie GEO visibility to real engagement.
+**Enable Team Collaboration** - Share dashboards, assign owners for prompts or categories, and ensure visibility goals are tracked across marketing, SEO, and communications functions.
+
+
+## References
+
+Add further links and details here.
+
+
+
+
+
 
 ## Quickstart Guide: Getting started with LLM Optimizer
 
