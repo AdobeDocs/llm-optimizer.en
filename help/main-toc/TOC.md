@@ -10,3 +10,6 @@ user-guide-description: This is a description for the user guide that will be di
 + [LLM Overview](/help/overview/overview.md)
 + [Dashboards Overview](/help/dashboards/dashboards-overview.md)
 + [Tutorials Overview](/help/tutorials/tutorials-overview.md)
++ [Quickstart](/help/overview/quick-start.md)
++ [Best Practices](/help/tutorials/best-practices.md)
+

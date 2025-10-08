@@ -5,7 +5,12 @@ description: This is the article overview.
 
 # Overview
 
-<!-- VIDEO HERE -->
+Welcome to the LLM Optimizer documentation. Here you find information on how to use LLM Optimizer to optimize sites.
+
+## LLM Optimizer basics
+
+Explore the LLM Optimizer documentation to learn about key UI components, including the blah blah.
+
 
 ## What is Adobe LLM Optimizer?
 
@@ -39,14 +44,6 @@ As such, with Adobe LLM Optimizer, you can:
 **Discover Actionable Opportunities** - Pinpoint content opportunities (e.g., FAQs, abstracts, schema) and technical opportunities (crawlability, indexing issues) that directly increase mentions and citations.
 **Track Traffic Impact from AI** - Monitor agentic traffic (from AI assistants) and referral traffic (user clicks from citations) to your owned properties. Tie GEO visibility to real engagement.
 **Enable Team Collaboration** - Share dashboards, assign owners for prompts or categories, and ensure visibility goals are tracked across marketing, SEO, and communications functions.
-
-## Get started with LLM Optimizer
-
-<!-- Add cards - I can add these - I'm thinking Dashboard overview and Documentation as the two cards. lmk what you think -->
-
-## Learn more about LLM Optimizer
-
-<!-- Add cards - I can add these - not sure what to put here yet-->
 
 
 ## References

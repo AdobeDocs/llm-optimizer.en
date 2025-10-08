@@ -1,5 +1,5 @@
 ---
-title: Marketer's guide to Generative Engine Optimization (GEO)
+title: Best practices guide
 description: This is the article overview. Includes SEO analyst and PR and Communications manager
 ---
 
@@ -32,7 +32,7 @@ Your focus is on rankings, top 10 positions, search engine results page (SERP) r
 
 In Adobe's LLM Optimizer, top KPIs are available directly in the tool.
 
-* AI Visibility Tracking: You need to see when and how your pages are appearing in AI-generated answers. This includes **citations** and **mentions**. See [Brand Presence dashboard](/help/dashboards/brand-presence.md)
+* AI Visibility Tracking: You need to see when and how your pages are appearing in AI-generated answers. This includes **citations** and **mentions** and sentiment. See [Brand Presence dashboard](/help/dashboards/brand-presence.md)
 
 * Agentic Traffic Measurement: You need to understand traffic coming from AI-driven referrals or summaries. See [Agentic Traffic dashboard](/help/dashboards/agentic-traffic.md)
 
@@ -50,8 +50,6 @@ Snippet Attribution Analysis: You want to track the exact phrasing or paragraphs
 Visibility your brand and content in generative search results
 Tracking citations and attributions
 
-The
-
 The success of your website depends on how often AI systems can find, use, and cite content when people ask questions about your brand, products, or area of expertise.
 
 ### What you need from a GEO tool (like Adobe LLM Optimizer)
@@ -67,7 +65,6 @@ Competitor AI Benchmarking: You want to see which competitors dominate AI answer
 
 Snippet Attribution Analysis: You want to track the exact phrasing or paragraphs AIs are pulling from your site.
 
-A
 
 Adobe Analytics Integration: You want these GEO signals integrated with existing dashboards and KPIs.
 
@@ -99,17 +96,12 @@ Your focus is on shaping and protecting your brand narrative in this new AI ecos
 
 What You Need from a GEO Tool
 
-AI Brand Monitoring – You need visibility into how your brand, executives, and products are described by major AI systems.
-
-Sentiment and Tone Tracking – You want to assess whether AI responses reflect your desired voice and emotional tone.
-
-Source Influence Mapping – You need to know which media, review sites, and third-party pages are most influential in shaping AI output.
-
-Narrative Accuracy Scoring – You want to verify factual accuracy and detect outdated or incorrect data.
-
-Crisis Detection Alerts – You want immediate notifications when an AI model spreads a misrepresentation.
-
-Content Validation Tools – You want to feed the right, structured, authoritative data into the ecosystem (via schema, Wikipedia, and knowledge graphs).
+* AI Brand Monitoring: You need visibility into how your brand, executives, and products are described by major AI systems.
+* Sentiment and Tone Tracking: You want to assess whether AI responses reflect your desired voice and emotional tone.
+* Source Influence Mapping: You need to know which media, review sites, and third-party pages are most influential in shaping AI output.
+* Narrative Accuracy Scoring: You want to verify factual accuracy and detect outdated or incorrect data.
+* Crisis Detection Alerts: You want immediate notifications when an AI model spreads a misrepresentation.
+* Content Validation Tools: You want to feed the right, structured, authoritative data into the ecosystem (via schema, Wikipedia, and knowledge graphs).
 
 Your Focus Areas
 Focus Area    What You Do    Why It Matters
@@ -119,8 +111,25 @@ Factual Stewardship    Keep brand data current in authoritative sources    Preve
 Sentiment Alignment    Measure tone vs. approved messaging    Protects brand reputation
 Crisis Management    Get alerts for AI misrepresentations    Enables fast response
 
-
+Brands can no longer count on controlling their brand. If your site is readabale, you need earned (third-party) content it can significantly
 
 <!-- Add table and also the PR and Comm manager mission and Marketing manager mission (see chatgpt and copilot-->
+
+How their brands appear in ai search
+but also they get recommendations
+You don't need any other Adobe product.
+
+gain market share
+
+agentic traffic doesn't always go to the home page.
+
+prescriptive recommendations - are specific. It will deploy approved optimizations enabling
+
+Use cases
+
+Minute 22
+
+
+
 
 
