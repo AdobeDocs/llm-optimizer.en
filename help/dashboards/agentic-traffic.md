@@ -9,28 +9,24 @@ The Agentic Traffic dashboard shows you how AI agents (crawlers and chatbots) in
 
 This page details the following:
 
-[Filters](#filters)
-[CDN Setup](#cdn-setup)
-[Traffic Distribution](#traffic-distribution)
-[Agentic Traffic Trends](#agentic-trends)
-[Top and Bottom Movers](#top-bottom-movers)
-[User Agent and URL Performance Analysis](#user-url-performance)
+* [Filters](#filters)
+* [CDN Setup](#cdn-setup)
+* [Traffic Distribution](#traffic-distribution)
+* [Agentic Traffic Trends](#agentic-trends)
+* [Top and Bottom Movers](#top-bottom-movers)
+* [User Agent and URL Performance Analysis](#user-url-performance)
 
 ## CDN Setup {#cdn-setup}
 
-On first login, the Agentic Traffic dashboard may appear blank. To view agentic interactions, you must configure **CDN log forwarding**. **TBD point to CDN setup in quickstart/onboarding?**
+On first login, the Agentic Traffic dashboard is blank. To view agentic interactions, you must configure **CDN log forwarding**. **TBD point to CDN setup in quickstart/onboarding?**
 
-**Add image here**
+![CDN Setup](/help/dashboards/assets/ag-log-forward.png)
 
-1. Select your CDN provider (e.g., Akamai, Adobe-managed Fastly, Fastly, AWS Cloudfront, Azure CDN, Cloudflare, or Other).
+1. Select your CDN provider (for example, Akamai, Adobe-managed Fastly, Fastly, AWS Cloudfront, Azure CDN, Cloudflare, or Other).
 2. Enter a primary contact email.
-3. Click Request activation to enable log forwarding.
+3. Click **Request Activation** to enable log forwarding.
 
 Once activated, logs are ingested and the dashboard will populate with metrics such as total agent interactions, success rate, hits by market, user agent analysis, and URL-level performance.
-
-An example of a populated dashboard is shown below:
-
-**Add image here**
 
 ## Filters {#filters}
 
@@ -49,6 +45,8 @@ After you select the desired filter, click **Apply Filters** to apply the select
 
 The Traffic Distribution view shows how agent traffic is spread across markets, categories, and page types. As such, this view helps you determine which geographies, product areas, or content formats are most frequently accessed by AI agents when interacting with your site.
 
+![Traffic Distribution](/help/dashboards/assets/ag-main.png)
+
 At the top of the page, there are three key metrics that you need to be aware of:
 
 * **Agentic interactions** - This metric represents the total number of requests made by AI agents to your website. This includes all traffic from search engines, chatbots, and other non-human traffic.
@@ -61,6 +59,8 @@ Trend indicators for each key metric show how these values are changing over tim
 
 Use the Agentic Traffic Trends chart to track the weekly totals of successful, failed, and overall hits. As such, you can monitor changes in agent activity and performance over time. You can also hover the mouse along the chart to see the data evolution across the weekly time frame.
 
+![Agentic Traffic Trends](/assets/ag-trends.png)
+
 ## Top and Bottom Movers {#top-bottom-movers}
 
 These two metrics sort the URLs as follows:
@@ -71,6 +71,8 @@ These two metrics sort the URLs as follows:
 ## User Agent and URL Performance Analysis {#user-url-performance}
 
 The User Agent and URL Performance Analysis views provide further data breakdowns on how crawlers and chatbots interact with your site. Click on the tabs below for detailed descriptions.
+
+![User Agent and URL Performance Analysis](/assets/user-agent.png)
 
 >[!BEGINTABS]
 
