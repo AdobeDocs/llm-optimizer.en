@@ -87,7 +87,7 @@ The data insights table helps you explore topics and user prompts to assess and 
 * **All Citations** - The number of unique sources cited in AI responses for this topic or this topic/prompt combination (includes owned citations).
 * **Owned Citations** - The number of times your brand was cited in AI responses for this keyword or this keyword/question combination.
 
->[!Share of Voice]
+>[!TAB Share of Voice]
 
 The **share of voice** table, compares your brand voice to other competitors across topics. It displays the following metrics:
 
