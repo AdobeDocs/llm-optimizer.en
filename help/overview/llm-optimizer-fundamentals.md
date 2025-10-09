@@ -1,13 +1,11 @@
 ---
-title: Overview
+title: LLM Optimizer Fundamentals
 description: Learn about how Adobe LLM Optimizer boosts brand visibility in AI-driven search. Track mentions, citations, and insights. Start optimizing today for better engagement and influence.
 ---
 
 # LLM Optimizer Overview
 
-Welcome to the LLM Optimizer. Here you can find information on how to use LLM Optimizer to track your AI visibility and get your brand mentioned and cited by AI.
 
-<!-- Not sure where to put this page -->
 
 This page details the following:
 
@@ -69,17 +67,9 @@ Add further links and details here.
 
 
 
-## Quickstart Guide: Getting started with LLM Optimizer
 
-Already a chapter for this. May use this info for video creation.
 
-* Step 1: Onboard Your Domain
-* Step 2: Auto-Generate Initial Insights
-* Step 3: Customize Categories, Topics, and Prompts
-* Step 4: Enable CDN Log Forwarding
-* Step 5: Explore Dashboards and Take Action
-
-## Understanding Brand Visibility and AI Search
+<!--## Understanding Brand Visibility and AI Search
 
 Use these as guidelines for creating tutorials - some may be covered already in docs
 
@@ -136,7 +126,7 @@ Use these as guidelines for creating tutorials - some may be covered already in 
 
 * Categories and Topics
 * Brand and Competitor Aliases
-* Domain Switching and Customization
+* Domain Switching and Customization -->
 
 
 

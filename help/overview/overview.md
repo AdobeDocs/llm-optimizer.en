@@ -11,15 +11,14 @@ Here you can find information on how to use the Adobe LLM Optimizer to track you
 
 <!-- Add image-->
 
-## LLM Optimizer documentation basics
-
-<!-- Will we have a basics section?-->
+## LLM Optimizer fundamentals
 
 Explore the LLM Optimizer documentation to learn about key dashboards, settings configuration, and the Opportunities list for AI optimization insights. This documentation set walks you through the major capabilities provided by LLM Optimizer. You will learn how to navigate the UI, interpret dashboards, and take action on opportunities.
 
+
 ## References
 
-Add links here.
+Links
 
 
 
