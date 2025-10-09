@@ -7,7 +7,7 @@ description: This is the article overview.
 
 The Brand Presence dashboard provides an overview of how your brand is perceived at the level of AI-generated responses. It shows where, how often, and in what context your brand is mentioned. You can use the dashboard to measure visibility, track citations, compare competitors, and explore sentiment trends. The dashboard is divided into several sections, each providing different insights. There are also customizable filters to help you refine the displayed data.
 
-![Brand Presence](/help/dashboards/assets/brand-presence.md)
+![Brand Presence](/help/dashboards/assets/brand-main.md)
 
 This page details the following:
 
