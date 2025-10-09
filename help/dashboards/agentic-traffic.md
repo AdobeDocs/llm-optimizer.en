@@ -59,7 +59,7 @@ Trend indicators for each key metric show how these values are changing over tim
 
 Use the Agentic Traffic Trends chart to track the weekly totals of successful, failed, and overall hits. As such, you can monitor changes in agent activity and performance over time. You can also hover the mouse along the chart to see the data evolution across the weekly time frame.
 
-![Agentic Traffic Trends](/assets/ag-trends.png)
+![Agentic Traffic Trends](/help/dashboards/assets/ag-trends.png)
 
 ## Top and Bottom Movers {#top-bottom-movers}
 
@@ -72,7 +72,7 @@ These two metrics sort the URLs as follows:
 
 The User Agent and URL Performance Analysis views provide further data breakdowns on how crawlers and chatbots interact with your site. Click on the tabs below for detailed descriptions.
 
-![User Agent and URL Performance Analysis](/assets/user-agent.png)
+![User Agent and URL Performance Analysis](/help/dashboards/assets/user-agent.png)
 
 >[!BEGINTABS]
 
