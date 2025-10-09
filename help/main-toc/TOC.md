@@ -1,7 +1,7 @@
 ---
 user-guide-title: LLM Optimizer
-breadcrumb-title: Shorter title (if necessary) that appears only in the breadcrumb.
-user-guide-description: This is a description for the user guide that will be displayed on the landing page.
+breadcrumb-title: LLM Optimizer
+user-guide-description: Boost your brand with Adobe LLM Optimizer. Track mentions, uncover insights, and dominate AI-driven search. Take control of your visibility - start optimizing now!
 ---
 
 # LLM Optimizer {#using}
