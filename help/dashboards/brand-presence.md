@@ -7,7 +7,7 @@ description: This is the article overview.
 
 The Brand Presence dashboard provides an overview of how your brand is perceived at the level of AI-generated responses. It shows where, how often, and in what context your brand is mentioned. You can use the dashboard to measure visibility, track citations, compare competitors, and explore sentiment trends. The dashboard is divided into several sections, each providing different insights. There are also customizable filters to help you refine the displayed data.
 
-![Brand Presence](/assets/brand-main.png)
+![Brand Presence](/help/dashboards/assets/brand-presence.md)
 
 This page details the following:
 
@@ -32,7 +32,7 @@ After you select the desired filter, click **Apply Filters** to apply the select
 
 The dashboard highlights three very important metrics at the top of the page: visibility score, mentions and citations. The lower the count for these metrics the worse you brand is perceived, and you should act to improve your brand presence. like **SR - ADD optimization link here here**. Presented below is a short description of each metric and what it represents.
 
-![Overview Metrics](/assets/overview-metrics.png)
+![Overview Metrics](/help/dashboards/assets/overview-metrics.png)
 
 ### Visibility Score {#visibility-score}
 
@@ -52,7 +52,7 @@ Trend indicators for each key metric show how these values are changing over tim
 
 In the competitor comparison section you can select up to five competitors and compare their mentions and citations against your brand. This way, you can view and benchmark your performance relative to the competition.
 
-![Competitor Comparison](/assets/competitor-comparison.png)
+![Competitor Comparison](/help/dashboards/assets/competitor-comparison.png)
 
 The competitors are selected from the drop-down list and the charts are updated when you click **Apply Filters**. The charts display weekly mentions and weekly citations side by side. You can also hover the mouse along the chart to see the data evolution across the weekly time frame.
 
@@ -60,13 +60,13 @@ The competitors are selected from the drop-down list and the charts are updated 
 
 In the sentiment trend analysis section you can track how your brand is perceived in the sampled AI answers. The sentiment trend metric can be either positive, neutral or negative. For example, it can be positive if answers highlight product quality, or negative if they mention poor service. The trend chart shows the shifts in brand perception week over week. The section is populated only after your brand is mentioned.
 
-![Sentiment Trend](/assets/sentiment-trend.png)
+![Sentiment Trend](/help/dashboards/assets/sentiment-trend.png)
 
 ## Data Insights and Share of Voice {#data-insights}
 
 Rounding up the dashboard, we have two important tables: data insights and share of voice. The information presented in these tables will help you identify where your brand is strong and where optimization is needed.  By using the **data insights** table you can explore topics and user questions to assess and optimize content impact. The results are detailed by topics and prompts. Meanwhile, the **share of voice** table, compares your brand voice to other competitors across topics and helps you identify gaps and prioritize future topics.
 
-![Data Insights](/assets/data-insights.png)
+![Data Insights](/help/dashboards/assets/data-insights.png)
 
 Both tables have a search field for quick access to topics. Also, you can use the **Export** option to download the table .csv and share the insights with your team or include the table in executive reporting.
 
