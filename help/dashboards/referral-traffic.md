@@ -5,31 +5,29 @@ description: This is the article overview.
 
 # Referral Traffic
 
-Referral Traffic shows how visitors arrive at your site from external platforms, AI citations, and referral links. It tracks and analyzes traffic sources, referral patterns, and conversion metrics from external websites and platforms. This will help you understand which sources, regions, and pages drive the most engaged traffic. Data is sourced from either the CDN logs or AEM Operational Telemetry (add link). Both of these sources are privacy-preserving and do not capture personal user data.
+Referral Traffic shows how visitors arrive at your site from external platforms, AI citations, and referral links. It tracks and analyzes traffic sources, referral patterns, and conversion metrics from external websites and platforms. This will help you understand which sources, regions, and pages drive the most engaged traffic. Data is sourced from either the CDN logs or AEM Operational Telemetry **(add link)**. Both of these sources are privacy-preserving and do not capture personal user data.
 
 There are also customizable filters to help you refine the displayed data.
 
 This page details the following:
 
-[Setup](#setup)
-[Filters](#filters)
-[Overall referral performance](#overall-performance)
-[Top Referral URLs](#top-referrals)
-[Referral Traffic Details](#traffic-details)
+* [Setup](#setup)
+* [Filters](#filters)
+* [Overall referral performance](#overall-performance)
+* [Top Referral URLs](#top-referrals)
+* [Referral Traffic Details](#traffic-details)
 
 ## Setup {#setup}
 
 On first login, the Referral Traffic dashboard may appear blank. To view your data, you must configure a referral traffic provider.
 
-**Add image here**
+![Referral Setup](/help/dashboards/assets/referral-setup.png)
 
-1. Select your Source (e.g., CDN logs or OpTel).
+1. Select your Source (either CDN logs or AEM Operational Telemetry).
 2. Enter a primary contact email.
-3. Click Request activation to enable data ingestion.
+3. Click **Request activation** to enable data ingestion.
 
-Once activated, the dashboard will populate with referral traffic metrics. An example of a populated dashboard is shown below.
-
-**Add image here**
+Once activated, the dashboard will populate with referral traffic metrics. 
 
 ## Filters {#filters}
 
@@ -52,17 +50,23 @@ The dashboard highlights the overall referral performance by displaying the foll
 * **Consent rate** -  The percentage of visitors who accept a consent prompt.
 * **Bounce rate** - The percentage of sessions from referral sources that had no engagement event.
 
-Besides the metrics presented above the **Top Regions** panel breaks down traffic by geography. Meanwhile, the **Top Referral Sources** panel shows the platforms driving the most visits.
+![Referral Page](/help/dashboards/assets/referral-traffic.png)
+
+Besides the overall performance metrics presented above, the **Top Regions** panel breaks down traffic by geography. Meanwhile, the **Top Referral Sources** panel shows the platforms driving the most visits.
 
 ## Top Referral URLs {#top-referrals}
 
 The Top Referral URLs list surfaces your site’s most visited pages from referrals.
 
-**Add image here**
+![Top Referral URLs](/help/dashboards/assets/top-url.png)
 
 ## Referral Traffic Details {#traffic-details}
 
-The Referral Traffic Details table helps you evaluate both traffic volume and quality. It provides a detailed breakdown by source, including visit counts, bounce rates, and channel type. The table contains the following categories:
+The Referral Traffic Details table helps you evaluate both traffic volume and quality. It provides a detailed breakdown by source, including visit counts, bounce rates, and channel type.
+
+![Referral Traffic Details](/help/dashboards/assets/traffic-details.png)
+
+The table contains the following categories:
 
 **Source** - The source of the referral traffic.
 **Visits** - The total number of visits for each source.
@@ -70,5 +74,3 @@ The Referral Traffic Details table helps you evaluate both traffic volume and qu
 **Channel** - The channel for the source, either earned, paid or both.
 
 You can use the **Export** option to download the table .csv and share the insights with your team or include the referral traffic table in executive reporting.
-
-**Add image here**

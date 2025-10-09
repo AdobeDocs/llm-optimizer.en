@@ -7,7 +7,7 @@ description: This is the article overview.
 
 Optimization opportunities are automatically detected insights that show where your site and external presence can be improved to increase brand visibility in AI search. These optimizations include on-page fixes (adding structured content, canonicals, or summaries), technical adjustments (unblocking AI crawlers or resolving errors) and influencing content on third-party authoritative sites. Addressing these optimization opportunities helps your brand be accurately represented and more likely to be cited in generative responses.
 
-**Add image here**
+![Optimization opportunities](/help/dashboards/assets/oport.png)
 
 ## Opportunities Dashboard
 

@@ -7,13 +7,15 @@ description: This is the article overview.
 
 Customer Configuration is where you define how your brand will be monitored and analyzed within the platform. You can customize categories (such as business units or product lines), track competitors, and add brand mention aliases to capture all variations of your brand across prompts. This setup ensures the platform tailors insights to your business context, enabling accurate visibility, traffic, and opportunity analysis.
 
+![Trending URLs competing for Citations](/help/dashboards/assets/customer-config.png)
+
 In order to configure how LLM Optimizer monitors and analyzes your brand presence across different markets and competitive landscapes, you have access to the following tabs:
 
-[Categories](#categories)
-[Competitor Tracking](#competitor-tracking)
-[Brand Aliases](#brand-aliases)
-[Data Insights](#data-insights)
-[Agentic CDN](#agentic-cdn)
+* [Categories](#categories)
+* [Competitor Tracking](#competitor-tracking)
+* [Brand Aliases](#brand-aliases)
+* [Data Insights](#data-insights)
+* [Agentic CDN](#agentic-cdn)
 
 ## Categories {#categories}
 
@@ -66,12 +68,12 @@ You can also create a new CSV file by downloading the template from the **Import
 
 Additionally, you can also add topics/prompts to the list independently of a CSV file. To achieve this, on the dashboard, you need to:
 
-Click the **Add Topic** button.
-In the new configuration window, select the **Category**. Previously created categories will appear here.
-Enter the topic name.
-Add the prompt text.
-Select the region.
-Click **Add Prompt** and the topic with the prompt will appear on the list.
+1. Click the **Add Topic** button.
+2. In the new configuration window, select the **Category**. Previously created categories will appear here.
+3. Enter the topic name.
+4. Add the prompt text.
+5. Select the region.
+6. Click **Add Prompt** and the topic with the prompt will appear on the list.
 
 >[!NOTE]
 >Newly added prompts will not appear in Brand Presence until processing is complete.

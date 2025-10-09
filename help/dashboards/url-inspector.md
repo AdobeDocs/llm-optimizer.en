@@ -7,7 +7,7 @@ description: This is the article overview.
 
 The URL Inspector helps you analyze how specific pages on your domain are performing in AI searches. It combines visibility, agentic traffic, and referral data at the URL level to give you a granular view of which URLs are cited and how often they appear in responses. **SR-NEEDS CDN?**
 
-**Add image here**
+![URL Inspector](/help/dashboards/assets/url-insp.png)
 
 ## Filters
 
@@ -49,6 +49,8 @@ The cited URL's view lists all URLs from your brand that have been cited in AI-g
 
 The trending URLs competing for citations view highlights external URLs that are currently cited in answers relevant to your brand, measuring who is winning citations in your space. The data table has a search field for quick access to specific URLs. Also, you can use the **Export** option to download the table .csv and share the insights with your team or include the table in executive reporting.
 
+![Trending URLs competing for Citations](/help/dashboards/assets/trend-url.png)
+
 The following metrics are provided:
 
 * **URL** - the analyzed URL
@@ -59,5 +61,3 @@ The following metrics are provided:
 * **Regions** - The geographic region where the URL was cited.
 
 Each URL has a **Details** button when you hover your mouse over it. Clicking the button will display a separate window with further details.
-
-**Add image here**
