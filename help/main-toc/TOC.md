@@ -20,5 +20,3 @@ user-guide-description: Boost your brand with Adobe LLM Optimizer. Track mention
   + [Referral Traffic](/help/dashboards/referral-traffic.md)
   + [Opportunities](/help/dashboards/opportunities.md)
   + [URL Inspector](/help/dashboards/url-inspector.md)
-+ Tutorials{#tutorials}
-  + [Tutorials Overview](/help/tutorials/tutorials-overview.md)
