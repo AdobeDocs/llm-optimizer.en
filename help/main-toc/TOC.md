@@ -7,7 +7,8 @@ user-guide-description: This is a description for the user guide that will be di
 # LLM Optimizer {#using}
 
 + [LLM Optimizer](/help/home.md)
-  + [LLM Overview](/help/overview/overview.md)
++ [LLM Overview](/help/overview/overview.md)
++ Quickstart{#quickstart}
   + [Quickstart](/help/overview/quick-start.md)
   + [Best Practices](/help/tutorials/best-practices.md)
 + Dashboards{#dashboards}
@@ -19,4 +20,5 @@ user-guide-description: This is a description for the user guide that will be di
   + [Referral Traffic](/help/dashboards/referral-traffic.md)
   + [Opportunities](/help/dashboards/opportunities.md)
   + [URL Inspector](/help/dashboards/url-inspector.md)
-+ [Tutorials Overview](/help/tutorials/tutorials-overview.md)
++ Tutorials{#tutorials}
+  + [Tutorials Overview](/help/tutorials/tutorials-overview.md)
