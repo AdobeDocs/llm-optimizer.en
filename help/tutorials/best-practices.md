@@ -3,6 +3,53 @@ title: Best practices guide
 description: This is the article overview. Includes SEO analyst and PR and Communications manager
 ---
 
+# Best Practices
+
+## Unlocking LLM Brand Visibility
+
+Large Language Model (LLM) optimization is transforming how brands are discovered and referenced in AI-driven environments. Adobe's LLM Optimizer provides a structured approach to enhance brand visibility.
+
+If you follow these steps, you are well on your way to improve your LLM visibility:
+
+1. Analysis: Review how your brand appears in key customer prompts across LLMs.
+2. Planning: Target clusters of prompts with similar intent for focused campaigns.
+3. Action: Implement changes and monitor shifts in LLM visibility over time.
+4. Adaptation: Refine strategies based on actionable insights from the optimizer.
+5. Understanding and leveraging these steps can help brands stay relevant as AI becomes central to information discovery.
+
+
+
+## LLM vs SEO: Key Differences
+
+Optimizing for LLMs differs fundamentally from traditional SEO:
+
+* LLMs use tokens, not indexes: Results are generated from trained data, not indexed web pages.
+* Brand mentions matter more than links: LLMs prioritize content relevance and brand presence over backlinks.
+* Real-time info via RAG: Retrieval-Augmented Generation allows LLMs to fetch up-to-date information, reducing hallucinations.
+* Limited client-side JS rendering: LLMs currently do not process client-side JavaScript, affecting what content is visible.
+* No link authority attribution: Unlike SEO, LLMs do not use links to determine authority.
+* Recognizing these differences is crucial for effective LLM optimization.
+
+
+
+## Actionable Optimization Steps
+
+The LLM Optimizer suggests optimization opportunities in the Opportunities dashboard.
+
+Here are some practical actions to boost brand visibility in LLMs:
+
+* Update Wikipedia pages: Ensure company and cited pages are current and relevant.
+* Enable LLM access: Monitor robots.txt and CDN settings to prevent blocking AI bots.
+* Revamp content: Refresh 10-15% of page content, add references, and improve structure with headers (H1, H2, H3).
+* Add FAQs: Integrate relevant FAQs based on prompt analysis to address user queries.
+* Increase brand mentions on Reddit/Quora: Contribute to user-generated content platforms where LLMs source citations.
+
+Consistent execution of these steps can significantly enhance your brand's presence in AI-driven search results.
+
+
+
+
+
 # Marketer's guide to Generative Engine Optimization (GEO)
 
 Generative Engine Optimization (GEO), also called Answer Engine Optimization (AEO), is how you make your brand and content visible, trustworthy, and retrievable within AI-generated answers - across ChatGPT, Perplexity, Copilot, Gemini, and other LLM-driven assistants.
