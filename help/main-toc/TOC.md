@@ -9,12 +9,12 @@ user-guide-description: Boost your brand with Adobe LLM Optimizer. Track mention
 + [LLM Optimizer](/help/home.md)
 + [LLM Overview](/help/overview/overview.md)
 + Quickstart{#quickstart}
-  + [Quickstart](/help/overview/quick-start.md)
   + [Best Practices](/help/tutorials/best-practices.md)
+  + [Quickstart](/help/overview/quick-start.md)
 + Dashboards{#dashboards}
   + [Dashboards Overview](/help/dashboards/dashboards-overview.md)
-  + [Agentic Traffic](/help/dashboards/agentic-traffic.md)
   + [Brand Presence](/help/dashboards/brand-presence.md)
+  + [Agentic Traffic](/help/dashboards/agentic-traffic.md)
   + [Collaboration](/help/dashboards/collaboration.md)
   + [Customer Configuration](/help/dashboards/customer-configuration.md)
   + [Referral Traffic](/help/dashboards/referral-traffic.md)
