@@ -1,6 +1,6 @@
 ---
 title: Brand Presence
-description: This is the article overview.
+description: Learn how to use the Brand Presence dashboard to understand how your brand is perceived at the level of AI-generated responses.
 ---
 
 # Brand Presence {#brand-presence}

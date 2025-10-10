@@ -1,6 +1,6 @@
 ---
 title: Quick Start
-description: This is the quick start article.
+description: Learn how to get started with LLM optimizer and go through the onboarding process.
 ---
 
 # Quick Start
