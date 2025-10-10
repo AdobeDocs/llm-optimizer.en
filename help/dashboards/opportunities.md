@@ -32,7 +32,7 @@ Presented below is a table of currently supported opportunities:
 
 ### Recover Content Visibility Opportunity {#recover-contet}
 
-As stated above, the content visibility opportunity, flags pages where key content is lost for AI agents due to client-side rendering. For each identified page, it shows you exactly which content is missing from the AI agent view, helping you pinpoint visibility gaps. It's also supported by an edge-based pre-rendering capability that can serve more HTML content to agentic traffic without requiring Content Management System (CMS) changes. Please note that this capability is currently in **Early Access** and also requires setup from the LLMO team to enable optimized content delivery.
+As stated above, the content visibility opportunity, flags pages where key content is lost for AI agents due to client-side rendering. For each identified page, it shows you exactly which content is missing from the AI agent view, helping you pinpoint visibility gaps. It's also supported by an edge-based pre-rendering capability that can serve more HTML content to agentic traffic without requiring Content Management System (CMS) changes. This functionality is currently in Early Access and requires setup from the LLMO team. Please contact `llmo-at-edge@adobe.com` to activate the content visibility opportunity.
 
 ### Additional Tools
 
