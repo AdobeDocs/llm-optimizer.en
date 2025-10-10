@@ -1,6 +1,6 @@
 ---
 title: Referral Traffic
-description: This is the article overview.
+description: Learn how to use the Referral Traffic dashboard to see how visitors arrive at your site from external platforms, AI citations, and referral links..
 ---
 
 # Referral Traffic

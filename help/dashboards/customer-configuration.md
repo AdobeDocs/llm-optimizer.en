@@ -1,13 +1,13 @@
 ---
 title: Customer Configuration
-description: This is the article overview.
+description: Use customer configuration to define how your brand will be monitored and analyzed within the LLM optimizer platform.
 ---
 
 # Customer Configuration
 
-Customer Configuration is where you define how your brand will be monitored and analyzed within the platform. You can customize categories (such as business units or product lines), track competitors, and add brand mention aliases to capture all variations of your brand across prompts. This setup ensures the platform tailors insights to your business context, enabling accurate visibility, traffic, and opportunity analysis.
+Customer Configuration is where you define how your brand will be monitored and analyzed within the LLM optimizer platform. You can customize categories (such as business units or product lines), track competitors, and add brand mention aliases to capture all variations of your brand across prompts. This setup ensures the platform tailors insights to your business context, enabling accurate visibility, traffic, and opportunity analysis.
 
-![Trending URLs competing for Citations](/help/dashboards/assets/customer-config.png)
+![Customer Configuration Dashboard](/help/dashboards/assets/customer-config.png)
 
 In order to configure how LLM Optimizer monitors and analyzes your brand presence across different markets and competitive landscapes, you have access to the following tabs:
 
