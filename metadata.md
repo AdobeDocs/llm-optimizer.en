@@ -3,6 +3,7 @@ cloud: Experience Cloud
 solution: LLM Optimizer
 type: Documentation
 mini-toc-levels: 2
+feature-set: LLM Optimizer
 git-repo: https://github.com/AdobeDocs/llm-optimizer.en
 hide: yes
 ---

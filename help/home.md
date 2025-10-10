@@ -16,12 +16,12 @@ Adobe LLM Optimizer is a generative AI-first application for Generative Engine O
 * ./overview/quick-start.md
   {title= Quickstart guide}
   {description= Learn how to quickly get up and running with the LLM Optimizer.}
-  {image= ./assets/overview/agentic-traffic-card.png}
+  {image= /help/assets/overview/agentic-traffic-card.png}
   {target=_blank}
   {cta=Learn more}
 * ./dashboards/dashboards-overview.md
   {title= Dashboards overview}
-  {image= ./assets/overview/brand-presence-card.png}
+  {image= /help/assets/overview/brand-presence-card.png}
   {description= Learn how to get insights and get recommendations for your site with dashboards.}
   {target=_blank}
   {cta=Learn more}
@@ -33,7 +33,7 @@ Adobe LLM Optimizer is a generative AI-first application for Generative Engine O
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./overview/quick-start.md" title="Quickstart guide" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="./assets/overview/agentic-traffic-card.png" alt="Quickstart guide"
+                        <img class="is-bordered-r-small" src="/help/assets/overview/agentic-traffic-card.png" alt="Quickstart guide"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -56,7 +56,7 @@ Adobe LLM Optimizer is a generative AI-first application for Generative Engine O
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./dashboards/dashboards-overview.md" title="Dashboards overview" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="./assets/overview/brand-presence-card.png" alt="Dashboards overview"
+                        <img class="is-bordered-r-small" src="/help/assets/overview/brand-presence-card.png" alt="Dashboards overview"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -85,11 +85,11 @@ Adobe LLM Optimizer is a generative AI-first application for Generative Engine O
 
 * ./tutorials/best-practices.md
   {title= Best practices for marketers and SEO analysts}
-  {image= ./assets/overview/best-practices-card.png}
+  {image= /help/assets/overview/best-practices-card.png}
   {description= Learn how LLM Optimizer can help you drive brand authority in AI search and discovery.}
 * https://business.adobe.com/products/llm-optimizer.html
   {title = Explore the capabilities of the Adobe LLM Optimizer}
-  {image = ./assets/overview/business-adobe.png}
+  {image = /help/assets/overview/business-adobe.png}
   {target=_blank}
   {cta=Learn more}
 
@@ -101,7 +101,7 @@ Adobe LLM Optimizer is a generative AI-first application for Generative Engine O
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./tutorials/best-practices.md" title="Best practices for marketers and SEO analysts" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="./assets/overview/best-practices-card.png" alt="Best practices for marketers and SEO analysts"
+                        <img class="is-bordered-r-small" src="/help/assets/overview/best-practices-card.png" alt="Best practices for marketers and SEO analysts"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -124,7 +124,7 @@ Adobe LLM Optimizer is a generative AI-first application for Generative Engine O
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://business.adobe.com/products/llm-optimizer.html" title="Explore the capabilities of the Adobe LLM Optimizer" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="./assets/overview/business-adobe.png" alt="Explore the capabilities of the Adobe LLM Optimizer"
+                        <img class="is-bordered-r-small" src="/help/assets/overview/business-adobe.png" alt="Explore the capabilities of the Adobe LLM Optimizer"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -145,7 +145,3 @@ Adobe LLM Optimizer is a generative AI-first application for Generative Engine O
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
-
-## References
-
-Reference links should go here.
