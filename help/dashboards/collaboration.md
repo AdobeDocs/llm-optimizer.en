@@ -3,12 +3,12 @@ title: Collaboration
 description: This is the article overview.
 ---
 
-# Overview
+# Colaboration
 
-Collaboration allows you to invite team members into your organization’s LLM Optimizer workspace so everyone can access insights and analytics in one place. By adding colleagues, you ensure that marketing, SEO, PR, and technical teams can work together seamlessly on brand visibility improvements, share findings, and take coordinated action on opportunities.
+Collaboration allows you to invite team members into your organization’s LLM Optimizer workspace so everyone can access insights and analytics from one place. By adding colleagues, you ensure that marketing, SEO, PR, and technical teams can work together seamlessly on brand visibility improvements, share findings, and take coordinated action on opportunities.
 
-**Add image here**
+## How to invite team members
 
-## Filters
+You can invite team members by adding their e-mail into the **E-mail Address** field and clicking **Send Invitation**. If they accept, they will join your organization’s LLM Optimizer workspace.
 
-At the top of the dashboard, you can refine your view by:
+![Collaboration Invite](/help/dashboards/assets/collaboration.png)
