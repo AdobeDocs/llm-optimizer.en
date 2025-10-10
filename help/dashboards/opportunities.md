@@ -24,8 +24,16 @@ Presented below is a table of currently supported opportunities:
 |Summarize Long Paragraphs | Content (Onsite) | Detects paragraphs exceeding recommended length thresholds. Shows affected URLs and oversized text snippets. | Create abstracts or split long text into shorter, scannable sections. |
 | Recommend Structured Content (FAQs)| Content (Onsite) | Detects high-popularity prompts without matching FAQ entries. Shows related prompts, categories, and affected URLs. | Add FAQ schema blocks with concise answers to match common queries. |
 | Detect Missing Hreflang | Content (Onsite)| Flags pages missing hreflang attributes. Provides affected URLs and expected coverage by language/region.| Implement hreflang tags to indicate correct localized versions. |
-| Detect Missing Canonicals | Content (Onsite) | Detects paragraphs exceeding recommended length thresholds. Shows affected URLs and oversized text snippets. | Create abstracts or split long text into shorter, scannable sections. |
+| Detect Missing Canonicals | Content (Onsite) | Scans for pages without canonical tags or with conflicting tags. Lists affected URLs and duplicates. | Add canonical tags pointing to the preferred version of each page. Ensure consistent usage across variants. |
 | Detect Empty Headings | Content (Onsite) | Flags pages where heading tags exist but contain no text. Shows URL and location of empty tags. | Add descriptive text to headings that reflect the content beneath them. |
 | Detect Duplicate Headings | Content (Onsite) | Scans HTML heading tags and flags repeated headings. Shows affected URLs and duplicated text snippets. | Revise headings to be unique and maintain hierarchy (H1 → H2 → H3). Merge or rename duplicate sections. |
 | Detect Blocked Agentic Traffic | Technical GEO | Analyzes CDN logs for blocked requests from known AI agents (e.g., GPTBot, PerplexityBot). Reports affected URLs and agents. | Update robots.txt or server configs to allow access for supported AI crawlers where appropriate. |
 | Detect 404s / 403s / 5xx Issues | Technical GEO | Monitors CDN logs for error responses. Reports frequency, affected URLs, and estimated hits lost. | Fix broken links, update permissions, and resolve server-side issues so key content returns 200 responses. |
+
+### Recover Content Visibility Opportunity {#recover-contet}
+
+As stated above, the content visibility opportunity, flags pages where key content is lost for AI agents due to client-side rendering. For each identified page, it shows you exactly which content is missing from the AI agent view, helping you pinpoint visibility gaps. It's also supported by an edge-based pre-rendering capability that can serve more HTML content to agentic traffic without requiring Content Management System (CMS) changes. Please note that this capability is currently in **Early Access** and also requires setup from the LLMO team to enable optimized content delivery.
+
+### Additional Tools
+
+The [LLM visibility checker](https://chromewebstore.google.com/detail/is-your-webpage-citable/jbjngahjjdgonbeinjlepfamjdmdcbcc) is a Chrome extension that lets you see exactly how much of your webpage content LLMs can access and also what stays hidden. Designed as a free, standalone diagnostic tool, it requires no product license or setup. With a single-click, users can evaluate any site's machine-readability, view a side-by-side comparison of what AI agents see versus what human users see. Also, estimates how much content could be recovered by using LLM Optimizer.
