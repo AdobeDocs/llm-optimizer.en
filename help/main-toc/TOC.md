@@ -7,8 +7,8 @@ user-guide-description: Boost your brand with Adobe LLM Optimizer. Track mention
 # LLM Optimizer {#using}
 
 + [LLM Optimizer](/help/home.md)
-+ Quickstart{#quickstart}
-  + [LLM Optimizer Fundamentals](/help/overview/llm-optimizer-fundamentals.md)
++ [LLM Optimizer Essentials](#essentials)
+  + [LLM Optimizer Overview](/help/overview/overview.md)
   + [Quickstart](/help/overview/quick-start.md)
   + [Best Practices](/help/tutorials/best-practices.md)
 + Dashboards{#dashboards}
