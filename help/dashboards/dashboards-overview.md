@@ -20,7 +20,7 @@ Key views include Brand Presence, Agentic and Referral Traffic, URL Inspector, O
 * ./agentic-traffic.md
   {title= Agentic traffic dashboard}
   {description= Surfaces traffic from LLMs that traditional analytics miss, helping you connect AI-assisted discovery to engagement and revenue.}
-  {image= /help/dashboards/assets/overview/agentic-traffic-card.png}
+  {image= /help/assets/overview/agentic-traffic-card.png}
   {target=_blank}
   {cta=Learn more}
 * ./referral-traffic.md
