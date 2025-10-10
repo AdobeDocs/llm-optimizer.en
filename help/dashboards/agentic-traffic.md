@@ -1,6 +1,6 @@
 ---
 title: Agentic Traffic
-description: This is the article overview.
+description: Learn how to use the Agentic Traffic dashboard in order to see how AI agents interact with your site..
 ---
 
 # Agentic Traffic {#agentic-traffic}
