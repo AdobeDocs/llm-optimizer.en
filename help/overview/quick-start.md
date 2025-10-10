@@ -1,9 +1,11 @@
 ---
 title: Quick Start guide
-description: Get started with Adobe LLM Optimizer - onboard your brand, unlock AI visibility insights, and explore dashboards to boost search performance..
+description: Learn how to get started with LLM optimizer and go through the onboarding process.
 ---
 
 # Overview
+
+<!-- new description Get started with Adobe LLM Optimizer - onboard your brand, unlock AI visibility insights, and explore dashboards to boost search performance.. -->
 
 TBD
 
