@@ -1,6 +1,6 @@
 ---
 title: Quick Start
-description: Learn how to get started with LLM optimizer and go through the onboarding process.
+description: Get started with Adobe LLM Optimizer - onboard your brand, unlock AI visibility insights, and explore dashboards to boost search performance.
 ---
 
 # Quick Start
