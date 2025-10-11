@@ -97,7 +97,7 @@ Here's how you can keep an eye on your brand's visibility in LLMs:
     * Compare your visibility to your competitors to see how you stack up.
     * Check how you are showing up in user-generated platforms like Reddit, Quora, and Wikipedia as these are often cited by LLMs to find information.
     * Check how you are showing up in agentic traffic. Agentic traffic often does not go to the home page - it's worth looking at what pages agents visit.
-    * Make sure your content is visible. You can use the Chrome plug-in to see what AI agents can view.
+    * Make sure your content is visible and accessible to LLMs. You can use the Chrome plug-in to see what AI agents can view.
 
 1.  Plan Your Strategy
     * Group similar prompts together based on what people are asking.
@@ -106,21 +106,14 @@ Here's how you can keep an eye on your brand's visibility in LLMs:
     * Make sure your content shows your expertise, trustworthiness, and authority (EEAT).
 
 1. Improve Your Content
-    * Use the LLM Optimizer Opportunities to identify and make specifically recommended, immediate changes to your site. See [Opportunities](/help/dashboards/opportunities.md) (then measure the results.)
+    * Use the LLM Optimizer Opportunities to identify and make specifically recommended, immediate changes to your site. See [Opportunities](/help/dashboards/opportunities.md) (then measure the results.) Review the opportunities section regularly and take action on the recommendations provided.
     * Update your website and other content to make it more relevant to the prompts you want to target.
     * Add FAQs to your pages that answer common questions people might ask.
     * Make sure your content is easy for LLMs to find and read. Fix any issues like blocked pages or problems with your website's code.
-
-Best Practice:
-
-Review the opportunities section regularly and take action on the recommendations provided.
-Ensure contributions to platforms like Wikipedia and Reddit are unbiased, non-commercial, and add value.-->
-
-1. Keep Improving
+    * Ensure contributions to platforms like Wikipedia and Reddit are unbiased, non-commercial, and add value.
     * Use Adobe LLM Optimizer to track how your visibility changes over time.
     * If you notice competitors getting mentioned more often, adjust your strategy to stay ahead.
     * Keep updating your content to match what people are searching for and asking about.
-
 
 
 <!-- Use the "Share of Voice" feature to see which competitors are dominating specific topics and adjust your strategy accordingly.-->
@@ -147,7 +140,7 @@ It provides a percentage of content visibility, highlighting areas where LLMs ma
 Best Practice:
 
 Use nametbd feature to render static HTML versions of your pages for LLM bots, ensuring full content visibility.
-Address issues like blocked pages, robots.txt restrictions, and client-side rendering problems.
+Address issues like blocked pages, robots.txt restrictions, and client-side rendering problems.-->
 
 
 
