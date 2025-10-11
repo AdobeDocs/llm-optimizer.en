@@ -98,7 +98,7 @@ Be sure to review and update prompts regularly to ensure they align with custome
 
 >[!TIP]
 >
->* You can use tools like LLM Optimizer and Google Search Console with regex filters to identify common question structures (for example, "how," "what," "when," "where").
+>* You can use tools like the Adobe LLM Optimizer and Google Search Console with regex filters to identify common question structures (for example, "how," "what," "when," "where") and find out what prompts people are using to visit your site.
 >* To find out what prompts are relevant to your site/brand, you can use on-site search data, FAQs in search engine results pages, or even ask LLM chatbots directly what questions customers might ask about your brand.
 
 ### Best practices for competitors
