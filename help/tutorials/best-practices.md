@@ -1,48 +1,48 @@
 ---
-title: Best practices guide
-description: This is the article overview. Includes SEO analyst and PR and Communications manager
+title: LLM Optimizer best practices
+description: Discover best practices for LLM optimization to boost brand visibility in AI search. Insights for for benchmarking and optimizing content.
 ---
 
 # Best Practices
+
+[DRAFT]
+
+LLM Optimization, also called Generative Engine Optimization (GEO), or Answer Engine Optimization (AEO), or AI Optimization (AIO), is how you make your brand and content visible, trustworthy, and retrievable within AI-generated answers - across ChatGPT, Perplexity, Copilot, Gemini, and other LLM-driven assistants.
+
+If traditional SEO helped you win page-one rankings, LLM optimization helps you win AI citations and visibility inside answer engines. The Adobe LLM Optimizer lets you measure and improve your brand's visibility inside answer engines.
+
+This article describes best practices around measuring and enhancing your visibility and influence in AI-driven search environments using the Adobe LLM Optimizer.
 
 ## Unlocking LLM Brand Visibility
 
 Large Language Model (LLM) optimization is transforming how brands are discovered and referenced in AI-driven environments. Adobe's LLM Optimizer provides a structured approach to enhance brand visibility.
 
-If you follow these steps, you are well on your way to improve your LLM visibility:
+Follow these steps to improve your LLM visibility:
 
-1. Analysis: Review how your brand appears in key customer prompts across LLMs.
-2. Planning: Target clusters of prompts with similar intent for focused campaigns.
-3. Action: Implement changes and monitor shifts in LLM visibility over time.
-4. Adaptation: Refine strategies based on actionable insights from the optimizer.
-5. Understanding and leveraging these steps can help brands stay relevant as AI becomes central to information discovery.
+1. **Analyze:** Review how your brand appears in key customer prompts across LLMs.
+2. **Plan:** Target clusters of prompts with similar intent for focused campaigns.
+3. **Act:** Implement changes and monitor shifts in LLM visibility over time.
+4. **Adapt:** Refine strategies based on actionable insights from the optimizer.
+
+<!--insert image-->
+
+Understanding and leveraging these steps can help your brand stay relevant as AI becomes central to information discovery.
 
 ## LLM vs SEO: Key Differences
 
-Optimizing for LLMs differs fundamentally from traditional SEO:
+A good LLM strategy builds on top of a good SEO strategy. An SEO strategy is foundational to any LLM optimizations. Currently SEO traffic still is the largest driver of traffic to most web sites making it very important to your brand's visibility strategy.
 
-* LLMs use tokens, not indexes: Results are generated from trained data, not indexed web pages.
-* Brand mentions matter more than links: LLMs prioritize content relevance and brand presence over backlinks.
-* Real-time info via RAG: Retrieval-Augmented Generation allows LLMs to fetch up-to-date information, reducing hallucinations.
+It's important to understand that optimizing for LLMs differs from traditional SEO because of some key differences:
+
+* LLMs use tokens, not indexes: Results are generated from trained data, not indexed web pages, but LLMs do use search engines to enhance prompt answers via Retrievel-Augmented Generation (RAG).
+* Real-time info via RAG: Search engines use real-time data while RAG allows LLMs to fetch up-to-date information, reducing hallucinations.
 * Limited client-side JS rendering: LLMs currently do not process client-side JavaScript, affecting what content is visible.
-* No link authority attribution: Unlike SEO, LLMs do not use links to determine authority.
-* Recognizing these differences is crucial for effective LLM optimization.
 
+Because of some of these fundamental differences, with LLM strategy you need to consider the following:
 
-## Actionable Optimization Steps
-
-The LLM Optimizer suggests optimization opportunities in the Opportunities dashboard.
-
-Here are some practical actions to boost brand visibility in LLMs:
-
-* Update Wikipedia pages: Ensure company and cited pages are current and relevant.
-* Enable LLM access: Monitor robots.txt and CDN settings to prevent blocking AI bots.
-* Revamp content: Refresh 10-15% of page content, add references, and improve structure with headers (H1, H2, H3).
-* Add FAQs: Integrate relevant FAQs based on prompt analysis to address user queries.
-* Increase brand mentions on Reddit/Quora: Contribute to user-generated content platforms where LLMs source citations.
-
-Consistent execution of these steps can significantly enhance your brand's presence in AI-driven search results.
-
+* Brand mentions matter more than link for LLMs: LLMs prioritize content relevance and brand presence over backlinks. Unlike SEO, LLMs do not use links to determine authority.
+* Freshness of content matters: LLMs prioritize recently updated content. (Search engines also prioritize this for time-sensitive queries but rely on other values more heavily.)
+* Getting earned (third-party) in the form of mentions and citations is very important.
 
 ## Strategic Campaign Planning
 
@@ -56,223 +56,70 @@ Assess realistic brand inclusion: Evaluate if your brand can be credibly mention
 This strategic approach ensures targeted, data-driven improvements in LLM visibility.
 
 
-This report is designed to help you understand how your brand's visibility in Large Language Models (LLMs) changes over time. It will guide you through the steps to track, improve, and measure your brand's presence in LLM-generated responses.
+## Actionable Optimization Steps
 
-What is LLM Visibility?
-LLM visibility is all about how often and how well your brand shows up in answers generated by tools like ChatGPT or other AI models. It depends on:
+The LLM Optimizer suggests optimization opportunities in the [Opportunities](/help/dashboards/opportunities.md) dashboard.
 
-Mentions: How many times your brand is mentioned in responses.
-Citations: How often LLMs use your content or sources to answer questions.
-Sentiment: Whether the mention of your brand is positive, neutral, or negative.
-Position: Where your brand is mentioned in the response (e.g., first, middle, or last).
+Here are some practical actions to consider to boost brand visibility in LLMs:
 
-All of these factors combine into a visibility score, which tells you how strong your brand's presence is in LLM responses.
+* Update Wikipedia pages: Ensure company and cited pages are current and relevant.
+* Enable LLM access: Monitor robots.txt and CDN settings to prevent blocking AI bots.
+* Revamp content: Refresh 10-15% of page content, add references, and improve structure with headers (H1, H2, H3).
+* Add FAQs: Integrate relevant FAQs based on prompt analysis to address user queries.
+* Increase brand mentions on Reddit/Quora: Contribute to user-generated content platforms where LLMs source citations. Be careful of how you approach this as you can trigger
 
-<!--How to Track Visibility Changes
+Consistent execution of these steps can significantly enhance your brand's presence in AI-driven search results.
+
+
+
+## What is LLM visibility?
+
+LLM visibility is all about how often and how well your brand shows up in answers generated by tools like ChatGPT or other AI models.
+
+## How to measure your LLM progress
+
+To benchmark your website's visibility and to see how well your efforts are working, track these key metrics:
+
+* **Mentions:** How many times your brand is mentioned in responses.
+* **Citations:** How often LLMs use your content or sources to answer questions.
+* **Sentiment:** Whether the mention of your brand is positive, neutral, or negative.
+* **Position:** Where your brand is mentioned in the response (e.g., first, middle, or last).
+
+All of these factors combine into a **visibility** score, which tells you how strong your brand's presence is in LLM responses.
+
+## How to Track Visibility Changes
+
 Here's how you can keep an eye on your brand's visibility in LLMs:
-Step 1: Check Your Current Visibility
 
-Use tools like Adobe LLM Optimizer to see how often your brand is mentioned in LLM responses.
-Look at the prompts (questions) where your brand is mentioned and where it's missing.
-Compare your visibility to your competitors to see how you stack up.
-
-Step 2: Plan Your Strategy
-
-Group similar prompts together based on what people are asking.
-Focus on the prompts that are most important to your customers.
-Check if your brand has a good chance of being mentioned for certain prompts. Make sure your content shows your expertise, trustworthiness, and authority.
-
-Step 3: Improve Your Content
-
-Update your website and other content to make it more relevant to the prompts you want to target.
-Add FAQs to your pages that answer common questions people might ask.
-Make sure your content is easy for LLMs to find and read. Fix any issues like blocked pages or problems with your website's code.
-
-Step 4: Keep Improving
-
-Use Adobe LLM Optimizer to track how your visibility changes over time.
-If you notice competitors getting mentioned more often, adjust your strategy to stay ahead.
-Keep updating your content to match what people are searching for and asking about.
-
-
-Tools You Can Use
-Here are some tools that can help you track and improve your visibility:
-
-Adobe LLM Optimizer: This tool shows you how visible your brand is, what prompts you're mentioned in, and how you compare to competitors.
-Google Search Console: Use this to find out what people are searching for and turn those searches into LLM prompts.
-SEO Tools: Tools like Ahrefs or SEMrush can help you find keywords and questions people are asking online.
-User-Generated Content Platforms: Platforms like Reddit, Quora, and Wikipedia are often used by LLMs to find information. Make sure your brand is visible there.
-
-
-How to Measure Your Progress
-To see how well your efforts are working, track these key metrics:
-
-Mentions: How many times your brand is mentioned in LLM responses.
-Citations: How often LLMs use your content or sources.
-Sentiment: Are the mentions positive, neutral, or negative?
-Position: Is your brand mentioned first, in the middle, or last in the response?
-Visibility Score: This is a number that combines all the above metrics to show your overall visibility.
-
-
-5. Real-Life Examples
-Here are some examples of how you can improve your visibility:
-Example 1: Fixing Website Issues
-If LLMs can't access your website because of blocked pages or coding problems, they won't mention your brand. You can use Adobe LLM Optimizer to fix these issues and make sure your content is easy for LLMs to find.
-Example 2: Updating Wikipedia
-Since LLMs often use Wikipedia for information, make sure your company's page is accurate and up-to-date. You can also add your brand to other Wikipedia pages where it's relevant.
-Example 3: Engaging on Reddit and Quora
-LLMs use platforms like Reddit and Quora to find answers. You can join discussions and share helpful information about your brand to increase visibility.
-
-6. Challenges You Might Face
-
-Understanding Metrics: It can be tricky to figure out what visibility scores mean. Use tools like Adobe LLM Optimizer to get clear explanations.
-Technical Problems: If your website has blocked pages or coding issues, LLMs might not be able to access your content.
-Keeping Content Relevant: You'll need to make sure your content matches what people are asking about.
-
-
-7. Tips for Success
-
-Learn how to use Adobe LLM Optimizer to track your visibility and improve your content.
-Make sure your website is easy for LLMs to access by fixing any technical issues.
-Use data from search tools and user-generated content platforms to find out what people are asking about.
-Keep updating your content to stay relevant and ahead of your competitors.
-
-
-Conclusion
-Improving your brand's visibility in LLMs is an ongoing process. By tracking your visibility, updating your content, and using the right tools, you can make sure your brand is mentioned more often and in a positive way. This report gives you the steps and tools you need to get started and succeed in LLM optimization.
-What can I help with next?
-Simplify the report further for a middle school audience.
-Create a step-by-step LLM visibility improvement checklist.
-
-
-Marketer's guide to Generative Engine Optimization (GEO)
-
-Generative Engine Optimization (GEO), also called Answer Engine Optimization (AEO), is how you make your brand and content visible, trustworthy, and retrievable within AI-generated answers - across ChatGPT, Perplexity, Copilot, Gemini, and other LLM-driven assistants.
-
-If traditional SEO helped you win page-one rankings, GEO helps you win AI citations and visibility inside answer engines. The Adobe LLM Optimizer lets you measure how your brand and content is visible inside those answer engines.
-
-This article describes how to measure and enhance your visibility and influence in AI-driven search environments whether you're an SEO analyst/specialist, public relations (PR) or communication strategist, or a marketing manager.
-
-
-<!-- brands enhance their visibility, accuracy, and influence in AI-driven search environments. It provides insights into brand presence in AI-generated answers, offers prescriptive content recommendations, and automates optimization fixes -->
-
-<!-- Alva - don't forget to add to TOC -->
-
-<!-- ## How GEO is changing your world
-
-May remove this - Traditional SEO focuses on rankings in Google SERPs and GEO shifts focus to visibility within AI-generated answers and citation frequency.
-
-Think about semantic visibility and retrieval relevance - not just keyword rankings. -->
-
-SEO analyst's guide to Generative Engine Optimization (GEO)/Answer Engine Optimization (AEO)
-
-As an SEO professional/analyst, your goal is to maximize discoverability and inclusion of brand content within generative AI responses. You're ensuring that optimized pages are surfaced, cited, and drive measurable traffic or engagement.
-
-Your focus is on rankings, top 10 positions, search engine results page (SERP) results, and keyword share. Now, with generative AI systems answering user questions directly, visibility is shifting and you need to look at some additional metrics. You're not only looking at your site **ranking higher** but at your content **being retrieved more often**.
-
-Top KPIs for SEO analysts
-
-In Adobe's LLM Optimizer, top KPIs are available directly in the tool.
-
-<!-- * AI Visibility Tracking: You need to see when and how your pages are appearing in AI-generated answers. This includes **citations** and **mentions** and sentiment. See [Brand Presence dashboard](/help/dashboards/brand-presence.md)
-
-* Agentic Traffic Measurement: You need to understand traffic coming from AI-driven referrals or summaries. See [Agentic Traffic dashboard](/help/dashboards/agentic-traffic.md)-->
-
-<!-- Not sure llm optimizer has all these - remove those not relevant-->
-
-Query-to-Answer Mapping: You want insight into the prompts and intents that lead AI to use your content.
-
-Content Retrievability Scoring: You need to know if your content structure, schema, and semantics make it easily "understood" by LLMs.
-
-Competitor AI Benchmarking: You want to see which competitors dominate AI answers and where they're gaining visibility.
-
-Snippet Attribution Analysis: You want to track the exact phrasing or paragraphs AIs are pulling from your site.
-
-
-Visibility your brand and content in generative search results
-Tracking citations and attributions
-
-The success of your website depends on how often AI systems can find, use, and cite content when people ask questions about your brand, products, or area of expertise.
-
-### What you need from a GEO tool (like Adobe LLM Optimizer)
-
-* AI Visibility Tracking: You need to see when and how your pages are appearing in AI-generated answers.
-* Agentic Traffic Measurement: You need to understand traffic coming from AI-driven referrals or summaries.
-
-Query-to-Answer Mapping: You want insight into the prompts and intents that lead AI to use your content.
-
-Content Retrievability Scoring: You need to know if your content structure, schema, and semantics make it easily "understood" by LLMs.
-
-Competitor AI Benchmarking: You want to see which competitors dominate AI answers and where they're gaining visibility.
-
-Snippet Attribution Analysis: You want to track the exact phrasing or paragraphs AIs are pulling from your site.
-
-
-Adobe Analytics Integration: You want these GEO signals integrated with existing dashboards and KPIs.
-
-### Why this matters to you
-
-You can prove your value in a post-keyword world by measuring "AI share of voice."
-
-You can future-proof your strategy as users move from search results to AI answers.
-
-You can bridge SEO and brand by structuring content that's not only findable, but also quotable.
-
-### Your GEO KPIs
-
-AI Share of Voice (visibility in AI answers)
-
-Brand Citation Frequency
-
-Content Retrievability Score
-
-AI-driven Clicks or Mentions
-
-Structured Data Coverage
-
-## PR and Communication manager's guide to Generative Engine Optimization (GEO)/Answer Engine Optimization (AEO)
-
-As a PR and Communications manager, your goal is to control media coverage and to manage not only what journalists are saying but what AI systems say. When someone asks an AI bot about your brand, product, or CEO, the model is to synthesize data from across the web, including press releases, Wikipedia, reviews, and third-party mentions.
-
-Your focus is on shaping and protecting your brand narrative in this new AI ecosystem.
-
-What You Need from a GEO Tool
-
-* AI Brand Monitoring: You need visibility into how your brand, executives, and products are described by major AI systems.
-* Sentiment and Tone Tracking: You want to assess whether AI responses reflect your desired voice and emotional tone.
-* Source Influence Mapping: You need to know which media, review sites, and third-party pages are most influential in shaping AI output.
-* Narrative Accuracy Scoring: You want to verify factual accuracy and detect outdated or incorrect data.
-* Crisis Detection Alerts: You want immediate notifications when an AI model spreads a misrepresentation.
-* Content Validation Tools: You want to feed the right, structured, authoritative data into the ecosystem (via schema, Wikipedia, and knowledge graphs).
-
-Your Focus Areas
-Focus Area    What You Do    Why It Matters
-Brand Narrative Audit    Check how AI describes your brand    Ensures accuracy and consistency
-Influence Mapping    Identify which sources shape AI answers    Prioritizes outreach and corrections
-Factual Stewardship    Keep brand data current in authoritative sources    Prevents outdated or incorrect info
-Sentiment Alignment    Measure tone vs. approved messaging    Protects brand reputation
-Crisis Management    Get alerts for AI misrepresentations    Enables fast response
-
-Brands can no longer count on controlling their brand. If your site is readabale, you need earned (third-party) content it can significantly
-
-<!-- Add table and also the PR and Comm manager mission and Marketing manager mission (see chatgpt and copilot-->
-
-How their brands appear in ai search
-but also they get recommendations
-You don't need any other Adobe product.
-
-gain market share
-
-agentic traffic doesn't always go to the home page.
-
-prescriptive recommendations - are specific. It will deploy approved optimizations enabling
-
-Use cases
-
-Minute 22
-
-
-
+1. Check Your Current Visibility
+    * Adobe LLM Optimizer shows you how often your brand is mentioned and cited and what the sentiment is in LLM responses. See the Brand Presence dashboard.
+    * Look at the prompts (questions) where your brand is mentioned and where it's missing.
+    * Compare your visibility to your competitors to see how you stack up.
+    * Check how you are showing up in user-generated platforms like Reddit, Quora, and Wikipedia as these are often cited by LLMs to find information.
+    * Check how you are showing up in agentic traffic. Agentic traffic often does not go to the home page - it's worth looking at what pages agents visit.
+    * Make sure your content is visible. You can use the Chrome plug-in to see what AI agents can view.
+
+1.  Plan Your Strategy
+    * Group similar prompts together based on what people are asking.
+    * Focus on the prompts that are most important to your customers.
+    * Check if your brand has a good chance of being mentioned for certain prompts.
+    * Make sure your content shows your expertise, trustworthiness, and authority (EEAT).
+
+1. Improve Your Content
+    * Use the LLM Optimizer Opportunities to identify and make specifically recommended, immediate changes to your site. See [Opportunities](/help/dashboards/opportunities.md) (then measure the results.)
+    * Update your website and other content to make it more relevant to the prompts you want to target.
+    * Add FAQs to your pages that answer common questions people might ask.
+    * Make sure your content is easy for LLMs to find and read. Fix any issues like blocked pages or problems with your website's code.
+
+Best Practice:
+
+Review the opportunities section regularly and take action on the recommendations provided.
+Ensure contributions to platforms like Wikipedia and Reddit are unbiased, non-commercial, and add value.-->
+
+1. Keep Improving
+    * Use Adobe LLM Optimizer to track how your visibility changes over time.
+    * If you notice competitors getting mentioned more often, adjust your strategy to stay ahead.
+    * Keep updating your content to match what people are searching for and asking about.
 
 
 
@@ -282,14 +129,11 @@ Minute 22
 Insight:
 
 This feature shows the percentage of visibility your brand has for specific topics compared to competitors.
-For example, you can see how many mentions your brand has versus competitors like Canva or Microsoft for a topic like "design creation."
 
 
 Best Practice:
 
-Use this insight to identify gaps in your visibility and focus on improving your presence in underperforming topics.-->
-
-
+Use this insight to identify gaps in your visibility and focus on improving your presence in under-performing topics.-->
 
 <!--6. Content Visibility
 
@@ -302,22 +146,8 @@ It provides a percentage of content visibility, highlighting areas where LLMs ma
 
 Best Practice:
 
-Use the "LLM Optimizer on the Edge" feature to render static HTML versions of your pages for LLM bots, ensuring full content visibility.
+Use nametbd feature to render static HTML versions of your pages for LLM bots, ensuring full content visibility.
 Address issues like blocked pages, robots.txt restrictions, and client-side rendering problems.
 
 
-
-7. Opportunities
-
-Purpose: Identify actionable steps to improve visibility.
-Insight:
-
-The dashboard highlights opportunities for optimization, such as updating Wikipedia pages, contributing to Reddit or Quora threads, or improving page structure.
-It provides specific recommendations, such as adding FAQs to pages or improving headers (H1, H2, H3).
-
-
-Best Practice:
-
-Review the opportunities section regularly and take action on the recommendations provided.
-Ensure contributions to platforms like Wikipedia and Reddit are unbiased, non-commercial, and add value.-->
 
