@@ -22,15 +22,17 @@ This page details the following:
 At the top of the page, you can apply filters to refine your view. The filters you choose will impact **all** the sections present on the dashboard. You can customize the following:
 
 * **Date Range** - Select the time frame for the displayed data. For example, the last 4 weeks. You also have the option to customize the time period by selecting the **Custom Weeks** option.
-* **Category** - Filter the displayed results by predefined categories. You can also add custom categories to this field (**SR**-how?).
+* **Category** - Filter the displayed results by either predefined categories or custom categories.
 * **Platform** - Choose which AI engine to analyze.
+* **Prompts Origin** - Choose the origin of the prompts. The origin can be either user inputted or AI generated.
+* **Prompt Branding** - Filter results by either branded prompts or non-branded prompts.
 * **Region** - Filter the results by geography. Not all regions will be available at launch.
 
 After you select the desired filter, click **Apply Filters** to apply the selection to the dashboard.
 
 ## Overview Metrics {#overview-metrics}
 
-The dashboard highlights three very important metrics at the top of the page: visibility score, mentions and citations. The lower the count for these metrics the worse you brand is perceived, and you should act to improve your brand presence. like **SR - ADD optimization link here here**. Presented below is a short description of each metric and what it represents.
+The dashboard highlights three very important metrics at the top of the page: visibility score, mentions and citations. The lower the count for these metrics the worse you brand is perceived, and you should act to improve your brand presence. Presented below is a short description of each metric and what it represents.
 
 ![Overview Metrics](/help/dashboards/assets/overview-metrics.png)
 
@@ -58,7 +60,7 @@ The competitors are selected from the drop-down list and the charts are updated 
 
 ## Sentiment Trend Analysis {#sentiment-trend}
 
-In the sentiment trend analysis section you can track how your brand is perceived in the sampled AI answers. The sentiment trend metric can be either positive, neutral or negative. For example, it can be positive if answers highlight product quality, or negative if they mention poor service. The trend chart shows the shifts in brand perception week over week. The section is populated only after your brand is mentioned.
+In the sentiment trend analysis section you can track how your brand is perceived in the sampled AI answers. The sentiment trend metric can be either positive, neutral or negative. For example, it can be positive if answers highlight product quality or negative if they mention poor service. The trend chart shows the shifts in brand perception week over week. The section is populated only after your brand is mentioned.
 
 ![Sentiment Trend](/help/dashboards/assets/sentiment-trend.png)
 
@@ -78,25 +80,26 @@ Click the tabs below for details about each table and the associated metrics.
 
 The data insights table helps you explore topics and user prompts to assess and optimize content impact. It displays the following metrics:
 
-* **Category** - The topic category represents SEO keywords and user questions related to your brand. You can click to expand each topic and see individual prompts analyzed for brand presence. Each topic and button has a **Details** button when you hover your mouse over it. Clicking the button will display a separate window with further details.
+* **Topic** - The topic category represents SEO keywords and user questions related to your brand. You can click to expand each topic and see individual prompts analyzed for brand presence. Each topic and button has a **Details** button when you hover your mouse over it. Clicking the button will display a separate window with further details.
+* **Region** - displays the region of the prompts.
 * **Popularity** - The popularity category represents the search volume for this topic relative to all other topics in the analysis. The value can be either High, Medium or Low.
-* **Visibility Score** - The visibility Score for that topic. It reflects weighted factors like mentions, citations, sentiment, and rank.
+* **Visibility Score** - The visibility score for that topic. It reflects weighted factors like mentions, citations, sentiment, and rank.
 * **Mentions** - The number of times your brand was mentioned in AI responses for this topic or this topic/prompt combination.
-* **Sentiment** - The brand perception in AI responses as it relates to each topic. The sentiment metric can be either positive, neutral or negative.
-* **Position** - How early your brand appears in the AI answer, calculated as an average across all weeks.
+* **Sentiment** - The brand perception in AI responses as it relates to each topic calculated as an average across all weeks. Only populated when your brand is actually mentioned
+* **Position** - The relative prominence of your brand in AI responses, calculated as an average across all weeks.
 * **All Citations** - The number of unique sources cited in AI responses for this topic or this topic/prompt combination (includes owned citations).
 * **Owned Citations** - The number of times your brand was cited in AI responses for this keyword or this keyword/question combination.
 
 >[!TAB Share of Voice]
 
-The **share of voice** table, compares your brand voice to other competitors across topics. It displays the following metrics:
+The Share of Voice table provides a comparative look at how your brand performs across key topics in generative AI responses. It helps you identify visibility gaps, track competitive performance, and prioritize areas for optimization. It displays the following metrics:
 
 * **Topic** - The analyzed topic.
 * **Popularity** - The search volume for the topic relative to all other topics in your analysis.
 * **Mentions** - Number of times your brand was mentioned in AI responses for the topic or the topic/prompt combination.
 * **Ranking** - The ranking of your brand's Share of Voice, relative to all identified competitors.
-* **Share of voice** - The percentage of time a brand is mentioned, relative to all mentions in AI answers.
-* **Top 5 Competitors** - The top five competitors organized by their Share of Voice (highest to lowest).
+* **Share of voice** - The percentage of total mentions your brand holds across AI-generated responses.
+* **Top 5 Competitors** - The top five brands most frequently mentioned for the same topics. Competitors are organized by their Share of Voice (highest to lowest).
 
 >[!ENDTABS]
 
