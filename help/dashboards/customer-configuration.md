@@ -9,9 +9,6 @@ Customer Configuration is where you define how your brand will be monitored and 
 
 ![Customer Configuration Dashboard](/help/dashboards/assets/customer-config.png)
 
-
-## 
-
 ## Customer Configuration dashboard
 
 The Customer Configuration Dashboard is a powerful tool that provides insights into your brand's visibility in LLMs. By correctly setting up categories, topics, prompts, and competitors, you can ensure your brand is well-positioned to appear in LLM-generated responses. Regularly reviewing insights like Share of Voice, content visibility, and opportunities will help you adapt your strategy and stay ahead of competitors.
