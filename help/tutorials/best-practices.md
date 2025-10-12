@@ -11,13 +11,12 @@ If traditional SEO helped you win page-one rankings, LLM optimization helps you 
 
 This article describes best practices around measuring and enhancing your visibility and influence in AI-driven search environments using Adobe LLM Optimizer.
 
-* [LLM vs SEO:Key differences](#key-differences)
-* [Unlocking LLM brand visibility](#unlocking-llm-brand-visibility)
+* [LLM vs SEO: Key differences](#key-differences)
 * [Strategic campaign planning](#strategic-campaign-planning)
-* [Actionable optimization steps](#actionable-optimization-steps)
-* [Offsite optimization for LLM visibility](#offsite-optimization-for-llm-visibility)
-* [Measuring LLM visibility](#measuring-llm-visibility)
-* [Tracking visibility changes](#tracking-visibility-changes)
+* [Onsite optimization](#onsite-optimization---strengthening-your-owned-content)
+* [Offsite optimization](#offsite-optimization---expanding-your-brand-footprint)
+* [Measuring LLM visibility and tracking changes](#measuring-llm-visibility-and-tracking-changes)
+* [How to optimize for agentic traffic](#how-to-optimize-for-agentic-traffic)
 
 ## LLM vs SEO: Key differences {#key-differences}
 
@@ -46,69 +45,98 @@ Other considerations for LLM optimization:
 * Freshness of content matters: LLMs prioritize recently updated content. (Search engines also prioritize this for time-sensitive queries but rely on other values more heavily.)
 * Getting earned (third-party) in the form of mentions and citations is very important.
 
-## Unlocking LLM Brand Visibility
+## Strategic campaign planning
+
+Building a successful LLM optimization campaign involves:
+
+* Identify high-value topics aligned with customer intent. Align prompt intent with business goals and customer needs.
+* Spot competitor mentions to find gaps and opportunities. Focus on prompts where competitors are cited, indicating opportunity for brand inclusion.
+* Group prompts by intent using topic clustering: Use topics and search fields to cluster similar user goals for benchmarking visibility.
+* Assess brand credibility using EEAT (Experience, Expertise, Authoritativeness, Trustworthiness) and YMYL (Your Money or Your Life) standards.
+
+This strategic approach ensures targeted, data-driven improvements in LLM visibility.
+
+### Unlocking LLM brand visibility
 
 LLM visibility is all about how often and how prominently your brand shows up in AI-generated answers.
 
-To improve your visibility,
+To improve your visibility, follow this cycle:
 
-1. **Analyze:** Review how your brand appears in key customer prompts across LLMs.
-2. **Plan:** Target clusters of prompts with similar intent for focused campaigns.
-3. **Act:** Implement changes and monitor shifts in LLM visibility over time.
-4. **Adapt:** Refine strategies based on actionable insights from the optimizer.
+Analyze > Plan > Act > Adapt
+
+* **Analyze:** Review how your brand appears in key customer prompts across LLMs.
+* **Plan:** Target clusters of prompts with similar intent for focused campaigns.
+* **Act:** Implement changes and monitor shifts in LLM visibility over time.
+* **Adapt:** Refine strategies based on actionable insights from the optimizer.
 
 <!--insert image-->
 
 Understanding and leveraging these steps can help your brand stay relevant as AI becomes central to information discovery.
 
-## Strategic campaign planning
+## Onsite optimization - strengthening your owned content
 
-Building a successful LLM optimization campaign involves:
+Onsite optimization improves your owned content for LLM visibility. These are actions you take on your own website and digital properties to improve how LLMs perceive, access, and cite your brand.
 
-* Identify high-value topics: Align prompt intent with business goals and customer needs.
-* Spot competitor mentions: Focus on prompts where competitors are cited, indicating opportunity for brand inclusion.
-* Group prompts by intent: Use topics and search fields to cluster similar user goals for benchmarking visibility.
-* Assess realistic brand inclusion: Evaluate if your brand can be credibly mentioned, considering factors like EEAT (Experience, Expertise, Authoritativeness, Trustworthiness) and YMYL (Your Money or Your Life) standards.
+>[!TIP]
+>
+>The LLM Optimizer suggests onsite and offsite optimization opportunities in the [Opportunities](/help/dashboards/opportunities.md) dashboard for you. These opportunities are specific for your site. It can often deploy optimizations directly to your site.
 
-This strategic approach ensures targeted, data-driven improvements in LLM visibility.
+Here are some optimization best practices:
 
-## Actionable optimization steps
+1. Ensure technical accessibility
 
-The LLM Optimizer suggests optimization opportunities in the [Opportunities](/help/dashboards/opportunities.md) dashboard.
+    * Review robots.txt and CDN settings to allow AI agents to crawl your site.
+    * Use the URL Inspector to identify blocked or inaccessible pages. See [URL inspector](/help/dashboards/url-inspector.md).
 
-Here are some practical actions to consider to boost brand visibility in LLMs:
+2. Refresh and structure content
 
-* Update Wikipedia pages: Ensure company and cited pages are current and relevant.
-* Enable LLM access: Monitor robots.txt and CDN settings to prevent blocking AI bots.
-* Revamp content: Refresh 10-15% of page content, add references, and improve structure with headers (H1, H2, H3).
-* Add FAQs: Integrate relevant FAQs based on prompt analysis to address user queries.
-* Increase brand mentions on Reddit/Quora: Contribute to user-generated content platforms where LLMs source citations. Be careful of how you approach this as you can trigger
+    * Update 10-15% of page content regularly. LLMs prioritize fresh content.
+    * Add citations and references to authoritative sources.
+    * Use structured headers (H1, H2, H3) for better parsing.
 
-Consistent execution of these steps can significantly enhance your brand's presence in AI-driven search results.
+3. Integrate FAQs
 
-## Offsite optimization for LLM visibility
+    * Add natural-language FAQs based on prompt analysis.
+    * Address common user questions in conversational formats.
 
-Offsite optimization focuses on improving your brand's visibility in AI-generated answers by influencing third-party content sources that LLMs frequently cite.
+4. Monitor and iterate
+
+    * Use the [Opportunities dashboard](/help/dashboards/opportunities.md) to identify and act on recommendations.
+    * Track visibility score, sentiment, and citation frequency.
+    * Adjust based on competitor activity and prompt trends.
+
+## Offsite optimization - expanding your brand footprint
+
+Offsite optimization focuses on improving your brand's visibility in AI-generated answers by influencing third-party content sources that LLMs frequently cite. These are actions taken outside your owned properties to influence how LLMs find and cite your brand.
+
+>[!TIP]
+>
+>The LLM Optimizer suggests onsite and offsite optimization opportunities in the [Opportunities](/help/dashboards/opportunities.md) dashboard for you. These opportunities are specific for your site. It can often deploy optimizations directly to your site.
+
 
 Key Offsite Channels:
 
 * Wikipedia: Ensure pages are up-to-date, well-sourced, and neutrally written.
-* Reddit & Quora: Participate in discussions with authentic, helpful contributions.
-* Affiliate Articles & Reviews: Collaborate with publishers for high-quality content.
-* YouTube & Social Media: Create videos and posts that answer common questions.
-* News & PR: Secure coverage in reputable outlets.
+* Reddit and Quora: Participate in discussions with authentic, helpful contributions and brand mentions.
+* Affiliate articles & reviews: Collaborate with publishers for high-quality content.
+* YouTube and social media: Create videos and posts that answer common questions.
+* News and PR: Secure coverage in reputable outlets.
 
 Best Practices:
 
 * Diversify your offsite footprint.
-* Monitor citations using Adobe's LLM Optimizer.
+* Monitor citations using Adobe LLM Optimizer. See [Brand Presence dashboard](/help/dashboards/brand-presence.md).
 * Update stale content and seek new inclusion opportunities.
 * Coordinate with PR and social teams.
 * Ensure contributions are unbiased and informative.
 
-## Measuring LLM visibility
+Consistent execution of these steps can significantly enhance your brand's presence in AI-driven search results.
 
-To benchmark your website's visibility or to see visibility improvements, track these key metrics:
+## Measuring LLM visibility and tracking changes
+
+Understanding how your brand shows up in AI-generated answers is essential to optimizing for LLMs. Adobe LLM Optimizer provides a structured way to measure visibility, benchmark performance, and track improvements over time
+
+Track these key metrics:
 
 * **Mentions:** How many times your brand is mentioned in responses.
 * **Citations:** How often LLMs use your content or sources to answer questions.
@@ -117,26 +145,26 @@ To benchmark your website's visibility or to see visibility improvements, track 
 
 These metrics combine into a **visibility** score, which tells you how strong your brand's presence is in LLM responses. See the [Brand Presence](/help/dashboards/brand-presence.md) board.
 
-## Tracking visibility changes
+### Tracking strategy
 
 Here are steps you can follow to monitor progress:
 
-1. Check Your Current Visibility
-    * Use Adobe LLM Optimizer to show you how often your brand is mentioned and cited and what the sentiment is in LLM responses. See the [Brand Presence](/help/dashboards/brand-presence.md) dashboard.
+1. Benchmark your current visibility.
+    * Identify how often and where your brand is mentioned and cited and what the sentiment is in Adobe LLM Optimizer. See the [Brand Presence](/help/dashboards/brand-presence.md) dashboard.
     * Analyze prompts where your brand appears and where it doesn't.
-    * Benchmark against competitors.
-    * Review visibility on user-generated platforms like Reddit, Quora, and Wikipedia. These UGC platforms are often cited by LLMs to find information.
+    * Compare visibility against competitors.
+    * Review visibility on user-generated platforms like Reddit, Quora, and Wikipedia. Segment by platform (ChatGPT, Google AI mode, and so on)
     * Monitor agentic traffic to understand which pages LLMs visit. Agentic traffic often does **not** go to the home page but other pages lower in the hierarchy. See the [Agentic Traffic](/help/assets/overview/agentic-traffic-card.png) dashboard.
-    * Make sure your content is visible and accessible to LLMs. You can use the Chrome plug-in to see what AI agents can view.
-
-1.  Plan Your Strategy
-    * Group similar prompts together based on what people are asking.
-    * Focus on the prompts that are most important to your customers.
-    * Check if your brand has a good chance of being mentioned for certain prompts.
-    * Make sure your content shows your expertise, trustworthiness, and authority (EEAT).
-
-1. Improve Your Content
-    * Use the LLM Optimizer Opportunities to identify and make specifically recommended, immediate changes to your site. See [Opportunities](/help/dashboards/opportunities.md) (then measure the results.) Review the opportunities section regularly and take action on the recommendations provided.
+1. Monitor changes over time.
+    * Use time filters to track weekly and monthly shifts
+    * Watch for spikes or drops in visibility score.
+    * Analyze sentiment trends to understand brand perception.
+1. Correlate visibility with traffic, engagement, and conversions.
+    * Use attribution features to connect visibility improvements to traffic, engagement, and conversions. Attribution features in Adobe LLM Optimizer help you connect improvements in visibility metrics (mentions, citations, sentiment) to real business outcomes like site traffic, user engagement, and conversions. This proves ROI for your optimization efforts.
+    * Track changes in agentic and referral traffic to validate optimization ROI.
+1. Improve your content
+    * Use the LLM Optimizer's [Opportunities dashboard](/help/dashboards/opportunities.md) to identify and make specifically recommended, immediate changes to your site. See [Opportunities](/help/dashboards/opportunities.md) (then measure the results.) Review the opportunities section regularly and take action on the recommendations provided.
+    * Prioritize pages with declining visibility.
     * Update your website and other content to make it more relevant to the prompts you want to target.
     * Add FAQs to your pages that answer common questions people might ask.
     * Make sure your content is easy for LLMs to find and read. Fix any issues like blocked pages or problems with your website's code.
@@ -144,14 +172,19 @@ Here are steps you can follow to monitor progress:
     * Use Adobe LLM Optimizer to track how your visibility changes over time.
     * If you notice competitors getting mentioned more often, adjust your strategy to stay ahead.
     * Keep updating your content to match what people are searching for and asking about.
+1. Adjust [offsite](#offsite-optimization---expanding-your-brand-footprint) and [onsite](#onsite-optimization---strengthening-your-owned-content) strategies based on insights.
 
-## Understanding Agentic Traffic
+>[!NOTE]
+>
+>Make sure your content is visible and accessible to LLMs. You can use the Chrome plug-in to see what AI agents can view.
+
+## Understanding agentic traffic
 
 Agentic traffic refers to visits from AI agents like ChatGPT, Google's AI mode/overviews, Copilot, or Perplexity. These agents crawl your site to gather information for generating answers.
 
 Agentic traffic shows up in two ways: zero-click experiences and visibility without clicks.
 
-### Zero-Click Experiences
+### Zero-click experiences
 
 In traditional search, users click through to websites to consume content. But with LLMs users often get complete answers directly in the chat interface or serach engine results pate without ever visiting your site. This is called a zero-click experience.
 
@@ -180,7 +213,7 @@ Why this matters:
 
 Tracking agentic traffic helps you understand how AI sees and uses your content.
 
-### How to Optimize for Agentic Traffic:
+### How to optimize for agentic traffic
 
 To optimize for agentic traffic:
 
