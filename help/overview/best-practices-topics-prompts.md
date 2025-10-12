@@ -77,7 +77,7 @@ When creating the list, consider the following:
 
 * Can an editor understand the topic in 5 seconds from the prompt text? If not, rename/simplify.
 * Will a different team own the fix for different topics? If yes, you picked useful topics.
-<!-- Last bullet point does not make sense. Clarification needed.-->
+<!-- Last bullet point does not make sense. Clarification needed. Also not sure what is meant by "editor"?-->
 
 Some additional helpful hints:
 
@@ -88,8 +88,8 @@ Some additional helpful hints:
 >
 > * Keep topics intent-based, not organizational.
 > * Do not add categories/filters for brand/non-brand/geographic as you can filter specifically for this in the **[!UICONTROL Brands]** tab.
-> * Topics are spread out across several categories, you can **not** have different topics per category.
-> * A single prompt can exist in several topics or categories.
+> * Topics are spread out across several categories. You **cannot** define unique topics to each category.
+> * A single prompt **can** exist in several topics or categories.
 
 ## Best practices for prompts
 
@@ -97,9 +97,15 @@ Prompts identify the specific questions or queries that customers are asking, wh
 
 Be sure to review and update prompts regularly to ensure they align with customer needs and business goals.
 
+Best practices for prompts:
+
+* Group similar prompts together based on what people are asking.
+* Focus on the prompts that are most important to your customers.
+* Check if your brand has a good chance of being mentioned for certain prompts.
+
 >[!TIP]
 >
->* You can use tools like the Adobe LLM Optimizer and Google Search Console with regex filters to identify common question structures (for example, "how," "what," "when," "where") and find out what prompts people are using to visit your site.
+>* You can use tools like Adobe LLM Optimizer and Google Search Console with regex filters to identify common question structures (for example, "how," "what," "when," "where") and find out what prompts people are using to visit your site.
 >* To find out what prompts are relevant to your site/brand, you can use on-site search data, FAQs in search engine results pages, or even ask LLM chatbots directly what questions customers might ask about your brand.
 
 ## Best practices for competitors

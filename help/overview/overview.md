@@ -48,12 +48,11 @@ Generative Engine Optimization is cross-functional by nature. LLM Optimizer is d
 
 With Adobe LLM Optimizer, you can:
 
-**Measure Brand Visibility** - track when, where, and how often your brand is mentioned in AI-powered search results. Move beyond guesswork with a clear visibility score you can benchmark over time.
-**Benchmark Competitors** - See how your brand stacks up against competitors in generative engines. Identify share of voice gaps and uncover competitive advantages.
-**Discover Actionable Opportunities** - Pinpoint content opportunities (e.g., FAQs, abstracts, schema) and technical opportunities (crawlability, indexing issues) that directly increase mentions and citations.
-**Track Traffic Impact from AI** - Monitor agentic traffic (from AI assistants) and referral traffic (user clicks from citations) to your owned properties. Tie GEO visibility to real engagement.
-**Enable Team Collaboration** - Share dashboards, assign owners for prompts or categories, and ensure visibility goals are tracked across marketing, SEO, and communications functions.
-
+**Measure Brand Visibility** - track when, where, and how often your brand is mentioned in AI-powered search results. Move beyond guesswork with a clear visibility score you can benchmark over time. See [Brand Presence dashboard](/help/dashboards/brand-presence.md).
+**Benchmark Competitors** - See how your brand stacks up against competitors in generative engines. Identify share of voice gaps and uncover competitive advantages. See [Brand Presence dashboard](/help/dashboards/brand-presence.md).
+**Discover Actionable Opportunities** - Pinpoint content opportunities (e.g., FAQs, abstracts, schema) and technical opportunities (crawlability, indexing issues) that directly increase mentions and citations. See [Opportunities dashboard](/help/dashboards/opportunities.md).
+**Track Traffic Impact from AI** - Monitor agentic traffic (from AI assistants) and referral traffic (user clicks from citations) to your owned properties. Tie GEO visibility to real engagement. See [Agentic Traffic dashboard](/help/dashboards/agentic-traffic.md) and [Referral Traffic dashboard](/help/dashboards/referral-traffic.md).
+**Enable Team Collaboration** - Share dashboards, assign owners for prompts or categories, and ensure visibility goals are tracked across marketing, search engine optimization (SEO), and communications functions. See [Collaboration dashboard](/help/dashboards/collaboration.md).
 
 ## Learn More
 
