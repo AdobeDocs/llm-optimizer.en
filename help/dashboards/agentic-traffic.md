@@ -16,15 +16,26 @@ This page details the following:
 * [Top and Bottom Movers](#top-bottom-movers)
 * [User Agent and URL Performance Analysis](#user-url-performance)
 
-## CDN Setup {#cdn-setup}
+## CDN Log Forwarding {#cdn-setup}
 
-On first login, the Agentic Traffic dashboard is blank. To view agentic interactions, you must configure **CDN log forwarding**. **TBD point to CDN setup in quickstart/onboarding?**
+Without **CDN log forwarding**, the Agentic Traffic dashboard is blank. To view agentic interactions, you must configure **CDN log forwarding**.  On first login, you will see a message as shown in the image below.
 
-![CDN Setup](/help/dashboards/assets/ag-log-forward.png)
+![CDN Setup](/help/dashboards/assets/ag-log-forward1.png)
+
+Select **Go to Configuration** and you will automatically navigate to the **CDN Configuration** tab of the [customer configuration dashboard](/help/dashboards/customer-configuration.md).
+
+![CDN Setup Onboard](/help/dashboards/assets/ag-log-forward2.png)
+
+On this tab, select **Onboard CDN**. And the CDN provider window is displayed.
+
+![CDN Provider](/help/dashboards/assets/ag-log-forward3.png)
+
+On the **Onboard CDN Provider** window:
 
 1. Select your CDN provider (for example, Akamai, Adobe-managed Fastly, Fastly, AWS Cloudfront, Azure CDN, Cloudflare, or Other).
-2. Enter a primary contact email.
-3. Click **Request Activation** to enable log forwarding.
+2. Click **Onboard** to enable log forwarding.
+
+If you select **Other**, you will have to reach out to Adobe for assistance.
 
 Once activated, logs are ingested and the dashboard will populate with metrics such as total agent interactions, success rate, hits by market, user agent analysis, and URL-level performance.
 
@@ -33,11 +44,11 @@ Once activated, logs are ingested and the dashboard will populate with metrics s
 At the top of the page, you can apply filters to refine your view. The filters you choose will impact **all** the sections present on the dashboard. You can customize the following:
 
 * **Date Range** - Select the time frame for the displayed data. For example, the last 4 weeks. You also have the option to customize the time period by selecting the **Custom Weeks** option.
-* **Category** - Filter the displayed results by predefined categories. You can also add custom categories to this field (**SR**-how?).
+* **Category** - Filter the displayed results by predefined categories or custom categories.
 * **Platform** - Choose which AI engine to analyze.
 * **Agent Type** - Filter by the type of AI agent that interacted with your site. You can filter between crawlers, chatbots or all agents.
-* **Success Rate** - Filter by the interaction quality (high, medium or low). This metric represents the percentage of successful HTTP requests, including both direct successful responses and redirects.
-* **Content Type** - Filter by content type, either HTML or txt.
+* **Success Rate** - Filter by the interaction quality (high, medium or low). This metric represents the percentage of successful HTTP requests, including both direct successful responses (2xx status codes) and redirects (3xx status codes).
+* **Content Type** - View agentic interaction for different content types, such as HTML, PDF and so on.
 
 After you select the desired filter, click **Apply Filters** to apply the selection to the dashboard.
 
@@ -63,10 +74,9 @@ Use the Agentic Traffic Trends chart to track the weekly totals of successful, f
 
 ## Top and Bottom Movers {#top-bottom-movers}
 
-These two metrics sort the URLs as follows:
+The Top and Bottom Movers view highlights URLs with the largest week-over-week changes in agentic traffic — visits or hits from AI systems accessing your content. Top Movers show pages gaining visibility or engagement, while Bottom Movers reveal URLs with the steepest declines. This helps you quickly identify which content is trending upward, which may need attention, and where AI-driven discovery patterns are shifting.
 
-* **Top Movers** - The URLs with the biggest increase in agentic traffic from oldest to newest week.
-* **Bottom Movers** - URLs with the biggest decrease in agentic traffic from oldest to newest week.
+![Top and Bottom Movers](/help/dashboards/assets/movers.png)
 
 ## User Agent and URL Performance Analysis {#user-url-performance}
 
@@ -98,6 +108,12 @@ The URL Performance Analysis table shows a detailed view of individual URLs. Thi
 * **Success Rate** - The percentage of successful HTTP requests, including both direct successful responses and redirects.
 * **Category** - The category that most closely matches the content of your page.
 
-The URL performance table has a search field for quick access to URLs. Also, you can use the **Export** option to download the table .csv and share the insights with your team or include the table in executive reporting.
+The URL performance table has a search field for quick access to URLs. You can also view additional details for each URL by clicking on the information icon at the end of each row.
+
+![URL details](/help/dashboards/assets/details.png)
+
+The URL Details view provides a holistic understanding of a page’s performance — showing how often it’s cited, the sentiment of AI responses where it is mentioned, the topics and prompts it appears in, and trends in agentic and referral traffic over time.
 
 >[!ENDTABS]
+
+For both tables, you can use the **Export** option to download the table .csv and share the insights with your team or include the table in executive reporting.
