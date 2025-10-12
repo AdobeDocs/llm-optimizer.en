@@ -1,18 +1,21 @@
 ---
-title: Best Practices for Categories, Topics and Prompts
-description: Description here
+title: Best Practices for Categories, Topics, and Prompts
+description: Optimize LLM insights by configuring categories, topics, prompts, and competitors for tailored brand monitoring and strategic content analysis.
 ---
 
-# Intro here
-
-Customer Configuration is where you define how your brand will be monitored and analyzed within the LLM optimizer platform. You can customize categories (such as business units or product lines), track competitors, and add brand mention aliases to capture all variations of your brand across prompts. This setup ensures the platform tailors insights to your business context, enabling accurate visibility, traffic, and opportunity analysis.
-
-## Best practices for configuring categories, topics and prompts
+# Best practices for configuring categories, topics, prompts, and competitors
 
 This section describes best practices for deciding how you want to set up your categories, topics, prompts, and competitors.
+
 This is a vital first step. What you decide now determines how information is tailored to your business context. Any changes to categories in the future reset historical data.
 
-### Best practices for categories
+The [[!UICONTROL Customer Configuration]](/help/dashboards/customer-configuration.md) dashboard is where you define how your brand will be monitored and analyzed within the LLM optimizer platform. See [[!UICONTROL Customer Configuration]](/help/dashboards/customer-configuration.md) for information on how to use the dashboard.
+
+![Customer configuration window](/help/assets/best-practices/customer-configuration-best-practices.png)
+
+In the [!UICONTROL Customer Configuration] dashboard, you can customize categories (such as business units or product lines), track competitors, and add brand mention aliases to capture all variations of your brand across prompts. This setup ensures the platform tailors insights to your business context, enabling accurate visibility, traffic, and opportunity analysis.
+
+## Best practices for categories
 
 Categories let you organize your content into strategic business units or logical groupings. They are the "where it belongs" bucket and the top-level organizational structure for your content.
 
@@ -40,16 +43,17 @@ How to decide how you set up categories is based on one question: **Who needs to
 >
 > * Pick one approach and stick to it.
 > * You can only have **one** Category model per account/brand. Do not mix **SBU** and **URL_DIR** at the same time.
+<!--Can you mix Product/Service with these?-->
 
 Example:
 
 |Type of site | Category | Topic taxonomy examples |
 |---------|----------|---------|
-| Enterprises with multiple businesses | SBU | small intent set (How-to, Troubleshooting, Comparison, Pricing, Policy) |
+| Enterprises with multiple businesses | SBU | Small intent set (How-to, Troubleshooting, Comparison, Pricing, Policy) |
 | Documentation/support heavy site | URL_DIR | How-to, Troubleshooting, Reference, Release notes |
 | eCommerce/Services catalog | Product/Service | Comparison, Reviews, Pricing/Availability, How-to, Troubleshooting |
 
-### Best practices for topics
+## Best practices for topics
 
 Topics help you understand the user intent - they show you what the user wants. They let you group prompts with similar user intent. Think of it as clustering relevant prompts together.
 
@@ -67,12 +71,13 @@ When deciding on topics, you want to create a short, flat list (6-12 maximum). F
 * Pricing and Availability
 * Policy and Warranty
 * Support Contact
-* Corporate / News (if you truly need them)
+* Corporate/News (if you truly need this)
 
 When creating the list, consider the following:
 
 * Can an editor understand the topic in 5 seconds from the prompt text? If not, rename/simplify.
 * Will a different team own the fix for different topics? If yes, you picked useful topics.
+<!-- Last bullet point does not make sense. Clarification needed.-->
 
 Some additional helpful hints:
 
@@ -82,11 +87,11 @@ Some additional helpful hints:
 >[!IMPORTANT]
 >
 > * Keep topics intent-based, not organizational.
-> * Do not add categories/filters for brand/non-brand/geographic as you can filter specifically for this in the **Brands** tab.
+> * Do not add categories/filters for brand/non-brand/geographic as you can filter specifically for this in the **[!UICONTROL Brands]** tab.
 > * Topics are spread out across several categories, you can **not** have different topics per category.
 > * A single prompt can exist in several topics or categories.
 
-### Best practices for prompts
+## Best practices for prompts
 
 Prompts identify the specific questions or queries that customers are asking, which can impact your business. They are the actual questions or queries that users input into LLMs.
 
@@ -97,7 +102,7 @@ Be sure to review and update prompts regularly to ensure they align with custome
 >* You can use tools like the Adobe LLM Optimizer and Google Search Console with regex filters to identify common question structures (for example, "how," "what," "when," "where") and find out what prompts people are using to visit your site.
 >* To find out what prompts are relevant to your site/brand, you can use on-site search data, FAQs in search engine results pages, or even ask LLM chatbots directly what questions customers might ask about your brand.
 
-### Best practices for competitors
+## Best practices for competitors
 
 Competitors let you monitor visibility and mentions in LLM responses for prompts and topics that are important to your business.
 
@@ -108,4 +113,9 @@ With competitor tracking, you can see how often competitors are mentioned alongs
 >[!TIP]
 >
 >Regularly review competitor mentions and citations to identify areas where your brand can improve.
+
+## Learn More
+
+* [Customer Configuration dashboard](/help/dashboards/customer-configuration.md) is where you configure your categories, topics, prompts, and competitors.
+* [LLM Optimizer best practices](/help/tutorials/best-practices.md) describes best practices around LLM Optimization
 
