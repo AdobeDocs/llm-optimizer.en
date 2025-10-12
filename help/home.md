@@ -19,6 +19,12 @@ Adobe LLM Optimizer is a generative AI-first application for Generative Engine O
   {image= /help/assets/overview/agentic-traffic-card.png}
   {target=_blank}
   {cta=Learn more}
+* ./overview/best-practices-topics-prompts.md
+  {title= Best practices for setting up categories, topics, prompts, and competitors}
+  {description= Learn how to configure LLM Optimizer for tailored brand monitoring and strategic content analysis.}
+  {image= /help/assets/overview/customer-configuration-card.png}
+  {target=_blank}
+  {cta=Learn more}
 * ./dashboards/dashboards-overview.md
   {title= Dashboards overview}
   {image= /help/assets/overview/brand-presence-card.png}
@@ -46,6 +52,29 @@ Adobe LLM Optimizer is a generative AI-first application for Generative Engine O
                     <p class="is-size-6">Learn how to quickly get up and running with the LLM Optimizer.</p>
                 </div>
                 <a href="./overview/quick-start.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Learn more</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Best practices for setting up categories, topics, prompts, and competitors">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="./overview/best-practices-topics-prompts.md" title="Best practices for setting up categories, topics, prompts, and competitors" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="/help/assets/overview/customer-configuration-card.png" alt="Best practices for setting up categories, topics, prompts, and competitors"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="./overview/best-practices-topics-prompts.md" target="_blank" rel="referrer" title="Best practices for setting up categories, topics, prompts, and competitors">Best practices for setting up categories, topics, prompts, and competitors</a>
+                    </p>
+                    <p class="is-size-6">Learn how to configure LLM Optimizer for tailored brand monitoring and strategic content analysis.</p>
+                </div>
+                <a href="./overview/best-practices-topics-prompts.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Learn more</span>
                 </a>
             </div>

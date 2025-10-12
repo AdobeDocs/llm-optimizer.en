@@ -1,11 +1,9 @@
 ---
-title: LLM Optimizer Fundamentals
+title: LLM Optimizer Basics
 description: Learn about how Adobe LLM Optimizer boosts brand visibility in AI-driven search. Track mentions, citations, and insights. Start optimizing today for better engagement and influence.
 ---
 
-# LLM Optimizer Overview
-
-<!-- This doesn't seem like a tutorials overview to me. Still trying to place correctly -->
+# LLM Optimizer Basics
 
 This page details the following:
 
@@ -28,9 +26,6 @@ Adobe LLM Optimizer offers a suite of tools designed for generative engine optim
 * Discover Actionable Opportunities: Identify content and technical improvements (like FAQs, abstracts, schema, crawlability) to boost mentions and citations.
 * Track Traffic Impact: Monitor both agentic (AI assistant) and referral traffic to your owned properties, linking visibility to engagement.
 * Enable Team Collaboration: Share dashboards, assign owners, and align goals across marketing, SEO, and communications teams.
-
-
-<!-- I'm adding headings because LLMs like them and that way we'll rank better. Generally question format/question words in the the title is preferred. We can discuss. Or we can mirror what we did for Sites Optimizer and have this info on another page-->
 
 ## Why LLM optimization matters for your brand
 
