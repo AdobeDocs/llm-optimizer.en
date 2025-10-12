@@ -5,11 +5,11 @@ description: Description here
 
 # Intro here
 
+Customer Configuration is where you define how your brand will be monitored and analyzed within the LLM optimizer platform. You can customize categories (such as business units or product lines), track competitors, and add brand mention aliases to capture all variations of your brand across prompts. This setup ensures the platform tailors insights to your business context, enabling accurate visibility, traffic, and opportunity analysis.
 
 ## Best practices for configuring categories, topics, and prompts
 
 This section describes best practices for deciding how you want to set up your categories, topics, prompts, and competitors.
-
 This is a vital first step. What you decide now determines how information is tailored to your business context. Any changes to categories in the future reset historical data.
 
 ### Best practices for categories
