@@ -9,7 +9,7 @@ LLM Optimization, also called Generative Engine Optimization (GEO), or Answer En
 
 If traditional SEO helped you win page-one rankings, LLM optimization helps you win AI citations and visibility inside answer engines. The Adobe LLM Optimizer lets you measure and improve your brand's visibility inside answer engines.
 
-This article describes best practices around measuring and enhancing your visibility and influence in AI-driven search environments using Adobe LLM Optimizer.
+This article describes best practices for measuring and enhancing your visibility and influence in AI-driven search environments using Adobe LLM Optimizer.
 
 * [LLM vs SEO: Key differences](#key-differences)
 * [Strategic campaign planning](#strategic-campaign-planning)
@@ -24,7 +24,7 @@ A strong SEO foundation supports LLM optimization, but new tactics are needed to
 
 >[!NOTE]
 >
->Currently SEO traffic is still the largest driver of traffic to most web sites making it very important to your brand's visibility strategy.
+>Currently SEO traffic is still the largest driver of traffic to most web, making it very important to your brand's visibility strategy.
 
 
 |SEO | LLM |
@@ -141,13 +141,13 @@ Track these key metrics:
 * **Mentions:** How many times your brand is mentioned in responses.
 * **Citations:** How often LLMs use your content or sources to answer questions.
 * **Sentiment:** Whether the mention of your brand is positive, neutral, or negative.
-* **Position:** Where your brand is mentioned in the response (e.g., first, middle, or last).
+* **Position:** Where your brand is mentioned in the response (for example, first, middle, or last).
 
 These metrics combine into a **visibility** score, which tells you how strong your brand's presence is in LLM responses. See the [Brand Presence](/help/dashboards/brand-presence.md) board.
 
 ### Tracking strategy
 
-Here are steps you can follow to monitor progress:
+Here are steps that you can follow to monitor progress:
 
 1. Benchmark your current visibility.
     * Identify how often and where your brand is mentioned and cited and what the sentiment is in Adobe LLM Optimizer. See the [Brand Presence](/help/dashboards/brand-presence.md) dashboard.
@@ -167,7 +167,7 @@ Here are steps you can follow to monitor progress:
     * Prioritize pages with declining visibility.
     * Update your website and other content to make it more relevant to the prompts you want to target.
     * Add FAQs to your pages that answer common questions people might ask.
-    * Make sure your content is easy for LLMs to find and read. Fix any issues like blocked pages or problems with your website's code.
+    * Make sure that your content is easy for LLMs to find and read. Fix any issues like blocked pages or problems with your website's code.
     * Ensure contributions to platforms like Wikipedia and Reddit are unbiased, non-commercial, and add value.
     * Use Adobe LLM Optimizer to track how your visibility changes over time.
     * If you notice competitors getting mentioned more often, adjust your strategy to stay ahead.
@@ -176,7 +176,7 @@ Here are steps you can follow to monitor progress:
 
 >[!NOTE]
 >
->Make sure your content is visible and accessible to LLMs. You can use the Chrome plug-in to see what AI agents can view.
+>Make sure that your content is visible and accessible to LLMs. You can use the Chrome plug-in to see what AI agents can view.
 
 ## Understanding agentic traffic
 
@@ -186,12 +186,12 @@ Agentic traffic shows up in two ways: zero-click experiences and visibility with
 
 ### Zero-click experiences
 
-In traditional search, users click through to websites to consume content. But with LLMs users often get complete answers directly in the chat interface or serach engine results pate without ever visiting your site. This is called a zero-click experience.
+In traditional search, users click through to websites to consume content. But with LLMs users often get complete answers directly in the chat interface or search engine results pate without ever visiting your site. This is called a zero-click experience.
 
 What this means for your brand:
 
 1. Your content might be summarized or cited by an AI assistant.
-2. The user gets the information they need without clicking on your link.
+2. The user gets the information that they need without clicking on your link.
 3. Your site's visibility and influence are decoupled from traffic.
 
 So, even if your analytics show fewer visits, your brand could still be highly visible and influential in AI-generated answers.
@@ -218,7 +218,7 @@ Tracking agentic traffic helps you understand how AI sees and uses your content.
 To optimize for agentic traffic:
 
 * Ensure crawlability by reviewing robots.txt and CDN settings.
-* Use the [URL Inspector ](/help/dashboards/url-inspector.md)to analyze URL performance.
+* Use the [URL Inspector](/help/dashboards/url-inspector.md) to analyze URL performance.
 * Track bot behavior by accessing your CDN logs in the [Agentic traffic dashboard](/help/dashboards/agentic-traffic.md).
 * Segment traffic to understand business outcomes. See [Best practices for categories, topics, prompts, and competitors](/help/overview/best-practices-topics-prompts.md).
 
