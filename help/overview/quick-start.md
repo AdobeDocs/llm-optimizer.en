@@ -15,7 +15,7 @@ The onboarding process starts with onboarding your domain. The process is differ
 
 ### Try Before you buy
 
-AEM Cloud (Cloud Service,Managed Services, Edge Delivery Service) customers have the option to use the The Try Before You Buy offer. It is a free trial version of LLM Optimizer with up to 200 free prompts. Use of more than 200 prompts requires a separate license agreement. Access is provided on an “as-is” and “as-available” basis, and may be modified, limited or removed by Adobe at any time.
+AEM Cloud (Cloud Service,Managed Services, Edge Delivery Service) customers have the option to use the the **Try Before You Buy** offer. It is a free trial version of LLM Optimizer with up to 200 free prompts. Use of more than 200 prompts requires a separate license agreement. Access is provided on an “as-is” and “as-available” basis, and may be modified, limited or removed by Adobe at any time.
 
 There are some product capabilities that are not available in the free version:
 
@@ -29,7 +29,7 @@ See the section below for details on how to activate the free trial version and 
 If you are an AEM Cloud Customers you have the option to try LLM Optimizer by using the Product Announcement card in [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub).
 
 >[!NOTE]
->Newly added prompts will not appear in the [Brand Presence Dashboard](/help/dashboards/brand-presence.md) until processing is complete. AEM Cloud Customers (Cloud Service, Managed Services/ Edge Delivery Service) can use the free trial version of LLM Optimizer. Use of more than 200 prompts requires a separate license agreement. Access is provided on an “as-is” and “as-available” basis, and may be modified, limited or removed by Adobe at any time. Please reach out to your account representative for more information.  
+>Newly added prompts will not appear in the [Brand Presence Dashboard](/help/dashboards/brand-presence.md) until processing is complete. AEM Cloud Customers can use the free trial version of LLM Optimizer. Use of more than 200 prompts requires a separate license agreement. Access is provided on an “as-is” and “as-available” basis, and may be modified, limited or removed by Adobe at any time. Please reach out to your account representative for more information.  
 
 ![LLM Optimizer Trial](/help/overview/assets/llm-trial.png)
 
@@ -67,6 +67,10 @@ From this dashboard, you can:
 >[!NOTE]
 >The exact prompts you ask LLMs are not publicly available because they are not disclosed by the LLMs.
 
+>[!NOTE]
+>
+> For more details on how to set up your categories, topics, prompts, and competitors see the [Best practices for configuring categories, topics, prompts, and competitors](/help/overview/best-practices-topics-prompts.md) page.
+
 ### Step 3: Automatic Pre-population of Insights
 
 Once your domain is onboarded and you have provided categories, and topics, LLM Optimizer will automatically trigger the Brand Presence analysis.
@@ -77,7 +81,7 @@ To unlock Agentic Traffic and Referral Traffic insights, you need to provide inf
 
 ![Customer Configuration CDN](/help/overview/assets/cc-cdn.png)
 
-Alternatively, if no CDN provider has been added beforehand, you will be prompted to add CDN log forwarding when accessing the Agentic and Referral Traffic dashboards for the first time. For more details, see:
+Alternatively, if no CDN provider has been added beforehand similar to the example above, you will be prompted to add CDN log forwarding when accessing the Agentic and Referral Traffic dashboards for the first time. For more details, see:
 
 * [Agentic Traffic](/help/dashboards/agentic-traffic.md#cdn-setup)
 * [Referral Traffic](/help/dashboards/referral-traffic.md#setup#setup)
@@ -91,4 +95,4 @@ After you provide information for CDN Log Forwarding, you can:
 * Use [Opportunities](/help/dashboards/opportunities.md) to identify content and technical improvements.
 * Export data and collaborate your team or invite your co-worker to use the product.
 
-Finally, to fully understand the capabilities of LLM optimizer, explore all the available [dashboards](/help/dashboards/dashboards-overview.md).
+Finally, to fully understand the capabilities of LLM Optimizer, you should explore all available [dashboards](/help/dashboards/dashboards-overview.md).
