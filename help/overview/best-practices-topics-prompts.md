@@ -1,11 +1,11 @@
 ---
-title: Best Practices for Categories, Topics, and Prompts
-description: Optimize LLM insights by configuring categories, topics, prompts, and competitors for tailored brand monitoring and strategic content analysis.
+title: Best Practices for Categories, Topics, Prompts, and Others
+description: Optimize LLM insights by configuring categories, topics, prompts, and other brands to track including competitors for tailored brand monitoring and strategic content analysis.
 ---
 
-# Best practices for configuring categories, topics, prompts, and competitors
+# Best practices for configuring categories, topics, prompts, and others to track
 
-This section describes best practices for deciding how you want to set up your categories, topics, prompts, and competitors.
+This section describes best practices for deciding how you want to set up your categories, topics, prompts, and others to track.
 
 This is a vital first step. What you decide now determines how information is tailored to your business context. Any changes to categories in the future reset historical data.
 
@@ -13,7 +13,7 @@ The [[!UICONTROL Customer Configuration]](/help/dashboards/customer-configuratio
 
 ![Customer configuration window](/help/assets/best-practices/customer-configuration-best-practices.png)
 
-In the [!UICONTROL Customer Configuration] dashboard, you can customize categories (such as business units or product lines), track competitors, and add brand mention aliases to capture all variations of your brand across prompts. This setup ensures the platform tailors insights to your business context, enabling accurate visibility, traffic, and opportunity analysis.
+In the [!UICONTROL Customer Configuration] dashboard, you can customize categories (such as business units or product lines), track other brands, and add brand mention aliases to capture all variations of your brand across prompts. This setup ensures the platform tailors insights to your business context, enabling accurate visibility, traffic, and opportunity analysis.
 
 ## Best practices for categories
 
@@ -38,6 +38,8 @@ How to decide how you set up categories is based on one question: **Who needs to
 * If you are a *business leader*, pick the **SBU** approach.
 * If you are a *web/content owner*, pick the **URL_DIR** approach.
 * If you are a *merchandising/offers manager*, pick the **Product/Service category** approach.
+
+![Adding categories in LLM Optimizer](/help/assets/best-practices/add-category.png)
 
 >[!IMPORTANT]
 >
@@ -73,6 +75,8 @@ When deciding on topics, you want to create a short, flat list (6-12 maximum). F
 * Support Contact
 * Corporate/News (if you truly need this)
 
+![Adding topics in LLM Optimizer](/help/assets/best-practices/add-topic.png)
+
 When creating the list, consider the following:
 
 * Can an editor understand the topic in 5 seconds from the prompt text? If not, rename/simplify.
@@ -82,7 +86,7 @@ When creating the list, consider the following:
 Some additional helpful hints:
 
 * Use knowledge of your business or site to define topics that align with your brand's strategic goals
-* Consider how your brand compares to competitors within specific topics.
+* Consider how your brand compares to other brands within specific topics.
 
 >[!IMPORTANT]
 >
@@ -108,20 +112,20 @@ Best practices for prompts:
 >* You can use tools like Adobe LLM Optimizer and Google Search Console with regex filters to identify common question structures (for example, "how," "what," "when," "where") and find out what prompts people are using to visit your site.
 >* To find out what prompts are relevant to your site/brand, you can use on-site search data, FAQs in search engine results pages, or even ask LLM chatbots directly what questions customers might ask about your brand.
 
-## Best practices for competitors
+## Best practices for tracking other brands
 
-Competitors let you monitor visibility and mentions in LLM responses for prompts and topics that are important to your business.
+Tracking Others let you monitor visibility and mentions in LLM responses for prompts and topics that are important to your business.
 
-The [!UICONTROL **Competitor Tracking**] tab lets you add competitors and track their visibility for specific prompts and topics.
+The [!UICONTROL **Others Tracking**] tab lets you add others including competitors to track their visibility for specific prompts and topics.
 
-With competitor tracking, you can see how often competitors are mentioned alongside your brand in different regions and categories and compare their visibility to your own.
+With others tracking, you can see how often other brands are mentioned alongside your brand in different regions and categories and compare their visibility to your own.
 
 >[!TIP]
 >
->Regularly review competitor mentions and citations to identify areas where your brand can improve.
+>Regularly review competitor or others mentions and citations to identify areas where your brand can improve.
 
 ## Learn More
 
-* [Customer Configuration dashboard](/help/dashboards/customer-configuration.md) is where you configure your categories, topics, prompts, and competitors.
+* [Customer Configuration dashboard](/help/dashboards/customer-configuration.md) is where you configure your categories, topics, prompts, and others tracking.
 * [LLM Optimizer best practices](/help/tutorials/best-practices.md) describes best practices around LLM Optimization
 

@@ -50,7 +50,7 @@ Other considerations for LLM optimization:
 Building a successful LLM optimization campaign involves:
 
 * Identify high-value topics aligned with customer intent. Align prompt intent with business goals and customer needs.
-* Spot competitor mentions to find gaps and opportunities. Focus on prompts where competitors are cited, indicating opportunity for brand inclusion.
+* Spot mentions to others including competitors to find gaps and opportunities. Focus on prompts where others are cited, indicating opportunity for brand inclusion.
 * Group prompts by intent using topic clustering: Use topics and search fields to cluster similar user goals for benchmarking visibility.
 * Assess brand credibility using EEAT (Experience, Expertise, Authoritativeness, Trustworthiness) and YMYL (Your Money or Your Life) standards.
 
@@ -103,7 +103,7 @@ Here are some optimization best practices:
 
     * Use the [Opportunities dashboard](/help/dashboards/opportunities.md) to identify and act on recommendations.
     * Track visibility score, sentiment, and citation frequency.
-    * Adjust based on competitor activity and prompt trends.
+    * Adjust based on other's activity (including competitors) and prompt trends.
 
 ## Offsite optimization - expanding your brand footprint
 
@@ -152,11 +152,11 @@ Here are steps that you can follow to monitor progress:
 1. Benchmark your current visibility.
     * Identify how often and where your brand is mentioned and cited and what the sentiment is in Adobe LLM Optimizer. See the [Brand Presence](/help/dashboards/brand-presence.md) dashboard.
     * Analyze prompts where your brand appears and where it doesn't.
-    * Compare visibility against competitors.
+    * Compare visibility against others including competitors (in **Others Tracking** in the [Customer Configuration dashboard](/help/dashboards/customer-configuration.md)).
     * Review visibility on user-generated platforms like Reddit, Quora, and Wikipedia. Segment by platform (ChatGPT, Google AI mode, and so on)
     * Monitor agentic traffic to understand which pages LLMs visit. Agentic traffic often does **not** go to the home page but other pages lower in the hierarchy. See the [Agentic Traffic](/help/assets/overview/agentic-traffic-card.png) dashboard.
 1. Monitor changes over time.
-    * Use time filters to track weekly and monthly shifts
+    * Use time filters to track weekly and monthly shifts.
     * Watch for spikes or drops in visibility score.
     * Analyze sentiment trends to understand brand perception.
 1. Correlate visibility with traffic, engagement, and conversions.
@@ -170,7 +170,7 @@ Here are steps that you can follow to monitor progress:
     * Make sure that your content is easy for LLMs to find and read. Fix any issues like blocked pages or problems with your website's code.
     * Ensure contributions to platforms like Wikipedia and Reddit are unbiased, non-commercial, and add value.
     * Use Adobe LLM Optimizer to track how your visibility changes over time.
-    * If you notice competitors getting mentioned more often, adjust your strategy to stay ahead.
+    * If you notice others including competitors getting mentioned more often, adjust your strategy to stay ahead.
     * Keep updating your content to match what people are searching for and asking about.
 1. Adjust [offsite](#offsite-optimization---expanding-your-brand-footprint) and [onsite](#onsite-optimization---strengthening-your-owned-content) strategies based on insights.
 
@@ -220,7 +220,7 @@ To optimize for agentic traffic:
 * Ensure crawlability by reviewing robots.txt and CDN settings.
 * Use the [URL Inspector](/help/dashboards/url-inspector.md) to analyze URL performance.
 * Track bot behavior by accessing your CDN logs in the [Agentic traffic dashboard](/help/dashboards/agentic-traffic.md).
-* Segment traffic to understand business outcomes. See [Best practices for categories, topics, prompts, and competitors](/help/overview/best-practices-topics-prompts.md).
+* Segment traffic to understand business outcomes. See [Best practices for categories, topics, and prompts](/help/overview/best-practices-topics-prompts.md).
 
 Here are the metrics to monitor:
 
