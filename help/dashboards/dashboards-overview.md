@@ -14,7 +14,7 @@ Key views include Brand Presence, Agentic and Referral Traffic, URL Inspector, O
 * ./brand-presence.md
   {title= Brand presence dashboard}
   {image= /help/assets/overview/brand-presence-card.png}
-  {description= Tracks how your brand appears across LLM search platforms, including sentiment analysis and competitor benchmarking.}
+  {description= Tracks how your brand appears across LLM search platforms, including sentiment analysis and benchmarking other brands.}
   {target=_blank}
   {cta=Learn more}
 * ./agentic-traffic.md
@@ -72,7 +72,7 @@ Key views include Brand Presence, Agentic and Referral Traffic, URL Inspector, O
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="./brand-presence.md" target="_blank" rel="referrer" title="Brand presence dashboard">Brand presence dashboard</a>
                     </p>
-                    <p class="is-size-6">Tracks how your brand appears across LLM search platforms, including sentiment analysis and competitor benchmarking.</p>
+                    <p class="is-size-6">Tracks how your brand appears across LLM search platforms, including sentiment analysis and benchmarking other brands.</p>
                 </div>
                 <a href="./brand-presence.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Learn more</span>
