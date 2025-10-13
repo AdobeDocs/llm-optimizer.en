@@ -5,25 +5,25 @@ description: Use customer configuration to define how your brand will be monitor
 
 # Customer Configuration {#customer-configuration}
 
-The Customer Configuration Dashboard is a powerful tool that provides insights into your brand's visibility in LLMs. By correctly setting up categories, topics, prompts, and competitors, you can ensure your brand is well positioned to appear in LLM-generated responses. This setup ensures the platform tailors insights to your business context, enabling accurate visibility, traffic, and opportunity analysis.
+The Customer Configuration Dashboard is a powerful tool that provides insights into your brand's visibility in LLMs. By correctly setting up categories, topics, prompts, you can ensure your brand is well positioned to appear in LLM-generated responses. This setup ensures the platform tailors insights to your business context, enabling accurate visibility, traffic, and opportunity analysis.
 
 ![Customer Configuration Dashboard](/help/dashboards/assets/customer-config.png)
 
 In order to configure how LLM Optimizer monitors and analyzes your brand presence across different markets and competitive landscapes, you have access to the following tabs:
 
 * [Categories](#categories)
-* [Competitor Tracking](#competitor-tracking)
+* [Others Tracking](#others-tracking)
 * [Brand Aliases](#brand-aliases)
 * [Data Insights](#data-insights)
 * [CDN Configuration](#agentic-cdn)
 
 >[!IMPORTANT]
 >
-> For more details on how to set up your categories, topics, prompts, and competitors see the [Best practices for configuring categories, topics, prompts, and competitors](/help/overview/best-practices-topics-prompts.md) page.
+> For more details on how to set up your categories, topics, prompts see the [Best practices for configuring categories, topics, prompts](/help/overview/best-practices-topics-prompts.md) page.
 
 ## Categories {#categories}
 
-From the categories tab, you can define business categories or product lines that you want to track, and associate them with specific regions. Overall, the categories tab relates to almost every other customization on this page, because categories will appear in the category field for the other customizations (competitor tracking,aliases and so on). To add a new category:
+From the categories tab, you can define business categories or product lines that you want to track, and associate them with specific regions. Overall, the categories tab relates to almost every other customization on this page, because categories will appear in the category field for the other customizations (others tracking,aliases and so on). To add a new category:
 
 1. Click the **Add** button.
 2. In the new configuration window, add the **Category Name**.
@@ -32,19 +32,19 @@ From the categories tab, you can define business categories or product lines tha
 
 Adding new categories will not automatically generate topics and prompts - these will need to be added manually from the [Data Insights](#data-insights) tab.
 
-To delete a category, click the delete icon from the category list. Be careful, because **deleting a category will also delete the associated items** like competitors you might have set up or brand aliases that are linked to that specific category.
+To delete a category, click the delete icon from the category list. Be careful, because **deleting a category will also delete the associated items** like brand aliases that are linked to that specific category.
 
-## Competitor Tracking {#competitor-tracking}
+## Others Tracking {#others-tracking}
 
-By using competitor tracking, you can track how your competitors are mentioned in relation to your brand across different categories and regions. Monitor their presence and performance in your market segments. To customize competitor tracking:
+By using this tab, you can track how your others are mentioned in relation to your brand across different categories and regions. Monitor their presence and performance in your market segments. To customize tracking:
 
-1. To add a new competitor, click the **Add** button.
+1. Click the **Add** button.
 2. In the new configuration window, select the **Category**. Previously created categories will appear here.
-3. Add the competitor's name.
-4. Customize the competitor Alias and Domains if needed.
-5. Click **Save** and the new competitor will appear on the competitor list.
+3. Add the other's name.
+4. Customize the other Alias and Domains if needed.
+5. Click **Save**.
 
-To delete a competitor, click the delete icon from the competitor list.
+To delete an entry on the list , click the delete icon.
 
 ## Brand Aliases {#brand-aliases}
 

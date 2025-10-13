@@ -5,15 +5,15 @@ description: Learn how to use the Brand Presence dashboard to understand how you
 
 # Brand Presence {#brand-presence}
 
-The Brand Presence dashboard provides a detailed overview on how your brand is perceived at the level of AI-generated responses. It shows where, how often, and in what context your brand is mentioned. You can use the dashboard to measure visibility, track citations, compare competitors, and explore sentiment trends. The dashboard is divided into several sections, each providing different insights. There are also customizable filters to help you refine the displayed data.
+The Brand Presence dashboard provides a detailed overview on how your brand is perceived at the level of AI-generated responses. It shows where, how often, and in what context your brand is mentioned. You can use the dashboard to measure visibility, track citation and explore sentiment trends. The dashboard is divided into several sections, each providing different insights. There are also customizable filters to help you refine the displayed data.
 
-![Brand Presence](/help/dashboards/assets/brand-main.png)
+![Brand Presence](/help/dashboards/assets/brand-main1.png)
 
 This page details the following:
 
 * [Filters](#filters)
 * [Overview Metrics](##key-metrics)
-* [Competitor Comparison](##competitor-comparison)
+* [Others Comparison](##others-comparison)
 * [Sentiment Trend](#sentiment-trend)
 * [Data Insights](#data-insights)
 
@@ -50,13 +50,13 @@ This metric represents the number of times your site was referenced as a source.
 
 Trend indicators for each key metric show how these values are changing over time compared to the previous period.
 
-## Competitor Comparison {#competitor-comparison}
+## Others Comparison {#others-comparison}
 
-In the competitor comparison section you can select up to five competitors and compare their mentions and citations against your brand. This way, you can view and benchmark your performance relative to the competition.
+In the others comparison section you can select up to five other brands and compare their mentions and citations against your brand. This way, you can view and benchmark your performance relative to other brands.
 
-![Competitor Comparison](/help/dashboards/assets/competitor-comparison.png)
+![Others Comparison](/help/dashboards/assets/competitor-comparison1.png)
 
-The competitors are selected from the drop-down list and the charts are updated when you click **Apply Filters**. The charts display weekly mentions and weekly citations side by side. You can also hover the mouse along the chart to see the data evolution across the weekly time frame.
+The other brands are selected from the drop-down list and the charts are updated when you click **Apply Filters**. The charts display weekly mentions and weekly citations side by side. You can also hover the mouse along the chart to see the data evolution across the weekly time frame.
 
 ## Sentiment Trend Analysis {#sentiment-trend}
 
@@ -68,7 +68,7 @@ In the sentiment trend analysis section you can track how your brand is perceive
 
 Rounding up the dashboard, we have two important tables: data insights and share of voice. The information presented in these tables will help you identify where your brand is strong and where optimization is needed.  
 
-By using the **data insights** table you can explore topics and user questions to assess and optimize content impact. The results are detailed by topics and prompts. Meanwhile, the **share of voice** table, compares your brand voice to other competitors across topics and helps you identify gaps and prioritize future topics.
+By using the **data insights** table you can explore topics and user questions to assess and optimize content impact. The results are detailed by topics and prompts. Meanwhile, the **share of voice** table, compares your brand voice to other brands across topics and helps you identify gaps and prioritize future topics.
 
 ![Data Insights](/help/dashboards/assets/data-insights.png)
 
@@ -99,9 +99,9 @@ The Share of Voice table provides a comparative look at how your brand performs 
 * **Topic** - The analyzed topic.
 * **Popularity** - The search volume for the topic relative to all other topics in your analysis.
 * **Mentions** - Number of times your brand was mentioned in AI responses for the topic or the topic/prompt combination.
-* **Ranking** - The ranking of your brand's Share of Voice, relative to all identified competitors.
+* **Ranking** - The ranking of your brand's Share of Voice, relative to all other identified brands.
 * **Share of voice** - The percentage of total mentions your brand holds across AI-generated responses.
-* **Top 5 Competitors** - The top five brands most frequently mentioned for the same topics. Competitors are organized by their Share of Voice (highest to lowest).
+* **Top 5 Others** - The top five brands most frequently mentioned for the same topics. The brands are organized by their Share of Voice (highest to lowest).
 
 >[!ENDTABS]
 
@@ -113,5 +113,5 @@ Key ways to use the table:
 
 * Prioritize high-popularity topics with low visibility - focus optimization where audience demand is strong but your brand presence is weak.
 * Track sentiment shifts - spot topics where mentions are trending negative or neutral, and coordinate your response.
-* Compare citations versus owned citations - identify prompts where your brand is mentioned but competitor's content is cited, signaling a content gap.
+* Compare citations versus owned citations - identify prompts where your brand is mentioned but other brand's content is cited, signaling a content gap.
 * Evaluate position range - monitor whether your brand appears early in AI responses (positions 1–3) or further down (6–10).
