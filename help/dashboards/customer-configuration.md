@@ -92,7 +92,7 @@ From this tab, you can configure your CDN streams to enable Adobe LLM Optimizer 
 
 On the **Onboard CDN Provider** window:
 
-1. Select your CDN provider (for example, Akamai, Adobe-managed Fastly, Fastly, AWS Cloudfront, Azure CDN, Cloudflare, or Other).
+1. Select your CDN provider.
 2. Click **Onboard** to enable log forwarding.
 
 If you select **Other**, you will have to reach out to Adobe for assistance.

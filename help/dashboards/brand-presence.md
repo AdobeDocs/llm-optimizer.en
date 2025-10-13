@@ -7,7 +7,7 @@ description: Learn how to use the Brand Presence dashboard to understand how you
 
 The Brand Presence dashboard provides a detailed overview on how your brand is perceived at the level of AI-generated responses. It shows where, how often, and in what context your brand is mentioned. You can use the dashboard to measure visibility, track citation and explore sentiment trends. The dashboard is divided into several sections, each providing different insights. There are also customizable filters to help you refine the displayed data.
 
-![Brand Presence](/help/dashboards/assets/brand-main1.png)
+![Brand Presence](/help/dashboards/assets/brand-main.png)
 
 This page details the following:
 
@@ -54,7 +54,7 @@ Trend indicators for each key metric show how these values are changing over tim
 
 In the others comparison section you can select up to five other brands and compare their mentions and citations against your brand. This way, you can view and benchmark your performance relative to other brands.
 
-![Others Comparison](/help/dashboards/assets/competitor-comparison1.png)
+![Others Comparison](/help/dashboards/assets/other-comparison.png)
 
 The other brands are selected from the drop-down list and the charts are updated when you click **Apply Filters**. The charts display weekly mentions and weekly citations side by side. You can also hover the mouse along the chart to see the data evolution across the weekly time frame.
 
