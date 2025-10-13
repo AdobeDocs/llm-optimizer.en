@@ -152,7 +152,7 @@ Here are steps that you can follow to monitor progress:
 1. Benchmark your current visibility.
     * Identify how often and where your brand is mentioned and cited and what the sentiment is in Adobe LLM Optimizer. See the [Brand Presence](/help/dashboards/brand-presence.md) dashboard.
     * Analyze prompts where your brand appears and where it doesn't.
-    * Compare visibility against competitors.
+    * Compare visibility against competitors (in **Others Tracking** in the [Customer Configuration dashboard](/help/dashboards/customer-configuration.md)).
     * Review visibility on user-generated platforms like Reddit, Quora, and Wikipedia. Segment by platform (ChatGPT, Google AI mode, and so on)
     * Monitor agentic traffic to understand which pages LLMs visit. Agentic traffic often does **not** go to the home page but other pages lower in the hierarchy. See the [Agentic Traffic](/help/assets/overview/agentic-traffic-card.png) dashboard.
 1. Monitor changes over time.
@@ -220,7 +220,7 @@ To optimize for agentic traffic:
 * Ensure crawlability by reviewing robots.txt and CDN settings.
 * Use the [URL Inspector](/help/dashboards/url-inspector.md) to analyze URL performance.
 * Track bot behavior by accessing your CDN logs in the [Agentic traffic dashboard](/help/dashboards/agentic-traffic.md).
-* Segment traffic to understand business outcomes. See [Best practices for categories, topics, prompts, and competitors](/help/overview/best-practices-topics-prompts.md).
+* Segment traffic to understand business outcomes. See [Best practices for categories, topics, and prompts](/help/overview/best-practices-topics-prompts.md).
 
 Here are the metrics to monitor:
 

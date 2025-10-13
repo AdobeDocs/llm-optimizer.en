@@ -1,11 +1,11 @@
 ---
 title: Best Practices for Categories, Topics, and Prompts
-description: Optimize LLM insights by configuring categories, topics, prompts, and competitors for tailored brand monitoring and strategic content analysis.
+description: Optimize LLM insights by configuring categories, topics, prompts, and other sites to track for tailored brand monitoring and strategic content analysis.
 ---
 
-# Best practices for configuring categories, topics, prompts, and competitors
+# Best practices for configuring categories, topics, prompts, and other brands to track
 
-This section describes best practices for deciding how you want to set up your categories, topics, prompts, and competitors.
+This section describes best practices for deciding how you want to set up your categories, topics, prompts, and other brands to track.
 
 This is a vital first step. What you decide now determines how information is tailored to your business context. Any changes to categories in the future reset historical data.
 
@@ -13,7 +13,7 @@ The [[!UICONTROL Customer Configuration]](/help/dashboards/customer-configuratio
 
 ![Customer configuration window](/help/assets/best-practices/customer-configuration-best-practices.png)
 
-In the [!UICONTROL Customer Configuration] dashboard, you can customize categories (such as business units or product lines), track competitors, and add brand mention aliases to capture all variations of your brand across prompts. This setup ensures the platform tailors insights to your business context, enabling accurate visibility, traffic, and opportunity analysis.
+In the [!UICONTROL Customer Configuration] dashboard, you can customize categories (such as business units or product lines), track other brands, and add brand mention aliases to capture all variations of your brand across prompts. This setup ensures the platform tailors insights to your business context, enabling accurate visibility, traffic, and opportunity analysis.
 
 ## Best practices for categories
 
