@@ -62,14 +62,14 @@ From this dashboard, you can:
 * Enter **custom topics** or subtopics you want tracked. Topics can be specific themes tied to high volume non-branded keywords associated with your domain.
 * Create **your prompts** to monitor visibility in specific queries. Prompts are queries (branded and non-branded) that provide a baseline visibility. Only a limited number of prompts will be automatically generated based on the categories and topics that you provided.
 * Define mention **aliases** to ensure all mentions of a brand are captured and accounted for.
-* Define **competitor aliases** to track competitors accurately.
+* Define **other aliases** to track other brands accurately.
 
 >[!NOTE]
 >The exact prompts you ask LLMs are not publicly available because they are not disclosed by the LLMs.
 
 >[!NOTE]
 >
-> For more details on how to set up your categories, topics, prompts, and competitors see the [Best practices for configuring categories, topics, prompts, and competitors](/help/overview/best-practices-topics-prompts.md) page.
+> For more details on how to set up your categories, topics, prompts see the [Best practices for configuring categories, topics, prompts](/help/overview/best-practices-topics-prompts.md) page.
 
 ### Step 3: Automatic Pre-population of Insights
 
@@ -90,7 +90,7 @@ Alternatively, if no CDN provider has been added beforehand similar to the examp
 
 After you provide information for CDN Log Forwarding, you can:
 
-* View the [Brand Presence](/help/dashboards/brand-presence.md) dashboard, view your visibility score and track your performance relative to your competitors.
+* View the [Brand Presence](/help/dashboards/brand-presence.md) dashboard and view your visibility score and track your performance relative to other brands.
 * Explore the [Agentic](/help/dashboards/agentic-traffic.md) and [Referral Traffic](/help/dashboards/referral-traffic.md) dashboards, if CDN log forwading has been configured.
 * Use [Opportunities](/help/dashboards/opportunities.md) to identify content and technical improvements.
 * Export data and collaborate your team or invite your co-worker to use the product.

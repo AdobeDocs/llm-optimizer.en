@@ -59,7 +59,7 @@ The trending URLs competing for citations view, highlights external URLs that ar
 The following metrics are provided:
 
 * **URL** - the analyzed URL
-* **Content Type** - The type of content (owned, social, earned, competitor).
+* **Content Type** - The type of content (owned, social, earned, other).
 * **Times cited** - The number of times the URL has been cited in AI-generated answers.
 * **Prompts cited in** - The number of unique AI prompts that cited the URL.
 * **Categories** - The product categories or topics associated with the URL.
