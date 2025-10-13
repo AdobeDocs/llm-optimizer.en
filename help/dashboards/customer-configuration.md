@@ -84,7 +84,7 @@ Additionally, you can also add topics/prompts to the list independently of a CSV
 
 On the list, you can click each topic and the associated prompt(s) will appear, To delete the topic and its associated prompts, click the delete icon from the list.
 
-## Agentic CDN {#agentic-cdn}
+<!--## Agentic CDN {#agentic-cdn}
 
-Not available (will it be available for release?).
+Not available (will it be available for release?).-->
 
