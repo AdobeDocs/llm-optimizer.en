@@ -5,7 +5,7 @@ description: Boost your brand with Adobe LLM Optimizer. Track mentions, uncover 
 
 # Adobe LLM Optimizer
 
-<!-- VIDEO HERE/SLIDES HERE -->
+>[!SLIDE](llm-optimizer-overview)
 
 Adobe LLM Optimizer is a generative AI-first application for Generative Engine Optimization, designed to help brands enhance their visibility, accuracy, and influence in AI-driven search environments. It provides insights into brand presence in AI-generated answers, offers prescriptive content recommendations, and automates optimization fixes.
 
