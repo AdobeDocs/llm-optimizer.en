@@ -72,10 +72,10 @@ The Referral Sources Details and URL Performance Analysis tables help you evalua
 
 The Referral Sources Details view breaks down traffic coming from different platforms such as OpenAI, Microsoft, Google, and Perplexity. It displays key metrics like visits, bounce rate and channel type, helping you understand which AI and search sources are driving the most engaged traffic to your site.
 
-**Source** - The source of the referral traffic.
-**Visits** - The total number of visits for each source.
-**Bounce rate** - The percentage of sessions from the referral source that had no engagement event.
-**Channel** - The channel for the source, either earned, paid or both.
+* **Source** - The source of the referral traffic.
+* **Visits** - The total number of visits for each source.
+* **Bounce rate** - The percentage of sessions from the referral source that had no engagement event.
+* **Channel** - The channel for the source, either earned, paid or both.
 
 >[!TAB URL Performance Analysis]
 
