@@ -200,4 +200,3 @@ Adobe LLM Optimizer is a generative AI-first application for Generative Engine O
     </div>
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
-
