@@ -3,15 +3,11 @@ title: Customer Configuration
 description: Use customer configuration to define how your brand will be monitored and analyzed within the LLM optimizer platform.
 ---
 
-# Customer configuration
+# Customer Configuration {#customer-configuration}
 
-Customer Configuration is where you define how your brand will be monitored and analyzed within the LLM optimizer platform. You can customize categories (such as business units or product lines), track competitors, and add brand mention aliases to capture all variations of your brand across prompts. This setup ensures the platform tailors insights to your business context, enabling accurate visibility, traffic, and opportunity analysis.
+The Customer Configuration Dashboard is a powerful tool that provides insights into your brand's visibility in LLMs. By correctly setting up categories, topics, prompts, and competitors, you can ensure your brand is well positioned to appear in LLM-generated responses. This setup ensures the platform tailors insights to your business context, enabling accurate visibility, traffic, and opportunity analysis.
 
 ![Customer Configuration Dashboard](/help/dashboards/assets/customer-config.png)
-
-## Customer Configuration dashboard
-
-The Customer Configuration Dashboard is a powerful tool that provides insights into your brand's visibility in LLMs. By correctly setting up categories, topics, prompts, and competitors, you can ensure your brand is well-positioned to appear in LLM-generated responses. Regularly reviewing insights like Share of Voice, content visibility, and opportunities will help you adapt your strategy and stay ahead of competitors.
 
 In order to configure how LLM Optimizer monitors and analyzes your brand presence across different markets and competitive landscapes, you have access to the following tabs:
 
@@ -19,18 +15,22 @@ In order to configure how LLM Optimizer monitors and analyzes your brand presenc
 * [Competitor Tracking](#competitor-tracking)
 * [Brand Aliases](#brand-aliases)
 * [Data Insights](#data-insights)
-* [Agentic CDN](#agentic-cdn)
+* [CDN Configuration](#agentic-cdn)
+
+>[!IMPORTANT]
+>
+> For more details on how to set up your categories, topics, prompts, and competitors see the [Best practices for configuring categories, topics, prompts, and competitors](/help/overview/best-practices-topics-prompts.md) page.
 
 ## Categories {#categories}
 
-From the categories tab, you can define business categories or product lines you want to track, and associate them with specific regions. Overall, the categories tab relates to every other customization on this page, because categories will appear in the category field for the other customizations (competitor tracking,aliases and so on). To add a new category:
+From the categories tab, you can define business categories or product lines that you want to track, and associate them with specific regions. Overall, the categories tab relates to almost every other customization on this page, because categories will appear in the category field for the other customizations (competitor tracking,aliases and so on). To add a new category:
 
 1. Click the **Add** button.
 2. In the new configuration window, add the **Category Name**.
 3. Customize the **Associated Region** where the category will be monitored.
 4. Click **Save** and the new category will appear on the category list.
 
-Adding new categories will not automatically generate topics and prompts - these will need to be added manually From the [Data Insights](#data-insights) tab.
+Adding new categories will not automatically generate topics and prompts - these will need to be added manually from the [Data Insights](#data-insights) tab.
 
 To delete a category, click the delete icon from the category list. Be careful, because **deleting a category will also delete the associated items** like competitors you might have set up or brand aliases that are linked to that specific category.
 
@@ -84,7 +84,15 @@ Additionally, you can also add topics/prompts to the list independently of a CSV
 
 On the list, you can click each topic and the associated prompt(s) will appear, To delete the topic and its associated prompts, click the delete icon from the list.
 
-<!--## Agentic CDN {#agentic-cdn}
+## CDN Configuration {#cdn-configuration}
 
-Not available (will it be available for release?).-->
+From this tab, you can configure your CDN streams to enable Adobe LLM Optimizer to analyze your CDN data. This data will be used to power dashboards (like Agentic Traffic), providing insights into traffic patterns, performance metrics, and optimization opportunities. To onboard your CDN provider, click **Onboard CDN**.
 
+![Customer Configuration CDN](/help/overview/assets/cc-cdn.png)
+
+On the **Onboard CDN Provider** window:
+
+1. Select your CDN provider (for example, Akamai, Adobe-managed Fastly, Fastly, AWS Cloudfront, Azure CDN, Cloudflare, or Other).
+2. Click **Onboard** to enable log forwarding.
+
+If you select **Other**, you will have to reach out to Adobe for assistance.

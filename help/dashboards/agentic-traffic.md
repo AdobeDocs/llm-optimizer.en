@@ -5,7 +5,9 @@ description: Learn how to use the Agentic Traffic dashboard in order to see how 
 
 # Agentic Traffic {#agentic-traffic}
 
-The Agentic Traffic dashboard shows you how AI agents (crawlers and chatbots) interact with your site. By using this view you can track the total number of requests and general performance-related metrics. You can also view the distribution of traffic across markets, categories, pages, and agents. The data used by this dashboard is sourced from the CDN logs so you must configure **CDN log forwarding** in order to display metrics. There are also customizable filters to help you refine the displayed data.
+The Agentic Traffic dashboard shows how AI agents (crawlers and chatbots) interact with your site. By using this view you can track the total number of requests and general performance related metrics. You can also view the distribution of traffic across markets, categories, pages, and agents. The data used by this dashboard is sourced from the CDN logs so you must configure **CDN log forwarding** in order to display metrics. There are also customizable filters to help you refine the displayed data.
+
+![Traffic Distribution](/help/dashboards/assets/ag-main.png)
 
 This page details the following:
 
@@ -28,8 +30,7 @@ Select **Go to Configuration** and you will automatically navigate to the **CDN 
 
 On this tab, select **Onboard CDN**. And the CDN provider window is displayed.
 
-![CDN Provider](/help/dashboards/assets/ag-log-forward3.png)
-
+<!-- [CDN Provider](/help/dashboards/assets/ag-log-forward3.png)-->
 On the **Onboard CDN Provider** window:
 
 1. Select your CDN provider (for example, Akamai, Adobe-managed Fastly, Fastly, AWS Cloudfront, Azure CDN, Cloudflare, or Other).
@@ -74,13 +75,13 @@ Use the Agentic Traffic Trends chart to track the weekly totals of successful, f
 
 ## Top and Bottom Movers {#top-bottom-movers}
 
-The Top and Bottom Movers view highlights URLs with the largest week-over-week changes in agentic traffic — visits or hits from AI systems accessing your content. Top Movers show pages gaining visibility or engagement, while Bottom Movers reveal URLs with the steepest declines. This helps you quickly identify which content is trending upward, which may need attention, and where AI-driven discovery patterns are shifting.
+The Top and Bottom Movers view highlights URLs with the largest week-over-week changes in agentic traffic — visits or hits from AI systems accessing your content. Top Movers shows pages gaining visibility or engagement, while Bottom Movers reveals URLs with the steepest declines. This helps you quickly identify which content is trending upward, which may need attention, and where AI-driven discovery patterns are shifting.
 
 ![Top and Bottom Movers](/help/dashboards/assets/movers.png)
 
 ## User Agent and URL Performance Analysis {#user-url-performance}
 
-The User Agent and URL Performance Analysis views provide further data breakdowns on how crawlers and chatbots interact with your site. Click on the tabs below for detailed descriptions.
+The User Agent and URL Performance Analysis views provide further data breakdowns on how crawlers and chatbots interact with your site. Click the tabs below for detailed descriptions.
 
 ![User Agent and URL Performance Analysis](/help/dashboards/assets/user-agent.png)
 
@@ -93,8 +94,6 @@ The User Agent Analysis table provides a breakdown of traffic by page type and a
 * **Page Type** - The page type.
 * **Agent Type** - The AI agent crawling the page, either a crawler or a chatbot.
 * **Hits** - The total number of requests made by AI agents for that specific page type.
-
-You can also use the **Export** option to download the table .csv and share the agent analysis with your team or include it in executive reporting.
 
 >[!TAB URL Performance Analysis]
 
@@ -116,4 +115,4 @@ The URL Details view provides a holistic understanding of a page’s performance
 
 >[!ENDTABS]
 
-For both tables, you can use the **Export** option to download the table .csv and share the insights with your team or include the table in executive reporting.
+On both tables, you can use the **Export** option to download the table .csv and share the insights with your team or include the table in executive reporting.

@@ -36,9 +36,13 @@ Trend indicators for each overview metric show how these values are changing ove
 
 ## Your Cited URLs
 
-The cited URL's view lists all URLs from your brand that have been cited in AI-generated answers, with supporting metrics. The data table also has a search field for quick access to specific URLs. Also, you can use the **Export** option to download the table .csv and share the insights with your team or include the table in executive reporting. The following metrics are provided:
+The cited URLs view lists all URLs from your brand that have been cited in AI-generated answers, with supporting metrics. The data table also has a search field for quick access to specific URLs. Also, you can use the **Export** option to download the table .csv and share the insights with your team or include the table in executive reporting.
 
-* **URL** - the analyzed URL
+![Cited URLs](/help/dashboards/assets/cited-urls.png)
+
+The following metrics are provided:
+
+* **URL** - the analyzed URL.
 * **Times cited** - The number of times the URL has been cited in AI-generated answers.
 * **Prompts cited in** - The number of unique AI prompts that cited the URL.
 * **Categories** - The product categories or topics associated with the URL.
@@ -48,7 +52,7 @@ The cited URL's view lists all URLs from your brand that have been cited in AI-g
 
 ## Trending URLs competing for Citations
 
-The trending URLs competing for citations view highlights external URLs that are currently cited in answers relevant to your brand, measuring who is winning citations in your space. The data table has a search field for quick access to specific URLs. Also, you can use the **Export** option to download the table .csv and share the insights with your team or include the table in executive reporting.
+The trending URLs competing for citations view, highlights external URLs that are currently cited in answers relevant to your brand, measuring who is winning citations in your space. The data table has a search field for quick access to specific URLs. Also, you can use the **Export** option to download the table .csv and share the insights with your team or include the table in executive reporting.
 
 ![Trending URLs competing for Citations](/help/dashboards/assets/trend-url.png)
 
@@ -63,6 +67,6 @@ The following metrics are provided:
 
 ### Details Window
 
-For both the cited and trending views, the URLs have a **Details** button when you hover your mouse over a specific URL. Clicking the button will display a separate window with further detail. The details window shows how often the URL is cited, the sentiment of AI responses where it is mentioned, the topics and prompts it appears in, and trends in agentic and referral traffic over time (for owned URLs).
+For both the cited and trending views, the URLs have a **Details** button when you hover your mouse over a specific URL. Clicking the button will display a separate window with additional details. The details window shows how often the URL is cited, the sentiment of AI responses where it is mentioned, the topics and prompts it appears in, and trends in agentic and referral traffic over time (for owned URLs).
 
 ![Details Window](/help/dashboards/assets/details-url.png)

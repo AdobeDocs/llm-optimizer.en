@@ -5,9 +5,9 @@ description: Learn how to use the Referral Traffic dashboard to see how visitors
 
 # Referral Traffic
 
-Referral Traffic shows how visitors arrive at your site from external platforms, AI citations, and referral links. It tracks and analyzes traffic sources, referral patterns, and conversion metrics from external websites and platforms. This will help you understand which sources, regions, and pages drive the most engaged traffic. Data is sourced from either the CDN logs or AEM Operational Telemetry. Both of these sources are privacy-preserving and do not capture personal user data.
+Referral Traffic shows how visitors arrive at your site from external platforms, AI citations, and referral links. It tracks and analyzes traffic sources, referral patterns, and conversion metrics from external websites and platforms. This will help you understand which sources, regions, and pages drive the most engaged traffic. Data is sourced from either the CDN logs or [AEM Operational Telemetry](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/operational-telemetry-for-aem-as-a-cloud-service). Both of these sources are privacy-preserving and do not capture personal user data. There are also customizable filters to help you refine the displayed data.
 
-There are also customizable filters to help you refine the displayed data.
+![Referral Page](/help/dashboards/assets/referral-traffic.png)
 
 This page details the following:
 
@@ -83,4 +83,4 @@ The URL Performance Analysis view ranks top-performing pages based on referral t
 
 >[!ENDTABS]
 
-On both tables, You can use the **Export** option to download the table .csv and share the insights with your team or include the referral traffic table in executive reporting.
+On both tables, you can use the **Export** option to download the table .csv and share the insights with your team or include the referral traffic table in executive reporting.
