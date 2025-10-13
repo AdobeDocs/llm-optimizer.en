@@ -39,6 +39,8 @@ How to decide how you set up categories is based on one question: **Who needs to
 * If you are a *web/content owner*, pick the **URL_DIR** approach.
 * If you are a *merchandising/offers manager*, pick the **Product/Service category** approach.
 
+![Adding categories in LLM Optimizer](/help/assets/best-practices/add-category.png)
+
 >[!IMPORTANT]
 >
 > * Pick one approach and stick to it.
@@ -72,6 +74,8 @@ When deciding on topics, you want to create a short, flat list (6-12 maximum). F
 * Policy and Warranty
 * Support Contact
 * Corporate/News (if you truly need this)
+
+![Adding topics in LLM Optimizer](/help/assets/best-practices/add-topic.png)
 
 When creating the list, consider the following:
 
