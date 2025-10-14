@@ -48,7 +48,7 @@ Additionally, you also need to configure [CDN log forwarding](#step-4) for traff
 
 ### Non-AEM Cloud Customers
 
-Once the business agreement has been finalized, you will be onboarded via slackbot command with the domain you would like to onboard on LLM Optimizer. Once this onboarding is complete, you will be able to log in to LLM Optimizer via [https://llmo.now](https://llmo.now).
+Once the business agreement has been finalized, you will be onboarded with the domain you would like to onboard on LLM Optimizer. Once this onboarding is complete, you will be able to log in to LLM Optimizer via [https://llmo.now](https://llmo.now).
 
 ### Step 2: Customize Categories, Topics, and Prompts
 
