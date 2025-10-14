@@ -1,6 +1,7 @@
 ---
 title: Brand Presence
 description: Learn how to use the Brand Presence dashboard to understand how your brand is perceived at the level of AI-generated responses.
+feature: Brand Presence
 ---
 
 # Brand Presence {#brand-presence}
@@ -66,7 +67,7 @@ In the sentiment trend analysis section you can track how your brand is perceive
 
 ## Data Insights and Share of Voice {#data-insights}
 
-Rounding up the dashboard, we have two important tables: data insights and share of voice. The information presented in these tables will help you identify where your brand is strong and where optimization is needed.  
+Rounding up the dashboard, we have two important tables: data insights and share of voice. The information presented in these tables will help you identify where your brand is strong and where optimization is needed.
 
 By using the **data insights** table you can explore topics and user questions to assess and optimize content impact. The results are detailed by topics and prompts. Meanwhile, the **share of voice** table, compares your brand voice to other brands across topics and helps you identify gaps and prioritize future topics.
 

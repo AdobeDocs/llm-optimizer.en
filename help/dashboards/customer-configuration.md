@@ -1,6 +1,7 @@
 ---
 title: Customer Configuration
 description: Use customer configuration to define how your brand will be monitored and analyzed within the LLM optimizer platform.
+feature: Customer Configuration
 ---
 
 # Customer Configuration {#customer-configuration}

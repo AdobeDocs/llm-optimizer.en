@@ -1,6 +1,7 @@
 ---
 title: Quick Start
 description: Get started with Adobe LLM Optimizer - onboard your brand, unlock AI visibility insights, and explore dashboards to boost search performance.
+feature: Quickstart, Onboarding
 ---
 
 # Quick Start
@@ -15,7 +16,7 @@ The onboarding process starts with onboarding your domain. The process is differ
 
 ### Try Before you buy
 
-AEM Cloud (Cloud Service,Managed Services, Edge Delivery Service) customers have the option to use the the **Try Before You Buy** offer. It is a free trial version of LLM Optimizer with up to 200 free prompts. Use of more than 200 prompts requires a separate license agreement. Access is provided on an “as-is” and “as-available” basis, and may be modified, limited or removed by Adobe at any time.
+AEM Cloud (Cloud Service,Managed Services, Edge Delivery Service) customers have the option to use the the **Try Before You Buy** offer. It is a free trial version of LLM Optimizer with up to 200 free prompts. Use of more than 200 prompts requires a separate license agreement. Access is provided on an "as-is" and "as-available" basis, and may be modified, limited or removed by Adobe at any time.
 
 There are some product capabilities that are not available in the free version:
 
@@ -29,7 +30,7 @@ See the section below for details on how to activate the free trial version and 
 If you are an AEM Cloud Customers you have the option to try LLM Optimizer by using the Product Announcement card in [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub).
 
 >[!NOTE]
->Newly added prompts will not appear in the [Brand Presence Dashboard](/help/dashboards/brand-presence.md) until processing is complete. AEM Cloud Customers can use the free trial version of LLM Optimizer. Use of more than 200 prompts requires a separate license agreement. Access is provided on an “as-is” and “as-available” basis, and may be modified, limited or removed by Adobe at any time. Please reach out to your account representative for more information.  
+>Newly added prompts will not appear in the [Brand Presence Dashboard](/help/dashboards/brand-presence.md) until processing is complete. AEM Cloud Customers can use the free trial version of LLM Optimizer. Use of more than 200 prompts requires a separate license agreement. Access is provided on an "as-is" and "as-available" basis, and may be modified, limited or removed by Adobe at any time. Please reach out to your account representative for more information.
 
 ![LLM Optimizer Trial](/help/overview/assets/llm-trial.png)
 

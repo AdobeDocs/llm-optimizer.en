@@ -1,9 +1,12 @@
 ---
 title: LLM Optimizer Overview
 description: Learn about how Adobe LLM Optimizer boosts brand visibility in AI-driven search. Track mentions, citations, and insights. Start optimizing today for better engagement and influence.
+feature: Onboarding
 ---
 
 # LLM Optimizer Overview
+
+>[!SLIDE](llm-optimizer-overview)
 
 This page outlines everything you need to know about the Adobe LLM Optimizer before you start using the tool:
 

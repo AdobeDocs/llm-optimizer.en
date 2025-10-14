@@ -1,6 +1,7 @@
 ---
 title: Best Practices for Categories, Topics, Prompts, and Others
 description: Optimize LLM insights by configuring categories, topics, prompts, and other brands to track including competitors for tailored brand monitoring and strategic content analysis.
+feature: Best Practices, Customer Configuration
 ---
 
 # Best practices for configuring categories, topics, prompts, and others to track

@@ -1,6 +1,7 @@
 ---
 title: Optimization opportunities
 description: Learn how to use the opportunities dashboard to automatically detect how your site can be improved in order to increase brand visibility.
+feature: Opportunities
 ---
 
 # Optimization opportunities

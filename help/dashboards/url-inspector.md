@@ -1,6 +1,7 @@
 ---
 title: URL Inspector
 description: Learn how to use the URL Inspector helps to analyze how specific pages on your domain are performing in AI searches.
+feature: URL Inspector
 ---
 
 # URL Inspector
