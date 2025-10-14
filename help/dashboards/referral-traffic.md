@@ -1,6 +1,7 @@
 ---
 title: Referral Traffic
-description: Learn how to use the Referral Traffic dashboard to see how visitors arrive at your site from external platforms, AI citations, and referral links..
+description: Learn how to use the Referral Traffic dashboard to see how visitors arrive at your site from external platforms, AI citations, and referral links.
+feature: Referral Traffic
 ---
 
 # Referral Traffic
@@ -56,7 +57,7 @@ Besides the overall performance metrics presented above, the **Top Regions** pan
 
 <!--## Top Referral URLs {#top-referrals}
 
-The Top Referral URLs list surfaces your site’s most visited pages from referrals.
+The Top Referral URLs list surfaces your site's most visited pages from referrals.
 
 ![Top Referral URLs](/help/dashboards/assets/top-url.png)-->
 

@@ -1,6 +1,7 @@
 ---
 title: LLM Optimizer best practices
 description: Discover best practices for LLM optimization to boost brand visibility in AI search. Insights for for benchmarking and optimizing content.
+feature: Best Practices, Agentic Traffic, Brand Presence
 ---
 
 # LLM Optimizer best practices

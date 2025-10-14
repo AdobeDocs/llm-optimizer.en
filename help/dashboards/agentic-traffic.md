@@ -1,6 +1,7 @@
 ---
 title: Agentic Traffic
-description: Learn how to use the Agentic Traffic dashboard in order to see how AI agents interact with your site..
+description: Learn how to use the Agentic Traffic dashboard in order to see how AI agents interact with your site.
+feature: Agentic Traffic
 ---
 
 # Agentic Traffic {#agentic-traffic}
@@ -111,7 +112,7 @@ The URL performance table has a search field for quick access to URLs. You can a
 
 ![URL details](/help/dashboards/assets/details.png)
 
-The URL Details view provides a holistic understanding of a page’s performance — showing how often it’s cited, the sentiment of AI responses where it is mentioned, the topics and prompts it appears in, and trends in agentic and referral traffic over time.
+The URL Details view provides a holistic understanding of a page's performance — showing how often it's cited, the sentiment of AI responses where it is mentioned, the topics and prompts it appears in, and trends in agentic and referral traffic over time.
 
 >[!ENDTABS]
 

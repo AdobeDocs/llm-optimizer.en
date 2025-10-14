@@ -1,6 +1,7 @@
 ---
 title: Collaboration
 description: Learn how to use the collaboration dashboard to invite team members into your organization's LLM Optimizer workspace.
+feature: Collaboration
 ---
 
 # Collaboration
