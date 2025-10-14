@@ -5,6 +5,8 @@ description: Learn about how Adobe LLM Optimizer boosts brand visibility in AI-d
 
 # LLM Optimizer Overview
 
+>[!SLIDE](llm-optimizer-overview)
+
 This page outlines everything you need to know about the Adobe LLM Optimizer before you start using the tool:
 
 * [What is Adobe LLM Optimizer?](#what-is-adobe-llm-optimizer)
