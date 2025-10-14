@@ -77,11 +77,11 @@ Once your domain is onboarded and you have provided categories, and topics, LLM 
 
 ### Step 4: Provide information for CDN Log Forwarding {#step-4}
 
-To unlock Agentic Traffic and Referral Traffic insights, you need to provide information for CDN log forwarding. It can be added from the [customer configuration dashboard](/help/dashboards/customer-configuration.md) by navigating to the **CDN Configuration** tab and clicking **Onboard CDN**.
+To unlock Agentic Traffic and Referral Traffic insights, you need to provide information for CDN log forwarding. It can be added from the [customer configuration dashboard](/help/dashboards/customer-configuration.md#cdn-configuration) by navigating to the **CDN Configuration** tab and clicking **Onboard CDN**.
 
 ![Customer Configuration CDN](/help/overview/assets/cc-cdn.png)
 
-Alternatively, if no CDN provider has been added beforehand similar to the example above, you will be prompted to add CDN log forwarding when accessing the Agentic and Referral Traffic dashboards for the first time. For more details, see:
+Alternatively, if no CDN provider has been added beforehand (as described above), you will be prompted to add CDN log forwarding when accessing the Agentic and Referral Traffic dashboards for the first time. For more details, see:
 
 * [Agentic Traffic](/help/dashboards/agentic-traffic.md#cdn-setup)
 * [Referral Traffic](/help/dashboards/referral-traffic.md#setup#setup)
