@@ -36,7 +36,7 @@ On the **Onboard CDN Provider** window:
 1. Select your CDN provider (for example, Akamai, Adobe-managed Fastly, Fastly, AWS Cloudfront, Azure CDN, Cloudflare, or Other).
 2. Click **Onboard** to enable log forwarding.
 
-If you select **Other**, you will have to reach out to Adobe for assistance.
+If you select **Other**, you will have to reach out to llmo-now@adobe.com for assistance.
 
 Once activated, logs are ingested and the dashboard will populate with metrics such as total agent interactions, success rate, hits by market, user agent analysis, and URL-level performance.
 
