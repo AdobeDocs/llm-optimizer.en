@@ -87,7 +87,7 @@ On the list, you can click each topic and the associated prompt(s) will appear, 
 
 ## CDN Configuration {#cdn-configuration}
 
-From this tab, you can configure your CDN streams to enable Adobe LLM Optimizer to analyze your CDN data. This data will be used to power dashboards (like Agentic and Referral Traffic), providing insights into traffic patterns, performance metrics, and optimization opportunities. To onboard your CDN provider, click **Onboard CDN**.
+From this tab, you can configure your CDN streams to enable Adobe LLM Optimizer to analyze your CDN data. This data will be used to power dashboards (like Agentic Traffic), providing insights into traffic patterns, performance metrics, and optimization opportunities. To onboard your CDN provider, click **Onboard CDN**.
 
 ![Customer Configuration CDN](/help/overview/assets/cc-cdn.png)
 

@@ -30,14 +30,14 @@ The URL Inspector provides several overview metrics so you can quickly asses how
 * **Total unique prompts** - The total number of unique AI prompts.
 * **Unique cited URLs** - The number of unique owned URLs that have been cited.
 * **Total times cited** - Total times an owned URL has been cited in AI-generated answers.
-<!-- * **Total agentic hits** - The total number of hits from AI agents on your URLs.
-* **Referral hits from LLMs** - The total number of hits directed from AI-generated answers to your URLs.-->
+* **Total agentic hits** - The total number of hits from AI agents on your URLs.
+* **Referral hits from LLMs** - The total number of hits directed from AI-generated answers to your URLs.
 
 Trend indicators for each overview metric show how these values are changing over time compared to the previous period.
 
 ## Your Cited URLs
 
-The cited URLs view lists all URLs from your brand that have been cited in AI-generated answers, with supporting metrics. The data table also has a search field for quick access to specific URLs. Also, you can use the **Export** option to download the table .csv and share the insights with your team or include the table in executive reporting.
+The cited URLs view lists all URLs from your brand that have been cited in AI-generated answers, with supporting metrics. Both tables have a search field for quick access to topics and you can customize which metrics are displayed by clicking the **Configure Columns** button. Also, you can use the **Export** option to download the table .csv and share the insights with your team or include the table in executive reporting.
 
 ![Cited URLs](/help/dashboards/assets/cited-urls.png)
 
@@ -68,6 +68,6 @@ The following metrics are provided:
 
 ### Details Window
 
-For both the cited and trending views, the URLs have a **Details** button when you hover your mouse over a specific URL. Clicking the button will display a separate window with additional details. The details window shows how often the URL is cited, the sentiment of AI responses where it is mentioned, the topics and prompts it appears in, and trends in agentic and referral traffic over time (for owned URLs).
+For both the cited and trending views, the URLs have a **Details** button at the end of each row. Clicking the button will display a separate window with additional details. The details window shows how often the URL is cited, <!--the sentiment of AI responses where it is mentioned,--> the topics and prompts it appears in, and trends in agentic and referral traffic over time (for owned URLs).
 
 ![Details Window](/help/dashboards/assets/details-url.png)

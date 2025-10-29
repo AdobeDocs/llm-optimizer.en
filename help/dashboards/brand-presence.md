@@ -24,6 +24,7 @@ At the top of the page, you can apply filters to refine your view. The filters y
 
 * **Date Range** - Select the time frame for the displayed data. For example, the last 4 weeks. You also have the option to customize the time period by selecting the **Custom Weeks** option.
 * **Category** - Filter the displayed results by either predefined categories or custom categories.
+* **Topic** - Filter by topic in order to analyze content themes and subject areas where your brand appears in AI responses.
 * **Platform** - Choose which AI engine to analyze.
 * **Prompts Origin** - Choose the origin of the prompts. The origin can be either user inputted or AI generated.
 * **Prompt Branding** - Filter results by either branded prompts or non-branded prompts.
@@ -41,9 +42,9 @@ The dashboard highlights three very important metrics at the top of the page: vi
 
 The visibility score is composed of factors like: mentions, citations, sentiment, and rank. Each factor has a certain "weight" attached to it that adds towards the final score.
 
-### Mentions {#mentions}
+### Brand mentions {#mentions}
 
-This metric represents the total number of times your brand or your categories were mentioned across the sampled AI prompts. For example, you have the "Coffe B" brand,with the "Machines" and "Accessories" categories and this metric counts the total number of times these appear in the sampled AI answers.
+This metric represents the total number of times your brand or your categories were mentioned across the sampled AI prompts. For example, if you have the "Coffe B" brand, with the "Machines" and "Accessories" categories this metric counts the total number of times these appear in the sampled AI answers.
 
 ### Citations {#citations}
 
@@ -57,11 +58,11 @@ In the others comparison section you can select up to five other brands and comp
 
 ![Others Comparison](/help/dashboards/assets/other-comparison.png)
 
-The other brands are selected from the drop-down list and the charts are updated when you click **Apply Filters**. The charts display weekly mentions and weekly citations side by side. You can also hover the mouse along the chart to see the data evolution across the weekly time frame.
+The other brands are selected from the drop-down list and the charts are updated when you click **Apply Filters**. The charts display weekly brand mentions and weekly brand citations side by side. You can also hover the mouse along the chart to see the data evolution across the weekly time frame.
 
 ## Sentiment Trend Analysis {#sentiment-trend}
 
-In the sentiment trend analysis section you can track how your brand is perceived in the sampled AI answers. The sentiment trend metric can be either positive, neutral or negative. For example, it can be positive if answers highlight product quality or negative if they mention poor service. The trend chart shows the shifts in brand perception week over week. The section is populated only after your brand is mentioned.
+In the sentiment trend analysis section you can track how your brand is perceived in the sampled AI answers. The sentiment trend metric can be either positive, neutral or negative. For example, it can be positive if answers highlight product quality or negative if they mention poor service. The trend chart shows the shifts in brand perception week over week. This section is populated only after your brand is mentioned.
 
 ![Sentiment Trend](/help/dashboards/assets/sentiment-trend.png)
 
@@ -73,7 +74,7 @@ By using the **data insights** table you can explore topics and user questions t
 
 ![Data Insights](/help/dashboards/assets/data-insights.png)
 
-Both tables have a search field for quick access to topics. Also, you can use the **Export** option to download the table .csv and share the insights with your team or include the table in executive reporting.
+Both tables have a search field for quick access to topics and you can customize which metrics are displayed by clicking the **Configure Columns** button. Also, you can use the **Export** option to download the table .csv and share the insights with your team or include the tables in executive reporting.
 
 Click the tabs below for details about each table and the associated metrics.
 
@@ -92,6 +93,9 @@ The data insights table helps you explore topics and user prompts to assess and 
 * **Position** - The relative prominence of your brand in AI responses, calculated as an average across all weeks.
 * **All Citations** - The number of unique sources cited in AI responses for this topic or this topic/prompt combination (includes owned citations).
 * **Owned Citations** - The number of times your brand was cited in AI responses for this keyword or this keyword/question combination.
+<!--* **Executions**-->
+
+You can also view additional details for each topic by clicking on the **Details** icon at the end of each row.
 
 >[!TAB Share of Voice]
 
@@ -113,6 +117,6 @@ The Data Insights Table helps you move from metrics to actions by breaking down 
 Key ways to use the table:
 
 * Prioritize high-popularity topics with low visibility - focus optimization where audience demand is strong but your brand presence is weak.
-* Track sentiment shifts - spot topics where mentions are trending negative or neutral, and coordinate your response.
+* Track sentiment shifts - spot topics where mentions are trending in negative or neutral, and coordinate your response.
 * Compare citations versus owned citations - identify prompts where your brand is mentioned but other brand's content is cited, signaling a content gap.
 * Evaluate position range - monitor whether your brand appears early in AI responses (positions 1–3) or further down (6–10).

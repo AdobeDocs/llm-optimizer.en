@@ -28,7 +28,7 @@ On first login, the Referral Traffic dashboard may appear blank. To view your da
 2. Enter a primary contact email.
 3. Click **Request activation** to enable data ingestion. Hiding this until confirmation from PM-->
 
-Once activated, the dashboard will populate with referral traffic metrics.
+Once activated, the dashboard will be populated with referral traffic metrics.
 
 ## Filters {#filters}
 
@@ -48,12 +48,13 @@ After you select the desired filter, click **Apply Filters** to apply the select
 The dashboard highlights the overall referral performance by displaying key metrics including:
 
 * **Total Referral Traffic** - The total referral traffic from all sources.
+* **Referral Traffic from LLM's** - The total referral traffic from LLM's.
 * **Consent rate** -  The percentage of visitors who accept a consent prompt.
 * **Bounce rate** - The percentage of sessions from referral sources that had no engagement event.
 
 ![Referral Page](/help/dashboards/assets/referral-traffic.png)
 
-Besides the overall performance metrics presented above, the **Top Regions** panel breaks down traffic by geography. Meanwhile, the **Top Referral Sources** panel shows the platforms driving the most visits. Trend indicators for the metrics show how these values are changing over time compared to the previous period.
+Besides the overall performance metrics presented above, there are three additional panels showing the traffic distribution across different markets, referral sources and page intent categories <!-- the **Top Regions** panel breaks down traffic by geography. Meanwhile, the **Top Referral Sources** panel shows the platforms driving the most visits. Trend indicators for the metrics show how these values are changing over time compared to the previous period.-->
 
 <!--## Top Referral URLs {#top-referrals}
 
@@ -84,4 +85,4 @@ The URL Performance Analysis view ranks top-performing pages based on referral t
 
 >[!ENDTABS]
 
-On both tables, you can use the **Export** option to download the table .csv and share the insights with your team or include the referral traffic table in executive reporting.
+On both tables, you can use the **Export** option to download the table .csv and share the insights with your team or include the tables in executive reporting. Additionally, for both tables, you can customize which metrics are displayed by clicking the **Configure Columns** button.
