@@ -64,7 +64,7 @@ At the top of the page, there are three key metrics that you need to be aware of
 
 * **Agentic interactions** - This metric represents the total number of requests made by AI agents to your website. This includes all traffic from search engines, chatbots, and other non-human traffic.
 * **Success rate** - This metric represents the percentage of successful HTTP requests, including both direct successful responses and redirects.
-* **Average TTFB** - Time To First Byte (TTFB) measures the time it takes for the first byte of data to be received from the server. Lower values indicate faster server response times.
+* **Average TTFB** - Time To First Byte (TTFB) measures the time it takes for the first byte of data to be received from the server. The average value is weighted based the on number of requests returning each code and excludes requests that resulted in 5xx responses. Lower values indicate faster server response times.
 
 Trend indicators for each key metric show how these values are changing over time compared to the previous period.
 
@@ -76,7 +76,7 @@ Use the Agentic Traffic Trends chart to track the weekly totals of successful, f
 
 ## Top and Bottom Movers {#top-bottom-movers}
 
-The Top and Bottom Movers view highlights URLs with the largest week-over-week changes in agentic traffic — visits or hits from AI systems accessing your content. Top Movers shows pages gaining visibility or engagement, while Bottom Movers reveals URLs with the steepest declines. This helps you quickly identify which content is trending upward, which may need attention, and where AI-driven discovery patterns are shifting.
+The Top and Bottom Movers view highlights URLs with the largest week-over-week changes in agentic traffic — visits or hits from AI systems accessing your content. **Top Movers** shows pages gaining visibility or engagement, while **Bottom Movers** reveals the URLs with the steepest declines. This helps you quickly identify which content is trending upward, which may need attention, and where AI-driven discovery patterns are shifting.
 
 ![Top and Bottom Movers](/help/dashboards/assets/movers.png)
 
@@ -96,6 +96,8 @@ The User Agent Analysis table provides a breakdown of traffic by page type and a
 * **Agent Type** - The AI agent crawling the page, either a crawler or a chatbot.
 * **Hits** - The total number of requests made by AI agents for that specific page type.
 
+You can customize which metrics are displayed by clicking the **Configure Columns** button.
+
 >[!TAB URL Performance Analysis]
 
 The URL Performance Analysis table shows a detailed view of individual URLs. This includes hits, unique agents, top agent, success rates, and categories. This way, you can identify high-value pages, detect crawl gaps, and optimize content for AI engines. The URLs are ranked by traffic volume. The table contains the following categories:
@@ -107,13 +109,15 @@ The URL Performance Analysis table shows a detailed view of individual URLs. Thi
 * **Top Agent Type** - The type of the AI agent that generated the most traffic to this URL.
 * **Success Rate** - The percentage of successful HTTP requests, including both direct successful responses and redirects.
 * **Category** - The category that most closely matches the content of your page.
+* **Average TTFB (ms)** - Time To First Byte (TTFB) measures the time it takes for the first byte of data to be received from the server (in milliseconds). The average value is weighted based the on number of requests returning each code and excludes requests that resulted in 5xx responses. Lower values indicate faster server response times.
+* **Response Codes** - the HTTP status codes observed for the URL.
 
-The URL performance table has a search field for quick access to URLs. You can also view additional details for each URL by clicking on the information icon at the end of each row.
+The URL performance table has a search field for quick access to URLs and you can customize which metrics are displayed by clicking the **Configure Columns** button. You can also view additional details for each URL by clicking on the **Details** icon at the end of each row.
 
 ![URL details](/help/dashboards/assets/details.png)
 
-The URL Details view provides a holistic understanding of a page's performance — showing how often it's cited, the sentiment of AI responses where it is mentioned, the topics and prompts it appears in, and trends in agentic and referral traffic over time.
+The URL Details view provides a holistic understanding of a page's performance, showing how often it is cited, the sentiment of AI responses where it is mentioned, the topics and prompts it appears in, and trends in agentic and referral traffic over time.
 
 >[!ENDTABS]
 
-On both tables, you can use the **Export** option to download the table .csv and share the insights with your team or include the table in executive reporting.
+On both tables, you can use the **Export** option to download the table .csv and share the insights with your team or include the tables in executive reporting.
