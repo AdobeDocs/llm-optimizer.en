@@ -41,7 +41,7 @@ Once you click the **Try LLM Optimizer** button, you will be redirected to [http
 >[!NOTE]
 >The domain you provided will be used by everyone from your organization and cannot be changed.
 
-To trigger the Brand Presence Analysis, you will need to provide categories, topics, and prompts.
+A small set of categories, topics and prompts will be generated during the onboarding phase. Brand Presence Analysis on those prompts will be available shortly after your site has been onboarded.
 
 ![Brand Presence Analysis](/help/overview/assets/bp-analysis.png)
 
@@ -53,7 +53,7 @@ Once the business agreement has been finalized, you will be onboarded with the d
 
 ### Step 2: Customize Categories, Topics, and Prompts
 
-In order to trigger the Brand Presence analysis, and populate the dashboard with insights into your brand visibility, you need to customize Categories, Topics, and Prompts. This configuration is created on the [customer configuration dashboard](/help/dashboards/customer-configuration.md).
+Once your site has been onboarded, you can view the Brand Presence Analysis based on the small set of prompts that were automatically generated during the onboarding phase. Moving forward, you can customize the categories, topics and prompts for your brand. This configuration is created on the [customer configuration dashboard](/help/dashboards/customer-configuration.md).
 
 ![Customer Configuration Dashboard](/help/overview/assets/prompt-creation.png)
 
@@ -72,9 +72,9 @@ From this dashboard, you can:
 >
 > For more details on how to set up your categories, topics, prompts see the [Best practices for configuring categories, topics, prompts](/help/overview/best-practices-topics-prompts.md) page.
 
-### Step 3: Automatic Pre-population of Insights
+### Step 3: Brand Presence Insights
 
-Once your domain is onboarded and you have provided categories, and topics, LLM Optimizer will automatically trigger the Brand Presence analysis.
+After your domain has been onboarded, you will see initial insights in the Brand Presence view based on the prompts that were automatically generated during onboarding. Once you customize your own categories, topics, and prompts, LLM Optimizer will automatically trigger the Brand Presence analysis on the prompts you provided and results will be available in 24 hours.
 
 ### Step 4: Provide information for CDN Log Forwarding {#step-4}
 
