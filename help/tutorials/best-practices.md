@@ -80,7 +80,7 @@ Onsite optimization improves your owned content for LLM visibility. These are ac
 
 >[!TIP]
 >
->The LLM Optimizer suggests onsite and offsite optimization opportunities in the [Opportunities](/help/dashboards/opportunities.md) dashboard for you. These opportunities are specific for your site. It can often deploy optimizations directly to your site.
+>The LLM Optimizer suggests onsite and offsite optimization opportunities in the [Opportunities](/help/dashboards/opportunities.md) dashboard for you. These opportunities are specific for your site. Many of these suggestions can be directly deployed to your site using LLM Optimizer.
 
 Here are some optimization best practices:
 
@@ -112,7 +112,7 @@ Offsite optimization focuses on improving your brand's visibility in AI-generate
 
 >[!TIP]
 >
->The LLM Optimizer suggests onsite and offsite optimization opportunities in the [Opportunities](/help/dashboards/opportunities.md) dashboard for you. These opportunities are specific for your site. It can often deploy optimizations directly to your site.
+>The LLM Optimizer suggests onsite and offsite optimization opportunities in the [Opportunities](/help/dashboards/opportunities.md) dashboard for you. These opportunities are specific for your site. Many of these suggestions can be directly deployed to your site using LLM Optimizer.
 
 
 Key Offsite Channels:

@@ -12,6 +12,17 @@ To get started with LLM optimizer, you need to complete the onboarding process a
 
 The onboarding process starts with onboarding your domain. The process is different depending on whether you are an AEM Cloud customer or not. After you complete the process, you will need to provide information for CDN Log Forwarding and finally customize categories, topics, and prompts. Each part of the process is detailed below along with helpful tips on how to get started with LLM Optimizer as soon as possible.
 
+### Allowing Adobe LLM Optimizer to access public pages
+
+To deliver accurate content and technical recommendations, Adobe LLM Optimizer requires access to your public-facing pages. This is achieved through a secure internal crawler (Spacecat/1.0 user agent).
+
+Configuration requirements:
+
+* Add the Spacecat/1.0 user agent to the Allowlist in your site's robots.txt file or bot-traffic management rules
+* Ensure that pages are not blocked at the domain or CDN level. Blocked pages cannot be indexed, which means optimization tasks and insights cannot be generated for them.
+
+If content visibility appears low in the dashboard, verify that the crawler has access to your domains. Restricted access is a common cause of incomplete indexing.
+
 ## Step 1: Onboard your domain
 
 ### Try Before you buy
