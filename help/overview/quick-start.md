@@ -14,7 +14,7 @@ The onboarding process starts with onboarding your domain. The process is differ
 
 ### Allowing Adobe LLM Optimizer to access public pages
 
-To deliver accurate content and technical recommendations, Adobe LLM Optimizer requires access to your public-facing pages. This is achieved through a secure internal crawler that uses the Spacecat/1.0 user agent.
+To deliver accurate content and technical recommendations, Adobe LLM Optimizer requires access to your public-facing pages. This is achieved through a secure internal crawler (Spacecat/1.0 user agent).
 
 Configuration requirements:
 
