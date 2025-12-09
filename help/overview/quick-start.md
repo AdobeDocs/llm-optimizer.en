@@ -54,7 +54,7 @@ Once you click the **Try LLM Optimizer** button, you will be redirected to [http
 
 A small set of categories, topics and prompts will be generated during the onboarding phase. Brand Presence Analysis on those prompts will be available shortly after your site has been onboarded.
 
-![Brand Presence Analysis](/help/overview/assets/bp-analysis.png)
+<!--![Brand Presence Analysis](/help/overview/assets/bp-analysis.png)-->
 
 Additionally, you also need to configure [CDN log forwarding](#step-4) for traffic analysis. LLM Optimizer requires Brand Presence data and insights from agentic and referral traffic to identify opportunities and to provide prescriptive recommendations in order to boost AI-visibility.
 

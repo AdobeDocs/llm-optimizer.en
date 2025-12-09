@@ -25,7 +25,7 @@ At the top of the page, you can apply filters to refine your view. The filters y
 * **Date Range** - Select the time frame for the displayed data. For example, the last 4 weeks. You also have the option to customize the time period by selecting the **Custom Weeks** option.
 * **Category** - Filter the displayed results by either predefined categories or custom categories.
 * **Topic** - Filter by topic in order to analyze content themes and subject areas where your brand appears in AI responses.
-* **Platform** - Choose which AI engine to analyze.
+* **Platform** - Choose which AI engine to analyze. LLM Optimizer currently supports ChatGPT, Google AI Overviews, Google AI Mode, Microsoft Co-pilot, Google Gemini, and Perplexity.
 * **Prompts Origin** - Choose the origin of the prompts. The origin can be either user inputted or AI generated.
 * **Prompt Branding** - Filter results by either branded prompts or non-branded prompts.
 * **Region** - Filter the results by geography. Not all regions will be available at launch.
