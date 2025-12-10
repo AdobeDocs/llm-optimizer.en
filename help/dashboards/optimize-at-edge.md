@@ -51,9 +51,9 @@ Requirements for Setup:
 
 Adobe provides sample configuration snippets for most major CDNs to guide the setup process. The snippet examples included in our guideline should be adapted to the actual live configuration. Changes are recommended to be implemented in the lower environments first.
 
-**Tabs here**
+>[!BEGINTABS]
 
-**AEM Cloud Service Managed CDN (Fastly)**
+>[!TAB AEM Cloud Service Managed CDN (Fastly)]
 
 Tokowaka BYOCDN - Adobe Managed CDN
 
@@ -99,15 +99,20 @@ data:
 
 ```
 
-**Akamai (BYOCDN)**
+>[!TAB Akamai (BYOCDN)]
 
-Copy text if needed
+This content appears in the Android tab.
 
-**Fastly (BYOCDN)**
+>[!TAB Fastly (BYOCDN)]
 
-Copy text if needed
+This content appears in the Windows tab.
+
+>[!ENDTABS]
+
 
 For other CDN providers, please reach out to llmo-at-edge@adobe.com to assist your IT/CDN teams with onboarding.
+
+<!--This should probably be in Opportunities dashboard content-->
 
 After the configurations are complete, business users can deploy suggestions for Optimize at Edge opportunities in LLM Optimizer.
 
@@ -151,43 +156,68 @@ This opportunity finds pages with long, complex paragraphs that can reduce AI co
 
 ## Suggestions
 
-For each Opportunity, business users can Preview, Edit, Deploy, Live Preview, and Rollback the optimizations at the edge.
+For each opportunity, you can preview, edit, deploy, live preview, and roll back the optimizations at the edge.
 
 ### Preview
 
 Preview lets users see the impact of a suggestion on the page before anything goes live. It surfaces a side-by-side difference between the current page and the AI-optimized version expected after applying the suggestion. This view uses the same Optimize at Edge logic that will power live traffic, but in a safe, isolated preview mode. This does not impact live traffic as it is a read-only simulation for review.
 
-Add image from wiki
+![Preview](/help/assets/optimize-at-edge/preview.png)
 
 ### Edit
 
 Edit allows users to refine or rewrite altogether the auto-generated suggestion before deploying it. Instead of passively accepting the suggestion, users maintain full control through this human-in-the-loop workflow. The view displays proposed changes in a structured editor, where users can modify the text to better match their intent. The edited version will then be served to AI agents once deployed.
 
-Add image from wiki
+![Edit](/help/assets/optimize-at-edge/edit.png)
 
 ### Deploy
 
 Deploy publishes the selected suggestions so the optimized experiences can be served from the edge to AI agents. If the CDN is fully routed, all pages in the domain go live with the new changes typically within minutes. If routing has been configured for select paths only, only the allowlisted pages go live with the optimizations.
 
-add image from wiki
+![Deploy](/help/assets/optimize-at-edge/deploy.png)
 
 ### View Live
 
 View Live lets users verify that the optimization is live and behaving as expected for agentic traffic, a view that would otherwise be hard to access. Users can view the live page under Fixed Suggestions, which renders the page as shown to AI agents.
 
-Add image from wiki
+![View Live](/help/assets/optimize-at-edge/view-live.png)
 
 ### Rollback
 
 Rollback safely reverts a previously deployed optimization. The AI-only version of the page is typically returned to its previous state within minutes, making it safe for users to experiment with optimizations if needed.
 
-add image from wiki
+![Rollback](/help/assets/optimize-at-edge/rollback.png)
 
 ## Frequently Asked Questions
 
-Unclear if this is what they want in the docs
+Q. What kind of LLMs do you target with Optimize at Edge?
 
-Question: What kind of LLMs do you target with Optimize at Edge?
+The list of user agents to target is completely defined by the customer at onboarding.
+
+Q. What does "Edge" in Optimize at Edge mean?
+
+In our context, "Edge" means the optimization is applied at the CDN layer and not inside your CMS.
+
+Q. Why does this optimization require a CDN?
+
+The CDN is where the optimized version of the page is assembled and delivered to AI agents. We leverage the CDN to ensure your origin CMS remains unchanged. This separation lets you improve LLM visibility without altering your existing publishing workflows.
+
+Q. What happens if I'm not onboarded to Optimize at Edge yet?
+
+If you click "Deploy optimizations" before completing the required setup, nothing will be applied to your site. Instead, a pop-up dialog prompts you to contact our team at llmo-at-edge@adobe.com for onboarding assistance. Until onboarding is complete, you can still explore the detected opportunities and suggestions, but the one-click deployment workflow will remain inactive.
+
+Q: What happens when the content is updated at source?
+
+We serve the optimized version of the page from cache as long as the underlying source page hasn't changed. However, when the source does change, our system automatically refreshes so AI agents always receive the most up-to-date content. This is because we use low cache TTLs in order of minutes so that any content update on your site triggers a new optimization within that window. As there is no universal TTL that fits every site, we can configure this TTL based on your cache invalidation rules to ensure both systems stay in sync.
+
+Q. Is Optimize at Edge only for sites using Adobe Edge Delivery Service (EDS)?
+
+No. Optimize at Edge is CDN-agnostic and works with any front-end architecture, not just ones deployed on Adobe's EDS Stack.
+
+Q. How is Optimize at Edge pre-rendering different from traditional server-side rendering (SSR)?
+
+The two solve different problems and can work together. Traditional SSR renders server-side content but doesn't include content loaded later in the browser. Optimize at Edge pre-rendering captures the page after JavaScript and client-side data have loaded, producing the fully assembled version at the CDN edge. SSR focuses on improving the human experience and Optimize at Edge improves the web experience for LLMs.
+
 
 
 
