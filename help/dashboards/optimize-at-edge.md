@@ -13,9 +13,9 @@ This page provides a detailed overview on how to deliver optimizations at the CD
 
 ## What is Optimize at Edge?
 
-Optimize at Edge is an edge-based deployment capability in LLM Optimizer that serves AI friendly changes to LLM user agents. Because it delivers optimizations at the CDN edge, no authoring changes in the Content Management System (CMS) are required. It targets only agentic traffic and does not impact either human users or SEO bots. When LLM Optimizer detects opportunities to optimize a page, users can deploy fixes directly at the CDN edge with no platform changes required.
+Optimize at Edge is an edge-based deployment capability in LLM Optimizer that serves AI friendly changes to LLM user agents. In the current context, "edge" means that the optimization is applied at the CDN layer. Because it delivers optimizations at the CDN layer, no authoring changes in the Content Management System (CMS) are required so your origin CMS remains unchanged. This separation lets you improve LLM visibility without altering your existing publishing workflows. It targets only agentic traffic and does not impact either human users or SEO bots. When LLM Optimizer detects opportunities to optimize a page, users can deploy fixes directly at the CDN edge.
 
-Optimize at Edge is a faster, leaner alternative to traditional fixes that demand complex engineering efforts. Once you complete a one-time setup, no platform changes or long development cycles are required to apply the changes. You can publish improvements in minutes, without requiring developer engagement. It is a low-risk, no-code way to optimize your website for AI agents.
+Optimize at Edge is a faster, leaner alternative to traditional fixes that demand complex engineering efforts. As mentioned, once you complete a one-time setup, no platform changes or long development cycles are required to apply the changes. You can publish improvements in minutes, without requiring developer engagement. It is a low-risk, no-code way to optimize your website for AI agents.
 
 Optimize at Edge is designed for business users in marketing, SEO, content, and digital strategy teams. It can enable business users to complete the full journey in LLM Optimizer: identifying opportunities, understanding suggestions, and easily deploying the fixes. With Optimize at Edge, users can preview the changes, deploy them quickly at the  CDN edge, and validate that the optimizations are live. Performance can be tracked in the LLM Optimizer ecosystem.
 
@@ -58,19 +58,33 @@ Note: In the sample code snippets below, you may see references to "tokowaka," w
 
 >[!BEGINTABS]
 
->[!TAB AEM Cloud Service Managed CDN (Fastly)]
+>[!TAB Adobe Managed CDN]
 
-**Tokowaka BYOCDN - Adobe Managed CDN**
+**Adobe Managed CDN**
 
-Uses only originSelectors to select the Tokowaka origin.
+The purpose of this configuration is to configure requests with agentic user agents to be routed to the Optimizer service (edge.tokowaka.now backend). To test the configuration after it is complete, look for the header  x-tokowaka-request-id in the response.
 
-The following example routes LLM agents requests on specific domain matching the the pattern "/es/*" or exact paths (only html pages are routed). The example is supposed to provide a starting point and in case you have multiple originSelectors in your config it is recommended to place this first.
+```
+curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatgpt-user"
+< HTTP/2 200
+< x-tokowaka-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 
-Important notes:
+```
 
-* x-tokowaka-request needs to be checked before routing to Tokowaka backend. Only requests that do not have this header should be routed to Tokowaka backend.
-* the originSelector rule that routes to Tokowaka backend should be first in the list if there are multiple rules.
-* TOKOWAKA_API_KEY secret needs to be delpoyed before deploying the cdn.yaml
+The routing configuration is done using an [originSelector CDN rule](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors). The prerequisites for that are:
+
+* decide the domain to be routed
+* decide the paths to be routed
+* decide the user agents to be routed (recommended regex)
+* obtain an api key from Adobe for edge.tokowaka.now backend
+
+In order to deploy the rule, you need to:
+
+* create a [configuration pipeline](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline)
+* commit the cdn.yaml config file in your repository
+* deploy api key as [secret environment variable](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)
+* run the configuration pipeline
+
 
 ```
 kind: "CDN"
@@ -104,7 +118,18 @@ data:
 
 ```
 
->[!TAB Akamai (BYOCDN)]
+To test, run a curl and expect the following:
+
+```
+curl -svo page.html https://www.example.com/page.html --header "user-agent: chatgpt-user"
+< HTTP/2 200
+< x-tokowaka-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
+
+
+
+```
+
+<!-- >>[!TAB Akamai (BYOCDN)]
 
 **Tokowaka BYOCDN - Akamai**
 
@@ -378,7 +403,7 @@ Important considerations:
 * With Cache ID Modification within a match on User Agent, the content can't be purged by URL (just FYI)
 * Site failover mechanism: With the match on User-Agent rule, Akamai does not allows to failover based on health check, but only only basis of origin response/connectivity per request. Set **x-tokowaka-fo:true**  resp header in case of failover response.
 * SWR is not supported by Akamai. So, only TTL based caching is there. So, configure a rule in Akamai to strip Age header from origin response else TTL based caching would not work.
-* Ensure that the Tokowaka rule is the bottom most rule in the rule hierarchy (so that it overrides all other rules).
+* Ensure that the Tokowaka rule is the bottom most rule in the rule hierarchy (so that it overrides all other rules).-->
 
 >[!TAB Fastly (BYOCDN)]
 
@@ -454,7 +479,7 @@ With a single-click, you can evaluate any site's machine readability, view a sid
 
 ## Opportunities detailed
 
-In the sections that follow, are further details for each opportunity supported with Optimize at Edge.
+In the sections that follow, we add additional details for each opportunity supported with Optimize at Edge.
 
 ### Recover Content Visibility
 
@@ -520,13 +545,13 @@ Q. What kind of LLMs do you target with Optimize at Edge?
 
 The list of user agents to target is defined by you during the onboarding process.
 
-Q. What does "Edge" in Optimize at Edge mean?
+<!--Q. What does "Edge" in Optimize at Edge mean?
 
 In our context, "Edge" means that the optimization is applied at the CDN layer and not inside your CMS.
 
 Q. Why does this optimization require a CDN?
 
-The CDN is where the optimized version of the page is assembled and delivered to AI agents. We leverage the CDN to ensure your origin CMS remains unchanged. This separation lets you improve LLM visibility without altering your existing publishing workflows.
+The CDN is where the optimized version of the page is assembled and delivered to AI agents. We leverage the CDN to ensure your origin CMS remains unchanged. This separation lets you improve LLM visibility without altering your existing publishing workflows.-->
 
 Q. What happens if I'm not onboarded to Optimize at Edge yet?
 
