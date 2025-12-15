@@ -21,3 +21,5 @@ user-guide-description: Boost your brand with Adobe LLM Optimizer. Track mention
   + [Opportunities](/help/dashboards/opportunities.md)
   + [Customer Configuration](/help/dashboards/customer-configuration.md)
   + [Collaboration](/help/dashboards/collaboration.md)
++ Additional Resources{#resources}
+  + [Optimize at Edge](/help/dashboards/optimize-at-edge.md)

@@ -6,68 +6,83 @@ feature: Opportunities
 
 # Optimize at Edge
 
-This section ...
+This page provides a detailed overview on how to deliver optimizations at the CDN edge without any authoring changes. It covers the onboarding process, the available optimization opportunities and how to auto-optimize at edge.
+
+>[!NOTE]
+>This functionality is currently in Early Access.
 
 ## What is Optimize at Edge?
 
-Optimize at Edge is an edge-based deployment capability in LLM Optimizer that can serve AI-friendly changes to LLM user agents. Because it delivers optimizations at the CDN edge, no authoring changes in the Content Management System (CMS) are required. It also targets only the agentic traffic and does not impact human users or SEO bots.
+Optimize at Edge is an edge-based deployment capability in LLM Optimizer that serves AI friendly changes to LLM user agents. In the current context, "Edge" means that the optimization is applied at the CDN layer. Because it delivers optimizations at the CDN layer, no authoring changes in the Content Management System (CMS) are required so your origin CMS remains unchanged. This separation lets you improve LLM visibility without altering your existing publishing workflows. It targets only agentic traffic and does not impact either human users or SEO bots. When LLM Optimizer detects opportunities to optimize a page, users can deploy fixes directly at the CDN edge.
 
-When LLM Optimizer detects opportunities to optimize a page, users can deploy fixes directly at the edge with no platform changes required.
+Optimize at Edge is a faster, leaner alternative to traditional fixes that demand complex engineering efforts. As mentioned, once you complete a one-time setup, no platform changes or long development cycles are required to apply the changes. You can publish improvements in minutes, without requiring developer engagement. It is a low risk, no-code way to optimize your website for AI agents.
 
-This capability is currently in Early Access.
+Optimize at Edge is designed for business users in marketing, SEO, content and digital strategy teams. It can enable business users to complete the full journey in LLM Optimizer: identifying opportunities, understanding suggestions, and easily deploying the fixes. With Optimize at Edge, users can preview the changes, deploy them quickly at the CDN edge and validate that the optimizations are live. Performance can be tracked in the LLM Optimizer ecosystem.
 
-## Why should a customer be interested?
+### Key benefits
 
-Optimize at Edge is a faster, leaner alternative to traditional fixes that demand complex engineering efforts. Once customers complete a one-time setup, no platform changes or long development cycles are required to apply the changes to the webpages. The user can publish improvements in minutes, not weeks, without requiring developer engagement. This is a low-risk, no-code way to optimize your website for AI agents.
-
-### Key benefits & value proposition
-
-* **AI-only delivery:** Serves optimized HTML to AI agents only with no impact on human visitors or SEO bots.
+* **AI-only delivery:** Serves optimized HTML only to AI agents with no impact on either human visitors or SEO bots.
 * **Faster cycles:** Publish changes in minutes, not weeks. No platform changes or long engineering cycles required.
 * **Low-risk and reversible:** Supported with a one-click rollback capability that can revert the page in minutes.
-* **No performance impact:** Edge-based optimizations and caching keep site latency unaffected.
-* **CDN and CMS-agnostic:** Works with any CDN configuration and front-end setup regardless of CMS.
+* **No performance impact:** Edge based optimizations and caching keep site latency unaffected.
+* **CDN and CMS-agnostic:** Works with any CDN configuration and front-end setup regardless of the Content Management System.
 
-## Who should use it?
+### Which opportunities are supported with Optimize at Edge?
 
-Optimize at Edge is designed for business users in marketing, SEO, content, and digital strategy teams. It can enable business users to complete the full journey in LLM Optimizer: identifying opportunities, understanding suggestions, and easily deploying the fixes. With Optimize at Edge, users can preview the changes, deploy them quickly at the edge, and validate that the optimizations are live. Performance can be tracked in the LLM Optimizer ecosystem.
-
-## Which opportunities have Optimize at Edge?
-
-Opportunities that can improve the agentic web experience are supported with Optimize at Edge. Learn more about each opportunity in [Opportunities](/help/dashboards/opportunities.md) section.
+Opportunities that can improve the agentic web experience are supported with Optimize at Edge. Learn more about each opportunity both in the [Opportunities Dashboard](/help/dashboards/opportunities.md) page and the opportunities section in the current page.
 
 ## Onboarding
 
-You can enable Optimize at Edge after you have onboarded to LLM Optimizer and have are forwarding your CDN logs.
+You should reach out to either your Adobe account team or FDE team to start the onboarding process. Your IT or CDN team is also required to complete the pre-requisites and setup process. Additionally, you can also contact our team at `llmo-at-edge@adobe.com` for further onboarding assistance.
 
-A CDN engineer is required to complete the initial setup to enable Optimize at Edge.
+Pre-requisites to onboard to Optimize at Edge:
 
-Requirements for Setup:
+* Complete the onboarding process to LLM Optimizer.
+* Complete the log forwarding process for your CDN logs.
+
+Requirements for your IT/CDN team:
 
 * Generate an API key.
 * Add Optimize at Edge routing rules in the CDN.
 * Allowlist user-defined paths or the entire domain.
 * Add a user-defined list of LLM user agents to target.
-* Ensure robots.txt doesn't block any user agents intended to target.
-* Confirm Optimize at Edge routing is in the LLM Optimizer UI.
+* Ensure `robots.txt` does not block any user agents intended to target.
+* Confirm Optimize at Edge routing in the LLM Optimizer interface.
 
-Adobe provides sample configuration snippets for most major CDNs to guide the setup process. The snippet examples included in our guidelines needs to be adapted to the actual live configuration. Adobe recommends that you implement changes in the lower environments first.
+To guide the setup process, presented below, are sample configuration for a number of CDN setups. These examples should be adapted to your actual live configuration. We recommend applying changes in the lower environments first.
+
+>[!NOTE]
+>In the code samples below, you may see references to "tokowaka", which is the working project name for Optimize at Edge. These identifiers remain in the code for compatibility purposes and refer to the same capabilities described in this documentation.
 
 >[!BEGINTABS]
 
->[!TAB AEM Cloud Service Managed CDN (Fastly)]
+>[!TAB Adobe Managed CDN]
 
-**Tokowaka BYOCDN - Adobe Managed CDN**
+**Adobe Managed CDN**
 
-Uses only originSelectors to select the Tokowaka origin.
+The purpose of this configuration is to configure requests with agentic user agents that will be routed to the Optimizer service (`edge.tokowaka.now` backend). To test the configuration, after the setup is complete look for the header `x-tokowaka-request-id` in the response.
 
-The following example routes LLM agents requests on specific domain matching the the pattern "/es/*" or exact paths (only html pages are routed). The example is supposed to provide a starting point and in case you have multiple originSelectors in your config it is recommended to place this first.
+```
+curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatgpt-user"
+< HTTP/2 200
+< x-tokowaka-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 
-Important notes:
+```
 
-* x-tokowaka-request needs to be checked before routing to Tokowaka backend. Only requests that do not have this header should be routed to Tokowaka backend.
-* the originSelector rule that routes to Tokowaka backend should be first in the list if there are multiple rules.
-* TOKOWAKA_API_KEY secret needs to be delpoyed before deploying the cdn.yaml
+The routing configuration is done by using an [originSelector CDN rule](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors). The prerequisites are as follows:
+
+* decide the domain to be routed
+* decide the paths to be routed
+* decide the user agents to be routed (recommended regex)
+* obtain an api key from Adobe for the `edge.tokowaka.now` backend
+
+In order to deploy the rule, you need to:
+
+* create a [configuration pipeline](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline)
+* commit the `cdn.yaml` configuration file in your repository
+* deploy the api key as [secret environment variable](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)
+* run the configuration pipeline
+
 
 ```
 kind: "CDN"
@@ -101,7 +116,16 @@ data:
 
 ```
 
->[!TAB Akamai (BYOCDN)]
+To test the setup, run a curl and expect the following:
+
+```
+curl -svo page.html https://www.example.com/page.html --header "user-agent: chatgpt-user"
+< HTTP/2 200
+< x-tokowaka-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
+
+```
+
+<!-- >>[!TAB Akamai (BYOCDN)]
 
 **Tokowaka BYOCDN - Akamai**
 
@@ -375,7 +399,7 @@ Important considerations:
 * With Cache ID Modification within a match on User Agent, the content can't be purged by URL (just FYI)
 * Site failover mechanism: With the match on User-Agent rule, Akamai does not allows to failover based on health check, but only only basis of origin response/connectivity per request. Set **x-tokowaka-fo:true**  resp header in case of failover response.
 * SWR is not supported by Akamai. So, only TTL based caching is there. So, configure a rule in Akamai to strip Age header from origin response else TTL based caching would not work.
-* Ensure that the Tokowaka rule is the bottom most rule in the rule hierarchy (so that it overrides all other rules).
+* Ensure that the Tokowaka rule is the bottom most rule in the rule hierarchy (so that it overrides all other rules).-->
 
 >[!TAB Fastly (BYOCDN)]
 
@@ -427,82 +451,86 @@ if (!req.http.x-tokowaka-config && req.http.x-tokowaka-request == "failover") {
 
 >[!ENDTABS]
 
-
-For other CDN providers, please reach out to llmo-at-edge@adobe.com to assist your IT/CDN teams with onboarding.
-
-<!--This should probably be included Opportunities dashboard content. Content also needs serious editing - lots of "customer needs"and business user" etc.-->
-
-After the configurations are complete, business users can deploy suggestions for Optimize at Edge opportunities in LLM Optimizer.
+>[!NOTE]
+>For other CDN providers, please reach out to `llmo-at-edge@adobe.com` to assist your IT/CDN teams with onboarding. Once the setup configurations are complete, you can deploy suggestions for Optimize at Edge opportunities in LLM Optimizer.
 
 ## Opportunities
+
+Presented in the following table are opportunities that can improve the agentic web experience and are supported with Optimize at Edge.
 
 | Opportunity | Type | Auto-Identify | Auto-suggest | Auto-optimize |
 |---------|----------|----------|----------|----------|
 |Recover Content Visibility | Technical GEO | Detects pages where critical content is hidden from AI agents. Shows affected URLs and expected content that can be recovered.| Highlights content that can be made available for AI agents and recommends enabling pre-rendering for those pages. | Serves a fully rendered, AI-friendly HTML snapshot to agentic traffic that recovers the previously hidden content.|
-| Optimize Headings for AI | Content Optimization | Scans headings to detect empty, duplicate, missing, or ambiguous headings that can reduce machine-readability.| Proposes a cleaner heading hierarchy and improved labels and shows a preview of the updated structure for each page.| Injects the improved heading structure for AI agents, preserving your visual design while making the page more understandable for LLMs.|
-| Add AI-Friendly Summaries | Content Optimization | Identifies long or complex pages that lack concise summaries at the page or section level, making them harder for AI to quickly scan and understand.| Recommends short, AI-generated summaries at the page-level and section-level that capture key content.| Inserts the summaries into the relevant HTML sections, improving how models interpret and describe the page content.|
-| Add Relevant FAQs | Content Optimization | Detects intent gaps in the existing page content that could benefit from FAQs. | Suggests AI-generated FAQ content aligned to user intents and existing topics. | Injects FAQ content into the HTML, making pages more discoverable and relevant in AI-driven answers.|
-| Simplify Complex Content | Content Optimization | Flags pages with complex text that can hinder AI comprehension. | Provides AI-generated simplified versions of complex test while preserving the original meaning. | Rewrites complex sections in the page, improving AI readability. |
+| Optimize Headings for LLMs | Content Optimization | Scans headings to detect empty, duplicate, missing or ambiguous headings that can reduce machine readability.| Proposes a cleaner heading hierarchy and improved labels and shows a preview of the updated structure for each page.| Injects the improved heading structure for AI agents, preserving your visual design while making the page more readable for LLMs.|
+| Add LLM-Friendly Summaries | Content Optimization | Identifies long or complex pages that lack concise summaries at the page or section level, making them harder for AI to quickly scan and understand.| Recommends short, AI-generated summaries at the page and section level that capture key content.| Inserts the summaries into the relevant HTML sections, improving how models interpret and describe the page content.|
+| Add Relevant FAQs | Content Optimization | Detects intent gaps in the existing page content that could benefit from FAQs. | Suggests AI-generated FAQ content aligned to the user intent and existing topics. | Injects FAQ content into the HTML, making pages more discoverable and relevant in AI-driven answers.|
+| Simplify Complex Content | Content Optimization | Flags pages with complex text that can hinder AI comprehension. | Provides AI-generated simplified versions of complex text while preserving the original meaning. | Rewrites complex sections in the page, improving AI readability. |
+
+### Additional Tools
+
+The [Adobe LLM Optimizer: Is your webpage citable?](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) Chrome extension lets you see exactly how much of your webpage content LLMs can access and what stays hidden. Designed as a free, standalone diagnostic tool, it requires no product license or setup.
+
+With a single-click, you can evaluate any site's machine readability. You can view a side-by-side comparison of what AI agents see versus what human users see, and estimate how much content could be recovered by using LLM Optimizer. See the [Can AI read your website?](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) page for more information.
+
+## Opportunities detailed
+
+In the sections that follow, you can view additional details for each opportunity that is supported with Optimize at Edge.
 
 ### Recover Content Visibility
 
-This opportunity flags pages where key content is hidden for AI agents due to client-side rendering. For each identified page, it shows you exactly which content is missing from AI agent view, highlights visibility gaps, and enables you to directly apply changes to recover the hidden content. When you deploy this opportunity with Optimize at Edge, a pre-rendered, AI-optimized version of the page is served to LLM user agents so they can access the full context without executing Javascript.
+This opportunity flags pages where key content is hidden for AI agents due to client-side rendering. For each identified page, it shows you exactly which content is missing from the AI agent view, highlights visibility gaps, and enables you to directly apply changes to recover the hidden content. When you deploy this opportunity with Optimize at Edge, a pre-rendered, AI-optimized version of the page is served to LLM user agents so they can access the full context without executing Javascript.
+This ensures the page is fully visible to AI agents first. Additional enhancements are applied on top of that pre-rendered HTML.
 
-**This pre-rendering capability automatically applies to all opportunities that follow when deployed with Optimize at Edge.** This ensures the page is fully visible to AI agents first. Additional enhancements are applied on top of that pre-rendered HTML.
-
-#### Additional Tools
-
-Is your webpage citable? The [Adobe LLM Optimizer: Is your webpage citable?](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) Chrome extension lets you see exactly how much of your webpage content LLMs can access and what stays hidden. Designed as a free, standalone diagnostic tool, it requires no product license or setup.
-
-With a single-click, you can evaluate any site's machine-readability, view a side-by-side comparison of what AI agents see versus what human users see, and estimate how much content could be recovered using LLM Optimizer. See [Can AI read your website?](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) for more information.
+>[!IMPORTANT]
+>This pre-rendering capability automatically applies to all opportunities presented below when deployed with Optimize at Edge.
 
 ### Optimize Headings for LLMs
 
-This opportunity detects pages where the heading structure makes it hard for AI agents to understand the page due to empty, duplicate, missing or ambiguous headings. For each affected page, the opportunity surfaces the suboptimal headings and recommends a clearer hierarchy. When deployed with Optimize at Edge, the improved headings are applied in the HTML served to agentic traffic, which can help improve machine readability while leaving your human-facing layout the same.
+This opportunity detects pages where the heading structure makes it hard for AI agents to understand the page due to empty, duplicate, missing or ambiguous headings. For each affected page, the opportunity surfaces the suboptimal headings and recommends a clearer hierarchy. When deployed with Optimize at Edge, the improved headings are applied in the HTML served to agentic traffic. This helps machine readability while leaving your human facing layout the same.
 
 ### Add LLM-Friendly Summaries
 
-This opportunity identifies pages that can benefit from concise summaries to help LLMs quickly understand what the page is about. For each page, the opportunity detects where a summary is most needed and creates AI-generated summaries at the page-level and/or section-level. When you deploy with Optimize at Edge these summaries are inserted into the HTML that AI agents retrieve, improving the chances of having your content be described more accurately.
+This opportunity identifies pages that can benefit from concise summaries to help LLMs quickly understand what the page content is about. For each page, the opportunity detects where a summary is most needed and creates AI-generated summaries either at the page level or section level. When you deploy with Optimize at Edge these summaries are inserted into the HTML that AI agents retrieve, improving the chances of having your content be described more accurately.
 
 ### Add Relevant FAQs
 
-This opportunity flags pages where additional Q&A content could better match user intent and prompts in AI-driven discovery. For each page, it proposes AI-generated FAQ blocks tied to user intent and content on the page. With Optimize at Edge, these FAQs are injected into the HTML, making your page more AI-friendly and increasing the likelihood that AI answers directly reflect your guidance.
+This opportunity flags pages where additional Q&A content could better match the user intent and prompts in AI-driven discovery. For each page, it proposes AI-generated FAQ blocks tied to user intent and content on the page. With Optimize at Edge, these FAQs are injected into the HTML, making your page more AI-friendly and increasing the likelihood that AI answers directly reflect your guidance.
 
 ### Simplify Complex Content
 
-This opportunity finds pages with long, complex paragraphs that can reduce AI comprehension. For each page that exceeds readability thresholds, it creates AI-generated content that is simpler and more scannable while preserving the original meaning. When deployed at the edge, the simplified content delivered to agentic traffic helps LLMs interpret and summarize your content more faithfully.
+This opportunity finds pages with long, complex paragraphs that can reduce AI comprehension. For each page that exceeds the readability thresholds, it creates AI-generated content that is simpler and easier to scan while preserving the original meaning. When deployed at the edge, the simplified content delivered to agentic traffic helps LLMs interpret and summarize your content more faithfully.
 
-## Suggestions
+## Auto-Optimize at Edge
 
 For each opportunity, you can preview, edit, deploy, live preview, and roll back the optimizations at the edge.
 
 ### Preview
 
-Preview lets users see the impact of a suggestion on the page before anything goes live. It surfaces a side-by-side difference between the current page and the AI-optimized version expected after applying the suggestion. This view uses the same Optimize at Edge logic that will power live traffic, but in a safe, isolated preview mode. This does not impact live traffic as it is a read-only simulation for review.
+**Preview** lets you see the impact of a suggestion before it goes live. It surfaces a side-by-side difference between the current page and the AI-optimized version expected after applying the suggestion. This view uses the same Optimize at Edge logic that will power live traffic, but in an isolated preview mode. This does not impact live traffic as it is a read-only simulation for review.
 
 ![Preview](/help/assets/optimize-at-edge/preview.png)
 
 ### Edit
 
-Edit allows users to refine or rewrite altogether the auto-generated suggestion before deploying it. Instead of passively accepting the suggestion, users maintain full control through this human-in-the-loop workflow. The view displays proposed changes in a structured editor, where users can modify the text to better match their intent. The edited version will then be served to AI agents once deployed.
+**Edit** allows you to refine or rewrite altogether the auto-generated suggestion before deploying it. Instead of accepting the suggestion, you maintain full control through the edit workflow. The view displays proposed changes in a structured editor, where you can modify the text to better match your original intent. The edited version will then be served to AI agents once deployed.
 
 ![Edit](/help/assets/optimize-at-edge/edit.png)
 
 ### Deploy
 
-Deploy publishes the selected suggestions so the optimized experiences can be served from the edge to AI agents. If the CDN is fully routed, all pages in the domain go live with the new changes typically within minutes. If routing has been configured for select paths only, only the allowlisted pages go live with the optimizations.
+**Deploy** publishes the selected suggestions so the optimized experiences can be served from the edge to AI agents. If the CDN is fully routed, all pages in the domain usually go live with the new changes within minutes. If routing has been configured for select paths only, only the allowlisted pages go live with the optimizations.
 
 ![Deploy](/help/assets/optimize-at-edge/deploy.png)
 
 ### View Live
 
-View Live lets users verify that the optimization is live and behaving as expected for agentic traffic, a view that would otherwise be hard to access. Users can view the live page under Fixed Suggestions, which renders the page as shown to AI agents.
+**View Live** lets you verify that the optimization is live and behaving as expected for agentic traffic, a view that would otherwise be hard to access. You can view the live page under Fixed Suggestions, which renders the page as shown to AI agents.
 
 ![View Live](/help/assets/optimize-at-edge/view-live.png)
 
 ### Rollback
 
-Rollback safely reverts a previously deployed optimization. The AI-only version of the page is typically returned to its previous state within minutes, making it safe for users to experiment with optimizations if needed.
+Rollback safely reverts a previously deployed optimization. The AI-only version of the page is typically returned to its previous state within minutes, making it safe to experiment with optimizations when needed.
 
 ![Rollback](/help/assets/optimize-at-edge/rollback.png)
 
@@ -510,46 +538,29 @@ Rollback safely reverts a previously deployed optimization. The AI-only version 
 
 Q. What kind of LLMs do you target with Optimize at Edge?
 
-The list of user agents to target is completely defined by the customer at onboarding.
+The list of user agents to target is defined by you during the onboarding process.
 
-Q. What does "Edge" in Optimize at Edge mean?
+<!--Q. What does "Edge" in Optimize at Edge mean?
 
-In our context, "Edge" means the optimization is applied at the CDN layer and not inside your CMS.
+In our context, "Edge" means that the optimization is applied at the CDN layer and not inside your CMS.
 
 Q. Why does this optimization require a CDN?
 
-The CDN is where the optimized version of the page is assembled and delivered to AI agents. We leverage the CDN to ensure your origin CMS remains unchanged. This separation lets you improve LLM visibility without altering your existing publishing workflows.
+The CDN is where the optimized version of the page is assembled and delivered to AI agents. We leverage the CDN to ensure your origin CMS remains unchanged. This separation lets you improve LLM visibility without altering your existing publishing workflows.-->
 
 Q. What happens if I'm not onboarded to Optimize at Edge yet?
 
-If you click **Deploy optimizations** before completing the required setup, nothing will be applied to your site. Instead, a pop-up dialog prompts you to contact our team at llmo-at-edge@adobe.com for onboarding assistance. Until onboarding is complete, you can still explore the detected opportunities and suggestions, but the one-click deployment workflow will remain inactive.
+If you click **Deploy optimizations** before completing the required setup, nothing will be applied to your site. Instead, a pop-up dialog prompts you to contact our team at `llmo-at-edge@adobe.com` for onboarding assistance. Until onboarding is complete, you can still explore the detected opportunities and suggestions, but the one-click deployment workflow will remain inactive.
 
 Q: What happens when the content is updated at source?
 
-We serve the optimized version of the page from cache as long as the underlying source page hasn't changed. However, when the source does change, our system automatically refreshes so AI agents always receive the most up-to-date content. This is because we use low cache TTLs in order of minutes so that any content update on your site triggers a new optimization within that window. As there is no universal TTL that fits every site, we can configure this TTL based on your cache invalidation rules to ensure both systems stay in sync.
+We serve the optimized version of the page from cache as long as the underlying source page hasn't changed. However, when the source does change, our system automatically refreshes so AI agents always receive the most up-to-date content. This is because we use low cache time to live (TTL) settings (by order of minutes) so that any content update on your site triggers a new optimization within that window. As there is no universal TTL that fits every site, we can configure this TTL based on your cache invalidation rules to ensure both systems stay in sync.
 
 Q. Is Optimize at Edge only for sites using Adobe Edge Delivery Service (EDS)?
 
-No. Optimize at Edge is CDN-agnostic and works with any front-end architecture, not just ones deployed on Adobe's EDS Stack.
+No. Optimize at Edge is CDN-agnostic and works with any front-end architecture, not just the ones deployed on Adobe's EDS Stack.
 
 Q. How is Optimize at Edge pre-rendering different from traditional server-side rendering (SSR)?
 
-The two solve different problems and can work together. Traditional SSR renders server-side content but doesn't include content loaded later in the browser. Optimize at Edge pre-rendering captures the page after JavaScript and client-side data have loaded, producing the fully assembled version at the CDN edge. SSR focuses on improving the human experience and Optimize at Edge improves the web experience for LLMs.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Both solve different problems and can work together. Traditional SSR renders server-side content but doesn't include content loaded later in the browser. Optimize at Edge pre-rendering captures the page after JavaScript and client-side data has loaded, producing the fully assembled version at the CDN edge. SSR focuses on improving the human experience and Optimize at Edge improves the web experience for LLMs.
 
