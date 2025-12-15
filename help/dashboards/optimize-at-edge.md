@@ -6,25 +6,25 @@ feature: Opportunities
 
 # Optimize at Edge
 
-This page provides a detailed overview on how to deliver optimizations at the CDN edge without any authoring changes. It covers the onboarding process, the optimization opportunities and how to use them.
+This page provides a detailed overview on how to deliver optimizations at the CDN edge without any authoring changes. It covers the onboarding process, the available optimization opportunities and how to auto-optimize at edge.
 
 >[!NOTE]
 >This functionality is currently in Early Access.
 
 ## What is Optimize at Edge?
 
-Optimize at Edge is an edge-based deployment capability in LLM Optimizer that serves AI friendly changes to LLM user agents. In the current context, "edge" means that the optimization is applied at the CDN layer. Because it delivers optimizations at the CDN layer, no authoring changes in the Content Management System (CMS) are required so your origin CMS remains unchanged. This separation lets you improve LLM visibility without altering your existing publishing workflows. It targets only agentic traffic and does not impact either human users or SEO bots. When LLM Optimizer detects opportunities to optimize a page, users can deploy fixes directly at the CDN edge.
+Optimize at Edge is an edge-based deployment capability in LLM Optimizer that serves AI friendly changes to LLM user agents. In the current context, "Edge" means that the optimization is applied at the CDN layer. Because it delivers optimizations at the CDN layer, no authoring changes in the Content Management System (CMS) are required so your origin CMS remains unchanged. This separation lets you improve LLM visibility without altering your existing publishing workflows. It targets only agentic traffic and does not impact either human users or SEO bots. When LLM Optimizer detects opportunities to optimize a page, users can deploy fixes directly at the CDN edge.
 
 Optimize at Edge is a faster, leaner alternative to traditional fixes that demand complex engineering efforts. As mentioned, once you complete a one-time setup, no platform changes or long development cycles are required to apply the changes. You can publish improvements in minutes, without requiring developer engagement. It is a low risk, no-code way to optimize your website for AI agents.
 
-Optimize at Edge is designed for business users in marketing, SEO, content and digital strategy teams. It can enable business users to complete the full journey in LLM Optimizer: identifying opportunities, understanding suggestions, and easily deploying the fixes. With Optimize at Edge, users can preview the changes, deploy them quickly at the  CDN edge, and validate that the optimizations are live. Performance can be tracked in the LLM Optimizer ecosystem.
+Optimize at Edge is designed for business users in marketing, SEO, content and digital strategy teams. It can enable business users to complete the full journey in LLM Optimizer: identifying opportunities, understanding suggestions, and easily deploying the fixes. With Optimize at Edge, users can preview the changes, deploy them quickly at the CDN edge and validate that the optimizations are live. Performance can be tracked in the LLM Optimizer ecosystem.
 
 ### Key benefits
 
 * **AI-only delivery:** Serves optimized HTML only to AI agents with no impact on either human visitors or SEO bots.
 * **Faster cycles:** Publish changes in minutes, not weeks. No platform changes or long engineering cycles required.
 * **Low-risk and reversible:** Supported with a one-click rollback capability that can revert the page in minutes.
-* **No performance impact:** Edge-based optimizations and caching keep site latency unaffected.
+* **No performance impact:** Edge based optimizations and caching keep site latency unaffected.
 * **CDN and CMS-agnostic:** Works with any CDN configuration and front-end setup regardless of the Content Management System.
 
 ### Which opportunities are supported with Optimize at Edge?
@@ -52,7 +52,7 @@ Requirements for your IT/CDN team:
 To guide the setup process, presented below, are sample configuration for a number of CDN setups. These examples should be adapted to your actual live configuration. We recommend applying changes in the lower environments first.
 
 >[!NOTE]
->In the code samples below, you may see references to "tokowaka," which is the working project name for Optimize at Edge. These identifiers remain in the code for compatibility purposes and refer to the same capabilities described in this documentation.
+>In the code samples below, you may see references to "tokowaka", which is the working project name for Optimize at Edge. These identifiers remain in the code for compatibility purposes and refer to the same capabilities described in this documentation.
 
 >[!BEGINTABS]
 
@@ -60,7 +60,7 @@ To guide the setup process, presented below, are sample configuration for a numb
 
 **Adobe Managed CDN**
 
-The purpose of this configuration is to configure requests with agentic user agents that will be routed to the Optimizer service (edge.tokowaka.now backend). To test the configuration, after the setup is complete look for the header  `x-tokowaka-request-id` in the response.
+The purpose of this configuration is to configure requests with agentic user agents that will be routed to the Optimizer service (`edge.tokowaka.now` backend). To test the configuration, after the setup is complete look for the header `x-tokowaka-request-id` in the response.
 
 ```
 curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatgpt-user"
@@ -454,8 +454,6 @@ if (!req.http.x-tokowaka-config && req.http.x-tokowaka-request == "failover") {
 >[!NOTE]
 >For other CDN providers, please reach out to `llmo-at-edge@adobe.com` to assist your IT/CDN teams with onboarding. Once the setup configurations are complete, you can deploy suggestions for Optimize at Edge opportunities in LLM Optimizer.
 
-<!--This should probably be included Opportunities dashboard content. Content also needs serious editing - lots of "customer needs"and business user" etc.-->
-
 ## Opportunities
 
 Presented in the following table are opportunities that can improve the agentic web experience and are supported with Optimize at Edge.
@@ -476,7 +474,7 @@ With a single-click, you can evaluate any site's machine readability. You can vi
 
 ## Opportunities detailed
 
-In the sections that follow, you can view additional details for each opportunity supported with Optimize at Edge.
+In the sections that follow, you can view additional details for each opportunity that is supported with Optimize at Edge.
 
 ### Recover Content Visibility
 
