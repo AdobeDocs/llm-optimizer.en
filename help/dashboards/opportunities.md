@@ -34,6 +34,10 @@ Presented below is a table of currently supported opportunities:
 | Detect 404s / 403s / 5xx Issues | Technical GEO | Monitors CDN logs for error responses. Reports frequency, affected URLs, and estimated hits lost. | Fix broken links, update permissions, and resolve server-side issues so key content returns 200 responses. |
 | Recover Content Visibility (Early Access) | Technical GEO | Flags pages where critical content is hidden from AI agents. Shows affected URLs and expected content that can be recovered. | Pre-render the pages so more content is available to AI agents without JavaScript execution. |
 
+## Auto-optimization {#auto-optimization}
+
+Auto-optimization enables one-click deployment of recommended optimizations, reducing manual effort and time to value. Optimizations can be applied either at the content source or at the CDN edge. Edge based auto-optimization is currently available in Early Access for select opportunities. For more details, see the [Optimize at Edge](/help/dashboards/optimize-at-edge.md) page.
+
 ### Recover Content Visibility Opportunity {#recover-contet}
 
 As stated above, the content visibility opportunity, flags pages where key content is lost for AI agents due to client-side rendering. For each identified page, it shows you exactly which content is missing from the AI agent view, helping you pinpoint visibility gaps. It's also supported by an edge-based pre-rendering capability that can serve more HTML content to agentic traffic without requiring Content Management System (CMS) changes. This functionality is currently in Early Access and requires setup from the LLM Optimizer team. Please contact `llmo-at-edge@adobe.com` to activate the content visibility opportunity.
