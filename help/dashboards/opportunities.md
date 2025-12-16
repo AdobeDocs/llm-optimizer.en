@@ -38,9 +38,9 @@ Presented below is a table of currently supported opportunities:
 
 Auto-optimization enables one-click deployment of recommended optimizations, reducing manual effort and time to value. Optimizations can be applied either at the content source or at the CDN edge. Edge based auto-optimization is currently available in Early Access for select opportunities. For more details, see the [Optimize at Edge](/help/dashboards/optimize-at-edge.md) page.
 
-### Recover Content Visibility Opportunity {#recover-contet}
+<!--### Recover Content Visibility Opportunity {#recover-contet}
 
-As stated above, the content visibility opportunity, flags pages where key content is lost for AI agents due to client-side rendering. For each identified page, it shows you exactly which content is missing from the AI agent view, helping you pinpoint visibility gaps. It's also supported by an edge-based pre-rendering capability that can serve more HTML content to agentic traffic without requiring Content Management System (CMS) changes. This functionality is currently in Early Access and requires setup from the LLM Optimizer team. Please contact `llmo-at-edge@adobe.com` to activate the content visibility opportunity.
+As stated above, the content visibility opportunity, flags pages where key content is lost for AI agents due to client-side rendering. For each identified page, it shows you exactly which content is missing from the AI agent view, helping you pinpoint visibility gaps. It's also supported by an edge-based pre-rendering capability that can serve more HTML content to agentic traffic without requiring Content Management System (CMS) changes. This functionality is currently in Early Access and requires setup from the LLM Optimizer team. Please contact `llmo-at-edge@adobe.com` to activate the content visibility opportunity.-->
 
 ### Additional Tools
 
