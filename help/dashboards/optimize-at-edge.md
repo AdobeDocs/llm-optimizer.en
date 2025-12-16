@@ -500,7 +500,7 @@ This opportunity finds pages with long, complex paragraphs that can reduce AI co
 
 For each opportunity, you can preview, edit, deploy, view live, and roll back the optimizations at the edge.
 
->[!VIDEO](https://video.tv.adobe.comv/3477983/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### Preview
 
