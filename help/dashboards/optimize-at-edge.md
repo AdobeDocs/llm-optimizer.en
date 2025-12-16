@@ -74,13 +74,11 @@ The routing configuration is done by using an [originSelector CDN rule](https://
 * decide the domain to be routed
 * decide the paths to be routed
 * decide the user agents to be routed (recommended regex)
-* obtain an api key from Adobe for the `edge.tokowaka.now` backend
 
 In order to deploy the rule, you need to:
 
 * create a [configuration pipeline](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline)
 * commit the `cdn.yaml` configuration file in your repository
-* deploy the api key as [secret environment variable](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)
 * run the configuration pipeline
 
 
@@ -108,8 +106,6 @@ data:
         action:
           type: selectOrigin
           originName: tokowaka-backend
-          headers:
-            x-tokowaka-api-key: "${{TOKOWAKA_API_KEY}}"
     origins:
       - name: tokowaka-backend
         domain: "edge.tokowaka.now"
