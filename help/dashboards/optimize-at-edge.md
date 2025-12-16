@@ -500,6 +500,8 @@ This opportunity finds pages with long, complex paragraphs that can reduce AI co
 
 For each opportunity, you can preview, edit, deploy, view live, and roll back the optimizations at the edge.
 
+>[!VIDEO](https://video.tv.adobe.comv/3477983/?learn=on&enablevpops)
+
 ### Preview
 
 **Preview** lets you see the impact of a suggestion before it goes live. It surfaces a side-by-side difference between the current page and the AI-optimized version expected after applying the suggestion. This view uses the same Optimize at Edge logic that will power live traffic, but in an isolated preview mode. This does not impact live traffic as it is a read-only simulation for review.
