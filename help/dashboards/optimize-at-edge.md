@@ -15,7 +15,7 @@ This page provides a detailed overview on how to deliver optimizations at the CD
 
 Optimize at Edge is an edge-based deployment capability in LLM Optimizer that serves AI friendly changes to LLM user agents. In the current context, "Edge" means that the optimization is applied at the CDN layer. Because it delivers optimizations at the CDN layer, no authoring changes in the Content Management System (CMS) are required so your origin CMS remains unchanged. This separation lets you improve LLM visibility without altering your existing publishing workflows. It targets only agentic traffic and does not impact either human users or SEO bots. When LLM Optimizer detects opportunities to optimize a page, users can deploy fixes directly at the CDN edge.
 
-Optimize at Edge is a faster, leaner alternative to traditional fixes that demand complex engineering efforts. As mentioned, once you complete a one-time setup, no platform changes or long development cycles are required to apply the changes. You can publish improvements in minutes, without requiring developer engagement. It is a low risk, no-code way to optimize your website for AI agents.
+Optimize at Edge is a faster, leaner alternative to traditional fixes that demand complex engineering efforts. As mentioned, once you complete a one-time setup, no platform changes or long development cycles are required to apply the changes. You can publish improvements in minutes, without requiring developer engagement. It is a no-code way to optimize your website for AI agents.
 
 Optimize at Edge is designed for business users in marketing, SEO, content and digital strategy teams. It can enable business users to complete the full journey in LLM Optimizer: identifying opportunities, understanding suggestions, and easily deploying the fixes. With Optimize at Edge, users can preview the changes, deploy them quickly at the CDN edge and validate that the optimizations are live. Performance can be tracked in the LLM Optimizer ecosystem.
 
@@ -23,7 +23,7 @@ Optimize at Edge is designed for business users in marketing, SEO, content and d
 
 * **AI-only delivery:** Serves optimized HTML only to AI agents with no impact on either human visitors or SEO bots.
 * **Faster cycles:** Publish changes in minutes, not weeks. No platform changes or long engineering cycles required.
-* **Low-risk and reversible:** Supported with a one-click rollback capability that can revert the page in minutes.
+* **Reversible:** Supported with a one-click rollback capability that can revert the page in minutes.
 * **No performance impact:** Edge based optimizations and caching keep site latency unaffected.
 * **CDN and CMS-agnostic:** Works with any CDN configuration and front-end setup regardless of the Content Management System.
 
@@ -479,10 +479,10 @@ In the sections that follow, you can view additional details for each opportunit
 ### Recover Content Visibility
 
 This opportunity flags pages where key content is hidden for AI agents due to client-side rendering. For each identified page, it shows you exactly which content is missing from the AI agent view, highlights visibility gaps, and enables you to directly apply changes to recover the hidden content. When you deploy this opportunity with Optimize at Edge, a pre-rendered, AI-optimized version of the page is served to LLM user agents so they can access the full context without executing Javascript.
-This ensures the page is fully visible to AI agents first. Additional enhancements are applied on top of that pre-rendered HTML.
+This ensures the page is first fully visible to AI agents. Additional enhancements are applied on top of that pre-rendered HTML.
 
 >[!IMPORTANT]
->This pre-rendering capability automatically applies to all opportunities presented below when deployed with Optimize at Edge.
+>This pre-rendering capability automatically applies to all opportunities presented below when deployed with Optimize at Edge to ensure the page is fully visible to AI agents.
 
 ### Optimize Headings for LLMs
 
@@ -502,7 +502,7 @@ This opportunity finds pages with long, complex paragraphs that can reduce AI co
 
 ## Auto-Optimize at Edge
 
-For each opportunity, you can preview, edit, deploy, live preview, and roll back the optimizations at the edge.
+For each opportunity, you can preview, edit, deploy, view live, and roll back the optimizations at the edge.
 
 ### Preview
 
@@ -563,4 +563,3 @@ No. Optimize at Edge is CDN-agnostic and works with any front-end architecture, 
 Q. How is Optimize at Edge pre-rendering different from traditional server-side rendering (SSR)?
 
 Both solve different problems and can work together. Traditional SSR renders server-side content but doesn't include content loaded later in the browser. Optimize at Edge pre-rendering captures the page after JavaScript and client-side data has loaded, producing the fully assembled version at the CDN edge. SSR focuses on improving the human experience and Optimize at Edge improves the web experience for LLMs.
-
