@@ -9,7 +9,7 @@ feature: Opportunities
 This page provides a detailed overview on how to deliver optimizations at the CDN edge without any authoring changes. It covers the onboarding process, the available optimization opportunities and how to auto-optimize at edge.
 
 >[!NOTE]
->This functionality is currently in Early Access. You can learn more about the Early Access programs [here](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs).
+>This functionality is currently in Early Access. You can learn more about Early Access programs [here](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs).
 
 ## What is Optimize at Edge?
 
