@@ -22,16 +22,18 @@ To help get started with prompts and topics, Adobe has created an Industry Promp
 
 To use the Industry Prompt Library:
 
-1. Download the Prompt Library file from LLM Optimizer by navigating to the **Customer Configuration** dashboard.
-2. Review suggested **Topics** and **Prompts** for your brand's industry on the respective tab, and pick and choose the options that are most relevant.
-3. Review **Customer Journey Stage column** to view prompt options across the customer lifecycle (for example, discovery to conversion to retention). Early stage/top of funnel prompts are high priority but also consider later stage options to promote retention, enable customer support, and so on.
-4. Modify topics or prompts as needed to best support your goals and objectives before uploading to Adobe LLM Optimizer (for example, add your brand/product name, add on-brand terminology). Prompts can be added to LLMO manually or bulk uploaded using the provided *.csv* template.
+1. Navigate to the **Customer Configuration** dashboard.
+1. Select **Download Prompts Library** to download the library file from LLM Optimizer.
+![Industry prompt library download](/help/assets/best-practices/customer-configuration-prompts-library.png)
+1. Review suggested **Topics** and **Prompts** for your brand's industry on the respective tab and choose the options that are most relevant.
+1. Review **Customer Journey Stage column** to view prompt options across the customer lifecycle (for example, discovery to conversion to retention). Early stage/top of funnel prompts are high priority but also consider later stage options to promote retention, enable customer support, and so on.
+1. Modify topics or prompts as needed to best support your goals and objectives before uploading your topics and prompts to Adobe LLM Optimizer (for example, add your brand/product name, add on-brand terminology). Prompts can be added to LLM Optimizer manually or via bulk upload using the provided *.csv* template.
 
 >[!TIP]
 >
 > Use a combination of domain-specific prompts recommended by LLM Optimizer during initial set-up and the Industry Prompt Library to curate your prompt strategy.
 
-### Prompt Library Research Foundation
+### Prompt Library research foundation
 
 The Industry Prompt Library was developed through a comprehensive research initiative combining:
 
