@@ -41,6 +41,18 @@ If you select **Other**, you will have to reach out to llmo-now@adobe.com for as
 
 Once activated, logs are ingested and the dashboard will populate with metrics such as total agent interactions, success rate, hits by market, user agent analysis, and URL-level performance.
 
+LLM Optimizer only ingests and processes a subset of fields from the CDN logs. Although raw log field names vary by CDN provider, they are normalized and presented as:
+
+* URL (path only)
+* user_agent
+* status
+* referer
+* host
+* Ttfb (time to first byte)
+* cdn_provider
+
+These normalized fields are exposed through the agentic view. On the [Referral Traffic](/help/dashboards/referral-traffic.md) dashboard, CDN logs are utilized to display page hit metrics. No Personally Identifiable Information (PII) is processed or stored at any stage of CDN log ingestion or subsequent data handling.
+
 ## Filters {#filters}
 
 At the top of the page, you can apply filters to refine your view. The filters you choose will impact **all** the sections present on the dashboard. You can customize the following:
