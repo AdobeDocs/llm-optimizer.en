@@ -57,7 +57,7 @@ To guide the setup process, presented below, are sample configurations for a num
 
 **Adobe Managed CDN**
 
-The purpose of this configuration is to configure requests with agentic user agents that will be routed to the Optimizer service (`edgeoptimize.net` backend). To test the configuration, after the setup is complete look for the header `x-edge-optimize-request-id` in the response.
+The purpose of this configuration is to configure requests with agentic user agents that will be routed to the Optimizer service (`live.edgeoptimize.net` backend). To test the configuration, after the setup is complete look for the header `x-edge-optimize-request-id` in the response.
 
 ```
 curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatgpt-user"
@@ -105,7 +105,7 @@ data:
           originName: edge-optimize-backend
     origins:
       - name: edge-optimize-backend
-        domain: "edgeoptimize.net"
+        domain: "live.edgeoptimize.net"
 
 ```
 
