@@ -90,7 +90,7 @@ Use the Agentic Traffic Trends chart to track the weekly totals of successful, f
 
 ## Top and Bottom Movers {#top-bottom-movers}
 
-The Top and Bottom Movers view highlights URLs with the largest week-over-week changes in agentic traffic — visits or hits from AI systems accessing your content. **Top Movers** shows pages gaining visibility or engagement, while **Bottom Movers** reveals the URLs with the steepest declines. This helps you quickly identify which content is trending upward, which may need attention, and where AI-driven discovery patterns are shifting.
+The Top and Bottom Movers view highlights URLs with the largest week-over-week changes in agentic traffic — visits or hits from AI systems accessing your content. **Top Movers** shows pages gaining visibility or engagement, while **Bottom Movers** reveals the URLs with the steepest declines. This helps you quickly identify which content is trending upward, which may need attention and where AI-driven discovery patterns are shifting.
 
 ![Top and Bottom Movers](/help/dashboards/assets/movers.png)
 
@@ -134,4 +134,4 @@ The URL Details view provides a holistic understanding of a page's performance, 
 
 >[!ENDTABS]
 
-On both tables, you can use the **Export** option to download the table .csv and share the insights with your team or include the tables in executive reporting.
+On both tables, you can use the **Export** option to download the table `.csv` and share the insights with your team or include the tables in executive reporting.
