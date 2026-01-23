@@ -57,12 +57,12 @@ To guide the setup process, presented below, are sample configurations for a num
 
 **Adobe Managed CDN**
 
-The purpose of this configuration is to configure requests with agentic user agents that will be routed to the Optimizer service (`live.edgeoptimize.net` backend). To test the configuration, after the setup is complete look for the header `x-edgeoptimize-request-id` in the response.
+The purpose of this configuration is to configure requests with agentic user agents that will be routed to the Optimizer service (`live.edgeoptimize.net` backend). To test the configuration, after the setup is complete look for the header `x-edge-optimize-request-id` in the response.
 
 ```
 curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatgpt-user"
 < HTTP/2 200
-< x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
+< x-edge-optimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 
 ```
 
@@ -89,7 +89,7 @@ data:
       - name: route-to-edge-optimize-backend
         when:
           allOf:
-            - reqHeader: x-edgeoptimize-request
+            - reqHeader: x-edge-optimize-request
               exists: false # avoid loops when requests comes from Edge Optimize
             - reqHeader: user-agent
               matches: "(?i)(AdobeEdgeOptimize-AI|ChatGPT-User|GPTBot|OAI-SearchBot|PerplexityBot|Perplexity-User)" # routed user agents
@@ -114,7 +114,7 @@ To test the setup, run a curl and expect the following:
 ```
 curl -svo page.html https://www.example.com/page.html --header "user-agent: chatgpt-user"
 < HTTP/2 200
-< x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
+< x-edge-optimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 
 ```
 
@@ -405,16 +405,16 @@ Important considerations:
 **vcl_recv snippet**
 
 ```
-unset req.http.x-edgeoptimize-url;
-unset req.http.x-edgeoptimize-config;
-unset req.http.x-edgeoptimize-api-key;
+unset req.http.x-edge-optimize-url;
+unset req.http.x-edge-optimize-config;
+unset req.http.x-edge-optimize-api-key;
 
-if (!req.http.x-edgeoptimize-request
+if (!req.http.x-edge-optimize-request
     && req.http.user-agent ~ "(?i)(AdobeEdgeOptimize-AI|ChatGPT-User|GPTBot|OAI-SearchBot|PerplexityBot|Perplexity-User)") {
   set req.http.x-fowarded-host = req.http.host; # required for identifying the original host
-  set req.http.x-edgeoptimize-url = req.url; # required for identifying the original url
-  set req.http.x-edgeoptimize-config = "LLMCLIENT=true"; # required for cache key
-  set req.http.x-edgeoptimize-api-key = "<YOUR API KEY>"; # required for identifying the client
+  set req.http.x-edge-optimize-url = req.url; # required for identifying the original url
+  set req.http.x-edge-optimize-config = "LLMCLIENT=true"; # required for cache key
+  set req.http.x-edge-optimize-api-key = "<YOUR API KEY>"; # required for identifying the client
   set req.backend = F_EDGE_OPTIMIZE;
 }
 ```
@@ -422,23 +422,23 @@ if (!req.http.x-edgeoptimize-request
 **vcl_hash snippet**
 
 ```
-if (req.http.x-edgeoptimize-config) {
+if (req.http.x-edge-optimize-config) {
   set req.hash += "edge-optimize";
-  set req.hash += req.http.x-edgeoptimize-config;
+  set req.hash += req.http.x-edge-optimize-config;
 }
 ```
 
 **vcl_deliver snippet**
 
 ```
-if (req.http.x-edgeoptimize-config && resp.status >= 400) {
-  set req.http.x-edgeoptimize-request = "failover";
+if (req.http.x-edge-optimize-config && resp.status >= 400) {
+  set req.http.x-edge-optimize-request = "failover";
   set req.backend = F_Default_Origin;
   restart;
 }
 
-if (!req.http.x-edgeoptimize-config && req.http.x-edgeoptimize-request == "failover") {
-  set resp.http.x-edgeoptimize-fo = "1";
+if (!req.http.x-edge-optimize-config && req.http.x-edge-optimize-request == "failover") {
+  set resp.http.x-edge-optimize-fo = "1";
 }
 ```
 
