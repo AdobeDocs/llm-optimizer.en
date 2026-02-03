@@ -118,13 +118,13 @@ curl -svo page.html https://www.example.com/page.html --header "user-agent: chat
 
 ```
 
-<!-- >>[!TAB Akamai (BYOCDN)]
+>[!TAB Akamai (BYOCDN)]
 
-**Tokowaka BYOCDN - Akamai**
+**Edge Optimize BYOCDN - Akamai**
 
 ```
 {
-    "name": "Project Tokowaka CDN Rule",
+    "name": "Edge Optimize CDN Rule",
     "children": [
         {
             "name": "Connection settings",
@@ -161,7 +161,7 @@ curl -svo page.html https://www.example.com/page.html --header "user-agent: chat
                     "name": "advanced",
                     "options": {
                         "description": "",
-                        "xml": "<forward:availability.fail-action2>\n<add-header>\n<status>on</status>\n<name>x-tokowaka-request</name>\n<value>fo</value>\n</add-header>\n</forward:availability.fail-action2>"
+                        "xml": "<forward:availability.fail-action2>\n<add-header>\n<status>on</status>\n<name>x-edgeoptimize-request</name>\n<value>fo</value>\n</add-header>\n</forward:availability.fail-action2>"
                     }
                 }
             ],
@@ -183,7 +183,7 @@ curl -svo page.html https://www.example.com/page.html --header "user-agent: chat
                 }
             ],
             "criteriaMustSatisfy": "any",
-            "comments": "If Tokowaka origin returns a 4xx or 5xx error (or times out), failover condition is to send the request back to Akamai and set the x-tokowaka-request header so we don't re-send the request to Tokowaka"
+            "comments": "If Edge Optimize origin returns a 4xx or 5xx error (or times out), failover condition is to send the request back to Akamai and set the x-edgeoptimize-request header so we don't re-send the request to Edge Optimize"
         }
     ],
     "behaviors": [
@@ -195,11 +195,11 @@ curl -svo page.html https://www.example.com/page.html --header "user-agent: chat
                 "customValidCnValues": [
                     "{{Origin Hostname}}",
                     "{{Forward Host Header}}",
-                    "*.tokowaka.now"
+                    "*.edgeoptimize.net"
                 ],
                 "enableTrueClientIp": true,
                 "forwardHostHeader": "ORIGIN_HOSTNAME",
-                "hostname": "edge.tokowaka.now",
+                "hostname": "live.edgeoptimize.net",
                 "httpPort": 80,
                 "httpsPort": 443,
                 "ipVersion": "IPV4",
@@ -256,8 +256,8 @@ curl -svo page.html https://www.example.com/page.html --header "user-agent: chat
             "options": {
                 "transform": "NONE",
                 "valueSource": "EXPRESSION",
-                "variableName": "PMUSER_TOKOWAKA_CACHE_KEY",
-                "variableValue": "LLMCLIENT={{user.PMUSER_LLMCLIENT}};LANG={{user.PMUSER_LANG}};X_FORWARDED_HOST={{user.PMUSER_X_FORWARDED_HOST}}"
+                "variableName": "PMUSER_EDGEOPTIMIZE_CACHE_KEY",
+                "variableValue": "LLMCLIENT=TRUE;X_FORWARDED_HOST={{builtin.AK_HOST}}"
             }
         },
         {
@@ -277,7 +277,7 @@ curl -svo page.html https://www.example.com/page.html --header "user-agent: chat
             "options": {
                 "action": "MODIFY",
                 "avoidDuplicateHeaders": true,
-                "customHeaderName": "X-tokowaka-api-key",
+                "customHeaderName": "x-edgeoptimize-api-key",
                 "newHeaderValue": "<your api-key here>",
                 "standardModifyHeaderName": "OTHER"
             }
@@ -287,7 +287,7 @@ curl -svo page.html https://www.example.com/page.html --header "user-agent: chat
             "options": {
                 "action": "MODIFY",
                 "avoidDuplicateHeaders": true,
-                "customHeaderName": "x-tokowaka-config",
+                "customHeaderName": "x-edgeoptimize-config",
                 "newHeaderValue": "LLMCLIENT={{user.PMUSER_LLMCLIENT}};LANG={{user.PMUSER_LANG}}",
                 "standardModifyHeaderName": "OTHER"
             }
@@ -297,7 +297,7 @@ curl -svo page.html https://www.example.com/page.html --header "user-agent: chat
             "options": {
                 "action": "MODIFY",
                 "avoidDuplicateHeaders": true,
-                "customHeaderName": "x-tokowaka-url",
+                "customHeaderName": "x-edgeoptimize-url",
                 "newHeaderValue": "{{builtin.AK_URL}}",
                 "standardModifyHeaderName": "OTHER"
             }
@@ -306,7 +306,7 @@ curl -svo page.html https://www.example.com/page.html --header "user-agent: chat
             "name": "cacheId",
             "options": {
                 "rule": "INCLUDE_VARIABLE",
-                "variableName": "PMUSER_TOKOWAKA_CACHE_KEY"
+                "variableName": "PMUSER_EDGEOPTIMIZE_CACHE_KEY"
             }
         },
         {
@@ -343,10 +343,12 @@ curl -svo page.html https://www.example.com/page.html --header "user-agent: chat
                 "matchOperator": "IS_ONE_OF",
                 "matchWildcard": true,
                 "values": [
-                    "*Tokowaka-AI*",
+                    "*AdobeEdgeOptimize-AI*",
                     "*ChatGPT-User*",
                     "*GPTBot*",
-                    "*OAI-SearchBot*"
+                    "*OAI-SearchBot*",
+                    "*PerplexityBot*",
+                    "*Perplexity-User*"
                 ]
             }
         },
@@ -363,7 +365,7 @@ curl -svo page.html https://www.example.com/page.html --header "user-agent: chat
         {
             "name": "requestHeader",
             "options": {
-                "headerName": "x-tokowaka-request",
+                "headerName": "x-edgeoptimize-request",
                 "matchOperator": "DOES_NOT_EXIST",
                 "matchWildcardName": false
             }
@@ -375,7 +377,7 @@ curl -svo page.html https://www.example.com/page.html --header "user-agent: chat
                 "matchOperator": "IS",
                 "matchWildcard": false,
                 "variableExpression": "FALSE",
-                "variableName": "PMUSER_TOKOWAKA_DISABLE"
+                "variableName": "PMUSER_EDGEOPTIMIZE_DISABLE"
             }
         }
     ],
@@ -385,14 +387,14 @@ curl -svo page.html https://www.example.com/page.html --header "user-agent: chat
 
 Important considerations:
 
-* Tokowaka Rule will be ON based on User-Agent + Path + x-tokowaka-request (if not present) + TOKOWAKA_DISABLE variable (to allow switch off using a single variable toggle)
+* Edge Optimize Rule will be ON based on User-Agent + Path + x-edgeoptimize-request (if not present) + EDGEOPTIMIZE_DISABLE variable (to allow switch off using a single variable toggle)
 * Set up rules to **Modify Incoming Request Headers** rule to set custom headers
 * Set cache-key in Akamai using user defined variable through Cache-ID modification mechanism. Only a single user defined variable is allowed, so create a separate variable for cache_key and set it accordingly.
 * Lang: extracted from Accept-Language header using "regex": "^([a-zA-Z]{2}).*"
 * With Cache ID Modification within a match on User Agent, the content can't be purged by URL (just FYI)
-* Site failover mechanism: With the match on User-Agent rule, Akamai does not allows to failover based on health check, but only only basis of origin response/connectivity per request. Set **x-tokowaka-fo:true**  resp header in case of failover response.
+* Site failover mechanism: With the match on User-Agent rule, Akamai does not allows to failover based on health check, but only only basis of origin response/connectivity per request. Set **x-edgeoptimize-fo:true**  resp header in case of failover response.
 * SWR is not supported by Akamai. So, only TTL based caching is there. So, configure a rule in Akamai to strip Age header from origin response else TTL based caching would not work.
-* Ensure that the Tokowaka rule is the bottom most rule in the rule hierarchy (so that it overrides all other rules).-->
+* Ensure that the Edge Optimize rule is the bottom most rule in the rule hierarchy (so that it overrides all other rules).
 
 >[!TAB Fastly (BYOCDN)]
 
