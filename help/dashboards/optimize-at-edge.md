@@ -492,6 +492,7 @@ Important considerations:
 * Ensure that the Edge Optimize rule is the bottom most rule in the rule hierarchy (so that it overrides all other rules).
 
 To test the setup, run a curl and expect the following:
+
 ```
 curl -svo page.html https://www.example.com/page.html --header "user-agent: chatgpt-user"
 < HTTP/2 200
