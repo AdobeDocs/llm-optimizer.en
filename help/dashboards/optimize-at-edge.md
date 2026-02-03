@@ -118,6 +118,54 @@ curl -svo page.html https://www.example.com/page.html --header "user-agent: chat
 
 ```
 
+>[!TAB Fastly (BYOCDN)]
+
+**Edge Optimize BYOCDN - Fastly - VCL**
+
+![Fastly VCL](/help/assets/optimize-at-edge/fastly-vcl.png)
+
+![Add VCL snippets](/help/assets/optimize-at-edge/add-vcl-snippets.png)
+
+**vcl_recv snippet**
+
+```
+unset req.http.x-edgeoptimize-url;
+unset req.http.x-edgeoptimize-config;
+unset req.http.x-edgeoptimize-api-key;
+
+if (!req.http.x-edgeoptimize-request
+    && req.http.user-agent ~ "(?i)(AdobeEdgeOptimize-AI|ChatGPT-User|GPTBot|OAI-SearchBot|PerplexityBot|Perplexity-User)") {
+  set req.http.x-fowarded-host = req.http.host; # required for identifying the original host
+  set req.http.x-edgeoptimize-url = req.url; # required for identifying the original url
+  set req.http.x-edgeoptimize-config = "LLMCLIENT=true"; # required for cache key
+  set req.http.x-edgeoptimize-api-key = "<YOUR API KEY>"; # required for identifying the client
+  set req.backend = F_EDGE_OPTIMIZE;
+}
+```
+
+**vcl_hash snippet**
+
+```
+if (req.http.x-edgeoptimize-config) {
+  set req.hash += "edge-optimize";
+  set req.hash += req.http.x-edgeoptimize-config;
+}
+```
+
+**vcl_deliver snippet**
+
+```
+if (req.http.x-edgeoptimize-config && resp.status >= 400) {
+  set req.http.x-edgeoptimize-request = "failover";
+  set req.backend = F_Default_Origin;
+  restart;
+}
+
+if (!req.http.x-edgeoptimize-config && req.http.x-edgeoptimize-request == "failover") {
+  set resp.http.x-edgeoptimize-fo = "1";
+}
+```
+
 >[!TAB Akamai (BYOCDN)]
 
 **Edge Optimize BYOCDN - Akamai**
@@ -439,64 +487,16 @@ Important considerations:
 * Set up rules to **Modify Incoming Request Headers** rule to set custom headers
 * Set cache-key in Akamai using user defined variable through Cache-ID modification mechanism. Only a single user defined variable is allowed, so create a separate variable for cache_key and set it accordingly.
 * With Cache ID Modification within a match on User Agent, the content can't be purged by URL (just FYI)
-* Site failover mechanism: With the match on User-Agent rule, Akamai does not allow failover based on health check, but only basis of origin response/connectivity per request. Set **x-edgeoptimize-fo:true**  resp header in case of failover response.
+* Site failover mechanism: With the match on User-Agent rule, Akamai does not allow failover based on health check, but only on the basis of origin response/connectivity per request. Set **x-edgeoptimize-fo:true**  resp header in case of failover response.
 * SWR is not supported by Akamai. So, only TTL based caching is there. So, configure a rule in Akamai to strip Age header from origin response else TTL based caching would not work.
 * Ensure that the Edge Optimize rule is the bottom most rule in the rule hierarchy (so that it overrides all other rules).
 
 To test the setup, run a curl and expect the following:
 ```
-curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatgpt-user"
+curl -svo page.html https://www.example.com/page.html --header "user-agent: chatgpt-user"
 < HTTP/2 200
-< x-edgeoptimize-request-id: 5381b253-5d8c-42d1-bb7a-bc47fc960adc
+< x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 
-```
-
->[!TAB Fastly (BYOCDN)]
-
-**Edge Optimize BYOCDN - Fastly - VCL**
-
-![Fastly VCL](/help/assets/optimize-at-edge/fastly-vcl.png)
-
-![Add VCL snippets](/help/assets/optimize-at-edge/add-vcl-snippets.png)
-
-**vcl_recv snippet**
-
-```
-unset req.http.x-edgeoptimize-url;
-unset req.http.x-edgeoptimize-config;
-unset req.http.x-edgeoptimize-api-key;
-
-if (!req.http.x-edgeoptimize-request
-    && req.http.user-agent ~ "(?i)(AdobeEdgeOptimize-AI|ChatGPT-User|GPTBot|OAI-SearchBot|PerplexityBot|Perplexity-User)") {
-  set req.http.x-fowarded-host = req.http.host; # required for identifying the original host
-  set req.http.x-edgeoptimize-url = req.url; # required for identifying the original url
-  set req.http.x-edgeoptimize-config = "LLMCLIENT=true"; # required for cache key
-  set req.http.x-edgeoptimize-api-key = "<YOUR API KEY>"; # required for identifying the client
-  set req.backend = F_EDGE_OPTIMIZE;
-}
-```
-
-**vcl_hash snippet**
-
-```
-if (req.http.x-edgeoptimize-config) {
-  set req.hash += "edge-optimize";
-  set req.hash += req.http.x-edgeoptimize-config;
-}
-```
-
-**vcl_deliver snippet**
-
-```
-if (req.http.x-edgeoptimize-config && resp.status >= 400) {
-  set req.http.x-edgeoptimize-request = "failover";
-  set req.backend = F_Default_Origin;
-  restart;
-}
-
-if (!req.http.x-edgeoptimize-config && req.http.x-edgeoptimize-request == "failover") {
-  set resp.http.x-edgeoptimize-fo = "1";
-}
 ```
 
 >[!ENDTABS]
