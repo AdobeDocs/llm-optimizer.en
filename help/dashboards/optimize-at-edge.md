@@ -387,7 +387,7 @@ async function handleRequest(request, env, ctx) {
       
       if (is4xxError || is5xxError) {
         console.log(`Edge Optimize returned ${status}, failing over to origin`);
-        return await failoverToOrigin(request, env, url);
+        return await routeToOrigin(request, env, url, { isFailover: true });
       }
 
       // Return the Edge Optimize response
@@ -396,56 +396,63 @@ async function handleRequest(request, env, ctx) {
     } catch (error) {
       // Network error or timeout - failover to origin
       console.log(`Edge Optimize request failed: ${error.message}, failing over to origin`);
-      return await failoverToOrigin(request, env, url);
+      return await routeToOrigin(request, env, url, { isFailover: true });
     }
   }
 
-  // For all other requests (human users, SEO bots), pass through to origin
-  return fetch(request);
+  // For all other requests (human users, SEO bots), route to origin
+  return routeToOrigin(request, env, url, { isFailover: false });
 }
 
 /**
- * Failover to origin and mark the response with x-edgeoptimize-fo header
- * Routes to the original domain specified by EDGE_OPTIMIZE_TARGET_HOST
+ * Route request to origin server using EDGE_OPTIMIZE_TARGET_HOST
+ * @param {Request} request - The original request
+ * @param {Object} env - Environment variables
+ * @param {URL} url - Parsed URL object
+ * @param {Object} options - Routing options
+ * @param {boolean} options.isFailover - If true, clean headers and add failover marker
  */
-async function failoverToOrigin(originalRequest, env, url) {
-  // Create a clean request without Edge Optimize headers
-  const cleanHeaders = new Headers(originalRequest.headers);
-  cleanHeaders.delete("x-edgeoptimize-api-key");
-  cleanHeaders.delete("x-edgeoptimize-url");
-  cleanHeaders.delete("x-edgeoptimize-config");
-  cleanHeaders.delete("x-forwarded-host");
+async function routeToOrigin(request, env, url, options = {}) {
+  const { isFailover = false } = options;
   
-  // Mark this as a failover request to prevent loops
-  cleanHeaders.set("x-edgeoptimize-request", "1");
+  // Build origin URL
+  const originURL = `${url.protocol}//${env.EDGE_OPTIMIZE_TARGET_HOST}${url.pathname}${url.search}`;
   
-  // Build the origin URL using EDGE_OPTIMIZE_TARGET_HOST if specified
-  let originURL = originalRequest.url;
-  if (env.EDGE_OPTIMIZE_TARGET_HOST) {
-    originURL = `${url.protocol}//${env.EDGE_OPTIMIZE_TARGET_HOST}${url.pathname}${url.search}`;
-    cleanHeaders.set("Host", env.EDGE_OPTIMIZE_TARGET_HOST);
+  // Prepare headers
+  const originHeaders = new Headers(request.headers);
+  originHeaders.set("Host", env.EDGE_OPTIMIZE_TARGET_HOST);
+  
+  // For failover, clean Edge Optimize headers and add loop protection
+  if (isFailover) {
+    originHeaders.delete("x-edgeoptimize-api-key");
+    originHeaders.delete("x-edgeoptimize-url");
+    originHeaders.delete("x-edgeoptimize-config");
+    originHeaders.delete("x-forwarded-host");
+    originHeaders.set("x-edgeoptimize-request", "1");
   }
   
+  // Create and send origin request
   const originRequest = new Request(originURL, {
-    method: originalRequest.method,
-    headers: cleanHeaders,
-    body: originalRequest.body,
+    method: request.method,
+    headers: originHeaders,
+    body: request.body,
     redirect: "manual",
   });
   
   const originResponse = await fetch(originRequest);
   
-  // Clone the response to add the failover header
-  const modifiedResponse = new Response(originResponse.body, {
-    status: originResponse.status,
-    statusText: originResponse.statusText,
-    headers: originResponse.headers,
-  });
+  // For failover, add marker header to response
+  if (isFailover) {
+    const modifiedResponse = new Response(originResponse.body, {
+      status: originResponse.status,
+      statusText: originResponse.statusText,
+      headers: originResponse.headers,
+    });
+    modifiedResponse.headers.set("x-edgeoptimize-fo", "1");
+    return modifiedResponse;
+  }
   
-  // Add header to indicate failover occurred
-  modifiedResponse.headers.set("x-edgeoptimize-fo", "1");
-  
-  return modifiedResponse;
+  return originResponse;
 }
 ```
 
