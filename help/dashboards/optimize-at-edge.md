@@ -122,6 +122,54 @@ curl -svo page.html https://www.example.com/page.html --header "user-agent: chat
 
 **Edge Optimize BYOCDN - Akamai**
 
+The purpose of this configuration is to route requests from agentic user agents to the Edge Optimize service (`live.edgeoptimize.net` backend). To test the configuration, after the setup is complete look for the header `x-edgeoptimize-request-id` in the response.
+
+
+**The following Akamai Property Manager JSON rule routes LLM user agents to Edge Optimize:**
+
+The configuration includes the following steps:
+
+**1. Set routing criteria (User-Agent matching)**
+
+![Set routing criteria](/help/assets/optimize-at-edge/akamai-step1-routing.png)
+
+**2. Set Origin and SSL behavior**
+
+![Set Origin and SSL behavior](/help/assets/optimize-at-edge/akamai-step2-origin.png)
+
+**3. Set Cache Key Variable**
+
+![Set Cache Key Variable](/help/assets/optimize-at-edge/akamai-step3-cachekey.png)
+
+**4. Caching Rules**
+
+![Caching Rules](/help/assets/optimize-at-edge/akamai-step4-rules.png)
+
+**5. Modify Incoming Request Headers**
+
+![Modify Incoming Request Headers](/help/assets/optimize-at-edge/akamai-step5-request.png)
+
+**6. Modify Incoming Response Headers**
+
+![Modify Incoming Response Headers](/help/assets/optimize-at-edge/akamai-step6-response.png)
+
+**7. Cache ID Modification**
+
+![Cache ID Modification](/help/assets/optimize-at-edge/akamai-step7-cacheid.png)
+
+**8. Site Failover**
+
+![Site Failover](/help/assets/optimize-at-edge/akamai-step8-failover.png)
+
+![Failover Behaviors](/help/assets/optimize-at-edge/akamai-step8-failover-behaviors.png)
+
+![Failover Rules](/help/assets/optimize-at-edge/akamai-step8-failover-rules.png)
+
+![Behaviors Response](/help/assets/optimize-at-edge/akamai-step8-behaviors-response.png)
+
+
+The complete Akamai Property Manager JSON configuration:
+
 ```
 {
     "name": "Edge Optimize CDN Rule",
@@ -390,11 +438,18 @@ Important considerations:
 * Edge Optimize Rule will be ON based on User-Agent + Path + x-edgeoptimize-request (if not present) + EDGEOPTIMIZE_DISABLE variable (to allow switch off using a single variable toggle)
 * Set up rules to **Modify Incoming Request Headers** rule to set custom headers
 * Set cache-key in Akamai using user defined variable through Cache-ID modification mechanism. Only a single user defined variable is allowed, so create a separate variable for cache_key and set it accordingly.
-* Lang: extracted from Accept-Language header using "regex": "^([a-zA-Z]{2}).*"
 * With Cache ID Modification within a match on User Agent, the content can't be purged by URL (just FYI)
-* Site failover mechanism: With the match on User-Agent rule, Akamai does not allows to failover based on health check, but only only basis of origin response/connectivity per request. Set **x-edgeoptimize-fo:true**  resp header in case of failover response.
+* Site failover mechanism: With the match on User-Agent rule, Akamai does not allow failover based on health check, but only basis of origin response/connectivity per request. Set **x-edgeoptimize-fo:true**  resp header in case of failover response.
 * SWR is not supported by Akamai. So, only TTL based caching is there. So, configure a rule in Akamai to strip Age header from origin response else TTL based caching would not work.
 * Ensure that the Edge Optimize rule is the bottom most rule in the rule hierarchy (so that it overrides all other rules).
+
+To test the setup, run a curl and expect the following:
+```
+curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatgpt-user"
+< HTTP/2 200
+< x-edgeoptimize-request-id: 5381b253-5d8c-42d1-bb7a-bc47fc960adc
+
+```
 
 >[!TAB Fastly (BYOCDN)]
 
