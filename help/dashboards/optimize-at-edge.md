@@ -244,8 +244,6 @@ Before setting up the Cloudflare Worker, ensure you have:
 
 When configured correctly, a request to your domain (for example, `www.example.com/page.html`) from an agentic user agent is intercepted by the Cloudflare Worker and routed to the Edge Optimize backend. The backend request includes the required headers.
 
-![Cloudflare Worker routing diagram](/help/assets/optimize-at-edge/cloudflare-routing-diagram.png)
-
 **Testing the backend request**
 
 You can verify the routing by making a direct request to the Edge Optimize backend.
@@ -326,8 +324,8 @@ async function handleRequest(request, env, ctx) {
   const url = new URL(request.url);
   const userAgent = request.headers.get("user-agent")?.toLowerCase() || "";
   
-  // Check if request is already from Edge Optimize (loop protection)
-  const isEdgeOptimizeRequest = request.headers.get("x-edgeoptimize-request") === "1";
+  // Check if request is already processed (loop protection)
+  const isEdgeOptimizeRequest = !!request.headers.get("x-edgeoptimize-request");
   
   // Construct the original path and query string
   const pathAndQuery = `${url.pathname}${url.search}`;
@@ -428,7 +426,7 @@ async function routeToOrigin(request, env, url, options = {}) {
     originHeaders.delete("x-edgeoptimize-url");
     originHeaders.delete("x-edgeoptimize-config");
     originHeaders.delete("x-forwarded-host");
-    originHeaders.set("x-edgeoptimize-request", "1");
+    originHeaders.set("x-edgeoptimize-request", "fo");
   }
   
   // Create and send origin request
