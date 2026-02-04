@@ -466,10 +466,10 @@ Environment variables store sensitive configuration like your API key securely.
 2. Under **Environment Variables**, click **Add variable**.
 3. Add the following variables:
 
-| Variable Name | Description | Required |
-|---------------|-------------|----------|
-| `EDGE_OPTIMIZE_API_KEY` | Your Adobe-provided Edge Optimize API key. | Yes |
-| `EDGE_OPTIMIZE_TARGET_HOST` | The target host for Edge Optimize requests (sent as `x-forwarded-host` header) and the origin domain for failover. Must be the domain only without protocol (for example, `www.example.com`, not `https://www.example.com`). | Yes |
+   | Variable Name | Description | Required |
+   |---------------|-------------|----------|
+   | `EDGE_OPTIMIZE_API_KEY` | Your Adobe-provided Edge Optimize API key. | Yes |
+   | `EDGE_OPTIMIZE_TARGET_HOST` | The target host for Edge Optimize requests (sent as `x-forwarded-host` header) and the origin domain for failover. Must be the domain only without protocol (for example, `www.example.com`, not `https://www.example.com`). | Yes |
 
 4. For the API key, click **Encrypt** to store it securely.
 5. Click **Save and deploy**.
@@ -543,10 +543,10 @@ The Cloudflare Worker implements the following logic:
 4. **Header security:** Before setting Edge Optimize headers, the worker removes any existing `x-edgeoptimize-*` headers from the incoming request to prevent header injection attacks.
 
 5. **Header mapping:** The worker sets the required headers for Edge Optimize:
-   - `x-forwarded-host` – Identifies the original site domain.
-   - `x-edgeoptimize-url` – Preserves the original request path and query string.
-   - `x-edgeoptimize-api-key` – Authenticates the request with Edge Optimize.
-   - `x-edgeoptimize-config` – Provides cache key configuration.
+   * `x-forwarded-host` – Identifies the original site domain.
+   * `x-edgeoptimize-url` – Preserves the original request path and query string.
+   * `x-edgeoptimize-api-key` – Authenticates the request with Edge Optimize.
+   * `x-edgeoptimize-config` – Provides cache key configuration.
 
 6. **Failover logic:** If Edge Optimize returns any error status code (4XX client errors or 5XX server errors) or the request fails due to a network error, the worker automatically fails over to your origin using `EDGE_OPTIMIZE_TARGET_HOST`. The failover response includes the `x-edgeoptimize-fo: 1` header to indicate that failover occurred.
 
