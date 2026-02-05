@@ -123,12 +123,19 @@ Follow the steps presented below to integrate and use the Google Search Console 
 
 Before using this feature you need to integrate your Google Search Console account with LLM optimizer.
 
-Open the Customer Configuration dashboard.
-Navigate to the Google Search Console tab and click **Connect Account**.
+1. Open the Customer Configuration dashboard.
+1. Navigate to the Google Search Console tab and click **Connect Account**.
    ![Google Search Console](/help/dashboards/assets/google-console.png)
-Sign in with a Google account that has access to the desired Search Console property.
+1. Sign in with a Google account that has access to the desired Search Console property.
    ![Google Account](/help/dashboards/assets/google-account.png)
-Choose the property you want to connect.
+1. Choose the property you want to connect.
    ![Console Property](/help/dashboards/assets/console-property.png)
-After the connection is complete, LLM Optimizer begins retrieving relevant search queries.
+1. After the connection is complete, LLM Optimizer begins retrieving relevant search queries.
    ![Retrieving Data](/help/dashboards/assets/console-complete.png)
+
+#### Review and search queries {#search-query}
+
+
+
+
+
