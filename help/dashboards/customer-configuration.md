@@ -113,11 +113,11 @@ To identify useful queries from the Google Search Console, LLM Optimizer applies
 * Distinguish between branded and non-branded queries when relevant.
 * Reduce noise from either irrelevant or overly generic searches.
 
-These filters help surface queries that are most valuable for understanding how users search for information related to your brand, products and topics.
+These filters help surface the queries that are most valuable for understanding how users search for information related to your brand, products and topics.
 
 ### How to use {#how-to-use}
 
-Follow the steps presented below to integrate and use the Google Search Console with LLM Optimizer.
+Follow the steps presented below to integrate and use the Google Search Console queries with LLM Optimizer.
 
 #### Connect the Google Search Console {#connect-console}
 
@@ -135,7 +135,15 @@ Before using this feature you need to integrate your Google Search Console accou
 
 #### Review and search queries {#search-query}
 
+After you integrate the Google Search Console account with LLM optimizer, you can review the list of topics and prompts sourced from the search console and add the prompts from the list.
 
+1. On the Google Search Console tab, review the list of topics and prompts sourced from the Search Console.
+   ![Prompts List](/help/dashboards/assets/prompts-list.png)
+1. Click on the desired topic/prompt category to expand the list.
+1. Use the **Add** button to add prompts from the list. You can also bulk add prompts and categories by using **Add all**.
+   ![Add Prompts](/help/dashboards/assets/add-prompts.png)
+1. Once you are satisfied with the selection, click **Save** on the notification message.
 
+#### View added queries in the Prompts list {prompts-list}
 
-
+After a query is added, it appears in the [Prompts](#prompts-brand) tab within the Customer Configuration dashboard. Prompts sourced from the Google Search Console are marked with a Google Search Console icon in the **Origin** column. The icon helps you distinguish between prompts that are grounded in actual user search behavior from those added manually or from other sources.
