@@ -144,6 +144,6 @@ After you integrate the Google Search Console account with LLM optimizer, you ca
    ![Add Prompts](/help/dashboards/assets/add-prompts.png)
 1. Once you are satisfied with the selection, click **Save** on the notification message.
 
-#### View added queries in the Prompts list {prompts-list}
+#### View added queries in the Prompts list {#prompts-list}
 
 After a query is added, it appears in the [Prompts](#prompts-brand) tab within the Customer Configuration dashboard. Prompts sourced from the Google Search Console are marked with a Google Search Console icon in the **Origin** column. The icon helps you distinguish between prompts that are grounded in actual user search behavior from those added manually or from other sources.
