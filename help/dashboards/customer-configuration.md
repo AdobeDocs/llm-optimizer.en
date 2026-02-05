@@ -17,6 +17,7 @@ In order to configure how LLM Optimizer monitors and analyzes your brand presenc
 * [Other Brands](#other-brands)
 * [Brand Aliases](#brand-aliases)
 * [CDN Configuration](#agentic-cdn)
+* [Google Search Console](#google-console)
 
 >[!IMPORTANT]
 >
@@ -99,3 +100,35 @@ On the **Onboard CDN Provider** window:
 2. Click **Onboard** to enable log forwarding.
 
 If you select **Other**, you will have to reach out to llmo-now@adobe.com for assistance.
+
+## Google Search Console {#google-console}
+
+Adobe LLM Optimizer allows you to integrate your Google Search Console account to bring real search queries directly into the interface. By surfacing real Google Search Console queries, you can build prompt sets that are grounded in actual search behavior and high-intent discovery patterns. This helps you prioritize prompts based on proven demand and aligns LLM optimization efforts with how users search. Additionally, remember that you remain in full control because queries are never added automatically and must be explicitly selected before becoming active prompts.
+
+### How it works {#how-it-works}
+
+To identify useful queries from the Google Search Console, LLM Optimizer applies structured filtering rules to:
+
+* Focus on queries that resemble natural language questions or discovery oriented searches.
+* Distinguish between branded and non-branded queries when relevant.
+* Reduce noise from either irrelevant or overly generic searches.
+
+These filters help surface queries that are most valuable for understanding how users search for information related to your brand, products and topics.
+
+### How to use {#how-to-use}
+
+Follow the steps presented below to integrate and use the Google Search Console with LLM Optimizer.
+
+#### Connect the Google Search Console {#connect-console}
+
+Before using this feature you need to integrate your Google Search Console account with LLM optimizer.
+
+Open the Customer Configuration dashboard.
+Navigate to the Google Search Console tab and click **Connect Account**.
+   ![Google Search Console](/help/dashboards/assets/google-console.png)
+Sign in with a Google account that has access to the desired Search Console property.
+   ![Google Account](/help/dashboards/assets/google-account.png)
+Choose the property you want to connect.
+   ![Console Property](/help/dashboards/assets/console-property.png)
+After the connection is complete, LLM Optimizer begins retrieving relevant search queries.
+   ![Retrieving Data](/help/dashboards/assets/console-complete.png)
