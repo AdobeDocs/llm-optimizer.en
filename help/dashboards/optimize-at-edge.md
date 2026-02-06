@@ -41,12 +41,9 @@ Pre-requisites to onboard to Optimize at Edge:
 * Complete the log forwarding process for your CDN logs.
 
 Requirements for your IT/CDN team:
-
-* Generate an API key.
+* Add `*AdobeEdgeOptimize/1.0*` user-agent to the Allowlist in your site’s robots.txt file or bot-traffic management rules.
+* Ensure that pages are not blocked at the domain or CDN level. 
 * Add Optimize at Edge routing rules in the CDN.
-* Allowlist user-defined paths or the entire domain.
-* Add a user-defined list of LLM user agents to target.
-* Ensure `robots.txt` does not block any user agents intended to target.
 * Confirm Optimize at Edge routing in the LLM Optimizer interface.
 
 To guide the setup process, presented below, are sample configurations for a number of CDN setups. Keep in mind that these examples should be adapted to your actual live configuration. We recommend applying changes in the lower environments first.
@@ -212,8 +209,6 @@ The configuration includes the following steps:
 ![Failover Behaviors](/help/assets/optimize-at-edge/akamai-step8-failover-behaviors.png)
 
 ![Failover Rules](/help/assets/optimize-at-edge/akamai-step8-failover-rules.png)
-
-![Behaviors Response](/help/assets/optimize-at-edge/akamai-step8-behaviors-response.png)
 
 To test the setup, run a curl and expect the following:
 
