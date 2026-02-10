@@ -174,15 +174,29 @@ The purpose of this configuration is to route requests from agentic user agents 
 
 The configuration includes the following steps:
 
-**1. Set routing criteria (User-Agent matching)**
+**1. Set routing criteria (User-Agent matching)**  
+
+Set routing for the following user-agents: 
+```
+ *AdobeEdgeOptimize-AI*,
+ *ChatGPT-User*,
+ *GPTBot*,
+ *OAI-SearchBot*,
+ *PerplexityBot*,
+ *Perplexity-User*
+```
 
 ![Set routing criteria](/help/assets/optimize-at-edge/akamai-step1-routing.png)
 
 **2. Set Origin and SSL behavior**
 
+Set origin as `live.edgeoptimize.net` and Match SAN to `*.edgeoptimize.net`
+
 ![Set Origin and SSL behavior](/help/assets/optimize-at-edge/akamai-step2-origin.png)
 
-**3. Set Cache Key Variable**
+**3. Set Cache Key Variable**  
+
+Set the cache key variable `PMUSER_EDGE_OPTIMIZE_CACHE_KEY` to `LLMCLIENT=TRUE;X_FORWARDED_HOST={{builtin.AK_HOST}}`
 
 ![Set Cache Key Variable](/help/assets/optimize-at-edge/akamai-step3-cachekey.png)
 
@@ -190,7 +204,12 @@ The configuration includes the following steps:
 
 ![Caching Rules](/help/assets/optimize-at-edge/akamai-step4-rules.png)
 
-**5. Modify Incoming Request Headers**
+**5. Modify Incoming Request Headers**  
+
+Set the following incoming request headers:  
+`x-edgeoptimize-api-key` to the API Key retrieved from LLMO  
+`x-edgeoptimize-config` to `LLMCLIENT=TRUE;`  
+`x-edgeoptimize-url` to `{{builtin.AK_URL}}`    
 
 ![Modify Incoming Request Headers](/help/assets/optimize-at-edge/akamai-step5-request.png)
 
@@ -202,13 +221,19 @@ The configuration includes the following steps:
 
 ![Cache ID Modification](/help/assets/optimize-at-edge/akamai-step7-cacheid.png)
 
-**8. Site Failover**
+**8.  Modify Outgoing Rquest Headers**  
 
-![Site Failover](/help/assets/optimize-at-edge/akamai-step8-failover.png)
+Set `x-forwarded-host` header to `{{builtin.AK_HOST}}`  
 
-![Failover Behaviors](/help/assets/optimize-at-edge/akamai-step8-failover-behaviors.png)
+![Modify Outgoing Rquest Headers](/help/assets/optimize-at-edge/akamai-step8-outgoing-request.png)
 
-![Failover Rules](/help/assets/optimize-at-edge/akamai-step8-failover-rules.png)
+**9. Site Failover**
+
+![Site Failover](/help/assets/optimize-at-edge/akamai-step9-failover.png)
+
+![Failover Behaviors](/help/assets/optimize-at-edge/akamai-step9-failover-behaviors.png)
+
+![Failover Rules](/help/assets/optimize-at-edge/akamai-step9-failover-rules.png)
 
 To test the setup, run a curl and expect the following:
 
