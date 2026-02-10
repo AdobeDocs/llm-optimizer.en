@@ -27,7 +27,7 @@ If content visibility appears low in the dashboard, verify that the crawler has 
 
 ### Try Before you buy
 
-AEM Cloud (Cloud Service,Managed Services, Edge Delivery Service) customers have the option to use the the **Try Before You Buy** offer. It is a free trial version of LLM Optimizer with up to 200 free prompts. Use of more than 200 prompts requires a separate license agreement. Access is provided on an "as-is" and "as-available" basis, and may be modified, limited or removed by Adobe at any time.
+AEM Cloud (Cloud Service,Managed Services, Edge Delivery Service) customers have the option to use the **Try Before You Buy** offer. It is a free trial version of LLM Optimizer with up to 200 free prompts. Use of more than 200 prompts requires a separate license agreement. Access is provided on an "as-is" and "as-available" basis, and may be modified, limited or removed by Adobe at any time.
 
 There are some product capabilities that are not available in the free version:
 
@@ -62,7 +62,7 @@ Additionally, you also need to configure [CDN log forwarding](#step-4) for traff
 
 Once the business agreement has been finalized, you will be onboarded with the domain you would like to onboard on LLM Optimizer. Once this onboarding is complete, you will be able to log in to LLM Optimizer via [https://llmo.now](https://llmo.now).
 
-### Step 2: Customize Categories, Topics, and Prompts
+## Step 2: Customize Categories, Topics, and Prompts
 
 Once your site has been onboarded, you can view the Brand Presence Analysis based on the small set of prompts that were automatically generated during the onboarding phase. Moving forward, you can customize the categories, topics and prompts for your brand. This configuration is created on the [customer configuration dashboard](/help/dashboards/customer-configuration.md).
 
@@ -83,11 +83,11 @@ From this dashboard, you can:
 >
 > For more details on how to set up your categories, topics, prompts see the [Best practices for configuring categories, topics, prompts](/help/overview/best-practices-topics-prompts.md) page.
 
-### Step 3: Brand Presence Insights
+## Step 3: Brand Presence Insights
 
 After your domain has been onboarded, you will see initial insights in the Brand Presence view based on the prompts that were automatically generated during onboarding. Once you customize your own categories, topics, and prompts, LLM Optimizer will automatically trigger the Brand Presence analysis on the prompts you provided and results will be available in 24 hours.
 
-### Step 4: Provide information for CDN Log Forwarding {#step-4}
+## Step 4: Provide information for CDN Log Forwarding {#step-4}
 
 To unlock Agentic Traffic and Referral Traffic insights, you need to provide information for CDN log forwarding. It can be added from the [customer configuration dashboard](/help/dashboards/customer-configuration.md#cdn-configuration) by navigating to the **CDN Configuration** tab and clicking **Onboard CDN**.
 
@@ -98,7 +98,7 @@ Alternatively, if no CDN provider has been added beforehand (as described above)
 * [Agentic Traffic](/help/dashboards/agentic-traffic.md#cdn-setup)
 * [Referral Traffic](/help/dashboards/referral-traffic.md#setup#setup)
 
-### Step 5: Explore Dashboards and Take Action
+## Step 5: Explore Dashboards and Take Action
 
 After you provide information for CDN Log Forwarding, you can:
 
