@@ -27,7 +27,7 @@ If content visibility appears low in the dashboard, verify that the crawler has 
 
 ### Try Before you buy
 
-AEM Cloud (Cloud Service,Managed Services, Edge Delivery Service) customers have the option to use the the **Try Before You Buy** offer. It is a free trial version of LLM Optimizer with up to 200 free prompts. Use of more than 200 prompts requires a separate license agreement. Access is provided on an "as-is" and "as-available" basis, and may be modified, limited or removed by Adobe at any time.
+AEM Cloud (Cloud Service,Managed Services, Edge Delivery Service) customers have the option to use the **Try Before You Buy** offer. It is a free trial version of LLM Optimizer with up to 200 free prompts. Use of more than 200 prompts requires a separate license agreement. Access is provided on an "as-is" and "as-available" basis, and may be modified, limited or removed by Adobe at any time.
 
 There are some product capabilities that are not available in the free version:
 
