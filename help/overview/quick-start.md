@@ -6,7 +6,7 @@ feature: Quickstart, Onboarding
 
 # Quick Start
 
-To get started with LLM optimizer, you need to complete the onboarding process as detailed in the steps presented below. After you complete the process you will have full access to [LLM Optimizer's dashboards](/help/dashboards/dashboards-overview.md) and other functionalities.
+To get started with LLM Optimizer, you need to complete the onboarding process as detailed in the steps presented below. After you complete the process you will have full access to [LLM Optimizer's dashboards](/help/dashboards/dashboards-overview.md) and other functionalities.
 
 ## Onboarding overview
 

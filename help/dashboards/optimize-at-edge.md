@@ -176,7 +176,8 @@ The configuration includes the following steps:
 
 **1. Set routing criteria (User-Agent matching)**  
 
-Set routing for the following user-agents: 
+Set routing for the following user-agents:
+
 ```
  *AdobeEdgeOptimize-AI*,
  *ChatGPT-User*,
