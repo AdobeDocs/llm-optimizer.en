@@ -160,6 +160,10 @@ Before setting up the Fastly VCL rules, ensure you have:
 
 Additionally, if you require any help with the above steps, reach out to your Adobe account team or `llmo-at-edge@adobe.com`.
 
+**Configuration**
+
+Add the following three VCL snippets to your Fastly service. These snippets handle routing agentic requests to Edge Optimize, cache-key separation, and failover to your default origin.
+
 ![Fastly VCL](/help/assets/optimize-at-edge/fastly-vcl.png)
 
 ![Add VCL snippets](/help/assets/optimize-at-edge/add-vcl-snippets.png)
@@ -203,6 +207,16 @@ if (!req.http.x-edgeoptimize-config && req.http.x-edgeoptimize-request == "failo
   set resp.http.x-edgeoptimize-fo = "1";
 }
 ```
+
+**Failover**
+
+The `vcl_deliver` snippet handles failover automatically. If Edge Optimize returns a `4XX` or `5XX` error, the request is restarted and routed back to your default origin so the end-user still receives a response. Failover responses include the `x-edgeoptimize-fo: 1` header.
+
+| Scenario | Behavior |
+| --- | --- |
+| Edge Optimize returns `2XX` | Optimized response is served to the client. |
+| Edge Optimize returns `4XX` or `5XX` | Request is restarted and served from the default origin. |
+| Failover response | Includes the header `x-edgeoptimize-fo: 1`. |
 
 **Verify the setup**
 
@@ -250,9 +264,9 @@ Before setting up the Akamai Property Manager rules, ensure you have:
 
 Additionally, if you require any help with the above steps, reach out to your Adobe account team or `llmo-at-edge@adobe.com`.
 
-**The following Akamai Property Manager JSON rule routes LLM user agents to Edge Optimize:**
+**Configuration**
 
-The configuration includes the following steps:
+The following Akamai Property Manager rule routes LLM user agents to Edge Optimize. The configuration includes the following steps:
 
 **1. Set routing criteria (User-Agent matching)**  
 
@@ -315,6 +329,13 @@ Set `x-forwarded-host` header to `{{builtin.AK_HOST}}`
 ![Failover Behaviors](/help/assets/optimize-at-edge/akamai-step9-failover-behaviors.png)
 
 ![Failover Rules](/help/assets/optimize-at-edge/akamai-step9-failover-rules.png)
+
+Site Failover ensures that if Edge Optimize returns a `4XX` or `5XX` error, the request is automatically routed back to your default origin so the end-user still receives a response.
+
+| Scenario | Behavior |
+| --- | --- |
+| Edge Optimize returns `2XX` | Optimized response is served to the client. |
+| Edge Optimize returns `4XX` or `5XX` | Request is routed back to the default origin. |
 
 **Verify the setup**
 
