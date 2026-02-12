@@ -50,9 +50,9 @@ To guide the setup process, presented below, are sample configurations for a num
 
 >[!BEGINTABS]
 
->[!TAB Fastly (Adobe CS Managed)]
+>[!TAB AEM CS Managed (Fastly)]
 
-**Edge Optimize - Fastly (Adobe CS Managed)**
+**Edge Optimize - AEM Cloud Service Managed (Fastly)**
 
 This configuration routes agentic traffic (requests from AI bots and LLM user agents) to the Edge Optimize backend service (`live.edgeoptimize.net`). Human visitors and SEO bots continue to be served from your origin as usual. To test the configuration, after the setup is complete, look for the header `x-edgeoptimize-request-id` in the response.
 
