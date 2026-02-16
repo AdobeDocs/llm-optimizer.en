@@ -48,11 +48,7 @@ Requirements for your IT/CDN team:
 
 To guide the setup process, presented below, are sample configurations for a number of CDN setups. Keep in mind that these examples should be adapted to your actual live configuration. We recommend applying changes in the lower environments first.
 
->[!BEGINTABS]
-
->[!TAB AEM Cloud Service Managed CDN (Fastly)]
-
-**Edge Optimize - AEM Cloud Service Managed CDN (Fastly)**
+### AEM Cloud Service Managed CDN (Fastly)
 
 This configuration routes agentic traffic (requests from AI bots and LLM user agents) to the Edge Optimize backend service (`live.edgeoptimize.net`). Human visitors and SEO bots continue to be served from your origin as usual. To test the configuration, after the setup is complete, look for the header `x-edgeoptimize-request-id` in the response.
 
@@ -120,24 +116,7 @@ data:
 
 ```
 
-**Verify the setup**
-
-To test the setup, run a curl and expect the following:
-
-```
-curl -svo /dev/null https://www.example.com/page.html --header "user-agent: chatgpt-user"
-< HTTP/2 200
-< x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
-
-```
-
-The status of the traffic routing can also be checked in the LLM Optimizer UI. Navigate to **Customer Configuration** and select the **CDN Configuration** tab.
-
-![AI Traffic Routing status with routing enabled](/help/assets/optimize-at-edge/adobe-CDN-traffic-routed-tick.png)
-
->[!TAB Fastly (BYOCDN)]
-
-**Edge Optimize - Fastly (BYOCDN)**
+### Fastly (BYOCDN)
 
 This configuration routes agentic traffic (requests from AI bots and LLM user agents) to the Edge Optimize backend service (`live.edgeoptimize.net`). Human visitors and SEO bots continue to be served from your origin as usual. To test the configuration, after the setup is complete, look for the header `x-edgeoptimize-request-id` in the response.
 
@@ -227,24 +206,7 @@ The `vcl_deliver` snippet handles failover automatically. If Edge Optimize retur
 | Edge Optimize returns `4XX` or `5XX` | Request is restarted and served from the default origin. |
 | Failover response | Includes the header `x-edgeoptimize-fo: 1`. |
 
-**Verify the setup**
-
-To test the setup, run a curl and expect the following:
-
-```
-curl -svo /dev/null https://www.example.com/page.html --header "user-agent: chatgpt-user"
-< HTTP/2 200
-< x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
-
-```
-
-The status of the traffic routing can also be checked in the LLM Optimizer UI. Navigate to **Customer Configuration** and select the **CDN Configuration** tab.
-
-![AI Traffic Routing status with routing enabled](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
-
->[!TAB Akamai (BYOCDN)]
-
-**Edge Optimize - Akamai (BYOCDN)**
+### Akamai (BYOCDN)
 
 This configuration routes agentic traffic (requests from AI bots and LLM user agents) to the Edge Optimize backend service (`live.edgeoptimize.net`). Human visitors and SEO bots continue to be served from your origin as usual. To test the configuration, after the setup is complete, look for the header `x-edgeoptimize-request-id` in the response.
 
@@ -349,23 +311,7 @@ Site Failover ensures that if Edge Optimize returns a `4XX` or `5XX` error, the 
 | Edge Optimize returns `2XX` | Optimized response is served to the client. |
 | Edge Optimize returns `4XX` or `5XX` | Request is routed back to the default origin. |
 
-**Verify the setup**
-
-To test the setup, run a curl and expect the following:
-
-```
-curl -svo /dev/null https://www.example.com/page.html --header "user-agent: chatgpt-user"
-< HTTP/2 200
-< x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
-```
-
-The status of the traffic routing can also be checked in the LLM Optimizer UI. Navigate to **Customer Configuration** and select the **CDN Configuration** tab.
-
-![AI Traffic Routing status with routing enabled](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
-
->[!TAB Cloudflare (BYOCDN)]
-
-**Edge Optimize - Cloudflare (BYOCDN)**
+### Cloudflare (BYOCDN)
 
 This configuration routes agentic traffic (requests from AI bots and LLM user agents) to the Edge Optimize backend service (`live.edgeoptimize.net`). Human visitors and SEO bots continue to be served from your origin as usual. To test the configuration, after the setup is complete, look for the header `x-edgeoptimize-request-id` in the response.
 
@@ -644,25 +590,7 @@ Alternatively, you can configure routes at the zone level:
 
 ![Cloudflare Worker routes](/help/assets/optimize-at-edge/cloudflare-worker-routes.png)
 
-**Step 5: Verify the setup**
-
-After deploying, test the configuration by making a request with an agentic user agent.
-
-```
-curl -svo /dev/null https://www.example.com/page.html \
-  --header "user-agent: chatgpt-user"
-```
-
-A successful response includes the `x-edgeoptimize-request-id` header:
-
-```
-< HTTP/2 200
-< x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
-```
-
-The status of the traffic routing can also be checked in the LLM Optimizer UI. Navigate to **Customer Configuration** and select the **CDN Configuration** tab.
-
-![AI Traffic Routing status with routing enabled](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+**Additional verification**
 
 You can also verify that normal traffic continues to work:
 
@@ -785,10 +713,28 @@ const FAILOVER_ON_5XX = false;
 | Requests failing with invalid host | `EDGE_OPTIMIZE_TARGET_HOST` includes protocol (for example, `https://`). | Use only the domain name without protocol (for example, `example.com`, not `https://example.com`). |
 | 530 error during failover | Cloudflare cannot connect to origin, or failover request has invalid headers. | Ensure the failover function removes Edge Optimize headers. Verify your origin is accessible and DNS is configured correctly. |
 
->[!ENDTABS]
-
 >[!NOTE]
 >For other CDN providers, please reach out to `llmo-at-edge@adobe.com` to assist your IT/CDN teams with onboarding. Once the setup configurations are complete, you can deploy suggestions for Optimize at Edge opportunities in LLM Optimizer.
+
+### Verify the setup
+
+After completing the CDN configuration, test the setup by running a curl with an agentic user-agent and look for the `x-edgeoptimize-request-id` header in the response:
+
+```
+curl -svo /dev/null https://www.example.com/page.html --header "user-agent: chatgpt-user"
+< HTTP/2 200
+< x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
+```
+
+The status of the traffic routing can also be checked in the LLM Optimizer UI. Navigate to **Customer Configuration** and select the **CDN Configuration** tab.
+
+For AEM Cloud Service Managed CDN (Fastly):
+
+![AI Traffic Routing status with routing enabled](/help/assets/optimize-at-edge/adobe-CDN-traffic-routed-tick.png)
+
+For BYOCDN configurations (Fastly, Akamai, Cloudflare):
+
+![AI Traffic Routing status with routing enabled](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
 ## Opportunities
 
