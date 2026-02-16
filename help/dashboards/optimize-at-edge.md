@@ -37,7 +37,7 @@ You should reach out to either your Adobe account team or the FDE team to start 
 
 Pre-requisites to onboard to Optimize at Edge:
 
-* Complete the onboarding process to LLM Optimizer.
+* Complete the onboarding process to LLM Optimizer. 
 * Complete the log forwarding process for your CDN logs.
 
 Requirements for your IT/CDN team:
@@ -50,31 +50,45 @@ To guide the setup process, presented below, are sample configurations for a num
 
 >[!BEGINTABS]
 
->[!TAB Adobe Managed CDN]
+>[!TAB AEM Cloud Service Managed CDN (Fastly)]
 
-**Adobe Managed CDN**
+**Edge Optimize - AEM Cloud Service Managed CDN (Fastly)**
 
-The purpose of this configuration is to configure requests with agentic user agents that will be routed to the Optimizer service (`live.edgeoptimize.net` backend). To test the configuration, after the setup is complete look for the header `x-edgeoptimize-request-id` in the response.
+This configuration routes agentic traffic (requests from AI bots and LLM user agents) to the Edge Optimize backend service (`live.edgeoptimize.net`). Human visitors and SEO bots continue to be served from your origin as usual. To test the configuration, after the setup is complete, look for the header `x-edgeoptimize-request-id` in the response.
 
-```
-curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatgpt-user"
-< HTTP/2 200
-< x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
+**Prerequisites**
 
-```
+To start routing agentic traffic to Edge Optimize:
 
-The routing configuration is done by using an [originSelector CDN rule](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors). The prerequisites are as follows:
+1. Navigate to **Customer Configuration** and select the **CDN Configuration** tab.
 
-* decide the domain to be routed
-* decide the paths to be routed
-* decide the user agents to be routed (recommended regex)
+   ![Navigate to Customer Configuration](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
+
+2. Under **AI Traffic Routing to Deploy Optimizations**, tick the **Deploy Optimizations to AI Agents** checkbox. The Adobe team will handle the routing configuration on your behalf.
+
+   ![Tick Deploy Optimizations to AI Agents](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+
+3. After enabling the checkbox, the status will show that the setup is in progress. The Adobe team will complete the routing configuration for you.
+
+   ![AI Traffic Routing setup in progress](/help/assets/optimize-at-edge/prereq-traffic-routing-progress.png)
+
+   Once the routing is configured and active, the status will update to show a green checkmark indicating that routing is successfully enabled. No further action is required on your end.
+
+Additionally, if you require any help with the above steps, reach out to your Adobe account team or `llmo-at-edge@adobe.com`.
+
+**Self-service routing via Cloud Manager Pipeline**
+
+If you prefer to configure the routing yourself through the Cloud Manager Pipeline, follow the steps below. The routing configuration is done by using an [originSelector CDN rule](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors). The prerequisites are as follows:
+
+* Decide the domain to be routed.
+* Decide the paths to be routed.
+* Decide the user agents to be routed (recommended regex).
 
 In order to deploy the rule, you need to:
 
-* create a [configuration pipeline](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline)
-* commit the `cdn.yaml` configuration file in your repository
-* run the configuration pipeline
-
+* Create a [configuration pipeline](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline).
+* Commit the `cdn.yaml` configuration file in your repository.
+* Run the configuration pipeline.
 
 ```
 kind: "CDN"
@@ -106,18 +120,58 @@ data:
 
 ```
 
+**Verify the setup**
+
 To test the setup, run a curl and expect the following:
 
 ```
-curl -svo page.html https://www.example.com/page.html --header "user-agent: chatgpt-user"
+curl -svo /dev/null https://www.example.com/page.html --header "user-agent: chatgpt-user"
 < HTTP/2 200
 < x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 
 ```
 
+The status of the traffic routing can also be checked in the LLM Optimizer UI. Navigate to **Customer Configuration** and select the **CDN Configuration** tab.
+
+![AI Traffic Routing status with routing enabled](/help/assets/optimize-at-edge/adobe-CDN-traffic-routed-tick.png)
+
 >[!TAB Fastly (BYOCDN)]
 
-**Edge Optimize BYOCDN - Fastly - VCL**
+**Edge Optimize - Fastly (BYOCDN)**
+
+This configuration routes agentic traffic (requests from AI bots and LLM user agents) to the Edge Optimize backend service (`live.edgeoptimize.net`). Human visitors and SEO bots continue to be served from your origin as usual. To test the configuration, after the setup is complete, look for the header `x-edgeoptimize-request-id` in the response.
+
+**Prerequisites**
+
+Before setting up the Fastly VCL rules, ensure you have:
+
+* Access to Fastly for your domain.
+* Completed the LLM Optimizer onboarding process.
+* Completed CDN log forwarding to LLM Optimizer.
+* An Edge Optimize API key retrieved from the LLM Optimizer UI.
+
+**Steps to retrieve your API key:**
+
+1. Navigate to **Customer Configuration** and select the **CDN Configuration** tab.
+
+   ![Navigate to Customer Configuration](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
+
+2. Under **AI Traffic Routing to Deploy Optimizations**, tick the **Deploy Optimizations to AI Agents** checkbox.
+
+   ![Tick Deploy Optimizations to AI Agents](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+
+3. Copy the API key and proceed with the routing configuration steps below.
+
+   ![Copy the API key](/help/assets/optimize-at-edge/prereq-copy-api-key.png)
+
+   >[!NOTE]
+   >At this stage, the status may show a red cross indicating that the setup is not yet completed. This is expected — once you complete the routing configuration below and AI bot traffic starts flowing, the status will update to a green checkmark confirming that routing is successfully enabled.
+
+Additionally, if you require any help with the above steps, reach out to your Adobe account team or `llmo-at-edge@adobe.com`.
+
+**Configuration**
+
+Add the following three VCL snippets to your Fastly service. These snippets handle routing agentic requests to Edge Optimize, cache-key separation, and failover to your default origin.
 
 ![Fastly VCL](/help/assets/optimize-at-edge/fastly-vcl.png)
 
@@ -132,9 +186,9 @@ unset req.http.x-edgeoptimize-api-key;
 
 if (!req.http.x-edgeoptimize-request
     && req.http.user-agent ~ "(?i)(AdobeEdgeOptimize-AI|ChatGPT-User|GPTBot|OAI-SearchBot|PerplexityBot|Perplexity-User)") {
-  set req.http.x-fowarded-host = req.http.host; # required for identifying the original host
+  set req.http.x-forwarded-host = req.http.host; # required for identifying the original host
   set req.http.x-edgeoptimize-url = req.url; # required for identifying the original url
-  set req.http.x-edgeoptimize-config = "LLMCLIENT=true"; # required for cache key
+  set req.http.x-edgeoptimize-config = "LLMCLIENT=TRUE;"; # required for cache key
   set req.http.x-edgeoptimize-api-key = "<YOUR API KEY>"; # required for identifying the client
   set req.backend = F_EDGE_OPTIMIZE;
 }
@@ -163,16 +217,68 @@ if (!req.http.x-edgeoptimize-config && req.http.x-edgeoptimize-request == "failo
 }
 ```
 
+**Failover**
+
+The `vcl_deliver` snippet handles failover automatically. If Edge Optimize returns a `4XX` or `5XX` error, the request is restarted and routed back to your default origin so the end-user still receives a response. Failover responses include the `x-edgeoptimize-fo: 1` header.
+
+| Scenario | Behavior |
+| --- | --- |
+| Edge Optimize returns `2XX` | Optimized response is served to the client. |
+| Edge Optimize returns `4XX` or `5XX` | Request is restarted and served from the default origin. |
+| Failover response | Includes the header `x-edgeoptimize-fo: 1`. |
+
+**Verify the setup**
+
+To test the setup, run a curl and expect the following:
+
+```
+curl -svo /dev/null https://www.example.com/page.html --header "user-agent: chatgpt-user"
+< HTTP/2 200
+< x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
+
+```
+
+The status of the traffic routing can also be checked in the LLM Optimizer UI. Navigate to **Customer Configuration** and select the **CDN Configuration** tab.
+
+![AI Traffic Routing status with routing enabled](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+
 >[!TAB Akamai (BYOCDN)]
 
-**Edge Optimize BYOCDN - Akamai**
+**Edge Optimize - Akamai (BYOCDN)**
 
-The purpose of this configuration is to route requests from agentic user agents to the Edge Optimize service (`live.edgeoptimize.net` backend). To test the configuration, after the setup is complete look for the header `x-edgeoptimize-request-id` in the response.
+This configuration routes agentic traffic (requests from AI bots and LLM user agents) to the Edge Optimize backend service (`live.edgeoptimize.net`). Human visitors and SEO bots continue to be served from your origin as usual. To test the configuration, after the setup is complete, look for the header `x-edgeoptimize-request-id` in the response.
 
+**Prerequisites**
 
-**The following Akamai Property Manager JSON rule routes LLM user agents to Edge Optimize:**
+Before setting up the Akamai Property Manager rules, ensure you have:
 
-The configuration includes the following steps:
+* Access to Akamai Property Manager for your domain.
+* Completed the LLM Optimizer onboarding process.
+* Completed CDN log forwarding to LLM Optimizer.
+* An Edge Optimize API key retrieved from the LLM Optimizer UI.
+
+**Steps to retrieve your API key:**
+
+1. Navigate to **Customer Configuration** and select the **CDN Configuration** tab.
+
+   ![Navigate to Customer Configuration](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
+
+2. Under **AI Traffic Routing to Deploy Optimizations**, tick the **Deploy Optimizations to AI Agents** checkbox.
+
+   ![Tick Deploy Optimizations to AI Agents](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+
+3. Copy the API key and proceed with the routing configuration steps below.
+
+   ![Copy the API key](/help/assets/optimize-at-edge/prereq-copy-api-key.png)
+
+   >[!NOTE]
+   >At this stage, the status may show a red cross indicating that the setup is not yet completed. This is expected — once you complete the routing configuration below and AI bot traffic starts flowing, the status will update to a green checkmark confirming that routing is successfully enabled.
+
+Additionally, if you require any help with the above steps, reach out to your Adobe account team or `llmo-at-edge@adobe.com`.
+
+**Configuration**
+
+The following Akamai Property Manager rule routes LLM user agents to Edge Optimize. The configuration includes the following steps:
 
 **1. Set routing criteria (User-Agent matching)**  
 
@@ -222,11 +328,11 @@ Set the following incoming request headers:
 
 ![Cache ID Modification](/help/assets/optimize-at-edge/akamai-step7-cacheid.png)
 
-**8.  Modify Outgoing Rquest Headers**  
+**8. Modify Outgoing Request Headers**  
 
 Set `x-forwarded-host` header to `{{builtin.AK_HOST}}`  
 
-![Modify Outgoing Rquest Headers](/help/assets/optimize-at-edge/akamai-step8-outgoing-request.png)
+![Modify Outgoing Request Headers](/help/assets/optimize-at-edge/akamai-step8-outgoing-request.png)
 
 **9. Site Failover**
 
@@ -236,30 +342,61 @@ Set `x-forwarded-host` header to `{{builtin.AK_HOST}}`
 
 ![Failover Rules](/help/assets/optimize-at-edge/akamai-step9-failover-rules.png)
 
+Site Failover ensures that if Edge Optimize returns a `4XX` or `5XX` error, the request is automatically routed back to your default origin so the end-user still receives a response.
+
+| Scenario | Behavior |
+| --- | --- |
+| Edge Optimize returns `2XX` | Optimized response is served to the client. |
+| Edge Optimize returns `4XX` or `5XX` | Request is routed back to the default origin. |
+
+**Verify the setup**
+
 To test the setup, run a curl and expect the following:
 
 ```
-curl -svo page.html https://www.example.com/page.html --header "user-agent: chatgpt-user"
+curl -svo /dev/null https://www.example.com/page.html --header "user-agent: chatgpt-user"
 < HTTP/2 200
 < x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
-
 ```
+
+The status of the traffic routing can also be checked in the LLM Optimizer UI. Navigate to **Customer Configuration** and select the **CDN Configuration** tab.
+
+![AI Traffic Routing status with routing enabled](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
 >[!TAB Cloudflare (BYOCDN)]
 
-**Edge Optimize BYOCDN - Cloudflare Workers**
+**Edge Optimize - Cloudflare (BYOCDN)**
 
-This configuration uses Cloudflare Workers to route agentic traffic (requests from AI bots and LLM user agents) to the Edge Optimize backend service (`live.edgeoptimize.net`). Human visitors and SEO bots continue to be served from your origin as usual.
+This configuration routes agentic traffic (requests from AI bots and LLM user agents) to the Edge Optimize backend service (`live.edgeoptimize.net`). Human visitors and SEO bots continue to be served from your origin as usual. To test the configuration, after the setup is complete, look for the header `x-edgeoptimize-request-id` in the response.
 
 **Prerequisites**
 
-Before setting up the Cloudflare Worker, ensure you have:
+Before setting up the Cloudflare Worker routing rules, ensure you have:
 
 * A Cloudflare account with Workers enabled on your domain.
 * Access to your domain's DNS settings in Cloudflare.
-* An Edge Optimize API key obtained from Adobe (contact your Adobe account team or `llmo-at-edge@adobe.com`).
 * Completed the LLM Optimizer onboarding process.
 * Completed CDN log forwarding to LLM Optimizer.
+* An Edge Optimize API key retrieved from the LLM Optimizer UI.
+
+**Steps to retrieve your API key:**
+
+1. Navigate to **Customer Configuration** and select the **CDN Configuration** tab.
+
+   ![Navigate to Customer Configuration](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
+
+2. Under **AI Traffic Routing to Deploy Optimizations**, tick the **Deploy Optimizations to AI Agents** checkbox.
+
+   ![Tick Deploy Optimizations to AI Agents](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+
+3. Copy the API key and proceed with the routing configuration steps below.
+
+   ![Copy the API key](/help/assets/optimize-at-edge/prereq-copy-api-key.png)
+
+   >[!NOTE]
+   >At this stage, the status may show a red cross indicating that the setup is not yet completed. This is expected — once you complete the routing configuration below and AI bot traffic starts flowing, the status will update to a green checkmark confirming that routing is successfully enabled.
+
+Additionally, if you require any help with the above steps, reach out to your Adobe account team or `llmo-at-edge@adobe.com`.
 
 **How routing works**
 
@@ -522,6 +659,10 @@ A successful response includes the `x-edgeoptimize-request-id` header:
 < HTTP/2 200
 < x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 ```
+
+The status of the traffic routing can also be checked in the LLM Optimizer UI. Navigate to **Customer Configuration** and select the **CDN Configuration** tab.
+
+![AI Traffic Routing status with routing enabled](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
 You can also verify that normal traffic continues to work:
 
