@@ -37,12 +37,12 @@ You should reach out to either your Adobe account team or the FDE team to start 
 
 Pre-requisites to onboard to Optimize at Edge:
 
-* Complete the onboarding process to LLM Optimizer. 
+* Complete the onboarding process to LLM Optimizer.
 * Complete the log forwarding process for your CDN logs.
 
 Requirements for your IT/CDN team:
-* Add `*AdobeEdgeOptimize/1.0*` user-agent to the Allowlist in your site’s robots.txt file or bot-traffic management rules.
-* Ensure that pages are not blocked at the domain or CDN level. 
+* Add `*AdobeEdgeOptimize/1.0*` user-agent to the Allowlist in your site's robots.txt file or bot-traffic management rules.
+* Ensure that pages are not blocked at the domain or CDN level.
 * Add Optimize at Edge routing rules in the CDN.
 * Confirm Optimize at Edge routing in the LLM Optimizer interface.
 
@@ -280,7 +280,7 @@ Additionally, if you require any help with the above steps, reach out to your Ad
 
 The following Akamai Property Manager rule routes LLM user agents to Edge Optimize. The configuration includes the following steps:
 
-**1. Set routing criteria (User-Agent matching)**  
+**1. Set routing criteria (User-Agent matching)**
 
 Set routing for the following user-agents:
 
@@ -301,7 +301,7 @@ Set origin as `live.edgeoptimize.net` and Match SAN to `*.edgeoptimize.net`
 
 ![Set Origin and SSL behavior](/help/assets/optimize-at-edge/akamai-step2-origin.png)
 
-**3. Set Cache Key Variable**  
+**3. Set Cache Key Variable**
 
 Set the cache key variable `PMUSER_EDGE_OPTIMIZE_CACHE_KEY` to `LLMCLIENT=TRUE;X_FORWARDED_HOST={{builtin.AK_HOST}}`
 
@@ -311,12 +311,12 @@ Set the cache key variable `PMUSER_EDGE_OPTIMIZE_CACHE_KEY` to `LLMCLIENT=TRUE;X
 
 ![Caching Rules](/help/assets/optimize-at-edge/akamai-step4-rules.png)
 
-**5. Modify Incoming Request Headers**  
+**5. Modify Incoming Request Headers**
 
-Set the following incoming request headers:  
-`x-edgeoptimize-api-key` to the API Key retrieved from LLMO  
-`x-edgeoptimize-config` to `LLMCLIENT=TRUE;`  
-`x-edgeoptimize-url` to `{{builtin.AK_URL}}`    
+Set the following incoming request headers:
+`x-edgeoptimize-api-key` to the API Key retrieved from LLMO
+`x-edgeoptimize-config` to `LLMCLIENT=TRUE;`
+`x-edgeoptimize-url` to `{{builtin.AK_URL}}`
 
 ![Modify Incoming Request Headers](/help/assets/optimize-at-edge/akamai-step5-request.png)
 
@@ -328,9 +328,9 @@ Set the following incoming request headers:
 
 ![Cache ID Modification](/help/assets/optimize-at-edge/akamai-step7-cacheid.png)
 
-**8. Modify Outgoing Request Headers**  
+**8. Modify Outgoing Request Headers**
 
-Set `x-forwarded-host` header to `{{builtin.AK_HOST}}`  
+Set `x-forwarded-host` header to `{{builtin.AK_HOST}}`
 
 ![Modify Outgoing Request Headers](/help/assets/optimize-at-edge/akamai-step8-outgoing-request.png)
 
@@ -442,10 +442,10 @@ After creating the worker, click **Edit code** and replace the default code with
 ```javascript
 /**
  * Edge Optimize BYOCDN - Cloudflare Worker
- * 
+ *
  * This worker routes requests from agentic bots (AI/LLM user agents) to the
  * Edge Optimize backend service for optimized content delivery.
- * 
+ *
  * Features:
  * - Routes agentic bot traffic to Edge Optimize backend
  * - Failover to origin on Edge Optimize errors (any 4XX or 5XX errors)
@@ -481,19 +481,19 @@ export default {
 async function handleRequest(request, env, ctx) {
   const url = new URL(request.url);
   const userAgent = request.headers.get("user-agent")?.toLowerCase() || "";
-  
+
   // Check if request is already processed (loop protection)
   const isEdgeOptimizeRequest = !!request.headers.get("x-edgeoptimize-request");
-  
+
   // Construct the original path and query string
   const pathAndQuery = `${url.pathname}${url.search}`;
 
   // Check if the path matches HTML pages (no extension or .html extension)
   const isHtmlPage = /(?:\/[^./]+|\.html|\/)$/.test(url.pathname);
-  
+
   // Check if path is in targeted paths (if specified)
-  const isTargetedPath = TARGETED_PATHS === null 
-    ? isHtmlPage 
+  const isTargetedPath = TARGETED_PATHS === null
+    ? isHtmlPage
     : (isHtmlPage && TARGETED_PATHS.includes(url.pathname));
 
   // Check if user agent is an agentic bot
@@ -504,10 +504,10 @@ async function handleRequest(request, env, ctx) {
   // 2. User agent matches one of the agentic bots
   // 3. Path is targeted for optimization
   if (!isEdgeOptimizeRequest && isAgenticBot && isTargetedPath) {
-    
+
     // Build the Edge Optimize request URL
     const edgeOptimizeURL = `https://live.edgeoptimize.net${pathAndQuery}`;
-    
+
     // Clone and modify headers for the Edge Optimize request
     const edgeOptimizeHeaders = new Headers(request.headers);
 
@@ -519,13 +519,13 @@ async function handleRequest(request, env, ctx) {
     // x-forwarded-host: The original site domain
     // Use environment variable if set, otherwise use the request host
     edgeOptimizeHeaders.set("x-forwarded-host", env.EDGE_OPTIMIZE_TARGET_HOST ?? url.host);
-    
+
     // x-edgeoptimize-api-key: Your Adobe-provided API key
     edgeOptimizeHeaders.set("x-edgeoptimize-api-key", env.EDGE_OPTIMIZE_API_KEY);
-    
+
     // x-edgeoptimize-url: The original request URL path and query
     edgeOptimizeHeaders.set("x-edgeoptimize-url", pathAndQuery);
-    
+
     // x-edgeoptimize-config: Configuration for cache key differentiation
     edgeOptimizeHeaders.set("x-edgeoptimize-config", "LLMCLIENT=TRUE;");
 
@@ -544,7 +544,7 @@ async function handleRequest(request, env, ctx) {
       const status = edgeOptimizeResponse.status;
       const is4xxError = FAILOVER_ON_4XX && status >= 400 && status < 500;
       const is5xxError = FAILOVER_ON_5XX && status >= 500 && status < 600;
-      
+
       if (is4xxError || is5xxError) {
         console.log(`Edge Optimize returned ${status}, failing over to origin`);
         return await failoverToOrigin(request, env, url);
@@ -552,7 +552,7 @@ async function handleRequest(request, env, ctx) {
 
       // Return the Edge Optimize response
       return edgeOptimizeResponse;
-      
+
     } catch (error) {
       // Network error or timeout - failover to origin
       console.log(`Edge Optimize request failed: ${error.message}, failing over to origin`);
@@ -573,7 +573,7 @@ async function handleRequest(request, env, ctx) {
 async function failoverToOrigin(request, env, url) {
   // Build origin URL
   const originURL = `${url.protocol}//${env.EDGE_OPTIMIZE_TARGET_HOST}${url.pathname}${url.search}`;
-  
+
   // Prepare headers - clean Edge Optimize headers and add loop protection
   const originHeaders = new Headers(request.headers);
   originHeaders.set("Host", env.EDGE_OPTIMIZE_TARGET_HOST);
@@ -582,7 +582,7 @@ async function failoverToOrigin(request, env, url) {
   originHeaders.delete("x-edgeoptimize-config");
   originHeaders.delete("x-forwarded-host");
   originHeaders.set("x-edgeoptimize-request", "fo");
-  
+
   // Create and send origin request
   const originRequest = new Request(originURL, {
     method: request.method,
@@ -590,9 +590,9 @@ async function failoverToOrigin(request, env, url) {
     body: request.body,
     redirect: "manual",
   });
-  
+
   const originResponse = await fetch(originRequest);
-  
+
   // Add failover marker header to response
   const modifiedResponse = new Response(originResponse.body, {
     status: originResponse.status,
@@ -892,7 +892,8 @@ If you click **Deploy optimizations** before completing the required setup, noth
 
 Q: What happens when the content is updated at source?
 
-We serve the optimized version of the page from cache as long as the underlying source page hasn't changed. However, when the source does change, our system automatically refreshes so AI agents always receive the most up-to-date content. This is because we use low cache time to live (TTL) settings (by order of minutes) so that any content update on your site triggers a new optimization within that window. <!--As there is no universal TTL that fits every site, we can configure this TTL based on your cache invalidation rules to ensure both systems stay in sync.-->
+We serve the optimized version of your page from cache as long as the underlying source page has not changed. However, when the source does change for **Recover Content Visibility**, our system automatically refreshes so AI agents always receives the most up-to-date content. This is because we use low cache time to live (TTL) settings (by order of minutes) so that any content update on your site triggers a new optimization within that window. For content opportunities like **Add LLM-Friendly Summaries**, LLM Optimizer monitors the source page for changes. If a change is detected, we pause the optimization and flag it for human review to prevent content drift between the agent-visible page and human-visible page.
+<!--As there is no universal TTL that fits every site, we can configure this TTL based on your cache invalidation rules to ensure both systems stay in sync.-->
 
 Q. Is Optimize at Edge only for sites using Adobe Edge Delivery Service (EDS)?
 
@@ -901,3 +902,7 @@ No. Optimize at Edge is CDN-agnostic and works with any front-end architecture, 
 Q. How is Optimize at Edge pre-rendering different from traditional server-side rendering (SSR)?
 
 Both solve different problems and can work together. Traditional SSR renders server-side content but doesn't include content loaded later in the browser. Optimize at Edge pre-rendering captures the page after JavaScript and client-side data has loaded, producing the fully assembled version at the CDN edge. SSR focuses on improving the human experience and Optimize at Edge improves the web experience for LLMs.
+
+Q. What happens if I deploy optimizations for some URLs in my domain but not all?
+
+Only the URLs you explicitly optimize are modified. For URLs with deployed opportunities, AI agents receive the optimized version. For URLs with no deployed opportunities, our service simply proxies the original page as-is without applying changes or storing it in our optimization cache layer. This ensures you can selectively deploy optimizations without affecting the rest of your site.
