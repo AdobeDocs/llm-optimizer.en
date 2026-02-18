@@ -37,12 +37,12 @@ You should reach out to either your Adobe account team or the FDE team to start 
 
 Pre-requisites to onboard to Optimize at Edge:
 
-* Complete the onboarding process to LLM Optimizer. 
+* Complete the onboarding process to LLM Optimizer.
 * Complete the log forwarding process for your CDN logs.
 
 Requirements for your IT/CDN team:
 * Add `*AdobeEdgeOptimize/1.0*` user-agent to the Allowlist in your site's robots.txt file or bot-traffic management rules.
-* Ensure that pages are not blocked at the domain or CDN level. 
+* Ensure that pages are not blocked at the domain or CDN level.
 * Add Optimize at Edge routing rules in the CDN.
 * Confirm Optimize at Edge routing in the LLM Optimizer interface.
 

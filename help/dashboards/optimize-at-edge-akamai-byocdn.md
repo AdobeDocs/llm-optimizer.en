@@ -23,9 +23,9 @@ Before setting up the Akamai Property Manager rules, ensure you have:
 
 The following Akamai Property Manager rule routes LLM user agents to Edge Optimize. The configuration includes the following steps:
 
-**1. Set routing criteria (User-Agent matching)**  
+**1. Set routing criteria (User-Agent matching)**
 
-Set routing for the following user-agents:
+Set routing for the following user-agents:image.png
 
 ```
  *AdobeEdgeOptimize-AI*,
@@ -44,7 +44,7 @@ Set origin as `live.edgeoptimize.net` and Match SAN to `*.edgeoptimize.net`
 
 ![Set Origin and SSL behavior](/help/assets/optimize-at-edge/akamai-step2-origin.png)
 
-**3. Set Cache Key Variable**  
+**3. Set Cache Key Variable**
 
 Set the cache key variable `PMUSER_EDGE_OPTIMIZE_CACHE_KEY` to `LLMCLIENT=TRUE;X_FORWARDED_HOST={{builtin.AK_HOST}}`
 
@@ -54,12 +54,12 @@ Set the cache key variable `PMUSER_EDGE_OPTIMIZE_CACHE_KEY` to `LLMCLIENT=TRUE;X
 
 ![Caching Rules](/help/assets/optimize-at-edge/akamai-step4-rules.png)
 
-**5. Modify Incoming Request Headers**  
+**5. Modify Incoming Request Headers**
 
-Set the following incoming request headers:  
-`x-edgeoptimize-api-key` to the API Key retrieved from LLMO  
-`x-edgeoptimize-config` to `LLMCLIENT=TRUE;`  
-`x-edgeoptimize-url` to `{{builtin.AK_URL}}`    
+Set the following incoming request headers:
+`x-edgeoptimize-api-key` to the API Key retrieved from LLMO
+`x-edgeoptimize-config` to `LLMCLIENT=TRUE;`
+`x-edgeoptimize-url` to `{{builtin.AK_URL}}`
 
 ![Modify Incoming Request Headers](/help/assets/optimize-at-edge/akamai-step5-request.png)
 
@@ -71,9 +71,9 @@ Set the following incoming request headers:
 
 ![Cache ID Modification](/help/assets/optimize-at-edge/akamai-step7-cacheid.png)
 
-**8. Modify Outgoing Request Headers**  
+**8. Modify Outgoing Request Headers**
 
-Set `x-forwarded-host` header to `{{builtin.AK_HOST}}`  
+Set `x-forwarded-host` header to `{{builtin.AK_HOST}}`
 
 ![Modify Outgoing Request Headers](/help/assets/optimize-at-edge/akamai-step8-outgoing-request.png)
 

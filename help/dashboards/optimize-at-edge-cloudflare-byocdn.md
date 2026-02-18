@@ -64,10 +64,10 @@ After creating the worker, click **Edit code** and replace the default code with
 ```javascript
 /**
  * Edge Optimize BYOCDN - Cloudflare Worker
- * 
+ *
  * This worker routes requests from agentic bots (AI/LLM user agents) to the
  * Edge Optimize backend service for optimized content delivery.
- * 
+ *
  * Features:
  * - Routes agentic bot traffic to Edge Optimize backend
  * - Failover to origin on Edge Optimize errors (any 4XX or 5XX errors)
@@ -103,19 +103,19 @@ export default {
 async function handleRequest(request, env, ctx) {
   const url = new URL(request.url);
   const userAgent = request.headers.get("user-agent")?.toLowerCase() || "";
-  
+
   // Check if request is already processed (loop protection)
   const isEdgeOptimizeRequest = !!request.headers.get("x-edgeoptimize-request");
-  
+
   // Construct the original path and query string
   const pathAndQuery = `${url.pathname}${url.search}`;
 
   // Check if the path matches HTML pages (no extension or .html extension)
   const isHtmlPage = /(?:\/[^./]+|\.html|\/)$/.test(url.pathname);
-  
+
   // Check if path is in targeted paths (if specified)
-  const isTargetedPath = TARGETED_PATHS === null 
-    ? isHtmlPage 
+  const isTargetedPath = TARGETED_PATHS === null
+    ? isHtmlPage
     : (isHtmlPage && TARGETED_PATHS.includes(url.pathname));
 
   // Check if user agent is an agentic bot
@@ -126,10 +126,10 @@ async function handleRequest(request, env, ctx) {
   // 2. User agent matches one of the agentic bots
   // 3. Path is targeted for optimization
   if (!isEdgeOptimizeRequest && isAgenticBot && isTargetedPath) {
-    
+
     // Build the Edge Optimize request URL
     const edgeOptimizeURL = `https://live.edgeoptimize.net${pathAndQuery}`;
-    
+
     // Clone and modify headers for the Edge Optimize request
     const edgeOptimizeHeaders = new Headers(request.headers);
 
@@ -141,13 +141,13 @@ async function handleRequest(request, env, ctx) {
     // x-forwarded-host: The original site domain
     // Use environment variable if set, otherwise use the request host
     edgeOptimizeHeaders.set("x-forwarded-host", env.EDGE_OPTIMIZE_TARGET_HOST ?? url.host);
-    
+
     // x-edgeoptimize-api-key: Your Adobe-provided API key
     edgeOptimizeHeaders.set("x-edgeoptimize-api-key", env.EDGE_OPTIMIZE_API_KEY);
-    
+
     // x-edgeoptimize-url: The original request URL path and query
     edgeOptimizeHeaders.set("x-edgeoptimize-url", pathAndQuery);
-    
+
     // x-edgeoptimize-config: Configuration for cache key differentiation
     edgeOptimizeHeaders.set("x-edgeoptimize-config", "LLMCLIENT=TRUE;");
 
@@ -166,7 +166,7 @@ async function handleRequest(request, env, ctx) {
       const status = edgeOptimizeResponse.status;
       const is4xxError = FAILOVER_ON_4XX && status >= 400 && status < 500;
       const is5xxError = FAILOVER_ON_5XX && status >= 500 && status < 600;
-      
+
       if (is4xxError || is5xxError) {
         console.log(`Edge Optimize returned ${status}, failing over to origin`);
         return await failoverToOrigin(request, env, url);
@@ -174,7 +174,7 @@ async function handleRequest(request, env, ctx) {
 
       // Return the Edge Optimize response
       return edgeOptimizeResponse;
-      
+
     } catch (error) {
       // Network error or timeout - failover to origin
       console.log(`Edge Optimize request failed: ${error.message}, failing over to origin`);
@@ -195,7 +195,7 @@ async function handleRequest(request, env, ctx) {
 async function failoverToOrigin(request, env, url) {
   // Build origin URL
   const originURL = `${url.protocol}//${env.EDGE_OPTIMIZE_TARGET_HOST}${url.pathname}${url.search}`;
-  
+
   // Prepare headers - clean Edge Optimize headers and add loop protection
   const originHeaders = new Headers(request.headers);
   originHeaders.set("Host", env.EDGE_OPTIMIZE_TARGET_HOST);
@@ -204,7 +204,7 @@ async function failoverToOrigin(request, env, url) {
   originHeaders.delete("x-edgeoptimize-config");
   originHeaders.delete("x-forwarded-host");
   originHeaders.set("x-edgeoptimize-request", "fo");
-  
+
   // Create and send origin request
   const originRequest = new Request(originURL, {
     method: request.method,
@@ -212,9 +212,9 @@ async function failoverToOrigin(request, env, url) {
     body: request.body,
     redirect: "manual",
   });
-  
+
   const originResponse = await fetch(originRequest);
-  
+
   // Add failover marker header to response
   const modifiedResponse = new Response(originResponse.body, {
     status: originResponse.status,
