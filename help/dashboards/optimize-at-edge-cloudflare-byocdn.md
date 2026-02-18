@@ -266,17 +266,6 @@ Alternatively, you can configure routes at the zone level:
 
 ![Cloudflare Worker routes](/help/assets/optimize-at-edge/cloudflare-worker-routes.png)
 
-**Additional verification**
-
-You can also verify that normal traffic continues to work:
-
-```
-curl -svo /dev/null https://www.example.com/page.html \
-  --header "user-agent: Mozilla/5.0"
-```
-
-This request should be served from your origin without the `x-edgeoptimize-request-id` header.
-
 **Verifying failover behavior**
 
 If Edge Optimize is unavailable or returns an error, the worker automatically fails over to your origin. Failover responses include the `x-edgeoptimize-fo` header:

@@ -39,8 +39,6 @@ The response should **not** contain the `x-edgeoptimize-request-id` header. The 
 |---|---|---|
 | `x-edgeoptimize-request-id` | Present — contains a unique request ID | Absent |
 | `x-edgeoptimize-fo` | Present only if failover occurred (value: `1`) | Absent |
-| Response content | AI-optimized HTML served from Edge Optimize | Original HTML served from origin |
-| Latency | Comparable to origin (cached at edge) | No change from baseline |
 
 The status of the traffic routing can also be checked in the LLM Optimizer UI. Navigate to **Customer Configuration** and select the **CDN Configuration** tab.
 
@@ -85,8 +83,6 @@ The response should **not** contain the `x-edgeoptimize-request-id` header. The 
 |---|---|---|
 | `x-edgeoptimize-request-id` | Present — contains a unique request ID | Absent |
 | `x-edgeoptimize-fo` | Present only if failover occurred (value: `1`) | Absent |
-| Response content | AI-optimized HTML served from Edge Optimize | Original HTML served from origin |
-| Latency | Comparable to origin (cached at edge) | No change from baseline |
 
 The status of the traffic routing can also be checked in the LLM Optimizer UI. Navigate to **Customer Configuration** and select the **CDN Configuration** tab.
 
