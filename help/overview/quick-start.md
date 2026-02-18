@@ -32,7 +32,7 @@ AEM Cloud (Cloud Service,Managed Services, Edge Delivery Service) customers have
 There are some product capabilities that are not available in the free version:
 
 * Trial is limited to one domain. You will not be able to change the domain you provided after completing the setup.
-* The ability to deploy optimizations is available in Early Access. Learn more at [Optimize at Edge Frequently Asked Questions](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge#frequently-asked-questions).
+* The ability to deploy optimizations is available in Early Access. Learn more at [Optimize at Edge Frequently Asked Questions](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge/overview#frequently-asked-questions).
 
 See the section below for details on how to activate the free trial version and onboard your domain.
 

@@ -34,7 +34,7 @@ Presented below is a table of currently supported opportunities:
 
 ## Auto-optimization {#auto-optimization}
 
-Auto-optimization enables one-click deployment of recommended optimizations, reducing manual effort and time to value. Optimizations can be applied either at the content source or at the CDN edge. Edge based auto-optimization is currently available in Early Access for select opportunities. For more details, see the [Optimize at Edge](/help/dashboards/optimize-at-edge.md) page.
+Auto-optimization enables one-click deployment of recommended optimizations, reducing manual effort and time to value. Optimizations can be applied either at the content source or at the CDN edge. Edge based auto-optimization is currently available in Early Access for select opportunities. For more details, see the [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md) page.
 
 <!--### Recover Content Visibility Opportunity {#recover-contet}
 
