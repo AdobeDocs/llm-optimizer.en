@@ -22,4 +22,9 @@ user-guide-description: Boost your brand with Adobe LLM Optimizer. Track mention
   + [Customer Configuration](/help/dashboards/customer-configuration.md)
   + [Collaboration](/help/dashboards/collaboration.md)
 + Additional Resources{#resources}
-  + [Optimize at Edge](/help/dashboards/optimize-at-edge.md)
+  + Optimize at Edge{#optimize-at-edge}
+    + [Overview](/help/dashboards/optimize-at-edge.md)
+    + [AEM Cloud Service Managed CDN (Fastly)](/help/dashboards/optimize-at-edge-aem-managed-cdn.md)
+    + [Fastly (BYOCDN)](/help/dashboards/optimize-at-edge-fastly-byocdn.md)
+    + [Akamai (BYOCDN)](/help/dashboards/optimize-at-edge-akamai-byocdn.md)
+    + [Cloudflare (BYOCDN)](/help/dashboards/optimize-at-edge-cloudflare-byocdn.md)
