@@ -79,9 +79,43 @@ Set `x-forwarded-host` header to `{{builtin.AK_HOST}}`
 
 **9. Site Failover**
 
+The Site Failover configuration has two parts: the failover behavior (configured inside the main optimize-at-edge routing rule) and a separate failover test header rule. 
+
+**9a. Site Failover Behavior (inside the main optimize-at-edge routing rule)**
+
+Inside the main routing rule, configure the Site Failover behavior and the Advanced XML snippet as follows:
+
 ![Site Failover](/help/assets/optimize-at-edge/akamai-step9-failover.png)
 
+Add the request header `x-edgeoptimize-request` with value `fo` through Advanced XML: 
+
+```
+<forward:availability.fail-action2>
+<add-header>
+<status>on</status>
+<name>x-edgeoptimize-request</name>
+<value>fo</value>
+</add-header>
+</forward:availability.fail-action2>
+```
+
 ![Failover Behaviors](/help/assets/optimize-at-edge/akamai-step9-failover-behaviors.png)
+
+**9b. Failover Test Header rule (sibling rule)**
+
+>[!IMPORTANT]
+>
+>Create the **EdgeOptimize Failover - Test Header** rule as a **sibling** (at the same level) of the routing rules — **not** nested inside them. In the Akamai Property Manager rule tree, the hierarchy should look like:
+>
+>```
+>▼ Parent Rule
+>  ▶ Optimize at Edge Routing     ← routing rule
+>    EdgeOptimize Failover - Test Header       ← sibling, same level
+>```
+>
+>This ensures the failover test header rule evaluates for **all** routing rules, not just one.
+
+If the request header `x-edgeoptimize-request` value is `fo`, then set the outgoing response header `x-edgeoptimize-fo` to `true`.
 
 ![Failover Rules](/help/assets/optimize-at-edge/akamai-step9-failover-rules.png)
 
