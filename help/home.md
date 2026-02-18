@@ -205,7 +205,7 @@ Adobe LLM Optimizer is a generative AI-first application for Generative Engine O
 
 <!-- CARDS
 
-* ./dashboards/optimize-at-edge.md
+* ./dashboards/optimize-at-edge/overview.md
   {title= Optimize at Edge}
   {image= /help/assets/overview/optimize-on-edge-card.png}
   {description= Learn how to deliver optimizations in LLM Optimizer without any authoring changes required.}
@@ -219,7 +219,7 @@ Adobe LLM Optimizer is a generative AI-first application for Generative Engine O
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./dashboards/optimize-at-edge.md" title="Optimize at Edge" target="_blank" rel="referrer">
+                    <a href="./dashboards/optimize-at-edge/overview.md" title="Optimize at Edge" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="/help/assets/overview/optimize-on-edge-card.png" alt="Optimize at Edge"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -228,11 +228,11 @@ Adobe LLM Optimizer is a generative AI-first application for Generative Engine O
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./dashboards/optimize-at-edge.md" target="_blank" rel="referrer" title="Optimize at Edge">Optimize at Edge</a>
+                        <a href="./dashboards/optimize-at-edge/overview.md" target="_blank" rel="referrer" title="Optimize at Edge">Optimize at Edge</a>
                     </p>
                     <p class="is-size-6">Learn how to deliver optimizations in LLM Optimizer without any authoring changes required.</p>
                 </div>
-                <a href="./dashboards/optimize-at-edge.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="./dashboards/optimize-at-edge/overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Learn more</span>
                 </a>
             </div>

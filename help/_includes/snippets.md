@@ -111,4 +111,4 @@ Additionally, if you require any help with the above steps, reach out to your Ad
 
 ## Return to overview {#return-to-overview}
 
-To learn more about Optimize at Edge, including available opportunities, auto-optimization workflows, and FAQs, return to the [Optimize at Edge overview](/help/dashboards/optimize-at-edge.md).
+To learn more about Optimize at Edge, including available opportunities, auto-optimization workflows, and FAQs, return to the [Optimize at Edge overview](/help/dashboards/optimize-at-edge/overview.md).
