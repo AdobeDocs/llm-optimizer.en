@@ -41,7 +41,7 @@ Pre-requisites to onboard to Optimize at Edge:
 * Complete the log forwarding process for your CDN logs.
 
 Requirements for your IT/CDN team:
-* Add `*AdobeEdgeOptimize/1.0*` user-agent to the Allowlist in your site’s robots.txt file or bot-traffic management rules.
+* Add `*AdobeEdgeOptimize/1.0*` user-agent to the Allowlist in your site's robots.txt file or bot-traffic management rules.
 * Ensure that pages are not blocked at the domain or CDN level. 
 * Add Optimize at Edge routing rules in the CDN.
 * Confirm Optimize at Edge routing in the LLM Optimizer interface.
@@ -69,7 +69,6 @@ Presented in the following table are opportunities that can improve the agentic 
 | Opportunity | Type | Auto-Identify | Auto-suggest | Auto-optimize |
 |---------|----------|----------|----------|----------|
 |Recover Content Visibility | Technical GEO | Detects pages where critical content is hidden from AI agents. Shows affected URLs and expected content that can be recovered.| Highlights content that can be made available for AI agents and recommends enabling pre-rendering for those pages. | Serves a fully rendered, AI-friendly HTML snapshot to agentic traffic that recovers the previously hidden content.|
-| Optimize Headings for LLMs | Content Optimization | Scans headings to detect empty, duplicate, missing or ambiguous headings that can reduce machine readability.| Proposes a cleaner heading hierarchy and improved labels and shows a preview of the updated structure for each page.| Injects the improved heading structure for AI agents, preserving your visual design while making the page more readable for LLMs.|
 | Add LLM-Friendly Summaries | Content Optimization | Identifies long or complex pages that lack concise summaries at the page or section level, making them harder for AI to quickly scan and understand.| Recommends short, AI-generated summaries at the page and section level that capture key content.| Inserts the summaries into the relevant HTML sections, improving how models interpret and describe the page content.|
 | Add Relevant FAQs | Content Optimization | Detects intent gaps in the existing page content that could benefit from FAQs. | Suggests AI-generated FAQ content aligned to the user intent and existing topics. | Injects FAQ content into the HTML, making pages more discoverable and relevant in AI-driven answers.|
 | Simplify Complex Content | Content Optimization | Flags pages with complex text that can hinder AI comprehension. | Provides AI-generated simplified versions of complex text while preserving the original meaning. | Rewrites complex sections in the page, improving AI readability. |
@@ -91,10 +90,6 @@ This ensures the page is first fully visible to AI agents. Additional enhancemen
 
 >[!IMPORTANT]
 >This pre-rendering capability automatically applies to all opportunities presented below when deployed with Optimize at Edge to ensure the page is fully visible to AI agents.
-
-### Optimize Headings for LLMs
-
-This opportunity detects pages where the heading structure makes it hard for AI agents to understand the page due to empty, duplicate, missing or ambiguous headings. For each affected page, the opportunity surfaces the suboptimal headings and recommends a clearer hierarchy. When deployed with Optimize at Edge, the improved headings are applied in the HTML served to agentic traffic. This helps machine readability while leaving your human facing layout the same.
 
 ### Add LLM-Friendly Summaries
 
@@ -164,7 +159,8 @@ If you click **Deploy optimizations** before completing the required setup, noth
 
 Q: What happens when the content is updated at source?
 
-We serve the optimized version of the page from cache as long as the underlying source page hasn't changed. However, when the source does change, our system automatically refreshes so AI agents always receive the most up-to-date content. This is because we use low cache time to live (TTL) settings (by order of minutes) so that any content update on your site triggers a new optimization within that window. <!--As there is no universal TTL that fits every site, we can configure this TTL based on your cache invalidation rules to ensure both systems stay in sync.-->
+We serve the optimized version of your page from cache as long as the underlying source page has not changed. However, when the source does change for **Recover Content Visibility**, our system automatically refreshes so AI agents always receives the most up-to-date content. This is because we use low cache time to live (TTL) settings (by order of minutes) so that any content update on your site triggers a new optimization within that window. For content opportunities like **Add LLM-Friendly Summaries**, LLM Optimizer monitors the source page for changes. If a change is detected, we pause the optimization and flag it for human review to prevent content drift between the agent-visible page and human-visible page.
+<!--As there is no universal TTL that fits every site, we can configure this TTL based on your cache invalidation rules to ensure both systems stay in sync.-->
 
 Q. Is Optimize at Edge only for sites using Adobe Edge Delivery Service (EDS)?
 
@@ -173,3 +169,7 @@ No. Optimize at Edge is CDN-agnostic and works with any front-end architecture, 
 Q. How is Optimize at Edge pre-rendering different from traditional server-side rendering (SSR)?
 
 Both solve different problems and can work together. Traditional SSR renders server-side content but doesn't include content loaded later in the browser. Optimize at Edge pre-rendering captures the page after JavaScript and client-side data has loaded, producing the fully assembled version at the CDN edge. SSR focuses on improving the human experience and Optimize at Edge improves the web experience for LLMs.
+
+Q. What happens if I deploy optimizations for some URLs in my domain but not all?
+
+Only the URLs you explicitly optimize are modified. For URLs with deployed opportunities, AI agents receive the optimized version. For URLs with no deployed opportunities, our service simply proxies the original page as-is without applying changes or storing it in our optimization cache layer. This ensures you can selectively deploy optimizations without affecting the rest of your site.
