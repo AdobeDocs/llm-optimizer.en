@@ -58,27 +58,9 @@ To guide the setup process, select your CDN provider below and follow the corres
 | Cloudflare (BYOCDN) | Bring Your Own CDN | [View setup guide](/help/dashboards/optimize-at-edge-cloudflare-byocdn.md) |
 
 >[!NOTE]
->For other CDN providers, please reach out to `llmo-at-edge@adobe.com` to assist your IT/CDN teams with onboarding. Once the setup configurations are complete, you can deploy suggestions for Optimize at Edge opportunities in LLM Optimizer.
+>If your CDN provider is not listed above, or if you do not find your domain or email in the LLM Optimizer UI, please reach out to `llmo-at-edge@adobe.com` for onboarding assistance. Once the setup configurations are complete, you can deploy suggestions for Optimize at Edge opportunities in LLM Optimizer.
 
-### Verify the setup
-
-After completing the CDN configuration, test the setup by running a curl with an agentic user-agent and look for the `x-edgeoptimize-request-id` header in the response:
-
-```
-curl -svo /dev/null https://www.example.com/page.html --header "user-agent: chatgpt-user"
-< HTTP/2 200
-< x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
-```
-
-The status of the traffic routing can also be checked in the LLM Optimizer UI. Navigate to **Customer Configuration** and select the **CDN Configuration** tab.
-
-For AEM Cloud Service Managed CDN (Fastly):
-
-![AI Traffic Routing status with routing enabled](/help/assets/optimize-at-edge/adobe-CDN-traffic-routed-tick.png)
-
-For BYOCDN configurations (Fastly, Akamai, Cloudflare):
-
-![AI Traffic Routing status with routing enabled](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+Each CDN setup guide above includes detailed verification steps at the end to confirm that agentic traffic is being routed correctly and that human traffic remains unaffected.
 
 ## Opportunities
 

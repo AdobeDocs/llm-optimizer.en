@@ -72,4 +72,6 @@ data:
 
 ```
 
-After completing the setup, [verify the configuration](/help/dashboards/optimize-at-edge.md#verify-the-setup) to confirm that traffic is being routed correctly.
+{{verify-setup-adobe-aem-cs-cdn}}
+
+{{return-to-overview}}
