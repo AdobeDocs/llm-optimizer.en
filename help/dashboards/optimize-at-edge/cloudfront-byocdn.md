@@ -352,6 +352,7 @@ The Lambda@Edge function (`edgeoptimize-origin`) is associated with the origin r
 
 Check the following signals:
 
+* **AWS Service Health Dashboard** — Check the [AWS Service Health Dashboard](https://health.aws.amazon.com/health/status) for any active incidents affecting **Amazon CloudFront** or **AWS Lambda**. A global or regional outage reported here is the fastest way to confirm the issue is on the AWS infrastructure side rather than in your configuration.
 * **CloudFront 5xx error spike** — Navigate to **AWS Console > CloudFront > Distributions > [Your Distribution] > Monitoring**. A sudden increase in 5xx errors across all traffic (not just agentic) is a strong indicator of a Lambda@Edge issue.
 * **Lambda function error metrics** — Navigate to **AWS Console > Lambda > Functions > edgeoptimize-origin > Monitor**. Check the **Errors** and **Throttles** graphs for a spike coinciding with the traffic impact.
 * **CloudWatch Lambda@Edge logs** — Navigate to **AWS Console > CloudWatch > Log groups** in the AWS region of the edge location serving your traffic. Look for the log group `/aws/lambda/us-east-1.edgeoptimize-origin`. Missing log streams or a high volume of error entries confirms the function is failing.
