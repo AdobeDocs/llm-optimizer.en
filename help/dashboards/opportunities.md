@@ -28,6 +28,7 @@ Presented below is a table of currently supported opportunities:
 | Recommend Structured Content (FAQs)| Content (Onsite) | Detects high-popularity prompts without matching FAQ entries. Shows related prompts, categories, and affected URLs. | Add FAQ schema blocks with concise answers to match common queries. |
 | Detect Blocked Agentic Traffic | Technical GEO | Analyzes CDN logs for blocked requests from known AI agents (e.g., GPTBot, PerplexityBot). Reports affected URLs and agents. | Update robots.txt or server configs to allow access for supported AI crawlers where appropriate. |
 | Detect 404s / 403s / 5xx Issues | Technical GEO | Monitors CDN logs for error responses. Reports frequency, affected URLs, and estimated hits lost. | Fix broken links, update permissions, and resolve server-side issues so key content returns 200 responses. |
+| Simplify Complex Content | Content (Onsite) | Identifies long, complex paragraphs exceeding readability thresholds that can reduce AI comprehension. | Pre-render the pages so more content is available to AI agents without JavaScript execution. |
 | Recover Content Visibility (Early Access) | Technical GEO | Flags pages where critical content is hidden from AI agents. Shows affected URLs and expected content that can be recovered. | Pre-render the pages so more content is available to AI agents without JavaScript execution. |
 
 ## Auto-optimization {#auto-optimization}
