@@ -378,6 +378,46 @@ const FAILOVER_ON_5XX = false;
 | Requests failing with invalid host | `EDGE_OPTIMIZE_TARGET_HOST` includes protocol (for example, `https://`). | Use only the domain name without protocol (for example, `example.com`, not `https://example.com`). |
 | 530 error during failover | Cloudflare cannot connect to origin, or failover request has invalid headers. | Ensure the failover function removes Edge Optimize headers. Verify your origin is accessible and DNS is configured correctly. |
 
-{{verify-setup-byocdn}}
+**Verify the setup**
+
+After completing the setup, verify that bot traffic is being routed to Edge Optimize and that human traffic remains unaffected.
+
+**1. Test bot traffic (should be optimized)**
+
+Simulate an AI bot request using an agentic user-agent:
+
+```
+curl -svo /dev/null https://www.example.com/page.html \
+  --header "user-agent: chatgpt-user"
+```
+
+A successful response includes the `x-edgeoptimize-request-id` header, confirming that the request was routed through Edge Optimize:
+
+```
+< HTTP/2 200
+< x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
+```
+
+**2. Test human traffic (should NOT be affected)**
+
+Simulate a regular human browser request:
+
+```
+curl -svo /dev/null https://www.example.com/page.html \
+  --header "user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+```
+
+The response should **not** contain the `x-edgeoptimize-request-id` header. The page content and response time should remain identical to before enabling Optimize at Edge.
+
+**3. How to differentiate between the two scenarios**
+
+| Header | Bot traffic (optimized) | Human traffic (unaffected) |
+|---|---|---|
+| `x-edgeoptimize-request-id` | Present — contains a unique request ID | Absent |
+| `x-edgeoptimize-fo` | Present only if failover occurred (value: `1`) | Absent |
+
+The status of the traffic routing can also be checked in the LLM Optimizer UI. Navigate to **Customer Configuration** and select the **CDN Configuration** tab.
+
+![AI Traffic Routing status with routing enabled](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
 {{return-to-overview}}
