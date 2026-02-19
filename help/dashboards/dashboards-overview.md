@@ -8,7 +8,7 @@ feature: Onboarding
 
 Welcome to the Dashboards overview. The dashboards in LLM-Optimizer help marketers track brand visibility and sentiment across AI search platforms, identify optimization opportunities, and implement prescriptive changes to improve citations and performance.
 
-Key views include Brand Presence, Agentic and Referral Traffic, URL Inspector, Opportunity Identification, Collaboration, and Customer Configuration.
+Key views include the Overview, Brand Presence, Agentic and Referral Traffic, URL Inspector, Opportunities, Collaboration, and Customer Configuration.
 
 <!-- CARDS
 

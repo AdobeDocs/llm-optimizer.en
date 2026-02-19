@@ -106,7 +106,7 @@ Use these as guidelines for creating tutorials - some may be covered already in 
 
 ## Identifying Optimization Opportunities
 
-* Content Fixes (Headings, FAQs, Canonicals)
+* Content Fixes (FAQs, Canonicals)
 * Technical Fixes (Blocked Agents, Errors)
 * Third-Party Influence Strategies
 
