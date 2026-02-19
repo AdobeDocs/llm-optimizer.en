@@ -300,6 +300,40 @@ The status of the traffic routing can also be checked in the LLM Optimizer UI. N
 
 ![AI Traffic Routing status with routing enabled](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
+**4. Verify logs are flowing correctly**
+
+After running the test requests above, verify that logs are being written for both the CloudFront function and the Lambda@Edge function.
+
+*CloudFront function logs (`edgeoptimize-routing`)*
+
+**Navigation:** AWS Console > CloudWatch > Log groups (in `us-east-1` or the region where your CloudFront distribution is configured)
+
+1. Look for a log group named `/aws/cloudfront/function/edgeoptimize-routing`.
+2. Open the latest log stream.
+3. For agentic requests, you should see entries such as:
+   * `Adding origin group for userAgent: chatgpt-user`
+   * `Routing to Edge Optimize origin for userAgent: chatgpt-user`
+4. For non-agentic requests, you should see:
+   * `Routing to Default origin for userAgent: ...`
+
+You can also check the **Metrics** tab under **AWS Console > CloudFront > Functions > edgeoptimize-routing** to view invocation counts and error rates.
+
+*Lambda@Edge logs (`edgeoptimize-origin`)*
+
+>[!IMPORTANT]
+>Lambda@Edge logs are written to CloudWatch in the **region of the edge location** that served the request, not `us-east-1`. Check CloudWatch in the AWS region closest to where you ran the curl command.
+
+**Navigation:** AWS Console > CloudWatch > Log groups (ensure you are in the correct region)
+
+1. Look for a log group named `/aws/lambda/us-east-1.edgeoptimize-origin`.
+2. Open the latest log stream.
+3. For agentic requests, you should see entries such as:
+   * `Calling Edge Optimize Origin for agentic requests` — primary path
+   * `Calling Default Origin in case of failover for agentic requests` — failover path
+   * `Failover Triggered for agentic requests` — origin-response failover detection
+
+If the log group is not present, verify that the IAM permissions were updated correctly in Step 4. Also check other nearby AWS regions — the edge location that served your request may differ from what you expect.
+
 **Troubleshooting**
 
 | Issue | Possible Cause | Solution |
@@ -309,5 +343,61 @@ The status of the traffic routing can also be checked in the LLM Optimizer UI. N
 | Cannot find CloudWatch logs for Lambda@Edge | Wrong IAM permissions | Verify the CloudWatch Logs permission policy was updated (Step 4). Note: Lambda@Edge logs appear in the edge region that served the request, not necessarily `us-east-1`. |
 | Cache not honoring `cache-control: no-store` | Minimum TTL may be too high | Set Minimum TTL to `0` in your cache policy (Step 3). If your Minimum TTL is already very short, this may not be the issue. |
 | Regular (non-agentic) traffic broken after setup | Cache policy misconfiguration | If you created a new cache policy (Scenario C), ensure you replicated all settings from the original managed policy. |
+
+**Disabling and Re-enabling Optimize at Edge**
+
+The Lambda@Edge function (`edgeoptimize-origin`) is associated with the origin request and origin response events of your CloudFront behavior. Because it runs inline on every request passing through that behavior — both human and agentic — a Lambda@Edge outage will impact all live traffic, not just agentic requests. If you detect a Lambda@Edge outage, remove the function associations immediately to restore normal traffic flow to your default origin.
+
+**How to detect a Lambda@Edge outage**
+
+Check the following signals:
+
+* **CloudFront 5xx error spike** — Navigate to **AWS Console > CloudFront > Distributions > [Your Distribution] > Monitoring**. A sudden increase in 5xx errors across all traffic (not just agentic) is a strong indicator of a Lambda@Edge issue.
+* **Lambda function error metrics** — Navigate to **AWS Console > Lambda > Functions > edgeoptimize-origin > Monitor**. Check the **Errors** and **Throttles** graphs for a spike coinciding with the traffic impact.
+* **CloudWatch Lambda@Edge logs** — Navigate to **AWS Console > CloudWatch > Log groups** in the AWS region of the edge location serving your traffic. Look for the log group `/aws/lambda/us-east-1.edgeoptimize-origin`. Missing log streams or a high volume of error entries confirms the function is failing.
+
+**Detaching the Lambda@Edge function**
+
+**Navigation:** AWS Console > CloudFront > Distributions > [Your Distribution] > Behaviors
+
+1. Click **Edit** on your behavior.
+
+2. Scroll down to the **Function associations** section.
+
+3. Set the following associations to **No association**:
+
+   | Event | Change to |
+   |---|---|
+   | Viewer request | No association |
+   | Origin request | No association |
+   | Origin response | No association |
+
+4. Click **Save changes**.
+
+5. Wait for the CloudFront distribution to finish deploying. The status changes from **Deploying** to the last modified date, typically within a few minutes.
+
+Once deployed, all traffic routes directly to your default origin. No configuration is deleted; the Lambda function and its associations can be restored at any time.
+
+**Re-attaching the Lambda@Edge function**
+
+Before re-attaching, verify that the Lambda@Edge function is healthy. Navigate to **AWS Console > Lambda > Functions > edgeoptimize-origin > Monitor** and confirm that the **Errors** metric has returned to zero and the function is executing successfully.
+
+**Navigation:** AWS Console > CloudFront > Distributions > [Your Distribution] > Behaviors
+
+1. Click **Edit** on your behavior.
+
+2. Scroll down to the **Function associations** section.
+
+3. Restore the associations:
+
+   | Event | Set to |
+   |---|---|
+   | Viewer request | `edgeoptimize-routing` (CloudFront function) |
+   | Origin request | Versioned Lambda ARN from Step 4 |
+   | Origin response | Versioned Lambda ARN from Step 4 |
+
+4. Click **Save changes**.
+
+5. Wait for the distribution to finish deploying, then verify that agentic requests return the `x-edgeoptimize-request-id` header as described in Step 6.
 
 {{return-to-overview}}
