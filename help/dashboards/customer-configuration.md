@@ -103,17 +103,65 @@ If you select **Other**, you will have to reach out to llmo-now@adobe.com for as
 
 ## Google Search Console {#google-console}
 
-Adobe LLM Optimizer allows you to integrate your Google Search Console account to bring real search queries directly into the interface. By surfacing real Google Search Console queries, you can build prompt sets that are grounded in actual search behavior and high-intent discovery patterns. This helps you prioritize prompts based on proven demand and aligns LLM optimization efforts with how users search. Additionally, remember that you remain in full control because queries are never added automatically and must be explicitly selected before becoming active prompts.
+Adobe LLM Optimizer allows you to integrate your Google Search Console account to bring real search queries directly into the interface. By surfacing real Google Search Console queries, you can build prompt sets that are grounded in actual search behavior and high-intent discovery patterns. This helps you prioritize prompts based on proven demand and aligns LLM optimization efforts with how users currently search. Additionally, remember that you remain in full control because queries are never added automatically and must be explicitly selected before becoming active prompts.
 
 ### How it works {#how-it-works}
 
-To identify useful queries from the Google Search Console, LLM Optimizer applies structured filtering rules to:
+The key principle to understand about the integration between LLM Optimizer with Google Search Console is the following: instead of manually guessing what customers might ask an AI assistant, we look at what they **are already searching for** and transform those real queries into natural, conversational prompts. This process of moving from search queries to AI prompts is exemplified in the diagram below.
 
-* Focus on queries that resemble natural language questions or discovery oriented searches.
-* Distinguish between branded and non-branded queries when relevant.
-* Reduce noise from either irrelevant or overly generic searches.
+![Process Flow](/help/dashboards/assets/diagram-flow.png)
 
-These filters help surface the queries that are most valuable for understanding how users search for information related to your brand, products and topics.
+Generally speaking, the process has five steps:
+
+#### Step 1 — Collect your real search data {#gsc-one}
+
+The process starts with the keywords your audience is actually using when it finds your website via Google. This raw dataset (often thousands of unique queries) is the foundation for everything that follows.
+
+#### Step 2 — Analyze meaning and filter for safety {#gsc-two}
+
+Each query is analyzed for its semantic meaning (what the user is really asking about) and screened through a safety filter that removes inappropriate or off-brand content. This ensures only clean, relevant keywords move forward.
+
+#### Step 3 — Group into categories and topics {#gsc-three}
+
+Related queries are automatically grouped together into **categories** (broad business themes) and **topics** (focused subtopics within each category). The system prioritizes categories that are already configured in your LLM Optimizer setup. Additionally, it can also surface new categories that your search data reveals but are not being monitored yet. The following diagram is an example of categories and topics for a furniture brand:
+
+![Furniture Brand](/help/dashboards/assets/diagram-example.png)
+
+#### Step 4 — Generate prompts grounded in real keywords {#gsc-four}
+
+For each topic, the system generates prompts that are similar to how real people talk with AI assistants. Each prompt is directly influenced by actual search keywords from your Google Search Console, transforming keyword intent into natural conversational questions.
+
+This approach grounded in keywords means:
+
+* Prompts reflect real demand, not hypothetical questions.
+* The language mirrors how your customers actually phrase things.
+* Coverage spans the full breadth of what people search for on your site.
+
+The prompt generation also considers your brand profile — including products, competitors, industry positioning, and target audience — to ensure that prompts are contextually accurate.
+
+#### Step 5 - Quality assurance and delivery {#gsc-five}
+
+Before delivery, every prompt goes through several automated quality checks:
+
+* Deduplication — near-identical prompts are removed.
+* Branded ratio balancing — ensures a realistic mix (~75% unbranded, ~25% branded).
+* Language quality — strips robotic phrasing so prompts sound natural.
+* Consistency checks — validates dates, removes filler phrases, ensures concise length.
+
+Additionally, every prompt is tagged with its category, topic, intent type, and branded/unbranded classification, ready for LLM Optimizer to begin monitoring.
+
+#### Prompt Anatomy {#prompt-anatomy}
+
+After the process above is complete, each prompt delivered to LLM Optimizer has the following attributes:
+
+| Field | Description |
+|---------|----------|
+| Text | The prompt, similar to how a user would type it into an AI assistant |
+| Category | The broad business theme assigned to this prompt. |
+| Topic | The specific subtopic within the category. |
+| Region | The target market (for example, US, UK and so on) . |
+| Intent | The user mindset: informational, comparative, transactional, instructional, planning, or delegation . |
+| Type | The type can be either branded (mentions the brand/products) or unbranded (generic industry question). |
 
 ### How to use {#how-to-use}
 
@@ -147,3 +195,37 @@ After you integrate the Google Search Console account with LLM optimizer, you ca
 #### View added queries in the Prompts list {#prompts-list}
 
 After a query is added, it appears in the [Prompts](#prompts-brand) tab within the Customer Configuration dashboard. Prompts sourced from the Google Search Console are marked with a Google Search Console icon in the **Origin** column. The icon helps you distinguish between prompts that are grounded in actual user search behavior from those added manually or from other sources.
+
+### Frequently Asked Questions {#gsc-faq}
+
+Q: How often are prompts updated in the Google Search Console dashboard?
+
+Prompts sourced from the Google Search Console are usually refreshed once per month. Each refresh pulls the latest search query data from your Google Search Console, re-runs the generation pipeline, and updates your prompt set. This ensures your prompts stay aligned with current search trends and seasonal shifts in user behavior.
+
+Q: How many prompts are typically sourced from the Google Search Console?
+
+The number depends on the size of your deployment and the amount of categories tracked. For example:
+
+| Categories | Total Topics | Prompts Delivered |
+|---------|----------|----------|
+|1–2|3–8|~65–180|
+|4–5|12–20|~270–450|
+|10|30–40|~675–900|
+
+We aim to deliver prompt sets that meet the quality targets communicated during trial and onboarding: at least 20 prompts per topic, with 3–4 topics per category, and a healthy branded/unbranded balance.
+
+Q: How soon will I see prompts sourced from the Google Search Console after I connect to the Google Search Console?
+
+Prompts are typically available **within a few hours** after your Google Search Console connection is established. The pipeline automatically pulls your search data, processes it through the generation and quality assurance steps and delivers the final prompt set to LLM Optimizer.
+
+Q: Who can connect to the Google Search Console?
+
+Anyone with **Owner** or **Full Permission** on the Google Search Console property can authorize the connection. These are the permission levels that grant read access to search query data. If you are unsure about your permission level, you can check it under **Settings>Users** and permissions in your Google Search Console.
+
+Q: Can I mark prompts as ignored or skipped so that I do not see them in the Google Search Console prompts list?
+
+Yes, you can delete any prompt you don not want to monitor. Deleted prompts are removed from your active prompt list and will not appear in future reporting. If a deleted prompt is regenerated in a subsequent monthly refresh, you can remove it again.
+
+Q: Once I add prompts from Google Search Console to my prompts list, how soon will I see Brand Presence data for those prompts?
+
+Brand Presence data for newly added prompts will appear during the next scheduled data refresh, which typically runs at the beginning of each week. Depending on when you add the prompts, you may see results within a few days.
