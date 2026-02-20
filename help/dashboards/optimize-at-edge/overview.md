@@ -56,6 +56,7 @@ To guide the setup process, select your CDN provider below and follow the corres
 | Fastly (BYOCDN) | Bring Your Own CDN | [View setup guide](/help/dashboards/optimize-at-edge/fastly-byocdn.md) |
 | Akamai (BYOCDN) | Bring Your Own CDN | [View setup guide](/help/dashboards/optimize-at-edge/akamai-byocdn.md) |
 | Cloudflare (BYOCDN) | Bring Your Own CDN | [View setup guide](/help/dashboards/optimize-at-edge/cloudflare-byocdn.md) |
+| CloudFront (BYOCDN) | Bring Your Own CDN | [View setup guide](/help/dashboards/optimize-at-edge/cloudfront-byocdn.md) |
 
 >[!NOTE]
 >If your CDN provider is not listed above, or if you do not find your domain or email in the LLM Optimizer UI, please reach out to `llmo-at-edge@adobe.com` for onboarding assistance. Once the setup configurations are complete, you can deploy suggestions for Optimize at Edge opportunities in LLM Optimizer.

@@ -110,11 +110,11 @@ If your behavior already uses a custom cache policy (one you created, not an AWS
 
 3. It is recommended to set **Minimum TTL** to `0`. However, if your current Minimum TTL is already very short, you may not need to change it.
 
-![Cache policy TTL settings](/help/assets/optimize-at-edge/cloudfront-cache-policy-ttl.png)
+   ![Cache policy TTL settings](/help/assets/optimize-at-edge/cloudfront-cache-policy-ttl.png)
 
 4. Under **Cache key settings** > **Headers**, along with your existing inclusions, add `x-edgeoptimize-config` and `x-edgeoptimize-url`.
 
-![Cache policy headers](/help/assets/optimize-at-edge/cloudfront-cache-policy-headers.png)
+   ![Cache policy headers](/help/assets/optimize-at-edge/cloudfront-cache-policy-headers.png)
 
 5. Click **Save changes**.
 
@@ -259,7 +259,7 @@ The auto-created role comes with an `AWSLambdaBasicExecutionRole` policy configu
 
 **Step 6: Test the configuration**
 
-**Test 1: Agentic traffic**
+**1. Test bot traffic (should be optimized)**
 
 Send a request with an agentic bot user agent. On the **first request**, Edge Optimize may return a proxied (non-optimized) response while it processes and caches the page. You can identify this by the `x-edgeoptimize-proxy: 1` header in the response.
 
