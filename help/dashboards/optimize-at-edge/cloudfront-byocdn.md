@@ -26,13 +26,9 @@ Before setting up the CloudFront configuration, ensure you have:
 
 1. Click **Create origin**.
 
-   ![Create origin button](/help/assets/optimize-at-edge/cloudfront-create-origin-button.png)
-
 2. Configure the origin:
    * **Origin domain:** `live.edgeoptimize.net`
    * **Name:** `EdgeOptimize_Origin`
-
-   ![Origin domain configuration](/help/assets/optimize-at-edge/cloudfront-origin-domain.png)
 
 3. Leave all other fields with their default values.
 
@@ -43,11 +39,11 @@ Before setting up the CloudFront configuration, ensure you have:
    | `x-edgeoptimize-api-key` | Your API key |
    | `x-forwarded-host` | `www.example.com` |
 
-   ![Custom headers configuration](/help/assets/optimize-at-edge/cloudfront-custom-headers.png)
-
    Replace `www.example.com` with your actual website domain and `Your API key` with the Edge Optimize API key provided by your Adobe representative.
 
 5. Click **Create origin**.
+
+  ![Cloudfront Origin Creation](/help/assets/optimize-at-edge/cloudfront-origin-creation.png)
 
 **Step 2: Create viewer request function**
 
@@ -67,6 +63,9 @@ Before setting up the CloudFront configuration, ensure you have:
    * `TARGETED_PATHS` — Set to `null` to target all HTML pages, or set to an array of specific paths, for example, `['/', '/products', '/about']`.
 
 4. Click **Save changes** > **Publish function**.
+  
+  ![Cloudfront Function Creation](/help/assets/optimize-at-edge/cloudfront-function-creation.png)
+
 
 **Step 3: Configure cache policy**
 
