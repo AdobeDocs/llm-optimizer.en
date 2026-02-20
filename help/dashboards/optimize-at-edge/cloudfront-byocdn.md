@@ -109,11 +109,9 @@ If your behavior already uses a custom cache policy (one you created, not an AWS
 2. Click **Edit**.
 
 3. It is recommended to set **Minimum TTL** to `0`. However, if your current Minimum TTL is already very short, you may not need to change it.
-
    ![Cache policy TTL settings](/help/assets/optimize-at-edge/cloudfront-cache-policy-ttl.png)
 
 4. Under **Cache key settings** > **Headers**, along with your existing inclusions, add `x-edgeoptimize-config` and `x-edgeoptimize-url`.
-
    ![Cache policy headers](/help/assets/optimize-at-edge/cloudfront-cache-policy-headers.png)
 
 5. Click **Save changes**.
@@ -230,12 +228,10 @@ The auto-created role comes with an `AWSLambdaBasicExecutionRole` policy configu
 2. Add a description.
 
 3. Click **Publish**.
-
-![Lambda Publish](/help/assets/optimize-at-edge/cloudfront-lambda-publish.png)
+   ![Lambda Publish](/help/assets/optimize-at-edge/cloudfront-lambda-publish.png)
 
 4. Copy or note down the **Function ARN** — you need this in the next step.
-
-![Lambda ARN](/help/assets/optimize-at-edge/cloudfront-lambda-arn.png)
+   ![Lambda ARN](/help/assets/optimize-at-edge/cloudfront-lambda-arn.png)
 
 **Step 5: Associate the functions and cache policy with behavior**
 
@@ -244,8 +240,7 @@ The auto-created role comes with an `AWSLambdaBasicExecutionRole` policy configu
 1. Edit your behavior.
 
 2. If you created a new cache policy in Step 3 (Scenario C), set **Cache policy** to `edgeoptimize-cache`.
-
-![Cache Policy](/help/assets/optimize-at-edge/cloudfront-behaviour-cache.png)
+   ![Cache Policy](/help/assets/optimize-at-edge/cloudfront-behaviour-cache.png)
 
 3. Under **Function associations**, configure:
 
