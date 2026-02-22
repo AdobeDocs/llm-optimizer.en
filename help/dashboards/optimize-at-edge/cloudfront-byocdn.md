@@ -245,8 +245,8 @@ The auto-created role comes with an `AWSLambdaBasicExecutionRole` policy configu
 3. Under **Function associations**, configure:
 
    * **Viewer request:** `edgeoptimize-routing`
-   * **Origin request:** Function ARN noted in Step 4
-   * **Origin response:** Function ARN noted in Step 4
+   * **Origin request:** Versioned Function ARN from Step 4 (in **Publish a version**)
+   * **Origin response:** Versioned Function ARN from Step 4 (in **Publish a version**)
 
    ![Function associations configuration](/help/assets/optimize-at-edge/cloudfront-function-association.png)
 
@@ -344,12 +344,8 @@ The Lambda@Edge function (`edgeoptimize-origin`) is associated with the origin r
 
 **How to detect a Lambda@Edge outage**
 
-Check the following signals:
-
 * **AWS Service Health Dashboard** — Check the [AWS Service Health Dashboard](https://health.aws.amazon.com/health/status) for any active incidents affecting **Amazon CloudFront** or **AWS Lambda**. A global or regional outage reported here is the fastest way to confirm the issue is on the AWS infrastructure side rather than in your configuration.
-* **CloudFront 5xx error spike** — Navigate to **AWS Console > CloudFront > Distributions > [Your Distribution] > Monitoring**. A sudden increase in 5xx errors across all traffic (not just agentic) is a strong indicator of a Lambda@Edge issue.
-* **Lambda function error metrics** — Navigate to **AWS Console > Lambda > Functions > edgeoptimize-origin > Monitor**. Check the **Errors** and **Throttles** graphs for a spike coinciding with the traffic impact.
-* **CloudWatch Lambda@Edge logs** — Navigate to **AWS Console > CloudWatch > Log groups** in the AWS region of the edge location serving your traffic. Look for the log group `/aws/lambda/us-east-1.edgeoptimize-origin`. Missing log streams or a high volume of error entries confirms the function is failing.
+* **Lambda@Edge errors** — Navigate to **AWS Console > CloudFront > Monitoring > [Your Distribution]**. Open the **Lambda@Edge errors** tab and check the **Execution errors** graph for execution errors. If these are high, Lambda@Edge might be down.
 
 **Detaching the Lambda@Edge function**
 
@@ -367,6 +363,8 @@ Check the following signals:
    | Origin request | No association |
    | Origin response | No association |
 
+   ![Function associations configuration](/help/assets/optimize-at-edge/cloudfront-no-function-association.png)
+
 4. Click **Save changes**.
 
 5. Wait for the CloudFront distribution to finish deploying. The status changes from **Deploying** to the last modified date, typically within a few minutes.
@@ -374,8 +372,6 @@ Check the following signals:
 Once deployed, all traffic routes directly to your default origin. No configuration is deleted; the Lambda function and its associations can be restored at any time.
 
 **Re-attaching the Lambda@Edge function**
-
-Before re-attaching, verify that the Lambda@Edge function is healthy. Navigate to **AWS Console > Lambda > Functions > edgeoptimize-origin > Monitor** and confirm that the **Errors** metric has returned to zero and the function is executing successfully.
 
 **Navigation:** AWS Console > CloudFront > Distributions > [Your Distribution] > Behaviors
 
@@ -390,6 +386,10 @@ Before re-attaching, verify that the Lambda@Edge function is healthy. Navigate t
    | Viewer request | `edgeoptimize-routing` (CloudFront function) |
    | Origin request | Versioned Lambda ARN from Step 4 |
    | Origin response | Versioned Lambda ARN from Step 4 |
+
+   Use the versioned **Function ARN** you noted in Step 4 (in **Publish a version**).
+
+   ![Function associations configuration](/help/assets/optimize-at-edge/cloudfront-function-association.png)
 
 4. Click **Save changes**.
 
