@@ -103,11 +103,11 @@ If you select **Other**, you will have to reach out to llmo-now@adobe.com for as
 
 ## Google Search Console {#google-console}
 
-Adobe LLM Optimizer allows you to integrate your Google Search Console account to bring real search queries directly into the interface. By surfacing real Google Search Console queries, you can build prompt sets that are grounded in actual search behavior and high-intent discovery patterns. This helps you prioritize prompts based on proven demand and aligns LLM optimization efforts with how users currently search. Additionally, remember that you remain in full control because queries are never added automatically and must be explicitly selected before becoming active prompts.
+Adobe LLM Optimizer allows you to integrate your Google Search Console account to bring real search queries directly into the interface. By surfacing real Google Search Console queries, you can build prompt sets that are grounded in actual search behavior and high-intent discovery patterns. This helps you prioritize prompts based on proven demand and aligns LLM optimization efforts with how users currently search. Additionally, you remain in full control because queries are never added automatically and must be explicitly selected before becoming active prompts.
 
 ### How it works {#how-it-works}
 
-The key principle to understand about the integration between LLM Optimizer with Google Search Console is the following: instead of manually guessing what customers might ask an AI assistant, we look at what they **are already searching for** and transform those real queries into natural, conversational prompts. This process of moving from search queries to AI prompts is exemplified in the diagram below.
+The main thing to remember about the integration between LLM Optimizer with Google Search Console is the following: instead of manually guessing what customers might ask an AI assistant, we look at what they **are already searching for** and transform those real queries into natural, conversational prompts. This process of moving from search queries to AI prompts is exemplified in the diagram below.
 
 ![Process Flow](/help/dashboards/assets/diagram-flow.png)
 
@@ -131,7 +131,7 @@ Related queries are automatically grouped together into **categories** (broad bu
 
 For each topic, the system generates prompts that are similar to how real people talk with AI assistants. Each prompt is directly influenced by actual search keywords from your Google Search Console, transforming keyword intent into natural conversational questions.
 
-This approach grounded in keywords means:
+This approach (grounded in keywords) means:
 
 * Prompts reflect real demand, not hypothetical questions.
 * The language mirrors how your customers actually phrase things.
@@ -146,7 +146,7 @@ Before delivery, every prompt goes through several automated quality checks:
 * Deduplication — near-identical prompts are removed.
 * Branded ratio balancing — ensures a realistic mix (~75% unbranded, ~25% branded).
 * Language quality — strips robotic phrasing so prompts sound natural.
-* Consistency checks — validates dates, removes filler phrases, ensures concise length.
+* Consistency checks — validates dates, removes filler phrases, ensures a concise length.
 
 Additionally, every prompt is tagged with its category, topic, intent type, and branded/unbranded classification, ready for LLM Optimizer to begin monitoring.
 
@@ -159,8 +159,8 @@ After the process above is complete, each prompt delivered to LLM Optimizer has 
 | Text | The prompt, similar to how a user would type it into an AI assistant |
 | Category | The broad business theme assigned to this prompt. |
 | Topic | The specific subtopic within the category. |
-| Region | The target market (for example, US, UK and so on) . |
-| Intent | The user mindset: informational, comparative, transactional, instructional, planning, or delegation . |
+| Region | The target market (for example, US, UK and so on). |
+| Intent | The user mindset: informational, comparative, transactional, instructional, planning, or delegation. |
 | Type | The type can be either branded (mentions the brand/products) or unbranded (generic industry question). |
 
 ### How to use {#how-to-use}
@@ -224,7 +224,7 @@ Anyone with **Owner** or **Full Permission** on the Google Search Console proper
 
 Q: Can I mark prompts as ignored or skipped so that I do not see them in the Google Search Console prompts list?
 
-Yes, you can delete any prompt you don not want to monitor. Deleted prompts are removed from your active prompt list and will not appear in future reporting. If a deleted prompt is regenerated in a subsequent monthly refresh, you can remove it again.
+Yes, you can delete any prompt you do not want to monitor. Deleted prompts are removed from your active prompt list and will not appear in future reporting. If a deleted prompt is regenerated in a subsequent monthly refresh, you can remove it again.
 
 Q: Once I add prompts from Google Search Console to my prompts list, how soon will I see Brand Presence data for those prompts?
 
