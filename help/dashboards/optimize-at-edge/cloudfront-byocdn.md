@@ -57,7 +57,7 @@ Before setting up the CloudFront configuration, ensure you have:
 
 3. Replace the default code with the code from [viewer-request.js](https://github.com/adobe-rnd/llmo-edge-optimize-samples/blob/main/cloudfront/cloudfront-function/viewer-request.js).
 
-   Before publishing, customize the following values in the code:
+   Before publishing,customize the following values in the code:
 
    * `YOUR_DEFAULT_ORIGIN` — Replace with the name of your existing default origin (found in CloudFront > Distributions > [Your Distribution] > Origins tab).
    * `TARGETED_PATHS` — Set to `null` to target all HTML pages, or set to an array of specific paths, for example, `['/', '/products', '/about']`.
