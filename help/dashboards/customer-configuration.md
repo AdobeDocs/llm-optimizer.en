@@ -86,7 +86,7 @@ By using brand aliases, you can configure alternative names and variations of yo
 4. Add the brand alias.
 5. Click **Save** and the brand alias will appear on the list.
 
-To delete a brand alias, click the delete icon from the alias list.
+To delete a brand alias, click the **Delete** icon from the alias list.
 
 ## CDN Configuration {#cdn-configuration}
 
