@@ -6,7 +6,7 @@ feature: Quickstart, Onboarding
 
 # Akamai (BYOCDN)
 
-This guide explains how to forward CDN logs from Akamai to Adobe’s S3 bucket for agentic traffic data collection. You will use the LLM Optimizer CDN configuration page (link TBD) to onboard to LLM Optimizer. After the onboarding process is complete (fact check), follow the steps provided on this page to configure log forwarding in the Akamai Control Panel.
+This page explains how to forward CDN logs from Akamai to Adobe’s S3 bucket for agentic traffic data collection. You will use the LLM Optimizer CDN configuration page (link TBD) to onboard to LLM Optimizer. After the onboarding process is complete (fact check), follow the steps provided on this page to configure log forwarding in the Akamai Control Panel.
 
 ## Step 1
 
@@ -58,7 +58,7 @@ After creating the data streams and choosing the parameters you need to configur
 1. In **Access key ID** and **Secret access** key copy from the parameters from the LLM Optimizer configuration page.
 1. Click **Validate & Save** to validate the connection to the destination, and save the details you provided. As part of the validation process, the system uses the provided access key identifier and secret access key to create a verification file in your S3 folder, with a timestamp in the filename in the `Akamai_access_verification_[TimeStamp].txt` format. You can only see this file if the validation process is successful, and you have access to the Amazon S3 bucket and folder that you're trying to send logs to.
 1. In the **Delivery options** menu, edit the **Filename** field as follows:
-a) Change the prefix. Copy value from the LLM Optimizer configuration page Log file prefix . `{%Y}-{%m}-{%d}T{%H}:{%M}:{%S}.000`
+a) Change the prefix. Copy value from the LLM Optimizer configuration page Log file prefix `{%Y}-{%m}-{%d}T{%H}:{%M}:{%S}.000`.
 b) Change the suffix. Copy value from the LLM Optimizer configuration page Log file suffix.
 1. Change the **Push frequency**. Copy value from the LLM Optimizer configuration page **Log Interval**. ![Log Interval](/help/overview/assets/log-interval.png)
 1. Click **Next** to complete the process.
