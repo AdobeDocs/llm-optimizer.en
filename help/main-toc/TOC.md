@@ -21,15 +21,15 @@ user-guide-description: Boost your brand with Adobe LLM Optimizer. Track mention
   + [Opportunities](/help/dashboards/opportunities.md)
   + [Customer Configuration](/help/dashboards/customer-configuration.md)
   + [Collaboration](/help/dashboards/collaboration.md)
++ CDN Log Forwarding{#log-forwarding}
+  + [Overview](/help/overview/log-forwarding/log-forwarding-overview.md)
+  + [Akamai](/help/overview/log-forwarding/akamai.md)
+  + [Cloudflare](/help/overview/log-forwarding/cloudflare.md)
+  + [CloudFront](/help/overview/log-forwarding/cloudfront.md)
+  + [Fastly](/help/overview/log-forwarding/fastly.md)
+  + [Imperva](/help/overview/log-forwarding/imperva.md)
+  + [Other (Manual Upload)](/help/overview/log-forwarding/other.md)
 + Additional Resources{#resources}
-  + CDN Log Forwarding{#log-forwarding}
-    + [Overview](/help/overview/log-forwarding/log-forwarding-overview.md)
-    + [Akamai](/help/overview/log-forwarding/akamai.md)
-    + [Cloudflare](/help/overview/log-forwarding/cloudflare.md)
-    + [CloudFront](/help/overview/log-forwarding/cloudfront.md)
-    + [Fastly](/help/overview/log-forwarding/fastly.md)
-    + [Imperva](/help/overview/log-forwarding/imperva.md)
-    + [Other (Manual Upload)](/help/overview/log-forwarding/other.md)
   + Optimize at Edge{#optimize-at-edge}
     + [Overview](/help/dashboards/optimize-at-edge/overview.md)
     + [AEM Cloud Service Managed CDN (Fastly)](/help/dashboards/optimize-at-edge/aemcs-managed-cdn.md)
