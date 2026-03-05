@@ -39,8 +39,8 @@ On [LLM Optimizer](https://llmo.now/):
 On the **Fastly Control Panel**:
 
 1. In the Fastly dashboard, go to **CDN services** (not Compute services).
-2. In the **Amazon Web Services S3** area, click **Create endpoint**.
-3. Fill out the **Create an Amazon S3 endpoint** fields:
+1. In the **Amazon Web Services S3** area, click **Create endpoint**.
+1. Fill out the **Create an Amazon S3 endpoint** fields:
 
 | Field | Description |
 | --- | --- |
@@ -64,7 +64,7 @@ On the **Fastly Control Panel**:
 >
 >Password managers may auto-fill the **Secret Key** field with your Fastly password. If AWS integration fails, enter the Secret Key manually.
 
-4. Click **Advanced options** and set:
+1. Click **Advanced options** and set:
 
 | Field | Description |
 | --- | --- |
@@ -76,8 +76,8 @@ On the **Fastly Control Panel**:
 | **Server side encryption** | None |
 | **Maximum bytes** | 0 |
 
-5. Click **Create** to create the endpoint.
-6. From the **Activate** menu, select **Activate on Production** to deploy.
+1. Click **Create** to create the endpoint.
+1. From the **Activate** menu, select **Activate on Production** to deploy.
 
 >[!NOTE]
 >
