@@ -6,77 +6,67 @@ feature: Agentic Traffic
 
 # Log Forwarding: Akamai {#log-forwarding-akamai}
 
-This guide explains how to forward CDN logs from Akamai to Adobe's S3 bucket for agentic traffic data collection.
-
-You will use the LLM Optimizer CDN configuration page to onboard to LLM Optimizer. After onboarding, the page will provide the required details to configure log forwarding in the Akamai Control Panel.
+This page explains how to forward CDN logs from Akamai to Adobe’s S3 bucket for agentic traffic data collection. You will use the LLM Optimizer CDN configuration page (link TBD) to onboard to LLM Optimizer. After the onboarding process is complete (fact check), follow the steps provided on this page to configure log forwarding in the Akamai Control Panel.
 
 ## Step 1: Onboard in LLM Optimizer {#step-1}
 
-On [LLM Optimizer](https://llmo.now/):
+On LLM Optimizer page [https://llmo.now/](https://llmo.now/):
 
-1. Go to **Configuration**.
+1. Go to the Customer **Configuration Dashboard**.
 
    ![Configuration button](/help/overview/assets/log-forwarding/common/config-button.png)
 
-2. Click the **CDN Configuration** tab.
+1. Click the **CDN Configuration** tab.
 
    ![CDN Configuration tab](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
 
-3. Click **Onboard CDN**.
+1. Click **Onboard CDN**.
 
-   ![Onboard CDN button](/help/overview/assets/log-forwarding/common/onboard-cdn-button.png)
+   <!--![Onboard CDN button](/help/overview/assets/log-forwarding/common/onboard-cdn-button.png)-->
 
-4. Select **Akamai (BYOCDN)**.
+1. Select **Akamai (BYOCDN)**.
 
    ![Select Akamai](/help/overview/assets/log-forwarding/akamai/akamai-select.png)
 
-5. Click **Onboard**.
+1. Click **Onboard**.
 
-   ![Onboard button](/help/overview/assets/log-forwarding/common/onboard-button.png)
+   <!--![Onboard button](/help/overview/assets/log-forwarding/common/onboard-button.png)-->
 
 ## Step 2: Create a stream in Akamai {#step-2}
 
-On the [Akamai Control Panel](https://control.akamai.com/), follow the Akamai documentation to [create a stream](https://techdocs.akamai.com/datastream2/docs/create-stream).
+On the Akamai control panel [https://control.akamai.com/](https://control.akamai.com/) follow the steps from the official Akamai documentation to [create a stream](https://techdocs.akamai.com/datastream2/docs/create-stream).
 
 ## Step 3: Choose data parameters {#step-3}
 
-After creating the stream, click **Next** to continue to the **Data sets** tab. Follow the Akamai documentation to [choose data parameters](https://techdocs.akamai.com/datastream2/docs/choose-data-parameters).
-
-The following fields from the LLM Optimizer configuration page are needed:
+After creating the stream, on the Akamai control panel, click Next to continue to **Data sets** tab. Follow the steps from the official Akamai documentation  to choose the [data parameters](https://techdocs.akamai.com/datastream2/docs/choose-data-parameters). The following fields from the LLM Optimizer configuration will be needed:
 
 ![LLMO configuration fields](/help/overview/assets/log-forwarding/akamai/akamai-llmo-config-fields.png)
 
->[!TIP]
->
->Use the following tips to locate the required properties in the Akamai data-set list:
->
->**Log Information**
->- `reqTimeSec`
->
->**Geo Data**
->- `country`
->
->**Message exchange data**
->- `reqHost`
->- `reqPath`
->- `queryStr`
->- `reqMethod`
->- `ua`
->- `statusCode`
->- `rspContentType`
->
->**Request header data**
->- `referer`
->
->**Network performance data**
->- `timeToFirstByte`
+Follow the groups below locate the parameters in the Akamai data-set list:
+
+* **Log Information**
+  reqTimeSec
+* **Geo Data**
+  country
+* **Message exchange data**
+  reqHost
+  reqPath
+  queryStr
+  reqMethod
+  ua
+  statusCode
+  rspContentType
+* **Request header data**
+  referer
+* **Network performance data**
+  timeToFirstByte
 
 ## Step 4: Configure destination {#step-4}
 
+After creating the data streams and choosing the parameters you need to configure the destination. To configure the destination, follow these steps:
+
 1. In **Destination**, select **S3**.
-
 2. In **Name**, enter a human-readable description for the destination.
-
 3. In **Bucket**, copy the **Bucket Name** from the LLM Optimizer configuration page.
 
    ![Bucket Name](/help/overview/assets/log-forwarding/common/bucket-name.png)
@@ -87,7 +77,7 @@ The following fields from the LLM Optimizer configuration page are needed:
 
 5. In **Region**, copy the **Region** from the LLM Optimizer configuration page.
 
-   ![Region](/help/overview/assets/log-forwarding/common/region.png)
+   <!--![Region](/help/overview/assets/log-forwarding/common/region.png)-->
 
 6. In **Access key ID** and **Secret access key**, copy both values from the LLM Optimizer configuration page.
 
@@ -95,7 +85,7 @@ The following fields from the LLM Optimizer configuration page are needed:
 
 7. Click **Validate & Save** to validate the connection to the destination, and save the details you provided. As part of this validation process, the system uses the provided access key identifier and secret access key to create a verification file in your S3 folder, with a timestamp in the filename in the `Akamai_access_verification_[TimeStamp].txt` format. You can only see this file if the validation process is successful and you have access to the Amazon S3 bucket and folder you are trying to send logs to.
 
-8. In the **Delivery options** menu, edit the **Filename** field:
+8. In the **Delivery options** menu, edit the **Filename** field as follows:
 
    a. Change the **prefix**. Copy the value from the LLM Optimizer configuration page under **Log file prefix**:
 
@@ -109,4 +99,4 @@ The following fields from the LLM Optimizer configuration page are needed:
 
    ![Log interval](/help/overview/assets/log-forwarding/akamai/akamai-log-interval.png)
 
-10. Click **Next**.
+10. Click **Next** to complete the process.

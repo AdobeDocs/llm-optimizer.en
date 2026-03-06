@@ -27,7 +27,7 @@ After creating the stream, on the Akamai control panel, click Next to continue t
 
 ![Data Parameters](/help/overview/assets/data-parameters.png)
 
-Follow the groups below to more easily locate the parameters:
+Follow the groups below locate the parameters in the Akamai data-set list:
 
 * Log Information: 
   reqTimeSec
