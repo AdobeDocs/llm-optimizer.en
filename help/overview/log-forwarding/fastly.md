@@ -6,9 +6,9 @@ feature: Agentic Traffic
 
 # Log Forwarding: Fastly {#log-forwarding-fastly}
 
-This guide explains how to forward CDN logs from Fastly to Adobe's S3 bucket for agentic traffic data collection.
+This guide explains how to forward CDN logs from Fastly to Adobe's S3 bucket for agentic traffic data collection. You will use the LLM Optimizer CDN configuration page to onboard to LLM Optimizer. After onboarding, the page will provide the required details to configure log forwarding from the Fastly web console.
 
-You will use the LLM Optimizer CDN configuration page to onboard to LLM Optimizer. After onboarding, the page will provide the required details to configure log forwarding from the Fastly web console.
+This page explains how to forward CDN logs from Fastly to Adobe’s S3 bucket for agentic traffic data collection. You will use the LLM Optimizer CDN configuration page (link TBD) to onboard to LLM Optimizer. After the onboarding process is complete (fact check), follow the steps provided on this page to configure log forwarding in the the Fastly web console.
 
 ## Step 1: Onboard in LLM Optimizer {#step-1}
 
@@ -24,7 +24,7 @@ On [LLM Optimizer](https://llmo.now/):
 
 3. Click **Onboard CDN**.
 
-   ![Onboard CDN button](/help/overview/assets/log-forwarding/common/onboard-cdn-button.png)
+  <!--> ![Onboard CDN button](/help/overview/assets/log-forwarding/common/onboard-cdn-button.png)-->
 
 4. Select **Fastly (BYOCDN)**.
 
@@ -32,11 +32,11 @@ On [LLM Optimizer](https://llmo.now/):
 
 5. Click **Onboard**.
 
-   ![Onboard button](/help/overview/assets/log-forwarding/common/onboard-button.png)
+  <!--> ![Onboard button](/help/overview/assets/log-forwarding/common/onboard-button.png)-->
 
 ## Step 2: Create an S3 endpoint in Fastly {#step-2}
 
-On the **Fastly Control Panel**:
+To create an S3 endpoint, on the **Fastly Control Panel**:
 
 1. In the Fastly dashboard, go to **CDN services** (not Compute services).
 1. In the **Amazon Web Services S3** area, click **Create endpoint**.
@@ -46,12 +46,12 @@ On the **Fastly Control Panel**:
 | --- | --- |
 | **Name** | Human-readable name for the endpoint. |
 | **Placement** | Default |
-| **Log format** | Use the log format string shown below. |
+| **Log format** | Use the log format string shown in the below **Log format string** section below. |
 | **Timestamp format** | `%Y-%m-%dT%H:%M:%S.000` |
-| **Bucket name** | Copy **Bucket Name** from the LLM Optimizer configuration page. ![Bucket name](/help/overview/assets/log-forwarding/fastly/fastly-bucket-name.png) |
-| **Domain** | Copy **Domain Name** from the LLM Optimizer configuration page. ![Domain name](/help/overview/assets/log-forwarding/fastly/fastly-domain-name.png) |
+| **Bucket name** | Copy the **Bucket Name** from the LLM Optimizer configuration page. ![Bucket name](/help/overview/assets/log-forwarding/fastly/fastly-bucket-name.png) |
+| **Domain** | Copy the **Domain Name** from the LLM Optimizer configuration page. ![Domain name](/help/overview/assets/log-forwarding/fastly/fastly-domain-name.png) |
 | **Access method** | **User Credentials** |
-| **User Credentials** | Copy **Access Key** and **Secret Key** from the LLM Optimizer configuration page. ![Access keys](/help/overview/assets/log-forwarding/common/access-keys.png) |
+| **User Credentials** | Copy the **Access Key** and the **Secret Key** from the LLM Optimizer configuration page. ![Access keys](/help/overview/assets/log-forwarding/common/access-keys.png) |
 | **Period** | `300` |
 
 **Log format string:**
@@ -63,6 +63,8 @@ On the **Fastly Control Panel**:
 >[!WARNING]
 >
 >Password managers may auto-fill the **Secret Key** field with your Fastly password. If AWS integration fails, enter the Secret Key manually.
+
+After you complete the steps above, follow these steps:
 
 1. Click **Advanced options** and set:
 
@@ -76,14 +78,18 @@ On the **Fastly Control Panel**:
 | **Server side encryption** | None |
 | **Maximum bytes** | 0 |
 
+After setting the advanced options:
+
 1. Click **Create** to create the endpoint.
 1. From the **Activate** menu, select **Activate on Production** to deploy.
 
 >[!NOTE]
 >
->Fastly streams logs continuously to S3; the S3 website and API only make files available after upload is complete.
+>Fastly streams logs continuously to S3; the S3 website and API only makes files available after the upload is complete.
 
 ### Example log entry {#example}
+
+Presented below is an example format string for sending data to Amazon S3:
 
 ```json
 {
