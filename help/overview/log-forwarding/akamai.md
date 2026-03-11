@@ -12,7 +12,7 @@ This page explains how to forward CDN logs from Akamai to Adobe’s S3 bucket fo
 
 On LLM Optimizer page [https://llmo.now/](https://llmo.now/):
 
-1. Go to the Customer **Configuration Dashboard**.
+1. Go to the **Customer Configuration Dashboard**.
 
    ![Configuration button](/help/overview/assets/log-forwarding/common/config-button.png)
 
