@@ -18,21 +18,15 @@ On [LLM Optimizer](https://llmo.now/):
 
    ![Configuration button](/help/overview/assets/log-forwarding/common/config-button.png)
 
-2. Click the **CDN Configuration** tab.
+1. Click the **CDN Configuration** tab.
 
    ![CDN Configuration tab](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
 
-3. Click **Onboard CDN**.
-
-  <!--> ![Onboard CDN button](/help/overview/assets/log-forwarding/common/onboard-cdn-button.png)-->
-
-4. Select **Fastly (BYOCDN)**.
+1. Click **Onboard CDN**.
+1. Select **Fastly (BYOCDN)**.
 
    ![Select Fastly](/help/overview/assets/log-forwarding/fastly/fastly-select.png)
-
-5. Click **Onboard**.
-
-  <!--> ![Onboard button](/help/overview/assets/log-forwarding/common/onboard-button.png)-->
+1. Click **Onboard**.
 
 ## Step 2: Create an S3 endpoint in Fastly {#step-2}
 
