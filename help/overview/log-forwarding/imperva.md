@@ -6,9 +6,7 @@ feature: Agentic Traffic
 
 # Log Forwarding: Imperva {#log-forwarding-imperva}
 
-This guide explains how to forward CDN logs from Imperva to Adobe's S3 bucket for agentic traffic data collection.
-
-You will use the LLM Optimizer CDN configuration page to onboard to LLM Optimizer. After onboarding, the page will provide the required details to configure log forwarding from the Imperva web console.
+This guide explains how to forward CDN logs from Imperva to Adobe's S3 bucket for agentic traffic data collection. You will use the LLM Optimizer CDN configuration page to onboard to LLM Optimizer. After the onboarding process is complete (fact check), follow the steps provided on this page to configure log forwarding from the Imperva web console.
 
 ## Step 1: Onboard in LLM Optimizer {#step-1}
 
@@ -18,21 +16,14 @@ On [LLM Optimizer](https://llmo.now/):
 
    ![Configuration button](/help/overview/assets/log-forwarding/common/config-button.png)
 
-2. Click the **CDN Configuration** tab.
+1. Click the **CDN Configuration** tab.
 
    ![CDN Configuration tab](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
-
-3. Click **Onboard CDN**.
-
-   ![Onboard CDN button](/help/overview/assets/log-forwarding/common/onboard-cdn-button.png)
-
-4. Select **Imperva (BYOCDN)**.
+1. Click **Onboard CDN**.
+1. Select **Imperva (BYOCDN)**.
 
    ![Select Imperva](/help/overview/assets/log-forwarding/imperva/imperva-select.png)
-
-5. Click **Onboard**.
-
-   ![Onboard button](/help/overview/assets/log-forwarding/common/onboard-button.png)
+1. Click **Onboard**.
 
 ## Step 2: Configure log forwarding in Imperva {#step-2}
 
@@ -53,12 +44,12 @@ On the [Imperva console](https://my.imperva.com):
    | Field | Description | Note |
    |---|---|---|
    | **Connection name** | A descriptive name for this connection (for example, Production S3 logs). You can rename the default. | |
-   | **Path** | The location of the folder where log files will be stored. Use the format `<Amazon S3 bucket name>/<log folder>`. Example: `MyBucket/MyImpervaLogFolder`. | `Amazon S3 bucket name` is **Bucket Name** from the LLM Optimizer configuration page. ![Bucket Name](/help/overview/assets/log-forwarding/imperva/imperva-bucket-name.png) The log folder is **Path** from the LLM Optimizer configuration page. ![Path](/help/overview/assets/log-forwarding/imperva/imperva-path.png) |
+   | **Path** | The location of the folder where log files will be stored. Use the format `<Amazon S3 bucket name>/<log folder>`. Example: `MyBucket/MyImpervaLogFolder`. | `Amazon S3 bucket name` is the **Bucket Name** from the LLM Optimizer configuration page. ![Bucket Name](/help/overview/assets/log-forwarding/imperva/imperva-bucket-name.png) The log folder is **Path** from the LLM Optimizer configuration page. ![Path](/help/overview/assets/log-forwarding/imperva/imperva-path.png) |
 
 5. Click **Test connection**. Imperva runs a full test: a test file (no real data) is sent to the designated folder and then removed when the transfer is complete.
 
    - **Available** — storage details are valid; you can configure logs to use this connection.
-   - **Undefined** — required details are missing or the test failed.
+   - **Undefined** — either the required details are missing or the test failed.
 
 6. Click **Save** to store the configuration.
 

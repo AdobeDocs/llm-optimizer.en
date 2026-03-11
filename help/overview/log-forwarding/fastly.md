@@ -6,8 +6,6 @@ feature: Agentic Traffic
 
 # Log Forwarding: Fastly {#log-forwarding-fastly}
 
-This guide explains how to forward CDN logs from Fastly to Adobe's S3 bucket for agentic traffic data collection. You will use the LLM Optimizer CDN configuration page to onboard to LLM Optimizer. After onboarding, the page will provide the required details to configure log forwarding from the Fastly web console.
-
 This page explains how to forward CDN logs from Fastly to Adobe’s S3 bucket for agentic traffic data collection. You will use the LLM Optimizer CDN configuration page (link TBD) to onboard to LLM Optimizer. After the onboarding process is complete (fact check), follow the steps provided on this page to configure log forwarding in the the Fastly web console.
 
 ## Step 1: Onboard in LLM Optimizer {#step-1}
