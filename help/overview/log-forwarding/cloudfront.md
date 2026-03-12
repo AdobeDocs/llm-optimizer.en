@@ -10,7 +10,7 @@ This page explains how to forward CDN logs from CloudFront to Adobe’s S3 bucke
 
 ## Step 1: Onboard in LLM Optimizer {#step-1}
 
-On LLM Optimizer page [https://llmo.now/](https://llmo.now/):
+On the LLM Optimizer page [https://llmo.now/](https://llmo.now/):
 
 1. Go to the **Customer Configuration Dashboard**.
 

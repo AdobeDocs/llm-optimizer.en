@@ -8,8 +8,8 @@ feature: Agentic Traffic
 
 The **Other BYOCDN** provisioning method is a catch-all option for customers who want to provide CDN logs to LLM Optimizer when:
 
-- **Manual uploads** are preferred (for example, operational teams export logs and upload them periodically).
-- **Ad-hoc automated processes** are used (one-off scripts, scheduled exports, serverless jobs).
+- **Manual uploads** are preferred - for example, operational teams export logs and upload them periodically.
+- **Ad-hoc automated processes** are used - one-off scripts, scheduled exports, serverless jobs.
 - The customer uses a **CDN that is not natively supported** by the built-in log forwarding integrations.
 
 This method imitates the "continuous forwarding" model: logs are produced and uploaded into the expected S3 location and are eventually processed automatically by the ingestion pipelines.
@@ -28,7 +28,7 @@ On [LLM Optimizer](https://llmo.now/):
 
 3. Click **Onboard CDN**.
 
-   ![Onboard CDN button](/help/overview/assets/log-forwarding/common/onboard-cdn-button.png)
+   <!-- ![Onboard CDN button](/help/overview/assets/log-forwarding/common/onboard-cdn-button.png)-->
 
 4. Select **Other**.
 
@@ -36,13 +36,13 @@ On [LLM Optimizer](https://llmo.now/):
 
 5. Click **Onboard**.
 
-   ![Onboard button](/help/overview/assets/log-forwarding/common/onboard-button.png)
+ <!--   ![Onboard button](/help/overview/assets/log-forwarding/common/onboard-button.png)-->
 
 ## Step 2: Prepare and upload logs {#step-2}
 
 ### Required log format (JSON Lines) {#log-format}
 
-Logs must be uploaded as newline-delimited JSON (**one JSON object per line**). Each log line must include the following fields **exactly as spelled**.
+Logs must be uploaded as newline-delimited JSON (**one JSON object per line**). Each log line must include the following fields **exactly as spelled below**.
 
 #### Field-by-field schema {#schema}
 
@@ -60,7 +60,7 @@ Logs must be uploaded as newline-delimited JSON (**one JSON object per line**). 
 
 #### Example log lines {#example}
 
-The following shows three log lines:
+The following example shows three log lines:
 
 ```json
 {"timestamp":"2025-02-01T23:06:14Z","host":"www.example.com","url":"/products/llm-optimizer?utm_source=google","request_method":"GET","request_user_agent":"Mozilla/5.0 (compatible; GPTBot/1.0; +https://openai.com/gptbot)","response_status":200,"request_referer":"","response_content_type":"text/html; charset=utf-8","time_to_first_byte":198}
@@ -73,12 +73,12 @@ The following shows three log lines:
 The ingestion and aggregation pipelines are strict about **field names and data types**.
 
 - Field names must match **exactly** (case and spelling).
-- Types must be correct:
+- Data Types should be correct, as follows:
   - **timestamp** must be a string with **ISO 8601** format. UNIX-like timestamps may not work.
   - **response_status** must be an integer.
   - **time_to_first_byte** must be an integer and use milliseconds.
   - Strings must be valid JSON strings.
-- Malformed JSON or missing/incorrect fields may cause logs to be skipped or fail to parse, resulting in missing data in reports.
+- Malformed JSON or missing/incorrect fields may cause logs to be skipped or fail to parse, resulting in missing data in the reports.
 
 ### Upload location and processing cadence {#upload-location}
 
@@ -99,7 +99,7 @@ Example for logs from Feb 1, 2025 UTC: `ABC123AdobeOrg/raw/byocdn-other/2025/02/
 
 **Goal**: Retrieve logs from existing observability platforms and deliver them to the S3 location.
 
-- Extract the required fields from Splunk/Elasticsearch events.
+- Extract the required fields from Splunk/Elastic search events.
 - Transform each event into one JSON object following the schema above (JSON Lines).
 - Upload the resulting file(s) to the designated S3 bucket and the **current UTC day** path: `…/byocdn-other/yyyy/mm/dd/`
 - The logs will be processed automatically by the end of the UTC day.
@@ -119,4 +119,4 @@ Example for logs from Feb 1, 2025 UTC: `ABC123AdobeOrg/raw/byocdn-other/2025/02/
 - **Exact field spelling** as specified
 - Correct data types
 - **time_to_first_byte** in milliseconds (integer)
-- Upload to the appropriate UTC folder: **`yyyy/mm/dd/`** under **`byocdn-other`**
+- Upload to the appropriate UTC folder: **yyyy/mm/dd/** under **byocdn-other**
