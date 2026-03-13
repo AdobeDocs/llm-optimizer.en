@@ -98,6 +98,8 @@ Alternatively, if no CDN provider has been added beforehand (as described above)
 * [Agentic Traffic](/help/dashboards/agentic-traffic.md#cdn-setup)
 * [Referral Traffic](/help/dashboards/referral-traffic.md#setup#setup)
 
+In the case of log-forwarding for BYOCDN please see the following page [BYOCDN Log Forwarding Overview]()
+
 ## Step 5: Explore Dashboards and Take Action
 
 After you provide information for CDN Log Forwarding, you can:
