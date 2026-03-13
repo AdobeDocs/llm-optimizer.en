@@ -6,7 +6,7 @@ feature: Agentic Traffic
 
 # Log Forwarding: Fastly {#log-forwarding-fastly}
 
-This page explains how to forward CDN logs from Fastly to Adobe’s S3 bucket for agentic traffic data collection. You will use the LLM Optimizer CDN configuration page (link TBD) to onboard to LLM Optimizer. After the onboarding process is complete (fact check), follow the steps provided on this page to configure log forwarding in the the Fastly web console.
+This page explains how to forward CDN logs from Fastly to Adobe’s S3 bucket for agentic traffic data collection. You will use the LLM Optimizer CDN configuration page to onboard to LLM Optimizer. After the onboarding process is complete, follow the steps provided on this page to configure log forwarding in the the Fastly web console.
 
 ## Step 1: Onboard in LLM Optimizer {#step-1}
 
@@ -38,7 +38,7 @@ To create an S3 endpoint, on the **Fastly Control Panel**:
 | --- | --- |
 | **Name** | Human-readable name for the endpoint. |
 | **Placement** | Default |
-| **Log format** | Use the log format string shown in the below **Log format string** section below. |
+| **Log format** | Use the log format string shown in the **Log format string** section below. |
 | **Timestamp format** | `%Y-%m-%dT%H:%M:%S.000` |
 | **Bucket name** | Copy the **Bucket Name** from the LLM Optimizer configuration page. ![Bucket name](/help/overview/assets/log-forwarding/fastly/fastly-bucket-name.png) |
 | **Domain** | Copy the **Domain Name** from the LLM Optimizer configuration page. ![Domain name](/help/overview/assets/log-forwarding/fastly/fastly-domain-name.png) |
@@ -54,11 +54,9 @@ To create an S3 endpoint, on the **Fastly Control Panel**:
 
 >[!WARNING]
 >
->Password managers may auto-fill the **Secret Key** field with your Fastly password. If AWS integration fails, enter the Secret Key manually.
+>Password managers may auto-fill the **Secret Key** field with your Fastly password. If the AWS integration fails, enter the Secret Key manually.
 
-After you complete the steps above, follow these steps:
-
-1. Click **Advanced options** and set:
+After you complete the steps above, click **Advanced options** and set::
 
 | Field | Description |
 | --- | --- |
@@ -77,7 +75,7 @@ After setting the advanced options:
 
 >[!NOTE]
 >
->Fastly streams logs continuously to S3; the S3 website and API only makes files available after the upload is complete.
+>Fastly streams logs continuously to S3, the S3 website and API only makes files available after the upload is complete.
 
 ### Example log entry {#example}
 

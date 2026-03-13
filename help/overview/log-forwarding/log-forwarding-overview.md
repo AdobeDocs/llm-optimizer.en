@@ -4,18 +4,18 @@ description: Learn how to forward CDN logs from your provider to Adobe's S3 buck
 feature: Agentic Traffic
 ---
 
-# CDN Log Forwarding {#cdn-log-forwarding}
+# CDN Log Forwarding Overview {#cdn-log-forwarding}
 
-CDN log forwarding sends your CDN access logs to Adobe's Amazon S3 bucket so that LLM Optimizer can collect and analyze agentic traffic data. Without CDN log forwarding, the [Agentic Traffic](/help/dashboards/agentic-traffic.md) dashboard cannot display metrics (fact check).
+CDN log forwarding is the process of sending your CDN access logs to Adobe's Amazon S3 bucket so that LLM Optimizer can collect and analyze agentic traffic data. Without CDN log forwarding, the [Agentic Traffic](/help/dashboards/agentic-traffic.md) dashboard cannot display metrics.
 
-This section covers the end-to-end setup for each supported CDN provider. Every guide follows the same two-phase workflow:
+The guides provided below, follow the same two-phase workflow:
 
 1. **Onboard in LLM Optimizer** — register your CDN on the [CDN Configuration](/help/dashboards/customer-configuration.md) page to generate the S3 credentials and path details you need.
 2. **Configure your CDN** — use those details to create a log-forwarding job (or upload logs manually) in your CDN provider's console.
 
 ## CDN providers {#cdn-providers}
 
-Select your CDN provider below and follow the corresponding guide.
+Follow the corresponding guide for you CDN provider.
 
 | CDN Provider | Guide |
 |---|---|
@@ -28,4 +28,4 @@ Select your CDN provider below and follow the corresponding guide.
 
 >[!NOTE]
 >
->If your CDN provider is not listed above, use the **Other** guide, which covers manual uploads, ad-hoc scripts, and any CDN that is not natively supported.
+>If your CDN provider is not listed above, use the **Other (manual / unsupported CDN)** guide, which covers manual uploads, ad-hoc scripts and any CDN that is not natively supported.

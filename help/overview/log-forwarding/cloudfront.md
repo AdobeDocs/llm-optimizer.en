@@ -6,7 +6,7 @@ feature: Agentic Traffic
 
 # Log Forwarding: CloudFront {#log-forwarding-cloudfront}
 
-This page explains how to forward CDN logs from CloudFront to Adobe’s S3 bucket for agentic traffic data collection. You will use the LLM Optimizer CDN configuration page (link TBD) to onboard to LLM Optimizer. After the onboarding process is complete (fact check), follow the steps provided on this page to configure log forwarding in the CloudFront dashboard console.
+This page explains how to forward CDN logs from CloudFront to Adobe’s S3 bucket for agentic traffic data collection. You will use the LLM Optimizer CDN configuration page to onboard to LLM Optimizer. After the onboarding process is complete, follow the steps provided on this page to configure log forwarding in the CloudFront dashboard console.
 
 ## Step 1: Onboard in LLM Optimizer {#step-1}
 
@@ -16,23 +16,23 @@ On the LLM Optimizer page [https://llmo.now/](https://llmo.now/):
 
    ![Configuration button](/help/overview/assets/log-forwarding/common/config-button.png)
 
-2. Click the **CDN Configuration** tab.
+1. Click the **CDN Configuration** tab.
 
    ![CDN Configuration tab](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
 
-3. Click **Onboard CDN**.
+1. Click **Onboard CDN**.
 
    <!-- ![Onboard CDN button](/help/overview/assets/log-forwarding/common/onboard-cdn-button.png)-->
 
-4. Enter your **AWS Account** ID.
+1. Enter your **AWS Account** ID.
 
    ![AWS Account ID](/help/overview/assets/log-forwarding/cloudfront/cloudfront-aws-account.png)
 
-5. Select **CloudFront (BYOCDN)**.
+1. Select **CloudFront (BYOCDN)**.
 
    ![Select CloudFront](/help/overview/assets/log-forwarding/cloudfront/cloudfront-select.png)
 
-6. Click **Onboard**.
+1. Click **Onboard**.
 
    ![Onboard button](/help/overview/assets/log-forwarding/common/onboard-button.png)
 
@@ -42,15 +42,15 @@ To enable standard logging, from the [AWS Management console](https://aws.amazon
 
 1. Access the [CloudFront console](https://console.aws.amazon.com/cloudfront/v4/home) and [update an existing distribution](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HowToUpdateDistribution.html#HowToUpdateDistributionProcedure).
 
-2. Open the **Logging** tab.
+1. Open the **Logging** tab.
 
-3. Choose **Add**, then select the service to receive logs, in this case **Amazon S3**.
+1. Choose **Add**, then select the service to receive logs, in this case **Amazon S3**.
 
-4. For **Destination**, select or create the resource. Enter the **bucket name**, you can copy the value from the LLM Optimizer CDN configuration page.
+1. For **Destination**, select or create the resource. Enter the **bucket name**, you can copy the value from the LLM Optimizer CDN configuration page.
 
    ![CloudFront bucket name](/help/overview/assets/log-forwarding/cloudfront/cloudfront-bucket-name.png)
 
-5. Configure **Additional settings**:
+1. Configure **Additional settings**:
 
    - **Field selection** — choose the log file fields. See the required fields on the LLM Optimizer CDN configuration page.
 
@@ -64,9 +64,9 @@ To enable standard logging, from the [AWS Management console](https://aws.amazon
 
      ![CloudFront output format](/help/overview/assets/log-forwarding/cloudfront/cloudfront-output-format.png)
 
-6. Finish the steps to update or create the distribution.
+1. Complete the steps to update or create the distribution.
 
-7. On the **Logs** page, confirm that **Enabled** appears next to the distribution.
+1. On the **Logs** page, confirm that **Enabled** appears next to the distribution.
 
 ## Enable standard logging for cross-account delivery {#cross-account}
 
@@ -92,14 +92,14 @@ Next, you need to configure the source account:
      --log-type ACCESS_LOGS
    ```
 
-2. **Create the delivery** - link source to destination; use the destination ARN from the "Configure the destination account" step:
+1. **Create the delivery** - link source to destination; use the destination ARN from the "Configure the destination account" step:
 
    ```bash
    aws logs create-delivery --delivery-source-name s3-cf-delivery \
      --delivery-destination-arn arn:aws:logs:us-east-1:222222222222:delivery-destination:cloudfront-delivery-destination
    ```
 
-3. **Verify:**
+1. **Verify:**
 
    - In the **source** account: CloudFront console > your distribution > **Logging** tab. Under **Type** you should see the S3 cross-account log delivery.
    - In the **destination** account: S3 console > bucket. You should see the prefix (for example, `MyLogPrefix`) and the logs in that folder.

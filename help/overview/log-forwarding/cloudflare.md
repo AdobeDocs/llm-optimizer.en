@@ -6,11 +6,11 @@ feature: Agentic Traffic
 
 # Log Forwarding: Cloudflare {#log-forwarding-cloudflare}
 
-This page explains how to forward CDN logs from Cloudflare to Adobe’s S3 bucket for agentic traffic data collection. You will use the LLM Optimizer CDN configuration page (link TBD) to onboard to LLM Optimizer. After the onboarding process is complete (fact check), follow the steps provided on this page to configure log forwarding in the Cloudflare dashboard console.
+This page details how to forward CDN logs from Cloudflare to Adobe’s S3 bucket for agentic traffic data collection. You will use the LLM Optimizer CDN configuration page to onboard to LLM Optimizer. After the onboarding process is complete, follow the steps provided on this page to configure log forwarding in the Cloudflare dashboard console.
 
 ## Step 1: Onboard in LLM Optimizer {#step-1}
 
-On LLM Optimizer page [https://llmo.now/](https://llmo.now/):
+On the LLM Optimizer page [https://llmo.now/](https://llmo.now/):
 
 1. Go to the **Customer Configuration Dashboard**.
 
@@ -34,7 +34,7 @@ On LLM Optimizer page [https://llmo.now/](https://llmo.now/):
 
 ## Step 2: Create a Logpush job in Cloudflare {#step-2}
 
-On the Cloudflare dashboard, follow these steps:
+On the [Cloudflare dashboard](https://dash.cloudflare.com/login), follow these steps:
 
 1. Go to the **Logpush** page at the **Domain (zone)** level.
 1. Select **Create a Logpush job**.
@@ -61,7 +61,7 @@ On the Cloudflare dashboard, follow these steps:
 
    After you complete the steps above, select **Continue**.
 
-1. To prove ownership, Cloudflare will send a file to your designated destination. To find the token, select the **Open** button in the **Overview** tab of the ownership challenge file. Copy the ownership token from the LLM Optimizer CDN configuration page then paste it into the Cloudflare dashboard to verify your access to the bucket. Enter the Ownership Token and select **Continue**.
+1. To prove ownership, Cloudflare will send a file to your designated destination. To find the token, click the **Open** button in the **Overview** tab of the ownership challenge file. Copy the ownership token from the LLM Optimizer CDN configuration page then paste it into the Cloudflare dashboard to verify your access to the bucket. Enter the Ownership Token and select **Continue**.
 
    <!--![Ownership token](/help/overview/assets/log-forwarding/cloudflare/cloudflare-ownership-token.png)-->
 

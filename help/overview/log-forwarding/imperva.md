@@ -6,7 +6,7 @@ feature: Agentic Traffic
 
 # Log Forwarding: Imperva {#log-forwarding-imperva}
 
-This guide explains how to forward CDN logs from Imperva to Adobe's S3 bucket for agentic traffic data collection. You will use the LLM Optimizer CDN configuration page to onboard to LLM Optimizer. After the onboarding process is complete (fact check), follow the steps provided on this page to configure log forwarding from the Imperva web console.
+This guide explains how to forward CDN logs from Imperva to Adobe's S3 bucket for agentic traffic data collection. You will use the LLM Optimizer CDN configuration page to onboard to LLM Optimizer. After the onboarding process is complete, follow the steps provided on this page to configure log forwarding from the Imperva web console.
 
 ## Step 1: Onboard in LLM Optimizer {#step-1}
 
@@ -44,16 +44,16 @@ On the [Imperva console](https://my.imperva.com):
    | Field | Description | Note |
    |---|---|---|
    | **Connection name** | A descriptive name for this connection (for example, Production S3 logs). You can rename the default. | |
-   | **Path** | The location of the folder where log files will be stored. Use the format `<Amazon S3 bucket name>/<log folder>`. Example: `MyBucket/MyImpervaLogFolder`. | `Amazon S3 bucket name` is the **Bucket Name** from the LLM Optimizer configuration page. ![Bucket Name](/help/overview/assets/log-forwarding/imperva/imperva-bucket-name.png) The log folder is **Path** from the LLM Optimizer configuration page. ![Path](/help/overview/assets/log-forwarding/imperva/imperva-path.png) |
+   | **Path** | The location of the folder where log files will be stored. Use the format `<Amazon S3 bucket name>/<log folder>`. For example: `MyBucket/MyImpervaLogFolder`. | `Amazon S3 bucket name` is the **Bucket Name** from the LLM Optimizer configuration page. ![Bucket Name](/help/overview/assets/log-forwarding/imperva/imperva-bucket-name.png) The log folder is **Path** from the LLM Optimizer configuration page. ![Path](/help/overview/assets/log-forwarding/imperva/imperva-path.png) |
 
-5. Click **Test connection**. Imperva runs a full test: a test file (no real data) is sent to the designated folder and then removed when the transfer is complete.
+5. Click **Test connection**. Imperva runs a full test in which a test file (no real data) is sent to the designated folder and then removed when the transfer is complete.
 
    - **Available** — storage details are valid; you can configure logs to use this connection.
    - **Undefined** — either the required details are missing or the test failed.
 
 6. Click **Save** to store the configuration.
 
-7. Configure log options (log types, log level, format, compression) and **Log Levels**. Get the values from the LLM Optimizer configuration page.
+7. Configure log options (log types, log level, format, compression) and **Log Levels**. You can get the values from the LLM Optimizer configuration page.
 
    | Field | Note |
    |---|---|
