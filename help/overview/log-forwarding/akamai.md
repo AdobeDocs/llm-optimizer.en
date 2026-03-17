@@ -26,7 +26,7 @@ On the LLM Optimizer page [https://llmo.now/](https://llmo.now/):
 
 1. Next to **Activate AI Traffic Insights**, click **Configure**.
 
-   ![Configure](/help/overview/assets/log-forwarding/akamai/akamai-configure.png)
+   ![Configure](/help/overview/assets/log-forwarding/common/configure.png)
 
 1. Select **Akamai (BYOCDN)**.
 
