@@ -34,7 +34,7 @@ On [LLM Optimizer](https://llmo.now/):
 
    ![Configure](/help/overview/assets/log-forwarding/common/configure.png)
 
-4. Select **Other**.
+1. Select **Other**.
 
    ![Select Other](/help/overview/assets/log-forwarding/other/other-select.png)
 
