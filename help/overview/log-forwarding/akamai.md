@@ -6,7 +6,7 @@ feature: Agentic Traffic
 
 # Log Forwarding: Akamai {#log-forwarding-akamai}
 
-This page explains how to forward CDN logs from Akamai to Adobe’s S3 bucket for agentic traffic data collection. You will use the LLM Optimizer CDN configuration page (link TBD) to onboard to LLM Optimizer. After the onboarding process is complete (fact check), follow the steps provided on this page to configure log forwarding in the Akamai Control Panel.
+This page explains how to forward CDN logs from Akamai to Adobe’s S3 bucket for agentic traffic data collection. You will use the LLM Optimizer CDN configuration page (link TBD) to onboard to LLM Optimizer. After the onboarding process is complete, follow the steps provided on this page to configure log forwarding in the Akamai Control Panel.
 
 ## Step 1: Onboard in LLM Optimizer {#step-1}
 
@@ -20,9 +20,13 @@ On the LLM Optimizer page [https://llmo.now/](https://llmo.now/):
 
    ![CDN Configuration tab](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
 
-1. Click **Onboard CDN**.
+1. Click **Get Started**.
 
    <!--![Onboard CDN button](/help/overview/assets/log-forwarding/common/onboard-cdn-button.png)-->
+
+1. Next to **Activate AI Traffic Insights**, click **Configure**.
+
+   ![Configure](/help/overview/assets/log-forwarding/common/akamai-configure.png)
 
 1. Select **Akamai (BYOCDN)**.
 
@@ -42,24 +46,40 @@ After creating the stream, on the Akamai control panel, click Next to continue t
 
 ![LLMO configuration fields](/help/overview/assets/log-forwarding/akamai/akamai-llmo-config-fields.png)
 
-Follow the groups below locate the parameters in the Akamai data-set list:
+The mapping should be as follows:
 
 * **Log Information**
-  reqTimeSec
+  reqTimeSec -> Request time
 * **Geo Data**
-  country
+  country -> Country/Region
 * **Message exchange data**
-  reqHost
-  reqPath
-  queryStr
-  reqMethod
-  ua
-  statusCode
-  rspContentType
+  reqHost -> Request host
+  reqPath -> Request path
+  queryStr -> Query string
+  reqMethod -> Request method
+  ua -> User-Agent
+  statusCode -> HTTP status code
+  rspContentType -> Response Content-Type
 * **Request header data**
-  referer
+  referer -> Referer
 * **Network performance data**
-  timeToFirstByte
+  timeToFirstByte -> Time to first byte
+
+The Akamai data set fields (including IDs) are as follows:
+
+1100, # reqTimeSec -> Request time
+2012, # country -> Country/Region
+1011, # reqHost -> Request host
+1013, # reqPath -> Request path
+2009, # queryStr -> Query string
+1012, # reqMethod -> Request method
+1017, # ua -> User-Agent
+1008, # statusCode -> HTTP status code
+1032, # referer -> Referer
+1016, # rspContentType -> Response Content-Type
+2025  # timeToFirstByte -> Time to first byte
+
+
 
 ## Step 4: Configure destination {#step-4}
 
@@ -100,3 +120,7 @@ After creating the data streams and choosing the parameters you need to configur
    ![Log interval](/help/overview/assets/log-forwarding/akamai/akamai-log-interval.png)
 
 10. Click **Next** to complete the process.
+
+Before final validation, the configuration should look similar this example:
+
+![Configuration Validation](/help/overview/assets/log-forwarding/akamai/akamai-validation.png)
