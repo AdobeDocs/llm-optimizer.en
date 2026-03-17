@@ -20,7 +20,10 @@ On the LLM Optimizer page [https://llmo.now/](https://llmo.now/):
 
    ![CDN Configuration tab](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
 
-1. Click **Onboard CDN**.
+1. Click **Get Started**.
+1. Next to **Activate AI Traffic Insights**, click **Configure**.
+
+   ![Configure](/help/overview/assets/log-forwarding/common/configure.png)
 1. Select **Fastly (BYOCDN)**.
 
    ![Select Fastly](/help/overview/assets/log-forwarding/fastly/fastly-select.png)
@@ -56,7 +59,7 @@ To create an S3 endpoint, on the **Fastly Control Panel**:
 >
 >Password managers may auto-fill the **Secret Key** field with your Fastly password. If the AWS integration fails, enter the Secret Key manually.
 
-After you complete the steps above, click **Advanced options** and set::
+After you complete the steps above, click **Advanced options** and set:
 
 | Field | Description |
 | --- | --- |

@@ -19,7 +19,10 @@ On the LLM Optimizer page [https://llmo.now/](https://llmo.now/):
 1. Click the **CDN Configuration** tab.
 
    ![CDN Configuration tab](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
-1. Click **Onboard CDN**.
+1. Click **Get Started**.
+1. Next to **Activate AI Traffic Insights**, click **Configure**.
+
+   ![Configure](/help/overview/assets/log-forwarding/common/configure.png)
 1. Select **Imperva (BYOCDN)**.
 
    ![Select Imperva](/help/overview/assets/log-forwarding/imperva/imperva-select.png)

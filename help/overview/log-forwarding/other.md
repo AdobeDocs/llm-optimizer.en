@@ -22,19 +22,23 @@ On [LLM Optimizer](https://llmo.now/):
 
    ![Configuration button](/help/overview/assets/log-forwarding/common/config-button.png)
 
-2. Click the **CDN Configuration** tab.
+1. Click the **CDN Configuration** tab.
 
    ![CDN Configuration tab](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
 
-3. Click **Onboard CDN**.
+1. Click **Get Started**.
 
    <!-- ![Onboard CDN button](/help/overview/assets/log-forwarding/common/onboard-cdn-button.png)-->
+
+1. Next to **Activate AI Traffic Insights**, click **Configure**.
+
+   ![Configure](/help/overview/assets/log-forwarding/common/configure.png)
 
 4. Select **Other**.
 
    ![Select Other](/help/overview/assets/log-forwarding/other/other-select.png)
 
-5. Click **Onboard**.
+1. Click **Onboard**.
 
  <!--   ![Onboard button](/help/overview/assets/log-forwarding/common/onboard-button.png)-->
 

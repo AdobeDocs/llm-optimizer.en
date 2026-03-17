@@ -20,9 +20,13 @@ On the LLM Optimizer page [https://llmo.now/](https://llmo.now/):
 
    ![CDN Configuration tab](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
 
-1. Click **Onboard CDN**.
+1. Click **Get Started**.
 
    <!-- ![Onboard CDN button](/help/overview/assets/log-forwarding/common/onboard-cdn-button.png)-->
+
+1. Next to **Activate AI Traffic Insights**, click **Configure**.
+
+   ![Configure](/help/overview/assets/log-forwarding/common/configure.png)
 
 1. Enter your **AWS Account** ID.
 
