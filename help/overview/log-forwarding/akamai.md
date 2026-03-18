@@ -6,7 +6,7 @@ feature: Agentic Traffic
 
 # Log Forwarding: Akamai {#log-forwarding-akamai}
 
-This page explains how to forward CDN logs from Akamai to Adobe’s S3 bucket for agentic traffic data collection. You will use the LLM Optimizer CDN configuration page (link TBD) to onboard to LLM Optimizer. After the onboarding process is complete, follow the steps provided on this page to configure log forwarding in the Akamai Control Panel.
+This page explains how to forward CDN logs from Akamai to Adobe’s S3 bucket for agentic traffic data collection. You will use the LLM Optimizer CDN configuration page to onboard to LLM Optimizer. After the onboarding process is complete, follow the steps provided on this page to configure log forwarding in the Akamai Control Panel.
 
 ## Step 1: Onboard in LLM Optimizer {#step-1}
 
@@ -79,8 +79,6 @@ The Akamai data set fields (including IDs) are as follows:
 1016, # rspContentType -> Response Content-Type
 2025  # timeToFirstByte -> Time to first byte
 
-
-
 ## Step 4: Configure destination {#step-4}
 
 After creating the data streams and choosing the parameters you need to configure the destination. To configure the destination, follow these steps:
@@ -121,6 +119,6 @@ After creating the data streams and choosing the parameters you need to configur
 
 10. Click **Next** to complete the process.
 
-Before final validation, the configuration should look similar this example:
+Before final validation, the configuration should look similar to this example:
 
 ![Configuration Validation](/help/overview/assets/log-forwarding/akamai/akamai-validation.png)

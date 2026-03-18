@@ -39,6 +39,8 @@ On the **Onboard CDN Provider** window:
 
 If you select **Other**, you will have to reach out to llmo-now@adobe.com for assistance.
 
+In case of log-forwarding for BYOCDN please see the following page [BYOCDN Log Forwarding Overview](/help/overview/log-forwarding/log-forwarding-overview.md)
+
 Once activated, logs are ingested and the dashboard will populate with metrics such as total agent interactions, success rate, hits by market, user agent analysis, and URL-level performance.
 
 LLM Optimizer processes a subset of fields from the the CDN logs. Although raw log field names vary by CDN provider, they are normalized and presented as:

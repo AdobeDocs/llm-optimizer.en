@@ -46,7 +46,7 @@ On the [Imperva console](https://my.imperva.com):
 
    | Field | Description | Note |
    |---|---|---|
-   | **Connection name** | A descriptive name for this connection (for example, Production S3 logs). You can rename the default. | |
+   | **Connection name** | A descriptive name for the connection (for example, Production S3 logs). You can rename the default. | |
    | **Path** | The location of the folder where log files will be stored. Use the format `<Amazon S3 bucket name>/<log folder>`. For example: `MyBucket/MyImpervaLogFolder`. | `Amazon S3 bucket name` is the **Bucket Name** from the LLM Optimizer configuration page. ![Bucket Name](/help/overview/assets/log-forwarding/imperva/imperva-bucket-name.png) The log folder is **Path** from the LLM Optimizer configuration page. ![Path](/help/overview/assets/log-forwarding/imperva/imperva-path.png) |
 
 5. Click **Test connection**. Imperva runs a full test in which a test file (no real data) is sent to the designated folder and then removed when the transfer is complete.

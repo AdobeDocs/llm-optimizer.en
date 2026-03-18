@@ -10,7 +10,7 @@ Log forwarding for BYOCDN is the process of sending your CDN access logs to Adob
 
 The guides provided below, follow the same two-phase workflow:
 
-1. **Onboard in LLM Optimizer** — register your CDN on the [CDN Configuration](/help/dashboards/customer-configuration.md) page to generate the S3 credentials and path details you need.
+1. **Onboard in LLM Optimizer** — register your CDN on the [CDN Configuration](/help/dashboards/customer-configuration.md) page to generate the needed S3 credentials and path details.
 2. **Configure your CDN** — use those details to create a log-forwarding job (or upload logs manually) in your CDN provider's console.
 
 ## CDN providers {#cdn-providers}
@@ -19,13 +19,13 @@ Follow the corresponding guide for you CDN provider.
 
 | CDN Provider | Guide |
 |---|---|
-| Akamai | [View setup guide](/help/overview/log-forwarding/akamai.md) |
-| Cloudflare | [View setup guide](/help/overview/log-forwarding/cloudflare.md) |
-| CloudFront | [View setup guide](/help/overview/log-forwarding/cloudfront.md) |
-| Fastly | [View setup guide](/help/overview/log-forwarding/fastly.md) |
-| Imperva | [View setup guide](/help/overview/log-forwarding/imperva.md) |
-| Other (manual / unsupported CDN) | [View setup guide](/help/overview/log-forwarding/other.md) |
+| Akamai | [View guide](/help/overview/log-forwarding/akamai.md) |
+| Cloudflare | [View guide](/help/overview/log-forwarding/cloudflare.md) |
+| CloudFront | [View guide](/help/overview/log-forwarding/cloudfront.md) |
+| Fastly | [View guide](/help/overview/log-forwarding/fastly.md) |
+| Imperva | [View guide](/help/overview/log-forwarding/imperva.md) |
+| Other (manual / unsupported CDN) | [View guide](/help/overview/log-forwarding/other.md) |
 
 >[!NOTE]
 >
->If your CDN provider is not listed above, use the **Other (manual / unsupported CDN)** guide, which covers manual uploads, ad-hoc scripts and any CDN that is not natively supported.
+>If your CDN provider is not listed above, use the **Other (manual / unsupported CDN)** guide which covers manual uploads, ad-hoc scripts and any CDN that is not natively supported.

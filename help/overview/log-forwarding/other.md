@@ -46,7 +46,7 @@ On [LLM Optimizer](https://llmo.now/):
 
 ### Required log format (JSON Lines) {#log-format}
 
-Logs must be uploaded as newline-delimited JSON (**one JSON object per line**). Each log line must include the following fields **exactly as spelled below**.
+Logs must be uploaded as newline delimited JSON (**one JSON object per line**). Each log line must include the following fields **exactly as spelled below**.
 
 #### Field-by-field schema {#schema}
 
@@ -90,7 +90,7 @@ The ingestion and aggregation pipelines are strict about **field names and data 
 
 Upload logs under the appropriate folder path using the format: **`yyyy/mm/dd/`** (with slashes).
 
-Example for logs from Feb 1, 2025 UTC: `ABC123AdobeOrg/raw/byocdn-other/2025/02/01/`
+An example log from Feb 1, 2025 UTC: `ABC123AdobeOrg/raw/byocdn-other/2025/02/01/`
 
 #### Processing rule {#processing-rule}
 

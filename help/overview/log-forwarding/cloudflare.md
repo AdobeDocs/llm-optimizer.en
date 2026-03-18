@@ -93,4 +93,4 @@ On the [Cloudflare dashboard](https://dash.cloudflare.com/login), follow these s
 
      ![Sampling rate](/help/overview/assets/log-forwarding/cloudflare/cloudflare-sampling-rate.png)
 
-1. Select **Submit** once you are done configuring your Logpush job.
+1. Select **Submit** once you are done configuring the Logpush job.
