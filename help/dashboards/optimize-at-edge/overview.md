@@ -151,7 +151,7 @@ Rollback safely reverts a previously deployed optimization. The AI-only version 
 
 Q: Can Trial customers try out Optimize at Edge?
 
-Yes, Trial customers can access one optimization opportunity and deploy it to up to 10 pages. By default, the opportunity is Recover Content Visibility, which enables AI agents to access the complete version of your page content.
+Yes, Trial customers can access one optimization opportunity and deploy it for up to 10 pages. By default, the opportunity is Recover Content Visibility, which enables AI agents to access the complete version of your page content.
 
 Q. What kind of LLMs do you target with Optimize at Edge?
 
