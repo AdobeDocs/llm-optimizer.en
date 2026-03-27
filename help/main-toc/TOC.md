@@ -21,6 +21,14 @@ user-guide-description: Boost your brand with Adobe LLM Optimizer. Track mention
   + [Opportunities](/help/dashboards/opportunities.md)
   + [Customer Configuration](/help/dashboards/customer-configuration.md)
   + [Collaboration](/help/dashboards/collaboration.md)
++ BYOCDN Log Forwarding{#log-forwarding}
+  + [Overview](/help/overview/log-forwarding/log-forwarding-overview.md)
+  + [Akamai](/help/overview/log-forwarding/akamai.md)
+  + [Cloudflare](/help/overview/log-forwarding/cloudflare.md)
+  + [CloudFront](/help/overview/log-forwarding/cloudfront.md)
+  + [Fastly](/help/overview/log-forwarding/fastly.md)
+  + [Imperva](/help/overview/log-forwarding/imperva.md)
+  + [Other (Manual Upload)](/help/overview/log-forwarding/other.md)
 + Additional Resources{#resources}
   + Optimize at Edge{#optimize-at-edge}
     + [Overview](/help/dashboards/optimize-at-edge/overview.md)
@@ -28,3 +36,4 @@ user-guide-description: Boost your brand with Adobe LLM Optimizer. Track mention
     + [Fastly (BYOCDN)](/help/dashboards/optimize-at-edge/fastly-byocdn.md)
     + [Akamai (BYOCDN)](/help/dashboards/optimize-at-edge/akamai-byocdn.md)
     + [Cloudflare (BYOCDN)](/help/dashboards/optimize-at-edge/cloudflare-byocdn.md)
+    + [CloudFront (BYOCDN)](/help/dashboards/optimize-at-edge/cloudfront-byocdn.md)
