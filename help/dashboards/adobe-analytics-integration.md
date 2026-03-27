@@ -1,5 +1,5 @@
 ---
-title: Adobe Analytics integration
+title: Adobe Analytics Integration
 description: Learn how to connect Adobe Analytics with LLM Optimizer to measure AI-driven discovery, site engagement, and business outcomes in the Referral Traffic dashboard.
 feature: Referral Traffic
 ---
@@ -59,15 +59,18 @@ The connection flow starts from the [Referral Traffic](/help/dashboards/referral
 
    ![Page URL dimension and Save & Enable](/help/dashboards/assets/aa-integration-06-page-url-dimension.png)
 
-1. After saving, the configuration should show the  **Connected** status. You can return to the Referral Traffic dashboard with **Go to Referral Traffic Dashboard**. In **Referral Traffic** on **Business Impact**, the status should appear as **Connected to Adobe Analytics**.
+1. After saving, the configuration should show the  **Connected** status. You can return to the Referral Traffic dashboard with **Go to Referral Traffic Dashboard**. In **Referral Traffic** on the **Business Impact** tab, the status should appear as **Connected to Adobe Analytics**.
 
    ![Connected to Adobe Analytics in configuration and Business Impact](/help/dashboards/assets/aa-integration-07-connected.png)
 
 ### After you connect {#after-connect}
 
-* The last four full calendar weeks and the current calendar week are backfilled.
-* After backfill, data is refreshed with a **daily** pull of the full prior day.
-* Note that the backfill may take a couple of hours.
+* LLM Optimizer backfills the **last four full calendar weeks** and the **current calendar week to date**.
+* After backfill, data is refreshed **daily** with a pull of the **full prior day**.
+
+>[!NOTE]
+>
+>The backfill may take a couple of hours to complete.
 
 ## How it works {#how-it-works}
 
@@ -75,20 +78,13 @@ The connection flow starts from the [Referral Traffic](/help/dashboards/referral
 
 During setup, you define which report suite and page dimension LLM Optimizer uses for the Adobe Analytics ingestion. The page dimension can be the standard `variables/page` mapping or a custom `eVar`, depending on your report suite.
 
-As stated above, after you save the configuration:
-
-* LLM Optimizer backfills the **last four full calendar weeks** and the **current calendar week to date**.
-* LLM Optimizer then runs **daily** and ingests the **full prior day**
-
->[!NOTE]
->
->Backfill can take a few hours to complete.
-
 ### How LLM traffic is identified
 
-LLM-originated traffic is identified by using Adobe Analytics [Referrer type — Conversational AI tools](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer-type#conversational-ai-tools).
+LLM-originated traffic is identified by using the Adobe Analytics [Referrer type — Conversational AI tools](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer-type#conversational-ai-tools).
 
 ### Data ingested {#data-ingested}
+
+The following data is ingested by LLM Optimizer.
 
 **Dimensions**
 
@@ -134,7 +130,7 @@ No. The integration is available only to paid LLM Optimizer customers.
 
 Q: What data is collected or stored?
 
-See the [Data ingested](#data-ingested) chapter above. LLM Optimizer works with aggregated metrics from Adobe Analytics APIs authorized by your organization—not raw hit-level exports for individual users.
+See the [Data ingested](#data-ingested) chapter above. LLM Optimizer works with aggregated metrics from Adobe Analytics APIs authorized by your organization not raw hit-level data.
 
 Q: How is data ingested?
 
@@ -158,12 +154,12 @@ Q: Are user identifiers (ECID, IP address, cookie IDs) stored?
 
 Q: How long is data retained?
 
-Retention policies may evolve. Contact Adobe or your account team for current retention terms.
+Keep in mind that retention policies may evolve. Currently, data is stored indefinitely.
 
 Q: Is data encrypted in transit and at rest?
 
-A: Data is encrypted **in transit**. For encryption **at rest**, rely on your organization's Adobe Analytics and cloud commitments; confirm details with Adobe if you have compliance requirements.
+Currently, data is encrypted in transit not at rest. This may change in future updates.
 
 Q: Is historical data backfilled?
 
-A: Yes. After a successful setup, the last four full calendar weeks and the current calendar week are backfilled. See also [After you connect](#after-connect)).
+Yes. After a successful setup, the last four full calendar weeks and the current calendar week are backfilled. See also [After you connect](#after-connect)).
