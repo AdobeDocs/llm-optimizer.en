@@ -24,6 +24,58 @@ This integration connects AI visibility measurement with business performance an
 >
 >The Adobe Analytics integration is included with the paid LLM Optimizer offer. Organizations on the free trial cannot connect Adobe Analytics until they upgrade to a paid offer.
 
+## Connect Adobe Analytics (Referral Traffic) {#connect}
+
+The connection flow starts from the [Referral Traffic](/help/dashboards/referral-traffic.md) dashboard, where you open the **Business Impact** experience and complete analytics credentials in [Customer Configuration](/help/dashboards/customer-configuration.md).
+
+1. Open the [Referral Traffic](/help/dashboards/referral-traffic.md) dashboard.
+
+   The default view is often **Traffic Insights**.
+
+   ![Referral Traffic dashboard, Traffic Insights tab](/help/dashboards/assets/aa-integration-01-referral-traffic-traffic-insights.png)
+
+1. Select the **Business Impact** tab.
+
+   If no analytics provider is connected, a banner appears: **Connect to See Business Impact**, with **Connect to Analytics**.
+
+   ![Business Impact tab with Connect to Analytics](/help/dashboards/assets/aa-integration-02-business-impact-connect.png)
+
+1. Select **Connect to Analytics**.
+
+   You are taken to [Customer Configuration](/help/dashboards/customer-configuration.md) on the **Analytics** tab.
+
+   ![Customer Configuration, Analytics tab](/help/dashboards/assets/aa-integration-03-analytics-tab.png)
+
+1. Under **Credentials**, enter the **Client ID** and **Client Secret**, then select **Verify & Continue**.
+
+   * **Verify & Continue** is available only when both fields are filled.
+   * After verification succeeds, report suites load for selection.
+   * Use the **Client ID** and **Client Secret** for a [technical account](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/){target="_blank"} that has access to the report suite you need.
+
+   ![Analytics credentials and Verify & Continue](/help/dashboards/assets/aa-integration-04-credentials.png)
+
+1. Under **Configuration**, choose a **Report Suite**.
+
+   When a report suite is selected, LLM Optimizer loads the **Page URL Dimension** options available for that suite.
+
+   ![Report suite selected and dimensions loading](/help/dashboards/assets/aa-integration-05-report-suite.png)
+
+1. Choose a **Page URL Dimension**, then select **Save & Enable**.
+
+   * **Page URL Dimension** stays disabled until a report suite is selected and dimensions have loaded.
+   * **Save & Enable** is available only after you select a page URL dimension.
+
+   ![Page URL dimension and Save & Enable](/help/dashboards/assets/aa-integration-06-page-url-dimension.png)
+
+1. After saving, the configuration shows **Connected**. You can return to the dashboard with **Go to Referral Traffic Dashboard**. In **Referral Traffic** on **Business Impact**, the status appears as **Connected to Adobe Analytics**.
+
+   ![Connected to Adobe Analytics in configuration and Business Impact](/help/dashboards/assets/aa-integration-07-connected.png)
+
+### After you connect {#after-connect}
+
+* The last four full calendar weeks and the current calendar week are backfilled.
+* After backfill, data is refreshed with a **daily** pull of the full prior day.
+
 ## How it works {#how-it-works}
 
 ### Configuration
@@ -81,116 +133,44 @@ This dataset supports LLM Optimizer insights for:
 * Regional and device-level trends
 * Downstream commerce outcomes
 
-## Connect Adobe Analytics (Referral Traffic) {#connect}
-
-The connection flow starts from the [Referral Traffic](/help/dashboards/referral-traffic.md) dashboard, where you open the **Business Impact** experience and complete analytics credentials in [Customer Configuration](/help/dashboards/customer-configuration.md).
-
-1. Open the [Referral Traffic](/help/dashboards/referral-traffic.md) dashboard.
-
-   The default view is often **Traffic Insights**.
-
-   ![Referral Traffic dashboard, Traffic Insights tab](/help/dashboards/assets/aa-integration-01-referral-traffic-traffic-insights.png)
-
-1. Select the **Business Impact** tab.
-
-   If no analytics provider is connected, a banner appears: **Connect to See Business Impact**, with **Connect to Analytics**.
-
-   ![Business Impact tab with Connect to Analytics](/help/dashboards/assets/aa-integration-02-business-impact-connect.png)
-
-1. Select **Connect to Analytics**.
-
-   You are taken to [Customer Configuration](/help/dashboards/customer-configuration.md) on the **Analytics** tab.
-
-   ![Customer Configuration, Analytics tab](/help/dashboards/assets/aa-integration-03-analytics-tab.png)
-
-1. Under **Credentials**, enter the **Client ID** and **Client Secret**, then select **Verify & Continue**.
-
-   * **Verify & Continue** is available only when both fields are filled.
-   * After verification succeeds, report suites load for selection.
-   * Use the **Client ID** and **Client Secret** for a [technical account](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/){target="_blank"} that has access to the report suite you need.
-
-   ![Analytics credentials and Verify & Continue](/help/dashboards/assets/aa-integration-04-credentials.png)
-
-1. Under **Configuration**, choose a **Report Suite**.
-
-   When a report suite is selected, LLM Optimizer loads the **Page URL Dimension** options available for that suite.
-
-   ![Report suite selected and dimensions loading](/help/dashboards/assets/aa-integration-05-report-suite.png)
-
-1. Choose a **Page URL Dimension**, then select **Save & Enable**.
-
-   * **Page URL Dimension** stays disabled until a report suite is selected and dimensions have loaded.
-   * **Save & Enable** is available only after you select a page URL dimension.
-
-   ![Page URL dimension and Save & Enable](/help/dashboards/assets/aa-integration-06-page-url-dimension.png)
-
-1. After saving, the configuration shows **Connected**. You can return to the dashboard with **Go to Referral Traffic Dashboard**. In **Referral Traffic** on **Business Impact**, the status appears as **Connected to Adobe Analytics**.
-
-   ![Connected to Adobe Analytics in configuration and Business Impact](/help/dashboards/assets/aa-integration-07-connected.png)
-
-### After you connect {#after-connect}
-
-* The last four full calendar weeks and the current calendar week are backfilled.
-* After backfill, data is refreshed with a **daily** pull of the full prior day.
-
 ## Frequently asked questions {#faq}
 
-+++Is the Adobe Analytics integration available during the trial?
+Q: Is the Adobe Analytics integration available during the trial?
 
-No. The integration is available only to paid LLM Optimizer customers.
+A: No. The integration is available only to paid LLM Optimizer customers.
 
-+++
+Q: What data is collected or stored?
 
-+++What data is collected or stored?
+A: See [Data ingested](#data-ingested). LLM Optimizer works with aggregated metrics from Adobe Analytics APIs authorized by your organization—not raw hit-level exports for individual users.
 
-See [Data ingested](#data-ingested). LLM Optimizer works with aggregated metrics from Adobe Analytics APIs authorized by your organization—not raw hit-level exports for individual users.
+Q: How is data ingested?
 
-+++
+A: Your organization authorizes LLM Optimizer to query Adobe Analytics APIs. Referral traffic aligned to LLM sources is consumed through those APIs.
 
-+++How is data ingested?
+Q: How often is data refreshed?
 
-Your organization authorizes LLM Optimizer to query Adobe Analytics APIs. Referral traffic aligned to LLM sources is consumed through those APIs.
+A: Data is refreshed **daily** (full prior day after backfill completes).
 
-+++
+Q: Is raw hit-level data stored in LLM Optimizer?
 
-+++How often is data refreshed?
+A: No. Only **aggregated** metrics are used to understand traffic patterns and trends.
 
-Data is refreshed **daily** (full prior day after backfill completes).
+Q: Are full URLs, query strings, or page content stored?
 
-+++
+A: Full URLs used for the selected page dimension can be ingested; query strings and page content are not ingested for this integration.
 
-+++Is raw hit-level data stored in LLM Optimizer?
+Q: Are user identifiers (ECID, IP address, cookie IDs) stored?
 
-No. Only **aggregated** metrics are used to understand traffic patterns and trends.
+A: No.
 
-+++
+Q: How long is data retained?
 
-+++Are full URLs, query strings, or page content stored?
+A: Retention policies may evolve. Contact Adobe or your account team for current retention terms.
 
-Full URLs used for the selected page dimension can be ingested; query strings and page content are not ingested for this integration.
+Q: Is data encrypted in transit and at rest?
 
-+++
+A: Data is encrypted **in transit**. For encryption **at rest**, rely on your organization's Adobe Analytics and cloud commitments; confirm details with Adobe if you have compliance requirements.
 
-+++Are user identifiers (ECID, IP address, cookie IDs) stored?
+Q: Is historical data backfilled?
 
-No.
-
-+++
-
-+++How long is data retained?
-
-Retention policies may evolve. Contact Adobe or your account team for current retention terms.
-
-+++
-
-+++Is data encrypted in transit and at rest?
-
-Data is encrypted **in transit**. For encryption **at rest**, rely on your organization's Adobe Analytics and cloud commitments; confirm details with Adobe if you have compliance requirements.
-
-+++
-
-+++Is historical data backfilled?
-
-Yes. After a successful setup, the last four full calendar weeks and the current calendar week are backfilled (see [After you connect](#after-connect)).
-
-+++
+A: Yes. After a successful setup, the last four full calendar weeks and the current calendar week are backfilled (see [After you connect](#after-connect)).
