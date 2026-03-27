@@ -8,6 +8,8 @@ feature: Referral Traffic
 
 Referral Traffic shows how visitors arrive at your site from external platforms, AI citations, and referral links. It tracks and analyzes traffic sources, referral patterns, and conversion metrics from external websites and platforms. This will help you understand which sources, regions, and pages drive the most engaged traffic. <!--Data is sourced from the CDN logs, a privacy-preserving source that does not capture personal user data.--> There are also customizable filters to help you refine the displayed data.
 
+By default, this dashboard builds traffic insights from **CDN logs**. If your organization is on a paid offer, connect **[!DNL Adobe Analytics]** to add **[!UICONTROL Business Impact]** views—conversion and engagement metrics for visits that originate from LLM referrals. See [Adobe Analytics integration](/help/dashboards/adobe-analytics-integration.md) for eligibility, ingested data, and the connection procedure.
+
 ![Referral Page](/help/dashboards/assets/referral-traffic.png)
 
 This page details the following:
@@ -39,7 +41,7 @@ At the top of the page, you can apply filters to refine your view. The filters y
 * **Page Intent**  - Filter referral traffic by user intent.
 * **Channel Source** - Filter by the channel's source. options include: LLMs, earned, paid, or mixed referral channels.
 * **Device Type** - Analyze traffic by the visitor's device type either desktop, mobile or all devices.
-**Region** - View referral patterns across different geographies.
+* **Region** - View referral patterns across different geographies.
 
 After you select the desired filter, click **Apply Filters** to apply the selection to the dashboard.
 
