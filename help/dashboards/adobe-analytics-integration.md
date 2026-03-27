@@ -1,16 +1,16 @@
 ---
 title: Adobe Analytics integration
-description: "Learn how to connect [!DNL Adobe Analytics] with [!DNL LLM Optimizer] to measure AI-driven discovery, site engagement, and business outcomes in [!UICONTROL Referral Traffic]."
+description: "Learn how to connect Adobe Analytics with LLM Optimizer to measure AI-driven discovery, site engagement, and business outcomes in Referral Traffic."
 feature: Referral Traffic
 ---
 
 # Adobe Analytics integration
 
-The [!DNL Adobe Analytics] integration connects [!DNL LLM Optimizer] with your organization's [!DNL Adobe Analytics] data so you can measure how AI-driven discovery relates to real website engagement and business outcomes.
+The Adobe Analytics integration connects LLM Optimizer with your organization's Adobe Analytics data so you can measure how AI-driven discovery relates to real website engagement and business outcomes.
 
 ## Value {#value}
 
-By linking analytics data with AI visibility insights, [!DNL LLM Optimizer] helps you track:
+By linking analytics data with AI visibility insights, LLM Optimizer helps you track:
 
 * User engagement on AI-referred pages
 * Conversion signals tied to AI discovery journeys
@@ -22,18 +22,18 @@ This integration connects AI visibility measurement with business performance an
 
 >[!IMPORTANT]
 >
->The [!DNL Adobe Analytics] integration is included with the paid [!DNL LLM Optimizer] offer. Organizations on the free trial cannot connect [!DNL Adobe Analytics] until they upgrade to a paid offer.
+>The Adobe Analytics integration is included with the paid LLM Optimizer offer. Organizations on the free trial cannot connect Adobe Analytics until they upgrade to a paid offer.
 
 ## How it works {#how-it-works}
 
 ### Configuration
 
-During setup, you define which report suite and page dimension [!DNL LLM Optimizer] uses for [!DNL Adobe Analytics] ingestion. The page dimension can be the standard `variables/page` mapping or a custom eVar that represents the page URL, depending on your report suite.
+During setup, you define which report suite and page dimension LLM Optimizer uses for Adobe Analytics ingestion. The page dimension can be the standard `variables/page` mapping or a custom eVar that represents the page URL, depending on your report suite.
 
 After you save the configuration:
 
-* [!DNL LLM Optimizer] backfills the **last four full calendar weeks** and the **current calendar week to date**
-* [!DNL LLM Optimizer] then runs **daily** and ingests the **full prior day**
+* LLM Optimizer backfills the **last four full calendar weeks** and the **current calendar week to date**
+* LLM Optimizer then runs **daily** and ingests the **full prior day**
 
 >[!NOTE]
 >
@@ -41,7 +41,7 @@ After you save the configuration:
 
 ### How LLM traffic is identified
 
-LLM-originated traffic is identified using [!DNL Adobe Analytics] when **[!UICONTROL Referrer type]** is **[!UICONTROL Conversational AI tools]**. See [Referrer type — Conversational AI tools](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer-type#conversational-ai-tools){target="_blank"} in the [!DNL Adobe Analytics] documentation.
+LLM-originated traffic is identified using Adobe Analytics when **Referrer type** is **Conversational AI tools**. See [Referrer type — Conversational AI tools](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer-type#conversational-ai-tools){target="_blank"} in the Adobe Analytics documentation.
 
 ### Data ingested {#data-ingested}
 
@@ -74,7 +74,7 @@ LLM-originated traffic is identified using [!DNL Adobe Analytics] when **[!UICON
 
 ### How LLM Optimizer uses this data
 
-This dataset supports [!DNL LLM Optimizer] insights for:
+This dataset supports LLM Optimizer insights for:
 
 * Page-level LLM traffic performance
 * Referrer performance across LLM sources
@@ -83,48 +83,48 @@ This dataset supports [!DNL LLM Optimizer] insights for:
 
 ## Connect Adobe Analytics (Referral Traffic) {#connect}
 
-The connection flow starts from the [[!UICONTROL Referral Traffic]](/help/dashboards/referral-traffic.md) dashboard, where you open the **[!UICONTROL Business Impact]** experience and complete analytics credentials in [[!UICONTROL Customer Configuration]](/help/dashboards/customer-configuration.md).
+The connection flow starts from the [Referral Traffic](/help/dashboards/referral-traffic.md) dashboard, where you open the **Business Impact** experience and complete analytics credentials in [Customer Configuration](/help/dashboards/customer-configuration.md).
 
-1. Open the [[!UICONTROL Referral Traffic]](/help/dashboards/referral-traffic.md) dashboard.
+1. Open the [Referral Traffic](/help/dashboards/referral-traffic.md) dashboard.
 
-   The default view is often **[!UICONTROL Traffic Insights]**.
+   The default view is often **Traffic Insights**.
 
    ![Referral Traffic dashboard, Traffic Insights tab](/help/dashboards/assets/aa-integration-01-referral-traffic-traffic-insights.png)
 
-1. Select the **[!UICONTROL Business Impact]** tab.
+1. Select the **Business Impact** tab.
 
-   If no analytics provider is connected, a banner appears: **[!UICONTROL Connect to See Business Impact]**, with **[!UICONTROL Connect to Analytics]**.
+   If no analytics provider is connected, a banner appears: **Connect to See Business Impact**, with **Connect to Analytics**.
 
    ![Business Impact tab with Connect to Analytics](/help/dashboards/assets/aa-integration-02-business-impact-connect.png)
 
-1. Select **[!UICONTROL Connect to Analytics]**.
+1. Select **Connect to Analytics**.
 
-   You are taken to [[!UICONTROL Customer Configuration]](/help/dashboards/customer-configuration.md) on the **[!UICONTROL Analytics]** tab.
+   You are taken to [Customer Configuration](/help/dashboards/customer-configuration.md) on the **Analytics** tab.
 
    ![Customer Configuration, Analytics tab](/help/dashboards/assets/aa-integration-03-analytics-tab.png)
 
-1. Under **[!UICONTROL Credentials]**, enter the **[!UICONTROL Client ID]** and **[!UICONTROL Client Secret]**, then select **[!UICONTROL Verify & Continue]**.
+1. Under **Credentials**, enter the **Client ID** and **Client Secret**, then select **Verify & Continue**.
 
-   * **[!UICONTROL Verify & Continue]** is available only when both fields are filled.
+   * **Verify & Continue** is available only when both fields are filled.
    * After verification succeeds, report suites load for selection.
-   * Use the **[!UICONTROL Client ID]** and **[!UICONTROL Client Secret]** for a [technical account](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/){target="_blank"} that has access to the report suite you need.
+   * Use the **Client ID** and **Client Secret** for a [technical account](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/){target="_blank"} that has access to the report suite you need.
 
    ![Analytics credentials and Verify & Continue](/help/dashboards/assets/aa-integration-04-credentials.png)
 
-1. Under **[!UICONTROL Configuration]**, choose a **[!UICONTROL Report Suite]**.
+1. Under **Configuration**, choose a **Report Suite**.
 
-   When a report suite is selected, [!DNL LLM Optimizer] loads the **[!UICONTROL Page URL Dimension]** options available for that suite.
+   When a report suite is selected, LLM Optimizer loads the **Page URL Dimension** options available for that suite.
 
    ![Report suite selected and dimensions loading](/help/dashboards/assets/aa-integration-05-report-suite.png)
 
-1. Choose a **[!UICONTROL Page URL Dimension]**, then select **[!UICONTROL Save & Enable]**.
+1. Choose a **Page URL Dimension**, then select **Save & Enable**.
 
-   * **[!UICONTROL Page URL Dimension]** stays disabled until a report suite is selected and dimensions have loaded.
-   * **[!UICONTROL Save & Enable]** is available only after you select a page URL dimension.
+   * **Page URL Dimension** stays disabled until a report suite is selected and dimensions have loaded.
+   * **Save & Enable** is available only after you select a page URL dimension.
 
    ![Page URL dimension and Save & Enable](/help/dashboards/assets/aa-integration-06-page-url-dimension.png)
 
-1. After saving, the configuration shows **[!UICONTROL Connected]**. You can return to the dashboard with **[!UICONTROL Go to Referral Traffic Dashboard]**. In **[!UICONTROL Referral Traffic]** on **[!UICONTROL Business Impact]**, the status appears as **[!UICONTROL Connected to Adobe Analytics]**.
+1. After saving, the configuration shows **Connected**. You can return to the dashboard with **Go to Referral Traffic Dashboard**. In **Referral Traffic** on **Business Impact**, the status appears as **Connected to Adobe Analytics**.
 
    ![Connected to Adobe Analytics in configuration and Business Impact](/help/dashboards/assets/aa-integration-07-connected.png)
 
@@ -135,21 +135,21 @@ The connection flow starts from the [[!UICONTROL Referral Traffic]](/help/dashbo
 
 ## Frequently asked questions {#faq}
 
-+++Is the [!DNL Adobe Analytics] integration available during the trial?
++++Is the Adobe Analytics integration available during the trial?
 
-No. The integration is available only to paid [!DNL LLM Optimizer] customers.
+No. The integration is available only to paid LLM Optimizer customers.
 
 +++
 
 +++What data is collected or stored?
 
-See [Data ingested](#data-ingested). [!DNL LLM Optimizer] works with aggregated metrics from [!DNL Adobe Analytics] APIs authorized by your organization—not raw hit-level exports for individual users.
+See [Data ingested](#data-ingested). LLM Optimizer works with aggregated metrics from Adobe Analytics APIs authorized by your organization—not raw hit-level exports for individual users.
 
 +++
 
 +++How is data ingested?
 
-Your organization authorizes [!DNL LLM Optimizer] to query [!DNL Adobe Analytics] APIs. Referral traffic aligned to LLM sources is consumed through those APIs.
+Your organization authorizes LLM Optimizer to query Adobe Analytics APIs. Referral traffic aligned to LLM sources is consumed through those APIs.
 
 +++
 
@@ -159,7 +159,7 @@ Data is refreshed **daily** (full prior day after backfill completes).
 
 +++
 
-+++Is raw hit-level data stored in [!DNL LLM Optimizer]?
++++Is raw hit-level data stored in LLM Optimizer?
 
 No. Only **aggregated** metrics are used to understand traffic patterns and trends.
 
@@ -185,7 +185,7 @@ Retention policies may evolve. Contact Adobe or your account team for current re
 
 +++Is data encrypted in transit and at rest?
 
-Data is encrypted **in transit**. For encryption **at rest**, rely on your organization's [!DNL Adobe Analytics] and cloud commitments; confirm details with Adobe if you have compliance requirements.
+Data is encrypted **in transit**. For encryption **at rest**, rely on your organization's Adobe Analytics and cloud commitments; confirm details with Adobe if you have compliance requirements.
 
 +++
 
