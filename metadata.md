@@ -6,7 +6,7 @@ description: LLM Optimizer documentation.
 mini-toc-levels: 2
 feature-set: LLM Optimizer
 git-repo: https://github.com/AdobeDocs/llm-optimizer.en
-index: y
+index: true
 recommendations: noDisplay
 ---
 

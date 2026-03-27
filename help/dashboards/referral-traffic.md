@@ -24,9 +24,11 @@ On first login, the Referral Traffic dashboard may appear blank. To view your da
 
 ![Referral Setup](/help/dashboards/assets/referral-setup1.png)
 
-<!--- 1. Select your Source (either CDN logs or AEM Operational Telemetry).
+<!--
+1. Select your Source (either CDN logs or AEM Operational Telemetry).
 2. Enter a primary contact email.
-3. Click **Request activation** to enable data ingestion. Hiding this until confirmation from PM-->
+3. Click **Request activation** to enable data ingestion. Hiding this until confirmation from PM
+-->
 
 Once activated, the dashboard will be populated with referral traffic metrics.
 
@@ -56,11 +58,13 @@ The dashboard highlights the overall referral performance by displaying key metr
 
 Besides the overall performance metrics presented above, there are three additional panels showing the traffic distribution across different markets, referral sources and page intent categories <!-- the **Top Regions** panel breaks down traffic by geography. Meanwhile, the **Top Referral Sources** panel shows the platforms driving the most visits. Trend indicators for the metrics show how these values are changing over time compared to the previous period.-->
 
-<!--## Top Referral URLs {#top-referrals}
+<!--
+## Top Referral URLs {#top-referrals}
 
 The Top Referral URLs list surfaces your site's most visited pages from referrals.
 
-![Top Referral URLs](/help/dashboards/assets/top-url.png)-->
+![Top Referral URLs](/help/dashboards/assets/top-url.png)
+-->
 
 ## Referral Sources Details and URL Performance Analysis {#traffic-details}
 
