@@ -44,7 +44,7 @@ Set origin as `live.edgeoptimize.net` and Match SAN to `*.edgeoptimize.net`
 
 >[!NOTE]
 >
->If activation fails because the Optimize at Edge rule uses a different Origin Server SSL verification mode than your default rule, update the Optimize at Edge rule to match the default rule. For example, if the default rule uses **Platform Settings**, use **Platform Settings** here as well. If you cannot use the required setting, contact Akamai support.
+>If property activation fails after you add the Optimize at Edge rule, check whether the rule uses a different Origin Server SSL verification mode than the default rule. If it does, update the Optimize at Edge rule to match the default rule. For example, if the default rule uses **Platform Settings**, use **Platform Settings** here as well. If you cannot use the required setting, contact Akamai support.
 
 ![Set Origin and SSL behavior](/help/assets/optimize-at-edge/akamai-step2-origin.png)
 
