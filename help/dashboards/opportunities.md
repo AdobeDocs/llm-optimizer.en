@@ -35,13 +35,17 @@ Presented below is a table of currently supported opportunities:
 
 Auto-optimization enables one-click deployment of recommended optimizations, reducing manual effort and time to value. Optimizations can be applied either at the content source or at the CDN edge. Edge based auto-optimization is currently available in Early Access for select opportunities. For more details, see the [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md) page.
 
-<!--### Recover Content Visibility Opportunity {#recover-contet}
+<!--
+### Recover Content Visibility Opportunity {#recover-contet}
 
-As stated above, the content visibility opportunity, flags pages where key content is lost for AI agents due to client-side rendering. For each identified page, it shows you exactly which content is missing from the AI agent view, helping you pinpoint visibility gaps. It's also supported by an edge-based pre-rendering capability that can serve more HTML content to agentic traffic without requiring Content Management System (CMS) changes. This functionality is currently in Early Access and requires setup from the LLM Optimizer team. Please contact `llmo-at-edge@adobe.com` to activate the content visibility opportunity.-->
+As stated above, the content visibility opportunity, flags pages where key content is lost for AI agents due to client-side rendering. For each identified page, it shows you exactly which content is missing from the AI agent view, helping you pinpoint visibility gaps. It's also supported by an edge-based pre-rendering capability that can serve more HTML content to agentic traffic without requiring Content Management System (CMS) changes. This functionality is currently in Early Access and requires setup from the LLM Optimizer team. Please contact `llmo-at-edge@adobe.com` to activate the content visibility opportunity.
+-->
 
 ### Additional Tools
 
 The [LLM visibility checker](https://chromewebstore.google.com/detail/is-your-webpage-citable/jbjngahjjdgonbeinjlepfamjdmdcbcc) is a Chrome extension that lets you see exactly how much of your webpage content LLMs can access and also what stays hidden. Designed as a free, standalone diagnostic tool, it requires no product license or setup. With a single-click, users can evaluate any site's machine-readability, view a side-by-side comparison of what AI agents see versus what human users see. Also, estimates how much content could be recovered by using LLM Optimizer.
 
-<!--| Detect Missing Hreflang | Content (Onsite)| Flags pages missing hreflang attributes. Provides affected URLs and expected coverage by language/region.| Implement hreflang tags to indicate correct localized versions. |
-| Detect Missing Canonicals | Content (Onsite) | Scans for pages without canonical tags or with conflicting tags. Lists affected URLs and duplicates. | Add canonical tags pointing to the preferred version of each page. Ensure consistent usage across variants. |-->
+<!--
+| Detect Missing Hreflang | Content (Onsite)| Flags pages missing hreflang attributes. Provides affected URLs and expected coverage by language/region.| Implement hreflang tags to indicate correct localized versions. |
+| Detect Missing Canonicals | Content (Onsite) | Scans for pages without canonical tags or with conflicting tags. Lists affected URLs and duplicates. | Add canonical tags pointing to the preferred version of each page. Ensure consistent usage across variants. |
+-->
