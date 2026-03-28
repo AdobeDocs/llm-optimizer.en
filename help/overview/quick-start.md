@@ -1,6 +1,6 @@
 ---
 title: Quick Start
-description: Learn how to onboard your brand name and domain, activate your trial from Experience Hub or Experience Cloud and complete setup for Adobe LLM Optimizer.
+description: Learn how to onboard your brand name and domain, activate your trial from Experience Hub or Experience Cloud and complete the setup for Adobe LLM Optimizer.
 feature: Quickstart, Onboarding
 ---
 
@@ -83,7 +83,7 @@ Onboard your brand name and domain to begin using LLM Optimizer.
 
 A small set of categories, topics and prompts will be generated during the onboarding phase. Brand Presence Analysis on those prompts will be available shortly after your site has been onboarded.
 
-The ability to deploy optimizations is available in Early Access. Learn more in [Optimize at Edge — Frequently asked questions](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge/overview#frequently-asked-questions).
+The ability to deploy optimizations at edge is also available. Learn more in [Optimize at Edge — Frequently asked questions](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge/overview#frequently-asked-questions).
 
 Additionally, configure [CDN log forwarding](#step-4) for traffic analysis. LLM Optimizer requires Brand Presence data and insights from agentic and referral traffic to identify opportunities and provide prescriptive recommendations that boost AI visibility.
 
