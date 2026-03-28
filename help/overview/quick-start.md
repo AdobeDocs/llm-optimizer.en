@@ -1,16 +1,16 @@
 ---
 title: Quick Start
-description: Learn how to onboard your brand name and domain, activate your trial from Experience Hub or Experience Cloud, and complete setup for Adobe LLM Optimizer.
+description: Learn how to onboard your brand name and domain, activate your trial from Experience Hub or Experience Cloud and complete setup for Adobe LLM Optimizer.
 feature: Quickstart, Onboarding
 ---
 
 # Quick Start
 
-To get started with LLM Optimizer, complete the onboarding process in the steps below. After onboarding, you have full access to [LLM Optimizer's dashboards](/help/dashboards/dashboards-overview.md) and other functionality.
+To get started with LLM Optimizer, you need to complete the onboarding process. After onboarding, you will be able to customize categories, topics, prompts and configure log forwarding for more accurate insights and full access to [LLM Optimizer's dashboards](/help/dashboards/dashboards-overview.md) and other functionality.  
 
 ## Onboarding overview
 
-The onboarding process starts with onboarding your domain and your brand name. After this step, each part of the onboarding journey is detailed below along with helpful tips on how to get started with LLM Optimizer as soon as possible.
+The onboarding process starts with onboarding your domain and your brand name. Each part of the onboarding journey is detailed below along with helpful tips on how to get started with LLM Optimizer as soon as possible.
 
 ### Allowing Adobe LLM Optimizer to access public pages
 
@@ -18,46 +18,48 @@ To deliver accurate content and technical recommendations, Adobe LLM Optimizer r
 
 Configuration requirements:
 
-* Add the Spacecat/1.0 user agent to the Allowlist in your site's robots.txt file or bot-traffic management rules
-* Ensure that pages are not blocked at the domain or CDN level. Blocked pages cannot be indexed, which means optimization tasks and insights cannot be generated for them.
+* Add the Spacecat/1.0 user agent to the Allowlist in your site's robots.txt file or bot-traffic management rules.
+* Ensure that pages are not blocked either at the domain or CDN level. Blocked pages cannot be indexed, which means optimization tasks and insights cannot be generated for them.
 
 If content visibility appears low in the dashboard, verify that the crawler has access to your domains. Restricted access is a common cause of incomplete indexing.
 
 ## Step 1: Onboard your brand name and domain {#step-1-onboard-your-domain}
 
-To get started with LLM Optimizer, first activate your trial (if eligible) and onboard your brand name and domain. The activation flow differs depending on your Adobe product.
+To get started with LLM Optimizer, first activate your trial (if eligible) and onboard your brand name and domain.
 
 ### Activate your trial
 
+The activation flow differs depending on your Adobe product.
+
 #### AEM Cloud customers
 
-* Navigate to [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub) and use the Product Announcement card to activate LLM Optimizer. After you select **Try LLM Optimizer**, you are redirected to [https://llmo.now](https://llmo.now). Sign in through IMS, then enter a domain and brand name to start onboarding.
+To activate your trial, as an AEM Cloud customer, you can either:
+
+* Navigate to [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub) and use the Product Announcement card to activate LLM Optimizer. After you select **Try LLM Optimizer**, you are redirected to [https://llmo.now](https://llmo.now). Sign in through IMS, then enter a domain and brand name to start the onboarding process.
 * Or go directly to [https://llmo.now](https://llmo.now) and sign in.
 
 ![LLM Optimizer Trial](/help/overview/assets/llm-trial.png)
 
 #### Adobe Analytics customers
 
-Adobe Analytics customers see a banner on the Experience Cloud home page.
+If you are an Adobe Analytics customers, you will see a banner on the Experience Cloud home page.
 
 ![Experience Cloud home page with Start your Adobe LLM Optimizer Trial banner](/help/overview/assets/experience-cloud-llmo-trial-banner.png)
 
 You can activate your trial in one of the following ways:
 
 * Select **Start your Adobe LLM Optimizer Trial** in the banner.
-* Or go directly to [https://llmo.now](https://llmo.now) and sign in.
+* Go directly to [https://llmo.now](https://llmo.now) and sign in.
 
-Once activated, proceed with onboarding your brand name and domain.
+Once the trial is active, proceed with onboarding your brand name and domain.
 
 >[!NOTE]
 >
->**Free trial:** AEM Cloud and Adobe Analytics customers can use the free trial version of LLM Optimizer.
+> * **Free trial:** AEM Cloud and Adobe Analytics customers can use the free trial version of LLM Optimizer.
+> * **Customers who activate the trial on or after April 1, 2026** can use up to 100 prompts, one domain, and can deploy optimizations across up to 10 URLs for a single opportunity type.
+> * **Customers who activated the trial before April 1, 2026** continue to have access to up to 200 prompts under their existing terms.
 >
->**Customers who activate the trial on or after April 1, 2026** can use up to 100 prompts, one domain, and can deploy optimizations across up to 10 URLs for a single opportunity type.
->
->**Customers who activated the trial before April 1, 2026** continue to have access to up to 200 prompts under their existing terms.
->
->Use beyond included limits requires a separate license agreement. Access is provided on an "as-is" and "as-available" basis, and may be modified, limited, or removed at any time. Contact your account representative for more information.
+>Use beyond the included limits requires a separate license agreement. Access is provided on an "as-is" and "as-available" basis, and may be modified, limited or removed at any time. Contact your account representative for more information.
 
 #### Onboard your brand name and domain
 
