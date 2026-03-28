@@ -64,7 +64,8 @@ Add further links and details here.
 
 
 
-<!--## Understanding Brand Visibility and AI Search
+<!--
+## Understanding Brand Visibility and AI Search
 
 Use these as guidelines for creating tutorials - some may be covered already in docs
 
@@ -121,18 +122,5 @@ Use these as guidelines for creating tutorials - some may be covered already in 
 
 * Categories and Topics
 * Brand and Competitor Aliases
-* Domain Switching and Customization -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* Domain Switching and Customization
+-->

@@ -231,12 +231,14 @@ Here are the metrics to monitor:
 * Sentiment and placement of brand mentions
 * Visibility score trends over time
 
-<!-- Add screenshot when available in demo environment>
-
+<!--
+Add screenshot when available in demo environment>
+-->
 
 <!-- Use the "Share of Voice" feature to see which competitors are dominating specific topics and adjust your strategy accordingly.-->
 
-<!-- Purpose: Measure how much of the conversation your brand owns compared to competitors.
+<!--
+Purpose: Measure how much of the conversation your brand owns compared to competitors.
 Insight:
 
 This feature shows the percentage of visibility your brand has for specific topics compared to competitors.
@@ -244,9 +246,11 @@ This feature shows the percentage of visibility your brand has for specific topi
 
 Best Practice:
 
-Use this insight to identify gaps in your visibility and focus on improving your presence in under-performing topics.-->
+Use this insight to identify gaps in your visibility and focus on improving your presence in under-performing topics.
+-->
 
-<!--6. Content Visibility
+<!--
+6. Content Visibility
 
 Purpose: Ensure LLMs can access and render your content.
 Insight:
@@ -258,7 +262,5 @@ It provides a percentage of content visibility, highlighting areas where LLMs ma
 Best Practice:
 
 Use nametbd feature to render static HTML versions of your pages for LLM bots, ensuring full content visibility.
-Address issues like blocked pages, robots.txt restrictions, and client-side rendering problems.-->
-
-
-
+Address issues like blocked pages, robots.txt restrictions, and client-side rendering problems.
+-->

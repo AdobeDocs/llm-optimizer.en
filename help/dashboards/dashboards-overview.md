@@ -10,7 +10,8 @@ Welcome to the Dashboards overview. The dashboards in LLM-Optimizer help markete
 
 Key views include the Overview, Brand Presence, Agentic and Referral Traffic, URL Inspector, Opportunities, Collaboration, and Customer Configuration.
 
-<!-- CARDS
+<!--
+CARDS
 
 * ./brand-presence.md
   {title= Brand presence dashboard}

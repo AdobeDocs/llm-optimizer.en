@@ -9,7 +9,8 @@ Adobe LLM Optimizer is a generative AI-first application for Generative Engine O
 
 ## Get started with LLM Optimizer
 
-<!-- CARDS
+<!--
+CARDS
 
 * ./overview/overview.md
   {title= LLM Optimizer overview}
@@ -106,7 +107,8 @@ Adobe LLM Optimizer is a generative AI-first application for Generative Engine O
 
 ## Learn more about LLM Optimizer
 
-<!-- CARDS
+<!--
+CARDS
 
 * ./overview/best-practices-topics-prompts.md
   {title= Best practices for setting up categories, topics, prompts, and tracking others}
@@ -203,7 +205,8 @@ Adobe LLM Optimizer is a generative AI-first application for Generative Engine O
 
 ## Optimize at Edge
 
-<!-- CARDS
+<!--
+CARDS
 
 * ./dashboards/optimize-at-edge/overview.md
   {title= Optimize at Edge}
