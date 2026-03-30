@@ -1,12 +1,12 @@
 ---
 title: Access control
-description: "Learn how product-assigned and organizational users differ in Adobe LLM Optimizer, what read-only users see in the UI and how admins assign access in [!DNL Adobe Admin Console]."
+description: Learn how product-assigned and organizational users differ in Adobe LLM Optimizer, what read-only users see in the UI and how admins assign access in Adobe Admin Console.
 feature: Customer Configuration
 ---
 
 # Access control
 
-[!DNL Adobe LLM Optimizer] supports basic access control based on user personas. This capability is available only to **paying customers** and is enabled upon request. It is not available for [Try Before You Buy](/help/overview/quick-start.md#try-before-you-buy) trial customers.
+Adobe LLM Optimizer supports basic access control based on user personas. This capability is available only to **paying customers** and is enabled upon request. It is not available for [Try Before You Buy](/help/overview/quick-start.md#try-before-you-buy) trial customers.
 
 >[!IMPORTANT]
 >
@@ -14,7 +14,7 @@ feature: Customer Configuration
 
 ## Product-assigned users {#product-assigned-users}
 
-If you are assigned to the product, you have the same capabilities as a standard organizational user, in addition to the following permissions::
+If you are assigned to the product, you have the same capabilities as a standard organizational user, in addition to the following permissions:
 
 * Write access in [Customer Configuration](/help/dashboards/customer-configuration.md) for prompts, categories, topics, and related settings.
 * Deploy [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md) optimizations and manage suggestions.
@@ -28,15 +28,15 @@ Organizational users are standard users who are **not** assigned to the product.
 
 ### Customer Configuration {#customer-configuration-restrictions}
 
-* **[!UICONTROL Upload Prompts]** is disabled.
+* **Upload Prompts** is disabled.
 * Managing and editing prompts, categories, topics, and region is disabled.
 
   ![Customer Configuration restrictions for read-only users](/help/dashboards/assets/access-control-customer-configuration.png)
 
 ### CDN configuration (Customer Configuration) {#cdn-configuration-restrictions}
 
-* **[!UICONTROL Onboard CDN]** is disabled (read-only users cannot add a CDN provider).
-* **[!UICONTROL Delete CDN]** is disabled (read-only users cannot remove an existing CDN configuration).
+* **Onboard CDN** is disabled (read-only users cannot add a CDN provider).
+* **Delete CDN** is disabled (read-only users cannot remove an existing CDN configuration).
 * The **Submit** button in the CDN onboard dialog is disabled (read-only users cannot complete CDN setup).
 
   ![CDN configuration restrictions for read-only users](/help/dashboards/assets/access-control-cdn-configuration.png)
@@ -52,7 +52,7 @@ Organizational users are standard users who are **not** assigned to the product.
 
 For opportunities such as 404, 403, and 503 error pages:
 
-* **[!UICONTROL Deploy Optimization]** is hidden.
+* **Deploy Optimization** is hidden.
 * An informational alert explains that deploy access is required.
 
   ![Deploy Optimization hidden on Agentic Traffic opportunities](/help/dashboards/assets/access-control-agentic-deploy.png)
@@ -72,7 +72,7 @@ Read-only behavior also applies to opportunity types such as:
 
 For these pages:
 
-* **[!UICONTROL Deploy Optimization]** is hidden when the user does not have deploy access.
+* **Deploy Optimization** is hidden when the user does not have deploy access.
 * An inline alert explains that deploy access is required. The message is similar to: *Deploy Access Required — You don't have permission to deploy optimizations or manage suggestions. Please contact your administrator to request access.*
 * The sticky bottom bar with deploy actions is hidden.
 
@@ -95,13 +95,13 @@ For these pages:
 
 ## Assign the product to a user or group {#assign-product}
 
-A **system administrator** for your organization can use the [[!DNL Adobe Admin Console]](https://adminconsole.adobe.com/) to assign [!DNL Adobe LLM Optimizer] to a user or group.
+A **system administrator** for your organization can use the [Adobe Admin Console](https://adminconsole.adobe.com/) to assign Adobe LLM Optimizer to a user or group.
 
-1. Sign in to the [[!DNL Adobe Admin Console]](https://adminconsole.adobe.com/) with an account that has administrative rights for your organization.
-1. Assign the [!DNL Adobe LLM Optimizer] product profile (or your organization's equivalent product entitlement) to the user or group that should receive product-assigned capabilities.
+1. Sign in to the [Adobe Admin Console](https://adminconsole.adobe.com/) with an account that has administrative rights for your organization.
+1. Assign the Adobe LLM Optimizer product profile (or your organization's equivalent product entitlement) to the user or group that should receive product-assigned capabilities.
 
 For detailed steps, see [Managing products in the Admin Console](https://helpx.adobe.com/enterprise/using/manage-products.html) and [Manage user groups](https://helpx.adobe.com/enterprise/using/user-groups.html).
 
 >[!NOTE]
 >
->Screen flows in [!DNL Adobe Admin Console] can change between releases. If the options above do not match your console, use the in-product help links in [!DNL Adobe Admin Console] or contact your Adobe account team.
+>Screen flows in Adobe Admin Console can change between releases. If the options above do not match your console, use the in-product help links in Adobe Admin Console or contact your Adobe account team.
