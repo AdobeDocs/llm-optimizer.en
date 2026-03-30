@@ -1,30 +1,30 @@
 ---
 title: Access control
-description: "Learn how product-assigned and organizational users differ in [!DNL Adobe LLM Optimizer], what read-only users see in the UI, and how admins assign access in [!DNL Adobe Admin Console]."
+description: "Learn how product-assigned and organizational users differ in Adobe LLM Optimizer, what read-only users see in the UI and how admins assign access in [!DNL Adobe Admin Console]."
 feature: Customer Configuration
 ---
 
 # Access control
 
-[!DNL Adobe LLM Optimizer] supports basic access control based on user personas. This capability is available only to **paying customers** and is turned on when your organization requests it. It is not available for [Try Before You Buy](/help/overview/quick-start.md#try-before-you-buy) trial customers.
+[!DNL Adobe LLM Optimizer] supports basic access control based on user personas. This capability is available only to **paying customers** and is enabled upon request. It is not available for [Try Before You Buy](/help/overview/quick-start.md#try-before-you-buy) trial customers.
 
 >[!IMPORTANT]
 >
->Paying customers should contact their Adobe account manager to request enablement of access control.
+>To request access to this feature, paying customers should contact their Adobe account manager.
 
 ## Product-assigned users {#product-assigned-users}
 
-If you are assigned to the product, you have the same capabilities as a standard organizational user, plus you can:
+If you are assigned to the product, you have the same capabilities as a standard organizational user, in addition to the following permissions::
 
-* Use full write access in [Customer Configuration](/help/dashboards/customer-configuration.md) for prompts, categories, topics, and related settings.
+* Write access in [Customer Configuration](/help/dashboards/customer-configuration.md) for prompts, categories, topics, and related settings.
 * Deploy [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md) optimizations and manage suggestions.
-* Manage [!DNL Google Search Console] configurations.
-* Manage Optimize at Edge or CDN configurations.
+* Manage Google Search Console configurations.
+* Manage Optimize at Edge and CDN configurations.
 * Onboard a new site.
 
 ## Organizational users {#organizational-users}
 
-Organizational users are standard users who are **not** assigned to the product. They have **read-only** access to [LLM Optimizer dashboards](/help/dashboards/dashboards-overview.md) and related views. The following restrictions apply.
+Organizational users are standard users who are **not** assigned to the product. If you are an organizational user, you have **read-only** access to the [LLM Optimizer dashboards](/help/dashboards/dashboards-overview.md) and related views. The following restrictions apply.
 
 ### Customer Configuration {#customer-configuration-restrictions}
 
@@ -37,14 +37,14 @@ Organizational users are standard users who are **not** assigned to the product.
 
 * **[!UICONTROL Onboard CDN]** is disabled (read-only users cannot add a CDN provider).
 * **[!UICONTROL Delete CDN]** is disabled (read-only users cannot remove an existing CDN configuration).
-* The submit control in the CDN onboard dialog is disabled (read-only users cannot complete CDN setup).
+* The **Submit** button in the CDN onboard dialog is disabled (read-only users cannot complete CDN setup).
 
   ![CDN configuration restrictions for read-only users](/help/dashboards/assets/access-control-cdn-configuration.png)
 
 ### Brand Presence — data insights {#brand-presence-restrictions}
 
-* Delete controls next to topics are hidden (read-only users cannot remove topics from tracking).
-* Delete controls next to prompts are hidden (read-only users cannot remove prompts from tracking).
+* The **Delete** buttons next to topics are hidden (read-only users cannot remove topics from tracking).
+* The **Delete** buttons next to prompts are hidden (read-only users cannot remove prompts from tracking).
 
   ![Brand Presence actions hidden for read-only users](/help/dashboards/assets/access-control-brand-presence.png)
 
@@ -89,7 +89,7 @@ For these pages:
 
 ### Onboard a new site {#onboarding-restrictions}
 
-* Onboarding a new site is disabled for users without the appropriate entitlement.
+* Onboarding a new site is disabled for users without access control.
 
   ![Onboard new site disabled](/help/dashboards/assets/access-control-onboarding.png)
 
