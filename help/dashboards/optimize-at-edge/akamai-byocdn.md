@@ -42,6 +42,10 @@ Set routing for the following user-agents:image.png
 
 Set origin as `live.edgeoptimize.net` and Match SAN to `*.edgeoptimize.net`
 
+>[!NOTE]
+>
+>If property activation fails after you add the Optimize at Edge rule, check whether the rule uses a different Origin Server SSL verification mode than the default rule. If it does, update the Optimize at Edge rule to match the default rule. For example, if the default rule uses **Platform Settings**, use **Platform Settings** here as well. If you cannot use the required setting, contact Akamai support.
+
 ![Set Origin and SSL behavior](/help/assets/optimize-at-edge/akamai-step2-origin.png)
 
 **3. Set Cache Key Variable**
@@ -85,6 +89,10 @@ The Site Failover configuration has two parts: the failover behavior (configured
 
 Inside the main routing rule, configure the Site Failover behavior and the Advanced XML snippet as follows:
 
+>[!IMPORTANT]
+>
+>The XML snippet in this step requires the **Advanced** behavior. In some Akamai environments, this behavior is not available for self-service editing. If you do not see the **Advanced** option, contact your Akamai account team or Akamai support to enable the required configuration.
+
 ![Site Failover](/help/assets/optimize-at-edge/akamai-step9-failover.png)
 
 Add the request header `x-edgeoptimize-request` with value `fo` through Advanced XML: 
@@ -114,6 +122,8 @@ Add the request header `x-edgeoptimize-request` with value `fo` through Advanced
 >```
 >
 >This ensures the failover test header rule evaluates for **all** routing rules, not just one.
+>
+>Also ensure the **Optimize at Edge Routing** rule is not overridden by any later matching rule that changes the origin, caching behavior, or cache ID for the same requests. If another matching rule resets these behaviors, Optimize at Edge routing or caching may not work as expected.
 
 If the request header `x-edgeoptimize-request` value is `fo`, then set the outgoing response header `x-edgeoptimize-fo` to `true`.
 
