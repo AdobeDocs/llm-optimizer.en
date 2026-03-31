@@ -6,7 +6,7 @@ feature: Referral Traffic
 
 # Adobe Analytics Integration
 
-The Adobe Analytics integration connects LLM Optimizer with your organization's Adobe Analytics data so you can measure how AI-driven discovery translates into real website engagement and business outcomes. After the integration process is complete, the data will be available in the **Referral Traffic** dashboard under the **Business Impact** tab .
+The Adobe Analytics integration connects LLM Optimizer with your organization's Adobe Analytics data so you can measure how AI-driven discovery translates into real website engagement and business outcomes. After the integration process is complete, the data will be available in the **Referral Traffic** dashboard under the **Business Impact** tab.
 
 By linking analytics data with AI visibility insights, LLM Optimizer helps you track:
 
@@ -41,7 +41,7 @@ The connection flow starts from the [Referral Traffic](/help/dashboards/referral
 1. Under **Credentials**, enter the **Client ID** and **Client Secret**, then select **Verify & Continue**. Please note the following:
 
    * **Verify & Continue** is available only when both fields are filled.
-   * After successful verification, the report suites are loaded.
+   * After a successful verification, the report suites are loaded.
    * Use the **Client ID** and **Client Secret** of a [technical account](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/) that has access to the report suite you need.
 
    ![Analytics credentials and Verify & Continue](/help/dashboards/assets/aa-integration-04-credentials.png)
@@ -84,7 +84,7 @@ LLM-originated traffic is identified by using the Adobe Analytics [Referrer type
 
 ### Data ingested {#data-ingested}
 
-The following data is ingested by LLM Optimizer.
+The following data is ingested by LLM Optimizer:
 
 **Dimensions**
 
@@ -130,7 +130,7 @@ No. The integration is available only to paid LLM Optimizer customers.
 
 Q: What data is collected or stored?
 
-See the [Data ingested](#data-ingested) chapter above. LLM Optimizer works with aggregated metrics from Adobe Analytics APIs authorized by your organization not raw hit-level data.
+See the [Data ingested](#data-ingested) chapter above. LLM Optimizer works with aggregated metrics from the Adobe Analytics APIs authorized by your organization not the raw hit-level data.
 
 Q: How is data ingested?
 
@@ -144,7 +144,7 @@ Q: Is raw hit-level data stored in LLM Optimizer?
 
 No. Only **aggregated** metrics are used to understand traffic patterns and trends.
 
-Q: Are full URLs, query strings, or page content stored?
+Q: Are full URLs, query strings or page content stored?
 
 Full URLs used for the selected page dimension can be ingested; query strings and page content are not ingested for this integration.
 
@@ -162,4 +162,4 @@ Currently, data is encrypted in transit not at rest. This may change in future u
 
 Q: Is historical data backfilled?
 
-Yes. After a successful setup, the last four full calendar weeks and the current calendar week are backfilled. See also [After you connect](#after-connect)).
+Yes. After a successful setup, the last four full calendar weeks and the current calendar week are backfilled. See also [After you connect](#after-connect).
