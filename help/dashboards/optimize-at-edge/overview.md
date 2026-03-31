@@ -8,10 +8,6 @@ feature: Opportunities
 
 This page provides a detailed overview on how to deliver optimizations at the CDN edge without any authoring changes. It covers the onboarding process, the available optimization opportunities and how to auto-optimize at edge.
 
->[!NOTE]
->
->This functionality is currently in Early Access. You can learn more about Early Access programs [here](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs).
-
 ## What is Optimize at Edge?
 
 Optimize at Edge is an edge-based deployment capability in LLM Optimizer that serves AI friendly changes to LLM user agents. In the current context, "Edge" means that the optimization is applied at the CDN layer. Because it delivers optimizations at the CDN layer, no authoring changes in the Content Management System (CMS) are required so your origin CMS remains unchanged. This separation lets you improve LLM visibility without altering your existing publishing workflows. It targets only agentic traffic and does not impact either human users or SEO bots. When LLM Optimizer detects opportunities to optimize a page, users can deploy fixes directly at the CDN edge.
@@ -34,7 +30,17 @@ Opportunities that can improve the agentic web experience are supported with Opt
 
 ## Onboarding
 
-You should reach out to either your Adobe account team or the FDE team to start the onboarding process. Your IT or CDN team is also required to complete the pre-requisites and setup process. Additionally, you can also contact `llmo-at-edge@adobe.com` for further onboarding assistance.
+<!--You should reach out to either your Adobe account team or the FDE team to start the onboarding process. Your IT or CDN team is also required to complete the pre-requisites and setup process. Additionally, you can also contact `llmo-at-edge@adobe.com` for further onboarding assistance.-->
+
+Start the onboarding process in your LLM Optimizer account:
+
+1. On the **Customer Configuratio**n dashboard, select the **CDN Configuration** tab.
+1. Click **Onboard CDN**.
+![CDN Configuration tab](/help/overview/assets/cc-cdn.png)
+1. For AEM Fastly customers, Adobe can assist in completing the onboarding process. For customers using other CDN providers, your IT/CDN team needs to complete the required setup and prerequisites. You can also refer to the example CDN guides provided below for additional guidance.
+
+>[!NOTE]
+>Please refer to the step by step guides below that cover the full onboarding flow. For issues not resolved by the guides, you can reach out to `llmo-at-edge@adobe.com`.
 
 Pre-requisites to onboard to Optimize at Edge:
 
@@ -79,7 +85,7 @@ Presented in the following table are opportunities that can improve the agentic 
 
 ### Additional Tools
 
-The [Adobe LLM Optimizer: Is your webpage citable?](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) Chrome extension shows how much of your webpage content LLMs can access and what stays hidden. Designed as a free, standalone diagnostic tool, it requires no product license or setup.
+The [AI Content Visibility Checker](https://chromewebstore.google.com/detail/ai-content-visibility-che/jbjngahjjdgonbeinjlepfamjdmdcbcc) browser extension shows how much of your webpage content LLMs can access and what stays hidden. Designed as a free, standalone diagnostic tool, it requires no product license or setup.
 
 With a single-click, you can evaluate any site's machine readability. You can view a side-by-side comparison of what AI agents see versus what human users see, and estimate how much content could be recovered by using LLM Optimizer. See the [Can AI read your website?](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) page for more information.
 
@@ -144,6 +150,10 @@ Rollback safely reverts a previously deployed optimization. The AI-only version 
 ![Rollback](/help/assets/optimize-at-edge/rollback.png)
 
 ## Frequently Asked Questions
+
+Q: Can Trial customers try out Optimize at Edge?
+
+Yes, Trial customers can access one optimization opportunity and deploy it for up to 10 pages. By default, the opportunity is Recover Content Visibility, which enables AI agents to access the complete version of your page content.
 
 Q. What kind of LLMs do you target with Optimize at Edge?
 
