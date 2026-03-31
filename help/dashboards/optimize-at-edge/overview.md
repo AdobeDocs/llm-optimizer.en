@@ -48,6 +48,7 @@ Pre-requisites to onboard to Optimize at Edge:
 * Complete the log forwarding process for your CDN logs.
 
 Requirements for your IT/CDN team:
+
 * Add `*AdobeEdgeOptimize/1.0*` user-agent to the Allowlist in your site's robots.txt file or bot-traffic management rules.
 * Ensure that pages are not blocked at the domain or CDN level.
 * Add Optimize at Edge routing rules in the CDN.
@@ -66,6 +67,7 @@ To guide the setup process, select your CDN provider below and follow the corres
 | CloudFront (BYOCDN) | Bring Your Own CDN | [View setup guide](/help/dashboards/optimize-at-edge/cloudfront-byocdn.md) |
 
 >[!NOTE]
+>
 >If your CDN provider is not listed above, or if you do not find your domain or email in the LLM Optimizer UI, please reach out to `llmo-at-edge@adobe.com` for onboarding assistance. Once the setup configurations are complete, you can deploy suggestions for Optimize at Edge opportunities in LLM Optimizer.
 
 Each CDN setup guide above includes detailed verification steps at the end to confirm that agentic traffic is being routed correctly and that human traffic remains unaffected.
@@ -157,13 +159,15 @@ Q. What kind of LLMs do you target with Optimize at Edge?
 
 The list of user agents to target is defined by you during the onboarding process.
 
-<!--Q. What does "Edge" in Optimize at Edge mean?
+<!--
+Q. What does "Edge" in Optimize at Edge mean?
 
 In our context, "Edge" means that the optimization is applied at the CDN layer and not inside your CMS.
 
 Q. Why does this optimization require a CDN?
 
-The CDN is where the optimized version of the page is assembled and delivered to AI agents. We leverage the CDN to ensure your origin CMS remains unchanged. This separation lets you improve LLM visibility without altering your existing publishing workflows.-->
+The CDN is where the optimized version of the page is assembled and delivered to AI agents. We leverage the CDN to ensure your origin CMS remains unchanged. This separation lets you improve LLM visibility without altering your existing publishing workflows.
+-->
 
 Q. What happens if I'm not onboarded to Optimize at Edge yet?
 
