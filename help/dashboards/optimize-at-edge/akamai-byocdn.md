@@ -33,9 +33,6 @@ Set routing for the following user agents:
  *GPTBot*,
  *OAI-SearchBot*,
  *PerplexityBot*,
- *ClaudeBot*,
- *Claude-User*,
- *Claude-SearchBot*,
  *Perplexity-User*
 ```
 
