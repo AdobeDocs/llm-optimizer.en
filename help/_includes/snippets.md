@@ -8,15 +8,11 @@
 
    ![Navigate to Customer Configuration](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
 
-2. Locate the **Deploy optimizations to AI agents** section. Until your IT or CDN team finishes the CDN configuration, the status shows **Pending**. Depending on your interface, you may see the **Enable optimization engine** checkbox on the card:
+2. Locate the **Deploy optimizations to AI agents** section. Tick the **Enable optimization engine** checkbox.
 
-   ![Deploy optimizations to AI agents — pending with Enable optimization engine checkbox](/help/assets/optimize-at-edge/byocdn-deploy-optimizations-pending.png)
+   ![Deploy optimizations to AI agents — pending](/help/assets/optimize-at-edge/byocdn-deploy-optimizations-pending.png)
 
-   Or you may see **+ Enable** and **Add stage domain** buttons:
-
-   ![Deploy optimizations to AI agents — pending with Enable and Add stage domain buttons](/help/assets/optimize-at-edge/byocdn-deploy-optimizations-pending-actions.png)
-
-3. To activate the optimization engine, select **+ Enable**. In the confirmation dialog, select **Enable**.
+3. In the confirmation dialog, select **Enable**.
 
    ![Enable optimization engine confirmation dialog](/help/assets/optimize-at-edge/byocdn-enable-optimization-engine-dialog.png)
 
