@@ -8,13 +8,7 @@
 
    ![Navigate to Customer Configuration](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
 
-2. Locate the **Deploy optimizations to AI agents** section.
-
-   When routing is fully enabled, the status shows **Completed** and confirms that routing of AI bot traffic to LLM Optimizer is enabled.
-
-   ![Deploy optimizations to AI agents with routing enabled](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
-
-   Until your IT or CDN team finishes the CDN configuration, the status shows **Pending**. Depending on your interface, you may see the **Enable optimization engine** checkbox on the card:
+2. Locate the **Deploy optimizations to AI agents** section. Until your IT or CDN team finishes the CDN configuration, the status shows **Pending**. Depending on your interface, you may see the **Enable optimization engine** checkbox on the card:
 
    ![Deploy optimizations to AI agents — pending with Enable optimization engine checkbox](/help/assets/optimize-at-edge/byocdn-deploy-optimizations-pending.png)
 
@@ -22,7 +16,7 @@
 
    ![Deploy optimizations to AI agents — pending with Enable and Add stage domain buttons](/help/assets/optimize-at-edge/byocdn-deploy-optimizations-pending-actions.png)
 
-3. To activate the optimization engine, check the **Enable optimization engine** checkbox or select **+ Enable**. In the confirmation dialog, select **Enable**.
+3. To activate the optimization engine, select **+ Enable**. In the confirmation dialog, select **Enable**.
 
    ![Enable optimization engine confirmation dialog](/help/assets/optimize-at-edge/byocdn-enable-optimization-engine-dialog.png)
 
@@ -32,6 +26,10 @@
 
    >[!NOTE]
    >The dialog may show that setup is not complete. This is expected until routing is verified — you can still copy the API key so your IT or CDN team can finish the configuration.
+
+When routing is fully enabled, the status shows **Completed** and confirms that routing of AI bot traffic to LLM Optimizer is enabled.
+
+![Deploy optimizations to AI agents with routing enabled](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
 Additionally, if you require any help with the above steps, reach out to your Adobe account team or `llmo-at-edge@adobe.com`.
 

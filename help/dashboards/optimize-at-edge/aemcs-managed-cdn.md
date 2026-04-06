@@ -16,7 +16,7 @@ To start routing agentic traffic to Edge Optimize:
 
    ![Navigate to Customer Configuration](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
 
-2. Locate the **Deploy optimizations to AI agents** section. To activate the optimization engine, check the **Enable optimization engine** checkbox or select **+ Enable**.
+2. Locate the **Deploy optimizations to AI agents** section. Tick the **Enable optimization engine** checkbox.
 
    ![Deploy optimizations to AI agents — pending](/help/assets/optimize-at-edge/byocdn-deploy-optimizations-pending.png)
 
