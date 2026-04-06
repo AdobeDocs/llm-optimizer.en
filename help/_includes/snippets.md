@@ -27,10 +27,6 @@
    >[!NOTE]
    >The dialog may show that setup is not complete. This is expected until routing is verified — you can still copy the API key so your IT or CDN team can finish the configuration.
 
-When routing is fully enabled, the status shows **Completed** and confirms that routing of AI bot traffic to LLM Optimizer is enabled.
-
-![Deploy optimizations to AI agents with routing enabled](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
-
 Additionally, if you require any help with the above steps, reach out to your Adobe account team or `llmo-at-edge@adobe.com`.
 
 ## Staging domain API key (optional) {#retrieve-staging-edge-optimize-api-key}
