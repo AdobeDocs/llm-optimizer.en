@@ -28,6 +28,10 @@ To start routing agentic traffic to Edge Optimize:
 
 Additionally, if you require any help with the above steps, reach out to your Adobe account team or `llmo-at-edge@adobe.com`.
 
+**Staging domain (optional)**
+
+If you test on a staging hostname before production, register **one** staging domain in LLM Optimizer and copy the **staging** API key using **Customer configuration** → **CDN configuration** → **Deploy optimizations to AI agents** → **Add stage domain** (or **Stage domain**). Coordinate with your Adobe team on how staging routing fits your Cloud Manager pipeline. See also the [Optimize at Edge overview](/help/dashboards/optimize-at-edge/overview.md); the BYOCDN guides include the full **Staging domain API key** steps.
+
 **Self-service routing via Cloud Manager Pipeline**
 
 If you prefer to configure the routing yourself through the Cloud Manager Pipeline, follow the steps below. The routing configuration is done by using an [originSelector CDN rule](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors). The prerequisites are as follows:
@@ -110,7 +114,18 @@ The response should **not** contain the `x-edgeoptimize-request-id` header. The 
 | `x-edgeoptimize-request-id` | Present — contains a unique request ID | Absent |
 | `x-edgeoptimize-fo` | Present only if failover occurred (value: `1`) | Absent |
 
-The status of the traffic routing can also be checked in the LLM Optimizer UI. Navigate to **Customer Configuration** and select the **CDN Configuration** tab.
+**4. Staging domain (optional)**
+
+If you use a staging hostname and staging API key, verify bot traffic on the staging host after your team configures routing:
+
+```
+curl -svo /dev/null https://staging.example.com/page.html \
+  --header "user-agent: chatgpt-user"
+```
+
+Replace `https://staging.example.com/page.html` with your real staging URL and path. A successful response includes the `x-edgeoptimize-request-id` header.
+
+The status of the traffic routing can also be checked in the LLM Optimizer UI. Navigate to **Customer configuration** and select the **CDN configuration** tab.
 
 ![AI Traffic Routing status with routing enabled](/help/assets/optimize-at-edge/adobe-CDN-traffic-routed-tick.png)
 
