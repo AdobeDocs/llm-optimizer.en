@@ -30,9 +30,11 @@ To start routing agentic traffic to Edge Optimize:
 
 Additionally, if you require any help with the above steps, reach out to your Adobe account team or `llmo-at-edge@adobe.com`.
 
-**Staging domain (optional)**
+{{retrieve-staging-edge-optimize-api-key}}
 
-If you test on a staging hostname before production, register **one** staging domain in LLM Optimizer and copy the **staging** API key using **Customer configuration** → **CDN configuration** → **Deploy optimizations to AI agents** → **Add stage domain** (or **Stage domain**). Coordinate with your Adobe team on how staging routing fits your Cloud Manager pipeline. See also the [Optimize at Edge overview](/help/dashboards/optimize-at-edge/overview.md); the BYOCDN guides include the full **Staging domain API key** steps.
+>[!NOTE]
+>
+>For AEM Cloud Service Managed CDN, coordinate with your Adobe team on how staging routing fits your Cloud Manager pipeline.
 
 **Self-service routing via Cloud Manager Pipeline**
 
