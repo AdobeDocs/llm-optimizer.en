@@ -306,7 +306,7 @@ Replace `https://staging.example.com/page.html` with your real staging URL and p
 
 The status of the traffic routing can also be checked in the LLM Optimizer UI. Navigate to **Customer configuration** and select the **CDN configuration** tab.
 
-![AI Traffic Routing status with routing enabled](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+![Deploy optimizations to AI agents — completed](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
 **4. Verify logs are flowing correctly**
 
