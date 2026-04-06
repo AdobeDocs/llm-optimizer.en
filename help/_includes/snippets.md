@@ -8,12 +8,20 @@
 
    ![Navigate to Customer Configuration](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
 
-2. In the **Deploy optimizations to AI agents** section, select **View details**.
+2. Locate the **Deploy optimizations to AI agents** section. When routing is fully enabled, the status shows **Completed** and confirms that routing of AI bot traffic to LLM Optimizer is enabled.
 
-3. In the **Deploy optimizations details** dialog, copy the **Production API key** (use **Copy** next to the field).
+   ![Deploy optimizations to AI agents with routing enabled](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+
+   Until your IT or CDN team finishes the CDN configuration, the status may show **Pending** and a message that setup is not complete. You can still open **View details** to copy the production API key.
+
+   ![Deploy optimizations to AI agents with setup pending](/help/assets/optimize-at-edge/byocdn-deploy-optimizations-pending.png)
+
+3. Select **View details**. In the **Deploy optimizations details** dialog, copy the **Production API key** (use **Copy** next to the field).
+
+   ![Production API key in Deploy optimizations details](/help/assets/optimize-at-edge/byocdn-production-api-key-details.png)
 
    >[!NOTE]
-   >Until your CDN routing rules are fully deployed, the dialog may show that setup is not complete. This is expected. You can still copy the API key so your IT or CDN team can finish the configuration.
+   >The dialog may show that setup is not complete. This is expected until routing is verified — you can still copy the API key so your IT or CDN team can finish the configuration.
 
 Additionally, if you require any help with the above steps, reach out to your Adobe account team or `llmo-at-edge@adobe.com`.
 
@@ -33,6 +41,8 @@ Use a staging hostname when you want to test Optimize at Edge in a lower environ
 2. In the **Deploy optimizations to AI agents** section, select **Add stage domain** (or **Stage domain** if a staging domain is already configured).
 
 3. Enter the full staging URL, including `https://`, then confirm. When the workflow completes, copy the **API key** shown for the staging domain.
+
+   ![Staging domain API key](/help/assets/optimize-at-edge/byocdn-staging-domain-api-key.png)
 
 If you need help, contact `llmo-at-edge@adobe.com`.
 
