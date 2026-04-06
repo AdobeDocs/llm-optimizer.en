@@ -8,15 +8,21 @@
 
    ![Navigate to Customer Configuration](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
 
-2. Locate the **Deploy optimizations to AI agents** section. When routing is fully enabled, the status shows **Completed** and confirms that routing of AI bot traffic to LLM Optimizer is enabled.
+2. Locate the **Deploy optimizations to AI agents** section.
+
+   When routing is fully enabled, the status shows **Completed** and confirms that routing of AI bot traffic to LLM Optimizer is enabled.
 
    ![Deploy optimizations to AI agents with routing enabled](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
-   Until your IT or CDN team finishes the CDN configuration, the status may show **Pending** and a message that setup is not complete. You can still open **View details** to copy the production API key.
+   Until your IT or CDN team finishes the CDN configuration, the status may show **Pending** and a message that setup is not complete. Depending on your interface, you may see **Enable optimization engine** on the card, or **+ Enable** with **Add stage domain** / **Stage domain**. You can open **View details** to copy the production API key before or after activation.
 
    ![Deploy optimizations to AI agents with setup pending](/help/assets/optimize-at-edge/byocdn-deploy-optimizations-pending.png)
 
-3. Select **View details**. In the **Deploy optimizations details** dialog, copy the **Production API key** (use **Copy** next to the field).
+3. If the status is **Pending** and you need to activate the optimization engine first, select **Enable optimization engine** or **+ Enable**. In the **Enable optimization engine** dialog, read the message and select **Enable** to confirm.
+
+   ![Enable optimization engine confirmation dialog](/help/assets/optimize-at-edge/byocdn-enable-optimization-engine-dialog.png)
+
+4. Select **View details**. In the **Deploy optimizations details** dialog, copy the **Production API key** (use **Copy** next to the field).
 
    ![Production API key in Deploy optimizations details](/help/assets/optimize-at-edge/byocdn-production-api-key-details.png)
 
