@@ -14,11 +14,15 @@
 
    ![Deploy optimizations to AI agents with routing enabled](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
-   Until your IT or CDN team finishes the CDN configuration, the status may show **Pending** and a message that setup is not complete. Depending on your interface, you may see **Enable optimization engine** on the card, or **+ Enable** with **Add stage domain** / **Stage domain**. You can open **View details** to copy the production API key before or after activation.
+   Until your IT or CDN team finishes the CDN configuration, the status shows **Pending**. Depending on your interface, you may see the **Enable optimization engine** checkbox on the card:
 
-   ![Deploy optimizations to AI agents with setup pending](/help/assets/optimize-at-edge/byocdn-deploy-optimizations-pending.png)
+   ![Deploy optimizations to AI agents — pending with Enable optimization engine checkbox](/help/assets/optimize-at-edge/byocdn-deploy-optimizations-pending.png)
 
-3. If the status is **Pending** and you need to activate the optimization engine first, select **Enable optimization engine** or **+ Enable**. In the **Enable optimization engine** dialog, read the message and select **Enable** to confirm.
+   Or you may see **+ Enable** and **Add stage domain** buttons:
+
+   ![Deploy optimizations to AI agents — pending with Enable and Add stage domain buttons](/help/assets/optimize-at-edge/byocdn-deploy-optimizations-pending-actions.png)
+
+3. To activate the optimization engine, check the **Enable optimization engine** checkbox or select **+ Enable**. In the confirmation dialog, select **Enable**.
 
    ![Enable optimization engine confirmation dialog](/help/assets/optimize-at-edge/byocdn-enable-optimization-engine-dialog.png)
 
@@ -46,7 +50,11 @@ Use a staging hostname when you want to test Optimize at Edge in a lower environ
 
 2. In the **Deploy optimizations to AI agents** section, select **Add stage domain** (or **Stage domain** if a staging domain is already configured).
 
-3. Enter the full staging URL, including `https://`, then confirm. When the workflow completes, copy the **API key** shown for the staging domain.
+3. In the **Stage Domain** dialog, enter the full staging URL including `https://` and select **Set Domain**.
+
+   ![Stage Domain input dialog](/help/assets/optimize-at-edge/byocdn-staging-domain-input.png)
+
+4. Confirm the domain in the next prompt. When the workflow completes, the **Stage Domains** dialog shows the configured domain and its **API key**. Select **Copy** to copy the staging API key.
 
    ![Staging domain API key](/help/assets/optimize-at-edge/byocdn-staging-domain-api-key.png)
 
