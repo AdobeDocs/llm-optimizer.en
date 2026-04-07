@@ -46,6 +46,9 @@ Requirements for your IT/CDN team:
 * Add Optimize at Edge routing rules in the CDN.
 * Confirm Optimize at Edge routing in the LLM Optimizer interface.
 
+>[!IMPORTANT]
+>Routing must be configured at the outer CDN (the CDN closest to the client). If you have multiple CDNs, routing can only be done at the outer CDN.
+
 To guide the setup process, select your CDN provider below and follow the corresponding configuration guide. Keep in mind that these examples should be adapted to your actual live configuration. We recommend applying changes in the lower environments first.
 
 ### CDN Configuration Guides
