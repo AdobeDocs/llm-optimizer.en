@@ -58,7 +58,7 @@ To guide the setup process, select your CDN provider below and follow the corres
 
 ### Staging domain API keys (optional)
 
-If you test on a staging hostname before production, use LLM Optimizer to register **one** staging domain and copy its **staging** Edge Optimize API key from **Customer configuration** → **CDN configuration** → **Deploy optimizations to AI agents** → **Add stage domain** (or **Stage domain**). The staging hostname must share the same registrable domain as your production site. Your CDN guide includes the same verification steps using your staging URL and staging API key in the routing rules.
+If you test on a staging hostname before production, use LLM Optimizer to register **one** staging domain and copy its **staging** Edge Optimize API key from **Customer configuration** → **CDN configuration** → **Deploy optimizations to AI agents** → **Add stage domain** (or **Stage domain**). The staging hostname must share the same registrable domain as your production site. **Bring Your Own CDN** guides include the full steps to retrieve the staging key and verify routing on your staging URL.
 
 ### CDN Configuration Guides
 

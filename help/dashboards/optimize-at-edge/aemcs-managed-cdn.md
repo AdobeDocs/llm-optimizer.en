@@ -30,12 +30,6 @@ To start routing agentic traffic to Edge Optimize:
 
 Additionally, if you require any help with the above steps, reach out to your Adobe account team or `llmo-at-edge@adobe.com`.
 
-{{retrieve-staging-edge-optimize-api-key}}
-
->[!NOTE]
->
->For AEM Cloud Service Managed CDN, coordinate with your Adobe team on how staging routing fits your Cloud Manager pipeline.
-
 **Self-service routing via Cloud Manager Pipeline**
 
 If you prefer to configure the routing yourself through the Cloud Manager Pipeline, follow the steps below. The routing configuration is done by using an [originSelector CDN rule](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors). The prerequisites are as follows:
@@ -118,18 +112,9 @@ The response should **not** contain the `x-edgeoptimize-request-id` header. The 
 | `x-edgeoptimize-request-id` | Present — contains a unique request ID | Absent |
 | `x-edgeoptimize-fo` | Present only if failover occurred (value: `1`) | Absent |
 
-**4. Staging domain (optional)**
+**4. Check routing status in LLM Optimizer**
 
-If you use a staging hostname and staging API key, verify bot traffic on the staging host after your team configures routing:
-
-```
-curl -svo /dev/null https://staging.example.com/page.html \
-  --header "user-agent: chatgpt-user"
-```
-
-Replace `https://staging.example.com/page.html` with your real staging URL and path. A successful response includes the `x-edgeoptimize-request-id` header.
-
-The status of the traffic routing can also be checked in the LLM Optimizer UI. Navigate to **Customer configuration** and select the **CDN configuration** tab. When routing is active, the **Deploy optimizations to AI agents** section shows **Completed**.
+You can also confirm routing in the LLM Optimizer UI. Open **Customer configuration** and select the **CDN configuration** tab. When routing is active, the **Deploy optimizations to AI agents** section shows **Completed**.
 
 ![Deploy optimizations to AI agents — completed](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
