@@ -304,11 +304,9 @@ curl -svo /dev/null https://staging.example.com/page.html \
 
 Replace `https://staging.example.com/page.html` with your real staging URL and path. A successful response includes the `x-edgeoptimize-request-id` header.
 
-The status of the traffic routing can also be checked in the LLM Optimizer UI. Navigate to **Customer configuration** and select the **CDN configuration** tab.
+{{verify-routing-status-in-ui}}
 
-![Deploy optimizations to AI agents — completed](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
-
-**4. Verify logs are flowing correctly**
+**5. Verify logs are flowing correctly**
 
 After running the test requests above, verify that logs are being written for both the CloudFront function and the Lambda@Edge function.
 

@@ -50,6 +50,12 @@ Use a staging hostname when you want to test Optimize at Edge in a lower environ
 
 If you need help, contact `llmo-at-edge@adobe.com`.
 
+## Check routing status in LLM Optimizer {#verify-routing-status-in-ui}
+
+The status of the traffic routing can also be checked in the LLM Optimizer UI. Navigate to **Customer configuration** and select the **CDN configuration** tab.
+
+![Deploy optimizations to AI agents — completed](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+
 ## Return to overview {#return-to-overview}
 
 To learn more about Optimize at Edge, including available opportunities, auto-optimization workflows, and FAQs, return to the [Optimize at Edge overview](/help/dashboards/optimize-at-edge/overview.md).

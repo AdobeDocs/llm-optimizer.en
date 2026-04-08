@@ -188,8 +188,6 @@ curl -svo /dev/null https://staging.example.com/page.html \
 
 Replace `https://staging.example.com/page.html` with your real staging URL and path. A successful response includes the `x-edgeoptimize-request-id` header.
 
-The status of the traffic routing can also be checked in the LLM Optimizer UI. Navigate to **Customer configuration** and select the **CDN configuration** tab.
-
-![Deploy optimizations to AI agents — completed](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+{{verify-routing-status-in-ui}}
 
 {{return-to-overview}}
