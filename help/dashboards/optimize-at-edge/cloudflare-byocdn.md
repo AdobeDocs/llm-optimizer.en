@@ -74,9 +74,9 @@ Click the button below to deploy the Edge Optimize worker to your Cloudflare acc
 
 **Step 2: Fill in the deployment form**
 
-Clicking the button opens the Cloudflare deployment page. Fill in the form as follows:
+Clicking the button opens the Workers setup page. Fill in the form as follows:
 
-![Cloudflare Deploy to Workers form](/help/assets/optimize-at-edge/cloudflare-deploy-form.png)
+![Cloudflare Workers setup page](/help/assets/optimize-at-edge/cloudflare-deploy-form.png)
 
 1. **Git account** — Select your GitHub or GitLab account from the dropdown. Cloudflare forks the worker code into a repository in your account. If no account is listed, you can add a new connection directly from the dropdown by selecting **+ New GitHub Connection** or **+ New GitLab Connection**. For more information, see the [Cloudflare Git integration guide](https://developers.cloudflare.com/workers/ci-cd/builds/git-integration/github-integration/).
 
