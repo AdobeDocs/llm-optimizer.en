@@ -66,10 +66,6 @@ This option uses the **Deploy to Cloudflare** button to automatically create the
 >
 >Use this option only if you **do not** have an existing Cloudflare Worker on your domain. If you already have a worker, use [Option 2: Manual setup](#option-2-manual-setup) to add the Edge Optimize routing logic to your existing worker.
 
-**Prerequisite: GitHub integration**
-
-The Deploy to Cloudflare flow requires your Cloudflare account to be connected to GitHub. If you have not done this yet, follow the [Cloudflare GitHub integration guide](https://developers.cloudflare.com/workers/ci-cd/builds/git-integration/github-integration/) before proceeding.
-
 **Step 1: Deploy the worker**
 
 Click the button below to deploy the Edge Optimize worker to your Cloudflare account:
@@ -82,7 +78,9 @@ Clicking the button opens the Cloudflare deployment page. Fill in the form as fo
 
 ![Cloudflare Deploy to Workers form](/help/assets/optimize-at-edge/cloudflare-deploy-form.png)
 
-1. **Git account** — Select your GitHub account from the dropdown. Cloudflare forks the worker code into a repository in your account.
+1. **Git account** — Select your GitHub or GitLab account from the dropdown. Cloudflare forks the worker code into a repository in your account. If no account is listed, you can add a new connection directly from the dropdown by selecting **+ New GitHub Connection** or **+ New GitLab Connection**. For more information, see the [Cloudflare Git integration guide](https://developers.cloudflare.com/workers/ci-cd/builds/git-integration/github-integration/).
+
+   ![Git account dropdown showing New GitHub Connection and New GitLab Connection options](/help/assets/optimize-at-edge/cloudflare-git-connection.png)
 2. **Create private Git repository** — Leave this checked (default).
 3. **Project name** — Leave as `edge-optimize-router` or enter a name of your choice.
 4. **EDGE_OPTIMIZE_API_KEY** — Paste your Adobe-provided Edge Optimize API key. This value is stored as an encrypted secret.
