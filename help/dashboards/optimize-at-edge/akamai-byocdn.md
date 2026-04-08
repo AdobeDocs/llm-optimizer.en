@@ -38,7 +38,7 @@ Set routing for the following user agents:
 
 >[!NOTE]
 >
->Apply the Optimize at Edge routing rule only to agentic HTML page traffic. A common setup is to use request-side criteria such as **File Extension** to match `html`, `htm`, and `EMPTY_STRING` for extensionless page URLs. If your site serves HTML from other URL patterns, or includes extensionless non-page routes such as API endpoints, refine the rule with additional path-based criteria.
+>Apply the Optimize at Edge routing rule only to agentic HTML page traffic. A common setup is to use request-side criteria such as **File Extension** to match `html` and `EMPTY_STRING` for extensionless page URLs. If your site serves HTML from other URL patterns, or includes extensionless non-page routes such as API endpoints, refine the rule with additional path-based criteria.
 
 ![Set routing criteria](/help/assets/optimize-at-edge/akamai-step1-routing.png)
 
