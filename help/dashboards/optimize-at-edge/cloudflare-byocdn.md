@@ -56,8 +56,6 @@ There are two ways to set up the Cloudflare Worker for Edge Optimize:
 
 Regardless of which option you choose, you must manually link the worker to your domain — see [Step: Add a route to your domain](#add-a-route-to-your-domain).
 
----
-
 ## Option 1: Deploy to Cloudflare
 
 This option uses the **Deploy to Cloudflare** button to automatically create the worker and configure the required environment variables and secrets in your Cloudflare account. This is the quickest way to get started if you are setting up a new worker.
@@ -91,8 +89,6 @@ Clicking the button opens the Workers setup page. Fill in the form as follows:
 9. Click **Create and deploy**.
 
 After the worker is deployed, proceed to [Add a route to your domain](#add-a-route-to-your-domain) to link the worker with your domain. Routing is not configured automatically and must be completed manually.
-
----
 
 ## Option 2: Manual setup
 
@@ -299,8 +295,6 @@ Environment variables store sensitive configuration like your API key securely.
 
 ![Cloudflare environment variables](/help/assets/optimize-at-edge/cloudflare-env-variables.png)
 
----
-
 ## Add a route to your domain {#add-a-route-to-your-domain}
 
 Regardless of which setup option you used, you must manually link the worker to your domain. This step activates the worker on your traffic.
@@ -318,8 +312,6 @@ Alternatively, you can configure routes at the zone level:
 3. Click **Add route** and specify the pattern and worker.
 
 ![Cloudflare Worker routes](/help/assets/optimize-at-edge/cloudflare-worker-routes.png)
-
----
 
 **Verifying failover behavior**
 
