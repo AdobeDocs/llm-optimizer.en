@@ -82,11 +82,11 @@ Clicking the button opens the Cloudflare deployment page. Fill in the form as fo
 
 ![Cloudflare Deploy to Workers form](/help/assets/optimize-at-edge/cloudflare-deploy-form.png)
 
-1. **Git account** — Select your GitHub account from the dropdown. Cloudflare forks the worker code into a private repository in your account.
-2. **Create private Git repository** — Leave this checked (default). The forked repository is created as private.
+1. **Git account** — Select your GitHub account from the dropdown. Cloudflare forks the worker code into a repository in your account.
+2. **Create private Git repository** — Leave this checked (default).
 3. **Project name** — Leave as `edge-optimize-router` or enter a name of your choice.
 4. **EDGE_OPTIMIZE_API_KEY** — Paste your Adobe-provided Edge Optimize API key. This value is stored as an encrypted secret.
-5. **EDGE_OPTIMIZE_TARGET_HOST** — Enter your site's domain without the protocol (for example, `www.example.com`). This is sent as the `x-forwarded-host` header and used as the failover origin.
+5. **EDGE_OPTIMIZE_TARGET_HOST** — Enter your site's domain without the protocol (for example, `www.example.com`).
 6. **Build command** — Leave empty.
 7. **Deploy command** — Leave as `npm run deploy` (pre-filled).
 8. **Builds for non-production branches** — Leave unchecked. This is a developer workflow feature and is not needed for this deployment.
