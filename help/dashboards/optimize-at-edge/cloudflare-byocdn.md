@@ -51,7 +51,7 @@ The following headers must be set on requests to the Edge Optimize backend:
 
 There are two ways to set up the Cloudflare Worker for Edge Optimize:
 
-* [**Option 1: Deploy to Cloudflare (recommended)**](#option-1-deploy-to-cloudflare) — Automatically creates a new worker and prompts you for the required environment variables. Use this option if you do not have an existing Cloudflare Worker for this domain.
+* [**Option 1: Deploy to Cloudflare (recommended)**](#option-1-deploy-to-cloudflare) — Automatically creates a new worker and prompts you for the required environment variables and secrets. Use this option if you do not have an existing Cloudflare Worker for this domain.
 * [**Option 2: Manual setup**](#option-2-manual-setup) — Step-by-step instructions for creating and configuring the worker yourself. Use this option if you already have an existing Cloudflare Worker you want to extend, or if you prefer full control over the deployment.
 
 Regardless of which option you choose, you must manually link the worker to your domain — see [Step: Add a route to your domain](#add-a-route-to-your-domain).
@@ -60,7 +60,7 @@ Regardless of which option you choose, you must manually link the worker to your
 
 ## Option 1: Deploy to Cloudflare
 
-This option uses the **Deploy to Cloudflare** button to automatically create the worker and configure the required environment variables in your Cloudflare account. This is the quickest way to get started if you are setting up a new worker.
+This option uses the **Deploy to Cloudflare** button to automatically create the worker and configure the required environment variables and secrets in your Cloudflare account. This is the quickest way to get started if you are setting up a new worker.
 
 >[!IMPORTANT]
 >
@@ -281,7 +281,7 @@ Click **Save and deploy** to publish the worker.
 
 ![Cloudflare Worker code editor](/help/assets/optimize-at-edge/cloudflare-worker-editor.png)
 
-**Step 3: Configure environment variables**
+**Step 3: Configure environment variables and secrets**
 
 Environment variables store sensitive configuration like your API key securely.
 
@@ -423,7 +423,7 @@ const FAILOVER_ON_5XX = false;
 | Issue | Possible Cause | Solution |
 |-------|----------------|----------|
 | No `x-edgeoptimize-request-id` header in response | Worker route not matched, or user agent not in the agentic bots list. | Verify your route pattern matches the request URL. Check that the user agent is in the `AGENTIC_BOTS` array. |
-| 401 or 403 errors from Edge Optimize | Invalid or missing API key. | Verify `EDGE_OPTIMIZE_API_KEY` is correctly set in environment variables. Contact Adobe to confirm your API key is active. |
+| 401 or 403 errors from Edge Optimize | Invalid or missing API key. | Verify `EDGE_OPTIMIZE_API_KEY` is correctly set in environment variables and secrets. Contact Adobe to confirm your API key is active. |
 | Infinite redirects or loops | Loop protection header not being set or checked correctly. | Ensure the `x-edgeoptimize-request` header check is in place. |
 | Human traffic affected | Worker routing logic is too broad. | Verify the user agent matching logic is correct and case-insensitive. Check that `TARGETED_PATHS` is configured correctly. |
 | Slow response times | Network latency to Edge Optimize backend. | This is expected for the first request; subsequent requests are cached at Edge Optimize. |
