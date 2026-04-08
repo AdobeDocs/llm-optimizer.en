@@ -47,6 +47,51 @@ The following headers must be set on requests to the Edge Optimize backend:
 | `x-edgeoptimize-api-key` | The API key provided by Adobe for your domain. | `your-api-key-here` |
 | `x-edgeoptimize-config` | Configuration string for cache key differentiation. | `LLMCLIENT=TRUE;` |
 
+## Setup options
+
+There are two ways to set up the Cloudflare Worker for Edge Optimize:
+
+* [**Option 1: Deploy to Cloudflare (recommended)**](#option-1-deploy-to-cloudflare) — Automatically creates a new worker and prompts you for the required environment variables. Use this option if you do not have an existing Cloudflare Worker for this domain.
+* [**Option 2: Manual setup**](#option-2-manual-setup) — Step-by-step instructions for creating and configuring the worker yourself. Use this option if you already have an existing Cloudflare Worker you want to extend, or if you prefer full control over the deployment.
+
+Regardless of which option you choose, you must manually link the worker to your domain — see [Step: Add a route to your domain](#add-a-route-to-your-domain).
+
+---
+
+## Option 1: Deploy to Cloudflare
+
+This option uses the **Deploy to Cloudflare** button to automatically create the worker and configure the required environment variables in your Cloudflare account. This is the quickest way to get started if you are setting up a new worker.
+
+>[!IMPORTANT]
+>
+>Use this option only if you **do not** have an existing Cloudflare Worker on your domain. If you already have a worker, use [Option 2: Manual setup](#option-2-manual-setup) to add the Edge Optimize routing logic to your existing worker.
+
+**Step 1: Deploy the worker**
+
+Click the button below to deploy the Edge Optimize worker to your Cloudflare account:
+
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/adobe/llmo-code-samples/tree/main/optimize-at-edge/cloudflare/automation)
+
+Clicking the button opens the Cloudflare deployment page, where you are prompted to:
+
+1. Authorize Cloudflare to access your GitHub account (if not already authorized).
+2. Enter values for the required environment variables:
+
+   | Variable Name | Description |
+   |---------------|-------------|
+   | `EDGE_OPTIMIZE_TARGET_HOST` | Your site's domain without the protocol (for example, `www.example.com`). This is sent as the `x-forwarded-host` header and used as the failover origin. |
+   | `EDGE_OPTIMIZE_API_KEY` | Your Adobe-provided Edge Optimize API key. This value is stored as a secret. |
+
+3. Click **Deploy** to create the worker in your Cloudflare account.
+
+After the worker is deployed, proceed to [Add a route to your domain](#add-a-route-to-your-domain) to link the worker with your domain. Routing is not configured automatically and must be completed manually.
+
+---
+
+## Option 2: Manual setup
+
+Follow these steps to create and configure the worker manually.
+
 **Step 1: Create the Cloudflare Worker**
 
 1. Log in to your Cloudflare dashboard.
@@ -248,9 +293,11 @@ Environment variables store sensitive configuration like your API key securely.
 
 ![Cloudflare environment variables](/help/assets/optimize-at-edge/cloudflare-env-variables.png)
 
-**Step 4: Add a route to your domain**
+---
 
-To activate the worker on your domain:
+## Add a route to your domain {#add-a-route-to-your-domain}
+
+Regardless of which setup option you used, you must manually link the worker to your domain. This step activates the worker on your traffic.
 
 1. Go to your worker's **Settings** > **Triggers**.
 2. Under **Routes**, click **Add route**.
@@ -265,6 +312,8 @@ Alternatively, you can configure routes at the zone level:
 3. Click **Add route** and specify the pattern and worker.
 
 ![Cloudflare Worker routes](/help/assets/optimize-at-edge/cloudflare-worker-routes.png)
+
+---
 
 **Verifying failover behavior**
 
