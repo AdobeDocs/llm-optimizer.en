@@ -12,19 +12,21 @@ This configuration routes agentic traffic (requests from AI bots and LLM user ag
 
 To start routing agentic traffic to Edge Optimize:
 
-1. Navigate to **Customer Configuration** and select the **CDN Configuration** tab.
+1. In LLM Optimizer, open **Customer configuration** and select the **CDN configuration** tab.
 
    ![Navigate to Customer Configuration](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
 
-2. Under **AI Traffic Routing to Deploy Optimizations**, tick the **Deploy Optimizations to AI Agents** checkbox. The Adobe team will handle the routing configuration on your behalf.
+2. Locate the **Deploy optimizations to AI agents** section. Tick the **Enable optimization engine** checkbox.
 
-   ![Tick Deploy Optimizations to AI Agents](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+   ![Deploy optimizations to AI agents — pending](/help/assets/optimize-at-edge/byocdn-deploy-optimizations-pending.png)
 
-3. After enabling the checkbox, the status will show that the setup is in progress. The Adobe team will complete the routing configuration for you.
+3. In the confirmation dialog, select **Enable**. The Adobe team will handle the routing configuration on your behalf.
 
-   ![AI Traffic Routing setup in progress](/help/assets/optimize-at-edge/prereq-traffic-routing-progress.png)
+   ![Enable optimization engine confirmation dialog](/help/assets/optimize-at-edge/byocdn-enable-optimization-engine-dialog.png)
 
-   Once the routing is configured and active, the status will update to show a green checkmark indicating that routing is successfully enabled. No further action is required on your end.
+   Once the routing is configured and active, the status updates to **Completed** with a green checkmark confirming that routing is enabled. No further action is required on your end.
+
+   ![Deploy optimizations to AI agents — completed](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
 Additionally, if you require any help with the above steps, reach out to your Adobe account team or `llmo-at-edge@adobe.com`.
 
@@ -110,8 +112,10 @@ The response should **not** contain the `x-edgeoptimize-request-id` header. The 
 | `x-edgeoptimize-request-id` | Present — contains a unique request ID | Absent |
 | `x-edgeoptimize-fo` | Present only if failover occurred (value: `1`) | Absent |
 
-The status of the traffic routing can also be checked in the LLM Optimizer UI. Navigate to **Customer Configuration** and select the **CDN Configuration** tab.
+**4. Check routing status in LLM Optimizer**
 
-![AI Traffic Routing status with routing enabled](/help/assets/optimize-at-edge/adobe-CDN-traffic-routed-tick.png)
+You can also confirm routing in the LLM Optimizer UI. Open **Customer configuration** and select the **CDN configuration** tab. When routing is active, the **Deploy optimizations to AI agents** section shows **Completed**.
+
+![Deploy optimizations to AI agents — completed](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
 {{return-to-overview}}

@@ -8,9 +8,6 @@ feature: Opportunities
 
 This page provides a detailed overview on how to deliver optimizations at the CDN edge without any authoring changes. It covers the onboarding process, the available optimization opportunities and how to auto-optimize at edge.
 
->[!NOTE]
->This functionality is currently in Early Access. You can learn more about Early Access programs [here](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs).
-
 ## What is Optimize at Edge?
 
 Optimize at Edge is an edge-based deployment capability in LLM Optimizer that serves AI friendly changes to LLM user agents. In the current context, "Edge" means that the optimization is applied at the CDN layer. Because it delivers optimizations at the CDN layer, no authoring changes in the Content Management System (CMS) are required so your origin CMS remains unchanged. This separation lets you improve LLM visibility without altering your existing publishing workflows. It targets only agentic traffic and does not impact either human users or SEO bots. When LLM Optimizer detects opportunities to optimize a page, users can deploy fixes directly at the CDN edge.
@@ -33,7 +30,17 @@ Opportunities that can improve the agentic web experience are supported with Opt
 
 ## Onboarding
 
-You should reach out to either your Adobe account team or the FDE team to start the onboarding process. Your IT or CDN team is also required to complete the pre-requisites and setup process. Additionally, you can also contact `llmo-at-edge@adobe.com` for further onboarding assistance.
+<!--You should reach out to either your Adobe account team or the FDE team to start the onboarding process. Your IT or CDN team is also required to complete the pre-requisites and setup process. Additionally, you can also contact `llmo-at-edge@adobe.com` for further onboarding assistance.-->
+
+Start the onboarding process in your LLM Optimizer account:
+
+1. On the **Customer configuration** dashboard, select the **CDN configuration** tab.
+1. Click **Onboard CDN**.
+![CDN Configuration tab](/help/overview/assets/cc-cdn.png)
+1. For AEM Fastly customers, Adobe can assist in completing the onboarding process. For customers using other CDN providers, your IT/CDN team needs to complete the required setup and prerequisites. You can also refer to the example CDN guides provided below for additional guidance.
+
+>[!NOTE]
+>Please refer to the step by step guides below that cover the full onboarding flow. For issues not resolved by the guides, you can reach out to `llmo-at-edge@adobe.com`.
 
 Pre-requisites to onboard to Optimize at Edge:
 
@@ -41,6 +48,7 @@ Pre-requisites to onboard to Optimize at Edge:
 * Complete the log forwarding process for your CDN logs.
 
 Requirements for your IT/CDN team:
+
 * Add `*AdobeEdgeOptimize/1.0*` user-agent to the Allowlist in your site's robots.txt file or bot-traffic management rules.
 * Ensure that pages are not blocked at the domain or CDN level.
 * Add Optimize at Edge routing rules in the CDN.
@@ -50,6 +58,10 @@ Requirements for your IT/CDN team:
 >Routing must be configured at the outer CDN (the CDN closest to the client). If you have multiple CDNs, routing can only be done at the outer CDN.
 
 To guide the setup process, select your CDN provider below and follow the corresponding configuration guide. Keep in mind that these examples should be adapted to your actual live configuration. We recommend applying changes in the lower environments first.
+
+### Staging domain API keys (optional)
+
+If you test on a staging hostname before production, use LLM Optimizer to register **one** staging domain and copy its **staging** Edge Optimize API key from **Customer configuration** → **CDN configuration** → **Deploy optimizations to AI agents** → **Add stage domain** (or **Stage domain**). The staging hostname must share the same registrable domain as your production site. **Bring Your Own CDN** guides include the full steps to retrieve the staging key and verify routing on your staging URL.
 
 ### CDN Configuration Guides
 
@@ -62,6 +74,7 @@ To guide the setup process, select your CDN provider below and follow the corres
 | CloudFront (BYOCDN) | Bring Your Own CDN | [View setup guide](/help/dashboards/optimize-at-edge/cloudfront-byocdn.md) |
 
 >[!NOTE]
+>
 >If your CDN provider is not listed above, or if you do not find your domain or email in the LLM Optimizer UI, please reach out to `llmo-at-edge@adobe.com` for onboarding assistance. Once the setup configurations are complete, you can deploy suggestions for Optimize at Edge opportunities in LLM Optimizer.
 
 Each CDN setup guide above includes detailed verification steps at the end to confirm that agentic traffic is being routed correctly and that human traffic remains unaffected.
@@ -79,7 +92,7 @@ Presented in the following table are opportunities that can improve the agentic 
 
 ### Additional Tools
 
-The [Adobe LLM Optimizer: Is your webpage citable?](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) Chrome extension shows how much of your webpage content LLMs can access and what stays hidden. Designed as a free, standalone diagnostic tool, it requires no product license or setup.
+The [AI Content Visibility Checker](https://chromewebstore.google.com/detail/ai-content-visibility-che/jbjngahjjdgonbeinjlepfamjdmdcbcc) browser extension shows how much of your webpage content LLMs can access and what stays hidden. Designed as a free, standalone diagnostic tool, it requires no product license or setup.
 
 With a single-click, you can evaluate any site's machine readability. You can view a side-by-side comparison of what AI agents see versus what human users see, and estimate how much content could be recovered by using LLM Optimizer. See the [Can AI read your website?](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) page for more information.
 
@@ -145,17 +158,23 @@ Rollback safely reverts a previously deployed optimization. The AI-only version 
 
 ## Frequently Asked Questions
 
+Q: Can Trial customers try out Optimize at Edge?
+
+Yes, Trial customers can access one optimization opportunity and deploy it for up to 10 pages. By default, the opportunity is Recover Content Visibility, which enables AI agents to access the complete version of your page content.
+
 Q. What kind of LLMs do you target with Optimize at Edge?
 
 The list of user agents to target is defined by you during the onboarding process.
 
-<!--Q. What does "Edge" in Optimize at Edge mean?
+<!--
+Q. What does "Edge" in Optimize at Edge mean?
 
 In our context, "Edge" means that the optimization is applied at the CDN layer and not inside your CMS.
 
 Q. Why does this optimization require a CDN?
 
-The CDN is where the optimized version of the page is assembled and delivered to AI agents. We leverage the CDN to ensure your origin CMS remains unchanged. This separation lets you improve LLM visibility without altering your existing publishing workflows.-->
+The CDN is where the optimized version of the page is assembled and delivered to AI agents. We leverage the CDN to ensure your origin CMS remains unchanged. This separation lets you improve LLM visibility without altering your existing publishing workflows.
+-->
 
 Q. What happens if I'm not onboarded to Optimize at Edge yet?
 
