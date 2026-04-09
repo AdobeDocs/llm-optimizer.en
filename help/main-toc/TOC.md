@@ -26,6 +26,7 @@ user-guide-description: Boost your brand with Adobe LLM Optimizer. Track mention
   + [Akamai](/help/overview/log-forwarding/akamai.md)
   + [Cloudflare](/help/overview/log-forwarding/cloudflare.md)
   + [CloudFront](/help/overview/log-forwarding/cloudfront.md)
+  + [CloudFront (AWS CLI)](/help/overview/log-forwarding/cloudfront-cli.md)
   + [Fastly](/help/overview/log-forwarding/fastly.md)
   + [Imperva](/help/overview/log-forwarding/imperva.md)
   + [Other (Manual Upload)](/help/overview/log-forwarding/other.md)
