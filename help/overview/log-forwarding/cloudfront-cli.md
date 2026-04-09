@@ -50,7 +50,7 @@ Setup CDN log forwarding with AWS CLI as follows:
 
 ### Configure AWS CLI credentials
 
-Setup AWS CLI credential  MAC, open ~/.aws/credentials and enter the values for the variables below:
+Setup AWS CLI credential MAC. Open ~/.aws/credentials and enter the values for the variables below:
 
 ```text
 [LLMO]
