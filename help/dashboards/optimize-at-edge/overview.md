@@ -34,7 +34,7 @@ Opportunities that can improve the agentic web experience are supported with Opt
 
 Start the onboarding process in your LLM Optimizer account:
 
-1. On the **Customer Configuratio**n dashboard, select the **CDN Configuration** tab.
+1. On the **Customer configuration** dashboard, select the **CDN configuration** tab.
 1. Click **Onboard CDN**.
 ![CDN Configuration tab](/help/overview/assets/cc-cdn.png)
 1. For AEM Fastly customers, Adobe can assist in completing the onboarding process. For customers using other CDN providers, your IT/CDN team needs to complete the required setup and prerequisites. You can also refer to the example CDN guides provided below for additional guidance.
@@ -54,7 +54,14 @@ Requirements for your IT/CDN team:
 * Add Optimize at Edge routing rules in the CDN.
 * Confirm Optimize at Edge routing in the LLM Optimizer interface.
 
+>[!IMPORTANT]
+>Routing must be configured at the outer CDN (the CDN closest to the client). If you have multiple CDNs, routing can only be done at the outer CDN.
+
 To guide the setup process, select your CDN provider below and follow the corresponding configuration guide. Keep in mind that these examples should be adapted to your actual live configuration. We recommend applying changes in the lower environments first.
+
+### Staging domain API keys (optional)
+
+If you test on a staging hostname before production, use LLM Optimizer to register **one** staging domain and copy its **staging** Edge Optimize API key from **Customer configuration** → **CDN configuration** → **Deploy optimizations to AI agents** → **Add stage domain** (or **Stage domain**). The staging hostname must share the same registrable domain as your production site. **Bring Your Own CDN** guides include the full steps to retrieve the staging key and verify routing on your staging URL.
 
 ### CDN Configuration Guides
 

@@ -11,7 +11,7 @@ Log forwarding for a customer managed CDN (BYOCDN) is the process of sending you
 The guides provided below, follow the same two-phase workflow:
 
 1. **Onboard in LLM Optimizer** — register your CDN on the [CDN Configuration](/help/dashboards/customer-configuration.md) page to generate the needed S3 credentials and path details.
-2. **Configure your CDN** — use those details to create a log-forwarding job (or upload logs manually) in your CDN provider's console.
+2. **Configure your CDN** — use those details to create a log-forwarding job (or upload logs manually) in your CDN provider's console. For CloudFront, you can use the console or complete delivery setup with the **AWS CLI** only; see [CloudFront (AWS CLI)](/help/overview/log-forwarding/cloudfront-cli.md).
 
 ## CDN providers {#cdn-providers}
 
@@ -21,7 +21,8 @@ Follow the corresponding guide for you CDN provider.
 |---|---|
 | Akamai | [View guide](/help/overview/log-forwarding/akamai.md) |
 | Cloudflare | [View guide](/help/overview/log-forwarding/cloudflare.md) |
-| CloudFront | [View guide](/help/overview/log-forwarding/cloudfront.md) |
+| CloudFront (console) | [View guide](/help/overview/log-forwarding/cloudfront.md) |
+| CloudFront (AWS CLI) | [View guide](/help/overview/log-forwarding/cloudfront-cli.md) |
 | Fastly | [View guide](/help/overview/log-forwarding/fastly.md) |
 | Imperva | [View guide](/help/overview/log-forwarding/imperva.md) |
 | Other (manual / unsupported CDN) | [View guide](/help/overview/log-forwarding/other.md) |

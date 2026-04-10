@@ -16,25 +16,32 @@ Before setting up the Akamai Property Manager rules, ensure you have:
 * Completed the LLM Optimizer onboarding process.
 * Completed CDN log forwarding to LLM Optimizer.
 * An Edge Optimize API key retrieved from the LLM Optimizer UI.
+* (Optional) A staging Edge Optimize API key if you test routing on a staging hostname first.
 
 {{retrieve-byocdn-api-key}}
 
+{{retrieve-staging-edge-optimize-api-key}}
+
 **Configuration**
 
-The following Akamai Property Manager rule routes LLM user agents to Edge Optimize. The configuration includes the following steps:
+The following Akamai Property Manager rule routes agentic HTML page traffic to Edge Optimize. The configuration includes the following steps:
 
-**1. Set routing criteria (User-Agent matching)**
+**1. Set routing criteria (User-Agent and HTML traffic matching)**
 
-Set routing for the following user-agents:image.png
+Set routing for the following user agents:
 
 ```
- *AdobeEdgeOptimize-AI*,
- *ChatGPT-User*,
- *GPTBot*,
- *OAI-SearchBot*,
- *PerplexityBot*,
+ *AdobeEdgeOptimize-AI*
+ *ChatGPT-User*
+ *GPTBot*
+ *OAI-SearchBot*
+ *PerplexityBot*
  *Perplexity-User*
 ```
+
+>[!NOTE]
+>
+>Apply the Optimize at Edge routing rule only to agentic HTML page traffic. A common setup is to use request-side criteria such as **File Extension** to match `html` and `EMPTY_STRING` for extensionless page URLs. If your site serves HTML from other URL patterns, or includes extensionless non-page routes such as API endpoints, refine the rule with additional path-based criteria.
 
 ![Set routing criteria](/help/assets/optimize-at-edge/akamai-step1-routing.png)
 
@@ -174,8 +181,17 @@ The response should **not** contain the `x-edgeoptimize-request-id` header. The 
 | `x-edgeoptimize-request-id` | Present — contains a unique request ID | Absent |
 | `x-edgeoptimize-fo` | Present only if failover occurred (value: `1`) | Absent |
 
-The status of the traffic routing can also be checked in the LLM Optimizer UI. Navigate to **Customer Configuration** and select the **CDN Configuration** tab.
+**4. Staging domain (optional)**
 
-![AI Traffic Routing status with routing enabled](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+If you use a staging hostname and staging API key from LLM Optimizer, deploy the same routing pattern on your **staging** Akamai property using the **staging** key in your rules. Then verify bot traffic on the staging host:
+
+```
+curl -svo /dev/null https://staging.example.com/page.html \
+  --header "user-agent: chatgpt-user"
+```
+
+Replace `https://staging.example.com/page.html` with your real staging URL and path. A successful response includes the `x-edgeoptimize-request-id` header.
+
+{{verify-routing-status-in-ui}}
 
 {{return-to-overview}}

@@ -17,8 +17,11 @@ Before setting up the Cloudflare Worker routing rules, ensure you have:
 * Completed the LLM Optimizer onboarding process.
 * Completed CDN log forwarding to LLM Optimizer.
 * An Edge Optimize API key retrieved from the LLM Optimizer UI.
+* (Optional) A staging Edge Optimize API key if you test routing on a staging hostname first.
 
 {{retrieve-byocdn-api-key}}
+
+{{retrieve-staging-edge-optimize-api-key}}
 
 **How routing works**
 
@@ -463,8 +466,17 @@ The response should **not** contain the `x-edgeoptimize-request-id` header. The 
 | `x-edgeoptimize-request-id` | Present — contains a unique request ID | Absent |
 | `x-edgeoptimize-fo` | Present only if failover occurred (value: `1`) | Absent |
 
-The status of the traffic routing can also be checked in the LLM Optimizer UI. Navigate to **Customer Configuration** and select the **CDN Configuration** tab.
+**4. Staging domain (optional)**
 
-![AI Traffic Routing status with routing enabled](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+If you use a staging hostname and staging API key from LLM Optimizer, deploy the same Worker logic on your **staging** zone using the **staging** API key. Then verify bot traffic on the staging host:
+
+```
+curl -svo /dev/null https://staging.example.com/page.html \
+  --header "user-agent: chatgpt-user"
+```
+
+Replace `https://staging.example.com/page.html` with your real staging URL and path. A successful response includes the `x-edgeoptimize-request-id` header.
+
+{{verify-routing-status-in-ui}}
 
 {{return-to-overview}}
