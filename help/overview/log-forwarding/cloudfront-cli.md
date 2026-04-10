@@ -34,7 +34,7 @@ On the LLM Optimizer page [https://llmo.now/](https://llmo.now/):
 
 1. Enter your **AWS Account** ID.
 
-   ![AWS Account ID](/help/overview/assets/log-forwarding/cloudfront/cloudfront-aws-account.png)
+ <!--  ![AWS Account ID](/help/overview/assets/log-forwarding/cloudfront/cloudfront-aws-account.png)-->
 
 1. Select **CloudFront (BYOCDN)**.
 
@@ -42,7 +42,7 @@ On the LLM Optimizer page [https://llmo.now/](https://llmo.now/):
 
 1. Click **Onboard**.
 
-   ![Onboard button](/help/overview/assets/log-forwarding/common/onboard-button.png)
+  <!-- ![Onboard button](/help/overview/assets/log-forwarding/common/onboard-button.png)-->
 
 ## Step 2: Set up CDN log forwarding with AWS CLI {#step-2-cli}
 
