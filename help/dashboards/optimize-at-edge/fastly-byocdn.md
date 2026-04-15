@@ -126,13 +126,9 @@ The response should **not** contain the `x-edgeoptimize-request-id` header. The 
 
 {{retrieve-staging-edge-optimize-api-key}}
 
-Deploy the same routing rules on your staging service using the staging API key. To test staging traffic:
-
 ```
 curl -svo /dev/null https://staging.example.com/page.html \
   --header "user-agent: chatgpt-user"
 ```
-
-Replace `https://staging.example.com/page.html` with your real staging URL and path. **Success:** The response includes the `x-edgeoptimize-request-id` header.
 
 {{return-to-overview}}
