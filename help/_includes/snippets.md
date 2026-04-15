@@ -60,11 +60,11 @@ The status of the traffic routing can also be checked in the LLM Optimizer UI. N
 
 If your CDN uses a WAF or Bot Manager:
 
-* Allowlist the `*AdobeEdgeOptimize/1.0*` user agent so the Optimize at Edge service can fetch your origin content.
-* If your firewall requires additional verification, add the `x-edgeoptimize-fetcher-key` shared secret header in your routing rules alongside the other `x-edgeoptimize-*` headers.
-* Generate a secret (for example, `openssl rand -hex 32`) and create a firewall rule to allow requests where the header matches your secret.
-* Optimize at Edge forwards this header as-is — you own the full key lifecycle including rotation.
-* To rotate, update both the firewall rule and routing rules. Accept both old and new keys temporarily to avoid downtime.
+* Allowlist the `*AdobeEdgeOptimize/1.0*` user agent in your WAF or Bot Manager so the Optimize at Edge service can fetch your origin content.
+* If your firewall requires additional verification beyond user agent, generate a secret (for example, `openssl rand -hex 32`) and:
+  * Add `x-edgeoptimize-fetcher-key` with the secret in your routing rules alongside the other `x-edgeoptimize-*` headers.
+  * Add a WAF or Bot Manager rule to allow requests where `x-edgeoptimize-fetcher-key` matches the same secret.
+* Optimize at Edge forwards this header as-is — you own the full key lifecycle. To rotate, update both rules and accept both old and new keys temporarily.
 
 ## Return to overview {#return-to-overview}
 
