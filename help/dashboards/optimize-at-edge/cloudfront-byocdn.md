@@ -400,7 +400,7 @@ Once deployed, all traffic routes directly to your default origin. No configurat
 
 {{retrieve-staging-edge-optimize-api-key}}
 
-Deploy the same CloudFront configuration on your **staging** distribution using the **staging** API key. Then verify bot traffic on the staging host:
+Deploy the same routing rules on your staging distribution using the staging API key. To test staging traffic:
 
 ```
 curl -svo /dev/null https://staging.example.com/page.html \

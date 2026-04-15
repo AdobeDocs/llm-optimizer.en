@@ -126,7 +126,7 @@ The response should **not** contain the `x-edgeoptimize-request-id` header. The 
 
 {{retrieve-staging-edge-optimize-api-key}}
 
-Add the same VCL snippets to your **staging** Fastly service using the **staging** API key. Then verify bot traffic on the staging host:
+Deploy the same routing rules on your staging service using the staging API key. To test staging traffic:
 
 ```
 curl -svo /dev/null https://staging.example.com/page.html \

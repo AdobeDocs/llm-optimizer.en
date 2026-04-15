@@ -27,7 +27,7 @@ Additionally, if you require any help with the above steps, reach out to your Ad
 
 ## Optional: Test routing on a staging hostname {#retrieve-staging-edge-optimize-api-key}
 
-If you'd like to validate the setup in a lower environment before enabling production routing, you can configure a staging hostname.
+If you'd like to validate the routing in a lower environment before enabling production routing, you can configure a staging hostname.
 
 **Requirements**
 
