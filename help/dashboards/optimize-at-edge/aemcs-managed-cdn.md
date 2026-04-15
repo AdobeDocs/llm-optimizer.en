@@ -14,7 +14,7 @@ To access this feature:
 - Paid customers must have access to the **Adobe LLM Optimize Users** IMS Product Profile.
 - Trial customers must be part of the **LLMO Admin** IMS group.
 
-> [!NOTE]  
+>[!NOTE]
 > This feature is not supported in Safari or in incognito/private browsing modes.
 
 **Steps to Enable Routing**
