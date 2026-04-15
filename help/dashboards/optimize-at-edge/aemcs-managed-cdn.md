@@ -91,4 +91,48 @@ Use the list below to identify the error and follow the directions.
 
 If the issue persists, reach out to your Adobe account team or `llmo-at-edge@adobe.com`.
 
+**(Optional) Verify the Setup**
+
+After the routing configuration is complete, you can optionally verify that bot traffic is being routed to Edge Optimize and that human traffic remains unaffected.
+
+1. **Test bot traffic (should be optimized)**
+
+   Simulate an AI bot request using an agentic user-agent:
+
+   ```
+   curl -svo /dev/null https://www.example.com/page.html \
+     --header "user-agent: chatgpt-user"
+   ```
+
+   A successful response includes the `x-edgeoptimize-request-id` header, confirming that the request was routed through Edge Optimize:
+
+   ```
+   < HTTP/2 200
+   < x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
+   ```
+
+2. **Test human traffic (should NOT be affected)**
+
+   Simulate a regular human browser request:
+
+   ```
+   curl -svo /dev/null https://www.example.com/page.html \
+     --header "user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+   ```
+
+   The response should not contain the `x-edgeoptimize-request-id` header. The page content and response time should remain identical to before enabling Optimize at Edge.
+
+3. **How to differentiate between the two scenarios**
+
+   | Header | Bot traffic (optimized) | Human traffic (unaffected) |
+   |---|---|---|
+   | `x-edgeoptimize-request-id` | Present — contains a unique request ID | Absent |
+   | `x-edgeoptimize-fo` | Present only if failover occurred (value: `1`) | Absent |
+
+4. **Check routing status in LLM Optimizer**
+
+   You can also confirm routing in the LLM Optimizer UI. Open **Customer configuration** and select the **CDN configuration** tab. When routing is active, the **Deploy optimizations to AI agents** section shows **Completed**.
+
+   ![Deploy optimizations to AI agents — completed](/help/assets/optimize-at-edge/cs-fastly-disable-button.png)
+
 {{return-to-overview}}
