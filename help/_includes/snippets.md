@@ -25,28 +25,23 @@
 
 Additionally, if you require any help with the above steps, reach out to your Adobe account team or `llmo-at-edge@adobe.com`.
 
-## Staging domain API key (optional) {#retrieve-staging-edge-optimize-api-key}
+## Optional: Test routing on a staging hostname {#retrieve-staging-edge-optimize-api-key}
 
-Use a staging hostname when you want to test Optimize at Edge in a lower environment before production traffic uses the routing rules.
+If you'd like to validate the setup in a lower environment before enabling production routing, you can configure a staging hostname.
 
-**Prerequisites**
+**Requirements**
 
-* The staging hostname must belong to the **same registrable domain** as your production site (for example, `https://staging.example.com` when production is `https://www.example.com`).
-* Only **one** staging domain can be configured for the site. After it is saved, it cannot be changed without assistance.
+* The staging hostname must be on the **same registrable domain** as production (for example, `https://staging.example.com` when production is `https://www.example.com`).
+* Only **one** staging domain per site. After it is saved, it cannot be changed without contacting Adobe.
 
-**Steps**
+**Get your staging API key**
 
-1. In LLM Optimizer, open **Customer configuration** and select the **CDN configuration** tab.
+1. Open **Customer configuration** and select **CDN configuration**.
+2. Under **Deploy optimizations to AI agents**, select **Add stage domain** (or **Stage domain** if a staging domain is already configured).
+3. Enter the full staging URL including `https://` and select **Set Domain**.
+4. Copy the **staging** API key from the confirmation dialog.
 
-2. In the **Deploy optimizations to AI agents** section, select **Add stage domain** (or **Stage domain** if a staging domain is already configured).
-
-3. In the **Stage Domain** dialog, enter the full staging URL including `https://` and select **Set Domain**.
-
-   ![Stage Domain input dialog](/help/assets/optimize-at-edge/byocdn-staging-domain-input.png)
-
-4. Confirm the domain in the next prompt. When the workflow completes, the **Stage Domains** dialog shows the configured domain and its **API key**. Select **Copy** to copy the staging API key.
-
-   ![Staging domain API key](/help/assets/optimize-at-edge/byocdn-staging-domain-api-key.png)
+![Staging domain API key](/help/assets/optimize-at-edge/byocdn-staging-domain-api-key.png)
 
 If you need help, contact `llmo-at-edge@adobe.com`.
 

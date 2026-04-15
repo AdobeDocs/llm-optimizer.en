@@ -1,0 +1,97 @@
+2026-04-15 11:01:27.293 [debug] Initializing ConfigManager from environment variables
+2026-04-15 11:01:27.294 [debug] Loaded config from environment (sensitive data redacted):
+2026-04-15 11:01:27.294 [debug] {
+  "host": "wiki.corp.adobe.com",
+  "authMethod": "[REDACTED]",
+  "port": 1984,
+  "assetsOutputDir": "./wiki-mcp/assets",
+  "assets": {
+    "extractAssets": false,
+    "outputDir": "./wiki-mcp/assets",
+    "filenamePrefix": "asset-",
+    "createOutputDirs": true,
+    "useAbsolutePath": true,
+    "assetTypes": [
+      "image",
+      "pdf",
+      "document",
+      "attachment",
+      "plantuml"
+    ]
+  }
+}
+2026-04-15 11:01:27.294 [debug] ConfigManager initialized
+2026-04-15 11:01:27.620 [debug] Created temp directory: /Users/akbhardwaj/Desktop/Repo/GHEC/llm-optimizer.en/.temp_wiki_content
+2026-04-15 11:01:27.624 [info] Initializing MCP Server...
+2026-04-15 11:01:27.624 [info] 📦 Build ID: unknown
+2026-04-15 11:01:27.625 [info] 📦 Version: unknown
+2026-04-15 11:01:27.625 [info] 📦 Build Date: unknown
+2026-04-15 11:01:27.625 [info] 📦 Timestamp: 1776231087623
+2026-04-15 11:01:27.629 [debug] Creating authenticated Confluence client via AuthenticationManager
+2026-04-15 11:01:27.629 [debug] Normalized host: wiki.corp.adobe.com
+2026-04-15 11:01:27.630 [info] Using Personal Access Token authentication method
+2026-04-15 11:01:27.630 [info] Confluence client created successfully for host: wiki.corp.adobe.com
+2026-04-15 11:01:27.630 [info] Registered expert-wiki-editing-workflow prompt
+2026-04-15 11:01:27.631 [info] Registered expert-wiki-editor prompt
+2026-04-15 11:01:27.632 [info] Registered plantuml_diagram_creator prompt
+2026-04-15 11:01:27.632 [info] Registered prompts: expert_wiki_editing_workflow, expert_wiki_editor, plantuml_diagram_creator
+2026-04-15 11:01:27.632 [info] Prompt "expert_wiki_editing_workflow" registered: has description=true, has callback=true
+2026-04-15 11:01:27.633 [info] Prompt "expert_wiki_editor" registered: has description=true, has callback=true
+2026-04-15 11:01:27.633 [info] Prompt "plantuml_diagram_creator" registered: has description=true, has callback=true
+2026-04-15 11:01:27.633 [info] MCP Server initialized successfully
+2026-04-15 11:01:27.634 [info] Wiki MCP Server connected via stdio
+2026-04-15 11:01:27.634 [info] Wiki MCP Server started successfully with stdio transport
+2026-04-15 11:09:47.387 [debug] MCP get-wiki-content called with params: {"url":"https://wiki.corp.adobe.com/spaces/AEMSites/pages/3625117320/Tokowaka+BYOCDN+Integration","preserve_macros":true,"extract_assets":false,"asset_types":"all"}
+2026-04-15 11:09:47.388 [debug] Internal settings: save_temp_file=true, augment_with_ids=true
+2026-04-15 11:09:47.389 [debug] Fetching wiki content from URL: https://wiki.corp.adobe.com/spaces/AEMSites/pages/3625117320/Tokowaka+BYOCDN+Integration
+2026-04-15 11:09:47.390 [debug] Parsing Confluence URL: https://wiki.corp.adobe.com/spaces/AEMSites/pages/3625117320/Tokowaka+BYOCDN+Integration
+2026-04-15 11:09:47.391 [debug] Analyzing URL: https://wiki.corp.adobe.com/spaces/AEMSites/pages/3625117320/Tokowaka+BYOCDN+Integration
+2026-04-15 11:09:47.391 [debug] Pathname: /spaces/AEMSites/pages/3625117320/Tokowaka+BYOCDN+Integration
+2026-04-15 11:09:47.392 [debug] Search params: 
+2026-04-15 11:09:47.393 [debug] Found spaces/pages pattern. Space: AEMSites, PageId: 3625117320
+2026-04-15 11:09:47.393 [debug] Extracted from URL pattern: {"pageId":"3625117320","type":"page","space":"AEMSites"}
+2026-04-15 11:09:47.394 [debug] Fetching content for page ID: 3625117320
+2026-04-15 11:09:48.700 [debug] ID Augmentation check: augment_with_ids=true, preserve_macros=true, condition met=true
+2026-04-15 11:09:48.701 [debug] Starting ID augmentation for surgical editing
+2026-04-15 11:09:48.701 [debug] Starting Cheerio ID augmentation for content of length: 7546
+2026-04-15 11:09:48.707 [debug] Successfully augmented content with 109 unique IDs using Cheerio
+2026-04-15 11:09:48.708 [debug] Content augmented with 109 unique IDs
+2026-04-15 11:09:48.708 [debug] Saving augmented content with 109 IDs to temp file for page 3625117320
+2026-04-15 11:09:48.709 [debug] Saved content to temp file: wiki_3625117320.html (10768 chars)
+2026-04-15 11:09:48.709 [debug] Content saved to temp file: 3625117320 (augmented content with 109 IDs)
+2026-04-15 11:09:48.713 [debug] MCP get-wiki-content called with params: {"url":"https://wiki.corp.adobe.com/spaces/AEMSites/pages/3835087468/Optimize+at+Edge+CDN+Onboarding+Framework","preserve_macros":true,"extract_assets":false,"asset_types":"all"}
+2026-04-15 11:09:48.713 [debug] Internal settings: save_temp_file=true, augment_with_ids=true
+2026-04-15 11:09:48.713 [debug] Fetching wiki content from URL: https://wiki.corp.adobe.com/spaces/AEMSites/pages/3835087468/Optimize+at+Edge+CDN+Onboarding+Framework
+2026-04-15 11:09:48.713 [debug] Parsing Confluence URL: https://wiki.corp.adobe.com/spaces/AEMSites/pages/3835087468/Optimize+at+Edge+CDN+Onboarding+Framework
+2026-04-15 11:09:48.714 [debug] Analyzing URL: https://wiki.corp.adobe.com/spaces/AEMSites/pages/3835087468/Optimize+at+Edge+CDN+Onboarding+Framework
+2026-04-15 11:09:48.714 [debug] Pathname: /spaces/AEMSites/pages/3835087468/Optimize+at+Edge+CDN+Onboarding+Framework
+2026-04-15 11:09:48.714 [debug] Search params: 
+2026-04-15 11:09:48.715 [debug] Found spaces/pages pattern. Space: AEMSites, PageId: 3835087468
+2026-04-15 11:09:48.715 [debug] Extracted from URL pattern: {"pageId":"3835087468","type":"page","space":"AEMSites"}
+2026-04-15 11:09:48.715 [debug] Fetching content for page ID: 3835087468
+2026-04-15 11:09:49.310 [debug] ID Augmentation check: augment_with_ids=true, preserve_macros=true, condition met=true
+2026-04-15 11:09:49.310 [debug] Starting ID augmentation for surgical editing
+2026-04-15 11:09:49.311 [debug] Starting Cheerio ID augmentation for content of length: 20191
+2026-04-15 11:09:49.323 [debug] Successfully augmented content with 1183 unique IDs using Cheerio
+2026-04-15 11:09:49.324 [debug] Content augmented with 1183 unique IDs
+2026-04-15 11:09:49.324 [debug] Saving augmented content with 1183 IDs to temp file for page 3835087468
+2026-04-15 11:09:49.326 [debug] Saved content to temp file: wiki_3835087468.html (52863 chars)
+2026-04-15 11:09:49.326 [debug] Content saved to temp file: 3835087468 (augmented content with 1183 IDs)
+2026-04-15 11:09:49.782 [debug] MCP get-wiki-content called with params: {"url":"https://wiki.corp.adobe.com/spaces/AEMSites/pages/3804493276/Tokowaka+Service+Allowing+Service+Through+BYOCDN+WAF+Rules","preserve_macros":true,"extract_assets":false,"asset_types":"all"}
+2026-04-15 11:09:49.782 [debug] Internal settings: save_temp_file=true, augment_with_ids=true
+2026-04-15 11:09:49.783 [debug] Fetching wiki content from URL: https://wiki.corp.adobe.com/spaces/AEMSites/pages/3804493276/Tokowaka+Service+Allowing+Service+Through+BYOCDN+WAF+Rules
+2026-04-15 11:09:49.783 [debug] Parsing Confluence URL: https://wiki.corp.adobe.com/spaces/AEMSites/pages/3804493276/Tokowaka+Service+Allowing+Service+Through+BYOCDN+WAF+Rules
+2026-04-15 11:09:49.783 [debug] Analyzing URL: https://wiki.corp.adobe.com/spaces/AEMSites/pages/3804493276/Tokowaka+Service+Allowing+Service+Through+BYOCDN+WAF+Rules
+2026-04-15 11:09:49.784 [debug] Pathname: /spaces/AEMSites/pages/3804493276/Tokowaka+Service+Allowing+Service+Through+BYOCDN+WAF+Rules
+2026-04-15 11:09:49.784 [debug] Search params: 
+2026-04-15 11:09:49.784 [debug] Found spaces/pages pattern. Space: AEMSites, PageId: 3804493276
+2026-04-15 11:09:49.784 [debug] Extracted from URL pattern: {"pageId":"3804493276","type":"page","space":"AEMSites"}
+2026-04-15 11:09:49.784 [debug] Fetching content for page ID: 3804493276
+2026-04-15 11:09:50.372 [debug] ID Augmentation check: augment_with_ids=true, preserve_macros=true, condition met=true
+2026-04-15 11:09:50.373 [debug] Starting ID augmentation for surgical editing
+2026-04-15 11:09:50.374 [debug] Starting Cheerio ID augmentation for content of length: 14283
+2026-04-15 11:09:50.379 [debug] Successfully augmented content with 278 unique IDs using Cheerio
+2026-04-15 11:09:50.379 [debug] Content augmented with 278 unique IDs
+2026-04-15 11:09:50.379 [debug] Saving augmented content with 278 IDs to temp file for page 3804493276
+2026-04-15 11:09:50.381 [debug] Saved content to temp file: wiki_3804493276.html (22469 chars)
+2026-04-15 11:09:50.381 [debug] Content saved to temp file: 3804493276 (augmented content with 278 IDs)
