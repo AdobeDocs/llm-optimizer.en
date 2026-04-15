@@ -56,7 +56,7 @@ The status of the traffic routing can also be checked in the LLM Optimizer UI. N
 
 ![Deploy optimizations to AI agents — completed](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
-## Allowing Optimize at Edge through firewall rules (optional) {#waf-bypass-setup}
+## Allowing Optimize at Edge through firewall rules (optional) {#waf-allowlist-setup}
 
 If your CDN uses a WAF or Bot Manager:
 

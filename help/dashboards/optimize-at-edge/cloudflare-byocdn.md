@@ -428,9 +428,9 @@ const FAILOVER_ON_5XX = false;
 | Requests failing with invalid host | `EDGE_OPTIMIZE_TARGET_HOST` includes protocol (for example, `https://`). | Use only the domain name without protocol (for example, `example.com`, not `https://example.com`). |
 | 530 error during failover | Cloudflare cannot connect to origin, or failover request has invalid headers. | Ensure the failover function removes Edge Optimize headers. Verify your origin is accessible and DNS is configured correctly. |
 
-**WAF bypass with shared secret header (optional)**
+**Allow Optimize at Edge through firewall rules (optional)**
 
-{{waf-bypass-setup}}
+{{waf-allowlist-setup}}
 
 To add the header, update the Worker code. In the section where the other `x-edgeoptimize-*` headers are set (inside `handleRequest`), add the following line:
 
@@ -442,7 +442,7 @@ Then add a new environment variable in your Worker settings (**Settings** > **Va
 
 | Variable Name | Description | Required |
 |---------------|-------------|----------|
-| `EDGE_OPTIMIZE_FETCHER_KEY` | The secret key you generated for WAF bypass. | Only if WAF rules are enabled |
+| `EDGE_OPTIMIZE_FETCHER_KEY` | The secret key you generated for WAF allowlisting. | Only if WAF rules are enabled |
 
 Click **Encrypt** to store the secret securely. Then in **Cloudflare Security** > **WAF** > **Custom rules**, create a rule that **allows** requests where the header matches the secret value.
 

@@ -255,9 +255,9 @@ The auto-created role comes with an `AWSLambdaBasicExecutionRole` policy configu
 
 4. Click **Save changes**.
 
-**WAF bypass with shared secret header (optional)**
+**Allow Optimize at Edge through firewall rules (optional)**
 
-{{waf-bypass-setup}}
+{{waf-allowlist-setup}}
 
 To add the header, go to the Edge Optimize origin you created in **Step 1**:
 

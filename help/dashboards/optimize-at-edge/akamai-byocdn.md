@@ -74,13 +74,13 @@ Set the following incoming request headers:
 
 ![Modify Incoming Request Headers](/help/assets/optimize-at-edge/akamai-step5-request.png)
 
-**5b. Add WAF bypass header (optional)**
+**5b. Allow Optimize at Edge through firewall rules (optional)**
 
-{{waf-bypass-setup}}
+{{waf-allowlist-setup}}
 
 In the same routing rule, add a **Modify Incoming Request Header** behavior for `x-edgeoptimize-fetcher-key`:
 
-![Add WAF bypass header](/help/assets/optimize-at-edge/akamai-step10-fetcher-key.png)
+![Add WAF allowlist header](/help/assets/optimize-at-edge/akamai-step10-fetcher-key.png)
 
 Then in **Akamai Security**, create a Bot Manager conditional action that allows requests matching the header value.
 

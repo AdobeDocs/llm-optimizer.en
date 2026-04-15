@@ -82,9 +82,9 @@ The `vcl_deliver` snippet handles failover automatically. If Edge Optimize retur
 | Edge Optimize returns `4XX` or `5XX` | Request is restarted and served from the default origin. |
 | Failover response | Includes the header `x-edgeoptimize-fo: 1`. |
 
-**WAF bypass with shared secret header (optional)**
+**Allow Optimize at Edge through firewall rules (optional)**
 
-{{waf-bypass-setup}}
+{{waf-allowlist-setup}}
 
 The `x-edgeoptimize-fetcher-key` lines in the **vcl_recv** snippet above are marked **Optional**. Replace `<YOUR FETCHER KEY>` with the secret you generated. Then configure your WAF to allow requests where the header matches the secret value.
 
