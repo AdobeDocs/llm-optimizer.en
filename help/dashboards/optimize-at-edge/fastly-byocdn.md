@@ -86,8 +86,6 @@ The `vcl_deliver` snippet handles failover automatically. If Edge Optimize retur
 
 {{waf-allowlist-setup}}
 
-The `x-edgeoptimize-fetcher-key` lines in the **vcl_recv** snippet above are marked **Optional**. Replace `<YOUR FETCHER KEY>` with the secret you generated. Then configure your WAF to allow requests where the header matches the secret value.
-
 **Verify the setup**
 
 After completing the setup, verify that bot traffic is being routed to Edge Optimize and that human traffic remains unaffected.

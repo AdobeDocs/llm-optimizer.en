@@ -74,7 +74,7 @@ Set the following incoming request headers:
 
 ![Modify Incoming Request Headers](/help/assets/optimize-at-edge/akamai-step5-request.png)
 
-**5b. Allow Optimize at Edge through firewall rules (optional)**
+**Allow Optimize at Edge through firewall rules (optional)**
 
 {{waf-allowlist-setup}}
 
