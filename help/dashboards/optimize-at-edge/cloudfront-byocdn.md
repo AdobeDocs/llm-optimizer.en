@@ -398,6 +398,8 @@ Once deployed, all traffic routes directly to your default origin. No configurat
 
 5. Wait for the distribution to finish deploying, then verify that agentic requests return the `x-edgeoptimize-request-id` header as described in Step 6.
 
+**Optional: Test routing on a staging hostname**
+
 {{retrieve-staging-edge-optimize-api-key}}
 
 Deploy the same routing rules on your staging distribution using the staging API key. To test staging traffic:

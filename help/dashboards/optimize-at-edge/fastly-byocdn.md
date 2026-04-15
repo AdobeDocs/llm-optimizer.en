@@ -124,6 +124,8 @@ The response should **not** contain the `x-edgeoptimize-request-id` header. The 
 
 {{verify-routing-status-in-ui}}
 
+**Optional: Test routing on a staging hostname**
+
 {{retrieve-staging-edge-optimize-api-key}}
 
 Deploy the same routing rules on your staging service using the staging API key. To test staging traffic:
