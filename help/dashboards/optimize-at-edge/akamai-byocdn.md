@@ -78,6 +78,10 @@ Set the following incoming request headers:
 
 ![Add WAF allowlist header](/help/assets/optimize-at-edge/akamai-step10-fetcher-key.png)
 
+>[!NOTE]
+>
+>Also allowlist the `*AdobeEdgeOptimize/1.0*` user agent and the `x-edgeoptimize-fetcher-key` header in Akamai Bot Manager.
+
 **6. Modify Incoming Response Headers**
 
 ![Modify Incoming Response Headers](/help/assets/optimize-at-edge/akamai-step6-response.png)
