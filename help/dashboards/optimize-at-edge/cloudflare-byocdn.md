@@ -53,7 +53,7 @@ The following headers must be set on requests to the Edge Optimize backend:
 There are two ways to set up the Cloudflare Worker for Edge Optimize:
 
 * [**Option 1: Deploy to Cloudflare (recommended)**](#option-1-deploy-to-cloudflare) — Automatically creates a new worker and prompts you for the required environment variables and secrets. Use this option if you do not have an existing Cloudflare Worker for this domain.
-* [**Option 2: Manual setup**](#option-2-manual-setup) — Step-by-step instructions for creating and configuring the worker yourself. Use this option if you already have an existing Cloudflare Worker you want to extend, or if you prefer full control over the deployment.
+* [**Option 2: Manual setup**](#option-2-manual-setup) — Step-by-step instructions for creating and configuring the worker yourself. Use this option if you already have an existing Cloudflare Worker configured on your domain — you will need to merge the Edge Optimize code into your existing worker (see [Step 2: Add the Worker code](#option-2-manual-setup)), or if you prefer full control over the deployment.
 
 Regardless of which option you choose, you must manually link the worker to your domain — see [Step: Add a route to your domain](#add-a-route-to-your-domain).
 
@@ -107,7 +107,7 @@ Follow these steps to create and configure the worker manually.
 
 **Step 2: Add the Worker code**
 
-After creating the worker, click **Edit code** and replace the default code with the following:
+After creating the worker, click **Edit code** and replace the default code with the following. If you already have an existing Cloudflare Worker, merge the code below with your existing worker code instead of replacing it entirely.
 
 ```javascript
 /**
