@@ -76,7 +76,7 @@ Set the following incoming request headers:
 
 {{waf-allowlist-setup}}
 
-![Add WAF allowlist header](/help/assets/optimize-at-edge/akamai-step10-fetcher-key.png)
+![Set x-edgeoptimize-fetcher-key header in Property Manager](/help/assets/optimize-at-edge/akamai-step10-fetcher-key.png)
 
 >[!NOTE]
 >
