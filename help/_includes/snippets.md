@@ -25,28 +25,31 @@
 
 Additionally, if you require any help with the above steps, reach out to your Adobe account team or `llmo-at-edge@adobe.com`.
 
-## Staging domain API key (optional) {#retrieve-staging-edge-optimize-api-key}
+## Optional: Test routing on a staging hostname {#retrieve-staging-edge-optimize-api-key}
 
-Use a staging hostname when you want to test Optimize at Edge in a lower environment before production traffic uses the routing rules.
+**Optional: Test routing on a staging hostname**
 
-**Prerequisites**
+If you'd like to validate the routing in a lower environment before enabling production routing, you can configure a staging hostname.
 
-* The staging hostname must belong to the **same registrable domain** as your production site (for example, `https://staging.example.com` when production is `https://www.example.com`).
-* Only **one** staging domain can be configured for the site. After it is saved, it cannot be changed without assistance.
+**Requirements**
 
-**Steps**
+* The staging hostname must be on the **same registrable domain** as production (for example, `https://staging.example.com` when production is `https://www.example.com`).
+* Only **one** staging domain per site. After it is saved, it cannot be changed without contacting Adobe.
 
-1. In LLM Optimizer, open **Customer configuration** and select the **CDN configuration** tab.
+**Get your staging API key**
 
-2. In the **Deploy optimizations to AI agents** section, select **Add stage domain** (or **Stage domain** if a staging domain is already configured).
+1. Open **Customer configuration** and select **CDN configuration**.
+2. Under **Deploy optimizations to AI agents**, select **Add stage domain** (or **Stage domain** if a staging domain is already configured).
+3. Enter the full staging URL including `https://` and select **Set Domain**.
+4. Copy the **staging** API key from the confirmation dialog.
 
-3. In the **Stage Domain** dialog, enter the full staging URL including `https://` and select **Set Domain**.
+![Staging domain API key](/help/assets/optimize-at-edge/byocdn-staging-domain-api-key.png)
 
-   ![Stage Domain input dialog](/help/assets/optimize-at-edge/byocdn-staging-domain-input.png)
+Deploy the same routing rules on your staging environment using the staging API key.
 
-4. Confirm the domain in the next prompt. When the workflow completes, the **Stage Domains** dialog shows the configured domain and its **API key**. Select **Copy** to copy the staging API key.
+**Test staging bot traffic**
 
-   ![Staging domain API key](/help/assets/optimize-at-edge/byocdn-staging-domain-api-key.png)
+Replace `https://staging.example.com/page.html` with your real staging URL and path. **Success:** The response includes the `x-edgeoptimize-request-id` header.
 
 If you need help, contact `llmo-at-edge@adobe.com`.
 
@@ -55,6 +58,16 @@ If you need help, contact `llmo-at-edge@adobe.com`.
 The status of the traffic routing can also be checked in the LLM Optimizer UI. Navigate to **Customer configuration** and select the **CDN configuration** tab.
 
 ![Deploy optimizations to AI agents — completed](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+
+## Allowing Optimize at Edge through firewall rules (optional) {#waf-allowlist-setup}
+
+If your CDN uses a WAF or Bot Manager:
+
+* Allowlist the `*AdobeEdgeOptimize/1.0*` user agent in your WAF or Bot Manager so the Optimize at Edge service can fetch your origin content.
+* If your firewall requires additional verification beyond user agent, generate a secret (for example, `openssl rand -hex 32`) and:
+  * Add `x-edgeoptimize-fetcher-key` with the secret in your routing rules alongside the other `x-edgeoptimize-*` headers.
+  * Add a WAF or Bot Manager rule to allow requests where `x-edgeoptimize-fetcher-key` matches the same secret.
+* Optimize at Edge forwards this header as-is — you own the full key lifecycle.
 
 ## Return to overview {#return-to-overview}
 
