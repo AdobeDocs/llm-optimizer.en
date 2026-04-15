@@ -36,6 +36,7 @@ Add the following three VCL snippets to your Fastly service. These snippets hand
 unset req.http.x-edgeoptimize-url;
 unset req.http.x-edgeoptimize-config;
 unset req.http.x-edgeoptimize-api-key;
+unset req.http.x-edgeoptimize-fetcher-key; # Optional
 
 if (!req.http.x-edgeoptimize-request
     && req.http.user-agent ~ "(?i)(AdobeEdgeOptimize-AI|ChatGPT-User|GPTBot|OAI-SearchBot|PerplexityBot|Perplexity-User)") {
@@ -43,7 +44,7 @@ if (!req.http.x-edgeoptimize-request
   set req.http.x-edgeoptimize-url = req.url; # required for identifying the original url
   set req.http.x-edgeoptimize-config = "LLMCLIENT=TRUE;"; # required for cache key
   set req.http.x-edgeoptimize-api-key = "<YOUR API KEY>"; # required for identifying the client
-  # set req.http.x-edgeoptimize-fetcher-key = "<YOUR_SECRET>"; # optional: WAF bypass (see step below)
+  set req.http.x-edgeoptimize-fetcher-key = "<YOUR FETCHER KEY>"; # Optional
   set req.backend = F_EDGE_OPTIMIZE;
 }
 ```
@@ -85,7 +86,7 @@ The `vcl_deliver` snippet handles failover automatically. If Edge Optimize retur
 
 {{waf-bypass-setup}}
 
-To add the header, uncomment the `x-edgeoptimize-fetcher-key` line in the **vcl_recv** snippet above and replace `<YOUR_SECRET>` with the secret you generated. Then configure your WAF to allow requests where the header matches the secret value.
+The `x-edgeoptimize-fetcher-key` lines in the **vcl_recv** snippet above are marked **Optional**. Replace `<YOUR FETCHER KEY>` with the secret you generated. Then configure your WAF to allow requests where the header matches the secret value.
 
 **Verify the setup**
 
