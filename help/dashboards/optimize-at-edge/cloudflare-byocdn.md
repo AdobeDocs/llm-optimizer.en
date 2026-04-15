@@ -202,10 +202,7 @@ async function handleRequest(request, env, ctx) {
     // x-edgeoptimize-config: Configuration for cache key differentiation
     edgeOptimizeHeaders.set("x-edgeoptimize-config", "LLMCLIENT=TRUE;");
 
-    // Optional: x-edgeoptimize-fetcher-key for WAF/Bot Manager allowlisting
-    if (env.EDGE_OPTIMIZE_FETCHER_KEY) {
-      edgeOptimizeHeaders.set("x-edgeoptimize-fetcher-key", env.EDGE_OPTIMIZE_FETCHER_KEY);
-    }
+    // edgeOptimizeHeaders.set("x-edgeoptimize-fetcher-key", "<YOUR FETCHER KEY>"); // Optional
 
     try {
       // Send request to Edge Optimize backend
@@ -298,7 +295,6 @@ Environment variables store sensitive configuration like your API key securely.
    |---------------|-------------|----------|
    | `EDGE_OPTIMIZE_API_KEY` | Your Adobe-provided Edge Optimize API key. | Yes |
    | `EDGE_OPTIMIZE_TARGET_HOST` | The target host for Edge Optimize requests (sent as `x-forwarded-host` header) and the origin domain for failover. Must be the domain only without protocol (for example, `www.example.com`, not `https://www.example.com`). | Yes |
-   | `EDGE_OPTIMIZE_FETCHER_KEY` | Your generated secret for WAF or Bot Manager allowlisting. | Optional |
 
 4. For the API key, click **Encrypt** to store it securely.
 5. Click **Save and deploy**.
