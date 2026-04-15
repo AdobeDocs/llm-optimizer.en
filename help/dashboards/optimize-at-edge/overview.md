@@ -52,16 +52,13 @@ Requirements for your IT/CDN team:
 * Add `*AdobeEdgeOptimize/1.0*` user-agent to the Allowlist in your site's robots.txt file or bot-traffic management rules.
 * Ensure that pages are not blocked at the domain or CDN level.
 * Add Optimize at Edge routing rules in the CDN.
+* If your CDN has WAF or Bot Manager rules, allowlist the `*AdobeEdgeOptimize/1.0*` user agent. If additional verification is required, configure the `x-edgeoptimize-fetcher-key` header. Each BYOCDN guide below includes the steps.
 * Confirm Optimize at Edge routing in the LLM Optimizer interface.
 
 >[!IMPORTANT]
 >Routing must be configured at the outer CDN (the CDN closest to the client). If you have multiple CDNs, routing can only be done at the outer CDN.
 
-To guide the setup process, select your CDN provider below and follow the corresponding configuration guide. Keep in mind that these examples should be adapted to your actual live configuration. We recommend applying changes in the lower environments first.
-
-### Staging domain API keys (optional)
-
-If you test on a staging hostname before production, use LLM Optimizer to register **one** staging domain and copy its **staging** Edge Optimize API key from **Customer configuration** → **CDN configuration** → **Deploy optimizations to AI agents** → **Add stage domain** (or **Stage domain**). The staging hostname must share the same registrable domain as your production site. **Bring Your Own CDN** guides include the full steps to retrieve the staging key and verify routing on your staging URL.
+To guide the setup process, select your CDN provider below and follow the corresponding configuration guide. Keep in mind that these examples should be adapted to your actual live configuration. We recommend applying changes in the lower environments first. **Bring Your Own CDN** guides include optional staging-hostname testing at the end of each page.
 
 ### CDN Configuration Guides
 
