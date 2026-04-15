@@ -93,7 +93,7 @@ If the issue persists, reach out to your Adobe account team or `llmo-at-edge@ado
 
 **(Optional) Verify the Setup**
 
-After the routing configuration is complete, you can optionally verify that bot traffic is being routed to Edge Optimize and that human traffic remains unaffected.
+After the routing configuration is complete, you can optionally verify that AI bot traffic is being routed to Edge Optimize and that human traffic remains unaffected.
 
 1. **Test bot traffic (should be optimized)**
 
