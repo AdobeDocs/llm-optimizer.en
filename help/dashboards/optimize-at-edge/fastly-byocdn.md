@@ -84,17 +84,13 @@ The `vcl_deliver` snippet handles failover automatically. If Edge Optimize retur
 
 {{waf-bypass-setup}}
 
-**Fastly-specific steps**
-
-To add the `x-edgeoptimize-fetcher-key` header, update the **vcl_recv** snippet from above. Add the following line inside the `if` block, alongside the other `x-edgeoptimize-*` headers:
+To add the header, update the **vcl_recv** snippet above. Add the following line inside the `if` block, alongside the other `x-edgeoptimize-*` headers:
 
 ```
 set req.http.x-edgeoptimize-fetcher-key = "<YOUR_SECRET>";
 ```
 
-Replace `<YOUR_SECRET>` with the secret key you generated.
-
-Then, configure your WAF (for example, Fastly's Next-Gen WAF or a third-party WAF in front of Fastly) to **allow** requests where the `x-edgeoptimize-fetcher-key` header matches the secret value.
+Replace `<YOUR_SECRET>` with the secret you generated. Then configure your WAF (for example, Fastly's Next-Gen WAF or a third-party WAF in front of Fastly) to **allow** requests where the header matches the secret value.
 
 **Verify the setup**
 

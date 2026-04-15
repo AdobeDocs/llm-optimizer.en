@@ -74,6 +74,22 @@ Set the following incoming request headers:
 
 ![Modify Incoming Request Headers](/help/assets/optimize-at-edge/akamai-step5-request.png)
 
+**5b. Add WAF bypass header (optional)**
+
+{{waf-bypass-setup}}
+
+In the same Optimize at Edge routing rule, add another **Modify Incoming Request Header** behavior:
+
+* **Action:** Modify
+* **Select Header Name:** Other...
+* **Custom Header Name:** `x-edgeoptimize-fetcher-key`
+* **New Header Value:** Paste the secret you generated.
+* **Avoid Duplicate Headers:** Yes
+
+![Add WAF bypass header](/help/assets/optimize-at-edge/akamai-step10-fetcher-key.png)
+
+Then, in **Akamai Security**, open the **Bot Manager** (or App & API Protector) policy for your domain and create a conditional action that **allows** requests where the `x-edgeoptimize-fetcher-key` header matches your secret value (exact match).
+
 **6. Modify Incoming Response Headers**
 
 ![Modify Incoming Response Headers](/help/assets/optimize-at-edge/akamai-step6-response.png)
@@ -142,30 +158,6 @@ Site Failover ensures that if Edge Optimize returns a `4XX` or `5XX` error, the 
 | --- | --- |
 | Edge Optimize returns `2XX` | Optimized response is served to the client. |
 | Edge Optimize returns `4XX` or `5XX` | Request is routed back to the default origin. |
-
-**10. WAF bypass with shared secret header (optional)**
-
-{{waf-bypass-setup}}
-
-**Akamai-specific steps**
-
-**Step 10a. Add the header to your routing rule**
-
-In the same Optimize at Edge routing rule where you configured the other `x-edgeoptimize-*` headers in **Step 5**, add another **Modify Incoming Request Header** behavior:
-
-1. Click **+ Behavior** and select **Modify Incoming Request Header**.
-2. Configure the behavior:
-   * **Action:** Modify
-   * **Select Header Name:** Other...
-   * **Custom Header Name:** `x-edgeoptimize-fetcher-key`
-   * **New Header Value:** Paste the secret you generated.
-   * **Avoid Duplicate Headers:** Yes
-
-![Add fetcher key header](/help/assets/optimize-at-edge/akamai-step10-fetcher-key.png)
-
-**Step 10b. Add a Bot Manager allow rule**
-
-In **Akamai Security**, open the Bot Manager (or App & API Protector) policy for your domain. Create a conditional action that **allows** requests where the `x-edgeoptimize-fetcher-key` header matches your secret value (exact match). This ensures that when the Optimize at Edge service calls back to your origin, the request is allowed through the firewall.
 
 **Verify the setup**
 

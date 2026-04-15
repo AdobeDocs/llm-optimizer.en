@@ -259,9 +259,7 @@ The auto-created role comes with an `AWSLambdaBasicExecutionRole` policy configu
 
 {{waf-bypass-setup}}
 
-**CloudFront-specific steps**
-
-To add the `x-edgeoptimize-fetcher-key` header, go to the Edge Optimize origin you created in **Step 1**.
+To add the header, go to the Edge Optimize origin you created in **Step 1**:
 
 1. Navigate to **AWS Console** > **CloudFront** > **Distributions** > **[Your Distribution]** > **Origins** tab.
 2. Edit the `EdgeOptimize_Origin`.
@@ -273,7 +271,7 @@ To add the `x-edgeoptimize-fetcher-key` header, go to the Edge Optimize origin y
 
 4. Click **Save changes**.
 
-Then, in **AWS WAF**, create a rule that **allows** requests where the `x-edgeoptimize-fetcher-key` header matches the secret value.
+Then in **AWS WAF**, create a rule that **allows** requests where the header matches the secret value.
 
 **Step 6: Test the configuration**
 
