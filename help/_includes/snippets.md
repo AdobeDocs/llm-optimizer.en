@@ -45,7 +45,11 @@ If you'd like to validate the routing in a lower environment before enabling pro
 
 ![Staging domain API key](/help/assets/optimize-at-edge/byocdn-staging-domain-api-key.png)
 
-Deploy the same routing rules on your staging environment using the staging API key and verify with the curl command below. Replace `https://staging.example.com/page.html` with your real staging URL and path. **Success:** The response includes the `x-edgeoptimize-request-id` header.
+Deploy the same routing rules on your staging environment using the staging API key.
+
+**Test staging bot traffic**
+
+Replace `https://staging.example.com/page.html` with your real staging URL and path. **Success:** The response includes the `x-edgeoptimize-request-id` header.
 
 If you need help, contact `llmo-at-edge@adobe.com`.
 
