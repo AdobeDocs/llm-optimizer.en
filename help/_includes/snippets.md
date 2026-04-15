@@ -56,6 +56,31 @@ The status of the traffic routing can also be checked in the LLM Optimizer UI. N
 
 ![Deploy optimizations to AI agents — completed](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
+## Allowing Optimize at Edge through firewall rules (optional) {#waf-bypass-setup}
+
+If your CDN uses a Web Application Firewall (WAF) or similar security rules that block unrecognized traffic, the Optimize at Edge service may be unable to fetch your origin content. Use the `x-edgeoptimize-fetcher-key` shared secret header to allow these requests through your firewall.
+
+**How it works**
+
+When Optimize at Edge processes an agentic request, it calls back to your CDN to fetch the original page content. Your CDN routing rules attach a secret header (`x-edgeoptimize-fetcher-key`) on the request sent to Optimize at Edge. Optimize at Edge forwards this header back unchanged when it calls your CDN. Your firewall validates the header and allows the request through.
+
+>[!NOTE]
+>Optimize at Edge does not store or manage the secret. It forwards the header as-is. You own the full key lifecycle including generation, rotation, and revocation.
+
+**Steps**
+
+1. **Generate a secret key** using any cryptographic random generator:
+
+   ```
+   openssl rand -hex 32
+   ```
+
+2. **Add the header to your routing rules.** In the same CDN configuration where you set the other `x-edgeoptimize-*` headers, add `x-edgeoptimize-fetcher-key` with the generated secret as its value. Refer to the CDN-specific instructions below for where to add this header.
+
+3. **Create a firewall allow rule.** Configure your WAF to **allow** requests where the `x-edgeoptimize-fetcher-key` header matches your secret (exact match).
+
+4. **Key rotation.** To rotate the key, update both the firewall allow rule and the routing rules with a new value. To avoid downtime during rotation, configure the firewall to accept both the old and new key temporarily.
+
 ## Return to overview {#return-to-overview}
 
 To learn more about Optimize at Edge, including available opportunities, auto-optimization workflows, and FAQs, return to the [Optimize at Edge overview](/help/dashboards/optimize-at-edge/overview.md).

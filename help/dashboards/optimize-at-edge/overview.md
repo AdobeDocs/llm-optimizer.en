@@ -52,6 +52,7 @@ Requirements for your IT/CDN team:
 * Add `*AdobeEdgeOptimize/1.0*` user-agent to the Allowlist in your site's robots.txt file or bot-traffic management rules.
 * Ensure that pages are not blocked at the domain or CDN level.
 * Add Optimize at Edge routing rules in the CDN.
+* If your CDN has WAF (Web Application Firewall) rules, configure the `x-edgeoptimize-fetcher-key` header to allow Optimize at Edge requests through your firewall. Each BYOCDN guide below includes the steps.
 * Confirm Optimize at Edge routing in the LLM Optimizer interface.
 
 >[!IMPORTANT]

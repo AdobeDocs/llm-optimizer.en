@@ -80,6 +80,22 @@ The `vcl_deliver` snippet handles failover automatically. If Edge Optimize retur
 | Edge Optimize returns `4XX` or `5XX` | Request is restarted and served from the default origin. |
 | Failover response | Includes the header `x-edgeoptimize-fo: 1`. |
 
+**WAF bypass with shared secret header (optional)**
+
+{{waf-bypass-setup}}
+
+**Fastly-specific steps**
+
+To add the `x-edgeoptimize-fetcher-key` header, update the **vcl_recv** snippet from above. Add the following line inside the `if` block, alongside the other `x-edgeoptimize-*` headers:
+
+```
+set req.http.x-edgeoptimize-fetcher-key = "<YOUR_SECRET>";
+```
+
+Replace `<YOUR_SECRET>` with the secret key you generated.
+
+Then, configure your WAF (for example, Fastly's Next-Gen WAF or a third-party WAF in front of Fastly) to **allow** requests where the `x-edgeoptimize-fetcher-key` header matches the secret value.
+
 **Verify the setup**
 
 After completing the setup, verify that bot traffic is being routed to Edge Optimize and that human traffic remains unaffected.
