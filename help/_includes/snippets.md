@@ -58,22 +58,7 @@ The status of the traffic routing can also be checked in the LLM Optimizer UI. N
 
 ## Allowing Optimize at Edge through firewall rules (optional) {#waf-bypass-setup}
 
-If your CDN uses a Web Application Firewall (WAF) or Bot Manager that blocks unrecognized traffic, it may block the Optimize at Edge service from fetching your origin content. The Optimize at Edge service identifies itself with the `*AdobeEdgeOptimize/1.0*` user agent when it calls back to your origin. If your firewall blocks this user agent, use the `x-edgeoptimize-fetcher-key` shared secret header to allow these requests through.
-
->[!NOTE]
->Optimize at Edge does not store or manage the secret. It forwards the header as-is. You own the full key lifecycle including generation, rotation, and revocation.
-
-1. **Generate a secret key** using any cryptographic random generator:
-
-   ```
-   openssl rand -hex 32
-   ```
-
-2. **Add the header to your routing rules.** In the same CDN configuration where you set the other `x-edgeoptimize-*` headers, add `x-edgeoptimize-fetcher-key` with the generated secret as its value.
-
-3. **Create a firewall allow rule.** Configure your WAF or Bot Manager to **allow** requests where the `x-edgeoptimize-fetcher-key` header matches your secret (exact match).
-
-4. **Key rotation.** To rotate the key, update both the firewall allow rule and the routing rules with a new value. To avoid downtime during rotation, configure the firewall to accept both the old and new key temporarily.
+If your CDN uses a WAF or Bot Manager, allowlist the `*AdobeEdgeOptimize/1.0*` user agent so the Optimize at Edge service can fetch your origin content. If your firewall requires additional verification beyond user agent matching, you can also configure the `x-edgeoptimize-fetcher-key` shared secret header. Generate a secret (for example, `openssl rand -hex 32`), add it as a header in your routing rules alongside the other `x-edgeoptimize-*` headers, and create a firewall rule to allow requests where the header matches your secret. Optimize at Edge forwards this header as-is and does not store or manage it — you own the full key lifecycle. To rotate the key, update both the firewall rule and routing rules. To avoid downtime during rotation, accept both old and new keys temporarily.
 
 ## Return to overview {#return-to-overview}
 

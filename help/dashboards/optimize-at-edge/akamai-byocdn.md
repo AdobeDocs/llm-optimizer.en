@@ -78,17 +78,11 @@ Set the following incoming request headers:
 
 {{waf-bypass-setup}}
 
-In the same Optimize at Edge routing rule, add another **Modify Incoming Request Header** behavior:
-
-* **Action:** Modify
-* **Select Header Name:** Other...
-* **Custom Header Name:** `x-edgeoptimize-fetcher-key`
-* **New Header Value:** Paste the secret you generated.
-* **Avoid Duplicate Headers:** Yes
+In the same routing rule, add a **Modify Incoming Request Header** behavior for `x-edgeoptimize-fetcher-key`:
 
 ![Add WAF bypass header](/help/assets/optimize-at-edge/akamai-step10-fetcher-key.png)
 
-Then, in **Akamai Security**, open the **Bot Manager** (or App & API Protector) policy for your domain and create a conditional action that **allows** requests where the `x-edgeoptimize-fetcher-key` header matches your secret value (exact match).
+Then in **Akamai Security**, create a Bot Manager conditional action that allows requests matching the header value.
 
 **6. Modify Incoming Response Headers**
 

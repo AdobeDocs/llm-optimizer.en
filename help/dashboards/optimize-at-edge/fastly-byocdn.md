@@ -43,6 +43,7 @@ if (!req.http.x-edgeoptimize-request
   set req.http.x-edgeoptimize-url = req.url; # required for identifying the original url
   set req.http.x-edgeoptimize-config = "LLMCLIENT=TRUE;"; # required for cache key
   set req.http.x-edgeoptimize-api-key = "<YOUR API KEY>"; # required for identifying the client
+  # set req.http.x-edgeoptimize-fetcher-key = "<YOUR_SECRET>"; # optional: WAF bypass (see step below)
   set req.backend = F_EDGE_OPTIMIZE;
 }
 ```
@@ -84,13 +85,7 @@ The `vcl_deliver` snippet handles failover automatically. If Edge Optimize retur
 
 {{waf-bypass-setup}}
 
-To add the header, update the **vcl_recv** snippet above. Add the following line inside the `if` block, alongside the other `x-edgeoptimize-*` headers:
-
-```
-set req.http.x-edgeoptimize-fetcher-key = "<YOUR_SECRET>";
-```
-
-Replace `<YOUR_SECRET>` with the secret you generated. Then configure your WAF (for example, Fastly's Next-Gen WAF or a third-party WAF in front of Fastly) to **allow** requests where the header matches the secret value.
+To add the header, uncomment the `x-edgeoptimize-fetcher-key` line in the **vcl_recv** snippet above and replace `<YOUR_SECRET>` with the secret you generated. Then configure your WAF to allow requests where the header matches the secret value.
 
 **Verify the setup**
 
