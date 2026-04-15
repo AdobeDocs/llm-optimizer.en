@@ -64,7 +64,7 @@ If your CDN uses a WAF or Bot Manager:
 * If your firewall requires additional verification beyond user agent, generate a secret (for example, `openssl rand -hex 32`) and:
   * Add `x-edgeoptimize-fetcher-key` with the secret in your routing rules alongside the other `x-edgeoptimize-*` headers.
   * Add a WAF or Bot Manager rule to allow requests where `x-edgeoptimize-fetcher-key` matches the same secret.
-* Optimize at Edge forwards this header as-is — you own the full key lifecycle. To rotate, update both rules and accept both old and new keys temporarily.
+* Optimize at Edge forwards this header as-is — you own the full key lifecycle.
 
 ## Return to overview {#return-to-overview}
 

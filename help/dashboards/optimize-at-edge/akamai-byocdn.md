@@ -78,11 +78,7 @@ Set the following incoming request headers:
 
 {{waf-allowlist-setup}}
 
-In the same routing rule, add a **Modify Incoming Request Header** behavior for `x-edgeoptimize-fetcher-key`:
-
 ![Add WAF allowlist header](/help/assets/optimize-at-edge/akamai-step10-fetcher-key.png)
-
-Then in **Akamai Security**, create a Bot Manager conditional action that allows requests matching the header value.
 
 **6. Modify Incoming Response Headers**
 

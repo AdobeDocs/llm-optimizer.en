@@ -259,20 +259,6 @@ The auto-created role comes with an `AWSLambdaBasicExecutionRole` policy configu
 
 {{waf-allowlist-setup}}
 
-To add the header, go to the Edge Optimize origin you created in **Step 1**:
-
-1. Navigate to **AWS Console** > **CloudFront** > **Distributions** > **[Your Distribution]** > **Origins** tab.
-2. Edit the `EdgeOptimize_Origin`.
-3. Under **Add custom header**, add:
-
-   | Header | Value |
-   |--------|-------|
-   | `x-edgeoptimize-fetcher-key` | The secret key you generated |
-
-4. Click **Save changes**.
-
-Then in **AWS WAF**, create a rule that **allows** requests where the header matches the secret value.
-
 **Step 6: Test the configuration**
 
 **1. Test bot traffic (should be optimized)**

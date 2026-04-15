@@ -432,20 +432,6 @@ const FAILOVER_ON_5XX = false;
 
 {{waf-allowlist-setup}}
 
-To add the header, update the Worker code. In the section where the other `x-edgeoptimize-*` headers are set (inside `handleRequest`), add the following line:
-
-```javascript
-edgeOptimizeHeaders.set("x-edgeoptimize-fetcher-key", env.EDGE_OPTIMIZE_FETCHER_KEY);
-```
-
-Then add a new environment variable in your Worker settings (**Settings** > **Variables**):
-
-| Variable Name | Description | Required |
-|---------------|-------------|----------|
-| `EDGE_OPTIMIZE_FETCHER_KEY` | The secret key you generated for WAF allowlisting. | Only if WAF rules are enabled |
-
-Click **Encrypt** to store the secret securely. Then in **Cloudflare Security** > **WAF** > **Custom rules**, create a rule that **allows** requests where the header matches the secret value.
-
 **Verify the setup**
 
 After completing the setup, verify that bot traffic is being routed to Edge Optimize and that human traffic remains unaffected.
