@@ -17,11 +17,9 @@ Before setting up the Cloudflare Worker routing rules, ensure you have:
 * Completed the LLM Optimizer onboarding process.
 * Completed CDN log forwarding to LLM Optimizer.
 * An Edge Optimize API key retrieved from the LLM Optimizer UI.
-* (Optional) A staging Edge Optimize API key if you test routing on a staging hostname first.
+* (Optional) To test staging routing, see **Optional: Test routing on a staging hostname** at the end of this page.
 
 {{retrieve-byocdn-api-key}}
-
-{{retrieve-staging-edge-optimize-api-key}}
 
 **How routing works**
 
@@ -55,7 +53,7 @@ The following headers must be set on requests to the Edge Optimize backend:
 There are two ways to set up the Cloudflare Worker for Edge Optimize:
 
 * [**Option 1: Deploy to Cloudflare (recommended)**](#option-1-deploy-to-cloudflare) — Automatically creates a new worker and prompts you for the required environment variables and secrets. Use this option if you do not have an existing Cloudflare Worker for this domain.
-* [**Option 2: Manual setup**](#option-2-manual-setup) — Step-by-step instructions for creating and configuring the worker yourself. Use this option if you already have an existing Cloudflare Worker you want to extend, or if you prefer full control over the deployment.
+* [**Option 2: Manual setup**](#option-2-manual-setup) — Step-by-step instructions for creating and configuring the worker yourself. Use this option if you already have an existing Cloudflare Worker configured on your domain — you will need to merge the Edge Optimize code into your existing worker (see [Step 2: Add the Worker code](#option-2-manual-setup)), or if you prefer full control over the deployment.
 
 Regardless of which option you choose, you must manually link the worker to your domain — see [Step: Add a route to your domain](#add-a-route-to-your-domain).
 
@@ -109,7 +107,7 @@ Follow these steps to create and configure the worker manually.
 
 **Step 2: Add the Worker code**
 
-After creating the worker, click **Edit code** and replace the default code with the following:
+After creating the worker, click **Edit code** and replace the default code with the following. If you already have an existing Cloudflare Worker, merge the code below with your existing worker code instead of replacing it entirely.
 
 ```javascript
 /**
@@ -187,6 +185,7 @@ async function handleRequest(request, env, ctx) {
     edgeOptimizeHeaders.delete("x-edgeoptimize-api-key");
     edgeOptimizeHeaders.delete("x-edgeoptimize-url");
     edgeOptimizeHeaders.delete("x-edgeoptimize-config");
+    edgeOptimizeHeaders.delete("x-edgeoptimize-fetcher-key"); // Optional (required only in case of WAF)
 
     // x-forwarded-host: The original site domain
     // Use environment variable if set, otherwise use the request host
@@ -200,6 +199,8 @@ async function handleRequest(request, env, ctx) {
 
     // x-edgeoptimize-config: Configuration for cache key differentiation
     edgeOptimizeHeaders.set("x-edgeoptimize-config", "LLMCLIENT=TRUE;");
+
+    // edgeOptimizeHeaders.set("x-edgeoptimize-fetcher-key", "<YOUR FETCHER KEY>"); // Optional (required only in case of WAF)
 
     try {
       // Send request to Edge Optimize backend
@@ -428,6 +429,10 @@ const FAILOVER_ON_5XX = false;
 | Requests failing with invalid host | `EDGE_OPTIMIZE_TARGET_HOST` includes protocol (for example, `https://`). | Use only the domain name without protocol (for example, `example.com`, not `https://example.com`). |
 | 530 error during failover | Cloudflare cannot connect to origin, or failover request has invalid headers. | Ensure the failover function removes Edge Optimize headers. Verify your origin is accessible and DNS is configured correctly. |
 
+**Allow Optimize at Edge through firewall rules (optional)**
+
+{{waf-allowlist-setup}}
+
 **Verify the setup**
 
 After completing the setup, verify that bot traffic is being routed to Edge Optimize and that human traffic remains unaffected.
@@ -466,17 +471,13 @@ The response should **not** contain the `x-edgeoptimize-request-id` header. The 
 | `x-edgeoptimize-request-id` | Present — contains a unique request ID | Absent |
 | `x-edgeoptimize-fo` | Present only if failover occurred (value: `1`) | Absent |
 
-**4. Staging domain (optional)**
+{{verify-routing-status-in-ui}}
 
-If you use a staging hostname and staging API key from LLM Optimizer, deploy the same Worker logic on your **staging** zone using the **staging** API key. Then verify bot traffic on the staging host:
+{{retrieve-staging-edge-optimize-api-key}}
 
 ```
 curl -svo /dev/null https://staging.example.com/page.html \
   --header "user-agent: chatgpt-user"
 ```
-
-Replace `https://staging.example.com/page.html` with your real staging URL and path. A successful response includes the `x-edgeoptimize-request-id` header.
-
-{{verify-routing-status-in-ui}}
 
 {{return-to-overview}}

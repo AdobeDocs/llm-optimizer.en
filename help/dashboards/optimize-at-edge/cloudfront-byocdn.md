@@ -17,11 +17,9 @@ Before setting up the CloudFront configuration, ensure you have:
 * Completed the LLM Optimizer onboarding process.
 * Completed CDN log forwarding to LLM Optimizer.
 * An Edge Optimize API key retrieved from the LLM Optimizer UI.
-* (Optional) A staging Edge Optimize API key if you test routing on a staging hostname first.
+* (Optional) To test staging routing, see **Optional: Test routing on a staging hostname** at the end of this page.
 
 {{retrieve-byocdn-api-key}}
-
-{{retrieve-staging-edge-optimize-api-key}}
 
 **Step 1: Create Edge Optimize Origin**
 
@@ -255,6 +253,10 @@ The auto-created role comes with an `AWSLambdaBasicExecutionRole` policy configu
 
 4. Click **Save changes**.
 
+**Allow Optimize at Edge through firewall rules (optional)**
+
+{{waf-allowlist-setup}}
+
 **Step 6: Test the configuration**
 
 **1. Test bot traffic (should be optimized)**
@@ -293,20 +295,9 @@ The response should **not** contain the `x-edgeoptimize-request-id` header. The 
 | `x-edgeoptimize-request-id` | Present — contains a unique request ID | Absent |
 | `x-edgeoptimize-fo` | Present only if failover occurred (value: `1`) | Absent |
 
-**4. Staging domain (optional)**
-
-If you use a staging hostname and staging API key from LLM Optimizer, deploy the same CloudFront configuration on your **staging** distribution using the **staging** API key. Then verify bot traffic on the staging host:
-
-```
-curl -svo /dev/null https://staging.example.com/page.html \
-  --header "user-agent: chatgpt-user"
-```
-
-Replace `https://staging.example.com/page.html` with your real staging URL and path. A successful response includes the `x-edgeoptimize-request-id` header.
-
 {{verify-routing-status-in-ui}}
 
-**5. Verify logs are flowing correctly**
+**4. Verify logs are flowing correctly**
 
 After running the test requests above, verify that logs are being written for both the CloudFront function and the Lambda@Edge function.
 
@@ -406,5 +397,12 @@ Once deployed, all traffic routes directly to your default origin. No configurat
 4. Click **Save changes**.
 
 5. Wait for the distribution to finish deploying, then verify that agentic requests return the `x-edgeoptimize-request-id` header as described in Step 6.
+
+{{retrieve-staging-edge-optimize-api-key}}
+
+```
+curl -svo /dev/null https://staging.example.com/page.html \
+  --header "user-agent: chatgpt-user"
+```
 
 {{return-to-overview}}

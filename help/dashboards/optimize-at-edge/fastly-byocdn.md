@@ -16,11 +16,9 @@ Before setting up the Fastly VCL rules, ensure you have:
 * Completed the LLM Optimizer onboarding process.
 * Completed CDN log forwarding to LLM Optimizer.
 * An Edge Optimize API key retrieved from the LLM Optimizer UI.
-* (Optional) A staging Edge Optimize API key if you test routing on a staging hostname first.
+* (Optional) To test staging routing, see **Optional: Test routing on a staging hostname** at the end of this page.
 
 {{retrieve-byocdn-api-key}}
-
-{{retrieve-staging-edge-optimize-api-key}}
 
 **Configuration**
 
@@ -36,6 +34,7 @@ Add the following three VCL snippets to your Fastly service. These snippets hand
 unset req.http.x-edgeoptimize-url;
 unset req.http.x-edgeoptimize-config;
 unset req.http.x-edgeoptimize-api-key;
+unset req.http.x-edgeoptimize-fetcher-key; # Optional (required only in case of WAF)
 
 if (!req.http.x-edgeoptimize-request
     && req.http.user-agent ~ "(?i)(AdobeEdgeOptimize-AI|ChatGPT-User|GPTBot|OAI-SearchBot|PerplexityBot|Perplexity-User)") {
@@ -43,6 +42,7 @@ if (!req.http.x-edgeoptimize-request
   set req.http.x-edgeoptimize-url = req.url; # required for identifying the original url
   set req.http.x-edgeoptimize-config = "LLMCLIENT=TRUE;"; # required for cache key
   set req.http.x-edgeoptimize-api-key = "<YOUR API KEY>"; # required for identifying the client
+  set req.http.x-edgeoptimize-fetcher-key = "<YOUR FETCHER KEY>"; # Optional (required only in case of WAF)
   set req.backend = F_EDGE_OPTIMIZE;
 }
 ```
@@ -79,6 +79,10 @@ The `vcl_deliver` snippet handles failover automatically. If Edge Optimize retur
 | Edge Optimize returns `2XX` | Optimized response is served to the client. |
 | Edge Optimize returns `4XX` or `5XX` | Request is restarted and served from the default origin. |
 | Failover response | Includes the header `x-edgeoptimize-fo: 1`. |
+
+**Allow Optimize at Edge through firewall rules (optional)**
+
+{{waf-allowlist-setup}}
 
 **Verify the setup**
 
@@ -118,17 +122,13 @@ The response should **not** contain the `x-edgeoptimize-request-id` header. The 
 | `x-edgeoptimize-request-id` | Present — contains a unique request ID | Absent |
 | `x-edgeoptimize-fo` | Present only if failover occurred (value: `1`) | Absent |
 
-**4. Staging domain (optional)**
+{{verify-routing-status-in-ui}}
 
-If you use a staging hostname and staging API key from LLM Optimizer, add the same VCL snippets to your **staging** Fastly service using the **staging** API key. Then verify bot traffic on the staging host:
+{{retrieve-staging-edge-optimize-api-key}}
 
 ```
 curl -svo /dev/null https://staging.example.com/page.html \
   --header "user-agent: chatgpt-user"
 ```
-
-Replace `https://staging.example.com/page.html` with your real staging URL and path. A successful response includes the `x-edgeoptimize-request-id` header.
-
-{{verify-routing-status-in-ui}}
 
 {{return-to-overview}}
