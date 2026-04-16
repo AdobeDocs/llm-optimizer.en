@@ -37,7 +37,7 @@ Start the onboarding process in your LLM Optimizer account:
 1. On the **Customer configuration** dashboard, select the **CDN configuration** tab.
 1. Click **Onboard CDN**.
 ![CDN Configuration tab](/help/overview/assets/cc-cdn.png)
-1. For AEM Fastly customers, Adobe can assist in completing the onboarding process. For customers using other CDN providers, your IT/CDN team needs to complete the required setup and prerequisites. You can also refer to the example CDN guides provided below for additional guidance.
+1. For AEM Cloud Service managed Fastly customers, the routing setup is self-serve and can be completed directly in the LLM Optimizer UI. For customers using other CDN providers, your IT/CDN team needs to complete the required setup and prerequisites. You can also refer to the example CDN guides provided below for additional guidance.
 
 >[!NOTE]
 >Please refer to the step by step guides below that cover the full onboarding flow. For issues not resolved by the guides, you can reach out to `llmo-at-edge@adobe.com`.
