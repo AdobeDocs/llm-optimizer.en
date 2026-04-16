@@ -8,7 +8,7 @@ feature: Opportunities
 
 This configuration routes agentic traffic (requests from AI bots and LLM user agents) to the Edge Optimize backend service (`live.edgeoptimize.net`). Human visitors and SEO bots continue to be served from your origin as usual. To test the configuration, after the setup is complete, check for the header `x-edgeoptimize-request-id` in the response.
 
-**Prerequisites**
+## Prerequisites
 
 To access this feature:  
 
@@ -20,7 +20,7 @@ To access this feature:
 >[!NOTE]
 > This feature is not supported in Safari or in incognito/private browsing modes.
 
-**Steps to Enable Routing**
+## Steps to Enable Routing
 
 To start routing agentic traffic to Edge Optimize:
 
@@ -48,7 +48,7 @@ To start routing agentic traffic to Edge Optimize:
 
 Additionally, if you require any help with the above steps, reach out to your Adobe account team or `llmo-at-edge@adobe.com`.
 
-**Troubleshooting**
+## Troubleshooting
 
 If an error appears while enabling or disabling routing, it will look similar to the following:
 
@@ -94,7 +94,7 @@ Use the list below to identify the error and follow the directions.
 
 If the issue persists, reach out to your Adobe account team or `llmo-at-edge@adobe.com`.
 
-**(Optional) Verify the Setup**
+## (Optional) Verify the Setup
 
 After the routing configuration is complete, you can optionally verify that AI bot traffic is being routed to Edge Optimize and that human traffic remains unaffected.
 
