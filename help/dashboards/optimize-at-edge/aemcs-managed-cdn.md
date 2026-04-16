@@ -11,8 +11,11 @@ This configuration routes agentic traffic (requests from AI bots and LLM user ag
 **Prerequisites**
 
 To access this feature:  
-- Paid customers must have access to the **Adobe LLM Optimize Users** IMS Product Profile.
-- Trial customers must be part of the **LLMO Admin** IMS group.
+
+- Paid customers must have access to the **Adobe LLM Optimizer Users** IMS Product Profile. Contact your organization’s Admin to request access.
+   ![Add User to a Product Profile](/help/assets/optimize-at-edge/cs-fastly-user-product-profiles.png)
+- Trial customers must be part of the **LLMO Admin** IMS group. If the group doesn’t exist, your organization’s Admin can create it and add you.
+   ![Create LLMO Admin IMS group](/help/assets/optimize-at-edge/cs-fastly-create-ims-group.png)
 
 >[!NOTE]
 > This feature is not supported in Safari or in incognito/private browsing modes.
@@ -57,7 +60,7 @@ Use the list below to identify the error and follow the directions.
 
    **Cause:** The user account does not have the LLM Optimizer product context in your Adobe IMS profile. This is required for paid customers to configure CDN routing.
 
-   **Recommendation:** Verify that you have been assigned the **Adobe LLM Optimize Users** Product Profile in Adobe Admin Console by your Org Admin.
+   **Recommendation:** Verify that you have been assigned the **Adobe LLM Optimizer Users** Product Profile in Adobe Admin Console by your Org Admin.
 
 2. **Only LLMO Admin group members can configure CDN routing**
 
