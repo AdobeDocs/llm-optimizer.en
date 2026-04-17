@@ -6,9 +6,9 @@ feature: Quickstart, Onboarding
 
 # Quick Start
 
-To get started with LLM Optimizer, you need to complete the onboarding process. After onboarding, you will be able to customize categories, topics, prompts and configure log forwarding for more accurate insights and full access to [LLM Optimizer's dashboards](/help/dashboards/dashboards-overview.md) and other functionality.
+To get started with LLM Optimizer, complete onboarding. Then customize categories, topics, and prompts, configure CDN log forwarding, and open the [dashboards](/help/dashboards/dashboards-overview.md) for fuller insights.
 
-**Brand Centric experience:** New customers now land in a brand-first UI by default with onboarding-driven setup. Each org starts with one active brand and additional suggested brands. Existing customers on LLM Optimizer will be gradually moved over to this Brand Centric experience. If your UI still follows the older **Customer Configuration** layout, use the **Customer Configuration (classic experience)** paths in each step below.
+**Brand Centric experience:** New customers land in a brand-first UI by default, with onboarding-driven setup. Each organization starts with one active brand and additional suggested brands. Existing LLM Optimizer customers are moved to this experience gradually. Where steps differ by layout, use **Customer Configuration (classic experience)** or **Brands Management** / **Prompts Management**, whichever matches your UI.
 
 ## Onboarding overview
 
