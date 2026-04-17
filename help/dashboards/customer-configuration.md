@@ -8,6 +8,12 @@ feature: Customer Configuration
 
 The Customer Configuration Dashboard is a powerful tool that provides insights into your brand's visibility in LLMs. By correctly setting up categories, topics, prompts, you can ensure your brand is well positioned to appear in LLM-generated responses. This setup ensures the platform tailors insights to your business context, enabling accurate visibility, traffic, and opportunity analysis.
 
+For customers that are on the brand centric experience, navigate to **Brands Management** to setup and configure brands, brand aliases and define competitors to track against. **Brands Management** is also used to configure integrations such as Google Search Console, Adobe Analytics, and CDN log forwarding related to URLs associated with brands.
+
+![Brands Management — configuration overview (Brand Centric experience)](/help/assets/brand-centric-experience/brands-management-configuration.png)
+
+The Customer Configuration Dashboard (shown below) applies when your organization still uses this navigation.
+
 ![Customer Configuration Dashboard](/help/dashboards/assets/customer-config.png)
 
 In order to configure how LLM Optimizer monitors and analyzes your brand presence across different markets and competitive landscapes, you have access to the following tabs:
@@ -25,7 +31,9 @@ In order to configure how LLM Optimizer monitors and analyzes your brand presenc
 
 ## Prompts {#prompts-brand}
 
-From this tab, you can review, manage and customize prompts. You can upload a [Brand Presence analysis](/help/dashboards/brand-presence.md) .csv and the list will be populated with prompts and topics from that analysis or [Download a Prompts library](/help/overview/best-practices-topics-prompts.md) created by Adobe. You can also delete, modify and add topics and their associated prompts as needed.
+For customers that are on the brand centric experience, to add Topics and Prompts, navigate to **Prompts Management**.
+
+From the **Prompts** tab, you can review, manage and customize prompts. You can upload a [Brand Presence analysis](/help/dashboards/brand-presence.md) .csv and the list will be populated with prompts and topics from that analysis or [Download a Prompts library](/help/overview/best-practices-topics-prompts.md) created by Adobe. You can also delete, modify and add topics and their associated prompts as needed.
 
 To import a data insights .csv file, you first need to export a file from the Brand Presence dashboard. See the [data insights](/help/dashboards/brand-presence.md#data-insights) section to learn how to do that. Once you have the file:
 

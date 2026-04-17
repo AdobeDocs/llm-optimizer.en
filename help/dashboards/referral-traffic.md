@@ -8,6 +8,10 @@ feature: Referral Traffic
 
 Referral Traffic shows how visitors arrive at your site from external platforms, AI citations, and referral links. It tracks and analyzes traffic sources, referral patterns, and conversion metrics from external websites and platforms. This will help you understand which sources, regions, and pages drive the most engaged traffic. <!--Data is sourced from the CDN logs, a privacy-preserving source that does not capture personal user data.--> There are also customizable filters to help you refine the displayed data.
 
+For customers that are on the brand centric experience, navigate to **Referral Traffic** and select the site for which you want to view the LLM Referral Traffic insights.
+
+![Referral Traffic — site selector (Brand Centric experience)](/help/assets/brand-centric-experience/referral-traffic-dashboard.png)
+
 >[!NOTE]
 >By default, this dashboard builds traffic insights from **CDN logs**. If your organization is on a paid offer, you can connect **Adobe Analytics** to add data that measures AI-driven discovery and site engagement. This data is available in the **Business Impact** tab. Without integration to Adobe Analytics the tab is not populated. See [Adobe Analytics Integration](/help/dashboards/adobe-analytics-integration.md) for more details.
 
@@ -23,7 +27,11 @@ This page details the following:
 
 ## Setup {#setup}
 
-On first login, the Referral Traffic dashboard may appear blank. To view your data, you must configure [CDN log forwarding](/help/dashboards/customer-configuration.md#cdn-configuration), by selecting **Go To Configuration**.
+On first login, the Referral Traffic dashboard may appear blank. To view your data, you must configure CDN log forwarding.
+
+For customers that are on the brand centric experience, here's how you can add CDN log forwarding information. Navigate to **Brands Management** and click on the **CDN** label. See also [Agentic Traffic — CDN Setup](/help/dashboards/agentic-traffic.md#cdn-setup).
+
+**Customer Configuration (classic experience):** Configure [CDN log forwarding](/help/dashboards/customer-configuration.md#cdn-configuration) by selecting **Go To Configuration**.
 
 ![Referral Setup](/help/dashboards/assets/referral-setup1.png)
 

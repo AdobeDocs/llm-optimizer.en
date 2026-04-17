@@ -8,6 +8,10 @@ feature: Agentic Traffic
 
 The Agentic Traffic dashboard shows how AI agents (crawlers and chatbots) interact with your site. By using this view you can track the total number of requests and general performance related metrics. You can also view the distribution of traffic across markets, categories, pages, and agents. The data used by this dashboard is sourced from the CDN logs so you must configure **CDN log forwarding** in order to display metrics. There are also customizable filters to help you refine the displayed data.
 
+For customers that are on the brand centric experience, navigate to **Agentic Traffic** and select the site for which you want to view the agentic traffic insights.
+
+![Agentic Traffic — site selector (Brand Centric experience)](/help/assets/brand-centric-experience/agentic-traffic-dashboard.png)
+
 ![Traffic Distribution](/help/dashboards/assets/ag-main.png)
 
 This page details the following:
@@ -21,7 +25,13 @@ This page details the following:
 
 ## CDN Log Forwarding {#cdn-setup}
 
-Without **CDN log forwarding**, the Agentic Traffic dashboard is blank. To view agentic interactions, you must configure **CDN log forwarding**.  On first login, you will see a message as shown in the image below.
+Without **CDN log forwarding**, the Agentic Traffic dashboard is blank. To view agentic interactions, you must configure **CDN log forwarding**.
+
+For customers that are on the brand centric experience, here's how you can add CDN log forwarding information. Navigate to **Brands Management** and click on the **CDN** label.
+
+![Brands Management — CDN log forwarding](/help/assets/brand-centric-experience/brands-management-cdn.png)
+
+**Customer Configuration (classic experience):** On first login, you will see a message as shown in the image below.
 
 ![CDN Setup](/help/dashboards/assets/ag-log-forward1.png)
 
