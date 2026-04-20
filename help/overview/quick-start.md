@@ -25,8 +25,6 @@ If content visibility appears low in the dashboard, verify that the crawler has 
 
 ## Step 1: Onboard your brand name and domain {#step-1-onboard-your-domain}
 
-### Try Before you buy {#try-before-you-buy}
-
 To get started with LLM Optimizer, first activate your trial (if eligible) and onboard your brand name and domain.
 
 ### Activate your trial
