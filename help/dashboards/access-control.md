@@ -57,7 +57,7 @@ For opportunities such as 404, 403, and 503 error pages:
 
   ![Deploy Optimization hidden on Agentic Traffic opportunities](/help/dashboards/assets/access-control-agentic-deploy.png)
 
-### Other opportunity detail pages {#other-opportunities}
+### Other opportunity pages {#other-opportunities}
 
 Read-only behavior also applies to opportunity types such as:
 
@@ -104,4 +104,4 @@ For detailed steps, see [Managing products in the Admin Console](https://helpx.a
 
 >[!NOTE]
 >
->Screen flows in Adobe Admin Console can change between releases. If the options above do not match your console, use the in-product help links in Adobe Admin Console or contact your Adobe account team.
+>Screen flows in the Adobe Admin Console can change between releases. If the options above do not match your console, use the in-product help links in Adobe Admin Console or contact your Adobe account team.
