@@ -13,12 +13,8 @@ This configuration routes agentic traffic (requests from AI bots and LLM user ag
 Before setting up the Akamai Property Manager rules, ensure you have:
 
 * Access to Akamai Property Manager for your domain.
-* Completed the LLM Optimizer onboarding process.
-* Completed CDN log forwarding to LLM Optimizer.
-* An Edge Optimize API key retrieved from the LLM Optimizer UI.
-* (Optional) To test staging routing, see **Optional: Test routing on a staging hostname** at the end of this page.
-
-{{retrieve-byocdn-api-key}}
+* An Edge Optimize API key retrieved from the LLM Optimizer UI. For steps, see [Retrieve your API keys](/help/dashboards/optimize-at-edge/retrieve-api-keys.md).
+* (Optional) To test staging routing, see [Staging API key](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional).
 
 **Configuration**
 
@@ -190,12 +186,5 @@ The response should **not** contain the `x-edgeoptimize-request-id` header. The 
 | `x-edgeoptimize-fo` | Present only if failover occurred (value: `1`) | Absent |
 
 {{verify-routing-status-in-ui}}
-
-{{retrieve-staging-edge-optimize-api-key}}
-
-```
-curl -svo /dev/null https://staging.example.com/page.html \
-  --header "user-agent: chatgpt-user"
-```
 
 {{return-to-overview}}
