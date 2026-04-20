@@ -14,7 +14,7 @@ Before setting up the CloudFront configuration, ensure you have:
 
 * An existing CloudFront distribution serving your website.
 * AWS IAM permissions to create Lambda functions, IAM roles, CloudFront distributions, and cache policies.
-* An Edge Optimize API key retrieved from the LLM Optimizer UI. For steps, see [Retrieve your API keys](/help/dashboards/optimize-at-edge/retrieve-api-keys.md).
+* An Edge Optimize API key retrieved from the LLM Optimizer UI. For steps, see [Retrieve your API keys](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key).
 * (Optional) To test staging routing, see [Staging API key](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional).
 
 **Step 1: Create Edge Optimize Origin**

@@ -13,7 +13,7 @@ This configuration routes agentic traffic (requests from AI bots and LLM user ag
 Before setting up the Akamai Property Manager rules, ensure you have:
 
 * Access to Akamai Property Manager for your domain.
-* An Edge Optimize API key retrieved from the LLM Optimizer UI. For steps, see [Retrieve your API keys](/help/dashboards/optimize-at-edge/retrieve-api-keys.md).
+* An Edge Optimize API key retrieved from the LLM Optimizer UI. For steps, see [Retrieve your API keys](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key).
 * (Optional) To test staging routing, see [Staging API key](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional).
 
 **Configuration**

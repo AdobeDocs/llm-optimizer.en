@@ -14,7 +14,7 @@ Before setting up the Cloudflare Worker routing rules, ensure you have:
 
 * A Cloudflare account with Workers enabled on your domain.
 * Access to your domain's DNS settings in Cloudflare.
-* An Edge Optimize API key retrieved from the LLM Optimizer UI. For steps, see [Retrieve your API keys](/help/dashboards/optimize-at-edge/retrieve-api-keys.md).
+* An Edge Optimize API key retrieved from the LLM Optimizer UI. For steps, see [Retrieve your API keys](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key).
 * (Optional) To test staging routing, see [Staging API key](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional).
 
 **How routing works**

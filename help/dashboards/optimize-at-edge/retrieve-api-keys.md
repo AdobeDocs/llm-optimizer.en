@@ -6,7 +6,7 @@ feature: Opportunities
 
 # Retrieve your API keys
 
-Before configuring your CDN, retrieve your Edge Optimize API keys from LLM Optimizer. You need a **production** API key for live traffic. Optionally, you can also retrieve a **staging** API key to test routing on a staging hostname first.
+Before configuring your CDN, retrieve your Edge Optimize API keys from LLM Optimizer UI. You need a **production** API key for live traffic. Optionally, you can also retrieve a **staging** API key to test routing on a staging hostname first.
 
 ## Production API key
 
@@ -45,9 +45,6 @@ Use a staging hostname when you want to test Optimize at Edge in a lower environ
 1. In LLM Optimizer, open **Customer configuration** and select the **CDN configuration** tab.
 2. Under **Deploy optimizations to AI agents**, select **Add stage domain** (or **Stage domain** if a staging domain is already configured).
 3. Enter the full staging URL including `https://` and select **Set Domain**.
-
-   ![Stage Domain input dialog](/help/assets/optimize-at-edge/byocdn-staging-domain-input.png)
-
 4. Copy the **staging** API key from the confirmation dialog.
 
    ![Staging domain API key](/help/assets/optimize-at-edge/byocdn-staging-domain-api-key.png)
