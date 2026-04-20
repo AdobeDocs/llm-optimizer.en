@@ -2,24 +2,72 @@
 
 ## API key retrieval steps {#retrieve-byocdn-api-key}
 
-**Steps to retrieve your API key:**
+**Steps to retrieve your production Edge Optimize API key:**
 
-1. Navigate to **Customer Configuration** and select the **CDN Configuration** tab.
+1. In LLM Optimizer, open **Customer configuration** and select the **CDN configuration** tab.
 
    ![Navigate to Customer Configuration](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
 
-2. Under **AI Traffic Routing to Deploy Optimizations**, tick the **Deploy Optimizations to AI Agents** checkbox.
+2. Locate the **Deploy optimizations to AI agents** section. Tick the **Enable optimization engine** checkbox.
 
-   ![Tick Deploy Optimizations to AI Agents](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+   ![Deploy optimizations to AI agents — pending](/help/assets/optimize-at-edge/byocdn-deploy-optimizations-pending.png)
 
-3. Copy the API key and proceed with the routing configuration steps below.
+3. In the confirmation dialog, select **Enable**.
 
-   ![Copy the API key](/help/assets/optimize-at-edge/prereq-copy-api-key.png)
+   ![Enable optimization engine confirmation dialog](/help/assets/optimize-at-edge/byocdn-enable-optimization-engine-dialog.png)
+
+4. Select **View details**. In the **Deploy optimizations details** dialog, copy the **Production API key** (use **Copy** next to the field).
+
+   ![Production API key in Deploy optimizations details](/help/assets/optimize-at-edge/byocdn-production-api-key-details.png)
 
    >[!NOTE]
-   >At this stage, the status may show a red cross indicating that the setup is not yet completed. This is expected — once you complete the routing configuration below and AI bot traffic starts flowing, the status will update to a green checkmark confirming that routing is successfully enabled.
+   >The dialog may show that setup is not complete. This is expected until routing is verified — you can still copy the API key so your IT or CDN team can finish the configuration.
 
 Additionally, if you require any help with the above steps, reach out to your Adobe account team or `llmo-at-edge@adobe.com`.
+
+## Optional: Test routing on a staging hostname {#retrieve-staging-edge-optimize-api-key}
+
+**Optional: Test routing on a staging hostname**
+
+If you'd like to validate the routing in a lower environment before enabling production routing, you can configure a staging hostname.
+
+**Requirements**
+
+* The staging hostname must be on the **same registrable domain** as production (for example, `https://staging.example.com` when production is `https://www.example.com`).
+* Only **one** staging domain per site. After it is saved, it cannot be changed without contacting Adobe.
+
+**Get your staging API key**
+
+1. Open **Customer configuration** and select **CDN configuration**.
+2. Under **Deploy optimizations to AI agents**, select **Add stage domain** (or **Stage domain** if a staging domain is already configured).
+3. Enter the full staging URL including `https://` and select **Set Domain**.
+4. Copy the **staging** API key from the confirmation dialog.
+
+![Staging domain API key](/help/assets/optimize-at-edge/byocdn-staging-domain-api-key.png)
+
+Deploy the same routing rules on your staging environment using the staging API key.
+
+**Test staging bot traffic**
+
+Replace `https://staging.example.com/page.html` with your real staging URL and path. **Success:** The response includes the `x-edgeoptimize-request-id` header.
+
+If you need help, contact `llmo-at-edge@adobe.com`.
+
+## Check routing status in LLM Optimizer {#verify-routing-status-in-ui}
+
+The status of the traffic routing can also be checked in the LLM Optimizer UI. Navigate to **Customer configuration** and select the **CDN configuration** tab.
+
+![Deploy optimizations to AI agents — completed](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+
+## Allowing Optimize at Edge through firewall rules (optional) {#waf-allowlist-setup}
+
+If your CDN uses a WAF or Bot Manager:
+
+* Allowlist the `*AdobeEdgeOptimize/1.0*` user agent in your WAF or Bot Manager so the Optimize at Edge service can fetch your origin content.
+* If your firewall requires additional verification beyond user agent, generate a secret (for example, `openssl rand -hex 32`) and:
+  * Add `x-edgeoptimize-fetcher-key` with the secret in your routing rules alongside the other `x-edgeoptimize-*` headers.
+  * Add a WAF or Bot Manager rule to allow requests where `x-edgeoptimize-fetcher-key` matches the same secret.
+* Optimize at Edge forwards this header as-is — you own the full key lifecycle.
 
 ## Return to overview {#return-to-overview}
 

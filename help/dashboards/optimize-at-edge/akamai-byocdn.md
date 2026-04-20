@@ -16,25 +16,30 @@ Before setting up the Akamai Property Manager rules, ensure you have:
 * Completed the LLM Optimizer onboarding process.
 * Completed CDN log forwarding to LLM Optimizer.
 * An Edge Optimize API key retrieved from the LLM Optimizer UI.
+* (Optional) To test staging routing, see **Optional: Test routing on a staging hostname** at the end of this page.
 
 {{retrieve-byocdn-api-key}}
 
 **Configuration**
 
-The following Akamai Property Manager rule routes LLM user agents to Edge Optimize. The configuration includes the following steps:
+The following Akamai Property Manager rule routes agentic HTML page traffic to Edge Optimize. The configuration includes the following steps:
 
-**1. Set routing criteria (User-Agent matching)**
+**1. Set routing criteria (User-Agent and HTML traffic matching)**
 
-Set routing for the following user-agents:image.png
+Set routing for the following user agents:
 
 ```
- *AdobeEdgeOptimize-AI*,
- *ChatGPT-User*,
- *GPTBot*,
- *OAI-SearchBot*,
- *PerplexityBot*,
+ *AdobeEdgeOptimize-AI*
+ *ChatGPT-User*
+ *GPTBot*
+ *OAI-SearchBot*
+ *PerplexityBot*
  *Perplexity-User*
 ```
+
+>[!NOTE]
+>
+>Apply the Optimize at Edge routing rule only to agentic HTML page traffic. A common setup is to use request-side criteria such as **File Extension** to match `html` and `EMPTY_STRING` for extensionless page URLs. If your site serves HTML from other URL patterns, or includes extensionless non-page routes such as API endpoints, refine the rule with additional path-based criteria.
 
 ![Set routing criteria](/help/assets/optimize-at-edge/akamai-step1-routing.png)
 
@@ -66,6 +71,16 @@ Set the following incoming request headers:
 `x-edgeoptimize-url` to `{{builtin.AK_URL}}`
 
 ![Modify Incoming Request Headers](/help/assets/optimize-at-edge/akamai-step5-request.png)
+
+**Allow Optimize at Edge through firewall rules (optional)**
+
+{{waf-allowlist-setup}}
+
+![Set x-edgeoptimize-fetcher-key header in Property Manager](/help/assets/optimize-at-edge/akamai-step10-fetcher-key.png)
+
+>[!NOTE]
+>
+>Also allowlist the `*AdobeEdgeOptimize/1.0*` user agent and the `x-edgeoptimize-fetcher-key` header in Akamai Bot Manager.
 
 **6. Modify Incoming Response Headers**
 
@@ -174,8 +189,13 @@ The response should **not** contain the `x-edgeoptimize-request-id` header. The 
 | `x-edgeoptimize-request-id` | Present — contains a unique request ID | Absent |
 | `x-edgeoptimize-fo` | Present only if failover occurred (value: `1`) | Absent |
 
-The status of the traffic routing can also be checked in the LLM Optimizer UI. Navigate to **Customer Configuration** and select the **CDN Configuration** tab.
+{{verify-routing-status-in-ui}}
 
-![AI Traffic Routing status with routing enabled](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+{{retrieve-staging-edge-optimize-api-key}}
+
+```
+curl -svo /dev/null https://staging.example.com/page.html \
+  --header "user-agent: chatgpt-user"
+```
 
 {{return-to-overview}}
