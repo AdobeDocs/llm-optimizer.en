@@ -6,7 +6,7 @@ feature: Customer Configuration
 
 # Access control
 
-Adobe LLM Optimizer supports basic access control based on user personas. This capability is available only to **paying customers** and is enabled upon request. It is not available for [Try Before You Buy](/help/overview/quick-start.md#try-before-you-buy) trial customers.
+Adobe LLM Optimizer supports basic access control, based on user personas. This capability is available only to **paying customers** and is enabled upon request. It is not available for trial customers.
 
 >[!IMPORTANT]
 >
