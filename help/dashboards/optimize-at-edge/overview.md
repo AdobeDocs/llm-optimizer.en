@@ -60,6 +60,10 @@ Requirements for your IT/CDN team:
 
 To guide the setup process, select your CDN provider below and follow the corresponding configuration guide. Keep in mind that these examples should be adapted to your actual live configuration. We recommend applying changes in the lower environments first. **Bring Your Own CDN** guides include optional staging-hostname testing at the end of each page.
 
+The following diagram illustrates how requests flow through a BYOCDN setup with Optimize at Edge:
+
+![BYOCDN Request Flow](/help/assets/optimize-at-edge/byocdn-request-flow.png)
+
 ### CDN Configuration Guides
 
 | CDN Provider | Type | Guide |
