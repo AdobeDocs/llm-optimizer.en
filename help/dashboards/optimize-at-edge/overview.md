@@ -42,11 +42,6 @@ Start the onboarding process in your LLM Optimizer account:
 >[!NOTE]
 >Please refer to the step by step guides below that cover the full onboarding flow. For issues not resolved by the guides, you can reach out to `llmo-at-edge@adobe.com`.
 
-Pre-requisites to onboard to Optimize at Edge:
-
-* Complete the onboarding process to LLM Optimizer.
-* Complete the log forwarding process for your CDN logs.
-
 Requirements for your IT/CDN team:
 
 * Add `*AdobeEdgeOptimize/1.0*` user-agent to the Allowlist in your site's robots.txt file or bot-traffic management rules.
@@ -58,7 +53,7 @@ Requirements for your IT/CDN team:
 >[!IMPORTANT]
 >Routing must be configured at the outer CDN (the CDN closest to the client). If you have multiple CDNs, routing can only be done at the outer CDN.
 
-To guide the setup process, select your CDN provider below and follow the corresponding configuration guide. Keep in mind that these examples should be adapted to your actual live configuration. We recommend applying changes in the lower environments first. **Bring Your Own CDN** guides include optional staging-hostname testing at the end of each page.
+To guide the setup process, select your CDN provider below and follow the corresponding configuration guide. Keep in mind that these examples should be adapted to your actual live configuration. We recommend applying changes in the lower environments first.
 
 ### CDN Configuration Guides
 
