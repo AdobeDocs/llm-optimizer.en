@@ -33,7 +33,7 @@ If you require any help with the above steps, reach out to your Adobe account te
 
 ## Staging API key (optional)
 
-Use a staging hostname when you want to test Optimize at Edge in a lower environment before production traffic uses the routing rules.
+To validate the routing in a lower environment before enabling production routing, you can configure a staging hostname.
 
 **Requirements**
 
