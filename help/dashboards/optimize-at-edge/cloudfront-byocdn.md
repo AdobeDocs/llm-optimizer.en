@@ -14,12 +14,8 @@ Before setting up the CloudFront configuration, ensure you have:
 
 * An existing CloudFront distribution serving your website.
 * AWS IAM permissions to create Lambda functions, IAM roles, CloudFront distributions, and cache policies.
-* Completed the LLM Optimizer onboarding process.
-* Completed CDN log forwarding to LLM Optimizer.
-* An Edge Optimize API key retrieved from the LLM Optimizer UI.
-* (Optional) To test staging routing, see **Optional: Test routing on a staging hostname** at the end of this page.
-
-{{retrieve-byocdn-api-key}}
+* An Edge Optimize API key retrieved from the LLM Optimizer UI. For steps, see [Retrieve your API keys](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key).
+* (Optional) To test staging routing, see [Staging API key](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional).
 
 **Step 1: Create Edge Optimize Origin**
 
@@ -397,12 +393,5 @@ Once deployed, all traffic routes directly to your default origin. No configurat
 4. Click **Save changes**.
 
 5. Wait for the distribution to finish deploying, then verify that agentic requests return the `x-edgeoptimize-request-id` header as described in Step 6.
-
-{{retrieve-staging-edge-optimize-api-key}}
-
-```
-curl -svo /dev/null https://staging.example.com/page.html \
-  --header "user-agent: chatgpt-user"
-```
 
 {{return-to-overview}}
