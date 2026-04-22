@@ -56,7 +56,7 @@ Once activated, logs are ingested and the dashboard will populate with metrics s
 
 LLM Optimizer processes a subset of fields from the the CDN logs. Although raw log field names vary by CDN provider, they are normalized and presented as:
 
-* URL (path only)
+* URL (Path and query parameters)
 * User agent
 * Status code
 * Referrer header
