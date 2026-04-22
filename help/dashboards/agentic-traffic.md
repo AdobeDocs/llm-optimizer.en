@@ -19,7 +19,7 @@ This page details the following:
 * [Top and Bottom Movers](#top-bottom-movers)
 * [User Agent and URL Performance Analysis](#user-url-performance)
 
-For customers that are on the brand centric experience, navigate to **Agentic Traffic** and select the site for which you want to view the agentic traffic insights.
+If you are on the brand centric experience, navigate to **Agentic Traffic** and select the site for which you want to view the agentic traffic insights.
 
 ![Agentic Traffic — site selector (Brand Centric experience)](/help/assets/brand-centric-experience/agentic-traffic-dashboard.png)
 
