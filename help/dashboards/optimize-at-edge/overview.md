@@ -50,6 +50,10 @@ Requirements for your IT/CDN team:
 * If your CDN has WAF or Bot Manager rules, allowlist the `*AdobeEdgeOptimize/1.0*` user agent. If additional verification is required, configure the `x-edgeoptimize-fetcher-key` header. Each BYOCDN guide below includes the steps.
 * Confirm Optimize at Edge routing in the LLM Optimizer interface.
 
+The following diagram illustrates how requests flow through a BYOCDN setup with Optimize at Edge:
+
+![BYOCDN Request Flow](/help/assets/optimize-at-edge/byocdn-request-flow.png)
+
 >[!IMPORTANT]
 >Routing must be configured at the outer CDN (the CDN closest to the client). If you have multiple CDNs, routing can only be done at the outer CDN.
 
