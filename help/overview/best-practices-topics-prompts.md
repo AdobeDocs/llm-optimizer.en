@@ -14,9 +14,11 @@ The [[!UICONTROL Customer Configuration]](/help/dashboards/customer-configuratio
 
 ![Customer configuration window](/help/assets/best-practices/customer-configuration-best-practices.png)
 
-For customers that are on the brand centric experience, here's how you can add CDN log forwarding information. Navigate to **Brands Management** and click on the **CDN** label.
+**Brand Centric experience:** **Brands Management** is where you define how your brand is monitored and analyzed. To set up topics and prompts for a specific brand, use **Prompts Management**.
 
-![Brands Management — CDN log forwarding](/help/assets/brand-centric-experience/brands-management-cdn.png)
+![Brands Management — configuration overview](/help/assets/brand-centric-experience/brands-management-configuration.png)
+
+![Prompts Management](/help/assets/brand-centric-experience/prompts-management.png)
 
 In the [!UICONTROL Customer Configuration] dashboard, you can customize categories (such as business units or product lines), track other brands, and add brand mention aliases to capture all variations of your brand across prompts. This setup ensures the platform tailors insights to your business context, enabling accurate visibility, traffic, and opportunity analysis.
 

@@ -179,7 +179,7 @@ Follow the steps presented below to integrate and use the Google Search Console 
 
 Before using this feature you need to integrate your Google Search Console account with LLM optimizer.
 
-1. Open the Customer Configuration dashboard.
+1. Open the **Customer Configuration** dashboard (classic experience) or **Brands Management** (Brand Centric experience), then go to the Google Search Console integration.
 1. Navigate to the Google Search Console tab and click **Connect Account**.
    ![Google Search Console](/help/dashboards/assets/google-console.png)
 1. Sign in with a Google account that has access to the desired Search Console property.
@@ -202,7 +202,7 @@ After you integrate the Google Search Console account with LLM optimizer, you ca
 
 #### View added queries in the Prompts list {#prompts-list}
 
-After a query is added, it appears in the [Prompts](#prompts-brand) tab within the Customer Configuration dashboard. Prompts sourced from the Google Search Console are marked with a Google Search Console icon in the **Origin** column. The icon helps you distinguish between prompts that are grounded in actual user search behavior from those added manually or from other sources.
+After a query is added, it appears in the [Prompts](#prompts-brand) tab within the Customer Configuration dashboard (classic experience) or in **Prompts Management** (Brand Centric experience). Prompts sourced from the Google Search Console are marked with a Google Search Console icon in the **Origin** column. The icon helps you distinguish between prompts that are grounded in actual user search behavior from those added manually or from other sources.
 
 ### Frequently Asked Questions {#gsc-faq}
 

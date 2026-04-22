@@ -101,11 +101,11 @@ Once your site has been onboarded, you can view the Brand Presence Analysis base
 
 For customers that are on the brand centric experience, here's how you can add categories, topics, and prompts.
 
-* **Categories** — For Categories, navigate to the view and click on **Brands Management Categories**. The Categories are defined at a global level that apply to all brands created under Brands Management.
+* **Categories** — Navigate to **Brands Management** and click **Categories**. Categories are defined at a global level and apply to all brands under Brands Management.
 
   ![Brands Management with Categories in the navigation](/help/assets/brand-centric-experience/llmo-app-shell.png)
 
-* **Topics and prompts** — To create Topics and Prompts, navigate to **Prompts Management**. To setup Topics and Prompts for a specific brand, navigate to **Prompts Management**.
+* **Topics and prompts** — Navigate to **Prompts Management** to create topics and prompts, including for a specific brand.
 
   ![Prompts Management](/help/assets/brand-centric-experience/prompts-management.png)
 
@@ -146,9 +146,7 @@ To unlock Agentic Traffic and Referral Traffic insights, register CDN log forwar
 
 ### Brand Centric experience
 
-For customers that are on the brand centric experience, **Brands Management** is where you define how your brand will be monitored and analyzed.
-
-For customers that are on the brand centric experience, here's how you can add CDN log forwarding information. Navigate to **Brands Management** and click on the **CDN** label.
+For customers that are on the brand centric experience, add CDN log forwarding from **Brands Management**: open **Brands Management** and click the **CDN** label.
 
 ![Brands Management — CDN log forwarding](/help/assets/brand-centric-experience/brands-management-cdn.png)
 
