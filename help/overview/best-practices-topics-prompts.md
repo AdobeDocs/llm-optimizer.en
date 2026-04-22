@@ -14,13 +14,21 @@ The [[!UICONTROL Customer Configuration]](/help/dashboards/customer-configuratio
 
 ![Customer configuration window](/help/assets/best-practices/customer-configuration-best-practices.png)
 
-**Brand Centric experience:** **Brands Management** is where you define how your brand is monitored and analyzed. To set up topics and prompts for a specific brand, use **Prompts Management**.
+In the [!UICONTROL Customer Configuration] dashboard, you can customize categories (such as business units or product lines), track other brands, and add brand mention aliases to capture all variations of your brand across prompts. This setup ensures the platform tailors insights to your business context, enabling accurate visibility, traffic, and opportunity analysis.
+
+## Brand Centric experience
+
+By default, new customers start in a focused, brand-first interface with onboarding-driven setup. In this new interface, each organization starts with one active brand and additional suggested brands to choose from. Existing LLM Optimizer customers will shift to this Brand Centric experience gradually.
+
+For customers that are on the brand centric experience, **Brands Management** is where you define how your brand is monitored and analyzed.
+
+![Brands Management — app navigation (Brand Centric experience)](/help/assets/brand-centric-experience/llmo-app-shell.png)
 
 ![Brands Management — configuration overview](/help/assets/brand-centric-experience/brands-management-configuration.png)
 
-![Prompts Management](/help/assets/brand-centric-experience/prompts-management.png)
+To set up topics and prompts for a specific brand, use **Prompts Management**.
 
-In the [!UICONTROL Customer Configuration] dashboard, you can customize categories (such as business units or product lines), track other brands, and add brand mention aliases to capture all variations of your brand across prompts. This setup ensures the platform tailors insights to your business context, enabling accurate visibility, traffic, and opportunity analysis.
+![Prompts Management](/help/assets/brand-centric-experience/prompts-management.png)
 
 ## Industry Prompt Library
 

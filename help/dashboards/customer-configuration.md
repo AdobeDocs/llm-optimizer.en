@@ -10,6 +10,8 @@ The Customer Configuration Dashboard is a powerful tool that provides insights i
 
 For customers that are on the brand centric experience, navigate to **Brands Management** to setup and configure brands, brand aliases and define competitors to track against. **Brands Management** is also used to configure integrations such as Google Search Console, Adobe Analytics, and CDN log forwarding related to URLs associated with brands.
 
+![Brands Management — app navigation (Brand Centric experience)](/help/assets/brand-centric-experience/llmo-app-shell.png)
+
 ![Brands Management — configuration overview (Brand Centric experience)](/help/assets/brand-centric-experience/brands-management-configuration.png)
 
 The Customer Configuration Dashboard (shown below) applies when your organization still uses this navigation.
