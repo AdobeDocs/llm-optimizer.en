@@ -8,10 +8,6 @@ feature: Brand Presence
 
 The Brand Presence dashboard provides a detailed overview on how your brand is perceived at the level of AI-generated responses. It shows where, how often, and in what context your brand is mentioned. You can use the dashboard to measure visibility, track citation and explore sentiment trends. The dashboard is divided into several sections, each providing different insights. There are also customizable filters to help you refine the displayed data.
 
-For customers that are on the brand centric experience, navigate to **Brand Presence** and select a brand that you want to view Brand Presence for using the brand dropdown. You can also view the brand visibility at an **All Brands** level with this experience.
-
-![Brand Presence with brand selector (Brand Centric experience)](/help/assets/brand-centric-experience/brand-presence-brand-centric.png)
-
 ![Brand Presence overview](/help/dashboards/assets/brand-main.png)
 
 This page details the following:
@@ -21,6 +17,10 @@ This page details the following:
 * [Others Comparison](##others-comparison)
 * [Sentiment Trend](#sentiment-trend)
 * [Data Insights](#data-insights)
+
+If you are on the Brand Centric experience, navigate to **Brand Presence**. In the brand drop-down list, either select the brand you want to analyze or choose **All Brands** to review visibility across your full brand set.
+
+![Brand Presence with brand selector (Brand Centric experience)](/help/assets/brand-centric-experience/brand-presence-brand-centric.png)
 
 ## Filters {#filters}
 
