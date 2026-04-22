@@ -35,6 +35,8 @@ In order to configure how LLM Optimizer monitors and analyzes your brand presenc
 
 For customers that are on the brand centric experience, to add Topics and Prompts, navigate to **Prompts Management**.
 
+![Prompts Management (Brand Centric experience)](/help/assets/brand-centric-experience/prompts-management.png)
+
 From the **Prompts** tab, you can review, manage and customize prompts. You can upload a [Brand Presence analysis](/help/dashboards/brand-presence.md) .csv and the list will be populated with prompts and topics from that analysis or [Download a Prompts library](/help/overview/best-practices-topics-prompts.md) created by Adobe. You can also delete, modify and add topics and their associated prompts as needed.
 
 To import a data insights .csv file, you first need to export a file from the Brand Presence dashboard. See the [data insights](/help/dashboards/brand-presence.md#data-insights) section to learn how to do that. Once you have the file:
