@@ -20,7 +20,7 @@ In the [!UICONTROL Customer Configuration] dashboard, you can customize categori
 
 By default, new customers start in a focused, brand-first interface with onboarding-driven setup. In this new interface, each organization starts with one active brand and additional suggested brands to choose from. Existing LLM Optimizer customers will shift to this Brand Centric experience gradually.
 
-If you are on the brand centric experience, **Brands Management** is where you define how your brand is monitored and analyzed.
+If you are on the Brand Centric experience, **Brands Management** is where you define how your brand is monitored and analyzed.
 
 ![Brands Management — app navigation (Brand Centric experience)](/help/assets/brand-centric-experience/llmo-app-shell.png)
 

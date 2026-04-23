@@ -18,7 +18,7 @@ This page details the following:
 * [Sentiment Trend](#sentiment-trend)
 * [Data Insights](#data-insights)
 
-If you are on the Brand Centric experience, navigate to **Brand Presence**. In the brand drop-down list, either select the brand you want to analyze or choose **All Brands** to review visibility across your full brand set.
+If you are on the [Brand Centric experience](/help/overview/quick-start.md#brand-centric-experience), navigate to **Brand Presence**. In the brand drop-down list, either select the brand you want to analyze or choose **All Brands** to review visibility across your full brand set.
 
 ![Brand Presence with brand selector (Brand Centric experience)](/help/assets/brand-centric-experience/brand-presence-brand-centric.png)
 
