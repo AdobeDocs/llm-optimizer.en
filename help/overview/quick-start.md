@@ -122,7 +122,7 @@ From the Customer Configuration dashboard, you can:
 >
 > For more details on how to set up your categories, topics, prompts see the [Best practices for configuring categories, topics, prompts](/help/overview/best-practices-topics-prompts.md) page.
 
-### Brand Centric experience
+### Brand Centric experience categories, topics, and prompts
 
 For customers that are on the Brand Centric experience, you can add categories, topics, and prompts as follows:
 

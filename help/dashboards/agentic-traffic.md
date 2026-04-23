@@ -27,7 +27,7 @@ If you are on the [Brand Centric experience](/help/overview/quick-start.md#brand
 
 Without **CDN log forwarding**, the Agentic Traffic dashboard is blank. To view agentic interactions, you must configure **CDN log forwarding**.
 
-### Customer Configuration (classic navigation):
+### Customer Configuration (classic navigation)
 
 On first login, you will see a message as shown in the image below.
 
