@@ -101,7 +101,7 @@ Once your site has been onboarded, you can view the Brand Presence Analysis base
 
 ### Customer Configuration (classic navigation)
 
-If you are using the classic navigation (not the Brand Centric experience), you can customize categories, topics, and prompts for your brand from the [customer configuration dashboard](/help/dashboards/customer-configuration.md).
+If you are using classic navigation (not the Brand Centric experience), you can customize categories, topics, and prompts for your brand from the [customer configuration dashboard](/help/dashboards/customer-configuration.md).
 
 ![Customer Configuration Dashboard](/help/overview/assets/prompt-creation.png)
 
