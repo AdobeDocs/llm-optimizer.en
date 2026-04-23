@@ -19,9 +19,19 @@ This page details the following:
 * [Top and Bottom Movers](#top-bottom-movers)
 * [User Agent and URL Performance Analysis](#user-url-performance)
 
+If you are on the brand centric experience, navigate to **Agentic Traffic** and select the site for which you want to view the agentic traffic insights.
+
+![Agentic Traffic — site selector (Brand Centric experience)](/help/assets/brand-centric-experience/agentic-traffic-dashboard.png)
+
 ## CDN Log Forwarding {#cdn-setup}
 
-Without **CDN log forwarding**, the Agentic Traffic dashboard is blank. To view agentic interactions, you must configure **CDN log forwarding**.  On first login, you will see a message as shown in the image below.
+Without **CDN log forwarding**, the Agentic Traffic dashboard is blank. To view agentic interactions, you must configure **CDN log forwarding**.
+
+If you are are on the brand centric experience, you can add CDN log forwarding information by navigating to **Brands Management** and clicking on the **CDN** label.
+
+![Brands Management — CDN log forwarding](/help/assets/brand-centric-experience/brands-management-cdn.png)
+
+**Customer Configuration (classic navigation):** On first login, you will see a message as shown in the image below.
 
 ![CDN Setup](/help/dashboards/assets/ag-log-forward1.png)
 

@@ -21,9 +21,17 @@ This page details the following:
 * [Top Referral URLs](#top-referrals)
 * [Referral Traffic Details](#traffic-details)
 
+If you are on the brand centric experience, navigate to **Referral Traffic** and select the site for which you want to view the LLM Referral Traffic insights.
+
+![Referral Traffic — site selector (Brand Centric experience)](/help/assets/brand-centric-experience/referral-traffic-dashboard.png)
+
 ## Setup {#setup}
 
-On first login, the Referral Traffic dashboard may appear blank. To view your data, you must configure [CDN log forwarding](/help/dashboards/customer-configuration.md#cdn-configuration), by selecting **Go To Configuration**.
+On first login, the Referral Traffic dashboard may appear blank. To view your data, you must configure CDN log forwarding.
+
+For customers that are on the brand centric experience, here's how you can add CDN log forwarding information. Navigate to **Brands Management** and click on the **CDN** label. See also [Agentic Traffic — CDN Setup](/help/dashboards/agentic-traffic.md#cdn-setup).
+
+**Customer Configuration (classic experience):** Configure [CDN log forwarding](/help/dashboards/customer-configuration.md#cdn-configuration) by selecting **Go To Configuration**.
 
 ![Referral Setup](/help/dashboards/assets/referral-setup1.png)
 

@@ -8,6 +8,8 @@ feature: Customer Configuration
 
 The Customer Configuration Dashboard is a powerful tool that provides insights into your brand's visibility in LLMs. By correctly setting up categories, topics, prompts, you can ensure your brand is well positioned to appear in LLM-generated responses. This setup ensures the platform tailors insights to your business context, enabling accurate visibility, traffic, and opportunity analysis.
 
+The Customer Configuration Dashboard (shown below) applies when your organization still uses this navigation.
+
 ![Customer Configuration Dashboard](/help/dashboards/assets/customer-config.png)
 
 In order to configure how LLM Optimizer monitors and analyzes your brand presence across different markets and competitive landscapes, you have access to the following tabs:
@@ -19,13 +21,19 @@ In order to configure how LLM Optimizer monitors and analyzes your brand presenc
 * [CDN Configuration](#agentic-cdn)
 * [Google Search Console](#google-console)
 
+If you are on the brand centric experience, navigate to **Brands Management** to setup and configure brands, brand aliases and define competitors to track against. **Brands Management** is also used to configure integrations such as Google Search Console, Adobe Analytics, and CDN log forwarding related to URLs associated with brands. You can do this by clicking on the corresponding tabs: GSC, CDN and so on.
+
+![Brands Management — app navigation (Brand Centric experience)](/help/assets/brand-centric-experience/llmo-app-shell.png)
+
+![Brands Management — configuration overview (Brand Centric experience)](/help/assets/brand-centric-experience/brands-management-configuration.png)
+
 >[!IMPORTANT]
 >
 > For more details on how to set up your categories, topics, prompts see the [Best practices for configuring categories, topics, prompts](/help/overview/best-practices-topics-prompts.md) page.
 
 ## Prompts {#prompts-brand}
 
-From this tab, you can review, manage and customize prompts. You can upload a [Brand Presence analysis](/help/dashboards/brand-presence.md) .csv and the list will be populated with prompts and topics from that analysis or [Download a Prompts library](/help/overview/best-practices-topics-prompts.md) created by Adobe. You can also delete, modify and add topics and their associated prompts as needed.
+From the **Prompts** tab, you can review, manage and customize prompts. You can upload a [Brand Presence analysis](/help/dashboards/brand-presence.md) .csv and the list will be populated with prompts and topics from that analysis or [Download a Prompts library](/help/overview/best-practices-topics-prompts.md) created by Adobe. You can also delete, modify and add topics and their associated prompts as needed.
 
 To import a data insights .csv file, you first need to export a file from the Brand Presence dashboard. See the [data insights](/help/dashboards/brand-presence.md#data-insights) section to learn how to do that. Once you have the file:
 
@@ -45,6 +53,10 @@ Additionally, you can also add topics/prompts to the list independently of a CSV
 4. Add the prompt text.
 5. Select the region.
 6. Click **Add Prompt** and the topic with the prompt will appear on the list.
+
+For customers that are on the brand centric experience, to add Topics and Prompts, navigate to **Prompts Management**.
+
+![Prompts Management (Brand Centric experience)](/help/assets/brand-centric-experience/prompts-management.png)
 
 >[!NOTE]
 >Newly added prompts will not appear in Brand Presence until processing is complete.
@@ -171,7 +183,7 @@ Follow the steps presented below to integrate and use the Google Search Console 
 
 Before using this feature you need to integrate your Google Search Console account with LLM optimizer.
 
-1. Open the Customer Configuration dashboard.
+1. Open the **Customer Configuration** dashboard (classic navigation) or **Brands Management** (Brand Centric experience), then go to the Google Search Console integration (GSC tag in the Brand Centric experience).
 1. Navigate to the Google Search Console tab and click **Connect Account**.
    ![Google Search Console](/help/dashboards/assets/google-console.png)
 1. Sign in with a Google account that has access to the desired Search Console property.
@@ -194,7 +206,7 @@ After you integrate the Google Search Console account with LLM optimizer, you ca
 
 #### View added queries in the Prompts list {#prompts-list}
 
-After a query is added, it appears in the [Prompts](#prompts-brand) tab within the Customer Configuration dashboard. Prompts sourced from the Google Search Console are marked with a Google Search Console icon in the **Origin** column. The icon helps you distinguish between prompts that are grounded in actual user search behavior from those added manually or from other sources.
+After a query is added, it appears in the [Prompts](#prompts-brand) tab within the Customer Configuration dashboard (classic experience) or in **Prompts Management** (Brand Centric experience). Prompts sourced from the Google Search Console are marked with a Google Search Console icon in the **Origin** column. The icon helps you distinguish between prompts that are grounded in actual user search behavior from those added manually or from other sources.
 
 ### Frequently Asked Questions {#gsc-faq}
 

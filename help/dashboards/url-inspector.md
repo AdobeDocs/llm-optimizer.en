@@ -10,6 +10,10 @@ The URL Inspector helps you analyze how specific pages on your domain are perfor
 
 ![URL Inspector](/help/dashboards/assets/url-insp.png)
 
+If you are on the brand centric experience, navigate to **URL Inspector** and select the site for which you want to view the insights.
+
+![URL Inspector — site selector (Brand Centric experience)](/help/assets/brand-centric-experience/url-inspector-dashboard.png)
+
 ## Filters
 
 At the top of the page, you can apply filters to refine your view. The filters you choose will impact **all** the sections present on the dashboard. You can customize the following:

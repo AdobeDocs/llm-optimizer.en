@@ -16,6 +16,20 @@ The [[!UICONTROL Customer Configuration]](/help/dashboards/customer-configuratio
 
 In the [!UICONTROL Customer Configuration] dashboard, you can customize categories (such as business units or product lines), track other brands, and add brand mention aliases to capture all variations of your brand across prompts. This setup ensures the platform tailors insights to your business context, enabling accurate visibility, traffic, and opportunity analysis.
 
+## Brand Centric experience
+
+By default, new customers start in a focused, brand-first interface with onboarding-driven setup. In this new interface, each organization starts with one active brand and additional suggested brands to choose from. Existing LLM Optimizer customers will shift to this Brand Centric experience gradually.
+
+If you are on the brand centric experience, **Brands Management** is where you define how your brand is monitored and analyzed.
+
+![Brands Management — app navigation (Brand Centric experience)](/help/assets/brand-centric-experience/llmo-app-shell.png)
+
+![Brands Management — configuration overview](/help/assets/brand-centric-experience/brands-management-configuration.png)
+
+To set up topics and prompts for a specific brand, use **Prompts Management**.
+
+![Prompts Management](/help/assets/brand-centric-experience/prompts-management.png)
+
 ## Industry Prompt Library
 
 To help get started with prompts and topics, Adobe has created an Industry Prompt Library developed through extensive research with industry experts and analysis of AI search behavior across 6,000+ customers. This library identifies the most relevant topics and prompts based on industry-specific trends, validated business objectives, and real-world customer search patterns.
