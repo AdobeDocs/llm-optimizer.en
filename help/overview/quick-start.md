@@ -6,11 +6,13 @@ feature: Quickstart, Onboarding
 
 # Quick Start
 
-To get started with LLM Optimizer, complete onboarding. Then customize categories, topics, and prompts, configure CDN log forwarding, and open the [dashboards](/help/dashboards/dashboards-overview.md) for fuller insights.
-
-**Brand Centric experience:** By default, new customers start in a focused, brand-first interface with onboarding-driven setup. In this new interface, each organization starts with one active brand and additional suggested brands to choose from. Existing LLM Optimizer customers will shift to this Brand Centric experience gradually.
+To get started with LLM Optimizer, complete the onboarding process. Then customize categories, topics, and prompts, configure CDN log forwarding and open the [dashboards](/help/dashboards/dashboards-overview.md) for fuller insights.
 
 <!--Where steps differ by layout, use **Customer Configuration (classic experience)** or **Brands Management** / **Prompts Management**, whichever matches your current interface.-->
+
+## Brand Centric experience {#brand-centric-experience}
+
+By default, new customers start in a focused, brand-first interface with onboarding-driven setup. In this new interface, each organization starts with one active brand and additional suggested brands to choose from. Existing LLM Optimizer customers will shift to this Brand Centric experience gradually.
 
 ## Onboarding overview
 
@@ -122,7 +124,7 @@ From the Customer Configuration dashboard, you can:
 
 ### Brand Centric experience
 
-For customers that are on the brand centric experience, you can add categories, topics, and prompts as follows:
+For customers that are on the Brand Centric experience, you can add categories, topics, and prompts as follows:
 
 * **Categories** — Navigate to **Brands Management** and click **Categories**. Categories are defined at a global level and apply to all brands under Brands Management.
 
@@ -138,7 +140,7 @@ After your domain has been onboarded, you will see initial insights in the Brand
 
 >[!NOTE]
 >
-> For customers that are on the brand centric experience, navigate to **Brand Presence** and select a brand that you want to view Brand Presence for using the brand dropdown. You can also view the brand visibility at an **All Brands** level with this experience.
+> For customers that are on the Brand Centric experience, navigate to **Brand Presence** and select a brand that you want to view Brand Presence for using the brand dropdown. You can also view the brand visibility at an **All Brands** level with this experience.
 
 ## Step 4: Provide information for CDN Log Forwarding {#step-4}
 
@@ -158,9 +160,9 @@ Alternatively, if no CDN provider has been added beforehand (as described above)
 >[!NOTE]
 >For details regarding log forwarding when using a customer managed CDN (BYOCDN) see [BYOCDN Log Forwarding Overview](/help/overview/log-forwarding/log-forwarding-overview.md)
 
-### Brand Centric experience
+### Brand Centric experience CDN Log Forwarding
 
-For customers that are on the brand centric experience, you can add CDN log forwarding information from **Brands Management** as follows: open **Brands Management** and click the **CDN** label.
+For customers that are on the Brand Centric experience, you can add CDN log forwarding information from **Brands Management** as follows: open **Brands Management** and click the **CDN** label.
 
 ![Brands Management — CDN log forwarding](/help/assets/brand-centric-experience/brands-management-cdn.png)
 

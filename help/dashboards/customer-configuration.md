@@ -21,7 +21,7 @@ In order to configure how LLM Optimizer monitors and analyzes your brand presenc
 * [CDN Configuration](#agentic-cdn)
 * [Google Search Console](#google-console)
 
-If you are on the brand centric experience, navigate to **Brands Management** to setup and configure brands, brand aliases and define competitors to track against. **Brands Management** is also used to configure integrations such as Google Search Console, Adobe Analytics, and CDN log forwarding related to URLs associated with brands. You can do this by clicking on the corresponding tabs: GSC, CDN and so on.
+If you are on the [Brand Centric experience](/help/overview/quick-start.md#brand-centric-experience), navigate to **Brands Management** to setup and configure brands, brand aliases and define competitors to track against. **Brands Management** is also used to configure integrations such as Google Search Console, Adobe Analytics, and CDN log forwarding related to URLs associated with brands. You can do this by clicking on the corresponding tabs: GSC, CDN and so on.
 
 ![Brands Management — app navigation (Brand Centric experience)](/help/assets/brand-centric-experience/llmo-app-shell.png)
 
@@ -54,7 +54,7 @@ Additionally, you can also add topics/prompts to the list independently of a CSV
 5. Select the region.
 6. Click **Add Prompt** and the topic with the prompt will appear on the list.
 
-For customers that are on the brand centric experience, to add Topics and Prompts, navigate to **Prompts Management**.
+For customers that are on the [Brand Centric experience](/help/overview/quick-start.md#brand-centric-experience), to add Topics and Prompts, navigate to **Prompts Management**.
 
 ![Prompts Management (Brand Centric experience)](/help/assets/brand-centric-experience/prompts-management.png)
 
@@ -206,7 +206,7 @@ After you integrate the Google Search Console account with LLM optimizer, you ca
 
 #### View added queries in the Prompts list {#prompts-list}
 
-After a query is added, it appears in the [Prompts](#prompts-brand) tab within the Customer Configuration dashboard (classic experience) or in **Prompts Management** (Brand Centric experience). Prompts sourced from the Google Search Console are marked with a Google Search Console icon in the **Origin** column. The icon helps you distinguish between prompts that are grounded in actual user search behavior from those added manually or from other sources.
+After a query is added, it appears in the [Prompts](#prompts-brand) tab within the Customer Configuration dashboard (classic navigation) or in **Prompts Management** (Brand Centric experience). Prompts sourced from the Google Search Console are marked with a Google Search Console icon in the **Origin** column. The icon helps you distinguish between prompts that are grounded in actual user search behavior from those added manually or from other sources.
 
 ### Frequently Asked Questions {#gsc-faq}
 
