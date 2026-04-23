@@ -32,7 +32,7 @@ user-guide-description: Boost your brand with Adobe LLM Optimizer. Track mention
   + [Other (Manual Upload)](/help/overview/log-forwarding/other.md)
 + Additional Resources{#resources}
   + Optimize at Edge{#optimize-at-edge}
-    + [Overview](/help/dashboards/optimize-at-edge/overview.md)
+    + [Optimize at Edge Overview](/help/dashboards/optimize-at-edge/overview.md)
     + [Retrieve your API keys](/help/dashboards/optimize-at-edge/retrieve-api-keys.md)
     + [AEM Cloud Service Managed CDN (Fastly)](/help/dashboards/optimize-at-edge/aemcs-managed-cdn.md)
     + [Fastly (BYOCDN)](/help/dashboards/optimize-at-edge/fastly-byocdn.md)
