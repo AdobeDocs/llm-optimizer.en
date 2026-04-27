@@ -8,14 +8,14 @@ feature: Opportunities
 
 When AI systems answer questions about your brand, they rely on a set of top-cited URLs — third-party web pages that are frequently referenced in AI-generated responses. How your brand is portrayed on those pages directly shapes how AI systems represent it to users.
 
-The Cited Sentiment Analysis opportunity analyzes the top-cited URLs detected for prompts in your Brand Presence dashboard prompt set. It evaluates brand mentions, sentiment, share of voice, and recurring topics across those pages, then surfaces prioritized recommendations to improve how your brand is perceived on the content AI systems rely on most.
+The Cited Sentiment Analysis opportunity analyzes the top-cited URLs detected for prompts in your Brand Presence dashboard prompt set. It evaluates brand mentions, sentiment, share of voice and recurring topics across those pages. Afterwards, it surfaces prioritized recommendations to improve how your brand is perceived on the content AI systems rely on most.
 
-It surfaces four key metrics at a glance:
+It surfaces four key metrics:
 
-- **Pages analyzed** — Number of cited web pages examined for brand mentions and sentiment
-- **Pages skipped** — Number of pages that could not be analyzed (for example, due to access restrictions)
-- **Brand mentions (pages)** — How frequently your brand is mentioned across analyzed pages
-- **Overall sentiment (pages)** — Aggregated sentiment toward your brand across analyzed pages
+- **Pages analyzed** — Number of cited web pages examined for brand mentions and sentiment.
+- **Pages skipped** — Number of pages that could not be analyzed (for example, due to access restrictions).
+- **Brand mentions (pages)** — How frequently your brand is mentioned across analyzed pages.
+- **Overall sentiment (pages)** — Aggregated sentiment toward your brand across analyzed pages.
 
 >[!NOTE]
 >Cited Sentiment Analysis is currently in beta. Features and availability may change as the capability continues to develop.
@@ -24,7 +24,7 @@ It surfaces four key metrics at a glance:
 
 ## How it works
 
-LLM Optimizer identifies the top-cited URLs appearing in AI-generated responses for prompts in your Brand Presence dashboard prompt set. It analyzes those pages for brand mentions, sentiment, share of voice, and AI citations, compares your brand's performance against market competitors, identifies recurring topics, and generates recommendations to address perception gaps on the pages that matter most to AI systems.
+LLM Optimizer identifies the top-cited URLs appearing in AI-generated responses for prompts in your Brand Presence dashboard prompt set. It analyzes those pages for brand mentions, sentiment, share of voice and AI citations. It compares your brand's performance against market competitors, identifies recurring topics and generates recommendations to address perception gaps on the pages that matter most to AI systems.
 
 If no cited URLs are detected for the prompts in your prompt set, this opportunity will not appear in your dashboard.
 
@@ -38,15 +38,15 @@ This tab shows recommendations for improving your brand's perception across top-
 
 The suggestions table includes the following columns:
 
-- **Suggestion** — The recommended improvement to address a perception gap
-- **Priority** — Urgency level (Critical, High, Medium, Low)
-- **Action Items** — Opens a panel with specific steps to implement the recommendation, including the teams responsible
+- **Suggestion** — The recommended improvement to address a perception gap.
+- **Priority** — Urgency level (Critical, High, Medium, Low).
+- **Action Items** — Opens a panel with specific steps to implement the recommendation, including the teams responsible.
 
 Expanding a suggestion reveals an **AI Analysis** section with:
 
-- **Why this needs improvement** — An explanation of the perception gap identified, including which cited URLs are under-representing your brand and competitive context
-- **How to improve** — Specific guidance on outreach, content creation, or partnership actions to address the gap
-- **Expected Outcome** — The anticipated result of implementing the recommendation
+- **Why this needs improvement** — An explanation of the perception gap identified, including which cited URLs are under-representing your brand and competitive context.
+- **How to improve** — Specific guidance on outreach, content creation or partnership actions to address the gap.
+- **Expected Outcome** — The anticipated result of implementing the recommendation.
 
 ## Performance
 
@@ -60,12 +60,12 @@ Compares your brand's performance against associated brands and market competito
 
 It shows:
 
-- **Brand mentions in pages** — Your share of voice vs. associated brands and market competitors
-- **Market Tracking** — A filterable chart where you can select up to five competitor brands to compare share of voice across analyzed pages
+- **Brand mentions in pages** — Your share of voice versus associated brands and market competitors.
+- **Market Tracking** — A filterable chart where you can select up to five competitor brands to compare share of voice across analyzed pages.
 
 ### Sentiment Analysis
 
-Tracks brand perception across analyzed pages with a **Sentiment Distribution** chart showing the percentage breakdown of favorable, neutral, and unfavorable sentiment across pages.
+Tracks brand perception across analyzed pages with a **Sentiment Distribution** chart showing the percentage breakdown of favorable, neutral and unfavorable sentiment across pages.
 
 ![Sentiment Analysis](/help/dashboards/opportunities/assets/cited-sentiment-distribution.png)
 
@@ -73,20 +73,20 @@ Tracks brand perception across analyzed pages with a **Sentiment Distribution** 
 
 A detailed table of analyzed cited web pages with the following columns:
 
-- **Page** — URL of the analyzed page
-- **Brand Mentions** — Count of your brand mentions vs. total mentions on the page
-- **Share of Voice** — Your brand's share of mentions relative to all brands mentioned
-- **Top 5 Brands** — The most mentioned brands on the page
-- **Sentiment** — Overall sentiment toward your brand on the page
-- **AI Citations** — Number of AI answers that cited this page
+- **Page** — URL of the analyzed page.
+- **Brand Mentions** — Count of your brand mentions versus total mentions on the page.
+- **Share of Voice** — Your brand's share of mentions relative to all brands mentioned.
+- **Top 5 Brands** — The most mentioned brands on the page.
+- **Sentiment** — Overall sentiment toward your brand on the page.
+- **AI Citations** — Number of AI answers that cited this page.
 
 ### Topics
 
 A table of recurring topics identified across analyzed pages, showing:
 
-- **Topic** — The recurring theme or subject identified
-- **Brand Mentions** — Number of brand mentions associated with the topic
-- **Sentiment** — Overall sentiment associated with the topic
+- **Topic** — The recurring theme or subject identified.
+- **Brand Mentions** — Number of brand mentions associated with the topic.
+- **Sentiment** — Overall sentiment associated with the topic.
 
 Clicking **Details** on any topic opens a drill-down with an analysis summary and the contributing source pages.
 
@@ -108,7 +108,7 @@ This opportunity only appears when cited URLs are detected for prompts in your B
 
 **What does Pages Skipped mean?**
 
-Pages skipped are cited URLs that could not be analyzed — typically because the page is behind a paywall, requires authentication, or blocks automated access. These pages are counted but excluded from the sentiment and brand mention analysis.
+Pages skipped are cited URLs that could not be analyzed, typically because the page is behind a paywall, requires authentication or blocks automated access. These pages are counted but excluded from the sentiment and brand mention analysis.
 
 **What is Share of Voice?**
 
@@ -116,7 +116,7 @@ Share of voice is your brand's percentage of total brand mentions on a given pag
 
 **What are AI Citations?**
 
-AI citations show how many AI answers cited a given page. Higher AI citation counts indicate the page is actively being used by AI systems when generating responses about related topics — making the sentiment on those pages especially important for your brand's AI representation.
+AI citations show how many AI answers cited a given page. Higher AI citation counts indicate the page is actively being used by AI systems when generating responses about related topics making the sentiment on those pages especially important for your brand's AI representation.
 
 **How are market competitors identified?**
 

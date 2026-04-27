@@ -6,17 +6,17 @@ feature: Opportunities
 
 # Wikipedia Analysis
 
-Your company's Wikipedia page is one of the most influential sources AI systems use when generating responses about your brand. A well-maintained article increases the likelihood of being accurately cited by ChatGPT, Google AI Mode, Gemini, Perplexity, and Copilot.
+Your company's Wikipedia page is one of the most influential sources AI systems use when generating responses about your brand. A well-maintained article increases the likelihood of being accurately cited by ChatGPT, Google AI Mode, Gemini, Perplexity and Copilot.
 
 The Wikipedia Analysis opportunity uses AI to evaluate your Wikipedia page against industry competitors and surfaces prioritized recommendations to close the gaps that matter most for LLM citability.
 
 It analyzes your article across five dimensions:
 
-- **References** — The number of cited external sources in your article. References signal credibility and are a key factor in how LLMs evaluate the authoritativeness of a Wikipedia page, compared against the industry average and top competitor
-- **Sections** — Article structure and breadth of topics covered
-- **Content length** — Word count relative to industry benchmarks
-- **Images** — Visual richness of the article
-- **Infobox completeness** — Structured data fields present vs. what competitors include
+- **References** — The number of cited external sources in your article. References signal credibility and are a key factor in how LLMs evaluate the authoritativeness of a Wikipedia page, compared against the industry average and top competitor.
+- **Sections** — Article structure and breadth of topics covered.
+- **Content length** — Word count relative to industry benchmarks.
+- **Images** — Visual richness of the article.
+- **Infobox completeness** — Structured data fields present versus what competitors include.
 
 ![Wikipedia Analysis dashboard](/help/dashboards/opportunities/assets/wikipedia-analysis-overview.png)
 
@@ -28,15 +28,15 @@ The results are displayed across three tabs: **Suggestions & Guidance**, **Marke
 
 ## Suggestions & Guidance
 
-This tab shows strategic recommendations for improving your Wikipedia page. Each recommendation includes a priority level, a description of the gap, why it matters for LLMs, and the expected result of fixing it.
+This tab shows strategic recommendations for improving your Wikipedia page. Each recommendation includes a priority level, a description of the gap, why it matters for LLMs and the expected result of fixing it.
 
 ![Suggestions and Guidance tab](/help/dashboards/opportunities/assets/wikipedia-analysis-suggestions.png)
 
 At the top of the tab, the **Guidance** panel provides a high-level summary of the analysis with three columns:
 
-- **Recommendation** — A top-level action to take based on the full set of identified opportunities
-- **Key Insight** — A summary of how many improvement opportunities were identified for your site
-- **Rationale** — The basis for the analysis, for example which industry competitors were used for benchmarking
+- **Recommendation** — A top-level action to take based on the full set of identified opportunities.
+- **Key Insight** — A summary of how many improvement opportunities were identified for your site.
+- **Rationale** — The basis for the analysis, for example which industry competitors were used for benchmarking.
 
 Recommendations are only shown when the relevant condition is met based on real analysis data — a reference gap suggestion, for example, only appears if your reference count is below the industry average.
 
@@ -58,9 +58,9 @@ Recommendations are only shown when the relevant condition is met based on real 
 
 Each recommendation includes:
 
-- **Description** — A concise explanation of the gap identified
-- **Why it matters** — The impact on LLM citability and Wikipedia quality rating
-- **Expected result** — A specific, measurable outcome (for example, "Add 65+ references to reach industry average, increasing your reference count by 191%")
+- **Description** — A concise explanation of the gap identified.
+- **Why it matters** — The impact on LLM citability and Wikipedia quality rating.
+- **Expected result** — A specific, measurable outcome. For example, "Add 65+ references to reach industry average, increasing your reference count by 191%".
 
 ## Market Comparison
 
@@ -68,7 +68,7 @@ The **Market Comparison** tab shows a competitive benchmarking table and visual 
 
 ![Market Comparison tab](/help/dashboards/opportunities/assets/wikipedia-analysis-market-comparison.png)
 
-The comparison covers references, sections, and word count, helping you understand where you rank within your industry and how much improvement is needed to reach or surpass the benchmark.
+The comparison covers references, sections and word count, helping you understand where you rank within your industry and how much improvement is needed to reach or surpass the benchmark.
 
 ## Your Article
 
@@ -78,11 +78,11 @@ The **Your Article** tab gives you a detailed snapshot of your current Wikipedia
 
 It includes:
 
-- **Article details** — Industry, company name, website, last edited date, number of edits in the last 30 days, and subsection count
-- **Article features** — Whether your article has an infobox, table of contents, lead image, See Also section, and external links
-- **Article structure** — A list of all current sections
-- **Reference quality breakdown** — Categorization of your references (authoritative, industry, academic, company PR, other)
-- **Infobox data** — All fields currently populated in your infobox
+- **Article details** — Industry, company name, website, last edited date, number of edits in the last 30 days and subsection count.
+- **Article features** — Whether your article has an infobox, table of contents, lead image, See Also section and external links.
+- **Article structure** — A list of all current sections.
+- **Reference quality breakdown** — Categorization of your references (authoritative, industry, academic, company PR, other).
+- **Infobox data** — All fields currently populated in your infobox.
 
 ## Try it in the demo
 
@@ -94,7 +94,7 @@ See the Wikipedia Analysis opportunity in action using the Frescopa demo environ
 
 **Why does Wikipedia matter for AI search?**
 
-Wikipedia is one of the most trusted sources in LLM training data and real-time retrieval. When AI systems generate responses about companies, they frequently draw on Wikipedia for factual grounding — founding date, products, leadership, industry classification, and more. A sparse or poorly structured Wikipedia page means your brand is less likely to be cited accurately, or cited at all.
+Wikipedia is one of the most trusted sources in LLM training data and real-time retrieval. When AI systems generate responses about companies, they frequently draw on Wikipedia for factual grounding — founding date, products, leadership, industry classification and more. A sparse or poorly structured Wikipedia page means your brand is less likely to be cited accurately or cited at all.
 
 **Which AI systems does a stronger Wikipedia page affect?**
 

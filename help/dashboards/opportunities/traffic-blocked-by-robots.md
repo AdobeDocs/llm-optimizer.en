@@ -6,14 +6,14 @@ feature: Opportunities
 
 # Traffic Blocked by robots.txt
 
-Your `robots.txt` file controls which crawlers can access your site. When AI agents are selectively blocked from content that is otherwise accessible to general crawlers, those agents cannot index or cite that content — directly reducing your brand's visibility in AI-generated responses.
+Your `robots.txt` file controls which crawlers can access your site. When AI agents are selectively blocked from content that is otherwise accessible to general crawlers, those agents cannot index or cite that content directly reducing your brand's visibility in AI-generated responses.
 
 The Traffic Blocked by robots.txt opportunity analyzes your `robots.txt` file against your top pages and identifies rules that are preventing AI agents from accessing content they should be able to reach. It surfaces findings at the individual `robots.txt` line level so you can review and update specific directives rather than auditing the entire file manually.
 
 It surfaces two key metrics at a glance:
 
-- **Total URLs** — Number of URLs affected by blocking rules in your `robots.txt`
-- **Blocked Agents** — Number of AI agents being blocked from accessing those URLs
+- **Total URLs** — Number of URLs affected by blocking rules in your `robots.txt`.
+- **Blocked Agents** — Number of AI agents being blocked from accessing those URLs.
 
 ![Traffic blocked by robots.txt dashboard](/help/dashboards/opportunities/assets/traffic-blocked-by-robots-overview.png)
 
@@ -47,9 +47,9 @@ Clicking on a highlighted directive shows more information about its impact and 
 
 This tab provides a breakdown of blocked traffic organized by AI agent. For each blocked agent, it shows:
 
-- **Issue Description** — An explanation of which agent is being blocked and why it matters
-- **Resolution** — Guidance to open the `robots.txt` file and review the specific line number listed beside each affected URL
-- A table of affected URLs with the **Line**, **Rank**, and **URL** for each blocked page
+- **Issue Description** — An explanation of which agent is being blocked and why it matters.
+- **Resolution** — Guidance to open the `robots.txt` file and review the specific line number listed beside each affected URL.
+- A table of affected URLs with the **Line**, **Rank** and **URL** for each blocked page.
 
 Each agent (for example, OAI-User, GPTBot, OAI-SearchBot) has its own sub-tab so you can address blocks per agent.
 
@@ -76,7 +76,7 @@ See the Traffic Blocked by robots.txt opportunity in action using the Frescopa d
 
 **Why does blocking AI agents matter for GEO?**
 
-Generative Engine Optimization requires that AI crawlers can access and index your site content. Blocking AI agents directly prevents your pages from appearing in AI-generated responses, reducing citations, brand mentions, and overall AI visibility. Even a single blocked high-traffic page can represent a significant loss of AI-driven brand exposure.
+Generative Engine Optimization requires that AI crawlers can access and index your site content. Blocking AI agents directly prevents your pages from appearing in AI-generated responses, reducing citations, brand mentions and overall AI visibility. Even a single blocked high-traffic page can represent a significant loss of AI-driven brand exposure.
 
 **What is the difference between blanket blocking and selective blocking?**
 
@@ -84,7 +84,7 @@ Blanket blocking means all crawlers — including general web crawlers — are r
 
 **Which AI agents does LLM Optimizer check?**
 
-LLM Optimizer checks against ClaudeBot, GPTBot, OAI-SearchBot, OAI-User, PerplexityBot, and Perplexity-User.
+LLM Optimizer checks against ClaudeBot, GPTBot, OAI-SearchBot, OAI-User, PerplexityBot and Perplexity-User.
 
 **What if I intentionally want to block certain AI agents?**
 
@@ -96,4 +96,4 @@ LLM Optimizer uses hashing to track your `robots.txt` content across runs. If a 
 
 **How are the top pages determined?**
 
-Pages are sourced from a combination of your highest-traffic SEO pages, top AI-agent-visited URLs from CDN logs, and any custom URLs specified in your site configuration.
+Pages are sourced from a combination of your highest-traffic SEO pages, top AI-agent-visited URLs from CDN logs and any custom URLs specified in your site configuration.
