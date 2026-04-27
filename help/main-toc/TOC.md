@@ -20,6 +20,7 @@ user-guide-description: Boost your brand with Adobe LLM Optimizer. Track mention
   + [URL Inspector](/help/dashboards/url-inspector.md)
   + Opportunities{#opportunities}
     + [Opportunities](/help/dashboards/opportunities.md)
+    + [Agentic Traffic Errors](/help/dashboards/opportunities/agentic-traffic-errors.md)
     + [Traffic Blocked by robots.txt](/help/dashboards/opportunities/traffic-blocked-by-robots.md)
     + [Wikipedia Analysis](/help/dashboards/opportunities/wikipedia-analysis.md)
     + [YouTube Sentiment Analysis](/help/dashboards/opportunities/youtube-sentiment-analysis.md)
