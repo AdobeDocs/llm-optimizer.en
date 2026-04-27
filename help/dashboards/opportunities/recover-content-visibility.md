@@ -18,9 +18,7 @@ It surfaces three key metrics at a glance:
 
 ![Recover Content Visibility dashboard](/help/dashboards/opportunities/assets/recover-content-visibility-overview.png)
 
-Watch the following video for an overview of the Recover Content Visibility opportunity.
-
->[!VIDEO](https://www.youtube.com/watch?v=BigPyJssFCw)
+For a video overview of this opportunity, watch [Recover Content Visibility video](https://www.youtube.com/watch?v=BigPyJssFCw).
 
 This opportunity can be optimized using [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md). Optimizations are delivered exclusively to AI agents with no impact on human visitors (bot-only delivery), applied at the CDN layer with no CMS changes required, and can take effect in minutes with no developer engagement — making it a fast, low-risk deployment.
 
