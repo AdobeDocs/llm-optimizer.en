@@ -172,7 +172,7 @@ After you provide information for CDN Log Forwarding, you can:
 
 * View the [Brand Presence](/help/dashboards/brand-presence.md) dashboard and view your visibility score and track your performance relative to other brands.
 * Explore the [Agentic](/help/dashboards/agentic-traffic.md) and [Referral Traffic](/help/dashboards/referral-traffic.md) dashboards, if CDN log forwarding has been configured.
-* Use [Opportunities](/help/dashboards/opportunities.md) to identify content and technical improvements.
+* Use [Opportunities](/help/dashboards/opportunities-overview.md) to identify content and technical improvements.
 * Export data and collaborate your team or invite your co-worker to use the product.
 
 >[!NOTE]
