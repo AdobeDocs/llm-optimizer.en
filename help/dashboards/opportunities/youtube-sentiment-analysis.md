@@ -133,7 +133,7 @@ This opportunity only appears when YouTube videos are detected as citations for 
 
 **What does Overall Sentiment mean?**
 
-Overall sentiment reflects the aggregated tone of content where your brand is mentioned — favorable, neutral or unfavorable. It is calculated separately for videos and comments, as these can differ significantly.
+Overall sentiment reflects the aggregated tone of content where your brand is mentioned: favorable, neutral or unfavorable. It is calculated separately for videos and comments, as these can differ significantly.
 
 **What is Share of Voice?**
 

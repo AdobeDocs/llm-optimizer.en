@@ -25,7 +25,7 @@ The opportunity also surfaces two key metrics for each error type:
 
 ## How it works
 
-LLM Optimizer queries your CDN logs via Athena to identify URLs returning 404, 403 or 5xx status codes to AI agent user agents. Thee user agents include ChatGPT, Claude, Perplexity, and Gemini. Up to 500 URLs per audit are analyzed and ranked by traffic volume. The audit runs weekly by default.
+LLM Optimizer queries your CDN logs via Athena to identify URLs returning 404, 403 or 5xx status codes to AI agent user agents. The user agents include ChatGPT, Claude, Perplexity, and Gemini. Up to 500 URLs per audit are analyzed and ranked by traffic volume. The audit runs weekly by default.
 
 URLs are validated before being surfaced to filter out false positives and stale data. LLM Optimizer re-tests each URL to confirm its current status and compares AI agent responses against human browser responses to identify crawler-specific issues.
 
@@ -61,11 +61,11 @@ For some **5xx** (and similar) cases, the panel may note when no same-domain alt
 
 The fix depends on the error type:
 
-**404 errors** — The suggestion includes one or more alternative URLs recommended by AI based on the broken URL's structure and content, along with a confidence score and rationale. Implement a server-side redirect from the broken URL to the suggested alternative to restore AI agent access and preserve content discoverability.
+**404 errors** — The suggestion includes one or more alternative URLs recommended by AI, based on the broken URL's structure and content, along with a confidence score and rationale. Implement a server-side redirect from the broken URL to the suggested alternative to restore AI agent access and preserve content discoverability.
 
 **403 errors** — Review access permissions to ensure AI crawlers are not being blocked from content they should be able to access. Specifically:
 - Review access permissions — AI crawler blocked.
-- Verify security settings don't block legitimate crawlers.
+- Verify that security settings don't block legitimate crawlers.
 
 **5xx errors** — Investigate server-side issues affecting the flagged pages. Specifically:
 - Investigate server stability for high-traffic pages.
@@ -74,7 +74,7 @@ The fix depends on the error type:
 
 ## Try it in the demo
 
-See the Agentic Traffic Errors opportunity in action using by using the Frescopa demo environment.
+See the Agentic Traffic Errors opportunity in action by using the Frescopa demo environment.
 
 - [View 404 Errors in the Frescopa demo](https://play.llmo.now/org/demo-org/opportunities/agentic-traffic-4xxs)
 - [View 5xx Errors in the Frescopa demo](https://play.llmo.now/org/demo-org/opportunities/agentic-traffic-5xxs)
@@ -103,4 +103,4 @@ The audit runs weekly by default, pulling error data from the previous week's CD
 
 **What AI agents are monitored?**
 
-LLM Optimizer monitors error responses from all detected AI agent user agent patterns including: ChatGPT, Claude, Perplexity and Gemini crawlers.
+LLM Optimizer monitors error responses from all detected AI agent user agent patterns, including: ChatGPT, Claude, Perplexity and Gemini crawlers.

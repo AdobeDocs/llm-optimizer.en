@@ -92,15 +92,13 @@ Clicking **Details** on any topic opens a drill-down with an analysis summary an
 
 ## Try it in the demo
 
-See the Cited Sentiment Analysis opportunity in action using the Frescopa demo environment.
-
-[View Cited Sentiment Analysis in the Frescopa demo](https://play.llmo.now/org/demo-org/opportunities/cited-analysis/d3a8b217-9f4c-4e88-a612-6b7f91e5c044?siteId=frescopa-demo)
+See the Cited Sentiment Analysis opportunity in action by using the Frescopa demo environment - [View Cited Sentiment Analysis in the Frescopa demo](https://play.llmo.now/org/demo-org/opportunities/cited-analysis/d3a8b217-9f4c-4e88-a612-6b7f91e5c044?siteId=frescopa-demo).
 
 ## Frequently asked questions
 
 **Why do top-cited URLs matter for AI search?**
 
-Top-cited URLs are the third-party pages AI systems most frequently reference when generating responses about your brand. The sentiment and framing on those pages has a direct and outsized influence on how AI represents your brand — more so than pages that are rarely cited. Improving how your brand is portrayed on those specific pages is one of the highest-leverage actions you can take for AI visibility.
+Top-cited URLs are the third-party pages AI systems most frequently reference when generating responses about your brand. The sentiment and framing on those pages has a direct and outsized influence on how AI represents your brand, more so than pages that are rarely cited. Improving how your brand is portrayed on those specific pages is one of the highest-leverage actions you can take for AI visibility.
 
 **Why is this opportunity not showing in my dashboard?**
 
