@@ -34,7 +34,7 @@ The results are displayed across two tabs: **Suggestions** and **Performance**.
 
 ## Suggestions
 
-This tab shows recommendations for improving your brand's perception on YouTube. Suggestions are organized into three sub-tabs: **Current Suggestions**, **Fixed Suggestions**, and **Ignored Suggestions**.
+This tab shows recommendations for improving your brand's perception on YouTube. Suggestions are organized into three sub-tabs: **Current Suggestions**, **Fixed Suggestions** and **Ignored Suggestions**.
 
 ![Suggestions tab](/help/dashboards/opportunities/assets/youtube-sentiment-suggestions.png)
 
@@ -113,11 +113,11 @@ A table of recurring topics identified across analyzed content, showing:
 - **Brand Mentions** — Number of brand mentions associated with the topic.
 - **Sentiment** — Overall sentiment associated with the topic.
 
-The **Topics** table appears in the same Performance view as the Videos table; see the figure in the [Videos](#videos) section above.
+The **Topics** table appears in the same Performance view as the Videos table, see the figure in the [Videos](#videos) section above.
 
 ## Try it in the demo
 
-See the YouTube Sentiment Analysis opportunity in action using the Frescopa demo environment.
+See the YouTube Sentiment Analysis opportunity in action by using the Frescopa demo environment.
 
 [View YouTube Sentiment Analysis in the Frescopa demo](https://play.llmo.now/org/demo-org/opportunities/youtube-analysis/971280f5-6a07-4506-85bf-d7419dca9803?siteId=frescopa-demo)
 
