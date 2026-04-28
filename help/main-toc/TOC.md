@@ -18,7 +18,15 @@ user-guide-description: Boost your brand with Adobe LLM Optimizer. Track mention
   + [Agentic Traffic](/help/dashboards/agentic-traffic.md)
   + [Referral Traffic](/help/dashboards/referral-traffic.md)
   + [URL Inspector](/help/dashboards/url-inspector.md)
-  + [Opportunities](/help/dashboards/opportunities.md)
+  + Opportunities{#opportunities}
+    + [Opportunities](/help/dashboards/opportunities.md)
+    + [Agentic Traffic Errors](/help/dashboards/opportunities/agentic-traffic-errors.md)
+    + [Traffic Blocked by robots.txt](/help/dashboards/opportunities/traffic-blocked-by-robots.md)
+    + [Recover Content Visibility](/help/dashboards/opportunities/recover-content-visibility.md)
+    + [Wikipedia Analysis](/help/dashboards/opportunities/wikipedia-analysis.md)
+    + [YouTube Sentiment Analysis](/help/dashboards/opportunities/youtube-sentiment-analysis.md)
+    + [Reddit Sentiment Analysis](/help/dashboards/opportunities/reddit-sentiment-analysis.md)
+    + [Cited Sentiment Analysis](/help/dashboards/opportunities/cited-sentiment-analysis.md)
   + [Customer Configuration](/help/dashboards/customer-configuration.md)
   + [Collaboration](/help/dashboards/collaboration.md)
 + BYOCDN Log Forwarding{#log-forwarding}
