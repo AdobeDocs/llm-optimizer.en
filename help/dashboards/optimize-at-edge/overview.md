@@ -26,7 +26,7 @@ Optimize at Edge is designed for business users in marketing, SEO, content and d
 
 ### Which opportunities are supported with Optimize at Edge?
 
-Opportunities that can improve the agentic web experience are supported with Optimize at Edge. Learn more about each opportunity both in the [Opportunities Dashboard](/help/dashboards/opportunities.md) page and the opportunities section in the current page.
+Opportunities that can improve the agentic web experience are supported with Optimize at Edge. Learn more about each opportunity both in the [Opportunities Dashboard](/help/dashboards/opportunities-overview.md) page and the opportunities section in the current page.
 
 ## Onboarding
 
