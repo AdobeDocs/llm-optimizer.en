@@ -6,21 +6,21 @@ feature: Opportunities
 
 # Recover Content Visibility
 
-AI agents can only cite content they can access. When key content on your pages is hidden behind client-side rendering and dynamic loads — such as product descriptions, user ratings, recipes, and comments — AI agents miss it entirely, leaving valuable content invisible to the systems that could be citing it.
+AI agents can only cite content they can access. When key content on your pages is hidden behind client-side rendering and dynamic loads (such as product descriptions, user ratings, recipes and comments) AI agents miss it entirely, leaving valuable content invisible to the systems that could be citing it.
 
-The Recover Content Visibility opportunity identifies pages on your site where this visibility gap exists. For each affected page, it shows you exactly which content is missing from the AI agent view, highlights the gap, and enables you to apply fixes without any CMS changes or developer involvement.
+The Recover Content Visibility opportunity identifies pages on your site where this visibility gap exists. For each affected page, it shows you exactly which content is missing from the AI agent view, highlights the gap and enables you to apply fixes without any CMS changes or developer involvement.
 
 It surfaces three key metrics at a glance:
 
-- **URLs** — Number of pages identified with a content visibility gap
-- **Estimated Content Gain** — The estimated multiplier of content that could be recovered by applying the optimization
-- **Avg Content Visibility** — The average percentage of content currently visible to AI agents across affected pages
+- **URLs** — Number of pages identified with a content visibility gap.
+- **Estimated Content Gain** — The estimated multiplier of content that could be recovered by applying the optimization.
+- **Avg Content Visibility** — The average percentage of content currently visible to AI agents across affected pages.
 
 ![Recover Content Visibility dashboard](/help/dashboards/opportunities/assets/recover-content-visibility-overview.png)
 
-For a video overview of this opportunity, watch [Recover Content Visibility video](https://www.youtube.com/watch?v=BigPyJssFCw).
+For a video overview of this opportunity, you can watch [Recover Content Visibility](https://www.youtube.com/watch?v=BigPyJssFCw).
 
-This opportunity can be optimized using [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md). Optimizations are delivered exclusively to AI agents with no impact on human visitors (bot-only delivery), applied at the CDN layer with no CMS changes required, and can take effect in minutes with no developer engagement — making it a fast, low-risk deployment.
+This opportunity can be optimized by using [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md). Optimizations are delivered exclusively to AI agents with no impact on human visitors (bot-only delivery). Optimizations are then applied at the CDN layer with no CMS changes required and can take effect in minutes with no developer engagement — making it a fast, low-risk deployment.
 
 ## How it works
 
@@ -35,16 +35,16 @@ For each affected URL, LLM Optimizer provides:
 
 The fix is applied using [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md) — Adobe's edge-based deployment capability that serves a fully pre-rendered, AI-friendly HTML snapshot to LLM user agents at the CDN layer, recovering previously hidden content without touching your CMS.
 
-![URLs with suggestions](/help/dashboards/opportunities/assets/recover-content-visibility-urls.png)
+<!-- [URLs with suggestions](/help/dashboards/opportunities/assets/recover-content-visibility-urls.png)-->
 
 ## URLs with suggestions
 
 The **URLs with suggestions** table lists all affected pages and can be filtered by classification. For each URL you can:
 
-- **Expand the row** to view the AI Analysis, including what content is missing and why it matters
-- **Preview** the side-by-side HTML comparison of the current page vs. the post-optimization version
-- **Mark as Fixed** once the issue has been addressed
-- **Ignore** suggestions that are not relevant
+- **Expand the row** to view the AI Analysis, including what content is missing and why it matters.
+- **Preview** the side-by-side HTML comparison of the current page versus the post-optimization version.
+- **Mark as Fixed** once the issue has been addressed.
+- **Ignore** suggestions that are not relevant.
 
 Suggestions are organized into three views: **Current Suggestions**, **Fixed Suggestions**, and **Ignored Suggestions**. Once a suggestion is deployed, it moves to Fixed Suggestions with a status of **Optimized** and a **View Live** action to verify the optimization is live for agentic traffic. Fixed suggestions can also be rolled back at any time.
 
@@ -52,7 +52,7 @@ Suggestions are organized into three views: **Current Suggestions**, **Fixed Sug
 
 ## Deploying the optimization
 
-Once you have reviewed the suggestions and selected the URLs to optimize, click **Deploy optimizations** to publish the fix at the CDN edge. A **Deploy to Edge** confirmation dialog shows the selected URLs, their type (Prerender), and the suggestion being applied. After deployment, a confirmation screen confirms which URLs were successfully optimized.
+Once you have reviewed the suggestions and selected the URLs to optimize, click **Deploy optimizations** to publish the fix at the CDN edge. A **Deploy to Edge** confirmation dialog shows the selected URLs, their type (Prerender) and the suggestion being applied. After deployment, a confirmation screen confirms which URLs were successfully optimized.
 
 >[!NOTE]
 >
@@ -78,7 +78,7 @@ No. Optimize at Edge targets only AI user agents. Human visitors and SEO bots re
 
 **Do I need to change my CMS or involve developers?**
 
-No. The optimization is applied at the CDN edge and requires no authoring changes, code deployments, or developer engagement. Once onboarded to Optimize at Edge, you can deploy and roll back changes in minutes directly from the LLM Optimizer interface.
+No. The optimization is applied at the CDN edge and requires no authoring changes, code deployments or developer engagement. Once onboarded to Optimize at Edge, you can deploy and roll back changes in minutes directly from the LLM Optimizer interface.
 
 **What happens if my page content changes after I deploy?**
 
