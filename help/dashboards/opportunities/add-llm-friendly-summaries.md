@@ -6,22 +6,28 @@ feature: Opportunities
 
 # Add LLM-friendly Summaries
 
-AI systems work best when they can quickly grasp what a page is about. Long or complex pages without clear page- or section-level summaries are harder for models to scan, interpret, and cite accurately.
+The Add LLM-friendly Summaries opportunity identifies high-traffic pages that lack concise structured summaries, which makes it harder for AI agents to quickly understand key information on the page. It introduces clear summaries and key points grounded in your existing page content. This helps agents interpret and capture important brand claims more efficiently and increases the likelihood that your content is included accurately in AI responses.
 
-The Add LLM-friendly Summaries opportunity focuses on **high-traffic pages** that still lack concise, structured summary content. For those URLs, LLM Optimizer recommends short **summaries** and, where appropriate, **key points**—all grounded in existing page content—so agents can interpret important brand claims faster and reflect them more accurately in AI answers.
+For each affected URL, you can review AI-generated suggestions, then deploy them with [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md) so agentic traffic gets clearer, scannable context with no Content Management system (CMS) changes required.
 
-The Add LLM-friendly Summaries opportunity identifies those pages and recommends AI-generated summaries (and key points when relevant) that capture the essential content. For each URL, you can review the suggestion, deploy it at the CDN edge with [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md), and validate the live experience for agentic traffic—with no Content Management system (CMS) changes required.
+## How Optimize at Edge fixes the problem
 
-With [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md), fixes are applied at the **CDN layer**: the HTML that AI agents retrieve is enriched with the approved summaries and key points, while human visitors and SEO crawlers continue to see the original page. Delivery is **AI-only** (bot-only), deployments can go live in minutes, and changes are **fully reversible** from the LLM Optimizer interface.
+Fixes are applied by using [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md), which:
+
+- Serves a pre-rendered HTML snapshot to AI agents.
+- Enriches the page with summaries and/or key points in the HTML they retrieve.
+- Works at the CDN layer (no CMS changes).
+- Is AI-only no impact on human visitors or SEO bots.
+- Deploys in minutes and is fully reversible from the LLM Optimizer interface.
 
 ## How it works
 
 LLM Optimizer flags high-traffic pages where summaries and structured key points would help AI comprehension. Affected URLs appear in the **URLs with suggestions** table, where you can select a URL to work with.
 
-For each page, you get:
+For each page, you have the following:
 
-- **Page- or section-level summary** and, when suggested, **key points** derived from the live content.
-- **Preview**—a side-by-side comparison of the current page versus the version with summaries applied.
+- A page or section-level summary and (when suggested) key points derived from the live content.
+- A Preview side-by-side comparison of the current page versus the version with summaries applied.
 
 ![Select a URL with a summary suggestion](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-select-url.png)
 
@@ -52,13 +58,13 @@ When you are ready to publish summaries at the edge, select the URLs that have s
 
 ![Deploy to Edge dialog](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-deploy-dialog.png)
 
-After deployment, a confirmation screen shows which URLs were successfully optimized. The changes are live for AI agents; review deployed items anytime under **Fixed Suggestions**.
+After deployment, a confirmation screen shows which URLs were successfully optimized. The changes are live for AI agents and you can review deployed items anytime under **Fixed Suggestions**.
 
 ![Deploy confirmation](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-deploy-confirm.png)
 
 >[!NOTE]
 >
->Deploying optimizations requires completing the Optimize at Edge onboarding process. If you have not yet onboarded, clicking **Deploy optimizations** will direct you to the onboarding process. For full details on how Optimize at Edge works, supported CDN providers and the onboarding process, see the [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md) page.
+>Deploying optimizations requires completing the Optimize at Edge onboarding process. If you have not yet onboarded, clicking **Deploy optimizations** will direct you to the onboarding process. For full details on how Optimize at Edge works, supported CDN providers and the onboarding process see the [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md) page.
 
 ## Rollback
 
