@@ -25,6 +25,7 @@ user-guide-description: Boost your brand with Adobe LLM Optimizer. Track mention
     + [Recover Content Visibility](/help/dashboards/opportunities/recover-content-visibility.md)
     + [Add LLM-friendly Summaries](/help/dashboards/opportunities/add-llm-friendly-summaries.md)
     + [Add Relevant FAQs](/help/dashboards/opportunities/add-relevant-faqs.md)
+    + [Simplify Complex Content](/help/dashboards/opportunities/simplify-complex-content.md)
     + [Wikipedia Analysis](/help/dashboards/opportunities/wikipedia-analysis.md)
     + [YouTube Sentiment Analysis](/help/dashboards/opportunities/youtube-sentiment-analysis.md)
     + [Reddit Sentiment Analysis](/help/dashboards/opportunities/reddit-sentiment-analysis.md)
