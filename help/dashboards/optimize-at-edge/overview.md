@@ -86,7 +86,7 @@ Presented in the following table are opportunities that can improve the agentic 
 | [Add Relevant FAQs](/help/dashboards/opportunities/add-relevant-faqs.md) | Content Optimization | Identifies high-traffic pages that lack structured Q&A content aligned to your prompt set, making it harder for AI agents to match user questions to your page. | Suggests AI-generated FAQ content aligned to user intent and existing page topics. | Injects FAQ content into the HTML, making pages more discoverable and relevant in AI-driven answers.|
 | [Simplify Complex Content](/help/dashboards/opportunities/simplify-complex-content.md) | Content Optimization | Flags pages with complex text that can hinder AI comprehension. | Provides AI-generated simplified versions of complex text while preserving the original meaning. | Rewrites complex sections in the page, improving AI readability. |
 | Add Table of Contents | Technical GEO | Detects pages that lack clear structural organization or navigational headings, making it difficult for AI agents to parse and map content to user queries. | Suggests a structured Table of Contents with anchor-linked headings that reflect the main sections of the page. | Injects a Table of Contents into the HTML, improving page structure so AI models can more easily extract, map and cite relevant sections. |
-| Add Multimedia Transcript Summaries | Content Optimization | Identifies pages where key information is embedded in videos without transcripts or textual summaries, making the content inaccessible to AI agents. | Recommends AI-generated transcripts and concise summaries that capture the key information from video content. | Inserts transcript summaries into the HTML, converting video content into machine-readable text to improve AI comprehension. |
+| [Add Multimedia Transcript Summaries](/help/dashboards/opportunities/add-multimedia-transcript-summaries.md) | Content Optimization | Identifies pages where key information is embedded in video or other media without machine-readable transcripts or summaries, making that content hard for AI agents to use. Shows affected URLs and recommended text. | Recommends AI-generated transcript summaries grounded in the media and page. | Inserts transcript summaries into the HTML so agentic traffic receives machine-readable text (for example, near the relevant video). |
 
 ### Additional Tools
 
@@ -133,6 +133,8 @@ This opportunity detects pages that are hard for AI agents to navigate because h
 ### Add Multimedia Transcript Summaries
 
 This opportunity targets pages where important information lives only inside video playback, without transcripts or text summaries that AI agents can read. For each page, it recommends AI-generated transcripts and short summaries of the key points from the media. With Optimize at Edge, those summaries are added to the HTML as machine-readable text so agents can use the same substance that human visitors get from watching the video.
+
+See [Add Multimedia Transcript Summaries](/help/dashboards/opportunities/add-multimedia-transcript-summaries.md) for a dashboard walkthrough, deployment steps, and frequently asked questions.
 
 ## Auto-Optimize at Edge
 
