@@ -6,7 +6,7 @@ feature: Opportunities
 
 # Simplify Complex Content
 
-The Simplify Complex Content opportunity identifies high-traffic pages where dense or complex text sits below readability thresholds, which can make it harder for AI agents to interpret key information. It introduces clearer, easier-to-scan versions of existing copy while preserving the original meaning. That helps agents parse, summarize, and extract important details more reliably.
+The Simplify Complex Content opportunity identifies high-traffic pages where dense or complex text which makes it harder for AI agents to interpret key information. It introduces clearer, easier-to-scan versions of the existing copy while preserving the original meaning. This helps agents parse, summarize, and extract important information more reliably.
 
 For each affected URL, you can review **Improved Text** suggestions, compare them with **Preview**, then deploy them with [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md) so agentic traffic receives clearer HTML with no Content Management system (CMS) changes required.
 
@@ -22,13 +22,16 @@ Fixes are applied using [Optimize at Edge](/help/dashboards/optimize-at-edge/ove
 
 ## How it works
 
-LLM Optimizer identifies pages that receive high agentic traffic and where content scores below readability thresholds, then suggests rewrites of the copy. For each page you get **Improved Text** (simplified content grounded in what is already on the page) and **Preview** (a before and after comparison for agentic traffic).
+LLM Optimizer identifies pages that receive high agentic traffic and where content scores below readability thresholds, then suggests rewrites of the copy. For each page you get: 
+
+* **Improved Text** - simplified content grounded in what is already on the page. 
+* **Preview** - a before and after comparison for agentic traffic.
 
 Affected URLs appear in the **URLs with suggestions** table on the **Current Suggestions** tab, where you can expand a row to inspect each recommendation.
 
 ![URLs with suggestions on Current Suggestions, expanded row with Improved Text and Preview](/help/dashboards/opportunities/assets/simplify-complex-content-expand.png)
 
-The **URLs with suggestions** table lists pages where simplified copy would help agentic comprehension. Suggestions are organized into **Current Suggestions**, **Fixed Suggestions**, and **Ignored Suggestions**. For each URL you can:
+The **URLs with suggestions** table lists pages where simplified content would help agentic comprehension. Suggestions are organized into **Current Suggestions**, **Fixed Suggestions**, and **Ignored Suggestions**. For each URL you can:
 
 - **Expand the row** to view **Improved Text** suggestions for that page.
 - **Preview** the before and after comparison for agentic traffic.
@@ -37,9 +40,9 @@ The **URLs with suggestions** table lists pages where simplified copy would help
 
 **Views** include **Current Suggestions**, **Fixed Suggestions** (status **Optimized** when deployed), and **Ignored Suggestions**. You can verify live deployment using **View Live** on **Fixed Suggestions** and roll back anytime.
 
-Select the URLs or line items with **Improved Text** you want to ship using the checkboxes. The footer shows how many are selected and provides **Mark as Fixed**, **Ignore Suggestions**, and **Deploy optimizations**.
+Select the URLs or line items with **Improved Text** you want to ship using the checkboxes, then use **Mark as Fixed**, **Ignore Suggestions**, or **Deploy optimizations** in the **Opportunity plan** header. The demo UI also shows a selection count and related actions with the list.
 
-![Current Suggestions with simplified-copy line items selected and Deploy optimizations in the footer](/help/dashboards/opportunities/assets/simplify-complex-content-select.png)
+![Opportunity plan, Current Suggestions, expanded row, and Deploy optimizations in the plan header](/help/dashboards/opportunities/assets/simplify-complex-content-select.png)
 
 ### Deploying the optimization
 
@@ -67,7 +70,7 @@ Click **View Live** on the row to open a read-only view of **current page conten
 
 When you need to revert edge changes in bulk, select the optimized rows using the checkboxes, then use **Rollback** in the header.
 
-![Fixed Suggestions with rows selected before Rollback](/help/dashboards/opportunities/assets/simplify-complex-content-rollback.png)
+![Fixed Suggestions with the deployed row expanded, Optimized status, and Rollback in the header](/help/dashboards/opportunities/assets/simplify-complex-content-rollback.png)
 
 ## Rollback
 
