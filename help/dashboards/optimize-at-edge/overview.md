@@ -82,9 +82,11 @@ Presented in the following table are opportunities that can improve the agentic 
 | Opportunity | Type | Auto-Identify | Auto-suggest | Auto-optimize |
 |---------|----------|----------|----------|----------|
 | [Recover Content Visibility](/help/dashboards/opportunities/recover-content-visibility.md) | Technical GEO | Detects pages where critical content is hidden from AI agents. Shows affected URLs and expected content that can be recovered.| Highlights content that can be made available for AI agents and recommends enabling pre-rendering for those pages. | Serves a fully rendered, AI-friendly HTML snapshot to agentic traffic that recovers the previously hidden content.|
-| Add LLM-Friendly Summaries | Content Optimization | Identifies long or complex pages that lack concise summaries at the page or section level, making them harder for AI to quickly scan and understand.| Recommends short, AI-generated summaries at the page and section level that capture key content.| Inserts the summaries into the relevant HTML sections, improving how models interpret and describe the page content.|
+| [Add LLM-Friendly Summaries](/help/dashboards/opportunities/add-llm-friendly-summaries.md) | Content Optimization | Identifies long or complex pages that lack concise summaries at the page or section level, making them harder for AI to quickly scan and understand.| Recommends short, AI-generated summaries at the page and section level that capture key content.| Inserts the summaries into the relevant HTML sections, improving how models interpret and describe the page content.|
 | Add Relevant FAQs | Content Optimization | Detects intent gaps in the existing page content that could benefit from FAQs. | Suggests AI-generated FAQ content aligned to the user intent and existing topics. | Injects FAQ content into the HTML, making pages more discoverable and relevant in AI-driven answers.|
 | Simplify Complex Content | Content Optimization | Flags pages with complex text that can hinder AI comprehension. | Provides AI-generated simplified versions of complex text while preserving the original meaning. | Rewrites complex sections in the page, improving AI readability. |
+| Add Table of Contents | Technical GEO | Detects pages that lack clear structural organization or navigational headings, making it difficult for AI agents to parse and map content to user queries. | Suggests a structured Table of Contents with anchor-linked headings that reflect the main sections of the page. | Injects a Table of Contents into the HTML, improving page structure so AI models can more easily extract, map and cite relevant sections. |
+| Add Multimedia Transcript Summaries | Content Optimization | Identifies pages where key information is embedded in videos without transcripts or textual summaries, making the content inaccessible to AI agents. | Recommends AI-generated transcripts and concise summaries that capture the key information from video content. | Inserts transcript summaries into the HTML, converting video content into machine-readable text to improve AI comprehension. |
 
 ### Additional Tools
 
@@ -110,6 +112,8 @@ See [Recover Content Visibility](/help/dashboards/opportunities/recover-content-
 
 This opportunity identifies pages that can benefit from concise summaries to help LLMs quickly understand what the page content is about. For each page, the opportunity detects where a summary is most needed and creates AI-generated summaries either at the page level or section level. When you deploy with Optimize at Edge these summaries are inserted into the HTML that AI agents retrieve, improving the chances of having your content be described more accurately.
 
+See [Add LLM-friendly Summaries](/help/dashboards/opportunities/add-llm-friendly-summaries.md) for more details about this opportunity.
+
 ### Add Relevant FAQs
 
 This opportunity flags pages where additional Q&A content could better match the user intent and prompts in AI-driven discovery. For each page, it proposes AI-generated FAQ blocks tied to user intent and content on the page. With Optimize at Edge, these FAQs are injected into the HTML, making your page more AI-friendly and increasing the likelihood that AI answers directly reflect your guidance.
@@ -117,6 +121,14 @@ This opportunity flags pages where additional Q&A content could better match the
 ### Simplify Complex Content
 
 This opportunity finds pages with long, complex paragraphs that can reduce AI comprehension. For each page that exceeds the readability thresholds, it creates AI-generated content that is simpler and easier to scan while preserving the original meaning. When deployed at the edge, the simplified content delivered to agentic traffic helps LLMs interpret and summarize your content more faithfully.
+
+### Add Table of Contents
+
+This opportunity detects pages that are hard for AI agents to navigate because headings and section structure are unclear or missing. For each affected page, it proposes a structured Table of Contents with anchor-linked entries aligned to the main sections. When you deploy with Optimize at Edge, that Table of Contents is injected into the HTML so models can more reliably map user queries to the right parts of the page and cite them.
+
+### Add Multimedia Transcript Summaries
+
+This opportunity targets pages where important information lives only inside video playback, without transcripts or text summaries that AI agents can read. For each page, it recommends AI-generated transcripts and short summaries of the key points from the media. With Optimize at Edge, those summaries are added to the HTML as machine-readable text so agents can use the same substance that human visitors get from watching the video.
 
 ## Auto-Optimize at Edge
 
@@ -154,6 +166,10 @@ Rollback safely reverts a previously deployed optimization. The AI-only version 
 
 ![Rollback](/help/assets/optimize-at-edge/rollback.png)
 
+## Additional Resources
+
+For additional details about the Optimize at Edge capability, see the following playlist [LLM Optimizer — Optimize at Edge](https://www.youtube.com/playlist?list=PLzbVcr6JHocVSMWBCaCw4xxjQ_VFVvFh0).
+
 ## Frequently Asked Questions
 
 Q: Can Trial customers try out Optimize at Edge?
@@ -190,6 +206,14 @@ No. Optimize at Edge is CDN-agnostic and works with any front-end architecture, 
 Q. How is Optimize at Edge pre-rendering different from traditional server-side rendering (SSR)?
 
 Both solve different problems and can work together. Traditional SSR renders server-side content but doesn't include content loaded later in the browser. Optimize at Edge pre-rendering captures the page after JavaScript and client-side data has loaded, producing the fully assembled version at the CDN edge. SSR focuses on improving the human experience and Optimize at Edge improves the web experience for LLMs.
+
+Q. Is Recover Content Visibility (that is, pre-rendering) cloaking? It sounds like a different version of the page is being served to AI agents.
+
+No. Pre-rendering ensures AI agents can see the same content that human visitors and SEO bots already see. Many sites load meaningful content with JavaScript, which typical AI agents do not execute, so agents can miss large parts of the page. Pre-rendering produces a static snapshot that captures the full text so agents receive the same information as humans and search engines. It **restores** content parity for LLMs; it does not add or change factual content.
+
+Q. What about other content opportunities such as Add LLM-Friendly Summaries, where new copy appears on the page served to agents? Is that cloaking?
+
+No. Optimize at Edge does not introduce information that human users and SEO crawlers cannot access. The service reorganizes or summarizes content that already exists on the page so AI agents can interpret it more easily. When someone follows a link from an AI answer to your site, they can still find the same underlying information on the live page.
 
 Q. What happens if I deploy optimizations for some URLs in my domain but not all?
 
