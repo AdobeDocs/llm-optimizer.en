@@ -10,7 +10,7 @@ The Add Relevant FAQs opportunity identifies high-traffic pages that lack struct
 
 For each affected URL, you can review AI-generated FAQ suggestions, then deploy them with [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md) so agentic traffic receives clearer Q&A context with no Content Management system (CMS) changes required.
 
-## How Optimize at Edge fixes the problem
+## How it fixes the problem
 
 Fixes are applied using [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md), which:
 
@@ -29,7 +29,7 @@ LLM Optimizer identifies high-traffic pages where Q&A content is missing or thin
 The **URLs with suggestions** table lists pages where FAQs would help AI-driven discovery. Suggestions are organized into **Current Suggestions**, **Fixed Suggestions**, and **Ignored Suggestions**. For each URL you can:
 
 - **Expand the row** to view the proposed FAQ content for that page.
-- **Preview** the before-and-after comparison for agentic traffic.
+- **Preview** the before and after comparison for agentic traffic.
 - **Mark as Fixed** if you addressed the opportunity outside LLM Optimizer.
 - **Ignore** suggestions that are not relevant.
 
@@ -49,7 +49,7 @@ When you are ready to publish at the edge, click **Deploy optimizations**. A **D
 
 ![Deploy to Edge dialog](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-03.png)
 
-After a successful deploy, **Deployment Complete** confirms how many optimizations went live and notes that AI agents may take time to index the update. Close the dialog and open **Fixed Suggestions** to verify status.
+After a successful deploy, **Deployment Complete** confirms how many optimizations went live. Close the dialog and open **Fixed Suggestions** to verify status.
 
 ![Deployment Complete confirmation](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-04.png)
 
@@ -66,8 +66,6 @@ On **Fixed Suggestions**, deployed URLs show **Optimized** in the status column.
 The **View Live** window shows the page structure and FAQ copy as presented in that check.
 
 ![View Live — current page content including FAQs](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-05.png)
-
-
 
 ## Rollback
 

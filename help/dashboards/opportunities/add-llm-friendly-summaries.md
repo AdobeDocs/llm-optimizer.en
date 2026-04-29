@@ -17,62 +17,65 @@ Fixes are applied using [Optimize at Edge](/help/dashboards/optimize-at-edge/ove
 - Serves a pre-rendered HTML snapshot to AI agents.
 - Enriches the page with summaries and/or key points in the HTML they retrieve.
 - Works at the CDN layer (no CMS changes).
-- Is AI-only no impact on human visitors or SEO bots.
-- Deploys in minutes and is fully reversible from the LLM Optimizer interface.
+- Is AI-only — no impact on human visitors or SEO bots.
+- Deploys in minutes and is **fully reversible** from the LLM Optimizer interface.
 
 ## How it works
 
-LLM Optimizer flags high-traffic pages where summaries and structured key points would help AI comprehension. Affected URLs appear in the **URLs with suggestions** table, where you can select a URL to work with.
+LLM Optimizer identifies high-traffic pages where page or section-level **summaries** and **key points** would help AI comprehension. Affected URLs appear in the **URLs with suggestions** table on the **Current Suggestions** tab, where you can expand a row to inspect each recommendation.
 
-For each page, you have the following:
+![URLs with suggestions on Current Suggestions, expanded row with page and section summary suggestions](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-expand.png)
 
-- A page or section-level summary and (when suggested) key points derived from the live content.
-- A Preview side-by-side comparison of the current page versus the version with summaries applied.
-
-![Select a URL with a summary suggestion](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-select-url.png)
-
-Expand a row to review the AI analysis and the proposed summary (and key points, if present) for that page.
-
-![Expanded row with summary details](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-expand.png)
-
-## URLs with suggestions
-
-The **URLs with suggestions** table lists pages with recommended summaries. For each URL you can:
+The **URLs with suggestions** table lists pages where summaries would help agentic discovery. Suggestions are organized into **Current Suggestions**, **Fixed Suggestions**, and **Ignored Suggestions**. For each URL you can:
 
 - **Expand the row** to view the analysis and proposed summary text (and key points when included).
-- **Preview** the side-by-side comparison of the current page versus the version with summaries applied.
-- **Mark as Fixed** mark pages that have been optimized outside of LLM Optimizer.
+- **Preview** the before and after comparison for agentic traffic.
+- **Mark as Fixed** if you addressed the opportunity outside LLM Optimizer.
 - **Ignore** suggestions that are not relevant.
 
-Suggestions are organized into **Current Suggestions**, **Fixed Suggestions**, and **Ignored Suggestions**. After you deploy, optimized URLs appear under **Fixed Suggestions** with an **Optimized** status.
+Each expanded entry shows page-level and section-level summary instructions, **AI-generated** copy, edit controls and context tied to the live page.
 
-![Fixed suggestions with Optimized status](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-fixed.png)
+Click **Preview** in the **Actions** column to open the optimization preview. It compares how your page looks now for agentic traffic with the post-optimization view (for example, injected **summary** and **key point** content aligned to the suggested placements). You can open or dismiss that preview at any time before you deploy.
 
-From **Fixed Suggestions**, you can select URLs to verify deployment, use **View Live** to confirm what agentic traffic receives, or start a rollback.
+When you are ready to publish, select the summary and key point line items using the checkboxes. The footer shows how many are selected and provides **Mark as Fixed**, **Ignore Suggestions**, and **Deploy optimizations**.
 
-![Select URLs in Fixed Suggestions](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-select-in-fixed.png)
+![Current Suggestions with summary line items selected and Deploy optimizations in the footer](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-select-url.png)
 
-## Deploying the optimization
+### Deploying the optimization
 
-When you are ready to publish summaries at the edge, select the URLs that have summary and/or key point suggestions, then click **Deploy optimizations**. A confirmation dialog lists the selected URLs and the optimization type before you confirm.
+When you are ready to publish at the edge, click **Deploy optimizations**. A **Deploy to Edge** dialog lists the selected URLs and optimization details. Review the list, then choose **Deploy** or **Cancel**.
 
 ![Deploy to Edge dialog](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-deploy-dialog.png)
 
-After deployment, a confirmation screen shows which URLs were successfully optimized. The changes are live for AI agents and you can review deployed items anytime under **Fixed Suggestions**.
+After a successful deploy, **Deployment Complete** confirms how many optimizations went live and notes that AI agents may take time to index the update. Close the dialog and open **Fixed Suggestions** to verify status.
 
-![Deploy confirmation](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-deploy-confirm.png)
+![Deployment Complete confirmation](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-deploy-confirm.png)
 
 >[!NOTE]
 >
->Deploying optimizations requires completing the Optimize at Edge onboarding process. If you have not yet onboarded, clicking **Deploy optimizations** will direct you to the onboarding process. For full details on how Optimize at Edge works, supported CDN providers and the onboarding process see the [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md) page.
+>Deploying optimizations requires completing the Optimize at Edge onboarding process. If you have not yet onboarded, clicking **Deploy optimizations** will direct you to the onboarding process. For full details on how Optimize at Edge works, supported CDN providers, and the onboarding process, see the [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md) page.
+
+### Fixed Suggestions and View Live
+
+On **Fixed Suggestions**, deployed URLs show **Optimized** in the status column. Expand a row to review deployed summary copy and instructions.
+
+![Fixed Suggestions tab with Optimized status, expanded deployed summaries, View Live, and Details](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-fixed.png)
+
+Click **View Live** on the row to open a read-only view of **current page content** as served for verification (including injected **summary** and **key point** blocks where applied). Use **Details** for analytics. When you need to revert edge changes in bulk, select the optimized rows using the checkboxes, then use **Rollback** in the header.
+
+![Fixed Suggestions with checkboxes for bulk selection before Rollback](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-select-in-fixed.png)
 
 ## Rollback
 
-If you change your mind, you can roll back a deployed summary optimization from **Fixed Suggestions**. Rollback uses a confirmation dialog so you can review the affected URLs before reverting to the previous agent-visible version.
+If you change your mind, you can roll back any deployed optimization. From the **Fixed Suggestions** view, select the optimized rows you want to revert, then click **Rollback** in the header.
 
-![Rollback dialog](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-rollback-dialog.png)
+The **Rollback** dialog lists the suggestions that will be rolled back, with a short warning that deployed optimizations will be reverted. Confirm the list, then click **Rollback** or **Cancel**.
 
-![Rollback confirmation](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-rollback-confirm.png)
+![Rollback dialog listing suggestions to revert](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-rollback-dialog.png)
+
+When the operation finishes, a **Successfully Rolled Back** summary appears; close it to return to the dashboard.
+
+![Rollback complete — Successfully Rolled Back](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-rollback-confirm.png)
 
 ## Try it in the demo
 
