@@ -10,9 +10,9 @@ The Add Relevant FAQs opportunity identifies high-traffic pages that lack struct
 
 For each affected URL, you can review AI-generated FAQ suggestions, then deploy them with [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md) so agentic traffic receives clearer Q&A context with no Content Management system (CMS) changes required.
 
-## How Optimize at Edge fixes the problem
+## How it fixes the problem
 
-Fixes are applied by using [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md), which:
+Fixes are applied using [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md), which:
 
 - Serves a pre-rendered HTML snapshot to AI agents.
 - Enriches the page with FAQ content in the HTML they retrieve.
