@@ -41,7 +41,7 @@ The **URLs with suggestions** table lists pages with recommended summaries. For 
 
 - **Expand the row** to view the analysis and proposed summary text (and key points when included).
 - **Preview** the side-by-side comparison of the current page versus the version with summaries applied.
-- **Mark as Fixed** once the issue has been addressed outside LLM Optimizer, if applicable.
+- **Mark as Fixed** mark pages that have been optimized outside of LLM Optimizer.
 - **Ignore** suggestions that are not relevant.
 
 Suggestions are organized into **Current Suggestions**, **Fixed Suggestions**, and **Ignored Suggestions**. After you deploy, optimized URLs appear under **Fixed Suggestions** with an **Optimized** status.
