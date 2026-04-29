@@ -22,10 +22,10 @@ Fixes are applied using [Optimize at Edge](/help/dashboards/optimize-at-edge/ove
 
 ## How it works
 
-LLM Optimizer identifies pages that receive high agentic traffic and where content scores below readability thresholds, then suggests rewrites of the copy. For each page you get: 
+LLM Optimizer identifies pages that receive high agentic traffic and where content scores below readability thresholds, then suggests rewrites of the copy. For each page you have:
 
-* **Improved Text** - simplified content grounded in what is already on the page. 
-* **Preview** - a before and after comparison for agentic traffic.
+**Improved Text** - simplified content grounded in what is already on the page. 
+**Preview** - a before and after comparison for agentic traffic.
 
 Affected URLs appear in the **URLs with suggestions** table on the **Current Suggestions** tab, where you can expand a row to inspect each recommendation.
 
