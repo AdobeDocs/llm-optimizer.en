@@ -82,21 +82,3 @@ When the operation finishes, a **Successfully Rolled Back** summary appears; clo
 ## Try it in the demo
 
 Explore the Add Relevant FAQs workflow in the [Frescopa demo](https://play.llmo.now/org/demo-org).
-
-<!-- ## Frequently asked questions
-
-**Will this optimization affect my human visitors or SEO bots?**
-
-No. Optimize at Edge targets only AI user agents. Human visitors and SEO bots receive the original page as before.
-
-**Do I need to change my CMS or involve developers?**
-
-No. FAQs are applied at the CDN edge. Once onboarded to Optimize at Edge, you can deploy and roll back from the LLM Optimizer interface.
-
-**What happens if my page content changes after I deploy?**
-
-For content opportunities such as Add Relevant FAQs, LLM Optimizer monitors the source page for changes. If a change is detected, the optimization is paused and flagged for human review to prevent drift between the agent-visible page and the human-visible page. See the [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md) frequently asked questions for more detail.
-
-**How do I get started with Optimize at Edge?**
-
-See the [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md) page for onboarding, CDN configuration guides, and prerequisites.-->
