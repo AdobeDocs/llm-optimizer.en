@@ -82,6 +82,7 @@ Presented in the following table are opportunities that can improve the agentic 
 | Opportunity | Type | Auto-Identify | Auto-suggest | Auto-optimize |
 |---------|----------|----------|----------|----------|
 | [Recover Content Visibility](/help/dashboards/opportunities/recover-content-visibility.md) | Technical GEO | Detects pages where critical content is hidden from AI agents. Shows affected URLs and expected content that can be recovered.| Highlights content that can be made available for AI agents and recommends enabling pre-rendering for those pages. | Serves a fully rendered, AI-friendly HTML snapshot to agentic traffic that recovers the previously hidden content.|
+| [Enrich Product Detail Pages](/help/dashboards/opportunities/enrich-product-detail-pages.md) | Technical GEO | For Adobe Commerce storefronts, compares full catalog data to what AI agents can access on each product detail page; surfaces PDPs where variants, specifications, attributes, and related catalog fields are missing from the agent-visible HTML, prioritized by agentic traffic. | Highlights recoverable catalog information missing from the agent view and why it matters for LLM-driven product discovery. | Serves a fully pre-rendered, AI-friendly HTML snapshot to agentic traffic at the CDN edge so agents receive rich product context from your catalog without CMS or catalog changes. |
 | [Add LLM-Friendly Summaries](/help/dashboards/opportunities/add-llm-friendly-summaries.md) | Content Optimization | Identifies high-traffic pages that lack concise summaries and structured key points at the page or section level, making them harder for AI agents to scan and interpret.| Recommends short, AI-generated summaries and key points grounded in existing content.| Inserts summaries and key points into the relevant HTML sections, improving how models interpret and describe the page content.|
 | [Add Relevant FAQs](/help/dashboards/opportunities/add-relevant-faqs.md) | Content Optimization | Identifies high-traffic pages that lack structured Q&A content aligned to your prompt set, making it harder for AI agents to match user questions to your page. | Suggests AI-generated FAQ content aligned to user intent and existing page topics. | Injects FAQ content into the HTML, making pages more discoverable and relevant in AI-driven answers.|
 | [Simplify Complex Content](/help/dashboards/opportunities/simplify-complex-content.md) | Content Optimization | Flags pages with complex text that can hinder AI comprehension. | Provides AI-generated simplified versions of complex text while preserving the original meaning. | Rewrites complex sections in the page, improving AI readability. |
@@ -107,6 +108,12 @@ This ensures the page is first fully visible to AI agents. Additional enhancemen
 >This pre-rendering capability automatically applies to all opportunities presented below when deployed with Optimize at Edge to ensure the page is fully visible to AI agents.
 
 See [Recover Content Visibility](/help/dashboards/opportunities/recover-content-visibility.md) for a dashboard walkthrough, deployment steps, and frequently asked questions.
+
+### Enrich Product Detail Pages
+
+This opportunity targets Adobe Commerce product detail pages where shoppers see full product context through interactive storefront experiences, but AI agents only receive a shallow HTML snapshot. The Catalog Agent compares your authoritative Commerce catalog to the agent-visible PDP, lists every meaningful gap (for example variants or specs that never appear in static HTML), and lets you deploy a bot-only edge response that restores parity for LLM crawlers without altering catalog records or human UI.
+
+See [Enrich Product Detail Pages](/help/dashboards/opportunities/enrich-product-detail-pages.md) for a dashboard walkthrough, deployment steps, and frequently asked questions.
 
 ### Add LLM-Friendly Summaries
 

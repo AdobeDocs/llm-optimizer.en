@@ -33,6 +33,7 @@ user-guide-description: Boost your brand with Adobe LLM Optimizer. Track mention
     + [Reddit Sentiment Analysis](/help/dashboards/opportunities/reddit-sentiment-analysis.md)
     + [Cited Sentiment Analysis](/help/dashboards/opportunities/cited-sentiment-analysis.md)
     + [Enrich Product Catalog](/help/dashboards/opportunities/enrich-product-catalog.md)
+    + [Enrich Product Detail Pages](/help/dashboards/opportunities/enrich-product-detail-pages.md)
   + [Customer Configuration](/help/dashboards/customer-configuration.md)
   + [Collaboration](/help/dashboards/collaboration.md)
 + BYOCDN Log Forwarding{#log-forwarding}
