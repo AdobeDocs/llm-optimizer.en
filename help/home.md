@@ -10,9 +10,11 @@ feature_v2:
     internal-label: Dashboards
   - id: c0713b97-4af8-4c41-b742-5afcc6ced468
     internal-label: Insights
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+    internal-label: Administration
+  - id: e0828736-236a-487b-a478-5a635455eadc
+    internal-label: Reporting
 subfeature_v2:
-  - id: ab7fdb62-bd53-4cfd-8c2c-169f7e47f20e
-    internal-label: Brand Presence
   - id: b70f186a-2ef9-43ce-b452-25fa1d91bcda
     internal-label: Quickstart
   - id: c898dfb2-0885-42fb-b2af-b2d756752646
@@ -22,6 +24,7 @@ topic_v2:
     internal-label: Optimization
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
     internal-label: Insights
+autotag-review: '2026-04-30T18:10:07.393Z'
 ---
 # Adobe LLM Optimizer
 

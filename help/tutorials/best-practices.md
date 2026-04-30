@@ -2,6 +2,31 @@
 title: LLM Optimizer best practices
 description: Discover best practices for LLM optimization to boost brand visibility in AI search. Insights for for benchmarking and optimizing content.
 feature: Best Practices, Agentic Traffic, Brand Presence
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+    internal-label: LLM Optimizer
+feature_v2:
+  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
+    internal-label: Dashboards
+  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
+    internal-label: Insights
+  - id: e0828736-236a-487b-a478-5a635455eadc
+    internal-label: Reporting
+subfeature_v2:
+  - id: ab7fdb62-bd53-4cfd-8c2c-169f7e47f20e
+    internal-label: Brand Presence
+  - id: c898dfb2-0885-42fb-b2af-b2d756752646
+    internal-label: Best Practices
+  - id: e06fae5f-830b-4222-a469-b5e148d36465
+    internal-label: Agentic Traffic
+topic_v2:
+  - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+    internal-label: Accessibility
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+autotag-review: '2026-04-30T18:09:23.556Z'
 ---
 
 # LLM Optimizer best practices
