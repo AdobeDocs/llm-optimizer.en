@@ -83,7 +83,7 @@ When the operation finishes, a **Successfully Rolled Back** summary appears; clo
 
 Explore the Add Relevant FAQs workflow in the [Frescopa demo](https://play.llmo.now/org/demo-org).
 
-## Frequently asked questions
+<!--## Frequently asked questions
 
 **Will this optimization affect my human visitors or SEO bots?**
 
@@ -99,4 +99,4 @@ For content opportunities such as Add Relevant FAQs, LLM Optimizer monitors the 
 
 **How do I get started with Optimize at Edge?**
 
-See the [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md) page for onboarding, CDN configuration guides, and prerequisites.
+See the [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md) page for onboarding, CDN configuration guides, and prerequisites.-->

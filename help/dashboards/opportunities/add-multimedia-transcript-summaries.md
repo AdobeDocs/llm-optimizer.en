@@ -12,7 +12,7 @@ feature: Opportunities
 
 The Add Multimedia Transcript Summaries opportunity identifies pages where important information lives in video or other media without transcripts or short text summaries that AI agents can read. It introduces **AI-generated transcript summaries** grounded in the media and surrounding page context. It helps recover key brand information that would otherwise be missed by making multimedia content understandable to AI agents.
 
-For each affected URL, you can review the proposed **Content Patch**, **Implementation** details (for example, the target CSS selector and operation), and **Rationale**, then deploy with [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md) so agentic traffic receives the enriched HTML with no Content Management system (CMS) changes required.
+For each affected URL, you can review the proposed **Content Patch**, **Implementation** details (for example, the target CSS selector and operation) and **Rationale**, then deploy with [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md) so agentic traffic receives the enriched HTML with no Content Management system (CMS) changes required.
 
 ## How it fixes the problem
 
@@ -28,6 +28,11 @@ Fixes are applied using [Optimize at Edge](/help/dashboards/optimize-at-edge/ove
 
 LLM Optimizer flags high-traffic pages where machine-readable text is missing for embedded media, based on your configuration and page structure. Affected URLs appear in the **URLs with suggestions** table on the **Current Suggestions** tab, where you can expand a row to inspect each **Content Patch**, how it will be applied, and why it is recommended.
 
+For each page, you have: 
+
+* Multimedia Summary –  Structured summaries derived from video content.
+* Preview – Before and after page comparison.
+
 ![URLs with suggestions on Current Suggestions, expanded row with Content Patch, Implementation details, and Rationale](/help/dashboards/opportunities/assets/add-multimedia-transcript-summaries-expand.png)
 
 The **URLs with suggestions** table lists pages where transcript or summary text would help agentic discovery. Suggestions are organized into **Current Suggestions**, **Fixed Suggestions**, and **Ignored Suggestions**. For each URL you can:
@@ -37,15 +42,15 @@ The **URLs with suggestions** table lists pages where transcript or summary text
 - **Mark as Fixed** if you addressed the opportunity outside LLM Optimizer.
 - **Ignore** suggestions that are not relevant.
 
-You can edit patch text from the row when supported (pencil control), then use the row checkboxes to select what to ship. The footer shows how many are selected and provides **Mark as Fixed**, **Ignore Suggestions**, and **Deploy optimizations**.
+You can edit patch text from the row when supported (pencil control), then use the row checkboxes to select what to deploy. The footer shows how many are selected and provides **Mark as Fixed**, **Ignore Suggestions**, and **Deploy optimizations**.
 
 ### Deploying the optimization
 
-When you are ready to publish at the edge, click **Deploy optimizations**. A **Deploy to Edge** dialog lists the URLs, selectors, and operations you are about to run. Review the list, then choose **Deploy** or **Cancel**.
+When you are ready to publish at the edge, click **Deploy optimizations**. A **Deploy to Edge** dialog lists the URLs, selectors and operations you are about to run. Review the list, then choose **Deploy** or **Cancel**.
 
 ![Deploy to Edge dialog for multimedia transcript summary content patches](/help/dashboards/opportunities/assets/add-multimedia-transcript-summaries-deploy-dialog.png)
 
-After a successful deploy, **Deployment Complete** confirms how many optimizations went live and notes that AI agents may need time to pick up the update. Close the dialog and open **Fixed Suggestions** to verify status.
+After a successful deploy, **Deployment Complete** confirms how many optimizations went live. Close the dialog and open **Fixed Suggestions** to verify status.
 
 ![Deployment Complete confirmation](/help/dashboards/opportunities/assets/add-multimedia-transcript-summaries-deploy-confirm.png)
 
@@ -55,7 +60,7 @@ After a successful deploy, **Deployment Complete** confirms how many optimizatio
 
 ### Fixed Suggestions and View Live
 
-On **Fixed Suggestions**, deployed URLs show **Optimized** in the status column. Expand a row to review the live **Content Patch**, **Implementation** details, and **Rationale**, and use **Details** for analytics or **View Live** where available to confirm what agentic traffic receives.
+On **Fixed Suggestions**, deployed URLs show **Optimized** in the status column. Expand a row to review the live **Content Patch**, **Implementation** details and **Rationale** . Additionally, you can use **Details** for analytics or **View Live** where available to confirm what agentic traffic receives.
 
 ![Fixed Suggestions with Optimized status, expanded Content Patch, and Rollback](/help/dashboards/opportunities/assets/add-multimedia-transcript-summaries-fixed.png)
 
@@ -81,7 +86,7 @@ Explore the Add Multimedia Transcript Summaries workflow in the [Frescopa demo](
 
 ## Frequently asked questions
 
-**Will this optimization affect my human visitors or SEO bots?**
+<!--**Will this optimization affect my human visitors or SEO bots?**
 
 No. Optimize at Edge targets only AI user agents. Human visitors and SEO bots receive the original page as before.
 
@@ -95,4 +100,4 @@ For content opportunities such as Add Multimedia Transcript Summaries, LLM Optim
 
 **How do I get started with Optimize at Edge?**
 
-See the [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md) page for onboarding, CDN configuration guides, and prerequisites.
+See the [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md) page for onboarding, CDN configuration guides, and prerequisites.-->

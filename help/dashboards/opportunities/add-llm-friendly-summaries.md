@@ -81,7 +81,7 @@ When the operation finishes, a **Successfully Rolled Back** summary appears; clo
 
 Explore the Add LLM-friendly Summaries workflow in the [Frescopa demo](https://play.llmo.now/org/demo-org).
 
-## Frequently asked questions
+<!--## Frequently asked questions
 
 **Will this optimization affect my human visitors or SEO bots?**
 
@@ -97,4 +97,4 @@ For content opportunities such as Add LLM-friendly Summaries, LLM Optimizer moni
 
 **How do I get started with Optimize at Edge?**
 
-See the [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md) page for onboarding, CDN configuration guides, and prerequisites.
+See the [Optimize at Edge](/help/dashboards/optimize-at-edge/overview.md) page for onboarding, CDN configuration guides, and prerequisites.-->
