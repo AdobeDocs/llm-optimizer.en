@@ -80,7 +80,7 @@ Onsite optimization improves your owned content for LLM visibility. These are ac
 
 >[!TIP]
 >
->The LLM Optimizer suggests onsite and offsite optimization opportunities in the [Opportunities](/help/dashboards/opportunities.md) dashboard for you. These opportunities are specific for your site. Many of these suggestions can be directly deployed to your site using LLM Optimizer.
+>The LLM Optimizer suggests onsite and offsite optimization opportunities in the [Opportunities](/help/dashboards/opportunities-overview.md) dashboard for you. These opportunities are specific for your site. Many of these suggestions can be directly deployed to your site using LLM Optimizer.
 
 Here are some optimization best practices:
 
@@ -102,7 +102,7 @@ Here are some optimization best practices:
 
 4. Monitor and iterate
 
-    * Use the [Opportunities dashboard](/help/dashboards/opportunities.md) to identify and act on recommendations.
+    * Use the [Opportunities dashboard](/help/dashboards/opportunities-overview.md) to identify and act on recommendations.
     * Track visibility score, sentiment, and citation frequency.
     * Adjust based on other's activity (including competitors) and prompt trends.
 
@@ -112,7 +112,7 @@ Offsite optimization focuses on improving your brand's visibility in AI-generate
 
 >[!TIP]
 >
->The LLM Optimizer suggests onsite and offsite optimization opportunities in the [Opportunities](/help/dashboards/opportunities.md) dashboard for you. These opportunities are specific for your site. Many of these suggestions can be directly deployed to your site using LLM Optimizer.
+>The LLM Optimizer suggests onsite and offsite optimization opportunities in the [Opportunities](/help/dashboards/opportunities-overview.md) dashboard for you. These opportunities are specific for your site. Many of these suggestions can be directly deployed to your site using LLM Optimizer.
 
 
 Key Offsite Channels:
@@ -164,7 +164,7 @@ Here are steps that you can follow to monitor progress:
     * Use attribution features to connect visibility improvements to traffic, engagement, and conversions. Attribution features in Adobe LLM Optimizer help you connect improvements in visibility metrics (mentions, citations, sentiment) to real business outcomes like site traffic, user engagement, and conversions. This proves ROI for your optimization efforts.
     * Track changes in agentic and referral traffic to validate optimization ROI.
 1. Improve your content
-    * Use the LLM Optimizer's [Opportunities dashboard](/help/dashboards/opportunities.md) to identify and make specifically recommended, immediate changes to your site. See [Opportunities](/help/dashboards/opportunities.md) (then measure the results.) Review the opportunities section regularly and take action on the recommendations provided.
+    * Use the LLM Optimizer's [Opportunities dashboard](/help/dashboards/opportunities-overview.md) to identify and make specifically recommended, immediate changes to your site. See [Opportunities](/help/dashboards/opportunities-overview.md) (then measure the results.) Review the opportunities section regularly and take action on the recommendations provided.
     * Prioritize pages with declining visibility.
     * Update your website and other content to make it more relevant to the prompts you want to target.
     * Add FAQs to your pages that answer common questions people might ask.
