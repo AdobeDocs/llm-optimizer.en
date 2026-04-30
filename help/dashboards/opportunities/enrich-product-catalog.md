@@ -48,7 +48,7 @@ The **URLs with suggestions** table lists all products with enrichment opportuni
 
 Suggestions are organized into three views: **Current Suggestions**, **Fixed Suggestions**, and **Ignored Suggestions**. Once an enrichment is applied, it moves to Fixed Suggestions with a status of **Applied** and a **View in Catalog** action to verify the update in Adobe Commerce. Applied enrichments can be rolled back at any time, restoring the original product name and description.
 
-![Fixed suggestions with Applied status](/help/dashboards/opportunities/assets/enrich-product-catalog-fixed.png)
+<!--[Fixed suggestions with Applied status](/help/dashboards/opportunities/assets/enrich-product-catalog-fixed.png)-->
 
 ## Deploying the optimization
 
