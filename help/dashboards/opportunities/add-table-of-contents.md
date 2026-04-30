@@ -8,7 +8,7 @@ feature: Opportunities
 
 >[!NOTE]
 >
-> **Early access** — This capability is available in Early Access. Availability, eligibility and parts of the workflow may change as the capability matures. Contact your Adobe account team or `llmo-at-edge@adobe.com` if you have questions about access.
+> **Early access** — This capability is available in Early Access. Availability, eligibility and parts of the workflow may change as the capability matures. Contact your Adobe account team if you have questions about access.
 
 The Add Table of Contents opportunity identifies high-traffic pages that lack a clear **Table of Contents** and structural guide, which makes it harder for AI agents to parse the page and map user queries to the right sections. It introduces a structured Table of Contents with **anchor-linked headings** that reflect the main sections of the page. This structure helps agents extract, map and cite relevant passages more reliably.
 

@@ -8,7 +8,7 @@ feature: Opportunities
 
 >[!NOTE]
 >
-> **Early access** — Add Multimedia Transcript Summaries is available in Early Access. Availability, eligibility and parts of the workflow may change as the capability matures. Contact your Adobe account team or `llmo-at-edge@adobe.com` if you have questions about access.
+> **Early access** — Add Multimedia Transcript Summaries is available in Early Access. Availability, eligibility and parts of the workflow may change as the capability matures. Contact your Adobe account team if you have questions about access.
 
 The Add Multimedia Transcript Summaries opportunity identifies pages where important information lives in video or other media without transcripts or short text summaries that AI agents can read. It introduces **AI-generated transcript summaries** grounded in the media and surrounding page context. It helps recover key brand information that would otherwise be missed by making multimedia content understandable to AI agents.
 
