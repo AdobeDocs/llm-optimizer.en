@@ -15,7 +15,7 @@ It surfaces the following key metrics at a glance:
 - **Product Pages** — The list of all product detail pages identified with a catalog data visibility gap.
 - **Agentic Traffic** — The total visits and interactions on a site that are initiated and driven by autonomous AI agents (such as LLM-powered assistants or bots) acting on behalf of users to discover, retrieve or engage with content.
 
-<!-- ![Enrich Product Detail Pages dashboard](<INSERT IMAGE>) -->
+![Enrich Product Detail Pages dashboard](/help/dashboards/opportunities/assets/enrich-product-detail-pages-overview.png)
 
 This opportunity can be optimized by using [Optimize at Edge](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge/overview#what-is-optimize-at-edge). Optimizations are delivered exclusively to AI agents with no impact on human visitors (bot-only delivery), applied at the CDN layer with no CMS or catalog changes required, and can take effect in minutes with no developer engagement — making it a fast, low-risk deployment path for large product catalogs.
 
@@ -29,7 +29,7 @@ For each affected product page, LLM Optimizer provides:
 
 The fix is applied using [Optimize at Edge](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge/overview#what-is-optimize-at-edge) — Adobe's edge-based deployment capability that serves a fully pre-rendered, AI-friendly HTML snapshot to LLM user agents at the CDN layer. This recovers all previously hidden catalog data (including product variants, technical specifications, and feature details) without touching your Commerce catalog or human visible storefront UI.
 
-<!-- ![Products with suggestions table](<INSERT IMAGE>) -->
+![URLs with suggestions table](/help/dashboards/opportunities/assets/enrich-product-detail-pages-suggestions.png)
 
 ## URLs with suggestions
 
@@ -40,8 +40,6 @@ The **URLs with suggestions** table lists all identified product pages which ben
 - **Ignore** suggestions that are not relevant to your merchandising strategy
 
 Suggestions are organized into three views: **Current Suggestions**, **Fixed Suggestions**, and **Ignored Suggestions**. Once a suggestion is deployed, it moves to Fixed Suggestions with a status of **Optimized** and a **View Live** action to verify that the enrichment is live for agentic traffic. Fixed suggestions can be rolled back at any time.
-
-<!-- ![Fixed suggestions with Optimized status](/help/dashboards/assets/enrich-pdp-fixed.png) -->
 
 ## Deploying the optimization
 
@@ -57,7 +55,7 @@ If your Commerce instance is not yet connected to LLM Optimizer, you will be dir
 
 If you have not yet onboarded, clicking **Deploy optimizations** will direct you to the onboarding process. For full details on how Optimize at Edge works, supported CDN providers, and the onboarding process, see the [Optimize at Edge](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge/overview#what-is-optimize-at-edge) page.
 
-<!-- ![Deploy to Edge dialog](<INSERT IMAGE>) -->
+![Deploy to Edge dialog](/help/dashboards/opportunities/assets/enrich-product-detail-pages-deploy.png)
 
 ## Try it in the demo
 
