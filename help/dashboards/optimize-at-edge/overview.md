@@ -2,6 +2,21 @@
 title: Optimize at Edge
 description: Learn how to deliver optimizations in LLM Optimizer at the CDN edge without any authoring changes required.
 feature: Opportunities
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+    internal-label: LLM Optimizer
+feature_v2:
+  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
+    internal-label: Dashboards
+subfeature_v2:
+  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+    internal-label: Opportunities
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
+  - id: e9001ce2-5245-4a8e-8601-dd958009072f
+    internal-label: Web experience
+autotag-review: '2026-04-30T18:15:36.189Z'
 ---
 
 # Optimize at Edge

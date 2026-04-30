@@ -1,6 +1,22 @@
 ---
 title: LLM Optimizer Overview
 description: Learn about how Adobe LLM Optimizer boosts brand visibility in AI-driven search. Track mentions, citations, and insights. Start optimizing today for better engagement and influence.
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+    internal-label: LLM Optimizer
+feature_v2:
+  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
+    internal-label: Dashboards
+  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
+    internal-label: Insights
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: fc314d1d-7cb9-4a38-8dbd-8f9b6478f40d
+    internal-label: Content strategy
+autotag-review: '2026-04-30T18:09:46.095Z'
 ---
 
 # LLM Optimizer Overview
