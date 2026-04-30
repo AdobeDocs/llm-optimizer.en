@@ -30,8 +30,8 @@ LLM Optimizer flags high-traffic pages where machine-readable text is missing fo
 
 For each page, you have: 
 
-* Multimedia Summary –  Structured summaries derived from video content.
-* Preview – Before and after page comparison.
+**Multimedia Summary** –  Structured summaries derived from video content.
+**Preview** – Before and after page comparison.
 
 ![URLs with suggestions on Current Suggestions, expanded row with Content Patch, Implementation details, and Rationale](/help/dashboards/opportunities/assets/add-multimedia-transcript-summaries-expand.png)
 
@@ -86,7 +86,7 @@ Explore the Add Multimedia Transcript Summaries workflow in the [Frescopa demo](
 
 ## Frequently asked questions
 
-<!--**Will this optimization affect my human visitors or SEO bots?**
+<!-- **Will this optimization affect my human visitors or SEO bots?**
 
 No. Optimize at Edge targets only AI user agents. Human visitors and SEO bots receive the original page as before.
 

@@ -65,11 +65,11 @@ The **Rollback** dialog lists the suggestions that will be rolled back, with a s
 
 When the operation finishes, a **Successfully Rolled Back** summary appears; close it to return to the dashboard.
 
-<!--## Try it in the demo
+<!-- ## Try it in the demo
 
-The Add Table of Contents workflow is **not yet** available in the [Frescopa demo](https://play.llmo.now/org/demo-org). This section will be updated when demo support is available.-->
+The Add Table of Contents workflow is **not yet** available in the [Frescopa demo](https://play.llmo.now/org/demo-org). This section will be updated when demo support is available.
 
-<!--## Frequently asked questions
+Frequently asked questions
 
 **Will this optimization affect my human visitors or SEO bots?**
 

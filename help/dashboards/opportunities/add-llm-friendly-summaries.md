@@ -81,7 +81,7 @@ When the operation finishes, a **Successfully Rolled Back** summary appears; clo
 
 Explore the Add LLM-friendly Summaries workflow in the [Frescopa demo](https://play.llmo.now/org/demo-org).
 
-<!--## Frequently asked questions
+<!-- ## Frequently asked questions
 
 **Will this optimization affect my human visitors or SEO bots?**
 
