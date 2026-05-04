@@ -35,6 +35,7 @@ Before setting up the CloudFront configuration, ensure you have:
    |--------|-------|
    | `x-edgeoptimize-api-key` | Your API key |
    | `x-forwarded-host` | `www.example.com` |
+   | `x-edgeoptimize-fetcher-key` | Your Fetcher Key (Required only in case of WAF allowlisting) |
 
    Replace `www.example.com` with your actual website domain and `Your API key` with the Edge Optimize API key provided by your Adobe representative.
 
