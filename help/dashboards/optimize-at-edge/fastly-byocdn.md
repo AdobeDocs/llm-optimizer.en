@@ -58,7 +58,6 @@ if (req.http.x-edgeoptimize-config) {
 ```
 if (req.http.x-edgeoptimize-config && resp.status >= 400) {
   set req.http.x-edgeoptimize-request = "failover";
-  set req.backend = F_Default_Origin;
   restart;
 }
 
