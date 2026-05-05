@@ -20,7 +20,7 @@ Before setting up the Fastly VCL rules, ensure you have:
 
 Add the following three VCL snippets to your Fastly service. These snippets handle routing agentic requests to Edge Optimize, cache-key separation, and failover to your default origin.
 
-![Fastly VCL](/help/assets/optimize-at-edge/fastly-vcl.png)
+![Fastly backend configuration](/help/assets/optimize-at-edge/fastly-backend-config.png)
 
 ![Add VCL snippets](/help/assets/optimize-at-edge/add-vcl-snippets.png)
 
@@ -40,6 +40,7 @@ if (!req.http.x-edgeoptimize-request
   set req.http.x-edgeoptimize-api-key = "<YOUR API KEY>"; # required for identifying the client
   set req.http.x-edgeoptimize-fetcher-key = "<YOUR FETCHER KEY>"; # Optional (required only in case of WAF)
   set req.backend = F_EDGE_OPTIMIZE;
+  return(lookup);
 }
 ```
 
@@ -57,8 +58,11 @@ if (req.http.x-edgeoptimize-config) {
 ```
 if (req.http.x-edgeoptimize-config && resp.status >= 400) {
   set req.http.x-edgeoptimize-request = "failover";
-  set req.backend = F_Default_Origin;
   restart;
+}
+
+if (req.http.x-edgeoptimize-config) {
+  return(deliver);
 }
 
 if (!req.http.x-edgeoptimize-config && req.http.x-edgeoptimize-request == "failover") {
