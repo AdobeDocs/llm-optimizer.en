@@ -61,9 +61,9 @@ To activate your trial, as an AEM Cloud customer, you can either:
 
 ![LLM Optimizer Trial](/help/overview/assets/llm-trial.png)
 
-#### Adobe Analytics customers
+#### Adobe Analytics and Adobe Customer Journey Analytics
 
-If you are an Adobe Analytics customers, you will see a banner on the Experience Cloud home page.
+For Adobe Analytics and Adobe Customer Journey Analytics customers, you will see a banner on the Experience Cloud home page.
 
 ![Experience Cloud home page with Start your Adobe LLM Optimizer Trial banner](/help/overview/assets/experience-cloud-llmo-trial-banner.png)
 
@@ -76,7 +76,7 @@ Once the trial is active, proceed with onboarding your brand name and domain.
 
 >[!NOTE]
 >
-> * **Free trial:** AEM Cloud and Adobe Analytics customers can use the free trial version of LLM Optimizer.
+> * **Free trial:** AEM Cloud and Adobe Analytics/Customer Journey Analytics customers can use the free trial version of LLM Optimizer.
 > * **Customers who activate the trial on or after April 1, 2026** can use up to 100 prompts, one domain, and can deploy optimizations across up to 10 URLs for a single opportunity type.
 > * **Customers who activated the trial before April 1, 2026** continue to have access to up to 200 prompts under their existing terms.
 >
