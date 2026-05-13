@@ -8,8 +8,6 @@ feature: Referral Traffic
 
 The Google Analytics 4 (GA4) integration connects LLM Optimizer with your organization's GA4 data so you can measure how AI-driven discovery on platforms such as ChatGPT, Gemini, Copilot, Claude and Perplexity translates into real website engagement and business outcomes. After you connect a GA4 property, LLM Optimizer pulls the referral traffic, engagement and conversion metrics that GA4 attributes to those sources and surfaces them in the **Referral Traffic** dashboard under the **Business Impact** tab.
 
-## Availability {#availability}
-
 >[!IMPORTANT]
 >
 >The GA4 integration is included in the paid LLM Optimizer offer. Customers using the free trial will not be able to connect GA4 until they upgrade to a paid offer.
@@ -34,11 +32,11 @@ The connection flow starts from the [Referral Traffic](/help/dashboards/referral
 
    ![Referral Traffic dashboard, Business Impact tab](/help/dashboards/assets/ga4-integration-01-business-impact-tab.png)
 
-1. Select **Connect to Analytics**. LLM Optimizer routes you to **Customer Configuration > Analytics**. In the Analytics Provider picker, select **Google Analytics 4**.
+1. Select **Connect to Analytics**. LLM Optimizer routes you to **Customer Configuration > Analytics**. In the Analytics Provider picker, select **Connect Google Analytics 4**.
 
    ![Customer Configuration, Analytics tab with GA4 selected](/help/dashboards/assets/ga4-integration-02-analytics-ga4-picker.png)
 
-1. Select **Connect**. A new browser tab opens to Google's sign-in screen.
+1. Select **Connect account**. A new browser tab opens to Google's sign-in screen.
 
    ![Google sign-in for GA4 connection](/help/dashboards/assets/ga4-integration-03-google-sign-in.png)
 
