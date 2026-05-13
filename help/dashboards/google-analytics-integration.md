@@ -158,8 +158,3 @@ Yes — at any time. You can either reconnect to a different account or property
 Q: My GA4 property is connected but Business Impact is empty — why?
 
 LLM Optimizer only pulls sessions that GA4 itself attributes to a supported LLM source/medium (today: ChatGPT, Gemini, Copilot, Claude, Perplexity). If your GA4 property has not yet recorded referral sessions from any of these sources in the time window shown, the dashboard will be empty even though the connection is healthy.
-
-<!-- ## Related pages {#related-pages}
-
-* [Adobe Analytics Integration](/help/dashboards/adobe-analytics-integration.md) — the Adobe Analytics counterpart of this guide.
-* [Referral Traffic](/help/dashboards/referral-traffic.md)-->
