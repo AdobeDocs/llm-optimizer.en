@@ -56,3 +56,4 @@ user-guide-description: Boost your brand with Adobe LLM Optimizer. Track mention
     + [CloudFront (BYOCDN)](/help/dashboards/optimize-at-edge/cloudfront-byocdn.md)
   + [Access control](/help/dashboards/access-control.md)
   + [Adobe Analytics integration](/help/dashboards/adobe-analytics-integration.md)
+  + [Google Analytics integration](/help/dashboards/google-analytics-integration.md)
