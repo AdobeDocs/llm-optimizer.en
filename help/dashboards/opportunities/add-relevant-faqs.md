@@ -2,6 +2,20 @@
 title: Add Relevant FAQs
 description: Learn how LLM Optimizer identifies high-traffic pages that lack structured Q&A content for AI agents, and how to review and deploy AI-generated FAQs with Optimize at Edge.
 feature: Opportunities
+autotag-review: '2026-05-15T17:28:53.611Z'
+TQID: 'https://experienceleague.adobe.com/491jK6SRnc2yJ4Uw9UzK71W3nsTWDhxt3lW0Sy8-3NQ'
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+    internal-label: LLM Optimizer
+feature_v2:
+  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
+    internal-label: Insights
+subfeature_v2:
+  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+    internal-label: Opportunities
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
 ---
 
 # Add Relevant FAQs

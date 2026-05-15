@@ -2,12 +2,12 @@
 title: Adobe Analytics Integration
 description: Learn how to connect Adobe Analytics with LLM Optimizer to measure AI-driven discovery, site engagement, and business outcomes in the Referral Traffic dashboard.
 feature: Referral Traffic
+autotag-review: '2026-05-15T17:29:50.263Z'
+TQID: 'https://experienceleague.adobe.com/Wo-7p-mNQRrpS3EhmnS38UF1-IcaKEJpUz5H3BwY8Yo'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
     internal-label: LLM Optimizer
 feature_v2:
-  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
-    internal-label: Dashboards
   - id: c0713b97-4af8-4c41-b742-5afcc6ced468
     internal-label: Insights
   - id: d1956731-2adb-4bb7-8301-2b239254ac72
@@ -18,11 +18,10 @@ subfeature_v2:
 topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
     internal-label: Measurement
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-    internal-label: Optimization
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
     internal-label: Insights
-autotag-review: '2026-04-30T18:25:39.169Z'
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 ---
 
 # Adobe Analytics Integration

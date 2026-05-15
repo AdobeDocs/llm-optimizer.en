@@ -2,6 +2,22 @@
 title: Customer Configuration
 description: Use customer configuration to define how your brand will be monitored and analyzed within the LLM optimizer platform.
 feature: Customer Configuration
+autotag-review: '2026-05-15T17:45:12.067Z'
+TQID: 'https://experienceleague.adobe.com/qa7zk54n9G19-Azz9f6mn7V1kAGvnJSOJjpxbTBeHgc'
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+    internal-label: LLM Optimizer
+feature_v2:
+  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
+    internal-label: Dashboards
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+    internal-label: Administration
+subfeature_v2:
+  - id: e69d5a42-0217-4ca5-9396-a9a826a170da
+    internal-label: Customer Configuration
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
 ---
 
 # Customer Configuration {#customer-configuration}

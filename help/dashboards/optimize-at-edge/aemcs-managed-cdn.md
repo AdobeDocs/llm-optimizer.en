@@ -2,6 +2,24 @@
 title: Optimize at Edge - AEM Cloud Service Managed CDN (Fastly)
 description: Learn how to configure the AEM Cloud Service Managed CDN (Fastly) for Optimize at Edge in LLM Optimizer.
 feature: Opportunities
+autotag-review: '2026-05-15T17:31:38.650Z'
+TQID: 'https://experienceleague.adobe.com/qrCODY3Qg6dDd9QRcaYGdN4YVCgKAsl56UTAVZpsIwE'
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+    internal-label: LLM Optimizer
+feature_v2:
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+    internal-label: Administration
+  - id: e0828736-236a-487b-a478-5a635455eadc
+    internal-label: Reporting
+subfeature_v2:
+  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+    internal-label: CDN
+  - id: e06fae5f-830b-4222-a469-b5e148d36465
+    internal-label: Agentic Traffic
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
 ---
 
 # AEM Cloud Service Managed CDN (Fastly)
@@ -10,7 +28,7 @@ This configuration routes agentic traffic (requests from AI bots and LLM user ag
 
 ## Prerequisites
 
-To access this feature:  
+To access this feature:
 
 - Paid customers must have access to the **Adobe LLM Optimizer Users** IMS Product Profile. Contact your organization’s Admin to request access.
    ![Add User to a Product Profile](/help/assets/optimize-at-edge/cs-fastly-user-product-profiles.png)

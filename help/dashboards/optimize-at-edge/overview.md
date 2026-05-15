@@ -2,12 +2,18 @@
 title: Optimize at Edge
 description: Learn how to deliver optimizations in LLM Optimizer at the CDN edge without any authoring changes required.
 feature: Opportunities
+autotag-review: '2026-05-15T17:55:41.072Z'
+TQID: 'https://experienceleague.adobe.com/kMxoKtrfyzxIpLJP9nt-rq6GP37ICCNe4XienUKqDZE'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
     internal-label: LLM Optimizer
 feature_v2:
   - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
     internal-label: Dashboards
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+    internal-label: Administration
+  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
+    internal-label: Insights
 subfeature_v2:
   - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
     internal-label: Opportunities
@@ -16,7 +22,6 @@ topic_v2:
     internal-label: Optimization
   - id: e9001ce2-5245-4a8e-8601-dd958009072f
     internal-label: Web experience
-autotag-review: '2026-04-30T18:15:36.189Z'
 ---
 
 # Optimize at Edge

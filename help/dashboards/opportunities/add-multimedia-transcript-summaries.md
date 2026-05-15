@@ -2,6 +2,20 @@
 title: Add Multimedia Transcript Summaries
 description: Learn how LLM Optimizer identifies pages where key information is embedded in video without machine-readable text, and how to review and deploy AI-generated transcript summaries with Optimize at Edge.
 feature: Opportunities
+autotag-review: '2026-05-15T17:28:28.569Z'
+TQID: 'https://experienceleague.adobe.com/LiXMsMq6D08ciXR85aQBNDpmR5Csiv-5b9kv3lfTpDc'
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+    internal-label: LLM Optimizer
+feature_v2:
+  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
+    internal-label: Insights
+subfeature_v2:
+  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+    internal-label: Opportunities
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
 ---
 
 # Add Multimedia Transcript Summaries
@@ -28,7 +42,7 @@ Fixes are applied using [Optimize at Edge](/help/dashboards/optimize-at-edge/ove
 
 LLM Optimizer flags high-traffic pages where machine-readable text is missing for embedded media, based on your configuration and page structure. Affected URLs appear in the **URLs with suggestions** table on the **Current Suggestions** tab, where you can expand a row to inspect each **Content Patch**, how it will be applied, and why it is recommended.
 
-For each page, you have: 
+For each page, you have:
 
 **Multimedia Summary** –  Structured summaries derived from video content.
 **Preview** – Before and after page comparison.

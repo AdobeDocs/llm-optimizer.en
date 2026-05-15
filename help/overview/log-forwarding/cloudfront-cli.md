@@ -2,6 +2,24 @@
 title: Log Forwarding - CloudFront (AWS CLI)
 description: Forward CloudFront CDN logs to Adobe's S3 bucket using the AWS CLI for delivery setup and operations.
 feature: Agentic Traffic
+autotag-review: '2026-05-15T17:42:44.992Z'
+TQID: 'https://experienceleague.adobe.com/NoVv3qv1RbtqAWGMPYC1Rz4wO-5Au1yL2e8tRKd9Hao'
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+    internal-label: LLM Optimizer
+feature_v2:
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+    internal-label: Administration
+subfeature_v2:
+  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+    internal-label: CDN
+  - id: e69d5a42-0217-4ca5-9396-a9a826a170da
+    internal-label: Customer Configuration
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 
 # Log Forwarding: CloudFront (AWS CLI) {#log-forwarding-cloudfront-cli}
@@ -94,7 +112,7 @@ export REGION1=us-east-1
 export CUSTOMER=<CUSTOMER_NAME> ## No Space, user letters,numbers and dash
 export CDN_ID=<YOUR_CLOUDFRONT_DISTRIBUTION_ID>
 export ACCT1=<YOUR_AWS_ACCOUNT_NUMBER>
-export DELIVERY_DEST_ARN=arn:aws:logs:us-east-1:640168421876:delivery-destination:cdn-logs-<TRANSFORM_IMS_ID>-ams  ## Replace TRANSFORM_IMS_ID with the output of the command above 
+export DELIVERY_DEST_ARN=arn:aws:logs:us-east-1:640168421876:delivery-destination:cdn-logs-<TRANSFORM_IMS_ID>-ams  ## Replace TRANSFORM_IMS_ID with the output of the command above
 ```
 
 <!--Use the **Delivery destination ARN** and org values from the LLM Optimizer CDN configuration page if they differ from the pattern above.-->

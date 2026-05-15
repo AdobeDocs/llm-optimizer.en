@@ -2,6 +2,8 @@
 title: LLM Optimizer Overview
 description: Learn about how Adobe LLM Optimizer boosts brand visibility in AI-driven search. Track mentions, citations, and insights. Start optimizing today for better engagement and influence.
 feature: Onboarding
+autotag-review: '2026-05-15T17:54:37.542Z'
+TQID: 'https://experienceleague.adobe.com/5qyk6PCTaT93tz-UUnYRYznylOh4lXHuH1yN98g3wIE'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
     internal-label: LLM Optimizer
@@ -17,7 +19,6 @@ topic_v2:
     internal-label: Insights
   - id: fc314d1d-7cb9-4a38-8dbd-8f9b6478f40d
     internal-label: Content strategy
-autotag-review: '2026-04-30T18:13:19.543Z'
 ---
 
 # LLM Optimizer Overview

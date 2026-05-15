@@ -2,6 +2,20 @@
 title: Simplify Complex Content
 description: Learn how LLM Optimizer identifies high-traffic pages with dense copy that is hard for AI agents to interpret, and how to review and deploy simplified text with Optimize at Edge.
 feature: Opportunities
+autotag-review: '2026-05-15T17:58:39.879Z'
+TQID: 'https://experienceleague.adobe.com/wO3ZY-fEgOi7cD4dq0kCltk-YJSD431bkA6-9PW42Lo'
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+    internal-label: LLM Optimizer
+feature_v2:
+  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
+    internal-label: Insights
+subfeature_v2:
+  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+    internal-label: Opportunities
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
 ---
 
 # Simplify Complex Content
@@ -24,7 +38,7 @@ Fixes are applied using [Optimize at Edge](/help/dashboards/optimize-at-edge/ove
 
 LLM Optimizer identifies pages that receive high agentic traffic and where content scores below readability thresholds, then suggests rewrites of the copy. For each page you have:
 
-**Improved Text** - simplified content grounded in what is already on the page. 
+**Improved Text** - simplified content grounded in what is already on the page.
 **Preview** - a before and after comparison for agentic traffic.
 
 Affected URLs appear in the **URLs with suggestions** table on the **Current Suggestions** tab, where you can expand a row to inspect each recommendation.
