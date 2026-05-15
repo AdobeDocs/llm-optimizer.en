@@ -2,6 +2,17 @@
 title: Optimize at Edge - Akamai (BYOCDN)
 description: Learn how to configure Akamai BYOCDN for Optimize at Edge in LLM Optimizer.
 feature: Opportunities
+autotag-review: '2026-05-15T17:34:47.891Z'
+TQID: 'https://experienceleague.adobe.com/oGtqsnvHYn0BSNLl40-KpVl0TjCZHESRgH1LcVmjOiY'
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+    internal-label: LLM Optimizer
+feature_v2:
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+    internal-label: Administration
+subfeature_v2:
+  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+    internal-label: CDN
 ---
 
 # Akamai (BYOCDN)
@@ -94,7 +105,7 @@ Set `x-forwarded-host` header to `{{builtin.AK_HOST}}`
 
 **9. Site Failover**
 
-The Site Failover configuration has two parts: the failover behavior (configured inside the main optimize-at-edge routing rule) and a separate failover test header rule. 
+The Site Failover configuration has two parts: the failover behavior (configured inside the main optimize-at-edge routing rule) and a separate failover test header rule.
 
 **9a. Site Failover Behavior (inside the main optimize-at-edge routing rule)**
 
@@ -106,7 +117,7 @@ Inside the main routing rule, configure the Site Failover behavior and the Advan
 
 ![Site Failover](/help/assets/optimize-at-edge/akamai-step9-failover.png)
 
-Add the request header `x-edgeoptimize-request` with value `fo` through Advanced XML: 
+Add the request header `x-edgeoptimize-request` with value `fo` through Advanced XML:
 
 ```
 <forward:availability.fail-action2>

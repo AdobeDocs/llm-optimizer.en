@@ -2,6 +2,17 @@
 title: Optimize at Edge - CloudFront (BYOCDN)
 description: Learn how to configure CloudFront BYOCDN for Optimize at Edge in LLM Optimizer.
 feature: Opportunities
+autotag-review: '2026-05-15T17:41:48.977Z'
+TQID: 'https://experienceleague.adobe.com/fGlW2FIQooU-8nv8H1lH3WOxinOFUVK7RVNol7ACPq8'
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+    internal-label: LLM Optimizer
+feature_v2:
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+    internal-label: Administration
+subfeature_v2:
+  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+    internal-label: CDN
 ---
 
 # CloudFront (BYOCDN)
@@ -61,7 +72,7 @@ Before setting up the CloudFront configuration, ensure you have:
    * `TARGETED_PATHS` — Set to `null` to target all HTML pages, or set to an array of specific paths, for example, `['/', '/products', '/about']`.
 
 4. Click **Save changes** > **Publish function**.
-  
+
   ![Cloudfront Function Creation](/help/assets/optimize-at-edge/cloudfront-function-creation.png)
 
 
