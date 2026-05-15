@@ -2,6 +2,22 @@
 title: BYOCDN Log Forwarding Overview
 description: Learn how to forward CDN logs from your provider to Adobe's S3 bucket for agentic traffic data collection in LLM Optimizer.
 feature: Agentic Traffic
+autotag-review: '2026-05-15T17:53:26.846Z'
+TQID: 'https://experienceleague.adobe.com/EPQ6GBjNXpIwYTuzj1xDKkIzuFLOWFPmu0lqSGUAX3I'
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+    internal-label: LLM Optimizer
+feature_v2:
+  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
+    internal-label: Dashboards
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+    internal-label: Administration
+subfeature_v2:
+  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+    internal-label: CDN
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
 ---
 
 # BYOCDN Log Forwarding Overview {#cdn-log-forwarding}

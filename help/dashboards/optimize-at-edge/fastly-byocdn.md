@@ -2,6 +2,17 @@
 title: Optimize at Edge - Fastly (BYOCDN)
 description: Learn how to configure Fastly BYOCDN for Optimize at Edge in LLM Optimizer.
 feature: Opportunities
+autotag-review: '2026-05-15T17:51:24.924Z'
+TQID: 'https://experienceleague.adobe.com/qXp1pbmZrxahHFOUzIuo-WEawdgNWIIQKDyy0yL2MLA'
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+    internal-label: LLM Optimizer
+feature_v2:
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+    internal-label: Administration
+subfeature_v2:
+  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+    internal-label: CDN
 ---
 
 # Fastly (BYOCDN)

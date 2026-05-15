@@ -2,6 +2,19 @@
 title: Dashboards Overview
 description: This is the article overview.
 feature: Onboarding
+autotag-review: '2026-05-15T17:45:28.871Z'
+TQID: 'https://experienceleague.adobe.com/a4jqbgyeEOywNZDdjdceKGaqwZ5LjFQabrottqS7jVs'
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+    internal-label: LLM Optimizer
+feature_v2:
+  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
+    internal-label: Dashboards
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 
 # Dashboards overview
