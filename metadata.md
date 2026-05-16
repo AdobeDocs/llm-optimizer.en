@@ -3,7 +3,7 @@ cloud: Experience Cloud
 solution: LLM Optimizer
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-    label: "LLM Optimizer"
+    internal-label: "LLM Optimizer"
 type: Documentation
 description: LLM Optimizer documentation.
 mini-toc-levels: 2
