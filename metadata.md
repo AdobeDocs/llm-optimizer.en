@@ -4,6 +4,7 @@ solution: LLM Optimizer
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
     internal-label: "LLM Optimizer"
+usetq: true
 type: Documentation
 description: LLM Optimizer documentation.
 mini-toc-levels: 2
