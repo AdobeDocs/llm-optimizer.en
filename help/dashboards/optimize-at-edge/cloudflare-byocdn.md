@@ -134,6 +134,8 @@ After creating the worker, click **Edit code** and replace the default code with
 const AGENTIC_BOTS = [
   'AdobeEdgeOptimize-AI',
   'ChatGPT-User',
+  'Claude-SearchBot',
+  'Claude-User',
   'GPTBot',
   'OAI-SearchBot',
   'PerplexityBot',

@@ -38,6 +38,8 @@ Set routing for the following user agents:
 ```
  *AdobeEdgeOptimize-AI*
  *ChatGPT-User*
+ *Claude-SearchBot*
+ *Claude-User*
  *GPTBot*
  *OAI-SearchBot*
  *PerplexityBot*
