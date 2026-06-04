@@ -42,6 +42,9 @@ Set routing for the following user agents:
  *OAI-SearchBot*
  *PerplexityBot*
  *Perplexity-User*
+ *ClaudeBot*
+ *Claude-User*
+ *Claude-SearchBot*
 ```
 
 >[!NOTE]
