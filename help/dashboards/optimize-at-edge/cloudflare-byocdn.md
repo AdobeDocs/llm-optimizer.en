@@ -134,13 +134,13 @@ After creating the worker, click **Edit code** and replace the default code with
 const AGENTIC_BOTS = [
   'AdobeEdgeOptimize-AI',
   'ChatGPT-User',
-  'Claude-SearchBot',
-  'Claude-User',
-  'ClaudeBot',
   'GPTBot',
   'OAI-SearchBot',
   'PerplexityBot',
-  'Perplexity-User'
+  'Perplexity-User',
+  'ClaudeBot',
+  'Claude-User',
+  'Claude-SearchBot'
 ];
 
 // Targeted paths for Edge Optimize routing
