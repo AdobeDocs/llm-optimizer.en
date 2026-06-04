@@ -36,6 +36,7 @@ In order to configure how LLM Optimizer monitors and analyzes your brand presenc
 * [Brand Aliases](#brand-aliases)
 * [CDN Configuration](#agentic-cdn)
 * [Google Search Console](#google-console)
+* [Prompt Suggestions based on Citation Attempts and Referral Traffic](#prompt-suggestions)
 
 If you are on the [Brand Centric experience](/help/overview/quick-start.md#brand-centric-experience), navigate to **Brands Management** to setup and configure brands, brand aliases and define competitors to track against. **Brands Management** is also used to configure integrations such as Google Search Console, Adobe Analytics, and CDN log forwarding related to URLs associated with brands. You can do this by clicking on the corresponding tabs: GSC, CDN and so on.
 
@@ -257,3 +258,122 @@ Yes, you can delete any prompt you do not want to monitor. Deleted prompts are r
 Q: Once I add prompts from Google Search Console to my prompts list, how soon will I see Brand Presence data for those prompts?
 
 Brand Presence data for newly added prompts will appear during the next scheduled data refresh, which typically runs at the beginning of each week. Depending on when you add the prompts, you may see results within a few days.
+
+## Prompt Suggestions based on Citation Attempts and Referral Traffic {#prompt-suggestions}
+
+Instead of guessing which prompts matter, **Prompt Suggestions** start from what AI agents and users are already accessing or being referred to on your site.
+
+Adobe LLM Optimizer analyzes your CDN data to identify which pages AI agents are already consistently accessing (citation attempts) and referring users to (LLM referral traffic). After that, it automatically generates prompt suggestions based on gaps in your current prompt coverage. Instead of guessing which URLs to prioritize and which prompts to create, the workflow starts from real traffic signals: pages that agents are already reaching for and then defining the kind of user prompts those pages should be answering.
+
+When a page is already being consistently accessed by AI agents, the question is not how to get agents to know about the page, but which questions the page content could answer. Without prompts configured for these pages, you have no visibility into how your brand shows up in AI answers on topics that matter most. Prompt Suggestions from Agentic Traffic closes that gap so you can start tracking and improving brand visibility for the pages where agents are already most active.
+
+>[!NOTE]
+>
+> On the [Brand Centric experience](/help/overview/quick-start.md#brand-centric-experience), prompt suggestions are surfaced in the **Prompts Management** section.
+
+### How it works {#prompt-suggestions-how-it-works}
+
+The Prompt Suggestions workflow runs in four steps, turning CDN traffic signals into ready-to-configure prompt suggestions. Each step builds on the previous one: starting from pages where AI agent activity is already proven, understanding what those pages are about, checking what is already covered and generating prompts that are specific, grounded and ready to publish.
+
+![Prompt Suggestions from Agentic Traffic workflow](/help/dashboards/assets/prompt-suggestions-workflow.png)
+
+#### Step 1 — Identify high-signal pages from agentic traffic {#prompt-suggestions-step-1}
+
+The pipeline begins by identifying pages on your site that AI systems are already actively engaging with, using two signals from your CDN data: how frequently AI systems access your pages as a source while answering real user questions and whether those pages are already driving real users to your site from AI-generated answers.
+
+* **Citation attempts** — how AI systems accessed a page as a potential source while answering user questions. The pipeline looks for pages that show consistent citation attempt activity week over week, giving a more holistic picture of interest than a single point in time.
+* **LLM referral traffic** — instances where a user clicked through from an AI-generated answer to land on the URL. The pipeline focuses on the most recent referral data and prioritizes pages with the highest volume of AI-driven visits, ensuring suggestions are grounded in current and proven AI recommendation patterns.
+
+| Signal | What it means |
+|--------|---------------|
+| Citation attempts only | Agents are consistently accessing this page as a potential source |
+| LLM referral traffic only | Agents are actively sending users to this page |
+| Both | Agents access it and users click through — the highest-confidence target |
+
+A page can qualify through either signal or both. Pages showing both signals represent the highest-confidence targets for prompt generation.
+
+#### Step 2 — Analyze page content and intent {#prompt-suggestions-step-2}
+
+For each qualifying page, the pipeline reads the page content and:
+
+* **Summarizes** it into a concise, fact-grounded description that becomes the basis for everything that follows.
+* **Classifies** the page type whether it is a Product, Resource, Support or Hub.
+* Identifies the **primary journey intent** — the type of question the page is best positioned to answer, such as informational, instructional, comparative or transactional.
+
+The two classifications work together. For example, prompts generated from a support page such as a setup guide or tutorial are more likely to be relevant to an existing user persona than a new audience.
+
+#### Step 3 — Check existing prompt coverage {#prompt-suggestions-step-3}
+
+Before generating anything new, the pipeline checks whether each qualifying page is already covered by prompts configured in your LLM Optimizer account, running in two passes:
+
+1. A semantic similarity scan that quickly identifies candidate prompts from your existing prompt library that are potentially related to the page.
+2. An LLM-powered review that scores how well each prompt candidate aligns with the page content — not just whether it is topically related, but whether it covers what the page is about.
+
+A page is considered covered if at least one existing prompt meets that threshold. Pages with no adequate match are identified as gaps and move to step 4.
+
+#### Step 4 — Generate, quality check, and rank prompts by URL {#prompt-suggestions-step-4}
+
+![Prompt generation and quality check](/help/dashboards/assets/prompt-suggestions-generation.png)
+
+For each gap page, the pipeline generates natural-sounding prompts grounded in what the page content is about. It begins by identifying relevant personas — someone who would realistically ask questions that this page answers and builds a realistic scenario around that persona before generating candidate prompts.
+
+Every prompt goes through an automated quality review across three dimensions:
+
+* Whether it is **specific** to this page rather than a generic question that could apply to any page in the category.
+* Whether it is **grounded** in the page's actual content.
+* Whether it sounds like something a **real user** would type into an AI tool such as ChatGPT.
+
+Prompts that do not pass this review are rewritten with specific feedback and reviewed again. If they still do not pass, they are dropped.
+
+The final step is a diversity check, prompts across URLs that are too similar to each other are dropped from the final list. Each prompt is tagged with your pre-configured topic and category, and includes a reasoning field that explains why the source URL was targeted based on its citation attempt and referral traffic signals. Prompts are also assigned a priority ranking so you know which suggestions to act on first — higher priority means stronger combined AI signal from the source URL. Prompts are then ready to review under the **Prompt Suggestions** tab in the Customer Configuration dashboard.
+
+### How to use {#prompt-suggestions-how-to-use}
+
+1. Open the **Customer Configuration** dashboard and go to the **Prompt Suggestions** tab.
+1. Use the **Source** filter to select **Citation Attempt** to view suggestions generated from agentic traffic.
+1. Review the **Reasoning** and **Priority** columns to evaluate each suggestion.
+1. Select the prompts you want to add and click **Add selection** to add them to your configured prompts.
+
+![Prompt Suggestions tab with Citation Attempt source filter](/help/dashboards/assets/prompt-suggestions-citation-attempt.png)
+
+![Add selected prompt suggestions](/help/dashboards/assets/prompt-suggestions-add-selection.png)
+
+### Frequently Asked Questions {#prompt-suggestions-faq}
+
+Q: Does my organization need any additional configuration to use this feature?
+
+This feature relies on CDN log data. If you have already enabled [CDN log forwarding](#cdn-configuration), no additional setup is needed. Without CDN logs, citation attempt or referral traffic data will not be available for analysis.
+
+Q: Why doesn't a specific URL show up in the suggestions?
+
+There are a few common reasons. The page may not yet have consistent AI retrieval activity or meaningful referral traffic — without one of those signals, it does not enter the pipeline. It may already be covered by an existing configured prompt since the pipeline only generates suggestions for true gaps. Or the page type may not be eligible for prompt generation.
+
+Q: Can suggestions change over time?
+
+Yes. The pipeline runs periodically as new CDN data becomes available. As user and agent behavior evolves (which pages are being accessed, how frequently and which are driving referral traffic) the suggestions reflect those changes. Pages that were not high-signal before may qualify in future runs and existing gaps that have been addressed will no longer generate new suggestions.
+
+Q: Why am I seeing URLs I didn't expect in the suggestions?
+
+The URLs surfaced are based entirely on observed agentic behavior — pages that AI systems have been consistently accessing or referring users to, regardless of how prominent they appear in your content strategy. In some cases, these may be pages you never considered important but that AI has repeatedly reached for. If a URL appears in the suggestions, it is because the data supports it. You are always free to ignore suggestions that do not fit your strategy, but the data behind each suggestion is grounded in real AI activity.
+
+Q: What does the reasoning field mean?
+
+Each prompt includes an explanation of why its source URL was listed as a suggestion. For pages qualifying through citation attempts, it shows how the page ranks among all pages being accessed based on weekly attempts. For pages qualifying through referral traffic, it shows the same for referral page views. Pages with both signals show both. This helps you understand priority and choose which suggestions to publish first.
+
+For a page with both signals, the reasoning might look like: *Generated for [page URL] — ranks in top 3% by median weekly citation attempts and top 1% by LLM referral traffic.*
+
+Q: How is priority determined?
+
+Priority is based on a combined score of two signals: how a page ranks among all pages by citation attempts and how it ranks among all pages by LLM referral page views. Both are expressed as percentiles and added together, so pages that score strongly on both signals naturally rise to the top. A page that AI is both consistently accessing and actively sending users to, will always rank higher than a page with only one signal.
+
+Q: How does the pipeline decide which pages qualify based on citation attempts?
+
+The pipeline looks for pages that show consistent AI retrieval activity over time. To qualify, a page must meet two conditions: it must show meaningful activity in at least half of the weeks in the available data and its median agentic hits count during those active weeks must rank in the top 25% across all pages. Both conditions must hold — frequency alone is not enough and hits volume alone is not enough either.
+
+Q: How does the pipeline decide which pages qualify based on referral traffic?
+
+A page qualifies if it appears in the top 10% of all pages by total LLM referral visits over the most recent three months. This ensures suggestions are grounded in pages that are already generating real, measurable click-through from AI answers, based on recent behavior.
+
+Q: Are prompt suggestions available in languages other than English?
+
+Not yet. The pipeline currently generates prompts in English only. Multi-language support will be added in a future release.
