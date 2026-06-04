@@ -136,6 +136,7 @@ const AGENTIC_BOTS = [
   'ChatGPT-User',
   'Claude-SearchBot',
   'Claude-User',
+  'ClaudeBot',
   'GPTBot',
   'OAI-SearchBot',
   'PerplexityBot',

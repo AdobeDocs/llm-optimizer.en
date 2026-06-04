@@ -40,6 +40,7 @@ Set routing for the following user agents:
  *ChatGPT-User*
  *Claude-SearchBot*
  *Claude-User*
+ *ClaudeBot*
  *GPTBot*
  *OAI-SearchBot*
  *PerplexityBot*
