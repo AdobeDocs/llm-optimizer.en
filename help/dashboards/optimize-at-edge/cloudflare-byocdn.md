@@ -21,7 +21,7 @@ This configuration routes agentic traffic (requests from AI bots and LLM user ag
 
 **Prerequisites**
 
-Before setting up the Cloudflare Worker routing rules, ensure you have:
+Before you set up the Cloudflare Worker routing rules, ensure you have:
 
 * A Cloudflare account with Workers enabled on your domain.
 * Access to your domain's DNS settings in Cloudflare.

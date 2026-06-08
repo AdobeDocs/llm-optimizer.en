@@ -21,7 +21,7 @@ This configuration routes agentic traffic (requests from AI bots and LLM user ag
 
 **Prerequisites**
 
-Before setting up the Fastly VCL rules, ensure you have:
+Before you set up the Fastly VCL rules, ensure you have:
 
 * Access to Fastly for your domain.
 * An Edge Optimize API key retrieved from the LLM Optimizer UI. For steps, see [Retrieve your API keys](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key).
