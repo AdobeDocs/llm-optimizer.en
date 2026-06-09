@@ -203,9 +203,10 @@ const AGENTIC_BOTS = [
   'OAI-SearchBot',
   'PerplexityBot',
   'Perplexity-User',
-  // Add additional user agents as needed
   'ClaudeBot',
-  'Anthropic-AI'
+  'Claude-User',
+  'Claude-SearchBot',
+  // Add additional user agents as needed
 ];
 ```
 
