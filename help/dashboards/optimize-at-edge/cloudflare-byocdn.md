@@ -114,7 +114,7 @@ Follow these steps to create and configure the worker manually.
 
 **Step 2: Add the Worker code**
 
-After creating the worker, click **Edit code** and replace the default code with the code from [worker.js](https://github.com/adobe-rnd/llmo-edge-optimize-samples/blob/main/cloudflare/worker.js). If you already have an existing Cloudflare Worker, merge the code with your existing worker code instead of replacing it entirely.
+After creating the worker, click **Edit code** and replace the default code with the code from [worker.js](https://github.com/adobe/llmo-code-samples/blob/main/optimize-at-edge/cloudflare/automation/src/worker.js). If you already have an existing Cloudflare Worker, merge the code with your existing worker code instead of replacing it entirely.
 
 Click **Save and deploy** to publish the worker.
 
