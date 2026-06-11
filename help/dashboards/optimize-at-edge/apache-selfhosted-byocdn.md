@@ -52,37 +52,30 @@ SetEnvIfExpr "%{HTTP_HOST} =~ m#(?i)^(www\.)?example\.com(:\d+)?$#" OAE_DOMAIN_E
 
 **3. Include the files in your virtual host**
 
-Add the two `Include` lines to your existing `<VirtualHost *:443>`. The routing file goes **before** your `ProxyPass` rules; the failover file goes **after** them.
+Add the two `Include` lines to your existing `<VirtualHost *:443>`. The routing file goes **before** your `ProxyPass` rules; the failover file goes **after** them. In the example below, lines marked `#NEWLINE` are the only lines you add for Optimize at Edge — everything else is your existing configuration.
 
 ```
-Define ORIGIN_HOST  www.example.com
-Define OAE_CONF_DIR conf/oae
+Define ORIGIN_HOST  www.example.com               #NEWLINE
+Define OAE_CONF_DIR conf/oae                       #NEWLINE
 
 <VirtualHost *:443>
     ServerName www.example.com
     ProxyPreserveHost Off
 
-    # OAE routing — BEFORE your ProxyPass rules.
-    Include "${OAE_CONF_DIR}/oae-routing.conf"
+    Include "${OAE_CONF_DIR}/oae-routing.conf"     #NEWLINE  OAE routing — BEFORE your ProxyPass rules
 
     # Restore the origin Host header for human/origin traffic.
-    RequestHeader set Host "${ORIGIN_HOST}" "env=!ADOBE_EDGE_OPTIMIZE"
+    RequestHeader set Host "${ORIGIN_HOST}" "env=!ADOBE_EDGE_OPTIMIZE"   #NEWLINE
     ProxyPass        "/" "https://${ORIGIN_HOST}/"
     ProxyPassReverse "/" "https://${ORIGIN_HOST}/"
 
-    # OAE failover — AFTER your ProxyPass rules.
-    Include "${OAE_CONF_DIR}/oae-failover.conf"
+    Include "${OAE_CONF_DIR}/oae-failover.conf"    #NEWLINE  OAE failover — AFTER your ProxyPass rules
 </VirtualHost>
 ```
 
 **4. Reload Apache**
 
-Validate the configuration and reload Apache to apply the changes:
-
-```
-apachectl configtest
-apachectl -k graceful
-```
+Validate the configuration and reload Apache to apply the changes.
 
 >[!NOTE]
 >
