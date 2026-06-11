@@ -64,7 +64,7 @@ Before setting up the CloudFront configuration, ensure you have:
    * **Name:** `edgeoptimize-routing`
    * **Runtime:** `cloudfront-js-2.0`
 
-3. Replace the default code with the code from [viewer-request.js](https://github.com/adobe-rnd/llmo-edge-optimize-samples/blob/main/cloudfront/cloudfront-function/viewer-request.js).
+3. Replace the default code with the code from [viewer-request.js](https://github.com/adobe/llmo-code-samples/blob/main/optimize-at-edge/cloudfront/cloudfront-function/viewer-request.js).
 
    Before publishing,customize the following values in the code:
 
@@ -192,7 +192,7 @@ If your behavior uses an AWS managed cache policy (for example, `CachingOptimize
 
 4. Click **Create function**.
 
-5. In the code editor, replace the default code with the code from [origin-request-response.js](https://github.com/adobe-rnd/llmo-edge-optimize-samples/blob/main/cloudfront/lambda/origin-request-response.js).
+5. In the code editor, replace the default code with the code from [origin-request-response.js](https://github.com/adobe/llmo-code-samples/blob/main/optimize-at-edge/cloudfront/lambda/origin-request-response.js).
 
 6. Click **Deploy** to save the code.
 
@@ -206,7 +206,7 @@ The auto-created role only trusts `lambda.amazonaws.com`. For Lambda@Edge, you m
 
 1. Click **Edit trust policy**.
 
-2. Replace the policy with the content from [trust-policy.json](https://github.com/adobe-rnd/llmo-edge-optimize-samples/blob/main/cloudfront/lambda/trust-policy.json).
+2. Replace the policy with the content from [trust-policy.json](https://github.com/adobe/llmo-code-samples/blob/main/optimize-at-edge/cloudfront/lambda/trust-policy.json).
 
 3. Click **Update policy**.
 
@@ -221,7 +221,7 @@ The auto-created role comes with an `AWSLambdaBasicExecutionRole` policy configu
 
 1. Click **Edit**.
 
-2. Replace the policy with the content from [cloudwatch-policy.json](https://github.com/adobe-rnd/llmo-edge-optimize-samples/blob/main/cloudfront/lambda/cloudwatch-policy.json).
+2. Replace the policy with the content from [cloudwatch-policy.json](https://github.com/adobe/llmo-code-samples/blob/main/optimize-at-edge/cloudfront/lambda/cloudwatch-policy.json).
 
    In the JSON, replace `ACCOUNT_ID` with your actual AWS account ID (found in the top-right corner of the AWS Console) and `FUNCTION_NAME` with the name of your Lambda function (for example, `edgeoptimize-origin`).
 
