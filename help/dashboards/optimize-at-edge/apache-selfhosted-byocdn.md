@@ -1,5 +1,5 @@
 ---
-title: Optimize at Edge - Apache HTTP Server / Self-Hosted (BYOCDN)
+title: Optimize at Edge - Apache (Reverse Proxy)
 description: Learn how to configure Apache HTTP Server (self-hosted reverse proxy) BYOCDN for Optimize at Edge in LLM Optimizer.
 feature: Opportunities
 product_v2:
@@ -13,7 +13,7 @@ subfeature_v2:
     internal-label: CDN
 ---
 
-# Apache HTTP Server / Self-Hosted (BYOCDN)
+# Apache (Reverse Proxy)
 
 This configuration applies when Apache HTTP Server acts as the reverse proxy in front of your origin (a self-hosted setup, **without** AEM Dispatcher). It routes agentic traffic (requests from AI bots and LLM user agents) to the Edge Optimize backend service (`live.edgeoptimize.net`). Human visitors and SEO bots continue to be served from your origin as usual. To test the configuration, after the setup is complete, look for the header `x-edgeoptimize-request-id` in the response.
 
@@ -78,11 +78,11 @@ Validate the configuration and reload Apache to apply the changes.
 >
 >Bot-optimized and human responses are kept in separate cache entries automatically (the routing file sets `Vary: x-edgeoptimize-config`). If your Apache already uses `mod_cache`, ensure it has `CacheQuickHandler Off` so the cache lookup runs after the Edge Optimize headers are set.
 
-**Allow Optimize at Edge through firewall rules (optional)**
+## Allow Optimize at Edge through firewall rules (optional)
 
 {{waf-allowlist-setup}}
 
-**Verify the setup**
+## Verify the setup
 
 After completing the setup, verify that bot traffic is being routed to Edge Optimize and that human traffic remains unaffected.
 

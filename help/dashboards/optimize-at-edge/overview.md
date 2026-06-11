@@ -88,7 +88,7 @@ To guide the setup process, select your CDN provider below and follow the corres
 | Akamai (BYOCDN) | Bring Your Own CDN | [View setup guide](/help/dashboards/optimize-at-edge/akamai-byocdn.md) |
 | Cloudflare (BYOCDN) | Bring Your Own CDN | [View setup guide](/help/dashboards/optimize-at-edge/cloudflare-byocdn.md) |
 | CloudFront (BYOCDN) | Bring Your Own CDN | [View setup guide](/help/dashboards/optimize-at-edge/cloudfront-byocdn.md) |
-| Apache HTTP Server / Self-Hosted (BYOCDN) | Bring Your Own CDN | [View setup guide](/help/dashboards/optimize-at-edge/apache-selfhosted-byocdn.md) |
+| Apache (Reverse Proxy) | Bring Your Own CDN | [View setup guide](/help/dashboards/optimize-at-edge/apache-selfhosted-byocdn.md) |
 
 >[!NOTE]
 >
