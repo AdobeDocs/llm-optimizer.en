@@ -52,7 +52,7 @@ SetEnvIfExpr "%{HTTP_HOST} =~ m#(?i)^(www\.)?example\.com(:\d+)?$#" OAE_DOMAIN_E
 
 **3. Include the files in your virtual host**
 
-Add the two `Include` lines to your existing `<VirtualHost *:443>`. The routing file goes **before** your `ProxyPass` rules; the failover file goes **after** them. In the example below, lines marked `#NEWLINE` are the only lines you add for Optimize at Edge — everything else (`ServerName`, `ProxyPass`, and the rest) is your existing, unchanged configuration.
+Add the two `Include` lines to your existing `<VirtualHost *:443>`. The routing file goes **before** your rewrite and `ProxyPass` rules; the failover file goes **after** them. In the example below, lines marked `#NEWLINE` are the only lines you add for Optimize at Edge — everything else (`ServerName`, `ProxyPass`, and the rest) is your existing, unchanged configuration.
 
 ```
 Define OAE_CONF_DIR conf/oae                       #NEWLINE  directory holding the OAE include files
@@ -60,7 +60,7 @@ Define OAE_CONF_DIR conf/oae                       #NEWLINE  directory holding t
 <VirtualHost *:443>
     ServerName www.example.com
 
-    Include "${OAE_CONF_DIR}/oae-routing.conf"     #NEWLINE  OAE routing — BEFORE your ProxyPass rules
+    Include "${OAE_CONF_DIR}/oae-routing.conf"     #NEWLINE  OAE routing — BEFORE your Rewrite & ProxyPass rules
 
     # --- your existing rewrite rules and ProxyPass to origin ---
     ProxyPass        "/" "https://www.example.com/"
