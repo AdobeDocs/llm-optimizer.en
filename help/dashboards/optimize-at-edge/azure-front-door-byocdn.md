@@ -165,7 +165,7 @@ The Request path RegEx matches the site root, paths ending in `/`, extensionless
 
 The `x-edgeoptimize-monitor` header marks the request on its first pass through the rule engine. On the failover path (when the request re-enters Front Door from the Priority 2 origin), this header is already present, so the bot conditions no longer match and the request falls through to your default origin instead of looping back to Edge Optimize.
 
-### Rule 3: HealthProbeRewrite02
+### Rule 3: HealthProbeRewrite03
 
 This rule rewrites Azure Front Door health probe requests so they reach your origin as `/` instead of `/health/<domain>`. This lets Front Door monitor Edge Optimize availability without requiring a dedicated health endpoint on your origin. Set **Stop evaluating remaining rules** to **On**.
 
@@ -180,10 +180,10 @@ This rule rewrites Azure Front Door health probe requests so they reach your ori
 
 **Actions:**
 
-| Action | Operator | Detail | Value |
+| Action | Operator | Header / Field | Value |
 |---|---|---|---|
 | URL rewrite | — | Source pattern: `/health/`, Destination: `/`, Preserve unmatched path: No | — |
-| Response header | Overwrite | `Origin-Health` | `Healthy` |
+| Response header | Overwrite | `custom-origin-health` | `routed` |
 | Request header | Append | `user-agent` | ` AdobeEdgeOptimize/1.0` |
 | Route configuration override | — | Origin group | `default-origin-group` |
 | Route configuration override | — | Forwarding protocol | Match incoming request |
@@ -193,7 +193,7 @@ This rule rewrites Azure Front Door health probe requests so they reach your ori
 >
 >When you append the `user-agent` value, include a leading space (` AdobeEdgeOptimize/1.0`). Azure Front Door appends the value exactly as entered, so the leading space keeps it separated from the existing user-agent string. The `AdobeEdgeOptimize/1.0` user agent lets your origin and WAF identify health probe traffic.
 >
->The `Origin-Health: Healthy` response header is a diagnostic that confirms the health probe rewrite is being applied. You can remove it after you verify the setup.
+>The `custom-origin-health: routed` response header is a diagnostic that confirms the health probe rewrite is being applied. You can remove it after you verify the setup.
 
 ## Step 4: Associate the rule set with the route
 
@@ -214,7 +214,7 @@ Azure Front Door handles failover through the priority-based origin group rather
 
 >[!NOTE]
 >
->Failover on Azure Front Door is transparent — it is driven by origin group priority and health probes, not by per-request logic. Unlike code-based CDN integrations, Azure Front Door does **not** add an `x-edgeoptimize-fo` response header to failover responses. To confirm whether a response came from Edge Optimize, check for the `x-edgeoptimize-request-id` header.
+>Failover on Azure Front Door is transparent — it is driven by origin group priority and health probes, not by per-request logic. To confirm whether a response came from Edge Optimize, check for the `x-edgeoptimize-request-id` header.
 
 **Allow Optimize at Edge through firewall rules (optional)** {#allow-optimize-at-edge-through-firewall-rules-optional}
 
@@ -261,10 +261,6 @@ The response should **not** contain the `x-edgeoptimize-request-id` header. The 
 |---|---|---|
 | `x-edgeoptimize-request-id` | Present — contains a unique request ID | Absent |
 
->[!NOTE]
->
->Azure Front Door does not add an `x-edgeoptimize-fo` header on failover. Use the presence or absence of `x-edgeoptimize-request-id` to tell whether a response was served by Edge Optimize.
-
 **Troubleshooting**
 
 | Issue | Possible Cause | Solution |
@@ -275,7 +271,7 @@ The response should **not** contain the `x-edgeoptimize-request-id` header. The 
 | 401 or 403 errors from Edge Optimize | Invalid or missing API key. | Verify the `x-edgeoptimize-api-key` value in Rule 2 matches the key from the LLM Optimizer UI. |
 | Static assets (CSS, JS, images) are being routed to Edge Optimize | Request path RegEx is matching non-HTML paths. | Confirm the Request path RegEx in Rule 2 is `(^$\|^.*/$\|(^\|.*/)[^./]+$\|^.*\.html$)`. |
 | Infinite loop or repeated routing | The loop-protection header is not being set or checked. | Verify Rule 2 sets `x-edgeoptimize-monitor` to `1` and includes the `x-edgeoptimize-monitor` (Not Contains `1`) and `x-edgeoptimize-request` (Not Contains `failover`, `1`) conditions. |
-| Edge Optimize origin always shows unhealthy | Health probe path or rewrite rule is misconfigured. | Confirm the origin group health probe path is `/health/<your-domain>` and that Rule 3 (`HealthProbeRewrite02`) rewrites `/health/` to `/` and overrides the origin group to `default-origin-group`. |
+| Edge Optimize origin always shows unhealthy | Health probe path or rewrite rule is misconfigured. | Confirm the origin group health probe path is `/health/<your-domain>` and that Rule 3 (`HealthProbeRewrite03`) rewrites `/health/` to `/` and overrides the origin group to `default-origin-group`. |
 
 >[!NOTE]
 >
