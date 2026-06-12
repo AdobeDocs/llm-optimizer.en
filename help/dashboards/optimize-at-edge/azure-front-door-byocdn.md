@@ -111,11 +111,11 @@ Rewrites Azure Front Door health probe requests so they reach your origin as `/`
 
 Open your route, scroll to the **Rules** section at the bottom, and select the `EORouting` rule set from the dropdown. If you have existing rule sets, use **Move to top** to position `EORouting` at **#1**. The Optimize at Edge rules only intercept agentic traffic and Edge Optimize loop-back requests — all other traffic passes through unaffected to your other rules. Save and wait for propagation (approximately 20 minutes).
 
-**Allow Optimize at Edge through firewall rules (optional)**
+## Allow Optimize at Edge through firewall rules (optional)
 
 {{waf-allowlist-setup}}
 
-**Verify the setup**
+## Verify the setup
 
 After completing the setup, verify that bot traffic is being routed to Edge Optimize and that human traffic remains unaffected.
 
