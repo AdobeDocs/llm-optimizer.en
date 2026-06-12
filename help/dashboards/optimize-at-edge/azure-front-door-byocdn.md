@@ -27,17 +27,6 @@ Before you set up the Azure Front Door routing rules, ensure you have:
 * An Edge Optimize API key retrieved from the LLM Optimizer UI. For steps, see [Retrieve your API keys](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key).
 * (Optional) To test staging routing, see [Staging API key](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional).
 
-**Required Headers**
-
-The following headers must be set on requests to the Edge Optimize backend:
-
-| Header | Description | Example |
-|--------|-------------|---------|
-| `x-forwarded-host` | The original host of the request. Required for identifying the site domain. | `www.example.com` |
-| `x-edgeoptimize-url` | The original URL path and query string of the request. | `/page.html` or `/products?id=123` |
-| `x-edgeoptimize-api-key` | The API key provided by Adobe for your domain. | `your-api-key-here` |
-| `x-edgeoptimize-config` | Configuration string for cache key differentiation. | `LLMCLIENT=TRUE;` |
-
 ## Step 1: Create an origin group for Edge Optimize
 
 Your Azure Front Door profile already has a default origin group that points to your origin. Create a **new** origin group for Edge Optimize:
