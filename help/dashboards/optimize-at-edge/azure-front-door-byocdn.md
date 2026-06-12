@@ -163,12 +163,6 @@ The response should **not** contain the `x-edgeoptimize-request-id` header. The 
 |---|---|---|
 | `x-edgeoptimize-request-id` | Present — contains a unique request ID | Absent |
 
-**Azure Front Door-specific notes**
-
-* **Propagation:** Azure Front Door changes can take approximately 20 minutes to take effect.
-* **Cache isolation:** Azure Front Door has no mechanism to separate bot and human cache entries. The agentic rules disable caching entirely to prevent serving optimized content to human visitors.
-* **Failover:** Azure Front Door supports priority-based failover via origin groups. When the Edge Optimize health probe fails, Azure Front Door routes bot traffic to Priority 2 (your domain endpoint), which re-enters the rule engine. The `x-edgeoptimize-monitor` header (set on the first pass) prevents the bot rules from re-routing to Edge Optimize, so traffic falls through to the default origin.
-
 {{verify-routing-status-in-ui}}
 
 {{return-to-overview}}
