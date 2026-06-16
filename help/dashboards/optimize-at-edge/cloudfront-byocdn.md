@@ -248,9 +248,6 @@ By default, the **View CloudWatch logs** shortcut in the Lambda console links to
 
 5. Click **Save**.
 
->[!CAUTION]
->Do not check **Add required permissions**. Because the Lambda@Edge execution role trusts two services (`lambda.amazonaws.com` and `edgelambda.amazonaws.com`), the Lambda console's auto-permission flow will fail with the error: *"Role trusts too many services, expected only 1."* The required permissions are already in place from the `cloudwatch-policy.json` update in the previous step.
-
 >[!NOTE]
 >Even after this fix, the **View CloudWatch logs** link opens the correct log group name but may show no data if you are in the wrong region. Lambda@Edge logs are written in the edge region that served the request (for example, `eu-west-1`, `ap-south-1`), not `us-east-1`. You still need to switch to the correct region in CloudWatch to see the logs.
 
