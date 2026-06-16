@@ -69,7 +69,7 @@ The mapping should be as follows:
 * **Message exchange data**
   reqHost -> Request host
   reqPath -> Request path
-  queryStr -> Query string
+  queryStr -> Query string (optional)
   reqMethod -> Request method
   ua -> User-Agent
   statusCode -> HTTP status code
@@ -79,13 +79,17 @@ The mapping should be as follows:
 * **Network performance data**
   timeToFirstByte -> Time to first byte
 
+>[!NOTE]
+>
+>The `queryStr` parameter is optional. You can omit it if the query string includes PII information.
+
 The Akamai data set fields (including IDs) are as follows:
 
 1100, # reqTimeSec -> Request time
 2012, # country -> Country/Region
 1011, # reqHost -> Request host
 1013, # reqPath -> Request path
-2009, # queryStr -> Query string
+2009, # queryStr -> Query string (optional)
 1012, # reqMethod -> Request method
 1017, # ua -> User-Agent
 1008, # statusCode -> HTTP status code
