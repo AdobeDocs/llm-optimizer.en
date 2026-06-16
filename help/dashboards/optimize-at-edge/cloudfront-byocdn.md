@@ -230,6 +230,30 @@ The auto-created role comes with an `AWSLambdaBasicExecutionRole` policy configu
 >[!WARNING]
 >The region in the ARN must be `*` — Lambda@Edge executes at the nearest edge location to the viewer, so logs are written to CloudWatch in the region of the edge location (for example, `ap-south-1`, `eu-west-1`), not necessarily `us-east-1`. The log group uses a region-prefixed name: `/aws/lambda/us-east-1.FUNCTION_NAME`, where `us-east-1` is always the function's home region.
 
+**Fix the CloudWatch logs link**
+
+By default, the **View CloudWatch logs** shortcut in the Lambda console links to `/aws/lambda/FUNCTION_NAME` in `us-east-1` — the wrong log group for Lambda@Edge. Configure a custom log group so the link points to the correct path.
+
+**Navigation:** AWS Console > Lambda > [your function] > Configuration > Monitoring and operations tools
+
+1. Click **Edit**.
+
+2. Under **CloudWatch log group**, select **Custom**.
+
+3. Set the custom log group name to `/aws/lambda/us-east-1.edgeoptimize-origin`.
+
+4. Under **Permissions**, leave the **Add required permissions** checkbox **unchecked**.
+
+   ![Lambda custom log group configuration](/help/assets/optimize-at-edge/cloudfront-lambda-custom-log-group.png)
+
+5. Click **Save**.
+
+>[!CAUTION]
+>Do not check **Add required permissions**. Because the Lambda@Edge execution role trusts two services (`lambda.amazonaws.com` and `edgelambda.amazonaws.com`), the Lambda console's auto-permission flow will fail with the error: *"Role trusts too many services, expected only 1."* The required permissions are already in place from the `cloudwatch-policy.json` update in the previous step.
+
+>[!NOTE]
+>Even after this fix, the **View CloudWatch logs** link opens the correct log group name but may show no data if you are in the wrong region. Lambda@Edge logs are written in the edge region that served the request (for example, `eu-west-1`, `ap-south-1`), not `us-east-1`. You still need to switch to the correct region in CloudWatch to see the logs.
+
 **Publish a version**
 
 1. On the function page, click **Actions** (top right) > **Publish new version**.
