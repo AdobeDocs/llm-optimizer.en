@@ -56,7 +56,7 @@ On the Akamai control panel [https://control.akamai.com/](https://control.akamai
 
 ## Step 3: Choose data parameters {#step-3}
 
-After creating the stream, on the Akamai control panel, click Next to continue to **Data sets** tab. Follow the steps from the official Akamai documentation  to choose the [data parameters](https://techdocs.akamai.com/datastream2/docs/choose-data-parameters). The following fields from the LLM Optimizer configuration will be needed:
+After creating the stream, on the Akamai control panel, click **Next** to continue to **Data sets** tab. Follow the steps from the official Akamai documentation  to choose the [data parameters](https://techdocs.akamai.com/datastream2/docs/choose-data-parameters). The following fields from the LLM Optimizer configuration will be needed:
 
 ![LLMO configuration fields](/help/overview/assets/log-forwarding/akamai/akamai-llmo-config-fields.png)
 
