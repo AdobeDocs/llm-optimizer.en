@@ -54,6 +54,7 @@ user-guide-description: Boost your brand with Adobe LLM Optimizer. Track mention
     + [Akamai (BYOCDN)](/help/dashboards/optimize-at-edge/akamai-byocdn.md)
     + [Cloudflare (BYOCDN)](/help/dashboards/optimize-at-edge/cloudflare-byocdn.md)
     + [CloudFront (BYOCDN)](/help/dashboards/optimize-at-edge/cloudfront-byocdn.md)
+    + [Azure Front Door (BYOCDN)](/help/dashboards/optimize-at-edge/azure-front-door-byocdn.md)
     + [Apache Reverse Proxy (Self-Hosted)](/help/dashboards/optimize-at-edge/apache-selfhosted-byocdn.md)
   + [Access control](/help/dashboards/access-control.md)
   + [Adobe Analytics integration](/help/dashboards/adobe-analytics-integration.md)
