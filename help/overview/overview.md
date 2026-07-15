@@ -25,7 +25,7 @@ topic_v2:
 
 # LLM Optimizer Overview
 
->[!VIDEO](https://video.tv.adobe.com/v/33492471/?learn=on){transcript=true}
+>[!VIDEO](https://video.tv.adobe.com/v/3492471/?learn=on){transcript=true}
 
 This page outlines everything you need to know about Adobe LLM Optimizer before you start using the tool:
 
