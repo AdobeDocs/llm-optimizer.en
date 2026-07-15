@@ -45,33 +45,11 @@ This page details the following:
 
 Without **CDN log forwarding**, the Agentic Traffic dashboard is blank. To view agentic interactions, you must configure **CDN log forwarding**.
 
-<!-- ### Customer Configuration (classic navigation)
-
-On first login, you will see a message as shown in the image below.
-
-![CDN Setup](/help/dashboards/assets/ag-log-forward1.png)
-
-Select **Go to Configuration** and you will automatically navigate to the **CDN Configuration** tab of the [customer configuration dashboard](/help/dashboards/customer-configuration.md).
-
-![CDN Setup Onboard](/help/dashboards/assets/ag-log-forward2.png)
-
-On this tab, select **Onboard CDN**. And the CDN provider window is displayed.
-
-On the **Onboard CDN Provider** window:
-
-1. Select your CDN provider (for example, Akamai, Adobe-managed Fastly, Fastly, AWS Cloudfront, Azure CDN, Cloudflare, or Other).
-2. Click **Onboard** to enable log forwarding.
-
-If you select **Other**, you will have to reach out to llmo-now@adobe.com for assistance.
-
-Once activated, logs are ingested and the dashboard will populate with metrics such as total agent interactions, success rate, hits by market, user agent analysis, and URL-level performance.  -->
-
 You can add CDN log forwarding information by navigating to **Brands Management** and clicking the **CDN** label.
 
 ![Brands Management — CDN log forwarding](/help/assets/brand-centric-experience/brands-management-cdn.png)
 
-[!NOTE]
->For details regarding log forwarding when using a customer managed CDN (BYOCDN) see [BYOCDN Log Forwarding Overview](/help/overview/log-forwarding/log-forwarding-overview.md)
+For details regarding log forwarding when using a customer managed CDN (BYOCDN) see [BYOCDN Log Forwarding Overview](/help/overview/log-forwarding/log-forwarding-overview.md)
 
 LLM Optimizer processes a subset of fields from the the CDN logs. Although raw log field names vary by CDN provider, they are normalized and presented as:
 
