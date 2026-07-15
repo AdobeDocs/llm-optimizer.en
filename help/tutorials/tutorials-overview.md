@@ -1,17 +1,26 @@
 ---
 title: LLM Optimizer Overview
 description: Learn about how Adobe LLM Optimizer boosts brand visibility in AI-driven search. Track mentions, citations, and insights. Start optimizing today for better engagement and influence.
-autotag-review: '2026-05-15T18:10:16.637Z'
-TQID: 'https://experienceleague.adobe.com/Nyv7-xOn8QaQPa3AWYjt1ld2c36N5Cadv37TFKjYeG0'
+autotag-review: '2026-07-15T18:01:55.084Z'
+TQID: 'https://experienceleague.adobe.com/CLacB5dkUfEGpogS6f79CflqoSXpUtJmYLHmj53M2bs'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
     internal-label: LLM Optimizer
 feature_v2:
-  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
-    internal-label: Dashboards
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-    internal-label: Insights
+  - id: a080bb92-ba2a-4e53-ba60-f5184d1a9e9a
+    internal-label: Getting started
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
   - id: fc314d1d-7cb9-4a38-8dbd-8f9b6478f40d
     internal-label: Content strategy
 ---

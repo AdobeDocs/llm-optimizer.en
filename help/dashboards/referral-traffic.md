@@ -2,24 +2,27 @@
 title: Referral Traffic
 description: Learn how to use the Referral Traffic dashboard to see how visitors arrive at your site from external platforms, AI citations, and referral links.
 feature: Referral Traffic
-autotag-review: '2026-05-15T17:57:28.534Z'
-TQID: 'https://experienceleague.adobe.com/rMSltSJf-UH4FHoST9NhmeY-hGVNLXsFXbCLzZenW5w'
+autotag-review: '2026-07-15T18:05:26.973Z'
+TQID: 'https://experienceleague.adobe.com/L1Aqqdbs-aPaX0Qj0ekHaQHjx0713gZfY740wIwAtRY'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
     internal-label: LLM Optimizer
 feature_v2:
-  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
-    internal-label: Dashboards
   - id: e0828736-236a-487b-a478-5a635455eadc
-    internal-label: Reporting
+    internal-label: Traffic analytics
 subfeature_v2:
   - id: e3c08d81-9e25-4503-9df5-8dd1f489aa99
-    internal-label: Referral Traffic
+    internal-label: Referral traffic
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
     internal-label: Reporting
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
     internal-label: Insights
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 
 # Referral Traffic

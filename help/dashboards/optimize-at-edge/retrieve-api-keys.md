@@ -2,20 +2,29 @@
 title: Retrieve your API keys
 description: How to retrieve your production and staging Edge Optimize API keys from LLM Optimizer.
 feature: Opportunities
-autotag-review: '2026-05-15T17:58:10.897Z'
-TQID: 'https://experienceleague.adobe.com/4R-cx6wv75Oowj9ZvEPGCzQbQBSoppgDuI5Ut1IbObA'
+autotag-review: '2026-07-15T18:05:12.505Z'
+TQID: 'https://experienceleague.adobe.com/X3vIzxrlaqJ5Mx3K8rOpX2QqgGyxT6p8qfdLzTWC1gQ'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
     internal-label: LLM Optimizer
 feature_v2:
   - id: d1956731-2adb-4bb7-8301-2b239254ac72
     internal-label: Administration
+  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+    internal-label: Opportunities
 subfeature_v2:
   - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-    internal-label: CDN
+    internal-label: CDN log forwarding
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
     internal-label: Optimization
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 ---
 
 # Retrieve your API keys

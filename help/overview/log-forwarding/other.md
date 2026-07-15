@@ -2,20 +2,35 @@
 title: Log Forwarding - Other (Manual Upload)
 description: Learn how to manually upload CDN logs to Adobe's S3 bucket for agentic traffic data collection in LLM Optimizer when using an unsupported CDN provider.
 feature: Agentic Traffic
-autotag-review: '2026-05-15T17:54:15.685Z'
-TQID: 'https://experienceleague.adobe.com/YBfhS4oM0qYRkFvS3zPzzcFAeLNBucRH5QmMBUH8h4E'
+autotag-review: '2026-07-15T18:08:55.588Z'
+TQID: 'https://experienceleague.adobe.com/tuB95AJnFbB4O0o2BYHiRP-W0RTxzMeMLNg-5OjF-8s'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
     internal-label: LLM Optimizer
 feature_v2:
   - id: d1956731-2adb-4bb7-8301-2b239254ac72
     internal-label: Administration
+  - id: e0828736-236a-487b-a478-5a635455eadc
+    internal-label: Traffic analytics
+  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+    internal-label: Optimize at edge
 subfeature_v2:
   - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-    internal-label: CDN
+    internal-label: CDN log forwarding
+  - id: dd952468-5202-43af-a365-6e0d2e67a703
+    internal-label: BYOCDN
+  - id: e06fae5f-830b-4222-a469-b5e148d36465
+    internal-label: Agentic traffic
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 ---
 
 # Log Forwarding: Other (Manual Upload) {#log-forwarding-other}

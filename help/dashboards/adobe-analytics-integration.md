@@ -2,22 +2,25 @@
 title: Adobe Analytics Integration
 description: Learn how to connect Adobe Analytics with LLM Optimizer to measure AI-driven discovery, site engagement, and business outcomes in the Referral Traffic dashboard.
 feature: Referral Traffic
-autotag-review: '2026-05-15T17:29:50.263Z'
-TQID: 'https://experienceleague.adobe.com/Wo-7p-mNQRrpS3EhmnS38UF1-IcaKEJpUz5H3BwY8Yo'
+autotag-review: '2026-07-15T16:46:49.693Z'
+TQID: 'https://experienceleague.adobe.com/H0p8HV2bf1KuKYqF1ByAF2BpGlb4YScsWDQU5mMkTRY'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
     internal-label: LLM Optimizer
 feature_v2:
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-    internal-label: Insights
   - id: d1956731-2adb-4bb7-8301-2b239254ac72
     internal-label: Administration
 subfeature_v2:
   - id: e69d5a42-0217-4ca5-9396-a9a826a170da
-    internal-label: Customer Configuration
+    internal-label: Configuration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
     internal-label: Measurement
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
     internal-label: Insights
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
@@ -91,6 +94,14 @@ The connection flow starts from the [Referral Traffic](/help/dashboards/referral
 >[!NOTE]
 >
 >The backfill may take a couple of hours to complete.
+
+## See Business Impact in Action
+
+AI visibility is only part of the story. To understand whether your optimization efforts are driving business results, you need to know what happens after visitors arrive on your site.
+
+This video introduces the **Business Impact** view, which combines LLM Optimizer with Adobe Analytics to show how AI-referred traffic translates into engagement, conversions, and revenue - helping you measure the true value of your AI presence.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3492503/?learn=on){transcript=true}
 
 ## How it works {#how-it-works}
 

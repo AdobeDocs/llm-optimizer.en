@@ -2,8 +2,8 @@
 title: Optimize at Edge - AEM Cloud Service Managed CDN (Fastly)
 description: Learn how to configure the AEM Cloud Service Managed CDN (Fastly) for Optimize at Edge in LLM Optimizer.
 feature: Opportunities
-autotag-review: '2026-05-15T17:31:38.650Z'
-TQID: 'https://experienceleague.adobe.com/qrCODY3Qg6dDd9QRcaYGdN4YVCgKAsl56UTAVZpsIwE'
+autotag-review: '2026-07-15T16:49:32.275Z'
+TQID: 'https://experienceleague.adobe.com/2-IzfF1iTEzW-gpqPA-t3mffRuhMxaKi1Dp0A62IZ9U'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
     internal-label: LLM Optimizer
@@ -11,15 +11,28 @@ feature_v2:
   - id: d1956731-2adb-4bb7-8301-2b239254ac72
     internal-label: Administration
   - id: e0828736-236a-487b-a478-5a635455eadc
-    internal-label: Reporting
+    internal-label: Traffic analytics
+  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+    internal-label: Opportunities
+  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+    internal-label: Optimize at edge
 subfeature_v2:
   - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-    internal-label: CDN
+    internal-label: CDN log forwarding
   - id: e06fae5f-830b-4222-a469-b5e148d36465
-    internal-label: Agentic Traffic
+    internal-label: Agentic traffic
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
     internal-label: Optimization
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 ---
 
 # AEM Cloud Service Managed CDN (Fastly)
