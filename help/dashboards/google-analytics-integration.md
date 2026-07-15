@@ -2,6 +2,22 @@
 title: Google Analytics Integration
 description: Learn how to connect Google Analytics 4 with LLM Optimizer to measure AI-driven discovery, site engagement, and business outcomes in the Referral Traffic dashboard.
 feature: Referral Traffic
+autotag-review: '2026-07-15T17:51:53.586Z'
+TQID: 'https://experienceleague.adobe.com/SvWn3W6hpVsWNzfWdJFvPs94lwlKX4ufjjcXKM-6xIc'
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+    internal-label: LLM Optimizer
+feature_v2:
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+    internal-label: Administration
+subfeature_v2:
+  - id: f5a6cbd1-8a9a-4c79-a6db-ba46537f516e
+    internal-label: Integrations
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 ---
 
 # Google Analytics Integration

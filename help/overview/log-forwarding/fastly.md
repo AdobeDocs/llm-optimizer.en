@@ -2,22 +2,31 @@
 title: Log Forwarding - Fastly
 description: Learn how to forward CDN logs from Fastly to Adobe's S3 bucket for agentic traffic data collection in LLM Optimizer.
 feature: Agentic Traffic
-autotag-review: '2026-05-15T17:51:51.808Z'
-TQID: 'https://experienceleague.adobe.com/9SH1I6ajHKLFeEWXy-NpvPm-Ylk2xBKhQro3qobVEX8'
+autotag-review: '2026-07-15T17:51:11.580Z'
+TQID: 'https://experienceleague.adobe.com/HPUxzfbvA4DtdNmjgTMvVVv-WqtjPcAUeZmg8JdvL-s'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
     internal-label: LLM Optimizer
 feature_v2:
   - id: d1956731-2adb-4bb7-8301-2b239254ac72
     internal-label: Administration
+  - id: e0828736-236a-487b-a478-5a635455eadc
+    internal-label: Traffic analytics
 subfeature_v2:
   - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-    internal-label: CDN
+    internal-label: CDN log forwarding
+  - id: e06fae5f-830b-4222-a469-b5e148d36465
+    internal-label: Agentic traffic
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
     internal-label: Insights
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 ---
 
 # Log Forwarding: Fastly {#log-forwarding-fastly}

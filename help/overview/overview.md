@@ -2,16 +2,18 @@
 title: LLM Optimizer Overview
 description: Learn about how Adobe LLM Optimizer boosts brand visibility in AI-driven search. Track mentions, citations, and insights. Start optimizing today for better engagement and influence.
 feature: Onboarding
-autotag-review: '2026-05-15T17:54:37.542Z'
-TQID: 'https://experienceleague.adobe.com/5qyk6PCTaT93tz-UUnYRYznylOh4lXHuH1yN98g3wIE'
+autotag-review: '2026-07-15T18:10:25.350Z'
+TQID: 'https://experienceleague.adobe.com/C-54mDBaDgmIWPOrLhkeUHlK1cXMbX0kRNrJZTC--4c'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
     internal-label: LLM Optimizer
 feature_v2:
-  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
-    internal-label: Dashboards
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-    internal-label: Insights
+  - id: c898dfb2-0885-42fb-b2af-b2d756752646
+    internal-label: Best practices
+  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+    internal-label: Opportunities
+  - id: a080bb92-ba2a-4e53-ba60-f5184d1a9e9a
+    internal-label: Getting started
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
     internal-label: Optimization
@@ -23,9 +25,9 @@ topic_v2:
 
 # LLM Optimizer Overview
 
->[!SLIDE](llm-optimizer-overview)
+>[!VIDEO](https://video.tv.adobe.com/v/3492471/?learn=on){transcript=true}
 
-This page outlines everything you need to know about the Adobe LLM Optimizer before you start using the tool:
+This page outlines everything you need to know about Adobe LLM Optimizer before you start using the tool:
 
 * [What is Adobe LLM Optimizer?](#what-is-adobe-llm-optimizer)
 * [What are LLM Optimizer Capabilities?](#what-are-llm-optimizer-capabilities)

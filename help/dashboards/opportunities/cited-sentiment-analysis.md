@@ -2,19 +2,25 @@
 title: Cited Sentiment Analysis
 description: Learn how LLM Optimizer analyzes top-cited URLs to surface recommendations that improve your brand's perception and visibility in AI search results.
 feature: Opportunities
-autotag-review: '2026-05-15T17:39:50.086Z'
-TQID: 'https://experienceleague.adobe.com/ZqgWup29QoQ-j0fDM6DqhGpzRqscg1f-fdXHTMN9fIk'
+autotag-review: '2026-07-15T17:45:11.828Z'
+TQID: 'https://experienceleague.adobe.com/B-gDBklZ7XjMCQx-HaYx8H8yr9eZbXBvuRTAUfqJ-QU'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
     internal-label: LLM Optimizer
 feature_v2:
-  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
-    internal-label: Dashboards
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-    internal-label: Insights
-subfeature_v2:
   - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
     internal-label: Opportunities
+  - id: ab7fdb62-bd53-4cfd-8c2c-169f7e47f20e
+    internal-label: Brand intelligence
+subfeature_v2:
+  - id: cd42f7fa-7c4e-41cf-ba86-6e0de16ed456
+    internal-label: Market intelligence
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 
 # Cited Sentiment Analysis

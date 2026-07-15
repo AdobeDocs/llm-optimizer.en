@@ -2,20 +2,25 @@
 title: YouTube Sentiment Analysis
 description: Learn how LLM Optimizer analyzes YouTube videos and comments to surface recommendations that improve your brand's perception and visibility in AI search results.
 feature: Opportunities
-autotag-review: '2026-05-15T18:12:18.358Z'
-TQID: 'https://experienceleague.adobe.com/XevtwbOrmn6QTjMxnErSTI91WUv9m6GYWJ7LeLXdXXg'
+autotag-review: '2026-07-15T18:00:20.630Z'
+TQID: 'https://experienceleague.adobe.com/qWlMzK13noSQULxakuUKHlDGZ-307yJjGJ4vsru2W6M'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
     internal-label: LLM Optimizer
 feature_v2:
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-    internal-label: Insights
-subfeature_v2:
   - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
     internal-label: Opportunities
+subfeature_v2:
+  - id: fe92ae96-fc87-4fea-96a0-adc06310d4f4
+    internal-label: Offsite
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
     internal-label: Insights
+  - id: fc314d1d-7cb9-4a38-8dbd-8f9b6478f40d
+    internal-label: Content strategy
 ---
 
 # YouTube Sentiment Analysis

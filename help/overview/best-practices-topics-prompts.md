@@ -2,28 +2,43 @@
 title: Best Practices for Categories, Topics, Prompts, and Others
 description: Optimize LLM insights by configuring categories, topics, prompts, and other brands to track including competitors for tailored brand monitoring and strategic content analysis.
 feature: Best Practices, Customer Configuration
-autotag-review: '2026-05-15T17:36:13.598Z'
-TQID: 'https://experienceleague.adobe.com/aZCxLQbfeDDtqD3hBGuD-JuCZoMuGiqQrs0gaqxt4-4'
+autotag-review: '2026-07-15T17:42:20.391Z'
+TQID: 'https://experienceleague.adobe.com/nnLohajbU-fogbmBfGE5PUzdsoTJ5fjwW-ruVTjOWtM'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
     internal-label: LLM Optimizer
 feature_v2:
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-    internal-label: Insights
+  - id: c898dfb2-0885-42fb-b2af-b2d756752646
+    internal-label: Best practices
   - id: d1956731-2adb-4bb7-8301-2b239254ac72
     internal-label: Administration
-  - id: e0828736-236a-487b-a478-5a635455eadc
-    internal-label: Reporting
 subfeature_v2:
-  - id: c898dfb2-0885-42fb-b2af-b2d756752646
-    internal-label: Best Practices
   - id: e69d5a42-0217-4ca5-9396-a9a826a170da
-    internal-label: Customer Configuration
+    internal-label: Configuration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
     internal-label: Reporting
+  - id: addf009e-030a-4310-8534-776a3e62ed48
+    internal-label: Customer lifecycle
+  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
+    internal-label: Customer engagement
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
     internal-label: Optimization
+  - id: d00e9f03-e50b-4162-b143-0c0817c937c2
+    internal-label: Customer journeys
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
     internal-label: Administration
   - id: f8667931-f646-4dd3-af2a-b9d0cb8098ad
