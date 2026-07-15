@@ -30,7 +30,6 @@ Navigate to **Referral Traffic** and select the site for which you want to view 
 
 ![Referral Traffic — site selector (Brand Centric experience)](/help/assets/brand-centric-experience/referral-traffic-dashboard.png)
 
-
 >[!NOTE]
 >By default, this dashboard builds traffic insights from **CDN logs**. If your organization is on a paid offer, you can connect **Adobe Analytics** or **Google Analytics 4**(GA4) to add data that measures AI-driven discovery and site engagement. This data is available in the **Business Impact** tab. Please note that without integration to Adobe Analytics or GA4, the tab is not populated. As such, see [Adobe Analytics Integration](/help/dashboards/adobe-analytics-integration.md) or [Google Analytics Integration](/help/dashboards/google-analytics-integration.md) for more details.
 

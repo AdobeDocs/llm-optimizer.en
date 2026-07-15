@@ -112,7 +112,7 @@ After your organization finalizes the business agreement, you are onboarded to L
 
 Once your site has been onboarded, you can view the Brand Presence Analysis based on the small set of prompts that were automatically generated during the onboarding phase. Moving forward, you can customize categories, topics, and prompts for your brand.
 
-<!--### Customer Configuration (classic navigation)
+<!--Customer Configuration (classic navigation)
 
 If you are using classic navigation (not the Brand Centric experience), you can customize categories, topics, and prompts for your brand from the [customer configuration dashboard](/help/dashboards/customer-configuration.md).
 
@@ -162,7 +162,7 @@ Navigate to **Brand Presence** and select a brand that you want to view Brand Pr
 
 To unlock Agentic Traffic and Referral Traffic insights, register CDN log forwarding so LLM Optimizer can read your access logs.
 
-<!--### Customer Configuration (classic navigation)
+<!--Customer Configuration (classic navigation)
 
 If you are using the classic navigation, you can add CDN log forwarding information from the [customer configuration dashboard](/help/dashboards/customer-configuration.md#cdn-configuration). Open the **CDN Configuration** tab and select **Onboard CDN**.
 
