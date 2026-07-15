@@ -23,7 +23,7 @@ To get started with LLM Optimizer, complete the onboarding process. Then customi
 
 ## Brand Centric experience {#brand-centric-experience}
 
-By default, new customers start in a focused, brand-first interface with onboarding-driven setup. In this new interface, each organization starts with one active brand and additional suggested brands to choose from. Existing LLM Optimizer customers will shift to this Brand Centric experience gradually.
+By default, customers start in a focused, brand-first interface with onboarding-driven setup. In this interface, each organization starts with one active brand and additional suggested brands to choose from. <!--Existing LLM Optimizer customers will shift to this Brand Centric experience gradually.-->
 
 ## Onboarding overview
 
@@ -112,30 +112,9 @@ After your organization finalizes the business agreement, you are onboarded to L
 
 Once your site has been onboarded, you can view the Brand Presence Analysis based on the small set of prompts that were automatically generated during the onboarding phase. Moving forward, you can customize categories, topics, and prompts for your brand.
 
-### Customer Configuration (classic navigation)
-
-If you are using classic navigation (not the Brand Centric experience), you can customize categories, topics, and prompts for your brand from the [customer configuration dashboard](/help/dashboards/customer-configuration.md).
-
-![Customer Configuration Dashboard](/help/overview/assets/prompt-creation.png)
-
-From the Customer Configuration dashboard, you can:
-
-* Add **new categories** that align with your business priorities. Categories can be broad content areas relevant to your domain.
-* Enter **custom topics** or subtopics you want tracked. Topics can be specific themes tied to high volume non-branded keywords associated with your domain.
-* Create **your prompts** to monitor visibility in specific queries. Prompts are queries (branded and non-branded) that provide a baseline visibility. Only a limited number of prompts will be automatically generated based on the categories and topics that you provided.
-* Define mention **aliases** to ensure all mentions of a brand are captured and accounted for.
-* Define **other aliases** to track other brands accurately.
-
->[!NOTE]
->The exact prompts you ask LLMs are not publicly available because they are not disclosed by the LLMs.
-
->[!NOTE]
->
-> For more details on how to set up your categories, topics, prompts see the [Best practices for configuring categories, topics, prompts](/help/overview/best-practices-topics-prompts.md) page.
-
 ### Brand Centric experience categories, topics, and prompts
 
-For customers that are on the Brand Centric experience, you can add categories, topics, and prompts as follows:
+You can add categories, topics, and prompts as follows:
 
 * **Categories** — Navigate to **Brands Management** and click **Categories**. Categories are defined at a global level and apply to all brands under Brands Management.
 
@@ -145,48 +124,40 @@ For customers that are on the Brand Centric experience, you can add categories, 
 
   ![Prompts Management](/help/assets/brand-centric-experience/prompts-management.png)
 
+>[!NOTE]
+>The exact prompts you ask LLMs are not publicly available because they are not disclosed by the LLMs.
+
+>[!NOTE]
+>
+> For more details on how to set up your categories, topics, prompts see the [Best practices for configuring categories, topics, prompts](/help/overview/best-practices-topics-prompts.md) page.
+
 ## Step 3: Brand Presence Insights
 
 After your domain has been onboarded, you will see initial insights in the Brand Presence view based on the prompts that were automatically generated during onboarding. Once you customize your own categories, topics, and prompts, LLM Optimizer will automatically trigger the Brand Presence analysis on the prompts you provided and results will be available in 24 hours.
 
->[!NOTE]
->
-> For customers that are on the Brand Centric experience, navigate to **Brand Presence** and select a brand that you want to view Brand Presence for using the brand dropdown. You can also view the brand visibility at an **All Brands** level with this experience.
+Navigate to **Brand Presence** and select a brand that you want to view Brand Presence for using the brand dropdown. You can also view the brand visibility at an **All Brands** level with this experience.
 
 ## Step 4: Provide information for CDN Log Forwarding {#step-4}
 
 To unlock Agentic Traffic and Referral Traffic insights, register CDN log forwarding so LLM Optimizer can read your access logs.
 
-### Customer Configuration (classic navigation)
+### CDN Log Forwarding
 
-If you are using the classic navigation, you can add CDN log forwarding information from the [customer configuration dashboard](/help/dashboards/customer-configuration.md#cdn-configuration). Open the **CDN Configuration** tab and select **Onboard CDN**.
+You can add CDN log forwarding information from **Brands Management** as follows: open **Brands Management** and click the **CDN** label.
 
-![Customer Configuration CDN](/help/overview/assets/cc-cdn.png)
-
-Alternatively, if no CDN provider has been added beforehand (as described above), you will be prompted to add CDN log forwarding when accessing the Agentic and Referral Traffic dashboards for the first time. For more details, see:
-
-* [Agentic Traffic](/help/dashboards/agentic-traffic.md#cdn-setup)
-* [Referral Traffic](/help/dashboards/referral-traffic.md#setup)
+![Brands Management — CDN log forwarding](/help/assets/brand-centric-experience/brands-management-cdn.png)
 
 >[!NOTE]
 >For details regarding log forwarding when using a customer managed CDN (BYOCDN) see [BYOCDN Log Forwarding Overview](/help/overview/log-forwarding/log-forwarding-overview.md)
 
-### Brand Centric experience CDN Log Forwarding
-
-For customers that are on the Brand Centric experience, you can add CDN log forwarding information from **Brands Management** as follows: open **Brands Management** and click the **CDN** label.
-
-![Brands Management — CDN log forwarding](/help/assets/brand-centric-experience/brands-management-cdn.png)
 
 ## Step 5: Explore Dashboards and Take Action
 
-After you provide information for CDN Log Forwarding, you can:
+After you provide information for CDN Log Forwarding, you can access the desired dashboard from the navigation section to the left.
 
 * View the [Brand Presence](/help/dashboards/brand-presence.md) dashboard and view your visibility score and track your performance relative to other brands.
 * Explore the [Agentic](/help/dashboards/agentic-traffic.md) and [Referral Traffic](/help/dashboards/referral-traffic.md) dashboards, if CDN log forwarding has been configured.
 * Use [Opportunities](/help/dashboards/opportunities-overview.md) to identify content and technical improvements.
 * Export data and collaborate your team or invite your co-worker to use the product.
-
->[!NOTE]
-> In the Brand Centric experience, access the desired view from the navigation section to the left.
 
 Finally, to fully understand the capabilities of LLM Optimizer, you should explore all available [dashboards](/help/dashboards/dashboards-overview.md).

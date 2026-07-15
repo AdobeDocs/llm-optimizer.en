@@ -22,11 +22,9 @@ topic_v2:
 
 # URL Inspector
 
-The URL Inspector helps you analyze how specific pages on your domain are performing in AI searches. It combines visibility, agentic traffic, and referral data at the URL level to give you a granular view of which URLs are cited and how often they appear in responses.
+The URL Inspector helps you analyze how specific pages on your domain are performing in AI searches. It combines visibility, agentic traffic, and referral data at the URL level to give you a granular view of which URLs are cited and how often they appear in responses. Navigate to **URL Inspector** and select the site for which you want to view the insights.
 
 ![URL Inspector](/help/dashboards/assets/url-insp.png)
-
-If you are on the [Brand Centric experience](/help/overview/quick-start.md#brand-centric-experience), navigate to **URL Inspector** and select the site for which you want to view the insights.
 
 ![URL Inspector — site selector (Brand Centric experience)](/help/assets/brand-centric-experience/url-inspector-dashboard.png)
 

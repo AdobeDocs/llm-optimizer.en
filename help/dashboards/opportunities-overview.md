@@ -28,7 +28,7 @@ Optimization opportunities are automatically detected insights that show where y
 
 These optimizations include on-page fixes (adding structured content, canonicals, or summaries), technical adjustments (unblocking AI crawlers or resolving errors) and influencing content on third-party authoritative sites. Addressing these optimization opportunities helps your brand be accurately represented and more likely to be cited in generative responses.
 
-![Optimization opportunities](/help/dashboards/assets/oport.png)
+<!--![Optimization opportunities](/help/dashboards/assets/oport.png)-->
 
 ## Opportunities Dashboard
 
