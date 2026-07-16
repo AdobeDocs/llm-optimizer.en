@@ -48,25 +48,21 @@ topic_v2:
 
 This section describes best practices for deciding how you want to set up your categories, topics, prompts, and others to track. In addition, it includes information on the Industry Prompt Library, which Adobe developed with extensive research with industry experts.
 
-This is a vital first step. What you decide now determines how information is tailored to your business context. Any changes to categories in the future reset historical data.
+This configuration is a vital first step. What you decide now determines how information is tailored to your business context. Any changes to categories in the future reset historical data.
 
-The [[!UICONTROL Customer Configuration]](/help/dashboards/customer-configuration.md) dashboard is where you define how your brand will be monitored and analyzed within the LLM optimizer platform. See [[!UICONTROL Customer Configuration]](/help/dashboards/customer-configuration.md) for information on how to use the dashboard.
+The [[!UICONTROL Brands Management]](/help/dashboards/customer-configuration.md) dashboard is where you define how your brand is monitored and analyzed within the LLM optimizer platform.
 
-![Customer configuration window](/help/assets/best-practices/customer-configuration-best-practices.png)
+Here you can customize categories (such as business units or product lines), track other brands, and add brand mention aliases to capture all variations of your brand across prompts. This setup ensures the platform tailors insights to your business context, enabling accurate visibility, traffic, and opportunity analysis.
 
-In the [!UICONTROL Customer Configuration] dashboard, you can customize categories (such as business units or product lines), track other brands, and add brand mention aliases to capture all variations of your brand across prompts. This setup ensures the platform tailors insights to your business context, enabling accurate visibility, traffic, and opportunity analysis.
+By default, each organization starts with one active brand and additional suggested brands to choose from.
 
-## Brand Centric experience
+![Brands Management - app navigation (Brand Centric experience)](/help/assets/brand-centric-experience/llmo-app-shell.png)
 
-By default, new customers start in a focused, brand-first interface with onboarding-driven setup. In this new interface, each organization starts with one active brand and additional suggested brands to choose from. Existing LLM Optimizer customers will shift to this Brand Centric experience gradually.
+![Brands Management - configuration overview](/help/assets/brand-centric-experience/brands-management-configuration.png)
 
-If you are on the Brand Centric experience, **Brands Management** is where you define how your brand is monitored and analyzed.
+To set up topics and prompts for a specific brand, use the **Prompts Library** dashboard.
 
-![Brands Management — app navigation (Brand Centric experience)](/help/assets/brand-centric-experience/llmo-app-shell.png)
-
-![Brands Management — configuration overview](/help/assets/brand-centric-experience/brands-management-configuration.png)
-
-To set up topics and prompts for a specific brand, use **Prompts Management**.
+<!-- Add link to Prompts Management page when available-->
 
 ![Prompts Management](/help/assets/brand-centric-experience/prompts-management.png)
 
@@ -76,9 +72,9 @@ To help get started with prompts and topics, Adobe has created an Industry Promp
 
 To use the Industry Prompt Library:
 
-1. Navigate to the **Customer Configuration** dashboard.
+1. Navigate to the **Prompts Library** dashboard.
 1. Select **Download Prompts Library** to download the library file from LLM Optimizer.
-![Industry prompt library download](/help/assets/best-practices/customer-configuration-prompts-library.png)
+<!--![Industry prompt library download](/help/assets/best-practices/download-prompts.png)-->
 1. Review suggested **Topics** and **Prompts** for your brand's industry on the respective tab and choose the options that are most relevant.
 1. Review **Customer Journey Stage column** to view prompt options across the customer lifecycle (for example, discovery to conversion to retention). Early stage/top of funnel prompts are high priority but also consider later stage options to promote retention, enable customer support, and so on.
 1. Modify topics or prompts as needed to best support your goals and objectives before uploading your topics and prompts to Adobe LLM Optimizer (for example, add your brand/product name, add on-brand terminology). Prompts can be added to LLM Optimizer manually or via bulk upload using the provided *.csv* template.
@@ -131,9 +127,9 @@ How to decide how you set up categories is based on one question: **Who needs to
 
 * If you are a *business leader*, pick the **SBU** approach.
 * If you are a *web/content owner*, pick the **URL_DIR** approach.
-* If you are a *merchandising/offers manager*, pick the **Product/Service category** approach.
+* If you are a *merchandising/offers manager*, pick the **Product/Service category** approach.<!--How do you pick a region? Or is that handled differently?>
 
-![Adding categories in LLM Optimizer](/help/assets/best-practices/add-category.png)
+![Adding categories in LLM Optimizer](/help/assets/best-practices/create-category1.png)
 
 >[!IMPORTANT]
 >
@@ -169,7 +165,7 @@ When deciding on topics, you want to create a short, flat list (6-12 maximum). F
 * Support Contact
 * Corporate/News (if you truly need this)
 
-![Adding topics in LLM Optimizer](/help/assets/best-practices/add-topic.png)
+![Adding topics in LLM Optimizer](/help/assets/best-practices/add-new-topic1.png)
 
 When creating the list, consider the following:
 
