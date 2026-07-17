@@ -44,9 +44,9 @@ topic_v2:
   - id: f8667931-f646-4dd3-af2a-b9d0cb8098ad
     internal-label: Taxonomy
 ---
-# Best practices for configuring categories, topics, prompts, and others to track
+# Best practices for configuring categories, topics, prompts, and other brands to track
 
-This section describes best practices for deciding how you want to set up your categories, topics, prompts, and others to track. In addition, it includes information on the Industry Prompt Library, which Adobe developed with extensive research with industry experts.
+This section describes best practices for deciding how you want to set up your categories, topics, prompts, and other brands to track. In addition, it includes information on the Industry Prompt Library, which Adobe developed with extensive research with industry experts.
 
 This configuration is a vital first step. What you decide now determines how information is tailored to your business context. Any changes to categories in the future reset historical data.
 
@@ -60,9 +60,9 @@ By default, each organization starts with one active brand and additional sugges
 
 ![Brands Management - configuration overview](/help/assets/brand-centric-experience/brands-management-configuration.png)
 
-To set up topics and prompts for a specific brand, use the **Prompts Library** dashboard.
+To set up topics and prompts for a specific brand, use the **Prompt Library** dashboard.
 
-<!-- Add link to Prompts Management page when available-->
+<!-- Add link to Prompt Library page when available-->
 
 ![Prompts Management](/help/assets/brand-centric-experience/prompts-management.png)
 
@@ -72,12 +72,13 @@ To help get started with prompts and topics, Adobe has created an Industry Promp
 
 To use the Industry Prompt Library:
 
-1. Navigate to the **Prompts Library** dashboard.
-1. Select **Download Prompts Library** to download the library file from LLM Optimizer.
-<!--![Industry prompt library download](/help/assets/best-practices/download-prompts.png)-->
+1. Navigate to the **Prompt Library** dashboard.
+1. Select **Download Prompt Library** to download the library file from LLM Optimizer.
 1. Review suggested **Topics** and **Prompts** for your brand's industry on the respective tab and choose the options that are most relevant.
 1. Review **Customer Journey Stage column** to view prompt options across the customer lifecycle (for example, discovery to conversion to retention). Early stage/top of funnel prompts are high priority but also consider later stage options to promote retention, enable customer support, and so on.
 1. Modify topics or prompts as needed to best support your goals and objectives before uploading your topics and prompts to Adobe LLM Optimizer (for example, add your brand/product name, add on-brand terminology). Prompts can be added to LLM Optimizer manually or via bulk upload using the provided *.csv* template.
+
+<!--![Industry prompt library download](/help/assets/best-practices/download-prompts.png) - add screenshot to steps-->
 
 >[!TIP]
 >
@@ -93,11 +94,11 @@ The Industry Prompt Library was developed through a comprehensive research initi
 
 Top topics searched by customers across industries:
 
-* **Auto:** Troubleshooting auto issues, Comparing vehicles and Financing/Leasing
+* **Auto:** Troubleshooting auto issues, comparing vehicles and financing/leasing
 * **Financial Services:** Researching financial products
-* **Healthcare:** Looking up symptoms or health issues, Comparing treatment options, Understand lab results or medical terms
-* **Telecom:** Comparing plans, Contract terms and promotions, Checking service in local area
-* **Travel:** Preparing for a trip, Researching and booking travel
+* **Healthcare:** Looking up symptoms or health issues, comparing treatment options, and understanding lab results or medical terms
+* **Telecom:** Comparing plans, contract terms and promotions, and checking service in local area
+* **AirlineTravel:** Preparing for a trip, and researching and booking travel
 
 Customer trends on AI search and prompt behavior in LLM tools:
 
@@ -169,7 +170,7 @@ When deciding on topics, you want to create a short, flat list (6-12 maximum). F
 
 When creating the list, consider the following:
 
-* Can an editor understand the topic in 5 seconds from the prompt text? If not, rename/simplify.
+* Can someone understand the topic in 5 seconds from the prompt text? If not, rename/simplify.
 * Will a different team own the fix for different topics? If yes, you picked useful topics.
 
 <!-- Last bullet point does not make sense. Clarification needed. Also not sure what is meant by "editor"?-->
@@ -182,7 +183,7 @@ Some additional helpful hints:
 >[!IMPORTANT]
 >
 > * Keep topics intent-based, not organizational.
-> * Do not add categories/filters for brand/non-brand/geographic as you can filter specifically for this in the **[!UICONTROL Brands]** tab.
+> * Do not add categories/filters for brand/non-brand/geographic as you can filter specifically for this in the **[!UICONTROL Brand Presence]** dashboard.
 > * Topics are spread out across several categories. You **cannot** define unique topics to each category.
 > * A single prompt **can** exist in several topics or categories.
 
@@ -205,11 +206,11 @@ Best practices for prompts:
 
 ## Best practices for tracking other brands
 
-Tracking Others let you monitor visibility and mentions in LLM responses for prompts and topics that are important to your business.
+Tracking other brands let you monitor visibility and mentions in LLM responses for prompts and topics that are important to your business.
 
-The [!UICONTROL **Others Tracking**] tab lets you add others including competitors to track their visibility for specific prompts and topics.
+[!UICONTROL **Other brands to track**] is available in **Brands Management** > **Market tracking** and lets you add others including competitors to track their visibility for specific prompts and topics.
 
-With others tracking, you can see how often other brands are mentioned alongside your brand in different regions and categories and compare their visibility to your own.
+With other brands to track, you can see how often other brands are mentioned alongside your brand in different regions and categories and compare their visibility to your own.
 
 >[!TIP]
 >
@@ -217,6 +218,7 @@ With others tracking, you can see how often other brands are mentioned alongside
 
 ## Learn More
 
-* [Customer Configuration dashboard](/help/dashboards/customer-configuration.md) is where you configure your categories, topics, prompts, and others tracking.
+* [Brands Management](/help/dashboards/customer-configuration.md) is where you configure your categories and other brands to track.
+* [Prompt Library](/help/dashboards/customer-configuration.md) is where you configure your topics and prompts.
 * [LLM Optimizer best practices](/help/tutorials/best-practices.md) describes best practices around LLM Optimization
 

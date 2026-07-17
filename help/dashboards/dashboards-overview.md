@@ -1,6 +1,6 @@
 ---
 title: Dashboards Overview
-description: This is the article overview.
+description: This article describes each of the dashboards in LLM Optimizer. Click each link to learn more LLM Optimizer functionality.
 feature: Onboarding
 autotag-review: '2026-07-15T17:49:14.691Z'
 TQID: 'https://experienceleague.adobe.com/tF7WvqcuYsu--kShNo215zbbVg1fFQg-TXLH-YHQw0c'
@@ -26,7 +26,7 @@ topic_v2:
 
 # Dashboards overview
 
-Welcome to the Dashboards overview. The dashboards in LLM-Optimizer help marketers track brand visibility and sentiment across AI search platforms, identify optimization opportunities, and implement prescriptive changes to improve citations and performance.
+Welcome to the Dashboards overview. The dashboards in LLM Optimizer help marketers track brand visibility and sentiment across AI search platforms, identify optimization opportunities, and implement prescriptive changes to improve citations and performance.
 
 Key views include the Overview, Brand Presence, Agentic and Referral Traffic, URL Inspector, Opportunities, Collaboration, and Customer Configuration.
 
@@ -35,19 +35,19 @@ CARDS
 
 * ./brand-presence.md
   {title= Brand presence dashboard}
-  {image= /help/assets/overview/brand-presence-card.png}
+  {image= /help/assets/overview/brand-presence-card1.png}
   {description= Tracks how your brand appears across LLM search platforms, including sentiment analysis and benchmarking other brands.}
   {target=_blank}
   {cta=Learn more}
 * ./agentic-traffic.md
   {title= Agentic traffic dashboard}
   {description= Surfaces traffic from LLMs that traditional analytics miss, helping you connect AI-assisted discovery to engagement and revenue.}
-  {image= /help/assets/overview/agentic-traffic-card.png}
+  {image= /help/assets/overview/agentic-traffic-card1.png}
   {target=_blank}
   {cta=Learn more}
 * ./referral-traffic.md
   {title= Referral traffic dashboard}
-  {image= /help/assets/overview/referral-traffic-card.png}
+  {image= /help/assets/overview/referral-traffic-card1.png}
   {description= Measures human visits that originate from AI-generated citations that let you discover actual AI user engagement}
   {target=_blank}
   {cta=Learn more}
@@ -59,18 +59,24 @@ CARDS
   {cta=Learn more}
 * ./opportunities-overview.md
   {title= Opportunities dashboard}
-  {image= /help/assets/overview/opportunities-card.png}
+  {image= /help/assets/overview/opportunities-card1.png}
   {description= Surfaces and prioritizes actionable insights that improve brand visibility and citation performance across AI-powered search platforms}
   {target=_blank}
   {cta=Learn more}
 * ./url-inspector.md
   {title= URL inspector dashboard}
-  {image= /help/assets/overview/url-inspector-card.png}
+  {image= /help/assets/overview/url-inspector-card1.png}
   {description= Gives you visibility into how your owned URLs are performing in AI-driven search environments.}
   {target=_blank}
   {cta=Learn more}
 * ./customer-configuration.md
-  {title= Customer Configuration dashboard}
+  {title= Brands management dashboard}
+  {image= /help/assets/overview/customer-configuration-card.png}
+  {description= Lets organizations control how the Adobe LLM Optimizer operates for their specific needs.}
+  {target=_blank}
+  {cta=Learn more}
+* ./customer-configuration.md
+  {title= Prompt library dashboard}
   {image= /help/assets/overview/customer-configuration-card.png}
   {description= Lets organizations control how the Adobe LLM Optimizer operates for their specific needs.}
   {target=_blank}
