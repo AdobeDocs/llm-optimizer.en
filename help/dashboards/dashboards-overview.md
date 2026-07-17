@@ -81,7 +81,6 @@ CARDS
   {description= Lets organizations control how the Adobe LLM Optimizer operates for their specific needs.}
   {target=_blank}
   {cta=Learn more}
-
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
@@ -90,7 +89,7 @@ CARDS
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./brand-presence.md" title="Brand presence dashboard" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="/help/assets/overview/brand-presence-card.png" alt="Brand presence dashboard"
+                        <img class="is-bordered-r-small" src="/help/assets/overview/brand-presence-card1.png" alt="Brand presence dashboard"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -113,7 +112,7 @@ CARDS
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./agentic-traffic.md" title="Agentic traffic dashboard" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="/help/assets/overview/agentic-traffic-card.png" alt="Agentic traffic dashboard"
+                        <img class="is-bordered-r-small" src="/help/assets/overview/agentic-traffic-card1.png" alt="Agentic traffic dashboard"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -136,7 +135,7 @@ CARDS
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./referral-traffic.md" title="Referral traffic dashboard" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="/help/assets/overview/referral-traffic-card.png" alt="Referral traffic dashboard"
+                        <img class="is-bordered-r-small" src="/help/assets/overview/referral-traffic-card1.png" alt="Referral traffic dashboard"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -182,7 +181,7 @@ CARDS
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./opportunities-overview.md" title="Opportunities dashboard" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="/help/assets/overview/opportunities-card.png" alt="Opportunities dashboard"
+                        <img class="is-bordered-r-small" src="/help/assets/overview/opportunities-card1.png" alt="Opportunities dashboard"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -205,7 +204,7 @@ CARDS
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./url-inspector.md" title="URL inspector dashboard" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="/help/assets/overview/url-inspector-card.png" alt="URL inspector dashboard"
+                        <img class="is-bordered-r-small" src="/help/assets/overview/url-inspector-card1.png" alt="URL inspector dashboard"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -223,12 +222,12 @@ CARDS
             </div>
         </div>
     </div>
-    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Customer Configuration dashboard">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Brands management dashboard">
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./customer-configuration.md" title="Customer Configuration dashboard" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="/help/assets/overview/customer-configuration-card.png" alt="Customer Configuration dashboard"
+                    <a href="./customer-configuration.md" title="Brands management dashboard" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="/help/assets/overview/customer-configuration-card.png" alt="Brands management dashboard"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -236,7 +235,30 @@ CARDS
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./customer-configuration.md" target="_blank" rel="referrer" title="Customer Configuration dashboard">Customer Configuration dashboard</a>
+                        <a href="./customer-configuration.md" target="_blank" rel="referrer" title="Brands management dashboard">Brands management dashboard</a>
+                    </p>
+                    <p class="is-size-6">Lets organizations control how the Adobe LLM Optimizer operates for their specific needs.</p>
+                </div>
+                <a href="./customer-configuration.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Learn more</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Prompt library dashboard">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="./customer-configuration.md" title="Prompt library dashboard" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="/help/assets/overview/customer-configuration-card.png" alt="Prompt library dashboard"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="./customer-configuration.md" target="_blank" rel="referrer" title="Prompt library dashboard">Prompt library dashboard</a>
                     </p>
                     <p class="is-size-6">Lets organizations control how the Adobe LLM Optimizer operates for their specific needs.</p>
                 </div>

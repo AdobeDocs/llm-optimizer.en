@@ -136,6 +136,7 @@ How to decide how you set up categories is based on one question: **Who needs to
 >
 > * Pick one approach and stick to it.
 > * You can only have **one** Category model per account/brand. Do not mix **SBU** and **URL_DIR** at the same time.
+
 <!--Can you mix Product/Service with these?-->
 
 Example:
