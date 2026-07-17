@@ -171,6 +171,7 @@ When creating the list, consider the following:
 
 * Can an editor understand the topic in 5 seconds from the prompt text? If not, rename/simplify.
 * Will a different team own the fix for different topics? If yes, you picked useful topics.
+
 <!-- Last bullet point does not make sense. Clarification needed. Also not sure what is meant by "editor"?-->
 
 Some additional helpful hints:
