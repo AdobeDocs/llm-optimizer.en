@@ -128,7 +128,9 @@ How to decide how you set up categories is based on one question: **Who needs to
 
 * If you are a *business leader*, pick the **SBU** approach.
 * If you are a *web/content owner*, pick the **URL_DIR** approach.
-* If you are a *merchandising/offers manager*, pick the **Product/Service category** approach.<!--How do you pick a region? Or is that handled differently?>
+* If you are a *merchandising/offers manager*, pick the **Product/Service category** approach.
+
+<!--How do you pick a region? Or is that handled differently?-->
 
 ![Adding categories in LLM Optimizer](/help/assets/best-practices/create-category1.png)
 
