@@ -61,6 +61,11 @@ Set routing for the following user agents:
  *Claude-SearchBot*
 ```
 
+Set the rule to **Match All**, and add these request-header criteria to prevent a recreated failover request from being routed to Edge Optimize again:
+
+* `x-edgeoptimize-api-key` **does not exist**.
+* `x-edgeoptimize-request` **does not exist**.
+
 >[!NOTE]
 >
 >Apply the Optimize at Edge routing rule only to agentic HTML page traffic. A common setup is to use request-side criteria such as **File Extension** to match `html` and `EMPTY_STRING` for extensionless page URLs. If your site serves HTML from other URL patterns, or includes extensionless non-page routes such as API endpoints, refine the rule with additional path-based criteria.
@@ -122,58 +127,67 @@ Set `x-forwarded-host` header to `{{builtin.AK_HOST}}`
 
 **9. Site Failover**
 
-The Site Failover configuration has two parts: the failover behavior (configured inside the main optimize-at-edge routing rule) and a separate failover test header rule.
+The Site Failover configuration has two parts: a failover behavior inside the main Optimize at Edge routing rule and a sibling rule that adds a response header when fallback occurs.
 
-**9a. Site Failover Behavior (inside the main optimize-at-edge routing rule)**
+**9a. Configure the Site Failover behavior**
 
-Inside the main routing rule, configure the Site Failover behavior and the Advanced XML snippet as follows:
+Inside the main Optimize at Edge routing rule, create a child rule named **Site Failover Behavior**. Set it to **Match Any** and add these criteria:
 
->[!IMPORTANT]
->
->The XML snippet in this step requires the **Advanced** behavior. In some Akamai environments, this behavior is not available for self-service editing. If you do not see the **Advanced** option, contact your Akamai account team or Akamai support to enable the required configuration.
+* **Response Status Code** is in the range `400` through `599`.
+* **Origin Timeout** is `Yes`.
 
 ![Site Failover](/help/assets/optimize-at-edge/akamai-step9-failover.png)
 
-Add the request header `x-edgeoptimize-request` with value `fo` through Advanced XML:
+Create the property variable `PMUSER_EDGE_OPTIMIZE_FAILOVER` with an initial value of `FALSE`. In the **Site Failover Behavior** rule, add the following behaviors:
 
-```
-<forward:availability.fail-action2>
-<add-header>
-<status>on</status>
-<name>x-edgeoptimize-request</name>
-<value>fo</value>
-</add-header>
-</forward:availability.fail-action2>
-```
+* **Set Variable**
+  * **Variable:** `PMUSER_EDGE_OPTIMIZE_FAILOVER`
+  * **Create Value From:** Expression
+  * **Expression:** `TRUE`
+  * **Operation:** None
+* **Site Failover**
+  * **Enable:** On
+  * **Action:** Use alternate hostname in this property
+  * **Alternate Hostname in This Property:** Enter the original production hostname for your site.
+  * **Modify Request Path:** No
 
-![Failover Behaviors](/help/assets/optimize-at-edge/akamai-step9-failover-behaviors.png)
-
-**9b. Failover Test Header rule (sibling rule)**
+**9b. Configure the failover response header rule**
 
 >[!IMPORTANT]
 >
 >Create the **EdgeOptimize Failover - Test Header** rule as a **sibling** (at the same level) of the routing rules — **not** nested inside them. In the Akamai Property Manager rule tree, the hierarchy should look like:
 >
 >```
->▼ Parent Rule
->  ▶ Optimize at Edge Routing     ← routing rule
->    EdgeOptimize Failover - Test Header       ← sibling, same level
+>▼ Optimize at Edge
+>  ▶ Optimize at Edge Routing
+>  ▶ EdgeOptimize Failover - Test Header
 >```
 >
->This ensures the failover test header rule evaluates for **all** routing rules, not just one.
+>The sibling rule is evaluated when Akamai recreates the failed request for the original hostname. The API-key criterion on the routing rule prevents that request from being sent to Edge Optimize again.
 >
 >Also ensure the **Optimize at Edge Routing** rule is not overridden by any later matching rule that changes the origin, caching behavior, or cache ID for the same requests. If another matching rule resets these behaviors, Optimize at Edge routing or caching may not work as expected.
 
-If the request header `x-edgeoptimize-request` value is `fo`, then set the outgoing response header `x-edgeoptimize-fo` to `true`.
+Set the rule to **Match All** and add these criteria:
 
-![Failover Rules](/help/assets/optimize-at-edge/akamai-step9-failover-rules.png)
+* Request header `x-edgeoptimize-api-key` **exists**.
+* Request header `x-edgeoptimize-request` **does not exist**.
 
-Site Failover ensures that if Edge Optimize returns a `4XX` or `5XX` error, the request is automatically routed back to your default origin so the end-user still receives a response.
+Add a **Modify Outgoing Response Header** behavior with these values:
+
+* **Action:** Add
+* **Custom Header Name:** `x-edgeoptimize-fo`
+* **Header Value:** `true`
+
+![Configure the failover response header rule](/help/assets/optimize-at-edge/akamai-step9-failover-header.png)
+
+Treat `x-edgeoptimize-fo` as a diagnostic response header. The `x-edgeoptimize-api-key` header must be added by the Akamai routing rule and must not be supplied by clients.
+
+Site Failover ensures that if Edge Optimize returns an error or times out, Akamai recreates the request for your original hostname so the visitor still receives the site's normal response.
 
 | Scenario | Behavior |
 | --- | --- |
-| Edge Optimize returns `2XX` | Optimized response is served to the client. |
-| Edge Optimize returns `4XX` or `5XX` | Request is routed back to the default origin. |
+| Edge Optimize returns `2XX` or `3XX` | The optimized response is served. `x-edgeoptimize-fo` is absent. |
+| Edge Optimize returns `4XX`–`5XX`, or the origin times out | The request is recreated for the original hostname. The response includes `x-edgeoptimize-fo: true`. |
 
 **Verify the setup**
 
@@ -211,7 +225,7 @@ The response should **not** contain the `x-edgeoptimize-request-id` header. The 
 | Header | Bot traffic (optimized) | Human traffic (unaffected) |
 |---|---|---|
 | `x-edgeoptimize-request-id` | Present — contains a unique request ID | Absent |
-| `x-edgeoptimize-fo` | Present only if failover occurred (value: `1`) | Absent |
+| `x-edgeoptimize-fo` | Present only if failover occurred (value: `true`) | Absent |
 
 {{verify-routing-status-in-ui}}
 
