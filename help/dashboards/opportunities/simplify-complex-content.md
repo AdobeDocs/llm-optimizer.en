@@ -2,20 +2,27 @@
 title: Simplify Complex Content
 description: Learn how LLM Optimizer identifies high-traffic pages with dense copy that is hard for AI agents to interpret, and how to review and deploy simplified text with Optimize at Edge.
 feature: Opportunities
-autotag-review: '2026-05-15T17:58:39.879Z'
-TQID: 'https://experienceleague.adobe.com/wO3ZY-fEgOi7cD4dq0kCltk-YJSD431bkA6-9PW42Lo'
+autotag-review: '2026-07-15T18:04:55.581Z'
+TQID: 'https://experienceleague.adobe.com/uMK9qeAGMNrtvR0TYbeg8SIOKlwKf4L5NIE9ZgsJaUw'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
     internal-label: LLM Optimizer
 feature_v2:
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-    internal-label: Insights
-subfeature_v2:
   - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
     internal-label: Opportunities
+  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+    internal-label: Optimize at edge
+subfeature_v2:
+  - id: bbfc1b77-44c5-4fe8-b65f-ec160fe0d021
+    internal-label: Content optimization
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
     internal-label: Optimization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 
 # Simplify Complex Content

@@ -2,22 +2,25 @@
 title: Brand Presence
 description: Learn how to use the Brand Presence dashboard to understand how your brand is perceived at the level of AI-generated responses.
 feature: Brand Presence
-autotag-review: '2026-05-15T17:37:11.161Z'
-TQID: 'https://experienceleague.adobe.com/sDPtwR-uMfeIYp5K93gzYF27qYgLHBwhyajj9hGVB7Q'
+autotag-review: '2026-07-15T17:44:10.254Z'
+TQID: 'https://experienceleague.adobe.com/XBRLNcs-1flf9qdYI93NAwqusTP8i8-1ulTfz-iLD-4'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
     internal-label: LLM Optimizer
 feature_v2:
-  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
-    internal-label: Dashboards
-  - id: e0828736-236a-487b-a478-5a635455eadc
-    internal-label: Reporting
-subfeature_v2:
   - id: ab7fdb62-bd53-4cfd-8c2c-169f7e47f20e
-    internal-label: Brand Presence
+    internal-label: Brand intelligence
+subfeature_v2:
+  - id: f718ad75-b1df-4dc1-89bf-0c3167e83b33
+    internal-label: Brand presence
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
     internal-label: Reporting
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
     internal-label: Insights
 ---
@@ -26,7 +29,11 @@ topic_v2:
 
 The Brand Presence dashboard provides a detailed overview on how your brand is perceived at the level of AI-generated responses. It shows where, how often, and in what context your brand is mentioned. You can use the dashboard to measure visibility, track citation and explore sentiment trends. The dashboard is divided into several sections, each providing different insights. There are also customizable filters to help you refine the displayed data.
 
-![Brand Presence overview](/help/dashboards/assets/brand-main.png)
+Navigate to **Brand Presence**. In the brand drop-down list, either select the brand you want to analyze or choose **All Brands** to review visibility across your full brand set.
+
+![Brand Presence with brand selector (Brand Centric experience)](/help/assets/brand-centric-experience/brand-presence-brand-centric.png)
+
+<!-- ![Brand Presence overview](/help/dashboards/assets/brand-main.png)-->
 
 This page details the following:
 
@@ -35,10 +42,6 @@ This page details the following:
 * [Others Comparison](##others-comparison)
 * [Sentiment Trend](#sentiment-trend)
 * [Data Insights](#data-insights)
-
-If you are on the [Brand Centric experience](/help/overview/quick-start.md#brand-centric-experience), navigate to **Brand Presence**. In the brand drop-down list, either select the brand you want to analyze or choose **All Brands** to review visibility across your full brand set.
-
-![Brand Presence with brand selector (Brand Centric experience)](/help/assets/brand-centric-experience/brand-presence-brand-centric.png)
 
 ## Filters {#filters}
 

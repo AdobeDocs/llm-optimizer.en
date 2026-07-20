@@ -2,15 +2,31 @@
 title: Optimize at Edge - Azure Front Door (BYOCDN)
 description: Learn how to configure Azure Front Door BYOCDN for Optimize at Edge in LLM Optimizer.
 feature: Opportunities
+autotag-review: '2026-07-15T17:40:54.797Z'
+TQID: 'https://experienceleague.adobe.com/fe-kultqzWQdRdcUjzfNs21UpL6m5zcoAmaQyMMv5kk'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
     internal-label: LLM Optimizer
 feature_v2:
   - id: d1956731-2adb-4bb7-8301-2b239254ac72
     internal-label: Administration
+  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+    internal-label: Opportunities
+  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+    internal-label: Optimize at edge
+  - id: e0828736-236a-487b-a478-5a635455eadc
+    internal-label: Traffic analytics
 subfeature_v2:
   - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-    internal-label: CDN
+    internal-label: CDN log forwarding
+  - id: e06fae5f-830b-4222-a469-b5e148d36465
+    internal-label: Agentic traffic
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 ---
 
 # Azure Front Door (BYOCDN)

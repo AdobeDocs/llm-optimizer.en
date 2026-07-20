@@ -2,26 +2,43 @@
 title: Optimize at Edge
 description: Learn how to deliver optimizations in LLM Optimizer at the CDN edge without any authoring changes required.
 feature: Opportunities
-autotag-review: '2026-05-15T17:55:41.072Z'
-TQID: 'https://experienceleague.adobe.com/kMxoKtrfyzxIpLJP9nt-rq6GP37ICCNe4XienUKqDZE'
+autotag-review: '2026-07-15T18:10:00.249Z'
+TQID: 'https://experienceleague.adobe.com/nRq5punuSnNb4XXIJzkO1NGF66tsyN1rdt-O9dd8tmU'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
     internal-label: LLM Optimizer
 feature_v2:
-  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
-    internal-label: Dashboards
   - id: d1956731-2adb-4bb7-8301-2b239254ac72
     internal-label: Administration
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-    internal-label: Insights
-subfeature_v2:
   - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
     internal-label: Opportunities
+  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+    internal-label: Optimize at edge
+subfeature_v2:
+  - id: bbfc1b77-44c5-4fe8-b65f-ec160fe0d021
+    internal-label: Content optimization
+  - id: a6256a78-8814-462c-9627-86699b39cee1
+    internal-label: Commerce
+  - id: e0ec491f-fe51-42b6-801c-1c0dfcc0e64f
+    internal-label: Technical GEO
+  - id: fe92ae96-fc87-4fea-96a0-adc06310d4f4
+    internal-label: Offsite
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
     internal-label: Optimization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
   - id: e9001ce2-5245-4a8e-8601-dd958009072f
     internal-label: Web experience
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 ---
 
 # Optimize at Edge

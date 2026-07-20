@@ -2,21 +2,20 @@
 title: Agentic Traffic
 description: Learn how to use the Agentic Traffic dashboard in order to see how AI agents interact with your site.
 feature: Agentic Traffic
-autotag-review: '2026-05-15T17:33:15.711Z'
-TQID: 'https://experienceleague.adobe.com/3dWNUxcquDVip4Gg1WMYfwv8MUSbZYWqJYnkQ3aZkmc'
+autotag-review: '2026-07-15T17:38:14.233Z'
+TQID: 'https://experienceleague.adobe.com/4pvsCwqZXkX7xOJWqKge6rkJYaAq27cSjLeTxaA4ysM'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
     internal-label: LLM Optimizer
 feature_v2:
-  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
-    internal-label: Dashboards
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-    internal-label: Insights
   - id: e0828736-236a-487b-a478-5a635455eadc
-    internal-label: Reporting
+    internal-label: Traffic analytics
 subfeature_v2:
   - id: e06fae5f-830b-4222-a469-b5e148d36465
-    internal-label: Agentic Traffic
+    internal-label: Agentic traffic
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
     internal-label: Reporting
@@ -26,9 +25,11 @@ topic_v2:
 
 # Agentic Traffic {#agentic-traffic}
 
-The Agentic Traffic dashboard shows how AI agents (crawlers and chatbots) interact with your site. By using this view you can track the total number of requests and general performance related metrics. You can also view the distribution of traffic across markets, categories, pages, and agents. The data used by this dashboard is sourced from the CDN logs so you must configure **CDN log forwarding** in order to display metrics. There are also customizable filters to help you refine the displayed data.
+The Agentic Traffic dashboard shows how AI agents (crawlers and chatbots) interact with your site. By using this view you can track the total number of requests and general performance related metrics. You can also view the distribution of traffic across markets, categories, pages, and agents. The data used by this dashboard is sourced from the CDN logs so you must configure **CDN log forwarding** in order to display metrics. There are also customizable filters to help you refine the displayed data. Navigate to **Agentic Traffic** and select the site for which you want to view the agentic traffic insights.
 
-![Traffic Distribution](/help/dashboards/assets/ag-main.png)
+![Agentic Traffic — site selector (Brand Centric experience)](/help/assets/brand-centric-experience/agentic-traffic-dashboard.png)
+
+<!-- ![Traffic Distribution](/help/dashboards/assets/ag-main.png)-->
 
 This page details the following:
 
@@ -39,44 +40,15 @@ This page details the following:
 * [Top and Bottom Movers](#top-bottom-movers)
 * [User Agent and URL Performance Analysis](#user-url-performance)
 
-If you are on the [Brand Centric experience](/help/overview/quick-start.md#brand-centric-experience), navigate to **Agentic Traffic** and select the site for which you want to view the agentic traffic insights.
-
-![Agentic Traffic — site selector (Brand Centric experience)](/help/assets/brand-centric-experience/agentic-traffic-dashboard.png)
-
 ## CDN Log Forwarding {#cdn-setup}
 
 Without **CDN log forwarding**, the Agentic Traffic dashboard is blank. To view agentic interactions, you must configure **CDN log forwarding**.
 
-### Customer Configuration (classic navigation)
-
-On first login, you will see a message as shown in the image below.
-
-![CDN Setup](/help/dashboards/assets/ag-log-forward1.png)
-
-Select **Go to Configuration** and you will automatically navigate to the **CDN Configuration** tab of the [customer configuration dashboard](/help/dashboards/customer-configuration.md).
-
-![CDN Setup Onboard](/help/dashboards/assets/ag-log-forward2.png)
-
-On this tab, select **Onboard CDN**. And the CDN provider window is displayed.
-
-<!-- [CDN Provider](/help/dashboards/assets/ag-log-forward3.png)-->
-On the **Onboard CDN Provider** window:
-
-1. Select your CDN provider (for example, Akamai, Adobe-managed Fastly, Fastly, AWS Cloudfront, Azure CDN, Cloudflare, or Other).
-2. Click **Onboard** to enable log forwarding.
-
-If you select **Other**, you will have to reach out to llmo-now@adobe.com for assistance.
-
->[!NOTE]
->For details regarding log forwarding when using a customer managed CDN (BYOCDN) see [BYOCDN Log Forwarding Overview](/help/overview/log-forwarding/log-forwarding-overview.md)
-
-Once activated, logs are ingested and the dashboard will populate with metrics such as total agent interactions, success rate, hits by market, user agent analysis, and URL-level performance.
-
-### Brand Centric experience
-
-If you are are on the [brand centric experience](/help/overview/quick-start.md#brand-centric-experience), you can add CDN log forwarding information by navigating to **Brands Management** and clicking on the **CDN** label.
+You can add CDN log forwarding information by navigating to **Brands Management** and clicking the **CDN** label.
 
 ![Brands Management — CDN log forwarding](/help/assets/brand-centric-experience/brands-management-cdn.png)
+
+For details regarding log forwarding when using a customer managed CDN (BYOCDN) see [BYOCDN Log Forwarding Overview](/help/overview/log-forwarding/log-forwarding-overview.md)
 
 LLM Optimizer processes a subset of fields from the the CDN logs. Although raw log field names vary by CDN provider, they are normalized and presented as:
 

@@ -2,34 +2,41 @@
 title: Referral Traffic
 description: Learn how to use the Referral Traffic dashboard to see how visitors arrive at your site from external platforms, AI citations, and referral links.
 feature: Referral Traffic
-autotag-review: '2026-05-15T17:57:28.534Z'
-TQID: 'https://experienceleague.adobe.com/rMSltSJf-UH4FHoST9NhmeY-hGVNLXsFXbCLzZenW5w'
+autotag-review: '2026-07-15T18:05:26.973Z'
+TQID: 'https://experienceleague.adobe.com/L1Aqqdbs-aPaX0Qj0ekHaQHjx0713gZfY740wIwAtRY'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
     internal-label: LLM Optimizer
 feature_v2:
-  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
-    internal-label: Dashboards
   - id: e0828736-236a-487b-a478-5a635455eadc
-    internal-label: Reporting
+    internal-label: Traffic analytics
 subfeature_v2:
   - id: e3c08d81-9e25-4503-9df5-8dd1f489aa99
-    internal-label: Referral Traffic
+    internal-label: Referral traffic
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
     internal-label: Reporting
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
     internal-label: Insights
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 
 # Referral Traffic
 
 Referral Traffic shows how visitors arrive at your site from external platforms, AI citations, and referral links. It tracks and analyzes traffic sources, referral patterns, and conversion metrics from external websites and platforms. This will help you understand which sources, regions, and pages drive the most engaged traffic. <!--Data is sourced from the CDN logs, a privacy-preserving source that does not capture personal user data.--> There are also customizable filters to help you refine the displayed data.
 
+Navigate to **Referral Traffic** and select the site for which you want to view the LLM Referral Traffic insights.
+
+![Referral Traffic — site selector (Brand Centric experience)](/help/assets/brand-centric-experience/referral-traffic-dashboard.png)
+
 >[!NOTE]
 >By default, this dashboard builds traffic insights from **CDN logs**. If your organization is on a paid offer, you can connect **Adobe Analytics** or **Google Analytics 4**(GA4) to add data that measures AI-driven discovery and site engagement. This data is available in the **Business Impact** tab. Please note that without integration to Adobe Analytics or GA4, the tab is not populated. As such, see [Adobe Analytics Integration](/help/dashboards/adobe-analytics-integration.md) or [Google Analytics Integration](/help/dashboards/google-analytics-integration.md) for more details.
 
-![Referral Page](/help/dashboards/assets/referral-traffic.png)
+<!-- ![Referral Page](/help/dashboards/assets/referral-traffic.png)-->
 
 This page details the following:
 
@@ -39,19 +46,15 @@ This page details the following:
 * [Top Referral URLs](#top-referrals)
 * [Referral Traffic Details](#traffic-details)
 
-If you are on the [Brand Centric experience](/help/overview/quick-start.md#brand-centric-experience), navigate to **Referral Traffic** and select the site for which you want to view the LLM Referral Traffic insights.
-
-![Referral Traffic — site selector (Brand Centric experience)](/help/assets/brand-centric-experience/referral-traffic-dashboard.png)
-
 ## Setup {#setup}
 
 On first login, the Referral Traffic dashboard may appear blank. To view your data, you must configure CDN log forwarding.
 
-For customers that are on the [Brand Centric experience](/help/overview/quick-start.md#brand-centric-experience), you can add CDN log forwarding information by navigating to **Brands Management** and clicking on the **CDN** label.
+You can add CDN log forwarding information by navigating to **Brands Management** and clicking on the **CDN** label.
 
-**Customer Configuration (classic experience):** Configure [CDN log forwarding](/help/dashboards/customer-configuration.md#cdn-configuration) by selecting **Go To Configuration**.
+<!-- **Customer Configuration (classic experience):** Configure [CDN log forwarding](/help/dashboards/customer-configuration.md#cdn-configuration) by selecting **Go To Configuration**.-->
 
-![Referral Setup](/help/dashboards/assets/referral-setup1.png)
+<!--![Referral Setup](/help/dashboards/assets/referral-setup1.png)-->
 
 <!--
 1. Select your Source (either CDN logs or AEM Operational Telemetry).

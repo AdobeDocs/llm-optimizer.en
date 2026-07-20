@@ -2,19 +2,28 @@
 title: Optimization opportunities
 description: Learn how to use the opportunities dashboard to automatically detect how your site can be improved in order to increase brand visibility.
 feature: Opportunities
-autotag-review: '2026-05-15T17:53:48.623Z'
-TQID: 'https://experienceleague.adobe.com/FAbQhzuyT-kIitIaoVQ47dam-TpN-deU5Vbo1nmK5CA'
+autotag-review: '2026-07-15T18:08:26.657Z'
+TQID: 'https://experienceleague.adobe.com/nEVOXJiQZIqfs2Q-tpA3DeiBNwpZAjhMSyIVuNlACdM'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
     internal-label: LLM Optimizer
 feature_v2:
-  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
-    internal-label: Dashboards
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-    internal-label: Insights
-subfeature_v2:
   - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
     internal-label: Opportunities
+  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+    internal-label: Optimize at edge
+subfeature_v2:
+  - id: bbfc1b77-44c5-4fe8-b65f-ec160fe0d021
+    internal-label: Content optimization
+  - id: a6256a78-8814-462c-9627-86699b39cee1
+    internal-label: Commerce
+  - id: e0ec491f-fe51-42b6-801c-1c0dfcc0e64f
+    internal-label: Technical GEO
+  - id: fe92ae96-fc87-4fea-96a0-adc06310d4f4
+    internal-label: Offsite
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
     internal-label: Optimization
@@ -28,7 +37,7 @@ Optimization opportunities are automatically detected insights that show where y
 
 These optimizations include on-page fixes (adding structured content, canonicals, or summaries), technical adjustments (unblocking AI crawlers or resolving errors) and influencing content on third-party authoritative sites. Addressing these optimization opportunities helps your brand be accurately represented and more likely to be cited in generative responses.
 
-![Optimization opportunities](/help/dashboards/assets/oport.png)
+<!--![Optimization opportunities](/help/dashboards/assets/oport.png)-->
 
 ## Opportunities Dashboard
 

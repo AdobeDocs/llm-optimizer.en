@@ -2,19 +2,23 @@
 title: Reddit Sentiment Analysis
 description: Learn how LLM Optimizer analyzes Reddit threads to surface recommendations that improve your brand's perception and visibility in AI search results.
 feature: Opportunities
-autotag-review: '2026-05-15T17:56:59.489Z'
-TQID: 'https://experienceleague.adobe.com/LRC3nhHrAZoODy4gfsZiR7gc0i8n-IYqvZFj1TAUxsQ'
+autotag-review: '2026-07-15T18:05:47.495Z'
+TQID: 'https://experienceleague.adobe.com/trt7J6hxXtRdGat8Ohhd32JkwwIAJ26G8M98pBrN1CY'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
     internal-label: LLM Optimizer
 feature_v2:
-  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
-    internal-label: Dashboards
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-    internal-label: Insights
-subfeature_v2:
   - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
     internal-label: Opportunities
+subfeature_v2:
+  - id: fe92ae96-fc87-4fea-96a0-adc06310d4f4
+    internal-label: Offsite
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 
 # Reddit Sentiment Analysis
