@@ -159,13 +159,11 @@ Inside the main Optimize at Edge routing rule, create a child rule named **Site 
 
 ![Configure the failover response header rule](/help/assets/optimize-at-edge/akamai-step9-failover-header.png)
 
-Treat `x-edgeoptimize-fo` as a diagnostic response header. The `x-edgeoptimize-api-key` header must be added by the Akamai routing rule and must not be supplied by clients.
-
 Site Failover ensures that if Edge Optimize returns an error or times out, Akamai recreates the request for your original hostname so the visitor still receives the site's normal response.
 
 | Scenario | Behavior |
 | --- | --- |
-| Edge Optimize returns `2XX` or `3XX` | The optimized response is served. `x-edgeoptimize-fo` is absent. |
+| Edge Optimize returns `2XX` or `3XX` | The optimized response is served. `x-edgeoptimize-request-id` is present. |
 | Edge Optimize returns `4XX`–`5XX`, or the origin times out | The request is recreated for the original hostname. The response includes `x-edgeoptimize-fo: true`. |
 
 **Verify the setup**
