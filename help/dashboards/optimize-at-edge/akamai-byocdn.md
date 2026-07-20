@@ -138,7 +138,7 @@ Inside the main Optimize at Edge routing rule, create a child rule named **Site 
 
 ![Site Failover](/help/assets/optimize-at-edge/akamai-step9-failover.png)
 
-![Configure the Site Failover behaviors](/help/assets/optimize-at-edge/akamai-step9-failover-settings.png)
+![Configure the Site Failover behavior](/help/assets/optimize-at-edge/akamai-step9-failover-settings.png)
 
 **9b. Configure the failover response header rule**
 
