@@ -41,6 +41,8 @@ Before you set up the Akamai Property Manager rules, ensure you have:
 * An Edge Optimize API key retrieved from the LLM Optimizer UI. For steps, see [Retrieve your API keys](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key).
 * (Optional) To test staging routing, see [Staging API key](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional).
 
+**Configuration**
+
 The following Akamai Property Manager rule routes agentic HTML page traffic to Edge Optimize. The configuration includes the following steps:
 
 ## 1. Set routing criteria (User-Agent and HTML traffic matching)
