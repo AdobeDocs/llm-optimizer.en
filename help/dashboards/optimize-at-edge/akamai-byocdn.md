@@ -33,7 +33,7 @@ topic_v2:
 
 This configuration routes agentic traffic (requests from AI bots and LLM user agents) to the Edge Optimize backend service (`live.edgeoptimize.net`). Human visitors and SEO bots continue to be served from your origin as usual. To test the configuration, after the setup is complete, look for the header `x-edgeoptimize-request-id` in the response.
 
-## Prerequisites
+**Prerequisites**
 
 Before you set up the Akamai Property Manager rules, ensure you have:
 
