@@ -37,7 +37,7 @@ topic_v2:
 
 This configuration routes agentic traffic (requests from AI bots and LLM user agents) to the Edge Optimize backend service (`live.edgeoptimize.net`). Human visitors and SEO bots continue to be served from your origin as usual. To test the configuration, after the setup is complete, look for the header `x-edgeoptimize-request-id` in the response.
 
-**Prerequisites**
+## Prerequisites
 
 Before you set up the Cloudflare Worker routing rules, ensure you have:
 
@@ -46,11 +46,11 @@ Before you set up the Cloudflare Worker routing rules, ensure you have:
 * An Edge Optimize API key retrieved from the LLM Optimizer UI. For steps, see [Retrieve your API keys](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key).
 * (Optional) To test staging routing, see [Staging API key](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional).
 
-**How routing works**
+## How routing works
 
 When configured correctly, a request to your domain (for example, `www.example.com/page.html`) from an agentic user agent is intercepted by the Cloudflare Worker and routed to the Edge Optimize backend. The backend request includes the required headers.
 
-**Testing the backend request**
+### Testing the backend request
 
 You can verify the routing by making a direct request to the Edge Optimize backend.
 
@@ -62,7 +62,7 @@ curl -svo /dev/null https://live.edgeoptimize.net/page.html \
   -H 'x-edgeoptimize-config: LLMCLIENT=TRUE;'
 ```
 
-**Required Headers**
+### Required Headers
 
 The following headers must be set on requests to the Edge Optimize backend:
 
@@ -90,13 +90,13 @@ This option uses the **Deploy to Cloudflare** button to automatically create the
 >
 >Use this option only if you **do not** have an existing Cloudflare Worker on your domain. If you already have a worker, use [Option 2: Manual setup](#option-2-manual-setup) to add the Edge Optimize routing logic to your existing worker.
 
-**Step 1: Deploy the worker**
+### Step 1: Deploy the worker
 
 Click the button below to deploy the Edge Optimize worker to your Cloudflare account:
 
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/adobe/llmo-code-samples/tree/main/optimize-at-edge/cloudflare/automation)
 
-**Step 2: Fill in the deployment form**
+### Step 2: Fill in the deployment form
 
 Clicking the button opens the Workers setup page. Fill in the form as follows:
 
@@ -120,7 +120,7 @@ After the worker is deployed, proceed to [Add a route to your domain](#add-a-rou
 
 Follow these steps to create and configure the worker manually.
 
-**Step 1: Create the Cloudflare Worker**
+### Step 1: Create the Cloudflare Worker
 
 1. Log in to your Cloudflare dashboard.
 2. Navigate to **Workers & Pages** in the sidebar.
@@ -130,13 +130,13 @@ Follow these steps to create and configure the worker manually.
 
 ![Cloudflare Workers dashboard](/help/assets/optimize-at-edge/cloudflare-workers-dashboard.png)
 
-**Step 2: Add the Worker code**
+### Step 2: Add the Worker code
 
 After creating the worker, click **Edit code** and replace the default code with the code from [worker.js](https://github.com/adobe/llmo-code-samples/blob/main/optimize-at-edge/cloudflare/automation/src/worker.js). If you already have an existing Cloudflare Worker, merge the code with your existing worker code instead of replacing it entirely.
 
 Click **Save and deploy** to publish the worker.
 
-**Step 3: Configure environment variables and secrets**
+### Step 3: Configure environment variables and secrets
 
 Environment variables store sensitive configuration like your API key securely.
 
@@ -172,7 +172,7 @@ Alternatively, you can configure routes at the zone level:
 
 ![Cloudflare Worker routes](/help/assets/optimize-at-edge/cloudflare-worker-routes.png)
 
-**Verifying failover behavior**
+### Verifying failover behavior
 
 If Edge Optimize is unavailable or returns an error, the worker automatically fails over to your origin. Failover responses include the `x-edgeoptimize-fo` header:
 
@@ -183,7 +183,7 @@ If Edge Optimize is unavailable or returns an error, the worker automatically fa
 
 You can monitor failover events in Cloudflare Workers logs to troubleshoot issues.
 
-**Understanding the Worker logic**
+### Understanding the Worker logic
 
 The Cloudflare Worker implements the following logic:
 
@@ -205,11 +205,11 @@ The Cloudflare Worker implements the following logic:
 
 7. **Redirect handling:** The `redirect: "manual"` option ensures that redirect responses from Edge Optimize are passed through to the client without the worker following them.
 
-**Customizing the configuration**
+## Customizing the configuration
 
 You can customize the worker behavior by modifying the configuration constants at the top of the code:
 
-**Agentic bot list**
+### Agentic bot list
 
 Modify the `AGENTIC_BOTS` array to add or remove user agents:
 
@@ -228,7 +228,7 @@ const AGENTIC_BOTS = [
 ];
 ```
 
-**Targeted paths**
+### Targeted paths
 
 By default, all HTML pages are routed to Edge Optimize. To limit routing to specific paths, modify the `TARGETED_PATHS` array:
 
@@ -240,7 +240,7 @@ const TARGETED_PATHS = null;
 const TARGETED_PATHS = ['/', '/page.html', '/products', '/about-us'];
 ```
 
-**Failover configuration**
+### Failover configuration
 
 By default, the worker fails over on any 4XX or 5XX error from Edge Optimize. Customize this behavior:
 
@@ -258,7 +258,7 @@ const FAILOVER_ON_4XX = false;
 const FAILOVER_ON_5XX = false;
 ```
 
-**Important considerations**
+### Important considerations
 
 * **Failover behavior:** The worker automatically fails over to your origin if Edge Optimize returns any error (4XX or 5XX status codes) or if the request fails due to a network error. Failover uses `EDGE_OPTIMIZE_TARGET_HOST` as the origin domain (similar to Fastly's `F_Default_Origin` or CloudFront's `Default_Origin`). Failover responses include the `x-edgeoptimize-fo: 1` header, which you can use for monitoring and debugging.
 
@@ -270,7 +270,7 @@ const FAILOVER_ON_5XX = false;
 
 * **Logging:** Enable Cloudflare Workers logging to monitor requests and troubleshoot issues. Navigate to **Workers** > **your worker** > **Logs** to view real-time logs. The worker logs failover events for debugging purposes.
 
-**Troubleshooting**
+## Troubleshooting
 
 | Issue | Possible Cause | Solution |
 |-------|----------------|----------|
@@ -285,11 +285,11 @@ const FAILOVER_ON_5XX = false;
 | Requests failing with invalid host | `EDGE_OPTIMIZE_TARGET_HOST` includes protocol (for example, `https://`). | Use only the domain name without protocol (for example, `example.com`, not `https://example.com`). |
 | 530 error during failover | Cloudflare cannot connect to origin, or failover request has invalid headers. | Ensure the failover function removes Edge Optimize headers. Verify your origin is accessible and DNS is configured correctly. |
 
-**Allow Optimize at Edge through firewall rules (optional)**
+## Allow Optimize at Edge through firewall rules (optional)
 
 {{waf-allowlist-setup}}
 
-**Verify the setup**
+## Verify the setup
 
 After completing the setup, verify that bot traffic is being routed to Edge Optimize and that human traffic remains unaffected.
 

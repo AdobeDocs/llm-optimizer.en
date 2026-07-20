@@ -35,7 +35,7 @@ topic_v2:
 
 This configuration routes agentic traffic (requests from AI bots and LLM user agents) to the Edge Optimize backend service (`live.edgeoptimize.net`). Human visitors and SEO bots continue to be served from your origin as usual. To test the configuration, after the setup is complete, look for the header `x-edgeoptimize-request-id` in the response.
 
-**Prerequisites**
+## Prerequisites
 
 Before setting up the CloudFront configuration, ensure you have:
 
@@ -44,7 +44,7 @@ Before setting up the CloudFront configuration, ensure you have:
 * An Edge Optimize API key retrieved from the LLM Optimizer UI. For steps, see [Retrieve your API keys](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key).
 * (Optional) To test staging routing, see [Staging API key](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional).
 
-**Step 1: Create Edge Optimize Origin**
+## Step 1: Create Edge Optimize Origin
 
 **Navigation:** AWS Console > CloudFront > Distributions > [Your Distribution] > Origins tab
 
@@ -70,7 +70,7 @@ Before setting up the CloudFront configuration, ensure you have:
 
   ![Cloudfront Origin Creation](/help/assets/optimize-at-edge/cloudfront-origin-creation.png)
 
-**Step 2: Create viewer request function**
+## Step 2: Create viewer request function
 
 **Navigation:** AWS Console > CloudFront > Functions
 
@@ -92,7 +92,7 @@ Before setting up the CloudFront configuration, ensure you have:
   ![Cloudfront Function Creation](/help/assets/optimize-at-edge/cloudfront-function-creation.png)
 
 
-**Step 3: Configure cache policy**
+## Step 3: Configure cache policy
 
 **Navigation:** AWS Console > CloudFront > Distributions > [Your Distribution] > Behaviors
 
@@ -102,7 +102,7 @@ Check the cache policy currently attached to your behavior. Click **Edit** on yo
 * **Scenario B (Custom policy):** You see **Cache policy** selected with a policy name that you or your team created (not an AWS-provided policy).
 * **Scenario C (Managed policy):** You see **Cache policy** selected with an AWS-provided name like `CachingOptimized`, `CachingDisabled`, or `CachingOptimizedForUncompressedObjects` — these cannot be edited.
 
-**Scenario A: Legacy cache settings**
+### Scenario A: Legacy cache settings
 
 If your behavior uses legacy cache settings:
 
@@ -123,7 +123,7 @@ If your behavior uses legacy cache settings:
 
 4. Click **Save changes**.
 
-**Scenario B: Non-legacy with a custom cache policy**
+### Scenario B: Non-legacy with a custom cache policy
 
 If your behavior already uses a custom cache policy (one you created, not an AWS managed policy):
 
@@ -141,7 +141,7 @@ If your behavior already uses a custom cache policy (one you created, not an AWS
 
 5. Click **Save changes**.
 
-**Scenario C: Non-legacy with a managed (AWS) cache policy**
+### Scenario C: Non-legacy with a managed (AWS) cache policy
 
 If your behavior uses an AWS managed cache policy (for example, `CachingOptimized`), you cannot edit it. You need to create a new custom cache policy that replicates the existing managed policy settings and adds the Edge Optimize headers on top.
 
@@ -189,12 +189,12 @@ If your behavior uses an AWS managed cache policy (for example, `CachingOptimize
    3. Choose `edgeoptimize-cache` from the dropdown.
    4. Click **Save changes**.
 
-**Step 4: Create Lambda@Edge function (origin request and response)**
+## Step 4: Create Lambda@Edge function (origin request and response)
 
 >[!IMPORTANT]
 >Lambda@Edge functions **must be created in the `us-east-1` (N. Virginia) region**. This is an AWS requirement. Even though the function is created in `us-east-1`, AWS automatically replicates it to all CloudFront edge locations worldwide, so it executes at the nearest edge location to the viewer. Make sure you are in the `us-east-1` region in the AWS Console before proceeding.
 
-**Create the Lambda function**
+### Create the Lambda function
 
 **Navigation:** AWS Console > Lambda
 
@@ -214,7 +214,7 @@ If your behavior uses an AWS managed cache policy (for example, `CachingOptimize
 
 7. Note the **execution role name** shown under **Configuration** > **Permissions** (for example, `edgeoptimize-origin-role-xxxxx`). You need this in the following steps.
 
-**Update the execution role's trust policy**
+### Update the execution role's trust policy
 
 The auto-created role only trusts `lambda.amazonaws.com`. For Lambda@Edge, you must also add `edgelambda.amazonaws.com`.
 
@@ -229,7 +229,7 @@ The auto-created role only trusts `lambda.amazonaws.com`. For Lambda@Edge, you m
 >[!WARNING]
 >The `edgelambda.amazonaws.com` service principal is **required** for Lambda@Edge. Without it, CloudFront cannot invoke your function at edge locations.
 
-**Fix the CloudWatch Logs permission policy**
+### Fix the CloudWatch Logs permission policy
 
 The auto-created role comes with an `AWSLambdaBasicExecutionRole` policy configured for regular Lambda, which has the wrong region and log group name for Lambda@Edge. You need to update it.
 
@@ -246,7 +246,7 @@ The auto-created role comes with an `AWSLambdaBasicExecutionRole` policy configu
 >[!WARNING]
 >The region in the ARN must be `*` — Lambda@Edge executes at the nearest edge location to the viewer, so logs are written to CloudWatch in the region of the edge location (for example, `ap-south-1`, `eu-west-1`), not necessarily `us-east-1`. The log group uses a region-prefixed name: `/aws/lambda/us-east-1.FUNCTION_NAME`, where `us-east-1` is always the function's home region.
 
-**Fix the CloudWatch logs link**
+### Fix the CloudWatch logs link
 
 By default, the **View CloudWatch logs** shortcut in the Lambda console links to `/aws/lambda/FUNCTION_NAME` in `us-east-1` — the wrong log group for Lambda@Edge. Configure a custom log group so the link points to the correct path.
 
@@ -267,7 +267,7 @@ By default, the **View CloudWatch logs** shortcut in the Lambda console links to
 >[!NOTE]
 >Even after this fix, the **View CloudWatch logs** link opens the correct log group name but may show no data if you are in the wrong region. Lambda@Edge logs are written in the edge region that served the request (for example, `eu-west-1`, `ap-south-1`), not `us-east-1`. You still need to switch to the correct region in CloudWatch to see the logs.
 
-**Publish a version**
+### Publish a version
 
 1. On the function page, click **Actions** (top right) > **Publish new version**.
 
@@ -279,7 +279,7 @@ By default, the **View CloudWatch logs** shortcut in the Lambda console links to
 4. Copy or note down the **Function ARN** — you need this in the next step.
    ![Lambda ARN](/help/assets/optimize-at-edge/cloudfront-lambda-arn.png)
 
-**Step 5: Associate the functions and cache policy with behavior**
+## Step 5: Associate the functions and cache policy with behavior
 
 **Navigation:** AWS Console > CloudFront > Distributions > [Your Distribution] > Behaviors
 
@@ -298,11 +298,11 @@ By default, the **View CloudWatch logs** shortcut in the Lambda console links to
 
 4. Click **Save changes**.
 
-**Allow Optimize at Edge through firewall rules (optional)**
+## Allow Optimize at Edge through firewall rules (optional)
 
 {{waf-allowlist-setup}}
 
-**Step 6: Test the configuration**
+## Step 6: Test the configuration
 
 **1. Test bot traffic (should be optimized)**
 
@@ -376,7 +376,7 @@ You can also check the **Metrics** tab under **AWS Console > CloudFront > Functi
 
 If the log group is not present, verify that the IAM permissions were updated correctly in Step 4. Also check other nearby AWS regions — the edge location that served your request may differ from what you expect.
 
-**Troubleshooting**
+## Troubleshooting
 
 | Issue | Possible Cause | Solution |
 |-------|----------------|----------|
@@ -386,16 +386,16 @@ If the log group is not present, verify that the IAM permissions were updated co
 | Cache not honoring `cache-control: no-store` | Minimum TTL may be too high | Set Minimum TTL to `0` in your cache policy (Step 3). If your Minimum TTL is already very short, this may not be the issue. |
 | Regular (non-agentic) traffic broken after setup | Cache policy misconfiguration | If you created a new cache policy (Scenario C), ensure you replicated all settings from the original managed policy. |
 
-**Disabling and Re-enabling Optimize at Edge**
+## Disabling and Re-enabling Optimize at Edge
 
 The Lambda@Edge function (`edgeoptimize-origin`) is associated with the origin request and origin response events of your CloudFront behavior. Because it runs inline on every request passing through that behavior — both human and agentic — a Lambda@Edge outage will impact all live traffic, not just agentic requests. If you detect a Lambda@Edge outage, remove the function associations immediately to restore normal traffic flow to your default origin.
 
-**How to detect a Lambda@Edge outage**
+### How to detect a Lambda@Edge outage
 
 * **AWS Service Health Dashboard** — Check the [AWS Service Health Dashboard](https://health.aws.amazon.com/health/status) for any active incidents affecting **Amazon CloudFront** or **AWS Lambda**. A global or regional outage reported here is the fastest way to confirm the issue is on the AWS infrastructure side rather than in your configuration.
 * **Lambda@Edge errors** — Navigate to **AWS Console > CloudFront > Monitoring > [Your Distribution]**. Open the **Lambda@Edge errors** tab and check the **Execution errors** graph for execution errors. If these are high, Lambda@Edge might be down.
 
-**Detaching the Lambda@Edge function**
+### Detaching the Lambda@Edge function
 
 **Navigation:** AWS Console > CloudFront > Distributions > [Your Distribution] > Behaviors
 
@@ -419,7 +419,7 @@ The Lambda@Edge function (`edgeoptimize-origin`) is associated with the origin r
 
 Once deployed, all traffic routes directly to your default origin. No configuration is deleted; the Lambda function and its associations can be restored at any time.
 
-**Re-attaching the Lambda@Edge function**
+### Re-attaching the Lambda@Edge function
 
 **Navigation:** AWS Console > CloudFront > Distributions > [Your Distribution] > Behaviors
 

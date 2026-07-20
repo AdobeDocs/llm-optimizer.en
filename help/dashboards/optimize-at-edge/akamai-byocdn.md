@@ -33,7 +33,7 @@ topic_v2:
 
 This configuration routes agentic traffic (requests from AI bots and LLM user agents) to the Edge Optimize backend service (`live.edgeoptimize.net`). Human visitors and SEO bots continue to be served from your origin as usual. To test the configuration, after the setup is complete, look for the header `x-edgeoptimize-request-id` in the response.
 
-**Prerequisites**
+## Prerequisites
 
 Before you set up the Akamai Property Manager rules, ensure you have:
 
@@ -41,11 +41,9 @@ Before you set up the Akamai Property Manager rules, ensure you have:
 * An Edge Optimize API key retrieved from the LLM Optimizer UI. For steps, see [Retrieve your API keys](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key).
 * (Optional) To test staging routing, see [Staging API key](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional).
 
-**Configuration**
-
 The following Akamai Property Manager rule routes agentic HTML page traffic to Edge Optimize. The configuration includes the following steps:
 
-**1. Set routing criteria (User-Agent and HTML traffic matching)**
+## 1. Set routing criteria (User-Agent and HTML traffic matching)
 
 Set routing for the following user agents:
 
@@ -67,7 +65,7 @@ Set routing for the following user agents:
 
 ![Set routing criteria](/help/assets/optimize-at-edge/akamai-step1-routing.png)
 
-**2. Set Origin and SSL behavior**
+## 2. Set Origin and SSL behavior
 
 Set origin as `live.edgeoptimize.net` and Match SAN to `*.edgeoptimize.net`
 
@@ -77,17 +75,17 @@ Set origin as `live.edgeoptimize.net` and Match SAN to `*.edgeoptimize.net`
 
 ![Set Origin and SSL behavior](/help/assets/optimize-at-edge/akamai-step2-origin.png)
 
-**3. Set Cache Key Variable**
+## 3. Set Cache Key Variable
 
 Set the cache key variable `PMUSER_EDGE_OPTIMIZE_CACHE_KEY` to `LLMCLIENT=TRUE;X_FORWARDED_HOST={{builtin.AK_HOST}}`
 
 ![Set Cache Key Variable](/help/assets/optimize-at-edge/akamai-step3-cachekey.png)
 
-**4. Caching Rules**
+## 4. Caching Rules
 
 ![Caching Rules](/help/assets/optimize-at-edge/akamai-step4-rules.png)
 
-**5. Modify Incoming Request Headers**
+## 5. Modify Incoming Request Headers
 
 Set the following incoming request headers:
 `x-edgeoptimize-api-key` to the API Key retrieved from LLMO
@@ -96,7 +94,7 @@ Set the following incoming request headers:
 
 ![Modify Incoming Request Headers](/help/assets/optimize-at-edge/akamai-step5-request.png)
 
-**Allow Optimize at Edge through firewall rules (optional)**
+## Allow Optimize at Edge through firewall rules (optional)
 
 {{waf-allowlist-setup}}
 
@@ -106,25 +104,25 @@ Set the following incoming request headers:
 >
 >Also allowlist the `*AdobeEdgeOptimize/1.0*` user agent and the `x-edgeoptimize-fetcher-key` header in Akamai Bot Manager.
 
-**6. Modify Incoming Response Headers**
+## 6. Modify Incoming Response Headers
 
 ![Modify Incoming Response Headers](/help/assets/optimize-at-edge/akamai-step6-response.png)
 
-**7. Cache ID Modification**
+## 7. Cache ID Modification
 
 ![Cache ID Modification](/help/assets/optimize-at-edge/akamai-step7-cacheid.png)
 
-**8. Modify Outgoing Request Headers**
+## 8. Modify Outgoing Request Headers
 
 Set `x-forwarded-host` header to `{{builtin.AK_HOST}}`
 
 ![Modify Outgoing Request Headers](/help/assets/optimize-at-edge/akamai-step8-outgoing-request.png)
 
-**9. Site Failover**
+## 9. Site Failover
 
 The Site Failover configuration has two parts: the failover behavior (configured inside the main optimize-at-edge routing rule) and a separate failover test header rule.
 
-**9a. Site Failover Behavior (inside the main optimize-at-edge routing rule)**
+### 9a. Site Failover Behavior (inside the main optimize-at-edge routing rule)
 
 Inside the main routing rule, configure the Site Failover behavior and the Advanced XML snippet as follows:
 
@@ -148,7 +146,7 @@ Add the request header `x-edgeoptimize-request` with value `fo` through Advanced
 
 ![Failover Behaviors](/help/assets/optimize-at-edge/akamai-step9-failover-behaviors.png)
 
-**9b. Failover Test Header rule (sibling rule)**
+### 9b. Failover Test Header rule (sibling rule)
 
 >[!IMPORTANT]
 >
@@ -175,7 +173,7 @@ Site Failover ensures that if Edge Optimize returns a `4XX` or `5XX` error, the 
 | Edge Optimize returns `2XX` | Optimized response is served to the client. |
 | Edge Optimize returns `4XX` or `5XX` | Request is routed back to the default origin. |
 
-**Verify the setup**
+## Verify the setup
 
 After completing the setup, verify that bot traffic is being routed to Edge Optimize and that human traffic remains unaffected.
 
