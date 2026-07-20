@@ -138,18 +138,7 @@ Inside the main Optimize at Edge routing rule, create a child rule named **Site 
 
 ![Site Failover](/help/assets/optimize-at-edge/akamai-step9-failover.png)
 
-Create the property variable `PMUSER_EDGE_OPTIMIZE_FAILOVER` with an initial value of `FALSE`. In the **Site Failover Behavior** rule, add the following behaviors:
-
-* **Set Variable**
-  * **Variable:** `PMUSER_EDGE_OPTIMIZE_FAILOVER`
-  * **Create Value From:** Expression
-  * **Expression:** `TRUE`
-  * **Operation:** None
-* **Site Failover**
-  * **Enable:** On
-  * **Action:** Use alternate hostname in this property
-  * **Alternate Hostname in This Property:** Enter the original production hostname for your site.
-  * **Modify Request Path:** No
+![Configure the Site Failover behaviors](/help/assets/optimize-at-edge/akamai-step9-failover-settings.png)
 
 **9b. Configure the failover response header rule**
 
@@ -158,25 +147,15 @@ Create the property variable `PMUSER_EDGE_OPTIMIZE_FAILOVER` with an initial val
 >Create the **EdgeOptimize Failover - Test Header** rule as a **sibling** (at the same level) of the routing rules — **not** nested inside them. In the Akamai Property Manager rule tree, the hierarchy should look like:
 >
 >```
->▼ Optimize at Edge
->  ▶ Optimize at Edge Routing
->  ▶ EdgeOptimize Failover - Test Header
+>▼ Optimize at Edge                         ← parent rule group
+>  ▼ Optimize at Edge Routing               ← routing child
+>    Site Failover Behavior                 ← nested child
+>  EdgeOptimize Failover - Test Header      ← sibling of routing child
 >```
 >
 >The sibling rule is evaluated when Akamai recreates the failed request for the original hostname. The API-key criterion on the routing rule prevents that request from being sent to Edge Optimize again.
 >
 >Also ensure the **Optimize at Edge Routing** rule is not overridden by any later matching rule that changes the origin, caching behavior, or cache ID for the same requests. If another matching rule resets these behaviors, Optimize at Edge routing or caching may not work as expected.
-
-Set the rule to **Match All** and add these criteria:
-
-* Request header `x-edgeoptimize-api-key` **exists**.
-* Request header `x-edgeoptimize-request` **does not exist**.
-
-Add a **Modify Outgoing Response Header** behavior with these values:
-
-* **Action:** Add
-* **Custom Header Name:** `x-edgeoptimize-fo`
-* **Header Value:** `true`
 
 ![Configure the failover response header rule](/help/assets/optimize-at-edge/akamai-step9-failover-header.png)
 
