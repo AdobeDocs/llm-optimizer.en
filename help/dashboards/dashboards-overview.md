@@ -71,13 +71,13 @@ CARDS
   {cta=Learn more}
 * ./customer-configuration.md
   {title= Brands management dashboard}
-  {image= /help/assets/overview/customer-configuration-card.png}
-  {description= Lets organizations control how the Adobe LLM Optimizer operates for their specific needs.}
+  {image= /help/dashboards/assets/brands-management-card.png}
+  {description= Lets organizations manage brands in LLM Optimizer.}
   {target=_blank}
   {cta=Learn more}
 * ./customer-configuration.md
   {title= Prompt library dashboard}
-  {image= /help/assets/overview/customer-configuration-card.png}
+  {image= /help/assets/best-practices/download-prompts1.png}
   {description= Lets organizations control how the Adobe LLM Optimizer operates for their specific needs.}
   {target=_blank}
   {cta=Learn more}
@@ -227,7 +227,7 @@ CARDS
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./customer-configuration.md" title="Brands management dashboard" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="/help/assets/overview/customer-configuration-card.png" alt="Brands management dashboard"
+                        <img class="is-bordered-r-small" src="/help/dashboards/assets/brands-management-card.png" alt="Brands management dashboard"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -237,7 +237,7 @@ CARDS
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="./customer-configuration.md" target="_blank" rel="referrer" title="Brands management dashboard">Brands management dashboard</a>
                     </p>
-                    <p class="is-size-6">Lets organizations control how the Adobe LLM Optimizer operates for their specific needs.</p>
+                    <p class="is-size-6">Lets organizations manage brands in LLM Optimizer.</p>
                 </div>
                 <a href="./customer-configuration.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Learn more</span>
@@ -250,7 +250,7 @@ CARDS
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./customer-configuration.md" title="Prompt library dashboard" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="/help/assets/overview/customer-configuration-card.png" alt="Prompt library dashboard"
+                        <img class="is-bordered-r-small" src="/help/assets/best-practices/download-prompts1.png" alt="Prompt library dashboard"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
