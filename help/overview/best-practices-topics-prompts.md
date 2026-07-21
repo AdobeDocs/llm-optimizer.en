@@ -44,29 +44,25 @@ topic_v2:
   - id: f8667931-f646-4dd3-af2a-b9d0cb8098ad
     internal-label: Taxonomy
 ---
-# Best practices for configuring categories, topics, prompts, and others to track
+# Best practices for configuring categories, topics, prompts, and other brands to track
 
-This section describes best practices for deciding how you want to set up your categories, topics, prompts, and others to track. In addition, it includes information on the Industry Prompt Library, which Adobe developed with extensive research with industry experts.
+This section describes best practices for deciding how you want to set up your categories, topics, prompts, and other brands to track. In addition, it includes information on the Industry Prompt Library, which Adobe developed with extensive research with industry experts.
 
-This is a vital first step. What you decide now determines how information is tailored to your business context. Any changes to categories in the future reset historical data.
+This configuration is a vital first step. What you decide now determines how information is tailored to your business context. Any changes to categories in the future reset historical data.
 
-The [[!UICONTROL Customer Configuration]](/help/dashboards/customer-configuration.md) dashboard is where you define how your brand will be monitored and analyzed within the LLM optimizer platform. See [[!UICONTROL Customer Configuration]](/help/dashboards/customer-configuration.md) for information on how to use the dashboard.
+The [[!UICONTROL Brands Management]](/help/dashboards/customer-configuration.md) dashboard is where you define how your brand is monitored and analyzed within the LLM optimizer platform.
 
-![Customer configuration window](/help/assets/best-practices/customer-configuration-best-practices.png)
+Here you can customize categories (such as business units or product lines), track other brands, and add brand mention aliases to capture all variations of your brand across prompts. This setup ensures the platform tailors insights to your business context, enabling accurate visibility, traffic, and opportunity analysis.
 
-In the [!UICONTROL Customer Configuration] dashboard, you can customize categories (such as business units or product lines), track other brands, and add brand mention aliases to capture all variations of your brand across prompts. This setup ensures the platform tailors insights to your business context, enabling accurate visibility, traffic, and opportunity analysis.
+By default, each organization starts with one active brand and additional suggested brands to choose from.
 
-## Brand Centric experience
+![Brands Management - app navigation (Brand Centric experience)](/help/assets/brand-centric-experience/llmo-app-shell.png)
 
-By default, new customers start in a focused, brand-first interface with onboarding-driven setup. In this new interface, each organization starts with one active brand and additional suggested brands to choose from. Existing LLM Optimizer customers will shift to this Brand Centric experience gradually.
+![Brands Management - configuration overview](/help/assets/brand-centric-experience/brands-management-configuration.png)
 
-If you are on the Brand Centric experience, **Brands Management** is where you define how your brand is monitored and analyzed.
+To set up topics and prompts for a specific brand, use the **Prompt Library** dashboard.
 
-![Brands Management — app navigation (Brand Centric experience)](/help/assets/brand-centric-experience/llmo-app-shell.png)
-
-![Brands Management — configuration overview](/help/assets/brand-centric-experience/brands-management-configuration.png)
-
-To set up topics and prompts for a specific brand, use **Prompts Management**.
+<!-- Add link to Prompt Library page when available-->
 
 ![Prompts Management](/help/assets/brand-centric-experience/prompts-management.png)
 
@@ -76,12 +72,13 @@ To help get started with prompts and topics, Adobe has created an Industry Promp
 
 To use the Industry Prompt Library:
 
-1. Navigate to the **Customer Configuration** dashboard.
-1. Select **Download Prompts Library** to download the library file from LLM Optimizer.
-![Industry prompt library download](/help/assets/best-practices/customer-configuration-prompts-library.png)
+1. Navigate to the **Prompt Library** dashboard.
+1. Select **Download Prompt Library** to download the library file from LLM Optimizer.
 1. Review suggested **Topics** and **Prompts** for your brand's industry on the respective tab and choose the options that are most relevant.
 1. Review **Customer Journey Stage column** to view prompt options across the customer lifecycle (for example, discovery to conversion to retention). Early stage/top of funnel prompts are high priority but also consider later stage options to promote retention, enable customer support, and so on.
 1. Modify topics or prompts as needed to best support your goals and objectives before uploading your topics and prompts to Adobe LLM Optimizer (for example, add your brand/product name, add on-brand terminology). Prompts can be added to LLM Optimizer manually or via bulk upload using the provided *.csv* template.
+
+<!--![Industry prompt library download](/help/assets/best-practices/download-prompts.png) - add screenshot to steps-->
 
 >[!TIP]
 >
@@ -97,11 +94,11 @@ The Industry Prompt Library was developed through a comprehensive research initi
 
 Top topics searched by customers across industries:
 
-* **Auto:** Troubleshooting auto issues, Comparing vehicles and Financing/Leasing
+* **Auto:** Troubleshooting auto issues, comparing vehicles and financing/leasing
 * **Financial Services:** Researching financial products
-* **Healthcare:** Looking up symptoms or health issues, Comparing treatment options, Understand lab results or medical terms
-* **Telecom:** Comparing plans, Contract terms and promotions, Checking service in local area
-* **Travel:** Preparing for a trip, Researching and booking travel
+* **Healthcare:** Looking up symptoms or health issues, comparing treatment options, and understanding lab results or medical terms
+* **Telecom:** Comparing plans, contract terms and promotions, and checking service in local area
+* **AirlineTravel:** Preparing for a trip, and researching and booking travel
 
 Customer trends on AI search and prompt behavior in LLM tools:
 
@@ -133,12 +130,15 @@ How to decide how you set up categories is based on one question: **Who needs to
 * If you are a *web/content owner*, pick the **URL_DIR** approach.
 * If you are a *merchandising/offers manager*, pick the **Product/Service category** approach.
 
-![Adding categories in LLM Optimizer](/help/assets/best-practices/add-category.png)
+<!--How do you pick a region? Or is that handled differently?-->
+
+![Adding categories in LLM Optimizer](/help/assets/best-practices/create-category1.png)
 
 >[!IMPORTANT]
 >
 > * Pick one approach and stick to it.
 > * You can only have **one** Category model per account/brand. Do not mix **SBU** and **URL_DIR** at the same time.
+
 <!--Can you mix Product/Service with these?-->
 
 Example:
@@ -169,12 +169,13 @@ When deciding on topics, you want to create a short, flat list (6-12 maximum). F
 * Support Contact
 * Corporate/News (if you truly need this)
 
-![Adding topics in LLM Optimizer](/help/assets/best-practices/add-topic.png)
+![Adding topics in LLM Optimizer](/help/assets/best-practices/add-new-topic1.png)
 
 When creating the list, consider the following:
 
-* Can an editor understand the topic in 5 seconds from the prompt text? If not, rename/simplify.
+* Can someone understand the topic in 5 seconds from the prompt text? If not, rename/simplify.
 * Will a different team own the fix for different topics? If yes, you picked useful topics.
+
 <!-- Last bullet point does not make sense. Clarification needed. Also not sure what is meant by "editor"?-->
 
 Some additional helpful hints:
@@ -185,7 +186,7 @@ Some additional helpful hints:
 >[!IMPORTANT]
 >
 > * Keep topics intent-based, not organizational.
-> * Do not add categories/filters for brand/non-brand/geographic as you can filter specifically for this in the **[!UICONTROL Brands]** tab.
+> * Do not add categories/filters for brand/non-brand/geographic as you can filter specifically for this in the **[!UICONTROL Brand Presence]** dashboard.
 > * Topics are spread out across several categories. You **cannot** define unique topics to each category.
 > * A single prompt **can** exist in several topics or categories.
 
@@ -208,11 +209,11 @@ Best practices for prompts:
 
 ## Best practices for tracking other brands
 
-Tracking Others let you monitor visibility and mentions in LLM responses for prompts and topics that are important to your business.
+Tracking other brands let you monitor visibility and mentions in LLM responses for prompts and topics that are important to your business.
 
-The [!UICONTROL **Others Tracking**] tab lets you add others including competitors to track their visibility for specific prompts and topics.
+[!UICONTROL **Other brands to track**] is available in **Brands Management** > **Market tracking** and lets you add others including competitors to track their visibility for specific prompts and topics.
 
-With others tracking, you can see how often other brands are mentioned alongside your brand in different regions and categories and compare their visibility to your own.
+With other brands to track, you can see how often other brands are mentioned alongside your brand in different regions and categories and compare their visibility to your own.
 
 >[!TIP]
 >
@@ -220,6 +221,7 @@ With others tracking, you can see how often other brands are mentioned alongside
 
 ## Learn More
 
-* [Customer Configuration dashboard](/help/dashboards/customer-configuration.md) is where you configure your categories, topics, prompts, and others tracking.
+* [Brands Management](/help/dashboards/customer-configuration.md) is where you configure your categories and other brands to track.
+* [Prompt Library](/help/dashboards/customer-configuration.md) is where you configure your topics and prompts.
 * [LLM Optimizer best practices](/help/tutorials/best-practices.md) describes best practices around LLM Optimization
 

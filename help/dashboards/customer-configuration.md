@@ -53,9 +53,9 @@ In order to configure how LLM Optimizer monitors and analyzes your brand presenc
 
 If you are on the [Brand Centric experience](/help/overview/quick-start.md#brand-centric-experience), navigate to **Brands Management** to setup and configure brands, brand aliases and define competitors to track against. **Brands Management** is also used to configure integrations such as Google Search Console, Adobe Analytics, and CDN log forwarding related to URLs associated with brands. You can do this by clicking on the corresponding tabs: GSC, CDN and so on.
 
-![Brands Management — app navigation (Brand Centric experience)](/help/assets/brand-centric-experience/llmo-app-shell.png)
+![Brands Management - app navigation (Brand Centric experience)](/help/assets/brand-centric-experience/llmo-app-shell.png)
 
-![Brands Management — configuration overview (Brand Centric experience)](/help/assets/brand-centric-experience/brands-management-configuration.png)
+![Brands Management - configuration overview (Brand Centric experience)](/help/assets/brand-centric-experience/brands-management-configuration.png)
 
 >[!IMPORTANT]
 >
