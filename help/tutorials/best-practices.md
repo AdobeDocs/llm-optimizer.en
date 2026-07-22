@@ -290,6 +290,6 @@ It provides a percentage of content visibility, highlighting areas where LLMs ma
 
 Best Practice:
 
-Use nametbd feature to render static HTML versions of your pages for LLM bots, ensuring full content visibility.
+Use Optimize at Edge feature to render static HTML versions of your pages for LLM bots, ensuring full content visibility.
 Address issues like blocked pages, robots.txt restrictions, and client-side rendering problems.
 -->

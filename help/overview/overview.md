@@ -82,7 +82,7 @@ Here are resources that can help you get the most out of the LLM Optimizer:
 
 * [Quickstart](/help/overview/quick-start.md) gets you up and running quickly.
 * [Dashboards overview](/help/dashboards/dashboards-overview.md) describes all the dashboards available in the LLM Optimizer.
-* [Best practices for configuring categories, topics, prompts, and others](/help/overview/best-practices-topics-prompts.md) includes essential information for setting up LLM Optimizer.
+* [Best practices for configuring categories, topics, prompts, and other brands to track](/help/overview/best-practices-topics-prompts.md) includes essential information for setting up LLM Optimizer.
 * [Best Practices](/help/tutorials/best-practices.md) lets you discover best practices for LLM optimization to boost your brand visibilitu in AI search.
 
 
