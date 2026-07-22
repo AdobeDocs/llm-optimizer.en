@@ -138,14 +138,14 @@ CARDS
 CARDS
 
 * ./overview/best-practices-topics-prompts.md
-  {title= Best practices for setting up categories, topics, prompts, and tracking others}
+  {title= Best practices for setting up categories, topics, prompts, and tracking other brands}
   {description= Learn how to configure LLM Optimizer for tailored brand monitoring and strategic content analysis.}
-  {image= /help/assets/overview/customer-configuration-card.png}
+  {image= /help/assets/best-practices/add-new-topic1.png}
   {target=_blank}
   {cta=Learn more}
 * ./tutorials/best-practices.md
   {title= Best practices for LLM optimization using Adobe LLM Optimizer}
-  {image= /help/assets/overview/best-practices-card.png}
+  {image= /help/assets/best-practices/create-category1.png}
   {description= Learn how LLM Optimizer can help you drive brand authority in AI search and discovery.}
   {target=_blank}
   {cta=Learn more}
@@ -158,12 +158,12 @@ CARDS
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
-    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Best practices for setting up categories, topics, prompts, and tracking others">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Best practices for setting up categories, topics, prompts, and tracking other brands">
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./overview/best-practices-topics-prompts.md" title="Best practices for setting up categories, topics, prompts, and tracking others" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="/help/assets/overview/customer-configuration-card.png" alt="Best practices for setting up categories, topics, prompts, and tracking others"
+                    <a href="./overview/best-practices-topics-prompts.md" title="Best practices for setting up categories, topics, prompts, and tracking other brands" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="/help/assets/best-practices/add-new-topic1.png" alt="Best practices for setting up categories, topics, prompts, and tracking other brands"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -171,7 +171,7 @@ CARDS
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./overview/best-practices-topics-prompts.md" target="_blank" rel="referrer" title="Best practices for setting up categories, topics, prompts, and tracking others">Best practices for setting up categories, topics, prompts, and tracking others</a>
+                        <a href="./overview/best-practices-topics-prompts.md" target="_blank" rel="referrer" title="Best practices for setting up categories, topics, prompts, and tracking other brands">Best practices for setting up categories, topics, prompts, and tracking other brands</a>
                     </p>
                     <p class="is-size-6">Learn how to configure LLM Optimizer for tailored brand monitoring and strategic content analysis.</p>
                 </div>
@@ -186,7 +186,7 @@ CARDS
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./tutorials/best-practices.md" title="Best practices for LLM optimization using Adobe LLM Optimizer" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="/help/assets/overview/best-practices-card.png" alt="Best practices for LLM optimization using Adobe LLM Optimizer"
+                        <img class="is-bordered-r-small" src="/help/assets/best-practices/create-category1.png" alt="Best practices for LLM optimization using Adobe LLM Optimizer"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
