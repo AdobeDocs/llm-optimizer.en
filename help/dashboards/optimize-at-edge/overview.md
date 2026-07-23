@@ -106,6 +106,7 @@ To guide the setup process, select your CDN provider below and follow the corres
 | Cloudflare (BYOCDN) | Bring Your Own CDN | [View setup guide](/help/dashboards/optimize-at-edge/cloudflare-byocdn.md) |
 | CloudFront (BYOCDN) | Bring Your Own CDN | [View setup guide](/help/dashboards/optimize-at-edge/cloudfront-byocdn.md) |
 | Azure Front Door (BYOCDN) | Bring Your Own CDN | [View setup guide](/help/dashboards/optimize-at-edge/azure-front-door-byocdn.md) |
+| Apache HTTP Server | Bring Your Own CDN | [View setup guide](/help/dashboards/optimize-at-edge/apache-http-server.md) |
 
 >[!NOTE]
 >
