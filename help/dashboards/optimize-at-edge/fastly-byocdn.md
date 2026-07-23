@@ -41,7 +41,7 @@ Before you set up the Fastly VCL rules, ensure you have:
 * An Edge Optimize API key retrieved from the LLM Optimizer UI. For steps, see [Retrieve your API keys](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key).
 * (Optional) To test staging routing, see [Staging API key](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional).
 
-**Configuration**
+## Configuration
 
 Add the following three VCL snippets to your Fastly service. These snippets handle routing agentic requests to Edge Optimize, cache-key separation, and failover to your default origin.
 
@@ -49,7 +49,7 @@ Add the following three VCL snippets to your Fastly service. These snippets hand
 
 ![Add VCL snippets](/help/assets/optimize-at-edge/add-vcl-snippets.png)
 
-**vcl_recv snippet**
+### vcl_recv snippet
 
 ```
 unset req.http.x-edgeoptimize-url;
@@ -69,7 +69,7 @@ if (!req.http.x-edgeoptimize-request
 }
 ```
 
-**vcl_hash snippet**
+### vcl_hash snippet
 
 ```
 if (req.http.x-edgeoptimize-config) {
@@ -78,7 +78,7 @@ if (req.http.x-edgeoptimize-config) {
 }
 ```
 
-**vcl_deliver snippet**
+### vcl_deliver snippet
 
 ```
 if (req.http.x-edgeoptimize-config && resp.status >= 400) {
@@ -95,7 +95,7 @@ if (!req.http.x-edgeoptimize-config && req.http.x-edgeoptimize-request == "failo
 }
 ```
 
-**Failover**
+### Failover
 
 The `vcl_deliver` snippet handles failover automatically. If Edge Optimize returns a `4XX` or `5XX` error, the request is restarted and routed back to your default origin so the end-user still receives a response. Failover responses include the `x-edgeoptimize-fo: 1` header.
 
@@ -105,11 +105,11 @@ The `vcl_deliver` snippet handles failover automatically. If Edge Optimize retur
 | Edge Optimize returns `4XX` or `5XX` | Request is restarted and served from the default origin. |
 | Failover response | Includes the header `x-edgeoptimize-fo: 1`. |
 
-**Allow Optimize at Edge through firewall rules (optional)**
+## Allow Optimize at Edge through firewall rules (optional)
 
 {{waf-allowlist-setup}}
 
-**Verify the setup**
+## Verify the setup
 
 After completing the setup, verify that bot traffic is being routed to Edge Optimize and that human traffic remains unaffected.
 

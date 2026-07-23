@@ -45,7 +45,7 @@ Before you set up the Akamai Property Manager rules, ensure you have:
 
 The following Akamai Property Manager rule routes agentic HTML page traffic to Edge Optimize. The configuration includes the following steps:
 
-**1. Set routing criteria (User-Agent and HTML traffic matching)**
+## 1. Set routing criteria (User-Agent and HTML traffic matching)
 
 Set routing for the following user agents:
 
@@ -67,7 +67,7 @@ Set routing for the following user agents:
 
 ![Set routing criteria](/help/assets/optimize-at-edge/akamai-step1-routing.png)
 
-**2. Set Origin and SSL behavior**
+## 2. Set Origin and SSL behavior
 
 Set origin as `live.edgeoptimize.net` and Match SAN to `*.edgeoptimize.net`
 
@@ -77,17 +77,17 @@ Set origin as `live.edgeoptimize.net` and Match SAN to `*.edgeoptimize.net`
 
 ![Set Origin and SSL behavior](/help/assets/optimize-at-edge/akamai-step2-origin.png)
 
-**3. Set Cache Key Variable**
+## 3. Set Cache Key Variable
 
 Set the cache key variable `PMUSER_EDGE_OPTIMIZE_CACHE_KEY` to `LLMCLIENT=TRUE;X_FORWARDED_HOST={{builtin.AK_HOST}}`
 
 ![Set Cache Key Variable](/help/assets/optimize-at-edge/akamai-step3-cachekey.png)
 
-**4. Caching Rules**
+## 4. Caching Rules
 
 ![Caching Rules](/help/assets/optimize-at-edge/akamai-step4-rules.png)
 
-**5. Modify Incoming Request Headers**
+## 5. Modify Incoming Request Headers
 
 Set the following incoming request headers:
 `x-edgeoptimize-api-key` to the API Key retrieved from LLMO
@@ -96,7 +96,7 @@ Set the following incoming request headers:
 
 ![Modify Incoming Request Headers](/help/assets/optimize-at-edge/akamai-step5-request.png)
 
-**Allow Optimize at Edge through firewall rules (optional)**
+## Allow Optimize at Edge through firewall rules (optional)
 
 {{waf-allowlist-setup}}
 
@@ -106,25 +106,25 @@ Set the following incoming request headers:
 >
 >Also allowlist the `*AdobeEdgeOptimize/1.0*` user agent and the `x-edgeoptimize-fetcher-key` header in Akamai Bot Manager.
 
-**6. Modify Incoming Response Headers**
+## 6. Modify Incoming Response Headers
 
 ![Modify Incoming Response Headers](/help/assets/optimize-at-edge/akamai-step6-response.png)
 
-**7. Cache ID Modification**
+## 7. Cache ID Modification
 
 ![Cache ID Modification](/help/assets/optimize-at-edge/akamai-step7-cacheid.png)
 
-**8. Modify Outgoing Request Headers**
+## 8. Modify Outgoing Request Headers
 
 Set `x-forwarded-host` header to `{{builtin.AK_HOST}}`
 
 ![Modify Outgoing Request Headers](/help/assets/optimize-at-edge/akamai-step8-outgoing-request.png)
 
-**9. Site Failover**
+## 9. Site Failover
 
 The Site Failover configuration has two parts: a failover behavior inside the main Optimize at Edge routing rule and a sibling rule that adds a response header when fallback occurs.
 
-**9a. Configure the Site Failover behavior**
+### 9a. Configure the Site Failover behavior
 
 Inside the main Optimize at Edge routing rule, create a child rule named **Site Failover Behavior**. Set it to **Match Any** and add these criteria:
 
@@ -135,7 +135,7 @@ Inside the main Optimize at Edge routing rule, create a child rule named **Site 
 
 ![Configure the Site Failover behavior](/help/assets/optimize-at-edge/akamai-step9-failover-settings.png)
 
-**9b. Configure the failover response header rule**
+### 9b. Configure the failover response header rule
 
 >[!IMPORTANT]
 >
@@ -161,7 +161,7 @@ Site Failover ensures that if Edge Optimize returns an error or times out, Akama
 | Edge Optimize returns `2XX` or `3XX` | The optimized response is served. `x-edgeoptimize-request-id` is present. |
 | Edge Optimize returns `4XX`–`5XX`, or the origin times out | The request is recreated for the original hostname. The response includes `x-edgeoptimize-fo: true`. |
 
-**Verify the setup**
+## Verify the setup
 
 After completing the setup, verify that bot traffic is being routed to Edge Optimize and that human traffic remains unaffected.
 
